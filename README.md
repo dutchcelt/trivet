@@ -1,2 +1,2 @@
 # trivet
-A very simple dynamic loader of esm modules, css styles, template literals and json.
+A very simple dynamic loader of scripts,  styles and json.
