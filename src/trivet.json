@@ -1,0 +1,12 @@
+{
+	"hookAttr": "data-trivet",
+	"basePath": "/components",
+	"paths": {
+		"test": {
+			"mjs":"module.mjs",
+			"css":"styles.css",
+			"js":"template.js",
+			"json":"data.json"
+		}
+	}
+}

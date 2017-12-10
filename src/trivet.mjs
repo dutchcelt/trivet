@@ -1,12 +1,13 @@
-import { loadScript, loadStyles } from "./loader.mjs";
+import { loadScript, loadStyles } from "./utils/loader.mjs";
 
 
 /* config default */
 
-const defaults = {
-	hookAttr = "data-component",
-	basePath = "/"
+let defaults = {
+	"hookAttr": "data-trivet",
+	"basePath": "/"
 };
+
 
 const elements = document.body.getElementsByTagName('*');
 
@@ -22,21 +23,27 @@ const getElementsByAttribute = attr => {
  * Loads a components defined the config module by matching the corresponding hook.
  * A component consists of a single script that may optionally be paired with a stylesheet and or template.
  */
-const loadComponent = (elem, config) => {
-
+const loadTrivet = (elem, settings) => {
+	console.log(settings, elem.getAttribute(settings.hookAttr));
 
 };
 /**
  * Look for all hooks and trigger
- * @param config
+ * @param {object} opts
  */
-const trivet = function(config = {}){
+const trivet = async function(opts = {}){
+	let rc = {};
+	try {
+		rc = await fetch('/trivet.json').then(r => r.json());
+	} catch (e) {}
+	const settings = Object.assign(defaults, rc, opts);
 	
-	getElementsByAttribute(hookAttr).forEach( elem => {
-		setTimeout(() => loadComponent(elem, Object.assign(defaults, config),0);
+	getElementsByAttribute(settings.hookAttr).forEach( elem => {
+		setTimeout(() => loadTrivet(elem, settings),0);
 	});
 	
 };
 
 
 
+trivet();

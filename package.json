@@ -1,0 +1,31 @@
+{
+	"name": "trivet",
+	"version": "1.0.0",
+	"description": "A very simple dynamic loader of scripts, styles, and json.",
+	"main": "trivet.mjs",
+	"scripts": {
+		"test": "ava",
+		"serve": "browser-sync start -s \"src\" --cors --https"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dutchcelt/trivet.git"
+	},
+	"keywords": [
+		"loader",
+		"css",
+		"javascript",
+		"json"
+	],
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/dutchcelt/trivet/issues"
+	},
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"devDependencies": {
+		"browser-sync": "^2.18.13",
+		"serve": "^6.4.1"
+	},
+	"dependencies": {}
+}

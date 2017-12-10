@@ -5,7 +5,7 @@
 const hasScript = src => [...document.scripts].some(js => encodeURI(src) === js.src);
 
 /**
- * Feature detection for dynamic imports and preload
+ * Feature detection for preloading styles
  */
 let hasPreload;
 try {
@@ -41,10 +41,10 @@ const loadScript = (src, element) => {
  * @param {string} href
  * @param {string} media
  * @param {string} crossorigin
- * @param {Element} component
+ * @param {Element} element
  * @returns {Promise}
  */
-const loadStyles = (href, media, crossorigin, component) => {
+const loadStyles = (href, media, crossorigin, element) => {
 
 	if(!href) return Promise.resolve();
 
@@ -76,8 +76,8 @@ const loadStyles = (href, media, crossorigin, component) => {
 			preload.onload = () => document.head.appendChild(css);
 			preload.onerror = reject
 		} else {
-			component
-				? component.parentNode.insertBefore(css, component)
+			element
+				? element.parentNode.insertBefore(css, element)
 				: document.body.appendChild(css);
 		}
 	});
