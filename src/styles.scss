@@ -1,7 +1,10 @@
-$display: flex;
+
+
+@import "styles/_normalize";
+
 
 body {
-	display: $display;
+	display: block;
 	font-family: Arial, sans-serif;
 	background: lightblue;
 }

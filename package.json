@@ -12,10 +12,10 @@
 		"scss": "node-sass \"src\" -o \".cache\" --output-style compressed ",
 		"prefix": "postcss \".cache/**/*.css\" -u autoprefixer -d dist --no-map",
 		"css": "yarn scss && yarn prefix",
-		"build": "yarn assets & yarn css",
+		"build": "yarn assets & yarn css & yarn html",
 		"watch": "yarn assets --watch & yarn scss --watch & yarn prefix --watch",
 		"develop": "yarn build && yarn serve | yarn watch",
-		"html": "node ./templates/createHTML.js"
+		"html": "node \"./templates/createHTML.js\""
 	},
 	"repository": {
 		"type": "git",
