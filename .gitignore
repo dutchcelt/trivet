@@ -1,4 +1,7 @@
 .idea
+.cache
 node_modules
+temp
 dist
 *.log
+.DS_Store

@@ -1,4 +1,4 @@
-import { loadScript, loadStyles } from "./utils/loader.mjs";
+import { loadScript, loadStyles } from "./utils/loader.js";
 
 
 /* config default */
@@ -7,8 +7,6 @@ let defaults = {
 	"hookAttr": "data-trivet",
 	"basePath": "/"
 };
-
-
 const elements = document.body.getElementsByTagName('*');
 
 const getElementsByAttribute = attr => {

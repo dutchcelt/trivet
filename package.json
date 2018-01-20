@@ -5,7 +5,17 @@
 	"main": "trivet.mjs",
 	"scripts": {
 		"test": "ava",
-		"serve": "browser-sync start -s \"src\" --cors --https"
+		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https",
+		"parcel": "parcel src/index.html",
+		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js}\" dist",
+		"js": "babel src -d dist",
+		"scss": "node-sass \"src\" -o \".cache\" --output-style compressed ",
+		"prefix": "postcss \".cache/**/*.css\" -u autoprefixer -d dist --no-map",
+		"css": "yarn scss && yarn prefix",
+		"build": "yarn assets & yarn css",
+		"watch": "yarn assets --watch & yarn scss --watch & yarn prefix --watch",
+		"develop": "yarn build && yarn serve | yarn watch",
+		"recipe": "browser-sync recipe"
 	},
 	"repository": {
 		"type": "git",
@@ -24,8 +34,14 @@
 	},
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
-		"browser-sync": "^2.18.13",
-		"serve": "^6.4.1"
+		"browser-sync": "^2.18.13"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"autoprefixer": "^7.2.5",
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"cpx": "^1.5.0",
+		"node-sass": "^4.7.2",
+		"postcss-cli": "^4.1.1"
+	}
 }

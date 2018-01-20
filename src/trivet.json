@@ -3,7 +3,7 @@
 	"basePath": "/components",
 	"paths": {
 		"test": {
-			"mjs":"module.mjs",
+			"mjs":"module.js",
 			"css":"styles.css",
 			"js":"template.js",
 			"json":"data.json"
