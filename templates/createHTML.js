@@ -17,7 +17,7 @@ fs.readdir(content, (err, files) => {
 		const html = createHTML({
 			title: data.title + ' - ' + filename,
 			head: head(data),
-			body: navigation() + '<main>' + main() + '</main>' + footer()
+			body: navigation(files) + '<main>' + main() + '</main>' + footer()
 		});
 		
 		fs.writeFile(renderPath + filename + '.html', html, function (err) {

@@ -6,7 +6,6 @@
 	"scripts": {
 		"test": "ava",
 		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https",
-		"parcel": "parcel src/index.html",
 		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js}\" dist",
 		"js": "babel src -d dist",
 		"scss": "node-sass \"src\" -o \".cache\" --output-style compressed ",
