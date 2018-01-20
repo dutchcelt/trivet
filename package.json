@@ -15,7 +15,7 @@
 		"build": "yarn assets & yarn css",
 		"watch": "yarn assets --watch & yarn scss --watch & yarn prefix --watch",
 		"develop": "yarn build && yarn serve | yarn watch",
-		"recipe": "browser-sync recipe"
+		"html": "node ./templates/createHTML.js"
 	},
 	"repository": {
 		"type": "git",
@@ -34,7 +34,8 @@
 	},
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
-		"browser-sync": "^2.18.13"
+		"browser-sync": "^2.18.13",
+		"create-html": "^4.1.0"
 	},
 	"dependencies": {
 		"autoprefixer": "^7.2.5",
