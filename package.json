@@ -4,15 +4,13 @@
 	"description": "A very simple dynamic loader of scripts, styles, and json.",
 	"main": "trivet.mjs",
 	"scripts": {
-		"test": "ava",
 		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https",
 		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js}\" dist",
-		"js": "babel src -d dist",
-		"scss": "node-sass \"src\" -o \".cache\" --output-style compressed ",
+		"scss": "node-sass \"src\" -o \".cache\" -x --output-style compressed ",
 		"prefix": "postcss \".cache/**/*.css\" -u autoprefixer -d dist --no-map",
 		"css": "yarn scss && yarn prefix",
-		"build": "yarn assets & yarn css & yarn html",
-		"watch": "yarn assets --watch & yarn scss --watch & yarn prefix --watch",
+		"build": "trash {dist,.cache} && yarn assets & yarn css & yarn html",
+		"watch": "yarn assets -w & yarn scss -w & yarn prefix -w",
 		"develop": "yarn build && yarn serve | yarn watch",
 		"html": "node \"./templates/createHTML.js\""
 	},
@@ -34,14 +32,13 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
 		"browser-sync": "^2.18.13",
-		"create-html": "^4.1.0"
+		"create-html": "^4.1.0",
+		"node-dir": "^0.1.17",
+		"trash-cli": "^1.4.0"
 	},
 	"dependencies": {
 		"autoprefixer": "^7.2.5",
-		"babel-cli": "^6.26.0",
-		"babel-preset-env": "^1.6.1",
 		"cpx": "^1.5.0",
-		"node-dir": "^0.1.17",
 		"node-sass": "^4.7.2",
 		"postcss-cli": "^4.1.1"
 	}

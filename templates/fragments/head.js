@@ -10,7 +10,7 @@ module.exports = data => {
 
 	<!-- FT polyfill service -->
 	<script src="${data.polyfillService}$features=${data.polyfillFeatures}&flags=gated"></script>
-
+	
 	<!--  Start loading scripts  -->
 	<script type="module" src="${data.path}${data.trivet}"></script>
 	
