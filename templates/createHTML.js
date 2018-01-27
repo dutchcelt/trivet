@@ -9,17 +9,13 @@ const footer = require("./fragments/footer.js");
 const data = require("./data.js");
 const pages = require("./content.js");
 
+const packageJSON = fs.readJSON('./package.json');
 
-const packageJSON = fs.readJSON(path.resolve(__dirname, '../package.json'));
 
-const renderPath = './dist/';
-const contentPath = __dirname + '/content/';
-
+const distPath = path.resolve(process.cwd(), './dist');
+const contentPath = __dirname + '/content';
 const filePaths = dir.files(contentPath, {sync:true});
-const relativePaths = filePaths.map(p => p.replace(contentPath,''));
-
-const files = dir.files(contentPath, {sync:true,shortName:true});
-const fileNames = files.map(f => path.parse(f).name);
+const fileObjects = filePaths.reduce((a,f) => a.concat(path.parse(f)), []);
 
 
 const createHTMLFile = (file, nodeString) => {
@@ -30,25 +26,26 @@ const createHTMLFile = (file, nodeString) => {
 	});
 };
 
-const createHTMLString = async (index) => {
+const createHTMLString = async fileObj => {
 	
-	const main = require(filePaths[index]);
-	const content = pages[fileNames[index]];
+	const main = require(path.format(fileObj));
+	const content = pages[fileObj.name];
 	const pkg = await packageJSON;
 	
 	return createHTML({
-		title: pkg.name + ' - ' + fileNames[index],
+		title: pkg.name + ' - ' + fileObj.name,
 		head: head(data),
-		body: navigation(relativePaths) + '<main>' + main(content) + '</main>' + footer()
+		body: navigation(fileObjects) + '<main>' + main(content) + '</main>' + footer()
 	});
 };
 
-relativePaths.forEach(async (path, index) => {
-
-	const file = renderPath + relativePaths[index].replace('.js', '.html');
-	const nodeString = await createHTMLString(index);
-	
-	createHTMLFile(file, nodeString, index);
+fileObjects.forEach(async obj => {
+	const file = path.format({
+		dir: obj.dir.replace(contentPath, distPath),
+		name: obj.name,
+		ext: '.html',
+	});
+	const nodeString = await createHTMLString(obj);
+	createHTMLFile(file, nodeString);
 });
-
 

@@ -1,9 +1,13 @@
 module.exports = data => {
 	
-	const hrefs = data.map(h => h.replace(/\.js$/,'.html'));
-	const linkTexts = data.map(h => h.split('/').pop().replace(/(\w+)\.js$/ig,'$1'));
+	const navObject = data.map(o => {
+		return {
+			href: o.dir.replace(process.cwd() + '/templates/content','') + '/' + o.name + '.html',
+			name: o.name
+		}
+	});
 
-	const links = data.reduce((a,c,i) => a + `<a href="/${hrefs[i]}" class="navigation__link">${linkTexts[i]}</a> `, '');
+	const links = navObject.reduce((a,c) => a + `<a href="${c.href}" class="navigation__link">${c.name}</a>`, '');
 	
 	return `<nav class="navigation">${links}</nav>`;
 	
