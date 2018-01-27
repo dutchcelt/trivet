@@ -1,13 +1,17 @@
+const path = require('path');
+
 module.exports = data => {
 	
-	const navObject = data.map(o => {
+	const linkObject = data.map(o => {
 		return {
-			href: o.dir.replace(process.cwd() + '/templates/content','') + '/' + o.name + '.html',
-			name: o.name
+			root: '/',
+			dir: o.dir.replace(process.cwd() + '/templates/content',''),
+			name: o.name,
+			ext: '.html'
 		}
 	});
 
-	const links = navObject.reduce((a,c) => a + `<a href="${c.href}" class="navigation__link">${c.name}</a>`, '');
+	const links = linkObject.reduce((a,c) => a + `<a href="${path.format(c)}" class="navigation__link">${c.name}</a>`,'');
 	
 	return `<nav class="navigation">${links}</nav>`;
 	
