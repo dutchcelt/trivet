@@ -12,7 +12,7 @@ const pages = require("./content.js");
 const packageJSON = fs.readJSON('./package.json');
 
 
-const distPath = path.resolve(process.cwd(), './dist');
+const distPath = path.resolve(__dirname, '../dist');
 const contentPath = __dirname + '/content';
 const filePaths = dir.files(contentPath, {sync:true});
 const fileObjects = filePaths.reduce((a,f) => a.concat(path.parse(f)), []);
