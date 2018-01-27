@@ -1,17 +1,18 @@
 {
-	"name": "trivet",
+	"name": "Trivet",
 	"version": "1.0.0",
 	"description": "A very simple dynamic loader of scripts, styles, and json.",
 	"main": "trivet.mjs",
 	"scripts": {
-		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https",
+		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https --reload-debounce 300",
 		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js}\" dist",
 		"scss": "node-sass \"src\" -o \".cache\" -x --output-style compressed ",
 		"prefix": "postcss \".cache/**/*.css\" -u autoprefixer -d dist --no-map",
 		"css": "yarn scss && yarn prefix",
-		"build": "trash {dist,.cache} && yarn assets & yarn css & yarn html",
+		"build": "yarn assets & yarn css",
+		"build:develop": "trash {dist,.cache} && yarn html & yarn build",
 		"watch": "yarn assets -w & yarn scss -w & yarn prefix -w",
-		"develop": "yarn build && yarn serve | yarn watch",
+		"develop": "yarn build:develop && yarn watch | yarn serve",
 		"html": "node \"./templates/createHTML.js\""
 	},
 	"repository": {
