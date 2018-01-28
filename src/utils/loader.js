@@ -83,7 +83,22 @@ const loadStyles = (href, media, crossorigin, element) => {
 	});
 };
 
+/**
+ * Return an object from a JSON file.
+ * @param path
+ * @returns {Object}
+ */
+const loadJSON = async path => {
+	let response = {};
+	try {
+		response = await fetch(path).then(r => r.json());
+	} catch (error) {
+		console.log(error)
+	}
+	return response;
+};
 
 
-export { loadScript, loadStyles }
+
+export { loadScript, loadStyles, loadJSON }
 

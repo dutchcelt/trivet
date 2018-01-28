@@ -1,12 +1,11 @@
-import { loadScript, loadStyles } from "./utils/loader.js";
-
+import { loadJSON } from "./utils/loader.js";
 
 /* config default */
+const defaults = {};
+defaults.name = 'trivet';
+defaults.hookAttr = 'data-' + defaults.name;
+defaults.basePath = '/';
 
-let defaults = {
-	"hookAttr": "data-trivet",
-	"basePath": "/"
-};
 const elements = document.body.getElementsByTagName('*');
 
 const getElementsByAttribute = attr => {
@@ -21,27 +20,29 @@ const getElementsByAttribute = attr => {
  * Loads a components defined the config module by matching the corresponding hook.
  * A component consists of a single script that may optionally be paired with a stylesheet and or template.
  */
-const loadTrivet = (elem, settings) => {
-	console.log(settings, elem.getAttribute(settings.hookAttr));
-
+const loadTrivet = async (elem, settings) => {
+	const key = elem.dataset[defaults.name];
+	const func = await import(`${settings.basePath}/${key}/${settings.paths[key]}`);
+	func.default(elem);
 };
+
+
 /**
  * Look for all hooks and trigger
  * @param {object} opts
  */
 const trivet = async function(opts = {}){
-	let rc = {};
-	try {
-		rc = await fetch('/trivet.json').then(r => r.json());
-	} catch (e) {}
-	const settings = Object.assign(defaults, rc, opts);
+	const rc = await loadJSON('/trivet.json');
+	const settings = Object.create(defaults);
+	Object.assign(settings,rc, opts);
 	
 	getElementsByAttribute(settings.hookAttr).forEach( elem => {
-		setTimeout(() => loadTrivet(elem, settings),0);
+		setImmediate(loadTrivet, elem, settings);
 	});
 	
 };
 
 
-
 trivet();
+
+export default trivet;

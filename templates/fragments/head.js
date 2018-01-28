@@ -9,7 +9,7 @@ module.exports = data => {
 	<link rel="stylesheet" href="${data.path}${data.styles}" media="screen"/>
 
 	<!-- FT polyfill service -->
-	<script src="${data.polyfillService}$features=${data.polyfillFeatures}&flags=gated"></script>
+	<script src="${data.polyfillService}?features=${data.polyfillFeatures}&flags=gated"></script>
 	
 	<!--  Start loading scripts  -->
 	<script type="module" src="${data.path}${data.trivet}"></script>
