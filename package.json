@@ -7,7 +7,7 @@
 		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https --reload-debounce 300",
 		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js}\" dist",
 		"scss": "node-sass \"src\" -o \".cache\" -x --output-style compressed ",
-		"prefix": "postcss \".cache/**/*.css\" -u autoprefixer -d dist --no-map",
+		"prefix": "postcss -b \".cache\" \".cache/**/*.css\" -u autoprefixer -d \"dist/\" --no-map ",
 		"css": "yarn scss && yarn prefix",
 		"build": "yarn assets & yarn css",
 		"build:develop": "trash {dist,.cache} && yarn html & yarn build",
@@ -32,7 +32,7 @@
 	},
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
-		"browser-sync": "^2.18.13",
+		"browser-sync": "^2.23.6",
 		"create-html": "^4.1.0",
 		"node-dir": "^0.1.17",
 		"trash-cli": "^1.4.0"
