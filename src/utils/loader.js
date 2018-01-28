@@ -44,7 +44,7 @@ const loadScript = (src, element) => {
  * @param {Element} element
  * @returns {Promise}
  */
-const loadStyles = (href, media, crossorigin, element) => {
+const loadStyles = (href, element, media, crossorigin) => {
 
 	if(!href) return Promise.resolve();
 

@@ -19,11 +19,21 @@ const getElementsByAttribute = attr => {
 /**
  * Loads a components defined the config module by matching the corresponding hook.
  * A component consists of a single script that may optionally be paired with a stylesheet and or template.
+ * @param {Element} elem
+ * @param {Object} settings
  */
 const loadTrivet = async (elem, settings) => {
 	const key = elem.dataset[defaults.name];
-	const func = await import(`${settings.basePath}/${key}/${settings.paths[key]}`);
-	func.default(elem);
+	if (settings.paths[key]) {
+		try {
+			const func = await import(`${settings.basePath}/${key}/${settings.paths[key]}`);
+			func.default(elem);
+		} catch (error){
+			console.warn(error);
+		}
+	} else {
+		console.warn(`The loader doesn't recognize "${key}" in it's config paths setting.`);
+	}
 };
 
 
@@ -45,4 +55,4 @@ const trivet = async function(opts = {}){
 
 trivet();
 
-export default trivet;
+export { trivet as default, elements };
