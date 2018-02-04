@@ -1,8 +1,15 @@
+// Register each loaded file;
+const loaderSet = new Set();
+
+
 /**
- * Check if a script has already loaded by checking the src attribute of all the scripts elements.
- * @param {string} src
+ * Convert (normalise) a path to a full URL.
+ * @param path
+ * @returns {string}
  */
-const hasScript = src => [...document.scripts].some(js => encodeURI(src) === js.src);
+const normalisePath = path => /^http/ig.test(path)
+	? encodeURI(path)
+	: encodeURI(`${location.protocol}//${location.host}${path}`);
 
 /**
  * Feature detection for preloading styles
@@ -13,6 +20,13 @@ try {
 } catch (err) { console.log("hasPreload: " + err); }
 
 
+let dynamicImportSupported;
+try {
+	Function('import("")');
+	dynamicImportSupported = true;
+} catch (err) { console.log("dynamicImportSupported: " + err); }
+
+
 /**
  * Loads an external script asynchronously by inserting it into the head or before the component
  * @param {string} src - location path to script source
@@ -20,37 +34,42 @@ try {
  * @returns {Promise}
  */
 const loadScript = (src, element) => {
-
+	
 	const js = document.createElement("script");
 	js.async = false;
-	js.src = encodeURI(src);
-	if (hasScript(js.src)) return Promise.resolve('Script is already loaded: ' + js.src);
+	js.src = normalisePath(src);
+	if (loaderSet.has(js.src)) return Promise.resolve('Script is already loaded: ' + js.src);
+	loaderSet.add(js.src);
+	
+	if (dynamicImportSupported) return import(js.src);
+	
 	return new Promise((resolve, reject) => {
 		js.onload = resolve;
 		js.onerror = () => reject("Failed to load script with URL: " + src);
 		element
 			? element.parentNode.insertBefore(js, component)
-			: element.head.appendChild(js);
+			: document.head.appendChild(js);
 	});
+	
 };
 
 
 
 /**
  * Load a stylesheet and preload it if possible to allow for better performance
- * @param {string} href
+ * @param {string} path
  * @param {string} media
  * @param {string} crossorigin
  * @param {Element} element
  * @returns {Promise}
  */
-const loadStyles = (href, element, media, crossorigin) => {
+const loadStyles = (path, element, media, crossorigin) => {
 
-	if(!href) return Promise.resolve();
+	if(!path) return Promise.resolve();
+	
+	const href = normalisePath(path);
 
-	href = encodeURI(href);
-
-	if ([...document.styleSheets].some(link => link.href === href)) return Promise.resolve('Already loaded');
+	if (loaderSet.has(href)) return Promise.resolve('Already loaded');
 
 	let preload;
 	if (hasPreload) {
@@ -66,6 +85,7 @@ const loadStyles = (href, element, media, crossorigin) => {
 	css.href = href;
 	css.media = media || 'screen';
 	css.rel = 'stylesheet';
+	loaderSet.add(css.href);
 
 	return new Promise((resolve, reject) => {
 
@@ -86,19 +106,25 @@ const loadStyles = (href, element, media, crossorigin) => {
 /**
  * Return an object from a JSON file.
  * @param path
- * @returns {Object}
+ * @returns {Promise}
  */
-const loadJSON = async path => {
-	let response = {};
-	try {
-		response = await fetch(path).then(r => r.json());
-	} catch (error) {
-		console.log(error)
-	}
-	return response;
+const loadJSON = path => {
+	const filePath = normalisePath(path);
+	if (loaderSet.has(filePath)) return Promise.resolve('Already loaded');
+	
+	return new Promise((resolve, reject) => {
+		try {
+			fetch(filePath).then(r => {
+				loaderSet.add(r.url);
+				resolve(r.json());
+			});
+		} catch (error) {
+			reject(error);
+		}
+	});
 };
 
 
 
-export { loadScript, loadStyles, loadJSON }
+export { loadScript, loadStyles, loadJSON, normalisePath}
 
