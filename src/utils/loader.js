@@ -20,38 +20,30 @@ try {
 } catch (err) { console.log("hasPreload: " + err); }
 
 
-let dynamicImportSupported;
-try {
-	Function('import("")');
-	dynamicImportSupported = true;
-} catch (err) { console.log("dynamicImportSupported: " + err); }
-
-
 /**
  * Loads an external script asynchronously by inserting it into the head or before the component
  * @param {string} src - location path to script source
- * @param {Element} element
  * @returns {Promise}
  */
-const loadScript = (src, element) => {
-	
+const loadScript = src => {
 	const js = document.createElement("script");
 	js.async = false;
 	js.src = normalisePath(src);
 	if (loaderSet.has(js.src)) return Promise.resolve('Script is already loaded: ' + js.src);
 	loaderSet.add(js.src);
 	
-	if (dynamicImportSupported) return import(js.src);
-	
 	return new Promise((resolve, reject) => {
 		js.onload = resolve;
 		js.onerror = () => reject("Failed to load script with URL: " + src);
-		element
-			? element.parentNode.insertBefore(js, component)
-			: document.head.appendChild(js);
+		document.head.appendChild(js);
 	});
 	
 };
+
+let loadModule;
+try {
+	loadModule = new Function('src', 'return import(src)');
+} catch (err) { loadModule = loadScript }
 
 
 
@@ -126,5 +118,5 @@ const loadJSON = path => {
 
 
 
-export { loadScript, loadStyles, loadJSON, normalisePath}
+export { loadModule, loadScript, loadStyles, loadJSON, normalisePath}
 

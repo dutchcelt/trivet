@@ -1,4 +1,4 @@
-import {loadScript, loadStyles, loadJSON, normalisePath} from "./utils/loader.js";
+import {loadModule, loadScript, loadStyles, loadJSON, normalisePath} from "./utils/loader.js";
 
 /* config default */
 const defaults = {};
@@ -21,11 +21,12 @@ const getElementsByAttribute = attr => {
 	return arr;
 };
 
-const resolveScript = (filepath, elem) => {
+const resolveScript = (filepath, elem, module) => {
+	const loadFile = module ? loadModule : loadScript;
 	if (typeof loaderMap.get(filepath) === 'function') {
 		return Promise.resolve(loaderMap.get(filepath)(elem));
 	} else {
-		return loadScript(filepath).then(response => {
+		return loadFile(filepath).then(response => {
 			loaderMap.set(filepath, response.default || response);
 			if (response.default) response.default(elem);
 			return response.default || response;
@@ -51,6 +52,7 @@ const resolveJson = filepath => {
  * @param {Object} settings
  */
 const loadTrivet = (elem, settings) => {
+	
 	if (!settings || !settings.paths) return;
 	const key = elem.dataset[defaults.name];
 	
@@ -59,12 +61,13 @@ const loadTrivet = (elem, settings) => {
 	const loader = array => {
 		const loaders = [];
 		array.forEach(file => {
-			const filepath = /^http/ig.test(file) ? file : normalisePath(`${settings.basePath}/${key}/${file}`);
+			const fileRef = file.split('!');
+			const filepath = /^http/ig.test(file) ? file : normalisePath(`${settings.basePath}/${key}/${fileRef[0]}`);
 			try {
-				const ext = /\.(\w{2,4})$/ig.exec(file)[1];
+				const ext = /\.(\w{2,4})$/ig.exec(fileRef[0])[1];
 				switch (ext) {
 					case 'js':
-						loaders.push(resolveScript(filepath, elem));
+						loaders.push(resolveScript(filepath, elem, !!fileRef[1]));
 						break;
 					case 'css':
 						loaders.push(loadStyles(filepath, elem));
