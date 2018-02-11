@@ -2859,6 +2859,10 @@ supports-color@^5.1.0:
   dependencies:
     has-flag "^2.0.0"
 
+systemjs@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.21.0.tgz#e3e61dd7beacaae421a52703c9679fb2543862f2"
+
 tar-pack@^3.4.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/tar-pack/-/tar-pack-3.4.1.tgz#e1dbc03a9b9d3ba07e896ad027317eb679a10a1f"

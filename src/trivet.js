@@ -1,4 +1,4 @@
-import {loadModule, loadScript, loadStyles, loadJSON, normalisePath} from "./utils/loader.js";
+import {loadModule, loadScript, loadStyles, loadJSON, normalisePath, loaderSet} from "./utils/loader.js";
 
 /* config default */
 const defaults = {};
@@ -21,27 +21,50 @@ const getElementsByAttribute = attr => {
 	return arr;
 };
 
-const resolveScript = (filepath, elem, module) => {
-	const loadFile = module ? loadModule : loadScript;
-	if (typeof loaderMap.get(filepath) === 'function') {
-		return Promise.resolve(loaderMap.get(filepath)(elem));
-	} else {
-		return loadFile(filepath).then(response => {
-			loaderMap.set(filepath, response.default || response);
-			if (response.default) response.default(elem);
-			return response.default || response;
-		});
+/**
+ *
+ * @param {string} f - filepath
+ * @param {*} r - response return from a promise
+ * @param {Element} e - optional element to pass to default function
+ * @returns {*}
+ */
+const resolveResponse = (f, r, e = null) => {
+	loaderMap.set(f, r.default || r);
+	const fn = e && typeof r.default === 'function';
+	return fn && r.default(e) || r;
+};
+/**
+ *
+ * @param filepath
+ * @returns {Promise}
+ */
+const getLoaderObject = filepath => {
+	const o = loaderMap.get(filepath);
+	return Promise.resolve(typeof o === 'function' ? o() : o);
+};
+
+const getLoadFunction = (filepath, module) => {
+	const ext = /\.(\w{2,4})$/ig.exec(filepath).pop();
+	if (module === 'es6') {
+		return loadModule(filepath);
+	} else if (module) {
+		return loadScript('/system.js').then(() => SystemJS.import(filepath));
+	} else if (ext === 'js') {
+		return loadScript(filepath);
+	} else if (ext === 'json') {
+		return loadJSON(filepath);
+	} else if (ext === 'css') {
+		return loadStyles(filepath);
 	}
 };
-const resolveJson = filepath => {
-	if (loaderMap.get(filepath)) {
-		return Promise.resolve(loaderMap.get(filepath));
-	} else {
-		return loadJSON(filepath).then(response => {
-			loaderMap.set(filepath, response);
-			return response;
-		});
-	}
+
+const resolveLoader = (filepath, elem, module) => {
+	
+	return loaderSet.has(filepath)
+		? getLoaderObject(filepath)
+		: getLoadFunction(filepath, module)
+			.then(response => resolveResponse(filepath, response, elem));
+	
 };
 
 
@@ -54,33 +77,19 @@ const resolveJson = filepath => {
 const loadTrivet = (elem, settings) => {
 	
 	if (!settings || !settings.paths) return;
-	const key = elem.dataset[defaults.name];
+	const key = elem.dataset[settings.name];
 	
 	settings.paths[key].sort(a => /\.json$/ig.test(a) && -1);
 	
 	const loader = array => {
 		const loaders = [];
 		array.forEach(file => {
-			const fileRef = file.split('!');
-			const filepath = /^http/ig.test(file) ? file : normalisePath(`${settings.basePath}/${key}/${fileRef[0]}`);
-			try {
-				const ext = /\.(\w{2,4})$/ig.exec(fileRef[0])[1];
-				switch (ext) {
-					case 'js':
-						loaders.push(resolveScript(filepath, elem, !!fileRef[1]));
-						break;
-					case 'css':
-						loaders.push(loadStyles(filepath, elem));
-						break;
-					case 'json':
-						loaders.push(resolveJson(filepath));
-						break;
-					default:
-						console.log('file extention ' + ext + ' will not be loaded');
-				}
-			} catch (error) {
-				reject(error)
-			}
+			const href = /^http/ig.test(file) ? file : normalisePath(`${settings.basePath}/${key}/${file}`);
+			const url = new URL(href);
+			const filepath = url.origin + url.pathname;
+			const module = url.searchParams && url.searchParams.get('module');
+			loaders.push(resolveLoader(filepath, elem, module));
+			
 		});
 		return Promise.all(loaders);
 		

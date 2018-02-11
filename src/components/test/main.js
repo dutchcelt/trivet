@@ -3,7 +3,7 @@ export default element => {
 	
 	
 	
-	console.log( window.jQuery, window.SystemJS);
+	console.log(element, window.jQuery);
 	
 	
 }

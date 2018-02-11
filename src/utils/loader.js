@@ -118,5 +118,5 @@ const loadJSON = path => {
 
 
 
-export { loadModule, loadScript, loadStyles, loadJSON, normalisePath}
+export { loadModule, loadScript, loadStyles, loadJSON, normalisePath, loaderSet}
 
