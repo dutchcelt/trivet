@@ -40,10 +40,15 @@ const loadScript = src => {
 	
 };
 
-let loadModule;
-try {
-	loadModule = new Function('src', 'return import(src)');
-} catch (err) { loadModule = loadScript }
+let loadModule = async filepath => {
+	try {
+		return new Function('filepath', 'return import(filepath)')(filepath);
+	} catch (err) {
+		await loadScript('/system.js');
+		return SystemJS.import(filepath);
+	}
+	
+};
 
 
 

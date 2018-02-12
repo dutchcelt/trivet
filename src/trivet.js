@@ -43,19 +43,17 @@ const getLoaderObject = filepath => {
 	return Promise.resolve(typeof o === 'function' ? o() : o);
 };
 
+
 const getLoadFunction = (filepath, module) => {
-	const ext = /\.(\w{2,4})$/ig.exec(filepath).pop();
-	if (module === 'es6') {
-		return loadModule(filepath);
-	} else if (module) {
-		return loadScript('/system.js').then(() => SystemJS.import(filepath));
-	} else if (ext === 'js') {
-		return loadScript(filepath);
-	} else if (ext === 'json') {
-		return loadJSON(filepath);
-	} else if (ext === 'css') {
-		return loadStyles(filepath);
-	}
+	const ext = /[\.|#](\w+)$/ig.exec(filepath + module).pop();
+	const loaderObject = {
+		'module': loadModule,
+		'js': loadScript,
+		'css': loadStyles,
+		'json': loadJSON
+	};
+	return loaderObject[ext](filepath);
+
 };
 
 const resolveLoader = (filepath, elem, module) => {
@@ -87,7 +85,7 @@ const loadTrivet = (elem, settings) => {
 			const href = /^http/ig.test(file) ? file : normalisePath(`${settings.basePath}/${key}/${file}`);
 			const url = new URL(href);
 			const filepath = url.origin + url.pathname;
-			const module = url.searchParams && url.searchParams.get('module');
+			const module = url.hash;
 			loaders.push(resolveLoader(filepath, elem, module));
 			
 		});
