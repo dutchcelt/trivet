@@ -4,5 +4,8 @@ module.exports = data => {
 	<p>${data.body}</p>
 	<div data-trivet="test" class="test"></div>
 	<div data-trivet="test" class="test"></div>
+	
+	<div class="editor-markdown" data-trivet="vue"></div>
+
 	`;
 }

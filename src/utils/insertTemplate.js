@@ -4,7 +4,7 @@
  * @param element {Element}
  * @returns {Node}
  */
-export default function (string, element) {
+export default (string, element) => {
 	const newNode = createFragment(string);
 	if(/^template|-template$/i.test(element.tagName)) {
 		[...element.attributes].forEach(a => newNode.setAttribute(a.name, a.value));

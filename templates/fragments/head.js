@@ -13,6 +13,6 @@ module.exports = data => {
 	
 	<!--  Start loading scripts  -->
 	<script type="module" src="${data.path}${data.trivet}"></script>
-	
+
 	`;
 }

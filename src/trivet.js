@@ -99,13 +99,15 @@ const loadTrivet = (elem, settings) => {
 	const finalLoader = () => loader(settings.paths[key]).then(() => {
 		elem.removeAttribute(settings.hookAttr);
 	});
-	
+	console.log(settings.paths[key][0]);
 	if (/\.json$/ig.test(settings.paths[key][0])) {
 		loader([settings.paths[key].shift()]).then(response => {
 			loader(Object.values(response[0])[0]).then(finalLoader);
 		});
 	} else {
 		finalLoader();
+		elem.removeAttribute(settings.hookAttr);
+		
 	}
 };
 
