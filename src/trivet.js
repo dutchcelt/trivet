@@ -31,7 +31,7 @@ const getElementsByAttribute = attr => {
 const resolveResponse = (f, r, e = null) => {
 	loaderMap.set(f, r.default || r);
 	const fn = e && typeof r.default === 'function';
-	return fn && r.default(e) || r;
+	return fn && requestAnimationFrame(() => r.default(e)) || r;
 };
 /**
  *
