@@ -1,4 +1,4 @@
-import {loadModule, loadScript, loadStyles, loadJSON, normalisePath, loaderSet} from "./utils/loader.js";
+import {loadModule, loadStyles, loadJSON, normalisePath, loaderSet} from "./utils/loader.js";
 
 /* config default */
 const defaults = {};
@@ -21,48 +21,30 @@ const getElementsByAttribute = attr => {
 	return arr;
 };
 
-/**
- *
- * @param {string} f - filepath
- * @param {*} r - response return from a promise
- * @param {Element} e - optional element to pass to default function
- * @returns {*}
- */
-const resolveResponse = (f, r, e = null) => {
-	loaderMap.set(f, r.default || r);
-	const fn = e && typeof r.default === 'function';
-	return fn && requestAnimationFrame(() => r.default(e)) || r;
-};
-/**
- *
- * @param filepath
- * @returns {Promise}
- */
-const getLoaderObject = filepath => {
-	const o = loaderMap.get(filepath);
-	return Promise.resolve(typeof o === 'function' ? o() : o);
-};
 
-
-const getLoadFunction = (filepath, module) => {
-	const ext = /[\.|#](\w+)$/ig.exec(filepath + module).pop();
-	const loaderObject = {
-		'module': loadModule,
-		'js': loadScript,
+const ResolveLoader = {
+	
+	functionMap: {
+		'js': loadModule,
 		'css': loadStyles,
 		'json': loadJSON
-	};
-	return loaderObject[ext](filepath);
-
-};
-
-const resolveLoader = (filepath, elem, module) => {
+	},
 	
-	return loaderSet.has(filepath)
-		? getLoaderObject(filepath)
-		: getLoadFunction(filepath, module)
-			.then(response => resolveResponse(filepath, response, elem));
+	getLoadFunction() {
+		const ext = /[\.|#](\w+)$/ig.exec(this.filepath).pop();
+		return this.functionMap[ext](this.filepath);
+	},
 	
+	getLoaderObject() {
+		const o = loaderMap.get(this.filepath);
+		return Promise.resolve(typeof o === 'function' ? o() : o);
+	},
+	
+	get deferred() {
+		return loaderSet.has(this.filepath)
+			? this.getLoaderObject()
+			: this.getLoadFunction();
+	}
 };
 
 
@@ -77,16 +59,14 @@ const loadTrivet = (elem, settings) => {
 	if (!settings || !settings.paths) return;
 	const key = elem.dataset[settings.name];
 	
-	settings.paths[key].sort(a => /\.json$/ig.test(a) && -1);
-	
 	const loader = array => {
 		const loaders = [];
 		array.forEach(file => {
 			const href = /^http/ig.test(file) ? file : normalisePath(`${settings.basePath}/${key}/${file}`);
 			const url = new URL(href);
 			const filepath = url.origin + url.pathname;
-			const module = url.hash;
-			loaders.push(resolveLoader(filepath, elem, module));
+			const resolveLoader = Object.create(ResolveLoader, { filepath: { value: filepath } });
+			loaders.push(resolveLoader.deferred);
 			
 		});
 		return Promise.all(loaders);
@@ -96,19 +76,20 @@ const loadTrivet = (elem, settings) => {
 	/**
 	 * Last load cycle that will remove the style attribute
 	 */
-	const finalLoader = () => loader(settings.paths[key]).then(() => {
+	loader(settings.paths[key]).then(responses => {
+		let fn, data;
+		responses.forEach(r => {
+			if (!r || r instanceof Event) return;
+			if (r.default && typeof r.default === 'function') {
+				fn = fn || r.default;
+			} else if (typeof r === 'object') {
+				data = r;
+			}
+		});
+		fn && fn(elem, data);
 		elem.removeAttribute(settings.hookAttr);
 	});
-	console.log(settings.paths[key][0]);
-	if (/\.json$/ig.test(settings.paths[key][0])) {
-		loader([settings.paths[key].shift()]).then(response => {
-			loader(Object.values(response[0])[0]).then(finalLoader);
-		});
-	} else {
-		finalLoader();
-		elem.removeAttribute(settings.hookAttr);
-		
-	}
+	
 };
 
 

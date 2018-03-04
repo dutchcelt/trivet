@@ -1,10 +1,9 @@
 {
 	"basePath": "/components",
 	"paths": {
-		"test": ["main.js#module","test.css","deps.json"],
+		"test": ["main.js","test.css","data.json"],
 		"vue":[
-			"main.js#module",
-			"https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"
+			"main.js", "data.json", "menu.css"
 		]
 	}
 

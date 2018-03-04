@@ -1,0 +1,9 @@
+{
+	"vuejs": "https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js",
+	"pages": [
+		{"name": "Home"},
+		{"name": "Projects"},
+		{"name": "Services"},
+		{"name": "Contact"}
+	]
+}

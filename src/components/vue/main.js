@@ -1,6 +1,9 @@
 import template from './template.js';
+import { loadScript } from '/utils/loader.js';
 
-export default async target => {
+export default async (target, data) => {
+
+	await loadScript(data.vuejs);
 	
 	new Vue({
 		el: target,
@@ -8,13 +11,7 @@ export default async target => {
 		data: {
 			message: 'Hello Vue!',
 			active: 'home',
-			pages: [
-				{name: 'Home'},
-				{name:'Projects'},
-				{name:'Services'},
-				{name:'Contact'}
-			]
-			
+			pages: data.pages
 		},
 		
 		// Functions we will be using.

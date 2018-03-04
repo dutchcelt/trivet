@@ -43,10 +43,7 @@ const loadScript = src => {
 let loadModule = async filepath => {
 	try {
 		return new Function('filepath', 'return import(filepath)')(filepath);
-	} catch (err) {
-		await loadScript('/system.js');
-		return SystemJS.import(filepath);
-	}
+	} catch (err) {}
 	
 };
 
