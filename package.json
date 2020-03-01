@@ -1,16 +1,18 @@
 {
 	"name": "Trivet",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "A very simple dynamic loader of scripts, styles, and json.",
 	"main": "trivet.mjs",
 	"scripts": {
 		"serve": "browser-sync start -s \"dist\" -f \"dist\"  --cors --https --reload-debounce 300",
+		"styleConstructor": "cpx \"node_modules/construct-style-sheets-polyfill/dist/adoptedStyleSheets.js\" dist",
+		"importmap": "cpx \"node_modules/es-module-shims/dist/es-module-shims.min.js\" dist",
 		"systemjs": "cpx \"node_modules/systemjs/dist/system.js\" dist",
-		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js}\" dist",
+		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist",
 		"scss": "node-sass \"src\" -o \".cache\" -x --output-style compressed ",
 		"prefix": "postcss -b \".cache\" \".cache/**/*.css\" -u autoprefixer -d \"dist/\" --no-map ",
 		"css": "yarn scss && yarn prefix",
-		"build": "yarn systemjs & yarn assets & yarn css",
+		"build": "yarn styleConstructor & yarn importmap & yarn systemjs & yarn assets & yarn css",
 		"build:develop": "trash {dist,.cache} && yarn html & yarn build",
 		"watch": "yarn assets -w & yarn scss -w & yarn prefix -w",
 		"develop": "yarn build:develop && yarn watch | yarn serve",
@@ -40,7 +42,10 @@
 	},
 	"dependencies": {
 		"autoprefixer": "^7.2.5",
+		"construct-style-sheets-polyfill": "^2.3.5",
 		"cpx": "^1.5.0",
+		"es-module-shims": "^0.4.6",
+		"kss": "^3.0.0",
 		"node-sass": "^4.7.2",
 		"postcss-cli": "^4.1.1",
 		"systemjs": "^0.21.0"

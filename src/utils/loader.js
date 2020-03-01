@@ -31,13 +31,13 @@ const loadScript = src => {
 	js.src = normalisePath(src);
 	if (loaderSet.has(js.src)) return Promise.resolve('Script is already loaded: ' + js.src);
 	loaderSet.add(js.src);
-	
+
 	return new Promise((resolve, reject) => {
 		js.onload = resolve;
 		js.onerror = () => reject("Failed to load script with URL: " + src);
 		document.head.appendChild(js);
 	});
-	
+
 };
 
 let loadModule = async filepath => {
@@ -47,7 +47,7 @@ let loadModule = async filepath => {
 		await loadScript('/system.js');
 		return SystemJS.import(filepath);
 	}
-	
+
 };
 
 
@@ -63,7 +63,7 @@ let loadModule = async filepath => {
 const loadStyles = (path, element, media, crossorigin) => {
 
 	if(!path) return Promise.resolve();
-	
+
 	const href = normalisePath(path);
 
 	if (loaderSet.has(href)) return Promise.resolve('Already loaded');
@@ -108,7 +108,7 @@ const loadStyles = (path, element, media, crossorigin) => {
 const loadJSON = path => {
 	const filePath = normalisePath(path);
 	if (loaderSet.has(filePath)) return Promise.resolve('Already loaded');
-	
+
 	return new Promise((resolve, reject) => {
 		try {
 			fetch(filePath).then(r => {

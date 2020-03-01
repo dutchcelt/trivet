@@ -1,8 +1,8 @@
 module.exports = data => {
 	return `
-	<h1>${data.title}</h1>
-	<p>${data.body}</p>
-	<div data-trivet="test" class="test"></div>
-	<div data-trivet="test" class="test"></div>
+
+	<trvt-test-elem tekst="${data.title}" tag="h1"></trvt-test-elem>
+	<trvt-test-elem tekst="${data.body}"></trvt-test-elem>
+	<trvt-test-elem tekst="Simple text" class="test"></trvt-test-elem>
 	`;
 }

@@ -57,12 +57,12 @@ const getLoadFunction = (filepath, module) => {
 };
 
 const resolveLoader = (filepath, elem, module) => {
-	
+
 	return loaderSet.has(filepath)
 		? getLoaderObject(filepath)
 		: getLoadFunction(filepath, module)
 			.then(response => resolveResponse(filepath, response, elem));
-	
+
 };
 
 
@@ -73,12 +73,12 @@ const resolveLoader = (filepath, elem, module) => {
  * @param {Object} settings
  */
 const loadTrivet = (elem, settings) => {
-	
+
 	if (!settings || !settings.paths) return;
 	const key = elem.dataset[settings.name];
-	
+
 	settings.paths[key].sort(a => /\.json$/ig.test(a) && -1);
-	
+
 	const loader = array => {
 		const loaders = [];
 		array.forEach(file => {
@@ -87,19 +87,19 @@ const loadTrivet = (elem, settings) => {
 			const filepath = url.origin + url.pathname;
 			const module = url.hash;
 			loaders.push(resolveLoader(filepath, elem, module));
-			
+
 		});
 		return Promise.all(loaders);
-		
+
 	};
-	
+
 	/**
 	 * Last load cycle that will remove the style attribute
 	 */
 	const finalLoader = () => loader(settings.paths[key]).then(() => {
 		elem.removeAttribute(settings.hookAttr);
 	});
-	
+
 	if (/\.json$/ig.test(settings.paths[key][0])) {
 		loader([settings.paths[key].shift()]).then(response => {
 			loader(Object.values(response[0])[0]).then(finalLoader);
@@ -118,13 +118,13 @@ const trivet = function (opts = {}) {
 	loadJSON(`/${defaults.name}.json`).then(json => {
 		const settings = Object.create(defaults);
 		Object.assign(settings, json, opts);
-		
+
 		getElementsByAttribute(settings.hookAttr).forEach(elem => {
 			setImmediate(loadTrivet, elem, settings);
 		});
-		
+
 	});
-	
+
 };
 
 
