@@ -1,7 +1,10 @@
 {
 	"imports": {
+		"trivetStyles":"/styles.css",
 		"jquery": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
-		"simpleTest":"/components/test/main.js",
-		"styleTest":"/components/test/test.css"
+		"trvt-test-elem":"/components/test/main.js",
+		"styleTest":"/components/test/test.css",
+		"trivet":"/trivet.js",
+		"insertTemplate" : "/utils/insertTemplate.js"
 	}
 }
