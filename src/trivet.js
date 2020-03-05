@@ -1,8 +1,5 @@
-// Main css file
-import trivetStyles from "trivetStyles";
-document.adoptedStyleSheets = [trivetStyles];
-
 const trvtElements = document.getElementsByTagName('*');
+
 const importTrvtElements = trvtList => {
 	const trvtNodes = trvtList.addedNodes || trvtList;
 	const trvtTags = [...trvtNodes].map(e => e.tagName).filter(s => /trvt/ig.test(s));
