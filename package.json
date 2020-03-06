@@ -4,12 +4,10 @@
 	"description": "A very simple dynamic loader of scripts, styles, and json.",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server & browser-sync start --proxy \"localhost:9000\" --open \"/index.html\" --files \"dist\"  --cors --https --reload-debounce 300",
-		"styleConstructor": "cpx \"node_modules/construct-style-sheets-polyfill/dist/adoptedStyleSheets.js\" dist",
-		"importmap": "cpx \"node_modules/es-module-shims/dist/es-module-shims.min.js\" dist",
+		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --https --reload-debounce 300",
 		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist",
 		"scss": "node-sass \"src\" -o \"dist\" -x --output-style compressed ",
-		"build": "yarn styleConstructor & yarn importmap & yarn systemjs & yarn assets & yarn scss",
+		"build": "yarn assets & yarn scss",
 		"build:develop": "trash dist && yarn build",
 		"watch": "yarn assets -w & yarn scss -w",
 		"develop": "yarn build:develop && yarn watch | yarn serve"
@@ -32,8 +30,6 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
 		"browser-sync": "^2.23.6",
-		"create-html": "^4.1.0",
-		"node-dir": "~0.1.17",
 		"trash-cli": "^1.4.0"
 	},
 	"dependencies": {

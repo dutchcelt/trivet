@@ -1,0 +1,7 @@
+.layout {
+	display: var(--display);
+	grid-template-columns: var(--template-columns);
+	grid-template-rows: var(--template-rows);
+	background: var(--background-color);
+	width: 100%;
+}

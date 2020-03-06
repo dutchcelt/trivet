@@ -1,4 +1,11 @@
 
+:root {
+	--display: grid;
+	--template-columns: 1fr 1fr;
+	--template-rows: 1fr;
+	--background-color: white;
+}
+
 
 @import "styles/_normalize";
 
@@ -7,4 +14,8 @@ body {
 	display: block;
 	font-family: Arial, sans-serif;
 	background: lightskyblue;
+}
+
+[slot] {
+	display: contents;
 }

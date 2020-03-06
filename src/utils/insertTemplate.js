@@ -15,7 +15,7 @@ export default function (string, element) {
 	return newNode;
 }
 
-function createFragment(string) {
+export function createFragment(string) {
 	const fragment = document.createDocumentFragment();
 	const parser = new DOMParser().parseFromString(string, "text/html");
 	return fragment.appendChild(parser.body.firstElementChild);
