@@ -10,7 +10,7 @@
 		"build": "yarn assets & yarn scss",
 		"build:develop": "trash dist && yarn build",
 		"watch": "yarn assets -w & yarn scss -w",
-		"develop": "yarn build:develop && yarn watch | yarn serve"
+		"develop": "yarn build:develop && yarn watch | yarn start"
 	},
 	"repository": {
 		"type": "git",

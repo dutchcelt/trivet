@@ -3,10 +3,11 @@ import trivetStyles from 'trivetStyles';
 
 const template = document.createElement('template');
 template.innerHTML = `
-	<h1>
-		<slot name="title"></slot>
-	</h1>
-	<slot name="layout" class="layout"></slot>
+<section class="trvt-section">
+	<header class="trvt-section__header"><slot name="title"></slot></header>
+	<div class="trvt-section__layout"><slot name="content"></slot></div>
+	<footer class="trvt-section__footer"><slot name="footer"></slot></footer>
+</section>
 `;
 
 customElements.define('trvt-layout',
