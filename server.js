@@ -16,7 +16,8 @@ const fragments = require('./templates/fragments/fragments.js');
 router.all('/', function (req, res, next) {
 	res.render('index', {
 		locals: Object.assign(trivetData,{
-			title: 'Hello, Welcome to Trivet!'
+			title: 'Hello, Welcome to Trivet!',
+			content: 'Trivet is a very simple approach to the dynamic loading of scripts, styles, and json.'
 		}),
 		partials: Object.assign(fragments,{
 			main: '/content/index'
@@ -26,7 +27,8 @@ router.all('/', function (req, res, next) {
 router.all('/textContent.html', function (req, res, next) {
 	res.render('index', {
 		locals: Object.assign(trivetData,{
-			title: 'This is a Text Content test!'
+			title: 'This is a Text Content test!',
+			content:''
 		}),
 		partials: Object.assign(fragments,{
 			main: '/content/textContent'

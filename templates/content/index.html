@@ -1,3 +1,16 @@
-<trvt-test-elem tekst="${title}" tag="h1"></trvt-test-elem>
-<trvt-test-elem tekst="Trivet is a very simple approach to the dynamic loading of scripts, styles, and json."></trvt-test-elem>
-<trvt-test-elem tekst="Simple text" class="test"></trvt-test-elem>
+<trvt-layout>
+	<span slot="header" >
+		<trvt-test-elem tag="h1">
+			<span slot="default">${title}</span>
+		</trvt-test-elem>
+	</span>
+	<span slot="content">
+		<trvt-test-elem>
+			<span slot="default">${content}</span>
+		</trvt-test-elem>
+		<trvt-test-elem>
+			<span slot="default">Simple text</span>
+		</trvt-test-elem>
+	</span>
+</trvt-layout>
+

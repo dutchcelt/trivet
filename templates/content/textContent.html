@@ -1,10 +1,14 @@
 <trvt-layout>
 	<span slot="header" >
-			<trvt-test-elem tag="h1" tekst="${title}"></trvt-test-elem>
+		<trvt-test-elem tag="h1">
+			<span slot="default">${title}</span>
+		</trvt-test-elem>
 	</span>
 	<span slot="content">
 		<trvt-test-elem tekst="testing testing" tag="blockquote"></trvt-test-elem>
-		<trvt-test-elem><span slot="default">test</span></trvt-test-elem>
+		<trvt-test-elem>
+			<span slot="default">test</span>
+		</trvt-test-elem>
 	</span>
 	<span slot="footer">haha</span>
 </trvt-layout>

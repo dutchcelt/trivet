@@ -1,6 +1,6 @@
 import layoutStyles from 'layoutStyles';
 import trivetStyles from 'trivetStyles';
-import insertTemplate from 'insertTemplate';
+import createFragment from 'createFragment';
 
 const templateString = `
 <section class="trvt-section">
@@ -16,10 +16,9 @@ customElements.define('trvt-layout',
 			super();
 			const el = this;
 			const shadowRoot = el.attachShadow({mode: 'open'});
-			const template = insertTemplate(templateString);
+			const template = createFragment(templateString);
 			shadowRoot.adoptedStyleSheets = [trivetStyles,layoutStyles];
 			shadowRoot.appendChild(template.cloneNode(true));
 		}
-
 	}
 );

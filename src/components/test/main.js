@@ -1,5 +1,4 @@
 import styleTest from 'styleTest';
-const defaultString = "These are not the droids you are looking for";
 
 customElements.define('trvt-test-elem',
 	class extends HTMLElement {
@@ -7,6 +6,7 @@ customElements.define('trvt-test-elem',
 			super();
 			this.contentString = this.getAttribute('tekst');
 			this.tag = this.getAttribute('tag') || 'p';
+			this.attrs = [...this.attributes].filter(a => !(/tekst|tag/ig).test(a.name));
 			this.attachShadow({mode: 'open'});
 			this.shadowRoot.adoptedStyleSheets = [styleTest];
 		}
@@ -17,18 +17,21 @@ customElements.define('trvt-test-elem',
 );
 
 function appendDynamicTemplate(elem){
-	const attrs = [...elem.attributes].filter(a => !(/tekst|tag/ig).test(a.name));
+	const slotContent = elem.querySelector('[slot]');
 	const trvtElem = document.createElement(elem.tag);
-	if (elem.contentString) {
-		trvtElem.textContent = elem.contentString;
-	} else {
-		const slot = document.createElement('slot');
-		slot.name = 'default';
-		trvtElem.appendChild(slot);
-	}
-	attrs.forEach(a => {
+	slotContent && trvtElem.appendChild(createSlot(slotContent));
+	elem.contentString && (trvtElem.textContent = elem.contentString);
+	elem.attrs.forEach(a => {
 		trvtElem.setAttribute(a.name, a.value); // copy attribute to new element
 		elem.removeAttribute(a.name); // removed redundant attribute on web component
 	});
 	elem.shadowRoot.appendChild(trvtElem);
+}
+
+function createSlot(slotContent, slotname = 'default'){
+	if (slotContent.slot === slotname){
+		const slot = document.createElement('slot');
+		slot.name = slotname;
+		return slot;
+	}
 }

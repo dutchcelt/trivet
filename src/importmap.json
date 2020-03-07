@@ -7,6 +7,6 @@
 		"layoutStyles":"/components/layout/layout.css",
 		"styleTest":"/components/test/test.css",
 		"trivet":"/trivet.js",
-		"insertTemplate" : "/utils/insertTemplate.js"
+		"createFragment" : "/utils/createFragment.js"
 	}
 }
