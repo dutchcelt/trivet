@@ -1,23 +1,16 @@
-/**
- * Insert the content for the template and then return it as a Node Element.
- * @param string {string}
- * @param element {Element}
- * @returns {Node}
- */
-export default function (string, element) {
-	const newNode = createFragment(string);
-	if(/^template|-template$/i.test(element.tagName)) {
-		[...element.attributes].forEach(a => newNode.setAttribute(a.name, a.value));
-		element.parentNode.replaceChild(newNode, element);
-	} else {
-		element.appendChild(newNode);
-	}
-	return newNode;
-}
+const badTag = /script|template|iframe|object/ig;
 
-export function createFragment(string) {
+/**
+ * Parse the string as text/html and then return it as a DocumentFragment.
+ * @param string {string}
+ * @returns {DocumentFragment}
+ */
+export default (string) => {
 	const fragment = document.createDocumentFragment();
 	const parser = new DOMParser().parseFromString(string, "text/html");
-	return fragment.appendChild(parser.body.firstElementChild);
-}
+	[...parser.body.childNodes].forEach(node => {
+		if(node.nodeType === 1 && !badTag.test(node.tagName)) fragment.appendChild(node);
+	});
+	return fragment;
+};
 
