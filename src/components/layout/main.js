@@ -1,4 +1,4 @@
-import layoutStyles from 'layoutStyles';
+import layoutStyles from './layout.css';
 import trivetStyles from 'trivetStyles';
 import createFragment from 'createFragment';
 

@@ -1,14 +1,6 @@
-.trvt-section {
-	&__header {
-		// Todo: add header style
-	}
-	&__layout {
-		display: var(--display);
-		grid-template-columns: var(--template-columns);
-		grid-template-rows: var(--template-rows);
-		background: var(--background-color);
-	}
-	&__footer {
-		// Todo: add footer style
-	}
+:host {
+	--display: grid;
+	--template-columns: 1fr 1fr;
+	--template-rows: 1fr;
+	--background-color: white;
 }

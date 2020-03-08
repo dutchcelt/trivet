@@ -5,7 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --https --reload-debounce 300",
-		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist",
+		"assets": "cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist -t uglifyify",
 		"scss": "node-sass \"src\" -o \"dist\" -x --output-style compressed ",
 		"build": "yarn assets & yarn scss",
 		"build:develop": "trash dist && yarn build",
@@ -39,6 +39,7 @@
 		"express": "^4.17.1",
 		"express-es6-template-engine": "^2.2.1",
 		"kss": "^3.0.0",
-		"node-sass": "^4.13.1"
+		"node-sass": "^4.13.1",
+		"uglifyify": "^5.0.2"
 	}
 }

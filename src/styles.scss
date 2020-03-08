@@ -1,14 +1,4 @@
-
-:root {
-	--display: grid;
-	--template-columns: 1fr 1fr;
-	--template-rows: 1fr;
-	--background-color: white;
-}
-
-
 @import "styles/_normalize";
-
 
 body {
 	display: block;
@@ -18,4 +8,21 @@ body {
 
 [slot] {
 	display: contents;
+}
+
+
+.trvt-section {
+
+	&__header {
+		// Todo: add header style
+	}
+	&__layout {
+		display: var(--display, block);
+		grid-template-columns: var(--template-columns, 1fr);
+		grid-template-rows: var(--template-rows, 1fr);
+		background: var(--background-color, inherit);
+	}
+	&__footer {
+		// Todo: add footer style
+	}
 }
