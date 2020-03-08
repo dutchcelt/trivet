@@ -10,7 +10,8 @@ customElements.define('trvt-test-elem',
 			this.attachShadow({mode: 'open'});
 			this.shadowRoot.adoptedStyleSheets = [styleTest];
 		}
-		connectedCallback(){
+
+		connectedCallback() {
 			appendDynamicTemplate(this);
 		}
 	}

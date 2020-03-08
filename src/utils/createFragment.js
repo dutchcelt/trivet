@@ -1,15 +1,15 @@
-// Validation and type check
+// Validation and type checks
 const badTag = /script|template|iframe|object/i;
-const validNode = node => node.nodeType === 1 && !badTag.test(node.tagName);
+const isValid = node => node.nodeType === 1 && !badTag.test(node.tagName);
 
 // parse html string and return DOM nodes
 const getNodes = string => {
 	const html = (new DOMParser().parseFromString(string, "text/html"));
-	return html.body.childNodes;
+	return html.body && html.body.childNodes;
 };
 // Append node(s) to a given fragment
 const appendNodesToFragment = (fragment, ...nodes) => {
-	nodes.forEach(node => validNode(node) && fragment.appendChild(node));
+	nodes.forEach(node => isValid(node) && fragment.appendChild(node));
 };
 
 /**

@@ -16,9 +16,11 @@ customElements.define('trvt-layout',
 	class extends HTMLElement {
 		constructor() {
 			super();
-			this.attachShadow({mode: 'open'});
-			this.shadowRoot.appendChild(createFragment(alertElement,templateString));
-			this.shadowRoot.adoptedStyleSheets = [trivetStyles,layoutStyles];
+			this.attachShadow({ mode: 'open' });
+			this.template = createFragment(alertElement, templateString);
+			this.shadowRoot.adoptedStyleSheets = [trivetStyles, layoutStyles];
+			this.shadowRoot.appendChild(this.template);
+
 		}
 	}
 );
