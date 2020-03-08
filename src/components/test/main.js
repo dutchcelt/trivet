@@ -4,9 +4,9 @@ customElements.define('trvt-test-elem',
 	class extends HTMLElement {
 		constructor() {
 			super();
-			this.contentString = this.getAttribute('tekst');
+			this.contentString = this.getAttribute('text');
 			this.tag = this.getAttribute('tag') || 'p';
-			this.attrs = [...this.attributes].filter(a => !(/tekst|tag/ig).test(a.name));
+			this.attrs = [...this.attributes].filter(a => !(/text|tag/ig).test(a.name));
 			this.attachShadow({mode: 'open'});
 			this.shadowRoot.adoptedStyleSheets = [styleTest];
 		}
