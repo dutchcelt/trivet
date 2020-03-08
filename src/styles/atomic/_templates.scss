@@ -1,28 +1,16 @@
-@import "vendors/normalize";
-
-body {
-	display: block;
-	font-family: Arial, sans-serif;
-	background: lightskyblue;
-}
-
-[slot] {
-	display: contents;
-}
-
-
-.trvt-section {
+.trvt-templates {
 
 	&__header {
 		// Todo: add header style
 	}
-	&__layout {
+	&__body {
 		display: var(--display, block);
 		grid-template-columns: var(--template-columns, 1fr);
 		grid-template-rows: var(--template-rows, 1fr);
-		background: var(--background-color, inherit);
+		background: var(--background-color, transparent);
 	}
 	&__footer {
 		// Todo: add footer style
 	}
+
 }

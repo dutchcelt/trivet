@@ -1,1 +1,9 @@
-@import "main";
+@import "vendors/normalize";
+@import "atomic/pages";
+@import "atomic/templates";
+
+
+[slot] {
+	display: contents;
+}
+

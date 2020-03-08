@@ -1,7 +1,7 @@
 {
 	"name": "trivet",
 	"version": "2.0.0",
-	"description": "A very simple dynamic loader of scripts, styles, and json.",
+	"description": "A very simple dynamic loader of web components and styles",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --https --reload-debounce 300",

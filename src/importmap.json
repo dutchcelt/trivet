@@ -1,12 +1,17 @@
 {
 	"imports": {
 		"trivetStyles":"/styles/trivet.css",
-		"jquery": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+
 		"trvt-test-elem":"/components/test/main.js",
-		"trvt-layout":"/components/layout/main.js",
-		"layoutStyles":"/components/layout/layout.css",
-		"styleTest":"/components/test/test.css",
+		"trvt-templates":"/components/templates/main.js",
+
 		"trivet":"/trivet.js",
-		"createFragment" : "/utils/createFragment.js"
+		"createFragment" : "/utils/createFragment.js",
+
+		"atoms": "/atomic-classes/atoms.js",
+		"templates": "/atomic-classes/templates.js",
+
+		"templateStyles": "/styles/atomic/_templates.scss",
+		"pageStyles": "/styles/atomic/_pages.scss"
 	}
 }
