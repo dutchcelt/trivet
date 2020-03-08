@@ -1,6 +1,6 @@
 module.exports = {
 	path: '',
-	styles: '/styles.css',
+	styles: '/styles/trivet.css',
 	importmapShim:"/polyfills/es-module-shims.js",
 	systemjs: '/system.js',
 	importmap: '/importmap.json',
