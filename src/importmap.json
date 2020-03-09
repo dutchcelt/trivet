@@ -2,16 +2,17 @@
 	"imports": {
 		"trivetStyles":"/styles/trivet.css",
 
-		"trvt-test-elem":"/components/test/main.js",
-		"trvt-templates":"/components/templates/main.js",
+		"trvt-elem":"/components/test/test.js",
+		"trvt-section":"/components/section/section.js",
 
 		"trivet":"/trivet.js",
 		"createFragment" : "/utils/createFragment.js",
 
+		"atomic": "/atomic-classes/atomic.js",
 		"atoms": "/atomic-classes/atoms.js",
 		"templates": "/atomic-classes/templates.js",
 
-		"templateStyles": "/styles/atomic/_templates.scss",
-		"pageStyles": "/styles/atomic/_pages.scss"
+		"templateStyles": "/styles/atomic/templates.css",
+		"pageStyles": "/styles/atomic/pages.css"
 	}
 }

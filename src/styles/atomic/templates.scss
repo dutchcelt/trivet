@@ -1,4 +1,4 @@
-.trvt-templates {
+.trvt-section {
 
 	&__header {
 		// Todo: add header style
@@ -7,6 +7,8 @@
 		display: var(--display, block);
 		grid-template-columns: var(--template-columns, 1fr);
 		grid-template-rows: var(--template-rows, 1fr);
+		align-content: var(--align, normal);
+		justify-content: var(--justify, normal);
 		background: var(--background-color, transparent);
 	}
 	&__footer {
