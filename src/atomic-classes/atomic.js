@@ -8,7 +8,9 @@ export class Atomic extends HTMLElement {
 	}
 	connectedCallback(){
 		const modifier = this.getModifier(this);
-		modifier && this.shadowRoot.firstElementChild.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
+		modifier && this.shadowRoot
+			.querySelector(`.${this.tagName.toLowerCase()}`)
+			.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
 	}
 
 	static appendDynamicTemplate(elem){
