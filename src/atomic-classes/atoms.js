@@ -1,5 +1,6 @@
 import { Atomic } from 'atomic';
 
+
 /**
  * Atomic design Atoms class
  */

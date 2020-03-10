@@ -1,6 +1,5 @@
-.test {
-	display: block;
-	width: auto;
-	padding: 0.2rem;
-	background: white;
+:host {
+	--display: inline;
+	--background-color: transparent;
 }
+

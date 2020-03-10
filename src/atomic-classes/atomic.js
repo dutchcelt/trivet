@@ -4,12 +4,17 @@
 export class Atomic extends HTMLElement {
 	constructor() {
 		super();
+		this.getModifier = element => element.getAttribute('modifier');
+	}
+	connectedCallback(){
+		const modifier = this.getModifier(this);
+		modifier && this.shadowRoot.firstElementChild.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
 	}
 
 	static appendDynamicTemplate(elem){
-		const slotContent = elem.querySelector('[slot]');
+		const contentSlots = elem.querySelectorAll('[slot]');
 		const trvtElem = document.createElement(elem.tag);
-		slotContent && trvtElem.appendChild(this.createSlot(slotContent));
+		contentSlots.forEach( el => trvtElem.appendChild(this.createSlot(el.slot)));
 		elem.contentString && (trvtElem.textContent = elem.contentString);
 		elem.attrs.forEach(a => {
 			trvtElem.setAttribute(a.name, a.value); // copy attribute to new element
@@ -17,12 +22,11 @@ export class Atomic extends HTMLElement {
 		});
 		elem.shadowRoot.appendChild(trvtElem);
 	}
-	static createSlot(slotContent, slotname = 'default'){
-		if (slotContent.slot === slotname){
-			const slot = document.createElement('slot');
-			slot.name = slotname;
-			return slot;
-		}
+	static createSlot(slotname){
+		const slot = document.createElement('slot');
+		slot.name = slotname;
+		return slot;
+
 	}
 }
 

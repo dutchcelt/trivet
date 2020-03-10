@@ -6,7 +6,7 @@
 		// Todo: add header style
 	}
 	&__body {
-		@include layout();
+		@include grid-template();
 	}
 	&__footer {
 		// Todo: add footer style

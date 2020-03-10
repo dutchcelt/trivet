@@ -14,6 +14,8 @@ export class templates extends Atomic {
 		super();
 		this.templateString = templateString;
 		this.template = createFragment(this.templateString);
+
+
 	}
 }
 

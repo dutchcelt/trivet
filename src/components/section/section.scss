@@ -1,8 +1,10 @@
-:host {
+.trvt-section {
 	--display: grid;
 	--template-columns: 1fr 1fr;
 	--template-rows: 1fr;
+	--gap: 1rem;
 	--background-color: white;
 	--align: start;
 	--justify: start;
 }
+

@@ -1,8 +1,9 @@
-@mixin layout(){
+@mixin grid-template(){
 	display: var(--display, block);
 	grid-template-columns: var(--template-columns, 1fr);
 	grid-template-rows: var(--template-rows, 1fr);
+	grid-gap: var(--gap, 1rem);
 	align-content: var(--align, normal);
 	justify-content: var(--justify, normal);
-	background: var(--background-color, red);
+	background: var(--background-color, transparent);
 }
