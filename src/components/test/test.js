@@ -1,5 +1,5 @@
 import shadowStyles from './test.css';
-import { Atoms } from 'atoms';
+import { Atoms } from 'Atoms';
 
 customElements.define('trvt-elem',
 	class extends Atoms {

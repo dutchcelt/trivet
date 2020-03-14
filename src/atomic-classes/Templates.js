@@ -1,4 +1,4 @@
-import { Atomic } from 'atomic';
+import { Atomic } from 'Atomic';
 import createFragment from 'createFragment';
 
 const templateString = `
@@ -9,7 +9,7 @@ const templateString = `
 </section>
 `;
 
-export class templates extends Atomic {
+export class Templates extends Atomic {
 	constructor() {
 		super();
 		this.templateString = templateString;

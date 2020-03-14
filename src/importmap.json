@@ -4,13 +4,15 @@
 
 		"trvt-elem":"/components/test/test.js",
 		"trvt-section":"/components/section/section.js",
+		"trvt-page":"/components/page/page.js",
 
 		"trivet":"/trivet.js",
 		"createFragment" : "/utils/createFragment.js",
 
-		"atomic": "/atomic-classes/atomic.js",
-		"atoms": "/atomic-classes/atoms.js",
-		"templates": "/atomic-classes/templates.js",
+		"Atomic": "/atomic-classes/Atomic.js",
+		"Atoms": "/atomic-classes/Atoms.js",
+		"Templates": "/atomic-classes/Templates.js",
+		"Pages": "/atomic-classes/Pages.js",
 
 		"templateStyles": "/styles/atomic/templates.css",
 		"pageStyles": "/styles/atomic/pages.css"

@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-	<title>trivet - index</title>
-	<meta charset="utf-8">
-	<!--  Meta  -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
+	<head>
+		<title>trivet - index</title>
+		<meta charset="utf-8">
+		<!--  Meta  -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
 
-	<!-- Trivet stylesheet -->
-	<link rel="stylesheet" href="${path}${styles}" media="screen"/>
+		<!-- Trivet stylesheet -->
+		<link rel="stylesheet" href="${path}${styles}" media="screen"/>
 
-	<!-- <script src="/system.js"></script> -->
+		<!-- <script src="/system.js"></script> -->
 
-	<!-- Polyfill Import maps -->
-	<script defer src="${path}${importmapShim}"></script>
-	<script type="importmap-shim" src="${path}${importmap}"></script>
+		<!-- Polyfill Import maps -->
+		<script defer src="${path}${importmapShim}"></script>
+		<script type="importmap-shim" src="${path}${importmap}"></script>
 
-	<!-- Polyfill adoptedStyleSheets -->
-	<script defer src="${path}${adoptedStyleSheets}"></script>
+		<!-- Polyfill adoptedStyleSheets -->
+		<script defer src="${path}${adoptedStyleSheets}"></script>
 
-	<script defer type="module-shim" src="${path}${trivet}"></script>
+		<script defer type="module-shim" src="${path}${trivet}"></script>
 
+	</head>
 
+	<body>
+		<trvt-page>
+			<span slot="header" >${nav}</span>
+			<span slot="main">${main}</span>
+			<span slot="footer" >${footer}</span>
+		</trvt-page>
 
-</head>
-<body>
+	</body>
 
-${nav}
-
-<main>
-	${main}
-</main>
-
-${footer}
-
-</body>
 </html>

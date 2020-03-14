@@ -1,9 +1,9 @@
 import templateStyles from 'templateStyles';
-import shadowStyles from './section.css';
-import { Templates } from 'Templates';
+import shadowStyles from './page.css';
+import { Pages } from 'Pages';
 
-customElements.define('trvt-section',
-	class extends Templates {
+customElements.define('trvt-page',
+	class extends Pages {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });
