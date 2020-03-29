@@ -18,14 +18,17 @@
 	display: inline-block;
 }
 
-::slotted(ul) {
+:host(trvt-dropdown) ::slotted(ul) {
+	position: absolute;
+	left: 0;
+	display: block;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 :host(trvt-dropdown) [data-opens-menu],
-::slotted(a) {
+:host(trvt-dropdown) ::slotted(a) {
 	line-height: 1;
 	text-align: left;
 	background: black;
@@ -36,7 +39,7 @@
 }
 
 :host(trvt-dropdown) [type="checkbox"]:focus + [data-opens-menu],
-::slotted(a:focus) {
+:host(trvt-dropdown) ::slotted(a:focus)  {
 	outline: none;
 	background: darkBlue;
 }
@@ -57,13 +60,12 @@
 	display: inline;
 }
 
-::slotted([slot=list])  {
-	position: absolute;
-	left: 0;
+:host(trvt-dropdown) [role=menu] {
 	display: none;
 }
 
-input:checked ~ ::slotted([slot=list]) {
+:host(trvt-dropdown) :checked ~ [role=menu] {
+	position: relative;
 	display: block;
 }
 
@@ -78,3 +80,5 @@ input:checked ~ ::slotted([slot=list]) {
 	margin-top: 0.125rem;
 	white-space: nowrap;
 }
+
+
