@@ -1,15 +1,1 @@
-@import "../abstracts/mixins/layout";
-
-.trvt-section {
-
-	&__header {
-		// Todo: add header style
-	}
-	&__body {
-		@include grid-template();
-	}
-	&__footer {
-		// Todo: add footer style
-	}
-
-}
+// Todo: do we need this stylesheet?

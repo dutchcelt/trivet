@@ -20,7 +20,6 @@ router.all('/', function (req, res, next) {
 			content: 'Trivet is a very simple approach to the dynamic loading of scripts, styles, and json.'
 		}),
 		partials: Object.assign(fragments,{
-			page: '/content/page',
 			main: '/content/index'
 		})
 	});
@@ -32,7 +31,6 @@ router.all('/textContent.html', function (req, res, next) {
 			content:''
 		}),
 		partials: Object.assign(fragments,{
-			page: '/content/page',
 			main: '/content/textContent'
 		})
 	});

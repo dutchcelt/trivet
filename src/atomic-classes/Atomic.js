@@ -1,6 +1,9 @@
+import shadowStyles from "../components/section/section.css";
+
 /**
  * Atomic design class
  */
+
 export class Atomic extends HTMLElement {
 	constructor() {
 		super();
@@ -8,9 +11,8 @@ export class Atomic extends HTMLElement {
 	}
 	connectedCallback(){
 		const modifier = this.getModifier(this);
-		modifier && this.shadowRoot
-			.querySelector(`.${this.tagName.toLowerCase()}`)
-			.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
+		const selector = modifier && this.shadowRoot.querySelector(`.${this.tagName.toLowerCase()}`);
+		selector && selector.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
 	}
 
 	static appendDynamicTemplate(elem){

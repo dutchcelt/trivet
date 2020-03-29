@@ -1,6 +1,8 @@
 {
+
 	"imports": {
-		"trivetStyles":"/styles/trivet.css",
+
+		"trvt-styles":"/styles/trivet.css",
 
 		"trvt-elem":"/components/test/test.js",
 		"trvt-section":"/components/section/section.js",
@@ -12,9 +14,8 @@
 		"Atomic": "/atomic-classes/Atomic.js",
 		"Atoms": "/atomic-classes/Atoms.js",
 		"Templates": "/atomic-classes/Templates.js",
-		"Pages": "/atomic-classes/Pages.js",
+		"Pages": "/atomic-classes/Pages.js"
 
-		"templateStyles": "/styles/atomic/templates.css",
-		"pageStyles": "/styles/atomic/pages.css"
 	}
+
 }

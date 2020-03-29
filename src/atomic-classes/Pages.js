@@ -2,11 +2,10 @@ import { Atomic } from 'Atomic';
 import createFragment from 'createFragment';
 
 const templateString = `
-<div class="trvt-pages">
-	<header class="trvt-pages__header"><slot name="header"></slot></header>
-	<main class="trvt-pages__main"><slot name="main"></slot></main>
-	<footer class="trvt-pages__footer"><slot name="footer"></slot></footer>
-</div>
+	<slot name="navigation"></slot>
+	<slot name="header"></slot>
+	<slot name="content"></slot>
+	<slot name="footer"></slot>
 `;
 
 export class Pages extends Atomic {

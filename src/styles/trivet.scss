@@ -1,6 +1,13 @@
-@import "vendors/normalize";
-@import "atomic/pages";
+// Abstracts
+@import "abstracts/vars/colors";
+@import "abstracts/vars/typography";
+@import "abstracts/vars/sizes";
 
-[slot]{
-	display: contents;
-}
+// Vendors
+@import "vendors/normalize";
+
+// Atomic design basics
+@import "atomic/pages";
+@import "atomic/templates";
+
+

@@ -8,7 +8,6 @@ customElements.define('trvt-elem',
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
 			Atoms.appendDynamicTemplate(this);
-
 		}
 	}
 );

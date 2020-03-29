@@ -1,5 +1,4 @@
 body {
-	display: block;
-	font-family: Arial, sans-serif;
-	background: lightskyblue;
+	font-family: var(--font-body, sans-serif);
+	background: var(--background-color-body, white);
 }

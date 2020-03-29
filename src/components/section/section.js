@@ -1,4 +1,4 @@
-import templateStyles from 'templateStyles';
+import trvtStyles from 'trvt-styles';
 import shadowStyles from './section.css';
 import { Templates } from 'Templates';
 
@@ -7,9 +7,8 @@ customElements.define('trvt-section',
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });
-			this.shadowRoot.adoptedStyleSheets = [templateStyles, shadowStyles];
+			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
 			this.shadowRoot.appendChild(this.template.cloneNode(true));
-
 		}
 	}
 );

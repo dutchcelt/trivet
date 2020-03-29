@@ -1,16 +1,12 @@
 <trvt-section>
-	<span slot="header" >
+	<header slot="header">
 		<trvt-elem tag="h1">
 			<span slot="default">${title}</span>
 		</trvt-elem>
-	</span>
-	<span slot="content">
-		<trvt-elem>
-			<span slot="default">${content}</span>
-		</trvt-elem>
-		<trvt-elem>
-			<span slot="default">Simple text</span>
-		</trvt-elem>
-	</span>
+	</header>
+	<div slot="content">
+		<p>${content}</p>
+		<p>Simple text</p>
+	</div>
 </trvt-section>
 
