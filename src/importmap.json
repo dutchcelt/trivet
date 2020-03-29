@@ -4,8 +4,9 @@
 
 		"trvt-styles":"/styles/trivet.css",
 
-		"trvt-elem":"/components/test/test.js",
+		"trvt-elem":"/components/elem/elem.js",
 		"trvt-section":"/components/section/section.js",
+		"trvt-dropdown":"/components/dropdown/dropdown.js",
 		"trvt-page":"/components/page/page.js",
 
 		"trivet":"/trivet.js",

@@ -1,0 +1,80 @@
+
+:host(trvt-dropdown) .vh {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+:host(trvt-dropdown) [data-menu-component] {
+	position: relative;
+	display: inline-block;
+}
+
+:host(trvt-dropdown) label {
+	display: inline-block;
+}
+
+::slotted(ul) {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+:host(trvt-dropdown) [data-opens-menu],
+::slotted(a) {
+	line-height: 1;
+	text-align: left;
+	background: black;
+	border: 0;
+	color: #fff;
+	padding: 0.33rem 0.5rem;
+	text-decoration: none;
+}
+
+:host(trvt-dropdown) [type="checkbox"]:focus + [data-opens-menu],
+::slotted(a:focus) {
+	outline: none;
+	background: darkBlue;
+}
+
+:host(trvt-dropdown) :checked + label .expanded-text {
+	display: inline;
+}
+
+:host(trvt-dropdown) :checked + label .collapsed-text {
+	display: none;
+}
+
+:host(trvt-dropdown) [type="checkbox"]:not(:checked) + label .expanded-text {
+	display: none;
+}
+
+:host(trvt-dropdown) [type="checkbox"]:not(:checked) + label .collapsed-text {
+	display: inline;
+}
+
+::slotted([slot=list])  {
+	position: absolute;
+	left: 0;
+	display: none;
+}
+
+input:checked ~ ::slotted([slot=list]) {
+	display: block;
+}
+
+:host(trvt-dropdown) [data-menu-origin="right"] {
+	left: auto;
+	right: 0;
+}
+
+:host(trvt-dropdown) ::slotted(a) {
+	display: block;
+	min-width: 100%;
+	margin-top: 0.125rem;
+	white-space: nowrap;
+}

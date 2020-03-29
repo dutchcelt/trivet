@@ -1,4 +1,4 @@
-import shadowStyles from './test.css';
+import shadowStyles from './elem.css';
 import { Atoms } from 'Atoms';
 
 customElements.define('trvt-elem',
