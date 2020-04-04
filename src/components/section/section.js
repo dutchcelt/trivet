@@ -1,9 +1,9 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './section.css';
-import { Templates } from 'Templates';
+import { Compositions } from 'Compositions';
 
 customElements.define('trvt-section',
-	class extends Templates {
+	class extends Compositions {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });

@@ -1,4 +1,3 @@
-
 import { Trivet } from 'Trivet';
 import createFragment from 'createFragment';
 

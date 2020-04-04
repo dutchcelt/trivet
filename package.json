@@ -5,7 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --https --reload-debounce 300",
-		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist -t uglifyify",
+		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist ",
 		"scss": "node-sass \"src\" -o \"dist\" -x --output-style compressed ",
 		"build": "yarn assets & yarn scss",
 		"build:develop": "trash dist && yarn build",

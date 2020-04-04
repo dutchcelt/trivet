@@ -1,8 +1,8 @@
 import shadowStyles from './page.css';
-import { Pages } from 'Pages';
+import { Compositions } from 'Compositions';
 
 customElements.define('trvt-page',
-	class extends Pages {
+	class extends Compositions {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });

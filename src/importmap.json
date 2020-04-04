@@ -15,13 +15,7 @@
 		"Trivet": "/atomic-classes/Trivet.js",
 		"Compositions": "/atomic-classes/Compositions.js",
 		"Blocks": "/atomic-classes/Blocks.js",
-		"Elements": "/atomic-classes/Elements.js",
-
-		"Atomic": "/atomic-classes/Trivet.js",
-		"Atoms": "/atomic-classes/Elements.js",
-		"Templates": "/atomic-classes/Blocks.js",
-		"Pages": "/atomic-classes/Compositions.js"
-
+		"Elements": "/atomic-classes/Elements.js"
 	}
 
 }

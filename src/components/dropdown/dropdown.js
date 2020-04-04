@@ -1,6 +1,6 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './dropdown.css';
-import { Atomic } from 'Atomic';
+import { Elements } from 'Elements';
 import createFragment from 'createFragment';
 
 const temp = `
@@ -16,7 +16,7 @@ const temp = `
 `;
 
 customElements.define('trvt-dropdown',
-	class extends Atomic {
+	class extends Elements {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });

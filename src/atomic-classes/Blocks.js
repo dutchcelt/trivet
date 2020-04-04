@@ -1,4 +1,4 @@
-import { Trivet } from 'Trivet';
+import { Compositions } from 'Compositions';
 import createFragment from 'createFragment';
 
 const templateString = `
@@ -7,7 +7,7 @@ const templateString = `
 	<slot name="footer"></slot>
 `;
 
-export class Blocks extends Trivet {
+export class Blocks extends Compositions {
 	constructor() {
 		super();
 		this.templateString = templateString;
