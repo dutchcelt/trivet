@@ -1072,7 +1072,7 @@ error-ex@^1.2.0:
   dependencies:
     is-arrayish "^0.2.1"
 
-es-module-shims@~0.4.6:
+es-module-shims@^0.4.6:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/es-module-shims/-/es-module-shims-0.4.6.tgz#5decb313d52e5c62f6c19ed7e664ee9d66317d8a"
   integrity sha512-EzVhnLyA/zvmGrAy2RU8m9xpxX7u2yb2by1GZH80SHF6lakG21YAm3Vo56KsLIXaIjT9QabqjYpQU1S5FkM8+Q==

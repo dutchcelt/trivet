@@ -1,17 +1,17 @@
 /**
  * Atomic design class
  */
+const getModifier = element => element.getAttribute('modifier');
 
 export class Trivet extends HTMLElement {
 	constructor() {
 		super();
 	}
 	connectedCallback(){
-		const modifier = this.getModifier(this);
+		const modifier = getModifier(this);
 		const selector = modifier && this.shadowRoot.querySelector(`.${this.tagName.toLowerCase()}`);
 		selector && selector.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
 	}
-	static getModifier = element => element.getAttribute('modifier');
 
 	static appendDynamicTemplate(elem){
 		const contentSlots = elem.querySelectorAll('[slot]');
