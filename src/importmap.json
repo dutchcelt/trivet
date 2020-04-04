@@ -12,10 +12,15 @@
 		"trivet":"/trivet.js",
 		"createFragment" : "/utils/createFragment.js",
 
-		"Atomic": "/atomic-classes/Atomic.js",
-		"Atoms": "/atomic-classes/Atoms.js",
-		"Templates": "/atomic-classes/Templates.js",
-		"Pages": "/atomic-classes/Pages.js"
+		"Trivet": "/atomic-classes/Trivet.js",
+		"Compositions": "/atomic-classes/Compositions.js",
+		"Blocks": "/atomic-classes/Blocks.js",
+		"Elements": "/atomic-classes/Elements.js",
+
+		"Atomic": "/atomic-classes/Trivet.js",
+		"Atoms": "/atomic-classes/Elements.js",
+		"Templates": "/atomic-classes/Blocks.js",
+		"Pages": "/atomic-classes/Compositions.js"
 
 	}
 

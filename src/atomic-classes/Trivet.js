@@ -1,19 +1,17 @@
-import shadowStyles from "../components/section/section.css";
-
 /**
  * Atomic design class
  */
 
-export class Atomic extends HTMLElement {
+export class Trivet extends HTMLElement {
 	constructor() {
 		super();
-		this.getModifier = element => element.getAttribute('modifier');
 	}
 	connectedCallback(){
 		const modifier = this.getModifier(this);
 		const selector = modifier && this.shadowRoot.querySelector(`.${this.tagName.toLowerCase()}`);
 		selector && selector.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
 	}
+	static getModifier = element => element.getAttribute('modifier');
 
 	static appendDynamicTemplate(elem){
 		const contentSlots = elem.querySelectorAll('[slot]');

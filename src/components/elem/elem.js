@@ -1,8 +1,8 @@
 import shadowStyles from './elem.css';
-import { Atoms } from 'Atoms';
+import { Elements } from 'Elements';
 
 customElements.define('trvt-elem',
-	class extends Atoms {
+	class extends Elements {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });

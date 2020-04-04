@@ -1,20 +1,17 @@
-import { Atomic } from 'Atomic';
+import { Trivet } from 'Trivet';
 import createFragment from 'createFragment';
 
 const templateString = `
-	<slot name="navigation"></slot>
 	<slot name="header"></slot>
 	<slot name="content"></slot>
 	<slot name="footer"></slot>
 `;
 
-export class Pages extends Atomic {
+export class Blocks extends Trivet {
 	constructor() {
 		super();
 		this.templateString = templateString;
 		this.template = createFragment(this.templateString);
-
-
 	}
 }
 
