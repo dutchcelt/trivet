@@ -9,3 +9,7 @@
 // Atomic design basics
 @import "atomic/pages";
 @import "atomic/templates";
+
+[data-cloak] {
+	visibility: hidden;
+}

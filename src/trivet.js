@@ -5,7 +5,7 @@ const importTrvtElements = trvtList => {
 	const trvtTags = [...trvtNodes].map(e => e.tagName).filter(s => /trvt-/i.test(s));
 	new Set(trvtTags).forEach(tag => {
 		try {
-			import(tag.toLowerCase())
+			import(tag.toLowerCase());
 		} catch (e) {
 			console.error(e, 'Can not find ' + tag );
 		}

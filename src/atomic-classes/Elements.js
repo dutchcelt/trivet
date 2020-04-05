@@ -1,10 +1,10 @@
-import { Blocks } from 'Blocks';
+import { Features } from 'Features';
 
 
 /**
  * Atomic design Atoms class
  */
-export class Elements extends Blocks {
+export class Elements extends Features {
 	constructor() {
 		super();
 		this.contentString = this.getAttribute('text');

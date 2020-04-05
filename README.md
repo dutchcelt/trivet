@@ -16,5 +16,5 @@ Many Design Systems are constructed around Atomic Design. Trivet is also an Atom
    page or application state. Trivet concerns itself with the building not the side walk or the city it is placed in.
 To prevent confusion with Atomic Design Trivet opts for a more conventional naming of its structural components. 
  1. Compositions
- 2. Blocks
+ 2. Features
  3. Elements

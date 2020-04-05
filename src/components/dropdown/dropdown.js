@@ -1,6 +1,6 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './dropdown.css';
-import { Elements } from 'Elements';
+import { Features } from 'Features';
 import createFragment from 'createFragment';
 
 const temp = `
@@ -16,7 +16,7 @@ const temp = `
 `;
 
 customElements.define('trvt-dropdown',
-	class extends Elements {
+	class extends Features {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });
