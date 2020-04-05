@@ -16,6 +16,10 @@ export class Trivet extends HTMLElement {
 		});
 	}
 
+	static renderString(data, stringFunction) {
+		return data.reduce((a,c) => a + stringFunction(c), '');
+	}
+
 	static appendDynamicTemplate(elem){
 		const contentSlots = elem.querySelectorAll('[slot]');
 		const trvtElem = document.createElement(elem.tag);

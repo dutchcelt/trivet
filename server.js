@@ -11,11 +11,19 @@ app.use(router);
 app.use('/', express.static('dist'));
 
 const trivetData = require('./templates/data.js');
+const menuData = { menu: JSON.stringify([{
+		"text":"Home",
+		"url":"/"
+	}, {
+		"text":"About",
+		"url":"/textContent.html"
+	}]
+)};
 const fragments = require('./templates/fragments/fragments.js');
 
 router.all('/', function (req, res, next) {
 	res.render('index', {
-		locals: Object.assign(trivetData,{
+		locals: Object.assign(trivetData, menuData,{
 			title: 'Hello, Welcome to Trivet!',
 			content: 'Trivet is a very simple approach to the dynamic loading of scripts, styles, and json.'
 		}),
@@ -26,7 +34,7 @@ router.all('/', function (req, res, next) {
 });
 router.all('/textContent.html', function (req, res, next) {
 	res.render('index', {
-		locals: Object.assign(trivetData,{
+		locals: Object.assign(trivetData, menuData,{
 			title: 'This is a Text Content test!',
 			content:''
 		}),
