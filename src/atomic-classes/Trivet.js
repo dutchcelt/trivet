@@ -2,8 +2,9 @@
  * Atomic design class
  */
 const getModifier = element => element.getAttribute('modifier');
+import { html, render } from 'lit-html';
 
-export class Trivet extends HTMLElement {
+class Trivet extends HTMLElement {
 	constructor() {
 		super();
 	}
@@ -14,6 +15,9 @@ export class Trivet extends HTMLElement {
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
+		if (this.template && typeof this.template === 'function') {
+			render(this.template(), this.shadowRoot);
+		}
 	}
 
 	static renderString(data, stringFunction) {
@@ -31,6 +35,7 @@ export class Trivet extends HTMLElement {
 		});
 		elem.shadowRoot.appendChild(trvtElem);
 	}
+
 	static createSlot(slotname){
 		const slot = document.createElement('slot');
 		slot.name = slotname;
@@ -39,4 +44,5 @@ export class Trivet extends HTMLElement {
 	}
 }
 
+export { Trivet, html, render }
 

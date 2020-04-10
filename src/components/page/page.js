@@ -1,9 +1,11 @@
 import shadowStyles from './page.css';
-import { Compositions } from 'Compositions';
-import createFragment from 'createFragment';
+import { Compositions, html } from 'Compositions';
 
-const templateString = `
+const template = () => html`
 	<slot name="navigation"></slot>
+	<slot name="header"></slot>
+	<slot name="content"></slot>
+	<slot name="footer"></slot>
 `;
 
 customElements.define('trvt-page',
@@ -12,10 +14,8 @@ customElements.define('trvt-page',
 			super();
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
-			this.pageTemplateString = templateString + this.templateString;
-			this.template = createFragment(this.pageTemplateString);
-			this.shadowRoot.appendChild(this.template.cloneNode(true));
-
+			this.template = template;
+	//		render(this.template(), this.shadowRoot);
 		}
 	}
 );

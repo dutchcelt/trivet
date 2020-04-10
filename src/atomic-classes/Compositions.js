@@ -1,17 +1,16 @@
-import { Trivet } from 'Trivet';
-import createFragment from 'createFragment';
+import { Trivet, html, render } from 'Trivet';
 
-const templateString = `
+const template = () => html`
 	<slot name="header"></slot>
 	<slot name="content"></slot>
 	<slot name="footer"></slot>
 `;
 
-export class Compositions extends Trivet {
+class Compositions extends Trivet {
 	constructor() {
 		super();
-		this.templateString = templateString;
-		this.template = createFragment(this.templateString);
+		this.template = template;
 	}
 }
 
+export { Compositions, html, render }

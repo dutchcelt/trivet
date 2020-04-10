@@ -4,8 +4,8 @@
 	"description": "A very simple dynamic loader of web components and styles",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --https --reload-debounce 300",
-		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,importmap}\" dist ",
+		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --no-inject-changes --https --reload-debounce 300",
+		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,map,importmap}\" dist ",
 		"scss": "node-sass \"src\" -o \"dist\" -x --output-style compressed ",
 		"build": "yarn assets & yarn scss",
 		"build:develop": "trash dist && yarn build",
@@ -38,7 +38,6 @@
 		"es-module-shims": "^0.4.6",
 		"express": "^4.17.1",
 		"express-es6-template-engine": "^2.2.1",
-		"kss": "^3.0.0",
 		"node-sass": "^4.13.1",
 		"uglifyify": "^5.0.2"
 	}

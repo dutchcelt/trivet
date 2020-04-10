@@ -3,7 +3,6 @@ import shadowStyles from './dropdown.css';
 import { Features } from 'Features';
 import createFragment from 'createFragment';
 
-
 const menuItemStringFunction = data => `<li class="dropdown__item"><a class="dropdown__link" href="${data.url}">${data.text}</a></li>`;
 
 const menuTemplateFunction = data => `

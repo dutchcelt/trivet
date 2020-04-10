@@ -8,7 +8,6 @@ customElements.define('trvt-section',
 			super();
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
-			this.shadowRoot.appendChild(this.template.cloneNode(true));
 		}
 	}
 );

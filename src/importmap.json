@@ -11,6 +11,7 @@
 
 		"trivet":"/trivet.js",
 		"createFragment" : "/utils/createFragment.js",
+		"lit-html" : "/utils/lit-html.js",
 
 		"Trivet": "/atomic-classes/Trivet.js",
 		"Compositions": "/atomic-classes/Compositions.js",
