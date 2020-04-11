@@ -7,7 +7,7 @@ customElements.define('trvt-section',
 		constructor() {
 			super();
 			this.tag = 'section';
-			this.attachShadow({ mode: this.mode });
+			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
 		}
 	}

@@ -4,6 +4,7 @@ import { Features } from 'Features';
 import createFragment from 'createFragment';
 
 const menuItemStringFunction = data => `<li class="dropdown__item"><a class="dropdown__link" href="${data.url}">${data.text}</a></li>`;
+const renderString = (data, stringFunction) => data.reduce((a,c) => a + stringFunction(c), '');
 
 const menuTemplateFunction = data => `
 	<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="vh">
@@ -13,7 +14,7 @@ const menuTemplateFunction = data => `
 		<span class="vh collapsed-text">collapsed</span>
 	</label>
 	<nav role="menu" class="dropdown__menu" data-menu-origin="left">
-		<ul class="dropdown__list">${Features.renderString(data,menuItemStringFunction)}</ul>
+		<ul class="dropdown__list">${renderString(data,menuItemStringFunction)}</ul>
 	</nav>
 `;
 

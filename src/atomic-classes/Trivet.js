@@ -14,14 +14,16 @@ class Trivet extends HTMLElement {
 			delete this.dataset.cloak;
 		});
 		if (this.template && typeof this.template === 'function') {
-			const wrapper = document.createElement(this.tag)
-			render(this.template(), this.shadowRoot);
+			const temp = this.template();
+			if(this.tag){
+				const wrapper = document.createElement(this.tag);
+				wrapper.innerHTML = temp.template.element.innerHTML;
+				temp.template.element.innerHTML = wrapper.outerHTML;
+			}
+			render(temp, this.shadowRoot);
 		}
 	}
 
-	static renderString(data, stringFunction) {
-		return data.reduce((a,c) => a + stringFunction(c), '');
-	}
 
 	static appendDynamicTemplate(elem){
 		const contentSlots = elem.querySelectorAll('[slot]');
