@@ -1,26 +1,29 @@
-<trvt-section modifier="promo" data-cloak="true">
+<trvt-section data-cloak="true">
 	<header slot="header">
-		<trvt-elem tag="h1" class="heading">
-			<span slot="default">${title}</span>
-		</trvt-elem>
+		<trvt-heading text="${title}"></trvt-heading>
 	</header>
 	<div slot="content">
 		<aside class="sidebar">
 			<p>sidebar</p>
 		</aside>
-		<article class="article">
-			<div>
-				<h2>Lorem ipsum dolor sit amet.</h2>
-				<p><img src="https://via.placeholder.com/320x180">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque dolorum earum fugit, in, itaque libero magnam magni molestias pariatur provident quasi ratione repellat soluta ut velit vero? Enim, et!</p>
+		<trvt-article>
+			<header slot="header">
+				<trvt-heading tag="h2" text="Lorem ipsum dolor sit amet."></trvt-heading>
+			</header>
+			<div slot="content">
+				<p>
+					<img src="https://via.placeholder.com/320x180"/>
+					Lorem ipsum dolor sit amet, consectetur
+					adipisicing elit. Aliquid atque dolorum earum fugit, in, itaque libero magnam magni molestias pariatur provident quasi ratione repellat soluta ut velit vero? Enim, et!</p>
 				<ul>
 					<li>Lorem ipsum dolor sit amet consectetuer.</li>
 					<li>Aenean commodo ligula eget dolor.</li>
 					<li>Aenean massa cum sociis natoque penatibus.</li>
 				</ul>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequatur cum delectus enim ex facilis laboriosam, laborum libero mollitia nam, officiis optio praesentium quam rem sed totam ullam vel vitae!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem, cumque distinctio dolorum ex quas quasi quisquam rerum. Animi at aut eos exercitationem labore minima minus molestias necessitatibus perspiciatis recusandae!.</p>
-			</div>
-		</article>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem, cumque distinctio dolorum ex quas quasi quisquam rerum. Animi at aut eos exercitationem labore minima minus molestias necessitatibus perspiciatis recusandae!.</p></div>
+		</trvt-article>
+
 	</div>
 	<footer slot="footer">haha</footer>
 </trvt-section>

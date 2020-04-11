@@ -9,6 +9,7 @@ const template = () => html`
 class Compositions extends Trivet {
 	constructor() {
 		super();
+		this.tag = 'div';
 		this.template = template;
 	}
 }

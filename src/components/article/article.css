@@ -1,0 +1,15 @@
+@media not all and (min-width: 600px) {
+	::slotted([slot=content]) {
+		--float-picture: none;
+		--float-offset: 0 0 var(--unit);
+		--picture-width: 100%;
+	}
+}
+@media (min-width: 600px) {
+	::slotted([slot=content]) {
+		--float-picture: right;
+		--float-offset: 0 0 var(--space) var(--unit);
+		--picture-width: auto;
+	}
+}
+

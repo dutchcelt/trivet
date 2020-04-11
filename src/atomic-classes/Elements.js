@@ -4,7 +4,7 @@ class Elements extends Trivet {
 	constructor() {
 		super();
 		this.contentString = this.getAttribute('text');
-		this.tag = this.getAttribute('tag') || 'p';
+		this.tag = this.getAttribute('tag') || 'span';
 		this.attrs = [...this.attributes].filter(a => !(/text|tag/ig).test(a.name));
 	}
 }

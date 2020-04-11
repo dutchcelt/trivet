@@ -13,3 +13,10 @@
 [data-cloak] {
 	visibility: hidden;
 }
+
+
+img, picture {
+	float: var(--float-picture, none);
+	margin: var(--float-offset, 0);
+	width: var(--picture-width, auto);
+}

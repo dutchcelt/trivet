@@ -1,12 +1,13 @@
-import shadowStyles from './elem.css';
+import shadowStyles from './heading.css';
 import { Elements } from 'Elements';
 
-customElements.define('trvt-elem',
+customElements.define('trvt-heading',
 	class extends Elements {
 		constructor() {
 			super();
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
+			if(/span/i.test(this.tag)) this.tag = 'H1';
 			Elements.appendDynamicTemplate(this);
 		}
 	}
