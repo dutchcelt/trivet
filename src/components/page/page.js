@@ -12,7 +12,7 @@ customElements.define('trvt-page',
 	class extends Compositions {
 		constructor() {
 			super();
-			this.attachShadow({ mode: 'open' });
+			this.attachShadow({ mode: this.mode });
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
 			this.template = template;
 		}

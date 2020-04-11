@@ -7,12 +7,14 @@ import { html, render } from 'lit-html';
 class Trivet extends HTMLElement {
 	constructor() {
 		super();
+		this.mode = 'open';
 	}
 	connectedCallback(){
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
 		if (this.template && typeof this.template === 'function') {
+			const wrapper = document.createElement(this.tag)
 			render(this.template(), this.shadowRoot);
 		}
 	}
@@ -31,6 +33,10 @@ class Trivet extends HTMLElement {
 			elem.removeAttribute(a.name); // removed redundant attribute on web component
 		});
 		elem.shadowRoot.appendChild(trvtElem);
+	}
+
+	static renderBlock(tag){
+		return html`<${tag}>${template()}</${tag}>`;
 	}
 
 	static createSlot(slotname){

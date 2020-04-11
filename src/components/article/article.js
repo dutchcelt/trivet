@@ -10,11 +10,12 @@ const template = () => html`
 		<slot name="footer"></slot>
 	</article>
 `;
+
 customElements.define('trvt-article',
 	class extends Compositions {
 		constructor() {
 			super();
-			this.attachShadow({ mode: 'open' });
+			this.attachShadow({ mode: this.mode });
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
 			this.template = template;
 		}
