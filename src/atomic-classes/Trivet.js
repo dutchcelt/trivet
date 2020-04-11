@@ -9,9 +9,6 @@ class Trivet extends HTMLElement {
 		super();
 	}
 	connectedCallback(){
-		const modifier = getModifier(this);
-		const selector = modifier && this.shadowRoot.querySelector(`.${this.tagName.toLowerCase()}`);
-		selector && selector.classList.add(`${this.tagName.toLowerCase()}--${modifier}`);
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});

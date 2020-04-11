@@ -1,8 +1,9 @@
-import { Compositions } from 'Compositions';
+import { Trivet, html, render } from 'Trivet';
 
-export class Features extends Compositions {
+class Features extends Trivet {
 	constructor() {
 		super();
 	}
 }
 
+export { Features, html, render }

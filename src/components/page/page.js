@@ -15,7 +15,6 @@ customElements.define('trvt-page',
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
 			this.template = template;
-	//		render(this.template(), this.shadowRoot);
 		}
 	}
 );

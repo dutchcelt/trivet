@@ -1,10 +1,6 @@
-import { Features } from 'Features';
+import { Trivet, html, render } from 'Trivet';
 
-
-/**
- * Atomic design Atoms class
- */
-export class Elements extends Features {
+class Elements extends Trivet {
 	constructor() {
 		super();
 		this.contentString = this.getAttribute('text');
@@ -12,5 +8,5 @@ export class Elements extends Features {
 		this.attrs = [...this.attributes].filter(a => !(/text|tag/ig).test(a.name));
 	}
 }
-
+export { Elements, html, render }
 
