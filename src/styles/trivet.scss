@@ -6,14 +6,15 @@
 // Vendors
 @import "vendors/normalize";
 
-// Atomic design basics
-@import "atomic/pages";
-@import "atomic/templates";
+
+body {
+	font-family: var(--font-body, sans-serif);
+	background: var(--background-color-body, white);
+}
 
 [data-cloak] {
 	visibility: hidden;
 }
-
 
 img, picture {
 	float: var(--float-picture, none);

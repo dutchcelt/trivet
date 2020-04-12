@@ -15,10 +15,10 @@
 		"createFragment" : "/utils/createFragment.js",
 		"lit-html" : "/utils/lit-html.js",
 
-		"Trivet": "/atomic-classes/Trivet.js",
-		"Compositions": "/atomic-classes/Compositions.js",
-		"Features": "/atomic-classes/Features.js",
-		"Elements": "/atomic-classes/Elements.js"
+		"Trivet": "/classes/Trivet.js",
+		"Compositions": "/classes/Compositions.js",
+		"Features": "/classes/Features.js",
+		"Elements": "/classes/Elements.js"
 	}
 
 }

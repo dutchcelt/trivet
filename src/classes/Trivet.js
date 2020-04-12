@@ -7,23 +7,26 @@ import { html, render } from 'lit-html';
 class Trivet extends HTMLElement {
 	constructor() {
 		super();
-		this.mode = 'open';
 	}
 	connectedCallback(){
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
 		if (this.template && typeof this.template === 'function') {
-			const temp = this.template();
-			if(this.tag){
-				const wrapper = document.createElement(this.tag);
-				wrapper.innerHTML = temp.template.element.innerHTML;
-				temp.template.element.innerHTML = wrapper.outerHTML;
-			}
+			const temp = Trivet.wrapTemplateWithTag(this.tag, this.template);
 			render(temp, this.shadowRoot);
 		}
 	}
 
+	static wrapTemplateWithTag(tag, template){
+		const temp = template();
+		if(tag) {
+			const wrapper = document.createElement(tag);
+			wrapper.innerHTML = temp.template.element.innerHTML;
+			temp.template.element.innerHTML = wrapper.outerHTML;
+		}
+		return temp;
+	}
 
 	static appendDynamicTemplate(elem){
 		const contentSlots = elem.querySelectorAll('[slot]');
