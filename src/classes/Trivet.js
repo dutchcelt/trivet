@@ -12,43 +12,32 @@ class Trivet extends HTMLElement {
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
-		if (this.template && typeof this.template === 'function') {
-			const temp = Trivet.wrapTemplateWithTag(this.tag, this.template);
+		this.template = this.template || Trivet.appendDynamicTemplate.call(this);
+		if (typeof this.template === 'function') {
+			const temp = Trivet.wrapTemplateWithTag.call(this);
 			render(temp, this.shadowRoot);
 		}
 	}
 
-	static wrapTemplateWithTag(tag, template){
-		const temp = template();
-		if(tag) {
-			const wrapper = document.createElement(tag);
-			wrapper.innerHTML = temp.template.element.innerHTML;
+	static wrapTemplateWithTag(){
+
+		const temp = this.template();
+		const block = this.block || '';
+		const modifier = block && this.modifier ? `${block}--${this.modifier}` : block;
+
+		if(this.tag) {
+			const wrapper = document.createElement(this.tag);
+			block && wrapper.classList.add(block, modifier);
+			wrapper.textContent = this.text || null;
+			wrapper.innerHTML = wrapper.innerHTML || temp.template.element.innerHTML;
 			temp.template.element.innerHTML = wrapper.outerHTML;
 		}
 		return temp;
 	}
 
-	static appendDynamicTemplate(elem){
-		const contentSlots = elem.querySelectorAll('[slot]');
-		const trvtElem = document.createElement(elem.tag);
-		contentSlots.forEach( el => trvtElem.appendChild(this.createSlot(el.slot)));
-		elem.contentString && (trvtElem.textContent = elem.contentString);
-		elem.attrs.forEach(a => {
-			trvtElem.setAttribute(a.name, a.value); // copy attribute to new element
-			elem.removeAttribute(a.name); // removed redundant attribute on web component
-		});
-		elem.shadowRoot.appendChild(trvtElem);
-	}
-
-	static renderBlock(tag){
-		return html`<${tag}>${template()}</${tag}>`;
-	}
-
-	static createSlot(slotname){
-		const slot = document.createElement('slot');
-		slot.name = slotname;
-		return slot;
-
+	static appendDynamicTemplate(){
+		let contentSlot = this.querySelector('[slot=default]');
+		return contentSlot ? () => html`<slot name="default"></slot>` : () => html``;
 	}
 }
 

@@ -8,7 +8,9 @@ customElements.define('trvt-heading',
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
 			if(/span/i.test(this.tag)) this.tag = 'H1';
-			Elements.appendDynamicTemplate(this);
+			this.block = this.getAttribute('block') || 'heading';
+			this.modifier = this.getAttribute('modifier');
+			this.text = this.getAttribute('text');
 		}
 	}
 );

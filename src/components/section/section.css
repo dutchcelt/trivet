@@ -21,9 +21,12 @@
 		--display: grid;
 		--template-columns: 1fr 1fr;
 		--template-rows: 1fr;
-		--background-color: white;
+		--background-color: var(--light);
 		--align: start;
 		--justify: start;
+	}
+	::slotted([slot=content]){
+		padding: 0 var(--unit, 1rem);
 	}
 }
 

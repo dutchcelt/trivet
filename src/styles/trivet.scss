@@ -10,6 +10,8 @@
 body {
 	font-family: var(--font-body, sans-serif);
 	background: var(--background-color-body, white);
+	color: var(--dark, black);
+	padding: var(--unit, 1rem);
 }
 
 [data-cloak] {

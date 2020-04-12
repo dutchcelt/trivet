@@ -1,6 +1,6 @@
 <trvt-section data-cloak="true">
 	<header slot="header">
-		<trvt-heading text="${title}"></trvt-heading>
+		<trvt-heading text="${title}" block="heading" modifier="page"></trvt-heading>
 	</header>
 	<div slot="content">
 		<aside class="sidebar">
@@ -8,7 +8,9 @@
 		</aside>
 		<trvt-article>
 			<header slot="header">
-				<trvt-heading tag="h2" text="Lorem ipsum dolor sit amet."></trvt-heading>
+				<trvt-heading tag="h2">
+					<span slot="default">Lorem ipsum dolor sit amet</span>
+				</trvt-heading>
 			</header>
 			<div slot="content">
 				<p>
