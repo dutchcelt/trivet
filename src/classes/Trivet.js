@@ -13,11 +13,11 @@ class Trivet extends HTMLElement {
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
-		this.template = this.template || Trivet.dynamicTemplate.call(this);
-		typeof this.template === 'function' && Trivet.wrapTemplateWithTag.call(this);
+		this.template = this.template || this.dynamicTemplate();
+		typeof this.template === 'function' && this.wrapTemplateWithTag();
 	}
 
-	static wrapTemplateWithTag(){
+	wrapTemplateWithTag(){
 
 		const instance = this.template();
 		const target = this.shadowRoot;
@@ -34,7 +34,7 @@ class Trivet extends HTMLElement {
 		render(instance, target);
 	}
 
-	static dynamicTemplate(){
+	dynamicTemplate(){
 		return this.querySelector('[slot=default]') ? () => html`<slot name="default"></slot>` : () => html``;
 	}
 }
