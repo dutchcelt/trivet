@@ -1,6 +1,6 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './article.css';
-import { Compositions, html } from 'Compositions';
+import { Compositions } from 'Compositions';
 
 customElements.define('trvt-article',
 	class extends Compositions {
