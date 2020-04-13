@@ -27,7 +27,9 @@
 	<body>
 		<trvt-page data-cloak="true">
 			<nav slot="navigation">${nav}</nav>
-			<header slot="header"></header>
+			<header slot="header">
+				<trvt-heading text="${title}" block="heading" modifier="page"></trvt-heading>
+			</header>
 			<main slot="content">${main}</main>
 			<footer slot="footer" >${footer}</footer>
 		</trvt-page>

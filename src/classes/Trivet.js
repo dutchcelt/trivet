@@ -22,12 +22,12 @@ class Trivet extends HTMLElement {
 	static wrapTemplateWithTag(){
 
 		const temp = this.template();
-		const block = this.block || '';
-		const modifier = block && this.modifier ? `${block}--${this.modifier}` : block;
+		const block = this.block;
+		const modifier = block && this.modifier && `${block}--${this.modifier}`;
 
 		if(this.tag) {
 			const wrapper = document.createElement(this.tag);
-			block && wrapper.classList.add(block, modifier);
+			wrapper.classList.add(...[block, modifier].filter(c=>c));
 			wrapper.textContent = this.text || null;
 			wrapper.innerHTML = wrapper.innerHTML || temp.template.element.innerHTML;
 			temp.template.element.innerHTML = wrapper.outerHTML;
