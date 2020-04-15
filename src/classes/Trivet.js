@@ -1,10 +1,8 @@
+import { html, render } from 'lit-html';
 
 /**
  * Atomic design class
  */
-const getModifier = element => element.getAttribute('modifier');
-import { html, render } from 'lit-html';
-
 class Trivet extends HTMLElement {
 	constructor() {
 		super();
@@ -13,6 +11,7 @@ class Trivet extends HTMLElement {
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
+		this.classnames || this.bem();
 		this.template = this.template || this.dynamicTemplate();
 		typeof this.template === 'function' && this.wrapTemplateWithTag();
 	}
@@ -21,13 +20,11 @@ class Trivet extends HTMLElement {
 
 		const instance = this.template();
 		const target = this.shadowRoot;
-		const block = this.block;
-		const modifier = block && this.modifier && `${block}--${this.modifier}`;
-
 		if(this.tag) {
 			const wrapper = document.createElement(this.tag);
-			wrapper.classList.add(...[block, modifier].filter(c=>c));
+			wrapper.classList.add(...this.classnames);
 			wrapper.textContent = this.text || null;
+
 			wrapper.innerHTML = wrapper.innerHTML || instance.template.element.innerHTML;
 			instance.template.element.innerHTML = wrapper.outerHTML;
 		}
@@ -37,6 +34,18 @@ class Trivet extends HTMLElement {
 	dynamicTemplate(){
 		return this.querySelector('[slot=default]') ? () => html`<slot name="default"></slot>` : () => html``;
 	}
+
+	bem(){
+
+		const getBem = n => this[n] || this.getAttribute(n) || '';
+		const bemObj = {block:'',element:'__',modifier:'--'};
+		const bemArr = Object.keys(bemObj).map(n => getBem(n) && (bemObj[n] + getBem(n)));
+		const elmName = bemArr[0] + bemArr[1] || null;
+		this.classnames = [elmName];
+		bemArr[2] && this.classnames.push(elmName + bemArr[2]);
+		this.classnames.filter(cls => cls);
+	}
+
 }
 
 export { Trivet, html, render }
