@@ -8,9 +8,24 @@ class Trivet extends HTMLElement {
 		super();
 	}
 	connectedCallback(){
+		this.insertTemplate();
+		this.removeCloak();
+	}
+
+	removeCloak(){
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
+	}
+	wrapTemplateWithTag(){
+		const wrapper = document.createElement(this.tag);
+		wrapper.classList.add(...this.classnames);
+		return this.shadowRoot.appendChild(wrapper);
+	}
+	dynamicDefaultTemplate(){
+		return this.querySelector('[slot=default]') ? () => html`<slot name="default"></slot>` : () => html`${this.text}`;
+	}
+	insertTemplate(){
 		this.classnames || this.bem();
 		this.template = this.template || this.dynamicDefaultTemplate();
 		if (typeof this.template === 'function') {
@@ -18,17 +33,6 @@ class Trivet extends HTMLElement {
 			render(this.template(), target);
 		}
 	}
-
-	wrapTemplateWithTag(){
-		const wrapper = document.createElement(this.tag);
-		wrapper.classList.add(...this.classnames);
-		return this.shadowRoot.appendChild(wrapper);
-	}
-
-	dynamicDefaultTemplate(){
-		return this.querySelector('[slot=default]') ? () => html`<slot name="default"></slot>` : () => html`${this.text}`;
-	}
-
 	bem(){
 		const getBem = n => this[n] || this.getAttribute(n) || '';
 		const bemObj = {block:'',element:'__',modifier:'--'};
