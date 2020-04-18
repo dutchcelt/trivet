@@ -6,8 +6,14 @@ import { html, render } from 'lit-html';
 class Trivet extends HTMLElement {
 	constructor() {
 		super();
+		this.bemObject = Object.freeze({
+			block:'',
+			element:'',
+			modifier:''
+		})
 	}
 	connectedCallback(){
+		this.classnames = Trivet.createBEMClasses(this.getBemAttributes());
 		this.insertTemplate();
 		this.removeCloak();
 	}
@@ -23,24 +29,29 @@ class Trivet extends HTMLElement {
 		return this.shadowRoot.appendChild(wrapper);
 	}
 	dynamicDefaultTemplate(){
-		return this.querySelector('[slot=default]') ? () => html`<slot name="default"></slot>` : () => html`${this.text}`;
+		return this.querySelector('[slot=default]')
+			? () => html`<slot name="default"></slot>`
+			: () => html`${this.text}`;
 	}
 	insertTemplate(){
-		this.classnames || this.bem();
 		this.template = this.template || this.dynamicDefaultTemplate();
 		if (typeof this.template === 'function') {
 			const target = this.tag ? this.wrapTemplateWithTag() : this.shadowRoot;
 			render(this.template(), target);
 		}
 	}
-	bem(){
-		const getBem = n => this[n] || this.getAttribute(n) || '';
-		const bemObj = {block:'',element:'__',modifier:'--'};
-		const bemArr = Object.keys(bemObj).map(n => getBem(n) && (bemObj[n] + getBem(n)));
-		const elmName = bemArr[0] + bemArr[1] || null;
-		this.classnames = [elmName];
-		bemArr[2] && this.classnames.push(elmName + bemArr[2]);
-		this.classnames.filter(cls => cls);
+	getBemAttributes() {
+		const o = Object.assign({},this.bemObject);
+		Object.keys(o).forEach(n => o[n] = (this.getAttribute(n) || this[n] || '').trim());
+		return o;
+	}
+	static createBEMClasses(attrs){
+		const BE = [['', attrs.block],['__', attrs.element]]
+			.map(([divider, bemName]) => bemName && divider + bemName);
+		const BEM = [BE.join('')];
+		const modifiers = attrs.modifier.split(',');
+		modifiers.forEach(M => M && BEM.push(BEM[0] + '--' + M.trim()));
+		return BEM.filter(cls => cls);
 	}
 
 }
