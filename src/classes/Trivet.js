@@ -10,50 +10,67 @@ class Trivet extends HTMLElement {
 			block:'',
 			element:'',
 			modifier:''
-		})
+		});
+		this.classes = {
+			'highlight': false,
+			'hidden': false
+		};
+		this.props = {}
 	}
 	connectedCallback(){
-		this.classnames = Trivet.createBEMClasses(this.getBemAttributes());
+		this.updateProps();
 		this.insertTemplate();
-		this.removeCloak();
 	}
+
+	attributeChangedCallback(name, oldValue, newValue){
+		this.updateProps();
+		this.insertTemplate();
+	}
+	static get observedAttributes() { return ['text', 'block', 'element', 'modifier']; }
 
 	removeCloak(){
 		this.dataset.cloak && requestAnimationFrame(() => {
 			delete this.dataset.cloak;
 		});
 	}
-	wrapTemplateWithTag(){
-		const wrapper = document.createElement(this.tag);
-		wrapper.classList.add(...this.classnames);
-		return this.shadowRoot.appendChild(wrapper);
-	}
 	dynamicDefaultTemplate(){
 		return this.querySelector('[slot=default]')
 			? () => html`<slot name="default"></slot>`
 			: () => html`${this.text}`;
 	}
+	updateProps(){
+		this.props = {
+			text: this.getAttribute('text') || '',
+			tag: this.tag || this.getAttribute('tag'),
+			classes: Trivet.bemClassMap(
+				this.getBemAttributes(),
+				Object.assign({}, this.classes)
+			)
+		}
+	}
 	insertTemplate(){
 		this.template = this.template || this.dynamicDefaultTemplate();
 		if (typeof this.template === 'function') {
-			const target = this.tag ? this.wrapTemplateWithTag() : this.shadowRoot;
-			render(this.template(), target);
+			render(this.template(this.props), this.shadowRoot);
+		} else {
+			render(this.template, this.shadowRoot);
 		}
+		this.removeCloak();
 	}
 	getBemAttributes() {
 		const o = Object.assign({},this.bemObject);
 		Object.keys(o).forEach(n => o[n] = (this.getAttribute(n) || this[n] || '').trim());
 		return o;
 	}
-	static createBEMClasses(attrs){
+	static bemClassMap(attrs,classes){
 		const BE = [['', attrs.block],['__', attrs.element]]
 			.map(([divider, bemName]) => bemName && divider + bemName);
 		const BEM = [BE.join('')];
-		const modifiers = attrs.modifier.split(',');
+		const modifiers = attrs.modifier ? attrs.modifier.split(',') : [''];
 		modifiers.forEach(M => M && BEM.push(BEM[0] + '--' + M.trim()));
-		return BEM.filter(cls => cls);
+		BEM.filter(cls => cls).forEach(cls => classes[cls] = !!cls)
+		return classes;
 	}
-
 }
 
 export { Trivet, html, render }

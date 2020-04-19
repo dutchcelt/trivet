@@ -13,7 +13,8 @@
 
 		"trivet":"/trivet.js",
 		"createFragment" : "/utils/createFragment.js",
-		"lit-html" : "/utils/lit-html.js",
+		"lit-html" : "/utils/lit-html/lit-html.js",
+		"class-map": "/utils/lit-html/directives/class-map.js",
 
 		"Trivet": "/classes/Trivet.js",
 		"Compositions": "/classes/Compositions.js",

@@ -7,6 +7,7 @@ class Elements extends Trivet {
 		this.tag = this.getAttribute('tag') || 'span';
 		this.attrs = [...this.attributes].filter(a => !(/text|tag/ig).test(a.name));
 	}
+
 }
 export { Elements, html, render }
 

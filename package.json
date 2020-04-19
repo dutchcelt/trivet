@@ -38,6 +38,7 @@
 		"es-module-shims": "^0.4.6",
 		"express": "^4.17.1",
 		"express-es6-template-engine": "^2.2.1",
+		"lit-html": "^1.2.1",
 		"node-sass": "^4.13.1",
 		"uglifyify": "^5.0.2"
 	}
