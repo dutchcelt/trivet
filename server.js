@@ -25,7 +25,8 @@ router.all('/', function (req, res, next) {
 	res.render('index', {
 		locals: Object.assign(trivetData, menuData,{
 			title: 'Hello, Welcome to Trivet!',
-			content: 'Trivet is a very simple approach to the dynamic loading of scripts, styles, and json.'
+			content: 'Trivet is a very simple approach to the dynamic loading of scripts, styles, and json.<br> Look' +
+				' into <a href="https://github.com/andreasbm/router-slot">router slot</a>'
 		}),
 		partials: Object.assign(fragments,{
 			main: '/content/index'

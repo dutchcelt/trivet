@@ -16,6 +16,7 @@
 		<!-- Polyfill Import maps -->
 		<script defer src="${path}${importmapShim}"></script>
 		<script type="importmap-shim" src="${path}${importmap}"></script>
+		<script type="importmap-shim" src="${path}${componentsMap}"></script>
 
 		<!-- Polyfill adoptedStyleSheets -->
 		<script defer src="${path}${adoptedStyleSheets}"></script>
@@ -25,7 +26,8 @@
 	</head>
 
 	<body>
-		<trvt-page data-cloak="true">
+
+		<trvt-page>
 			<nav slot="navigation">${nav}</nav>
 			<header slot="header">
 				<trvt-heading text="${title}" block="heading" modifier="page"></trvt-heading>

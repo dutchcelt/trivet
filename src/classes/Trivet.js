@@ -28,11 +28,6 @@ class Trivet extends HTMLElement {
 	}
 	static get observedAttributes() { return ['text', 'block', 'element', 'modifier']; }
 
-	removeCloak(){
-		this.dataset.cloak && requestAnimationFrame(() => {
-			delete this.dataset.cloak;
-		});
-	}
 	dynamicDefaultTemplate(){
 		return this.querySelector('[slot=default]')
 			? () => html`<slot name="default"></slot>`
@@ -55,7 +50,6 @@ class Trivet extends HTMLElement {
 		} else {
 			render(this.template, this.shadowRoot);
 		}
-		this.removeCloak();
 	}
 	getBemAttributes() {
 		const o = Object.assign({},this.bemObject);

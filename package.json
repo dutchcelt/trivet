@@ -4,7 +4,7 @@
 	"description": "A very simple dynamic loader of web components and styles",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --no-inject-changes --https --reload-debounce 300",
+		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --no-inject-changes --https --reload-debounce 300 --no-open",
 		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,map,importmap}\" dist ",
 		"scss": "node-sass \"src\" -o \"dist\" -x --output-style compressed ",
 		"build": "yarn assets & yarn scss",

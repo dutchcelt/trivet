@@ -6,6 +6,17 @@
 // Vendors
 @import "vendors/normalize";
 
+// Hide all undefined elements to prevent FOUC.
+// Standard html elements are defined by default.
+*:not(:defined) {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
 
 body {
 	font-family: var(--font-body, sans-serif);
@@ -14,9 +25,6 @@ body {
 	padding: var(--unit, 1rem);
 }
 
-[data-cloak] {
-	visibility: hidden;
-}
 
 img, picture {
 	float: var(--float-picture, none);
