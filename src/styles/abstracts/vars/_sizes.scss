@@ -2,5 +2,13 @@
 	--unit: 1rem;
 	--space: 0.5rem;
 	--block: 2rem;
+
 	--gap: var(--unit, 1rem);
+
+	--viewport-min: 320px;
+	--viewport-max: 100vw;
+
+	--breakpoint-s: 600px;
+	--breakpoint-m: 900px;
+	--breakpoint-l: 1200px;
 }

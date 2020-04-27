@@ -1,6 +1,15 @@
 :host(trvt-section) {
 	--display: grid;
-	--template-columns: repeat(auto-fit, minmax( clamp(33.3333% - var(--gap), (60rem - 100%) * 999, 100%), 1fr) );
+	--template-columns: repeat(
+		auto-fit,
+		minmax(
+			clamp(
+				33.3333% - var(--gap),
+				(60rem - 100%) * 999,
+				100%
+			),
+		1fr)
+	);
 	--template-rows: auto;
 	--background-color: var(--light);
 	--align: start;
