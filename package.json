@@ -6,8 +6,9 @@
 	"scripts": {
 		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --no-inject-changes --https --reload-debounce 300 --no-open",
 		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json}\" dist & cpx \"src/**/*.js\" dist -c \"terser -c\"",
-		"utils:lit": "cpx \"node_modules/lit-html/**/*.js\" dist/utils/lit-html -c \"terser -c --ecma 2017\"",
-		"utils": "yarn utils:lit",
+		"utils:lit-element": "cpx \"node_modules/lit-element/**/*.js\" dist/utils/lit-element -c \"terser -c --ecma 2017\"",
+		"utils:lit-html": "cpx \"node_modules/lit-html/**/*.js\" dist/utils/lit-html -c \"terser -c --ecma 2017\"",
+		"utils": "yarn utils:lit-html & yarn utils:lit-element",
 		"polyfills:construct-styles": "cpx \"node_modules/construct-style-sheets-polyfill/dist/**/*.js\" dist/polyfills -c \"terser -c\"",
 		"polyfills:module-shims": "cpx \"node_modules/es-module-shims/dist/**/*.js\" dist/polyfills -c \"terser -c\"",
 		"polyfills": "yarn polyfills:construct-styles & yarn polyfills:module-shims",

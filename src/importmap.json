@@ -7,10 +7,15 @@
 
 		"createFragment" : "/utils/createFragment.js",
 		"lit-html" : "/utils/lit-html/lit-html.js",
+		"lit-html/lit-html.js" : "/utils/lit-html/lit-html.js",
+		"lit-html/lib/shady-render.js": "/utils/lit-html/lib/shady-render.js",
+		"lit-element" : "/utils/lit-element/lit-element.js",
 		"class-map": "/utils/lit-html/directives/class-map.js",
 		"repeat": "/utils/lit-html/directives/repeat.js",
+		"bemMap": "/utils/bemMap.js",
 		"v8n": "https://unpkg.com/v8n/dist/v8n.min.js",
 
+		"TrivetLight": "/classes/TrivetLight.js",
 		"Trivet": "/classes/Trivet.js",
 		"Compositions": "/classes/Compositions.js",
 		"Features": "/classes/Features.js",
