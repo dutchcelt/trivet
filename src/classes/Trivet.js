@@ -18,15 +18,18 @@ class Trivet extends HTMLElement {
 		this.props = {}
 	}
 	connectedCallback(){
-		this.updateProps();
-		this.insertTemplate();
+		this.updateTrivet()
 	}
 
 	attributeChangedCallback(name, oldValue, newValue){
+		this.updateTrivet()
+	}
+	static get observedAttributes() { return ['text', 'tag', 'block', 'element', 'modifier']; }
+
+	updateTrivet() {
 		this.updateProps();
 		this.insertTemplate();
 	}
-	static get observedAttributes() { return ['text', 'tag', 'block', 'element', 'modifier']; }
 
 	dynamicDefaultTemplate(){
 		return this.querySelector('[slot=default]')
