@@ -8,6 +8,7 @@
 		"createFragment" : "/utils/createFragment.js",
 		"lit-html" : "/utils/lit-html/lit-html.js",
 		"class-map": "/utils/lit-html/directives/class-map.js",
+		"repeat": "/utils/lit-html/directives/repeat.js",
 		"v8n": "https://unpkg.com/v8n/dist/v8n.min.js",
 
 		"Trivet": "/classes/Trivet.js",

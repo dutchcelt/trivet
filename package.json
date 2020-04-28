@@ -5,9 +5,14 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server & browser-sync start --proxy \"localhost:9000\" --cors --no-inject-changes --https --reload-debounce 300 --no-open",
-		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json,js,map,importmap}\" dist ",
+		"assets": "cpx \"src/**/*.css\" dist & cpx \"src/**/*.{html,png,jpg,gif,svg,json}\" dist & cpx \"src/**/*.js\" dist -c \"terser -c\"",
+		"utils:lit": "cpx \"node_modules/lit-html/**/*.js\" dist/utils/lit-html -c \"terser -c --ecma 2017\"",
+		"utils": "yarn utils:lit",
+		"polyfills:construct-styles": "cpx \"node_modules/construct-style-sheets-polyfill/dist/**/*.js\" dist/polyfills -c \"terser -c\"",
+		"polyfills:module-shims": "cpx \"node_modules/es-module-shims/dist/**/*.js\" dist/polyfills -c \"terser -c\"",
+		"polyfills": "yarn polyfills:construct-styles & yarn polyfills:module-shims",
 		"scss": "node-sass \"src\" -o \"dist\" -x --output-style compressed ",
-		"build": "yarn assets & yarn scss",
+		"build": "yarn assets & yarn polyfills & yarn utils & yarn scss",
 		"build:develop": "trash dist && yarn build",
 		"watch": "yarn assets -w & yarn scss -w",
 		"develop": "yarn build:develop && yarn watch | yarn start"
@@ -38,8 +43,9 @@
 		"es-module-shims": "^0.4.6",
 		"express": "^4.17.1",
 		"express-es6-template-engine": "^2.2.1",
+		"lit-element": "^2.3.1",
 		"lit-html": "^1.2.1",
 		"node-sass": "^4.13.1",
-		"uglifyify": "^5.0.2"
+		"terser": "^4.6.12"
 	}
 }

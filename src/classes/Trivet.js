@@ -26,7 +26,7 @@ class Trivet extends HTMLElement {
 		this.updateProps();
 		this.insertTemplate();
 	}
-	static get observedAttributes() { return ['text', 'block', 'element', 'modifier']; }
+	static get observedAttributes() { return ['text', 'tag', 'block', 'element', 'modifier']; }
 
 	dynamicDefaultTemplate(){
 		return this.querySelector('[slot=default]')
