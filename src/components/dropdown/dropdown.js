@@ -1,6 +1,6 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './dropdown.css';
-import { Features, html, render } from 'Features';
+import { Features, html } from 'Features';
 import { repeat } from 'repeat';
 
 const menuTemplateFunction = data => html`
@@ -12,8 +12,8 @@ const menuTemplateFunction = data => html`
 	</label>
 	<nav role="menu" class="dropdown__menu" data-menu-origin="left">
 		<ul class="dropdown__list">
- 			${repeat(
- 				data,
+			${repeat(
+				data,
 				item => html`
 					<li class="dropdown__item">
 						<a class="dropdown__link" href="${item.url}">
@@ -30,10 +30,11 @@ customElements.define('trvt-dropdown',
 	class extends Features {
 		constructor() {
 			super();
-			this.template = menuTemplateFunction(JSON.parse(this.dataset.menu));
+			this.props.menu = JSON.parse(this.dataset.menu);
+			this.template = menuTemplateFunction(this.props.menu);
 			this.attachShadow({ mode: 'open' });
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
-			render(this.template, this.shadowRoot);
 		}
 	}
 );
+
