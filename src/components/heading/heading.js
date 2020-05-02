@@ -2,18 +2,13 @@ import { LitElement, html } from 'lit-element';
 import { classMap } from "class-map";
 import shadowStyles from './heading.css';
 import bemMap from 'bemMap';
+import trivetProps from 'trivetProps';
 
 customElements.define('trvt-heading',
 	class extends LitElement {
 		static get properties() {
 			return {
-				name: { type: String },
-				block: { type: String },
-				modifier: { type: String },
-				tag: { type: String },
-				text: { type: String },
-				bemObject: { type: Object },
-				bemClassMap: { type: Object }
+				...trivetProps
 			};
 		}
 		constructor() {
