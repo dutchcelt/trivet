@@ -12,6 +12,7 @@
 		"class-map": "/utils/lit-html/directives/class-map.js",
 		"repeat": "/utils/lit-html/directives/repeat.js",
 		"bemMap": "/utils/bemMap.js",
+		"bemmer": "/utils/bemmer.js",
 		"v8n": "https://unpkg.com/v8n/dist/v8n.min.js",
 
 		"trivetProps": "/utils/trivetProps.js",

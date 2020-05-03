@@ -5,7 +5,5 @@ export default {
 	tag: { type: String },
 	text: { type: String },
 	status: { type: String },
-	hidden: { type: Boolean },
-	bemObject: { type: Object },
-	bemClassMap: { type: Object }
+	hidden: { type: Boolean }
 }

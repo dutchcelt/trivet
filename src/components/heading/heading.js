@@ -1,8 +1,8 @@
 import { LitElement, html } from 'lit-element';
 import { classMap } from "class-map";
 import shadowStyles from './heading.css';
-import bemMap from 'bemMap';
 import trivetProps from 'trivetProps';
+import bemmer from 'bemmer';
 
 customElements.define('trvt-heading',
 	class extends LitElement {
@@ -13,25 +13,14 @@ customElements.define('trvt-heading',
 		}
 		constructor() {
 			super();
-			this.bemObject = Object.freeze({
-				block:'',
-				element:'',
-				modifier:''
-			});
 			this.block = 'heading';
-			this.bemClassMap = bemMap(this.getBemAttributes(), {
-				'highlight': false,
-				'hidden': false
-			});
 		}
-		getBemAttributes(attrs) {
-			const o = Object.assign({},this.bemObject);
-			Object.keys(o).forEach(n => o[n] = (this.getAttribute(n) || this[n] || '').trim());
-			return o;
+		bemClassMap(){
+			return bemmer(this.attributes, { block: this.block });
 		}
 		render() {
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
-			return html`<h1 class="${classMap(this.bemClassMap)}"><slot name="default">${this.text}</slot></h1>`;
+			return html`<h1 class="${classMap(this.bemClassMap())}"><slot name="default">${this.text}</slot></h1>`;
 		}
 	}
 );
