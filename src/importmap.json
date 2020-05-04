@@ -16,10 +16,7 @@
 		"v8n": "https://unpkg.com/v8n/dist/v8n.min.js",
 
 		"trivetProps": "/utils/trivetProps.js",
-		"Trivet": "/classes/Trivet.js",
-		"Compositions": "/classes/Compositions.js",
-		"Features": "/classes/Features.js",
-		"Elements": "/classes/Elements.js"
+		"Trivet": "/classes/Trivet.js"
 	}
 
 }

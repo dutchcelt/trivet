@@ -1,5 +1,5 @@
 
-export default (attrs,classes={}) => {
+export default (attrs, classes={}) => {
 	const BE = [['', attrs.block],['__', attrs.element]]
 		.map(([divider, bemName]) => bemName && divider + bemName);
 	const BEM = [BE.join('')];

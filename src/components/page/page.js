@@ -1,12 +1,14 @@
 import shadowStyles from './page.css';
-import { Compositions, html } from 'Compositions';
+import { Trivet } from 'Trivet';
 
 customElements.define('trvt-page',
-	class extends Compositions {
+	class extends Trivet {
 		constructor() {
 			super();
-			this.attachShadow({ mode: 'open' });
+		}
+		render(){
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
+			return Trivet.composition();
 		}
 	}
 );

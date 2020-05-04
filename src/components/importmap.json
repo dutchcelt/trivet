@@ -4,7 +4,6 @@
 		"trvt-section":"/components/section/section.js",
 		"trvt-article":"/components/article/article.js",
 		"trvt-heading":"/components/heading/heading.js",
-		"trvt-elem":"/components/elem/elem.js",
 		"trvt-dropdown":"/components/dropdown/dropdown.js"
 	}
 }

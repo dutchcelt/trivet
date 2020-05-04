@@ -1,6 +1,6 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './dropdown.css';
-import { Features, html } from 'Features';
+import { Trivet, html } from 'Trivet';
 import { repeat } from 'repeat';
 
 const menuTemplateFunction = data => html`
@@ -27,14 +27,20 @@ const menuTemplateFunction = data => html`
 `;
 
 customElements.define('trvt-dropdown',
-	class extends Features {
+	class extends Trivet {
 		constructor() {
 			super();
-			this.props.menu = JSON.parse(this.dataset.menu);
-			this.template = menuTemplateFunction(this.props.menu);
-			this.attachShadow({ mode: 'open' });
-			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
 		}
+		render(){
+			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
+			return menuTemplateFunction(this.menu);
+		}
+		static get properties() {
+			return {
+				menu: { type: Object }
+			};
+		}
+
 	}
 );
 

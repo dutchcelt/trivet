@@ -1,66 +1,30 @@
-import { html, render } from 'lit-html';
-import bemMap from 'bemMap';
+import { html, LitElement } from "lit-element";
+import trivetProps from 'trivetProps';
+import bemmer from 'bemmer';
 
-/**
- * Atomic design class
- */
-class Trivet extends HTMLElement {
+class Trivet extends LitElement {
 	constructor() {
 		super();
-		this.bemObject = Object.freeze({
-			block:'',
-			element:'',
-			modifier:''
+	}
+	bemClassMap(){
+		return bemmer(this.attributes, {
+			block: this.block,
+			element: this.element,
+			modifier: this.modifier
 		});
-		this.classes = {
-			'highlight': false,
-			'hidden': false
+	}
+	static get properties() {
+		return {
+			...trivetProps
 		};
-		this.props = {}
 	}
-	connectedCallback(){
-		this.updateTrivet()
-	}
-
-	attributeChangedCallback(name, oldValue, newValue){
-		this.updateTrivet()
-	}
-	static get observedAttributes() { return ['text', 'tag', 'block', 'element', 'modifier']; }
-
-	updateTrivet() {
-		this.updateProps();
-		this.insertTemplate();
-	}
-
-	dynamicDefaultTemplate(){
-		return this.querySelector('[slot=default]')
-			? () => html`<slot name="default"></slot>`
-			: () => html`${this.text}`;
-	}
-	updateProps(){
-		this.props = {
-			text: this.getAttribute('text') || '',
-			tag: this.tag || this.getAttribute('tag'),
-			classes: bemMap(
-				this.getBemAttributes(),
-				Object.assign({}, this.classes)
-			)
-		}
-	}
-	insertTemplate(){
-		this.template = this.template || this.dynamicDefaultTemplate();
-		if (typeof this.template === 'function') {
-			render(this.template(this.props), this.shadowRoot);
-		} else {
-			render(this.template, this.shadowRoot);
-		}
-	}
-	getBemAttributes() {
-		const o = Object.assign({},this.bemObject);
-		Object.keys(o).forEach(n => o[n] = (this.getAttribute(n) || this[n] || '').trim());
-		return o;
+	static composition(){
+		return html`
+			<slot name="navigation"></slot>
+			<slot name="header"></slot>
+			<slot name="content"></slot>
+			<slot name="footer"></slot>
+		`;
 	}
 }
-
-export { Trivet, html, render }
-
+export { Trivet, html }
