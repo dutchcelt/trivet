@@ -1,6 +1,6 @@
 import { html, LitElement } from "lit-element";
 import trivetProps from 'trivetProps';
-import bemmer from 'bemmer';
+import bemMap from 'bemMap';
 import { classMap } from "class-map";
 
 class Trivet extends LitElement {
@@ -15,9 +15,9 @@ class Trivet extends LitElement {
 		const BEM = {
 			block: this.block || opts.block || '',
 			element: this.element || opts.element || '',
-			modifier: this.modifier || opts.modifier || ''
+			modifier: opts.element ? opts.modifier : this.modifier || ''
 		};
-		return bemmer(this.attributes,BEM);
+		return bemMap(BEM);
 	}
 	static get properties() {
 		return {

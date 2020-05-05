@@ -26,11 +26,13 @@ customElements.define('trvt-dropdown',
 
 					<div role="menu" class="${this.bem('menu')}" data-menu-origin="left">
 						<ul class="${this.bem('list')}">
-							${this.menu.map(item => html`<li class="${this.bem('item')}">
-								<a class="${this.bem('link')}" href="${item.url}">
-									${item.text}
-								</a>
-							</li>`)}
+							${this.menu.map(item => html`
+								<li class="${this.bem('item')}">
+									<a class="${this.bem('link')}" href="${item.url}">
+										${item.text}
+									</a>
+								</li>
+							`)}
 						</ul>
 					</div>
 				</nav>
