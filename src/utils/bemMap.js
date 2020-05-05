@@ -1,14 +1,14 @@
 
-export default (attrs, classes={}) => {
-	const BE = [['', attrs.block],['__', attrs.element]]
+export default (bemObj, classes={}) => {
+	const BE = [['', bemObj.block],['__', bemObj.element]]
 		.map(([divider, bemName]) => bemName && divider + bemName);
-	const BEM = [BE.join('')];
-	const modifiers = attrs.modifier && new Set(
-		Array.isArray(attrs.modifier)
-			? attrs.modifier
-			: attrs.modifier.split(',')
+	const bemArr = [BE.join('')];
+	const modifiers = bemObj.modifier && new Set(
+		Array.isArray(bemObj.modifier)
+			? bemObj.modifier
+			: bemObj.modifier.split(',')
 	);
-	modifiers && modifiers.forEach(M => M && BEM.push(BEM[0] + '--' + M.trim()));
-	BEM.filter(cls => cls).forEach(cls => classes[cls] = !!cls)
+	modifiers && modifiers.forEach(M => M && bemArr.push(bemArr[0] + '--' + M.trim()));
+	bemArr.filter(cls => cls).forEach(cls => classes[cls] = !!cls)
 	return classes;
 }
