@@ -24,13 +24,11 @@ class Trivet extends LitElement {
 			...trivetProps
 		};
 	}
-	static composition(){
-		return html`
-			<slot name="navigation"></slot>
-			<slot name="header"></slot>
-			<slot name="content"></slot>
-			<slot name="footer"></slot>
-		`;
+	static compositions(...args){
+		return html`${args.map(([slot,content]) => html`
+			<slot name="${slot}">${html`${content||''}`}</slot>
+		`)}`;
 	}
+
 }
 export { Trivet, html, classMap }

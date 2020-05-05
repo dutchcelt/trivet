@@ -8,7 +8,12 @@ customElements.define('trvt-page',
 		}
 		render(){
 			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
-			return Trivet.composition();
+			return Trivet.compositions(
+				['navigation'],
+				['header'],
+				['content'],
+				['footer']
+			);
 		}
 	}
 );

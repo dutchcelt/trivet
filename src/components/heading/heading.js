@@ -14,7 +14,7 @@ customElements.define('trvt-heading',
 		template() {
 			let temp;
 			const tag = this.tag || 'h1';
-			const slot = html`<slot name="default">${this.text}</slot>`;
+			const slot = Trivet.compositions(['default',this.text]);
 			const bem = this.bem();
 			switch (tag.toLowerCase()) {
 				case 'h6':

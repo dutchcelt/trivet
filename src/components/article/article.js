@@ -9,7 +9,7 @@ customElements.define('trvt-article',
 		}
 		render(){
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
-			return html`<article>${Trivet.composition()}</article>`
+			return html`<article>${Trivet.compositions(['header'],['content'],['footer'])}</article>`
 		}
 	}
 );

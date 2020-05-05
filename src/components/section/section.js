@@ -9,7 +9,7 @@ customElements.define('trvt-section',
 		}
 		render(){
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
-			return Trivet.composition();
+			return Trivet.compositions(['header'],['content'],['footer']);
 		}
 	}
 );
