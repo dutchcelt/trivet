@@ -1,17 +1,23 @@
 import { html, LitElement } from "lit-element";
 import trivetProps from 'trivetProps';
 import bemmer from 'bemmer';
+import { classMap } from "class-map";
 
 class Trivet extends LitElement {
 	constructor() {
 		super();
 	}
-	bemClassMap(){
-		return bemmer(this.attributes, {
-			block: this.block,
-			element: this.element,
-			modifier: this.modifier
-		});
+	bem(element, modifier){
+		return classMap(this.bemClassMap({ element, modifier }))
+	}
+	bemClassMap(args){
+		const opts = { ...args };
+		const BEM = {
+			block: this.block || opts.block || '',
+			element: this.element || opts.element || '',
+			modifier: this.modifier || opts.modifier || ''
+		};
+		return bemmer(this.attributes,BEM);
 	}
 	static get properties() {
 		return {
@@ -27,4 +33,4 @@ class Trivet extends LitElement {
 		`;
 	}
 }
-export { Trivet, html }
+export { Trivet, html, classMap }

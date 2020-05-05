@@ -1,43 +1,45 @@
 import trvtStyles from 'trvt-styles';
 import shadowStyles from './dropdown.css';
 import { Trivet, html } from 'Trivet';
-import { repeat } from 'repeat';
-
-const menuTemplateFunction = data => html`
-	<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide">
-	<label for="toggle" data-opens-menu>
-		&#x2630; Menu
-		<span class="hide expanded-text">expanded</span>
-		<span class="hide collapsed-text">collapsed</span>
-	</label>
-	<nav role="menu" class="dropdown__menu" data-menu-origin="left">
-		<ul class="dropdown__list">
-			${repeat(
-				data,
-				item => html`
-					<li class="dropdown__item">
-						<a class="dropdown__link" href="${item.url}">
-							${item.text}
-						</a>
-					</li>
-				`
-			)}
-		</ul>
-	</nav>
-`;
 
 customElements.define('trvt-dropdown',
 	class extends Trivet {
 		constructor() {
 			super();
+			this.block = 'dropdown'
 		}
-		render(){
+
+		render() {
 			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
-			return menuTemplateFunction(this.menu);
+			return this.menuTemplateFunction();
 		}
+
+		menuTemplateFunction() {
+			return html`
+				<nav class="${this.bem()}">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hidden">
+					<label for="toggle" data-opens-menu>
+						&#x2630; Menu
+						<span class="hidden expanded-text">expanded</span>
+						<span class="hidden collapsed-text">collapsed</span>
+					</label>
+
+					<div role="menu" class="${this.bem('menu')}" data-menu-origin="left">
+						<ul class="${this.bem('list')}">
+							${this.menu.map(item => html`<li class="${this.bem('item')}">
+								<a class="${this.bem('link')}" href="${item.url}">
+									${item.text}
+								</a>
+							</li>`)}
+						</ul>
+					</div>
+				</nav>
+			`;
+		}
+
 		static get properties() {
 			return {
-				menu: { type: Object }
+				menu: { type: Array }
 			};
 		}
 
