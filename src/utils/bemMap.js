@@ -8,7 +8,7 @@ export default (bemObj, classes={}) => {
 			? bemObj.modifier
 			: bemObj.modifier.split(',')
 	);
-	modifiers && modifiers.forEach(M => M && bemArr.push(bemArr[0] + '--' + M.trim()));
+	modifiers && modifiers.forEach(M => M && bemArr.push(`${bemArr[0]  }--${  M.trim()}`));
 	bemArr.filter(cls => cls).forEach(cls => classes[cls] = !!cls)
 	return classes;
 }

@@ -2,20 +2,36 @@
 
 	"imports": {
 
-		"trvt-styles":"/styles/trivet.css",
-		"trivet":"/trivet.js",
+		"trvt-styles":"/src/styles/trivet.css",
+		"normalize":"/src/styles/vendors/normalize.css",
+		"trivet":"/src/trivet.js",
+		"trivet-tokens": "/src/styles/design-tokens.json",
 
-		"createFragment" : "/utils/createFragment.js",
-		"lit-html" : "/utils/lit-html/lit-html.js",
-		"lit-html/" : "/utils/lit-html/",
-		"lit-element" : "/utils/lit-element/lit-element.js",
-		"class-map": "/utils/lit-html/directives/class-map.js",
-		"repeat": "/utils/lit-html/directives/repeat.js",
-		"bemMap": "/utils/bemMap.js",
+		"createFragment" : "/src/utils/createFragment.js",
+		"lit-html" : "/node_modules/lit-html/lit-html.js",
+		"lit-html/" : "/node_modules/lit-html/",
+		"lit-element" : "/node_modules/lit-element/lit-element.js",
+		"class-map": "/node_modules/lit-html/directives/class-map.js",
+		"repeat": "/node_modules/lit-html/directives/repeat.js",
+		"bemMap": "/src/utils/bemMap.js",
 		"v8n": "https://unpkg.com/v8n/dist/v8n.min.js",
 
-		"trivetProps": "/utils/trivetProps.js",
-		"Trivet": "/classes/Trivet.js"
+		"TestUtils": "/src/utils/test-utils.js",
+
+		"trivetProps": "/src/utils/trivetProps.js",
+		"Trivet": "/src/classes/Trivet.js",
+
+		"trvt-page":"/src/components/page/index.js",
+		"trvt-page/":"/src/components/page/",
+		"trvt-section":"/src/components/section/section.js",
+		"trvt-section/":"/src/components/section/",
+		"trvt-article":"/src/components/article/article.js",
+		"trvt-article/":"/src/components/article/",
+		"trvt-heading":"/src/components/heading/heading.js",
+		"trvt-heading/":"/src/components/heading/",
+		"trvt-dropdown":"/src/components/dropdown/dropdown.js",
+		"trvt-dropdown/":"/src/components/dropdown/"
+
 	}
 
 }

@@ -1,0 +1,5 @@
+{
+	"display": "block",
+	"background-color": "none",
+	"page-width": "min(100%, var(--breakpoint-l, 1200px))"
+}

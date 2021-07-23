@@ -1,13 +1,6 @@
-// Abstracts
-@import "abstracts/vars/colors";
-@import "abstracts/vars/typography";
-@import "abstracts/vars/sizes";
 
-// Vendors
-@import "vendors/normalize";
-
-// Hide all undefined elements to prevent FOUC.
-// Standard html elements are defined by default.
+/* Hide all undefined elements to prevent FOUC. */
+/* Standard html elements are defined by default. */
 *:not(:defined) {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);

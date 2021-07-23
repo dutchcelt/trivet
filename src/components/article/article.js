@@ -1,5 +1,4 @@
-import trvtStyles from 'trvt-styles';
-import shadowStyles from './article.css';
+import shadowStyles from 'trvt-article/article.css';
 import { Trivet, html } from 'Trivet';
 
 customElements.define('trvt-article',
@@ -7,9 +6,17 @@ customElements.define('trvt-article',
 		constructor() {
 			super();
 		}
+
 		render(){
-			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
-			return html`<article>${Trivet.compositions(['header'],['content'],['footer'])}</article>`
+			this.composeTrivetStyles(shadowStyles);
+			return html`<article>
+				${Trivet.compositions(
+					['header'],
+					['content'],
+					['default'],
+					['footer', html`<footer><p>Article Footer</p></footer>`],
+				)}
+			</article>`
 		}
 	}
 );

@@ -5,5 +5,6 @@ export default {
 	tag: { type: String },
 	text: { type: String },
 	status: { type: String },
-	hidden: { type: Boolean }
+	hidden: { type: Boolean },
+	tokens: { type: Object }
 }

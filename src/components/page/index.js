@@ -1,13 +1,15 @@
-import shadowStyles from './page.css';
 import { Trivet } from 'Trivet';
+import shadowStyles from 'trvt-page/styles.css';
+import tokens from 'trvt-page/design-tokens.json';
 
 customElements.define('trvt-page',
 	class extends Trivet {
 		constructor() {
 			super();
 		}
+
 		render(){
-			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
+			this.composeTrivetStyles(shadowStyles, tokens);
 			return Trivet.compositions(
 				['navigation'],
 				['header'],

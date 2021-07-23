@@ -1,6 +1,6 @@
-import trvtStyles from 'trvt-styles';
-import shadowStyles from './dropdown.css';
 import { Trivet, html } from 'Trivet';
+
+import shadowStyles from 'trvt-dropdown/dropdown.css';
 
 customElements.define('trvt-dropdown',
 	class extends Trivet {
@@ -10,7 +10,7 @@ customElements.define('trvt-dropdown',
 		}
 
 		render() {
-			this.shadowRoot.adoptedStyleSheets = [trvtStyles, shadowStyles];
+			this.composeTrivetStyles(shadowStyles);
 			return this.menuTemplateFunction();
 		}
 

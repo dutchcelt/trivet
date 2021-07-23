@@ -1,5 +1,5 @@
 import { Trivet, html } from 'Trivet';
-import shadowStyles from './heading.css';
+import shadowStyles from 'trvt-heading/heading.css';
 
 customElements.define('trvt-heading',
 	class extends Trivet {
@@ -7,14 +7,16 @@ customElements.define('trvt-heading',
 			super();
 			this.block = 'heading';
 		}
+
 		render() {
-			this.shadowRoot.adoptedStyleSheets = [shadowStyles];
+			this.composeTrivetStyles(shadowStyles);
 			return this.template();
 		}
+
 		template() {
 			let temp;
-			const tag = this.tag || 'h1';
-			const slot = Trivet.compositions(['default',this.text]);
+			const {tag} = this;
+			const slot = Trivet.compositions(['default',this.text || `${tag.toUpperCase()}: Heading`]);
 			const bem = this.bem();
 			switch (tag.toLowerCase()) {
 				case 'h6':

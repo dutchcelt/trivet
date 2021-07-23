@@ -1,9 +1,14 @@
 {
 	"imports": {
-		"trvt-page":"/components/page/page.js",
-		"trvt-section":"/components/section/section.js",
-		"trvt-article":"/components/article/article.js",
-		"trvt-heading":"/components/heading/heading.js",
-		"trvt-dropdown":"/components/dropdown/dropdown.js"
+		"trvt-page":"/src/components/page/page.js",
+		"trvt-page/":"/src/components/page/",
+		"trvt-section":"/src/components/section/section.js",
+		"trvt-section/":"/src/components/section/",
+		"trvt-article":"/src/components/article/article.js",
+		"trvt-article/":"/src/components/article/",
+		"trvt-heading":"/src/components/heading/heading.js",
+		"trvt-heading/":"/src/components/heading/",
+		"trvt-dropdown":"/src/components/dropdown/dropdown.js",
+		"trvt-dropdown/":"/src/components/dropdown/"
 	}
 }
