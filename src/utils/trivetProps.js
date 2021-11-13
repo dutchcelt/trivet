@@ -1,4 +1,4 @@
-export default {
+export default Object.freeze({
 	name: { type: String },
 	block: { type: String },
 	modifier: { type: String },
@@ -6,5 +6,5 @@ export default {
 	text: { type: String },
 	status: { type: String },
 	hidden: { type: Boolean },
-	tokens: { type: Object }
-}
+	tokens: { type: Object },
+});
