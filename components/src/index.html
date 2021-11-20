@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <title>Trivet - index</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1"
+    />
+    <!-- Trivet stylesheets -->
+    <link
+      rel="stylesheet"
+      href="/src/styles/vendors/normalize.css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="/src/styles/trivet.css" media="screen" />
+
+    <!-- <script src="/system.js"></script> -->
+
+    <!-- Polyfill Import maps -->
+    <script
+      defer
+      src="/node_modules/es-module-shims/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@csstools/normalize.css": "../node_modules/@csstools/normalize.css/normalize.css",
+          "trvt-page": "/src/components/page/page.js",
+          "trvt-page/": "/src/components/page/",
+          "trvt-section": "/src/components/section/section.js",
+          "trvt-section/": "/src/components/section/",
+          "trvt-article": "/src/components/article/article.js",
+          "trvt-article/": "/src/components/article/",
+          "trvt-heading": "/src/components/heading/heading.js",
+          "trvt-heading/": "/src/components/heading/",
+          "trvt-dropdown": "/src/components/dropdown/dropdown.js",
+          "trvt-dropdown/": "/src/components/dropdown/"
+        }
+      }
+    </script>
+
+    <!-- Polyfill adoptedStyleSheets -->
+    <script
+      defer
+      src="/node_modules/construct-style-sheets-polyfill/dist/adoptedStyleSheets.js"
+    ></script>
+
+    <script type="module-shim" src="/src/trivet.js"></script>
+  </head>
+
+  <body>
+    <trvt-page>
+      <nav slot="navigation">
+        <trvt-dropdown
+          menu='[{"text":"Home","url":"/src"},{"text":"About","url":"/textContent.html"}]'
+          modifier="test"
+        >
+        </trvt-dropdown>
+      </nav>
+      <header slot="header">
+        <trvt-heading
+          text="welcome"
+          block="heading"
+          modifier="page"
+        ></trvt-heading>
+      </header>
+      <main slot="content">
+        <trvt-section>
+          <header slot="header">
+            <trvt-heading
+              tag="h2"
+              text="Section heading"
+              block="heading"
+            ></trvt-heading>
+          </header>
+          <div slot="content">
+            <trvt-article>
+              <header slot="header">
+                <trvt-heading tag="h3" text="Article heading"></trvt-heading>
+              </header>
+              <div slot="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Assumenda facilis laudantium libero modi nulla placeat
+                praesentium provident quam! Atque, commodi cupiditate dolorem
+                doloribus ducimus hic ipsum molestiae molestias vel voluptatum!
+              </div>
+            </trvt-article>
+            <trvt-article>
+              <header slot="header">
+                <trvt-heading tag="h3" text="Article heading"></trvt-heading>
+              </header>
+              <div slot="content">
+                <img
+                  src="https://via.placeholder.com/320x180/0000FF/808080"
+                  loading="lazy"
+                />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                corporis illum iure minima quae quidem ratione reprehenderit
+                tempore, temporibus unde. Ab assumenda delectus excepturi, fugit
+                iste tenetur totam vel velit?
+              </div>
+            </trvt-article>
+          </div>
+          <footer slot="footer">Section footer</footer>
+        </trvt-section>
+      </main>
+      <footer slot="footer">footer</footer>
+    </trvt-page>
+  </body>
+</html>

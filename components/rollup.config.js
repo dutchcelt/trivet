@@ -7,11 +7,11 @@ import { createSpaConfig } from '@open-wc/building-rollup';
 
 const baseConfig = createSpaConfig({
   // use the outputdir option to modify where files are output
-   outputDir: 'dist',
+  outputDir: 'dist',
 
   // if you need to support older browsers, such as IE11, set the legacyBuild
   // option to generate an additional build just for this browser
-   legacyBuild: false,
+  legacyBuild: false,
 
   // development mode creates a non-minified build for debugging or development
   developmentMode: process.env.ROLLUP_WATCH === 'true',
