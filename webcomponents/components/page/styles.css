@@ -1,0 +1,5 @@
+::slotted([slot]){
+	margin: 0 auto;
+	width: var(--page-width, 100%);
+}
+

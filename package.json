@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/dutchcelt/trivet#readme",
   "workspaces": [
-    "components",
+    "webcomponents",
     "storybook",
-    "tokens"
+    "designtokens"
   ]
 }

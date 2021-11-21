@@ -1,0 +1,27 @@
+{
+  "name": "tokens",
+  "version": "0.0.1-alpha",
+  "description": "A very simple style dictionay",
+  "main": "index.js",
+  "type": "module",
+  "watch": {
+    "build": "./tokens/**/*.json"
+  },
+  "scripts": {
+    "build": "yarn style-dictionary build",
+    "develop": "npm-watch"
+  },
+  "keywords": [
+    "tokens",
+    "css",
+    "json"
+  ],
+  "author": "C. Egor Kloos",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-watch": "^0.11.0"
+  },
+  "dependencies": {
+    "style-dictionary": "^3.0.3"
+  }
+}

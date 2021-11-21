@@ -1,0 +1,14 @@
+{
+	"space": "var(--em, 1rem)",
+	"pad": "calc(var(--em, 1rem) * 1.5)",
+	"gap": "var(--em, 1rem)",
+
+
+
+	"viewport-min": "320px",
+	"viewport-max": "100vw",
+
+	"breakpoint-s": "calc(var(--viewport-min) * 2)",
+	"breakpoint-m": "calc(var(--viewport-min) * 3)",
+	"breakpoint-l": "calc(var(--viewport-min) * 4)"
+}
