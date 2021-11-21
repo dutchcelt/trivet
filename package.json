@@ -4,10 +4,10 @@
   "version": "2.0.0",
   "description": "A very simple dynamic loader of web components and styles",
   "scripts": {
-    "develop:components": "yarn workspace components rollup -c -w",
-    "develop:tokens": "yarn workspace tokens watch",
+    "develop:components": "yarn workspace components develop",
+    "develop:tokens": "yarn workspace tokens develop",
     "develop": "yarn develop:tokens | yarn develop:components",
-    "build:components": "yarn workspace components rollup -c",
+    "build:components": "yarn workspace components build",
     "build:tokens": "yarn workspace tokens build",
     "build": "yarn build:tokens | yarn build:components"
   },

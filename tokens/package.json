@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "yarn style-dictionary build",
-    "watch": "npm-watch"
+    "develop": "npm-watch"
   },
   "repository": "git+https://github.com/dutchcelt/trivet.git",
   "keywords": [

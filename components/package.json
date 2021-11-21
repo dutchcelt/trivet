@@ -3,7 +3,10 @@
   "version": "0.0.1-alpha",
   "description": "A very simple dynamic loader of web components and styles",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "yarn rollup -c",
+    "develop": "yarn rollup -c -w"
+  },
   "type": "module",
   "repository": "git+https://github.com/dutchcelt/trivet.git",
   "keywords": [
