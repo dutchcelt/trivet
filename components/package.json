@@ -22,6 +22,7 @@
     "@open-wc/building-rollup": "^2.0.1",
     "@web/dev-server": "^0.1.28",
     "rollup": "^2.60.0",
+    "rollup-plugin-import-map": "^2.2.2",
     "rollup-plugin-lit-css": "^3.2.1"
   },
   "dependencies": {

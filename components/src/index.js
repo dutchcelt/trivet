@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit-element';
+import { html, LitElement } from 'lit';
 import trivetProps from 'trivetProps';
 import bemMap from 'bemMap';
 import { classMap } from 'class-map';
