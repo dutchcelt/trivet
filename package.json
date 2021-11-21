@@ -3,7 +3,14 @@
   "private": true,
   "version": "2.0.0",
   "description": "A very simple dynamic loader of web components and styles",
-  "scripts": {},
+  "scripts": {
+    "develop:components": "yarn workspace components rollup -c -w",
+    "develop:tokens": "yarn workspace tokens watch",
+    "develop": "yarn develop:tokens | yarn develop:components",
+    "build:components": "yarn workspace components rollup -c",
+    "build:tokens": "yarn workspace tokens build",
+    "build": "yarn build:tokens | yarn build:components"
+  },
   "repository": "git+https://github.com/dutchcelt/trivet.git",
   "keywords": [
     "loader",

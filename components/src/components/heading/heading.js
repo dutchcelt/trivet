@@ -17,7 +17,7 @@ customElements.define(
     template() {
       let temp;
       const { tag } = this;
-      const slot = Trivet.compositions(['default', this.text || `${tag.toUpperCase()}: Heading`]);
+      const slot = Trivet.compositions(['default', this.text || `${tag.toUpperCase()}: Headings`]);
       const bem = this.bem();
       switch (tag.toLowerCase()) {
         case 'h6':
