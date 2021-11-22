@@ -1351,7 +1351,7 @@
   resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.11.0.tgz#73e289996c002d8be694cd3be0e83c46ad25e7e0"
   integrity sha512-L5O/+UPum8erOleNjKq6k58GVl3fNsEQdSOyh0EUhNmi7tHUyRuCJy1uqJiWydWcLARE5IPsMoPYMZmUGrz1JA==
 
-"@webcomponents/webcomponentsjs@^2.5.0", "@webcomponents/webcomponentsjs@^2.6.0":
+"@webcomponents/webcomponentsjs@^2.5.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.6.0.tgz#7d1674c40bddf0c6dd974c44ffd34512fe7274ff"
   integrity sha512-Moog+Smx3ORTbWwuPqoclr+uvfLnciVd6wdCaVscHPrxbmQ/IJKm3wbB7hpzJtXWjAq2l/6QMlO85aZiOdtv5Q==
@@ -1792,11 +1792,6 @@ constant-case@^3.0.4:
     tslib "^2.0.3"
     upper-case "^2.0.2"
 
-construct-style-sheets-polyfill@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/construct-style-sheets-polyfill/-/construct-style-sheets-polyfill-3.0.4.tgz#ffb7e55d3d365bc8ff047e12a406140d9596e38e"
-  integrity sha512-thhh/YOa3lVpA0dRbl/QVSD9WOdI0LSAQIhxQ6kzTlz/HOrPjUEj5hNM6L4AOCOO/HqvHi5XUvbpVmq3YdbO/w==
-
 content-disposition@~0.5.2:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/content-disposition/-/content-disposition-0.5.3.tgz#e130caf7e7279087c5616c2007d0485698984fbd"
@@ -1836,6 +1831,12 @@ core-js-compat@^3.18.0, core-js-compat@^3.19.1:
   dependencies:
     browserslist "^4.17.6"
     semver "7.0.0"
+
+core@./webcomponents/core:
+  version "0.0.1-alpha"
+  dependencies:
+    "@csstools/normalize.css" "^12.0.0"
+    lit "^2.0.2"
 
 crypto-random-string@^2.0.0:
   version "2.0.0"
@@ -2014,11 +2015,6 @@ es-module-shims@^0.4.7:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/es-module-shims/-/es-module-shims-0.4.7.tgz#1419b65bbd38dfe91ab8ea5d7b4b454561e44641"
   integrity sha512-0LTiSQoPWwdcaTVIQXhGlaDwTneD0g9/tnH1PNs3zHFFH+xoCeJclDM3rQeqF9nurXPfMKm3l9+kfPRa5VpbKg==
-
-es-module-shims@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/es-module-shims/-/es-module-shims-1.3.2.tgz#014ced2ac4c2084d4454f27c9f52f30902693cc0"
-  integrity sha512-RLE3fAzNPrwVPxKqA9kvEzTQ3hUf3OnK9TAdNfMXxrzqpM/9/bE71O8mtZViARF5t8YEOWRdqopI8EXK5d3qjA==
 
 es-to-primitive@^1.2.1:
   version "1.2.1"

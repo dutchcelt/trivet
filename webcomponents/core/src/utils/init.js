@@ -1,7 +1,5 @@
-const root = document.documentElement;
-const trvtElements = root.getElementsByTagName('*');
-
-const importTrvtElements = async (trvtList) => {
+const loadTrvtElements = async (root) => {
+  const trvtElements = root.getElementsByTagName('*');
   const trvtNodes = trvtList.addedNodes || trvtList;
   const trvtTags = [...trvtNodes].map((e) => e.tagName).filter((s) => /trvt-/i.test(s));
   new Set(trvtTags).forEach((tag) => {
@@ -12,8 +10,12 @@ const importTrvtElements = async (trvtList) => {
     }
   });
 };
-importTrvtElements(trvtElements);
+
+loadTrvtElements(document.documentElement);
+
 const config = { attributes: false, childList: true, subtree: true };
-const trvtObserver = new MutationObserver(importTrvtElements);
+const trvtObserver = new MutationObserver(loadTrvtElements);
 trvtObserver.observe(document.body, config);
 root.style.setProperty('visibility', 'visible');
+
+export { loadTrvtElements };

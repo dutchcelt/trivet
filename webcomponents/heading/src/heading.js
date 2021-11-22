@@ -1,4 +1,4 @@
-import { Trivet, html } from 'Trivet';
+import { Trivet, html } from 'core';
 import shadowStyles from './heading.css' assert { type: 'css' };
 
 customElements.define(

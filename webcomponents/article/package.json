@@ -1,0 +1,13 @@
+{
+  "name": "article",
+  "version": "0.0.1-alpha",
+  "description": "A very simple dynamic loader of web components and styles",
+  "main": "src/index.js",
+  "type": "module",
+  "author": "C. Egor Kloos",
+  "license": "MIT",
+  "homepage": "https://github.com/dutchcelt/trivet#readme",
+  "dependencies": {
+    "core": "./webcomponents/core"
+  }
+}
