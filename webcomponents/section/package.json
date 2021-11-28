@@ -1,6 +1,6 @@
 {
   "name": "trivet-section",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A very simple dynamic loader of web components and styles",
   "main": "src/section.js",
   "type": "module",
