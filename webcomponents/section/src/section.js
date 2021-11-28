@@ -1,7 +1,7 @@
+import shadowStyles from './section.css';
 import { Trivet, html } from 'trivet-core';
-import shadowStyles from './styles.css';
 
-export class TrvtPage extends Trivet {
+export class TrvtSection extends Trivet {
   constructor() {
     super();
   }
@@ -9,11 +9,10 @@ export class TrvtPage extends Trivet {
 
   render() {
     return html`
-      <slot name="navigation"></slot>
       <slot name="header"></slot>
       <slot name="content"></slot>
       <slot name="footer"></slot>
     `;
   }
 }
-customElements.define('trvt-page', TrvtPage);
+customElements.define('trvt-page', TrvtSection);

@@ -2,12 +2,13 @@
   "name": "trivet",
   "private": true,
   "version": "2.0.0",
+  "type": "module",
   "description": "A very simple dynamic loader of web components and styles",
   "scripts": {
-    "develop:components": "yarn workspace webcomponents rollup -c -w",
+    "develop:components": "yarn workspace webcomponents rollup -c ./configs/rollup.config.js -w",
     "develop:tokens": "yarn workspace designtokens develop",
     "develop": "yarn develop:tokens | yarn develop:components",
-    "build:components": "yarn workspace webcomponents rollup -c",
+    "build:components": "yarn workspace webcomponents rollup -c ./configs/rollup.config.js",
     "build:tokens": "yarn workspace designtokens build",
     "build": "yarn build:tokens | yarn build:components"
   },
@@ -32,8 +33,8 @@
   "devDependencies": {
     "@open-wc/building-rollup": "^2.0.1",
     "@web/dev-server": "^0.1.28",
-    "rollup": "^2.60.0",
-    "rollup-plugin-import-map": "^2.2.2",
+    "acorn-import-assertions": "^1.8.0",
+    "rollup": "^2.60.1",
     "rollup-plugin-lit-css": "^3.2.1"
   }
 }

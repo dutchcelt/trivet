@@ -1,8 +1,8 @@
 {
-  "name": "trivet-dropdown",
+  "name": "trivet-section",
   "version": "0.0.1",
   "description": "A very simple dynamic loader of web components and styles",
-  "main": "src/dropdown.js",
+  "main": "src/section.js",
   "type": "module",
   "author": "C. Egor Kloos",
   "license": "MIT",

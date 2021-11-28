@@ -1,13 +1,13 @@
 {
-  "name": "page",
-  "version": "0.0.1-alpha",
+  "name": "trivet-page",
+  "version": "0.0.1",
   "description": "A very simple dynamic loader of web components and styles",
-  "main": "src/index.js",
+  "main": "src/page.js",
   "type": "module",
   "author": "C. Egor Kloos",
   "license": "MIT",
   "homepage": "https://github.com/dutchcelt/trivet#readme",
   "dependencies": {
-    "core": "./webcomponents/core"
+    "trivet-core": "^0.0.3"
   }
 }

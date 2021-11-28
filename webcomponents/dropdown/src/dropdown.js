@@ -1,6 +1,6 @@
-import { Trivet, html } from 'core';
+import { Trivet, html } from 'trivet-core';
 
-import shadowStyles from './dropdown.css' assert { type: 'css' };
+import shadowStyles from './dropdown.css';
 
 export class TrvtDropdown extends Trivet {
   constructor() {

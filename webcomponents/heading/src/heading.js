@@ -1,5 +1,5 @@
-import { Trivet, html } from 'core';
-import shadowStyles from './heading.css' assert { type: 'css' };
+import { Trivet, html } from 'trivet-core';
+import shadowStyles from './heading.css';
 
 customElements.define(
   'trvt-heading',
@@ -42,3 +42,4 @@ customElements.define(
     }
   }
 );
+customElements.define('trvt-heading', TrvtHeading);

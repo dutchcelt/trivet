@@ -2,9 +2,10 @@ import { css, html, LitElement } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import trivetProps from './utils/trivetProps.js';
 import bemMap from './utils/bemMap.js';
+import { loadTrvtElements } from './utils/init.js';
 
-import trvtStyles from './trivet.css' assert { type: 'css' };
-import normalize from '@csstools/normalize.css' assert { type: 'css' };
+import trvtStyles from './trivet.css';
+import normalize from '@csstools/normalize.css';
 
 class Trivet extends LitElement {
   constructor() {
@@ -56,4 +57,4 @@ class Trivet extends LitElement {
     return html`${args.map(([slot, content]) => html` <slot name="${slot}">${html`${content || ''}`}</slot> `)}`;
   }
 }
-export { Trivet, html, css, classMap };
+export { Trivet, html, css, classMap, loadTrvtElements };

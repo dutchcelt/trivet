@@ -1,5 +1,5 @@
-import shadowStyles from './article.css' assert { type: 'css' };
-import { Trivet, html } from 'core';
+import shadowStyles from './article.css';
+import { Trivet, html } from 'trivet-core';
 
 export class TrvtArticle extends Trivet {
   constructor() {
@@ -16,3 +16,4 @@ export class TrvtArticle extends Trivet {
     </article>`;
   }
 }
+customElements.define('trvt-article', TrvtArticle);
