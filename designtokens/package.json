@@ -1,6 +1,6 @@
 {
-  "name": "trivet-tokens",
-  "version": "0.0.1",
+  "name": "@trvt/tokens",
+  "version": "0.0.2",
   "description": "A very simple style dictionay",
   "main": "index.js",
   "type": "module",

@@ -1,6 +1,6 @@
 {
-  "name": "trivet-dropdown",
-  "version": "0.0.2",
+  "name": "@trvt/dropdown",
+  "version": "0.0.3",
   "description": "A very simple dynamic loader of web components and styles",
   "main": "src/dropdown.js",
   "type": "module",
@@ -8,6 +8,6 @@
   "license": "MIT",
   "homepage": "https://github.com/dutchcelt/trivet#readme",
   "dependencies": {
-    "trivet-core": "^0.0.3"
+    "@trvt/core": "^0.0.5"
   }
 }

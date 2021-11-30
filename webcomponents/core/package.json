@@ -1,6 +1,6 @@
 {
-  "name": "trivet-core",
-  "version": "0.0.4",
+  "name": "@trvt/core",
+  "version": "0.0.5",
   "description": "A very simple dynamic loader of web components and styles",
   "main": "src/core.js",
   "type": "module",
