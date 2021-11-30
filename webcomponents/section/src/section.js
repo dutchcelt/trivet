@@ -15,4 +15,4 @@ export class TrvtSection extends Trivet {
     `;
   }
 }
-customElements.define('trvt-page', TrvtSection);
+customElements.define('trvt-section', TrvtSection);

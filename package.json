@@ -5,9 +5,9 @@
   "type": "module",
   "description": "A very simple dynamic loader of web components and styles",
   "scripts": {
-    "develop:components": "yarn workspace webcomponents rollup -c ./configs/rollup.config.js -w",
-    "develop:tokens": "yarn workspace designtokens develop",
-    "develop": "yarn develop:tokens | yarn develop:components",
+    "develop:components": "yarn rollup -c ./configs/rollup.config.js -w",
+    "develop:tokens": "yarn workspace trivet-tokens build",
+    "develop": "yarn develop:tokens && yarn develop:components & wds --config ./configs/web-dev-server.config.js --open",
     "build:components": "yarn workspace webcomponents rollup -c ./configs/rollup.config.js",
     "build:tokens": "yarn workspace designtokens build",
     "build": "yarn build:tokens | yarn build:components"
@@ -31,8 +31,10 @@
     "designtokens"
   ],
   "devDependencies": {
+    "@changesets/cli": "^2.18.1",
     "@open-wc/building-rollup": "^2.0.1",
     "@web/dev-server": "^0.1.28",
+    "@web/rollup-plugin-html": "^1.10.1",
     "acorn-import-assertions": "^1.8.0",
     "rollup": "^2.60.1",
     "rollup-plugin-lit-css": "^3.2.1"

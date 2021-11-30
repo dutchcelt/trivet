@@ -14,7 +14,7 @@ for (const file of files) {
 import { createBasicConfig } from '@open-wc/building-rollup';
 
 const baseConfig = createBasicConfig({
-  outputDir: './dist/components',
+  outputDir: './dist',
   legacyBuild: false,
   developmentMode: process.env.ROLLUP_WATCH === 'true',
   injectServiceWorker: false,
@@ -22,12 +22,13 @@ const baseConfig = createBasicConfig({
 });
 
 import litcss from 'rollup-plugin-lit-css';
+import html from '@web/rollup-plugin-html';
 
 export default merge(baseConfig, {
   input: [...components],
   output: {
-    entryFileNames: `[name].js`,
-    chunkFileNames: `[name].js`,
+    entryFileNames: `webcomponents/[name].js`,
+    chunkFileNames: `webcomponents/[name].js`,
   },
-  plugins: [litcss({ uglify: true })],
+  plugins: [html({ input: ['./markup/*.html'] }), litcss({ uglify: true })],
 });

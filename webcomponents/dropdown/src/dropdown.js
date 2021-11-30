@@ -44,3 +44,4 @@ export class TrvtDropdown extends Trivet {
     };
   }
 }
+customElements.define('trvt-dropdown', TrvtDropdown);
