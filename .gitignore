@@ -1,8 +1,23 @@
+# Editors / IDE
 .idea
-.cache
-node_modules
+.nova
+
+# npm / node
+node_modules/
+
+# loval configs
+.yarnrc
+.gitignore
+
+
+# Builds
 temp
 dist
 build
+
+# logs
 *.log
+yarn-error.log
+
+# OS files
 .DS_Store
