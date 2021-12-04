@@ -1628,7 +1628,7 @@
   dependencies:
     "@web/polyfills-loader" "^1.1.0"
 
-"@webcomponents/shadycss@^1.10.2":
+"@webcomponents/shadycss@^1.10.2", "@webcomponents/shadycss@^1.11.0":
   version "1.11.0"
   resolved "http://liffey.local:4873/@webcomponents%2fshadycss/-/shadycss-1.11.0.tgz#73e289996c002d8be694cd3be0e83c46ad25e7e0"
   integrity sha512-L5O/+UPum8erOleNjKq6k58GVl3fNsEQdSOyh0EUhNmi7tHUyRuCJy1uqJiWydWcLARE5IPsMoPYMZmUGrz1JA==
