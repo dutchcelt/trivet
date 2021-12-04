@@ -1,5 +1,5 @@
 import shadowStyles from './section.css';
-import { Trivet, html } from 'trivet-core';
+import { Trivet, html } from '@trvt/core';
 
 export class TrvtSection extends Trivet {
   constructor() {

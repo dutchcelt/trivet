@@ -1,4 +1,4 @@
-import { Trivet, html } from 'trivet-core';
+import { Trivet, html } from '@trvt/core';
 
 import shadowStyles from './dropdown.css';
 

@@ -1,1 +1,1 @@
-export { Trivet, css, html, classMap } from './src/core.js';
+export { Trivet, html, css, classMap, loadTrvtElements } from './src/core.js';

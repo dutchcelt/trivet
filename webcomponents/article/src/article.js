@@ -1,5 +1,5 @@
 import shadowStyles from './article.css';
-import { Trivet, html } from 'trivet-core';
+import { Trivet, html } from '@trvt/core';
 
 export class TrvtArticle extends Trivet {
   constructor() {
@@ -9,7 +9,7 @@ export class TrvtArticle extends Trivet {
 
   render() {
     return html`<article>
-      <slot name="header"></slot>
+      <slot name="header">test haha 3asdas</slot>
       <slot name="content"></slot>
       <slot name="default"></slot>
       <slot name="footer"></slot>
