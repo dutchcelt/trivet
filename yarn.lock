@@ -711,7 +711,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-runtime@^7.11.0":
+"@babel/plugin-transform-runtime@^7.11.0", "@babel/plugin-transform-runtime@^7.16.4":
   version "7.16.4"
   resolved "http://liffey.local:4873/@babel%2fplugin-transform-runtime/-/plugin-transform-runtime-7.16.4.tgz#f9ba3c7034d429c581e1bd41b4952f3db3c2c7e8"
   integrity sha512-pru6+yHANMTukMtEZGC4fs7XPwg35v8sj5CIEmE+gEkFljFiVJxEWxx/7ZDkTK+iZRYo1bFXBtfIN95+K3cJ5A==
@@ -865,7 +865,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.10.4", "@babel/runtime@^7.11.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.4", "@babel/runtime@^7.11.2", "@babel/runtime@^7.16.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
   version "7.16.3"
   resolved "http://liffey.local:4873/@babel%2fruntime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
   integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
@@ -1621,14 +1621,14 @@
     estree-walker "^2.0.2"
     magic-string "^0.25.7"
 
-"@web/rollup-plugin-polyfills-loader@^1.1.0":
+"@web/rollup-plugin-polyfills-loader@^1.1.0", "@web/rollup-plugin-polyfills-loader@^1.1.1":
   version "1.1.1"
   resolved "http://liffey.local:4873/@web%2frollup-plugin-polyfills-loader/-/rollup-plugin-polyfills-loader-1.1.1.tgz#7a1793b4603475d7905e3f5c07b8bac99fc7305c"
   integrity sha512-RAtbfk7/KMTurOsofWGhfxHKBUlZ3kdKYbKPsY2YMZyFWa1tPh5nkmjJUJOw8PEEPlMcIln8AhmlL7QW4yOuXQ==
   dependencies:
     "@web/polyfills-loader" "^1.1.0"
 
-"@webcomponents/shadycss@^1.10.2", "@webcomponents/shadycss@^1.11.0":
+"@webcomponents/shadycss@^1.10.2":
   version "1.11.0"
   resolved "http://liffey.local:4873/@webcomponents%2fshadycss/-/shadycss-1.11.0.tgz#73e289996c002d8be694cd3be0e83c46ad25e7e0"
   integrity sha512-L5O/+UPum8erOleNjKq6k58GVl3fNsEQdSOyh0EUhNmi7tHUyRuCJy1uqJiWydWcLARE5IPsMoPYMZmUGrz1JA==
@@ -2195,6 +2195,11 @@ constant-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
     upper-case "^2.0.2"
+
+construct-style-sheets-polyfill@3.0.4:
+  version "3.0.4"
+  resolved "http://liffey.local:4873/construct-style-sheets-polyfill/-/construct-style-sheets-polyfill-3.0.4.tgz#ffb7e55d3d365bc8ff047e12a406140d9596e38e"
+  integrity sha512-thhh/YOa3lVpA0dRbl/QVSD9WOdI0LSAQIhxQ6kzTlz/HOrPjUEj5hNM6L4AOCOO/HqvHi5XUvbpVmq3YdbO/w==
 
 content-disposition@~0.5.2:
   version "0.5.3"

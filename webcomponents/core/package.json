@@ -9,9 +9,8 @@
   "homepage": "https://github.com/dutchcelt/trivet#readme",
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
+    "construct-style-sheets-polyfill": "3.0.4",
     "lit": "^2.0.2"
   },
-  "devDependencies": {
-    "@webcomponents/shadycss": "^1.11.0"
-  }
+  "devDependencies": {}
 }

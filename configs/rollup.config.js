@@ -1,13 +1,16 @@
-import merge from 'deepmerge';
+//import merge from 'deepmerge';
 import fs from 'fs';
 import path from 'path';
+//import regeneratorRuntime from "regenerator-runtime";
+
 
 import litcss from 'rollup-plugin-lit-css';
 import html from '@web/rollup-plugin-html';
-//import { babel } from '@rollup/plugin-babel';
-//import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { babel } from '@rollup/plugin-babel';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
-//import commonjs from '@rollup/plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
+import polyfillsLoader from '@web/rollup-plugin-polyfills-loader';
 
 const components = [];
 const componentsPath = path.resolve(process.cwd(), 'webcomponents');
@@ -19,27 +22,41 @@ for (const file of files) {
   stats.isDirectory() && components.push(path.resolve(folderPath, 'src', `${file}.js`));
 }
 
-/* export default {
+export default {
   input: [...components],
   preserveModules: false,
-  output: {
+output:
+  {
     format: 'system',
+    chunkFileNames: '[name].js',
+    entryFileNames: '[name].js',
     dir: './dist',
-    entryFileNames: `[name].js`,
   },
-  plugins: [
-    //html(),
-    commonjs(),
-    nodeResolve({
-      browser: true,
-    }),
-    //babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' }),
-    litcss({ uglify: true }),
-    terser(),
-    html({ input: ['./markup/index.html'], flattenOutput: true }),
-  ],
-};  */
 
+  plugins: [
+    commonjs(),
+    nodeResolve(),
+   //babel(),
+
+    // polyfillsLoader({
+    //    polyfills: {
+    //      regeneratorRuntime:true,
+    //      esModuleShims:true,
+    //      coreJs: true,
+    //      systemjs: true,
+    //      fetch: true,
+    //      abortController: true,
+    //      webcomponents: true,
+    //      shadyCssCustomStyle:true
+    //    },
+    //  }),
+    babel({babelHelpers: 'runtime'}),
+    litcss({ uglify: false }),
+
+// terser()
+  ],
+};
+/*
 import { createBasicConfig } from '@open-wc/building-rollup';
 
 const baseConfig = createBasicConfig({
@@ -51,16 +68,25 @@ const baseConfig = createBasicConfig({
   preserveModules: true,
 });
 
-//baseConfig.output[0].sourcemap = true;
-//baseConfig.output[1].sourcemap = true;
+baseConfig.output[0].sourcemap = true;
+baseConfig.output[1].sourcemap = true;
 
 export default merge(baseConfig, {
   input: [...components],
-  output: [{ dir: './dist' }, { format: 'system', dir: './dist/ie11', entryFileNames: `[name].js` }],
   plugins: [
     //html(),
     html({ input: ['./markup/index.html'] }),
+    polyfillsLoader({
+      polyfills: {
+        coreJs: true,
+        promise: true,
+        systemjs:true,
+        fetch: true,
+        webcomponents: true,
+      },
+    }),
+
     litcss({ uglify: true }),
     terser(),
   ],
-});
+}); */

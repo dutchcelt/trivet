@@ -5,7 +5,7 @@ const loadTrvtElements = async (root = document) => {
 
   new Set(trvtTags.map((t) => t.split('-')[1].toLowerCase())).forEach((tag) => {
     try {
-      import('./' + tag + '.js');
+      import('/' + tag + '.js');
     } catch (e) {
       console.error(e, `Can not find ${tag}`);
     }

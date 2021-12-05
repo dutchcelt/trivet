@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import trivetProps from './utils/trivetProps.js';
 import bemMap from './utils/bemMap.js';
 import { loadTrvtElements } from './utils/init.js';
-import * as shadyCss from '@webcomponents/shadycss';
+import 'construct-style-sheets-polyfill';
 
 import trvtStyles from './trivet.css';
 import normalize from '@csstools/normalize.css';
@@ -58,4 +58,4 @@ class Trivet extends LitElement {
     return html`${args.map(([slot, content]) => html` <slot name="${slot}">${html`${content || ''}`}</slot> `)}`;
   }
 }
-export { Trivet, html, css, classMap, loadTrvtElements, shadyCss };
+export { Trivet, html, css, classMap, loadTrvtElements };
