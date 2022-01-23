@@ -6,5 +6,8 @@
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
 	"license": "MIT",
-	"homepage": "https://github.com/dutchcelt/trivet#readme"
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"dependencies": {
+		"@trvt/core": "^0.0.5"
+	}
 }

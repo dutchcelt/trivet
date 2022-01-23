@@ -12,5 +12,8 @@
 		"components"
 	],
 	"author": "C. Egor Kloos",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"@trvt/core": "^0.0.5"
+	}
 }

@@ -1,16 +1,19 @@
 {
-  "name": "@trvt/navigation",
-  "version": "0.0.1",
-  "description": "Navigation component for the Trivet Design System",
-  "main": "index.js",
-  "type": "modules",
-  "scripts": {
-    "test": "test"
-  },
-  "keywords": [
-    "web",
-    "components"
-  ],
-  "author": "C. Egor Kloos",
-  "license": "MIT"
+	"name": "@trvt/navigation",
+	"version": "0.0.1",
+	"description": "Navigation component for the Trivet Design System",
+	"main": "index.js",
+	"type": "modules",
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"web",
+		"components"
+	],
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"dependencies": {
+		"@trvt/core": "^0.0.5"
+	}
 }
