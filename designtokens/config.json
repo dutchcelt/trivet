@@ -1,35 +1,38 @@
 {
-  "source": ["tokens/**/*.json"],
-  "platforms": {
-    "css": {
-      "transformGroup": "css",
-      "buildPath": "build/css/",
-      "files": [
-        {
-          "destination": "trvt_tokens.css",
-          "format": "css/variables"
-        }
-      ]
-    },
-    "js": {
-      "transformGroup": "js",
-      "buildPath": "build/js/",
-      "files": [
-        {
-          "destination": "trvt_tokens.js",
-          "format": "javascript/es6"
-        }
-      ]
-    },
-    "json": {
-      "transformGroup": "js",
-      "buildPath": "build/json/",
-      "files": [
-        {
-          "destination": "trvt_tokens.json",
-          "format": "json"
-        }
-      ]
-    }
-  }
+	"source": ["tokens/**/*.json"],
+	"platforms": {
+		"css": {
+			"prefix": "trvt",
+			"transformGroup": "css",
+			"buildPath": "build/css/",
+			"files": [
+				{
+					"destination": "trvt_tokens.css",
+					"format": "css/variables"
+				}
+			]
+		},
+		"js": {
+			"prefix": "trvt",
+			"transformGroup": "js",
+			"buildPath": "build/js/",
+			"files": [
+				{
+					"destination": "trvt_tokens.js",
+					"format": "javascript/es6"
+				}
+			]
+		},
+		"json": {
+			"prefix": "trvt",
+			"transformGroup": "js",
+			"buildPath": "build/json/",
+			"files": [
+				{
+					"destination": "trvt_tokens.json",
+					"format": "json"
+				}
+			]
+		}
+	}
 }
