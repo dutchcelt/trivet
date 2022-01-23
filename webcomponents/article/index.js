@@ -1,1 +1,1 @@
-import { TrvtArticle } from './src/article.js';
+export { TrvtArticle } from './src/article.js';

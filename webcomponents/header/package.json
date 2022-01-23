@@ -1,0 +1,16 @@
+{
+	"name": "@trvt/header",
+	"version": "0.0.3",
+	"description": "Header component for the Trivet Design System",
+	"main": "index.js",
+	"type": "modules",
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"web",
+		"components"
+	],
+	"author": "C. Egor Kloos",
+	"license": "MIT"
+}

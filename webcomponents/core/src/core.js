@@ -1,61 +1,38 @@
-import { css, html, LitElement } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
-import trivetProps from './utils/trivetProps.js';
-import bemMap from './utils/bemMap.js';
-import { loadTrvtElements } from './utils/init.js';
-import 'construct-style-sheets-polyfill';
+import { trvtTokensFontfaces, trvtTokensCSS } from '@trvt/designtokens';
 
-import trvtStyles from './trivet.css';
-import normalize from '@csstools/normalize.css';
+import normalise from '../assets/styles/normalize.css' assert { type: 'css' };
+import coreCSS from './core.css' assert { type: 'css' };
+import trvtIcons from '../assets/trvt-icons-v1.0/style.css' assert { type: 'css' };
 
-class Trivet extends LitElement {
-  constructor() {
-    super();
-    this.tag = '';
-    this.hidden = false;
-    this.tokens = {};
-  }
-  static styles = [normalize, trvtStyles];
-  bem(element, modifier) {
-    return classMap(this.bemClassMap({ element, modifier }));
-  }
+const { base, baseItalic, display, gui, icons } = trvtTokensFontfaces.font.face;
 
-  bemClassMap(args) {
-    const opts = { ...args };
-    const BEM = {
-      block: this.block || opts.block || '',
-      element: this.element || opts.element || '',
-      modifier: opts.element ? opts.modifier : this.modifier || '',
-    };
-    return bemMap(BEM);
-  }
+base && loadFont(base);
+baseItalic && loadFont(baseItalic);
+display && loadFont(display);
+gui && loadFont(gui);
+icons && loadFont(icons);
 
-  composeTrivetStyles(styles, tokens) {
-    //tokens && this.designTokens(tokens, this.tokens);
-    // this.shadowRoot.adoptedStyleSheets = [].concat([normalize, trvtStyles], styles);
-  }
-
-  designTokens(...tokenArgs) {
-    tokenArgs.forEach((tokens) => {
-      Object.entries(tokens).forEach(([property, value]) => {
-        try {
-          const parsedToken = new CSSVariableReferenceValue(`--${property}`, new CSSUnparsedValue([value]));
-          this.attributeStyleMap.set(parsedToken.variable, parsedToken.fallback);
-        } catch (e) {
-          this.style.setProperty(`--${property}`, value);
-        }
-      });
-    });
-  }
-
-  static get properties() {
-    return {
-      ...trivetProps,
-    };
-  }
-
-  static compositions(...args) {
-    return html`${args.map(([slot, content]) => html` <slot name="${slot}">${html`${content || ''}`}</slot> `)}`;
-  }
+async function loadFont({ family, filename, path, style, weight, display }) {
+	const valid = [family, filename, path, style, weight].some((f) => !!f.value && typeof f.value === 'string');
+	if (valid) {
+		const url = new URL(`${path.value}${filename.value}`, import.meta.url);
+		if (url) {
+			const font = new FontFace(family.value, `url(${url})`, {
+				style: style.value,
+				weight: weight.value,
+				display: display.value || auto,
+			});
+			await font.load();
+			document.fonts.add(font);
+		} else {
+			new Error("Can't generate a URL");
+		}
+	} else {
+		new Error('Missing font face information. Please check the token values.');
+	}
 }
-export { Trivet, html, css, classMap, loadTrvtElements };
+
+const styles = [normalise, coreCSS, trvtIcons];
+document.adoptedStyleSheets = [...styles];
+
+export { loadFont, styles };

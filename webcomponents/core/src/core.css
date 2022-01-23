@@ -1,0 +1,212 @@
+/* 
+	COLOR SWATCH:	
+	dark #29282D
+	#625b60
+	#6868a7
+	#7a6562
+ */
+:root {
+	--trvt-colors-base-light: #f9ece9;
+	--trvt-colors-base-dark: #29282d;
+	--trvt-colors-base-mid: #625b60;
+	--trvt-colors-base-text: var(--trvt-colors-base-dark);
+
+	--trvt-fonts-base-family: Bitter, sans-serif;
+	--trvt-fonts-gui-family: Rubik, sans-serif;
+	--trvt-fonts-display-family: 'Assistant', sans-serif;
+
+	--trvt-theme-color-brand: orangered;
+	--trvt-theme-color-logo: var(--trvt-theme-color-brand);
+	--trvt-theme-color-primary: #6868a7;
+	--trvt-theme-color-secondary: #6868a7;
+	--trvt-theme-color-tertiary: #7a6562;
+}
+
+/*	###################################################################### */
+/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
+
+/* 	Parent Layout */
+/* 	Layout */
+/* 	Box Model */
+/* 	Positioning */
+/* 	Display */
+
+/*	###################################################################### */
+
+html {
+	margin: 0;
+	font-size: 100%;
+	background: var(--trvt-colors-base-dark);
+}
+body {
+	/* 	Layout */
+	display: flex;
+	flex-direction: column;
+	justify-items: flex-start;
+
+	/* 	Box Model */
+	min-height: min(calc(100vh - 2rem), 100vh);
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100ch;
+
+	/* 	Display */
+	font-family: var(--trvt-fonts-base-family);
+	font-size: 1rem;
+	background: var(--trvt-colors-base-light);
+	color: var(--trvt-colors-base-text);
+	letter-spacing: 0.02rem;
+	line-height: 1.6;
+}
+
+/*	################################################################ */
+/*	Page layout														 */
+
+body > *:is(header, nav, main) {
+	flex: none;
+}
+body > footer {
+	flex: auto;
+}
+
+body > *:is(header, main, footer) {
+	padding: 0 clamp(2rem, calc((100vw - 80ch) / 2), 10ch);
+}
+
+*:focus:not(: focus-visible) {
+	outline-color: transparent;
+}
+
+/*	################################################################ */
+
+body > * > nav {
+	position: relative;
+	padding-left: 1rem;
+	color: var(--trvt-colors-base-light);
+	background: var(--trvt-colors-base-dark);
+}
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+	padding: 0 2rem;
+	color: var(--trvt-colors-base-light);
+	background-color: var(--trvt-theme-color-primary);
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 50%),
+		url('/templates/src/keyboard-purple.jpg');
+	border-bottom: 5px solid var(--trvt-theme-color-primary);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 20rem;
+}
+
+main {
+	padding: 0 2rem;
+	background: var(--trvt-colors-base-light);
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	color: var(--trvt-colors-base-light);
+	background: var(--trvt-colors-base-mid);
+	text-align: center;
+}
+.subtext {
+	font-family: var(--trvt-fonts-gui-family);
+	font-variation-settings: 'wght' 300;
+	font-size: 0.8rem;
+	line-height: 1.4;
+}
+
+.trvt-brand-logo {
+	color: var(--trvt-theme-color-logo);
+	rotate: 0.25turn;
+	display: inline-block;
+}
+header .trvt-brand-mark {
+	position: absolute;
+	left: 0;
+	top: calc((100% - 3.5rem) / 2);
+	font-size: 1.2rem;
+	color: var(--trvt-theme-color-primary);
+}
+
+header h1 {
+	font-family: var(--trvt-fonts-gui-family);
+	text-transform: uppercase;
+	font-variation-settings: 'wght' 400;
+}
+
+footer .trvt-brand-logo {
+	--trvt-theme-color-logo: var(--trvt-colors-base-light);
+}
+footer .trvt-brand-mark {
+	opacity: 0.2;
+}
+
+h1 {
+	font-family: var(--trvt-fonts-display-family);
+	font-variation-settings: 'wght' 600;
+	line-height: 1.2;
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-family: var(--trvt-fonts-display-family);
+	font-size: 1.75rem;
+	font-variation-settings: 'wght' 600;
+}
+
+h3 {
+	font-family: var(--trvt-fonts-display-family);
+	font-size: 1.25rem;
+	font-variation-settings: 'wght' 500;
+}
+
+h5 {
+	font-family: var(--trvt-fonts-display-family);
+	font-size: 1.25rem;
+	font-variation-settings: 'wght' 400;
+}
+h6 {
+	font-family: var(--trvt-fonts-display-family);
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-variation-settings: 'wght' 600;
+}
+
+button {
+	font-family: var(--trvt-fonts-gui-family);
+	padding: 0.33rem 1rem;
+	font-size: 1.2rem;
+	line-height: 1.1;
+	color: darkslateblue;
+	background: transparent;
+	letter-spacing: 0.05rem;
+	text-transform: capitalize;
+	font-variation-settings: 'wght' 500;
+	border: 0.18rem solid darkslateblue;
+	border-radius: 2rem;
+}
+.trvt-brand-mark {
+	padding: 1rem;
+	font-family: var(--trvt-fonts-gui-family);
+	color: var(--trvt-colors-base-light);
+	font-variation-settings: 'wght' 400;
+	text-decoration: none;
+	font-size: 1.2rem;
+	//text-transform: capitalize;
+	letter-spacing: 0.05rem;
+	display: inline-block;
+}
+
+trvt-aside {
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+	gap: 1rem;
+}

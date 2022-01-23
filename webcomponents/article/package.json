@@ -1,13 +1,10 @@
 {
-  "name": "@trvt/article",
-  "version": "0.0.3",
-  "description": "A very simple dynamic loader of web components and styles",
-  "main": "src/article.js",
-  "type": "module",
-  "author": "C. Egor Kloos",
-  "license": "MIT",
-  "homepage": "https://github.com/dutchcelt/trivet#readme",
-  "dependencies": {
-    "@trvt/core": "^0.0.5"
-  }
+	"name": "@trvt/article",
+	"version": "0.0.3",
+	"type": "module",
+	"main": "index.js",
+	"description": "A very simple web component base class",
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme"
 }

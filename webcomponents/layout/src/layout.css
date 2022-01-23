@@ -1,0 +1,41 @@
+:host {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 0 2rem;
+	witdh: clamp(374px, clamp(100vw - 80ch), 1280px);
+}
+/* 
+<slot name="navigation"></slot>
+<slot name="header"></slot>
+<slot name="main"></slot>
+<slot name="sidebar"></slot>
+<slot name="footer"></slot> 
+
+*/
+::slotted([slot]) {
+}
+::slotted([slot='navigation']) {
+	grid-column: 1 / -1;
+}
+
+::slotted([slot='header']) {
+	grid-column: 1 / -1;
+}
+
+::slotted([slot='main']) {
+}
+:host([type='page']) ::slotted([slot='main']) {
+	grid-column: 1 / -1;
+}
+
+:host([type='article']) ::slotted([slot='main']) {
+	grid-column: 1 / -2;
+}
+:slotted([slot='main']) > ::slotted([slot='sidebar']) {
+	grid-column: -2 / -1;
+}
+
+::slotted([slot='footer']) {
+	grid-column: 1 / -1;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@trvt/templates",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "description": "Trivet, a system for building webpages",
+  "author": "C. Egor Kloos",
+  "license": "MIT",
+  "homepage": "https://github.com/dutchcelt/trivet#readme"
+}

@@ -1,0 +1,46 @@
+{
+	"font": {
+		"face": {
+			"base": {
+				"family": { "value": "Bitter", "comment": "Only use with JavaScript" },
+				"path": { "value": "/fonts/vendors/googlefonts/Bitter/" },
+				"filename": { "value": "Bitter-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "normal" },
+				"weight": { "value": "normal" }
+			},
+			"baseItalic": {
+				"family": { "value": "Bitter", "comment": "Only use with JavaScript" },
+				"path": { "value": "/fonts/vendors/googlefonts/Bitter/" },
+				"filename": { "value": "Bitter-Italic-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "italic" },
+				"weight": { "value": "normal" }
+			},
+			"display": {
+				"family": { "value": "Rubik", "comment": "Only use with JavaScript" },
+				"path": { "value": "/fonts/vendors/googlefonts/Rubik/" },
+				"filename": { "value": "Rubik-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "normal" },
+				"weight": { "value": "bold" }
+			},
+			"gui": {
+				"family": { "value": "Assistant", "comment": "Only use with JavaScript" },
+				"path": { "value": "/fonts/vendors/googlefonts/Assistant/" },
+				"filename": { "value": "Assistant-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "normal" },
+				"weight": { "value": "normal" }
+			},
+			"icons": {
+				"family": { "value": "trvt-icons", "comment": "Only use with JavaScript" },
+				"path": { "value": "/webcomponents/core/assets/trvt-icons-v1.1/fonts/" },
+				"filename": { "value": "trvt-icons.woff" },
+				"display": { "value": "block" },
+				"style": { "value": "normal" },
+				"weight": { "value": "normal" }
+			}
+		}
+	}
+}

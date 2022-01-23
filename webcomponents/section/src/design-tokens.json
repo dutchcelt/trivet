@@ -1,6 +1,0 @@
-{
-	"breakpoint": "var(--breakpoint-s)",
-	"template-columns": "repeat(auto-fit,minmax(clamp(25% - var(--gap), (var(--breakpoint) - 100%) * 999, 100%), 1fr))",
-	"template-rows": "auto",
-	"background-color": "var(--light)"
-}

@@ -1,19 +1,25 @@
-import shadowStyles from './article.css';
-import { Trivet, html } from '@trvt/core';
+import { styles } from '@trvt/core';
+import articleCSS from './article.css' assert { type: 'css' };
 
-export class TrvtArticle extends Trivet {
-  constructor() {
-    super();
-  }
-  static styles = [Trivet.styles, shadowStyles];
-
-  render() {
-    return html`<article>
-      <slot name="header">test haha 3asdas</slot>
-      <slot name="content"></slot>
-      <slot name="default"></slot>
-      <slot name="footer"></slot>
-    </article>`;
-  }
+export class TrvtArticle extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({ mode: 'open' });
+		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
+	}
+	connectedCallback() {
+		this.shadowRoot.appendChild(this.render());
+	}
+	render() {
+		return document.createRange().createContextualFragment(`
+			<article class="trvt-article">
+        <h2><slot name="title"></slot></h2>
+        <p class="trvt-intro"><slot name="intro"></slot></p>
+        <h3><slot name="subhead"></slot></h3>
+        <div><slot name="content"></slot></div>
+        <div><slot name="footer"></slot></div>
+			</article>
+		`);
+	}
 }
 customElements.define('trvt-article', TrvtArticle);

@@ -1,27 +1,16 @@
 {
-  "name": "@trvt/tokens",
-  "version": "0.0.2",
-  "description": "A very simple style dictionay",
-  "main": "index.js",
-  "type": "module",
-  "watch": {
-    "build": "./tokens/**/*.json"
-  },
-  "scripts": {
-    "build": "yarn style-dictionary build",
-    "develop": "npm-watch"
-  },
-  "keywords": [
-    "tokens",
-    "css",
-    "json"
-  ],
-  "author": "C. Egor Kloos",
-  "license": "MIT",
-  "devDependencies": {
-    "npm-watch": "^0.11.0"
-  },
-  "dependencies": {
-    "style-dictionary": "^3.0.3"
-  }
+	"name": "@trvt/designtokens",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "index.js",
+	"description": "Trivet, a system for building webpages",
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"scripts": {
+		"build": "style-dictionary build"
+	},
+	"devDependencies": {
+		"style-dictionary": "^3.0.3"
+	}
 }

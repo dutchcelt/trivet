@@ -1,56 +1,24 @@
 {
-  "name": "@trvt/root",
-  "private": true,
-  "version": "2.0.1",
-  "type": "module",
-  "description": "A very simple dynamic loader of web components and styles",
-  "scripts": {
-    "develop:components": "yarn rollup -c ./configs/rollup.config.js -w",
-    "develop:tokens": "yarn workspace @trvt/tokens build",
-    "develop:server": "wds --config ./configs/web-dev-server.config.js",
-    "develop": "yarn develop:tokens && yarn develop:components | yarn develop:server -w",
-    "build:components": "yarn rollup -c ./configs/rollup.config.js",
-    "build:tokens": "yarn workspace @trvt/tokens build",
-    "build": "yarn build:tokens | yarn build:components",
-    "test": "echo 'Imagine a test running. Like, in your mind. Not for real.'"
-  },
-  "repository": "git+https://github.com/dutchcelt/trivet.git",
-  "keywords": [
-    "loader",
-    "css",
-    "javascript",
-    "json"
-  ],
-  "author": "C. Egor Kloos",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dutchcelt/trivet/issues"
-  },
-  "homepage": "https://github.com/dutchcelt/trivet#readme",
-  "workspaces": [
-    "webcomponents/*",
-    "designtokens"
-  ],
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-parameters": "^7.16.3",
-    "@babel/plugin-transform-runtime": "^7.16.4",
-    "@babel/plugin-transform-template-literals": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/runtime": "^7.16.3",
-    "@changesets/cli": "^2.18.1",
-    "@open-wc/building-rollup": "^2.0.1",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-html": "^0.2.4",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@web/dev-server": "^0.1.28",
-    "@web/rollup-plugin-html": "^1.10.1",
-    "@web/rollup-plugin-polyfills-loader": "^1.1.1",
-    "acorn-import-assertions": "^1.8.0",
-    "core-js": "^3.19.2",
-    "rollup": "^2.60.1",
-    "rollup-plugin-lit-css": "^3.2.1",
-    "rollup-plugin-terser": "^7.0.2"
-  }
+	"name": "@trvt/root",
+	"version": "2.0.1",
+	"private": true,
+	"type": "module",
+	"description": "Trivet, a system for building webpages",
+	"scripts": {
+		"develop": "wds --config ./configs/web-dev-server.config.js",
+		"test": "echo \n\ntesting core"
+	},
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"workspaces": [
+		"docs",
+		"templates",
+		"designtokens",
+		"webcomponents/*"
+	],
+	"devDependencies": {
+		"@changesets/cli": "^2.19.0",
+		"@web/dev-server": "^0.1.29"
+	}
 }

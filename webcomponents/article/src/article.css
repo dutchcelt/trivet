@@ -1,15 +1,31 @@
-@media not all and (min-width: 600px) {
-	::slotted([slot=content]) {
-		--float-picture: none;
-		--float-offset: 0 0 var(--unit);
-		--picture-width: 100%;
-	}
-}
-@media (min-width: 600px) {
-	::slotted([slot=content]) {
-		--float-picture: right;
-		--float-offset: 0 0 var(--space) var(--unit);
-		--picture-width: auto;
-	}
+:host {
+	//--trvt-colors-base-text: DarkSlateBlue;
 }
 
+h2 {
+	font-family: var(--trvt-fonts-display-family);
+	color: var(--trvt-theme-color-secondary);
+}
+h3 {
+	font-family: var(--trvt-fonts-base-family);
+	font-style: italic;
+	color: var(--trvt-colors-base-mid);
+	font-variation-settings: 'wght' 500;
+}
+
+.trvt-article {
+	/* Parent Layout */
+
+	/* Layout */
+
+	/* Box Model */
+
+	/* Positioning */
+
+	/* Display */
+}
+
+.trvt-intro {
+	font-style: italic;
+	font-variation-settings: 'wght' 550;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@trvt/card",
+  "version": "0.0.1",
+  "description": "Card component for the Trivet Design System",
+  "main": "index.js",
+  "type": "modules",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "web",
+    "components"
+  ],
+  "author": "C. Egor Kloos",
+  "license": "MIT"
+}

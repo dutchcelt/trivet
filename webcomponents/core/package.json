@@ -1,16 +1,14 @@
 {
-  "name": "@trvt/core",
-  "version": "0.0.5",
-  "description": "A very simple dynamic loader of web components and styles",
-  "main": "src/core.js",
-  "type": "module",
-  "author": "C. Egor Kloos",
-  "license": "MIT",
-  "homepage": "https://github.com/dutchcelt/trivet#readme",
-  "dependencies": {
-    "@csstools/normalize.css": "^12.0.0",
-    "construct-style-sheets-polyfill": "3.0.4",
-    "lit": "^2.0.2"
-  },
-  "devDependencies": {}
+	"name": "@trvt/core",
+	"version": "0.0.5",
+	"type": "module",
+	"main": "index.js",
+	"description": "A very simple web component base class",
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"dependencies": {
+		"@trvt/designtokens": "workspace:^",
+		"normalize.css": "^8.0.1"
+	}
 }

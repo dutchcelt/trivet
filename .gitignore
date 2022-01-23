@@ -5,10 +5,10 @@
 # npm / node
 node_modules/
 
-# loval configs
+# local configs
+/.yarn/*
 .yarnrc
-.gitignore
-
+.yarnrc.yml
 
 # Builds
 temp

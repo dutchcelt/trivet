@@ -3,11 +3,31 @@
   "platforms": {
     "css": {
       "transformGroup": "css",
-      "buildPath": "dist/tokens/",
+      "buildPath": "build/css/",
       "files": [
         {
-          "destination": "trvt-tokens.css",
+          "destination": "trvt_tokens.css",
           "format": "css/variables"
+        }
+      ]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [
+        {
+          "destination": "trvt_tokens.js",
+          "format": "javascript/es6"
+        }
+      ]
+    },
+    "json": {
+      "transformGroup": "js",
+      "buildPath": "build/json/",
+      "files": [
+        {
+          "destination": "trvt_tokens.json",
+          "format": "json"
         }
       ]
     }
