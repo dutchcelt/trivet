@@ -2,18 +2,7 @@
 	//--trvt-colors-base-text: DarkSlateBlue;
 }
 
-h2 {
-	font-family: var(--trvt-fonts-display-family);
-	color: var(--trvt-theme-color-secondary);
-}
-h3 {
-	font-family: var(--trvt-fonts-base-family);
-	font-style: italic;
-	color: var(--trvt-colors-base-mid);
-	font-variation-settings: 'wght' 500;
-}
-
-.trvt-article {
+article {
 	/* Parent Layout */
 
 	/* Layout */
@@ -23,6 +12,17 @@ h3 {
 	/* Positioning */
 
 	/* Display */
+}
+
+h2 {
+	font-family: var(--trvt-fonts-display-family);
+	color: var(--trvt-theme-color-secondary);
+}
+h3 {
+	font-family: var(--trvt-fonts-base-family);
+	font-style: italic;
+	color: var(--trvt-colors-base-mid);
+	font-variation-settings: 'wght' 500;
 }
 
 .trvt-intro {

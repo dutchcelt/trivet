@@ -9,7 +9,6 @@
 			<meta name="theme-color" content="#29282d" media="(prefers-color-scheme: dark)" />
 			<meta name="theme-color" content="#625b60" media="(prefers-color-scheme: light)" /> 
 		-->
-
 		<script
 			async
 			crossorigin="anonymous"
@@ -25,11 +24,21 @@
 			  "polyfillEnable": ["css-modules", "json-modules"]
 			}
 		</script>
+		<!-- 		
+		<script type="module">
+			import '@trvt/core';
+			import '@trvt/layout';
+			import '@trvt/article';
+			import '@trvt/header';
+		</script>
+		 -->
+		<script type="module" src="/webcomponents/core/src/core.js"></script>
 		<script type="module" src="/webcomponents/layout/src/layout.js"></script>
 		<script type="module" src="/webcomponents/article/src/article.js"></script>
+		<script type="module" src="/webcomponents/header/src/header.js"></script>
 	</head>
 	<body>
-		<trvt-layout type="page">
+		<trvt-layout type="page" class="trvt">
 			<nav slot="navigation">
 				<a href="https://dutchcelt.com/" class="trvt-brand-mark">
 					<span class="trvt-brand-logo">★</span>
@@ -45,58 +54,54 @@
 				</a>
 			</nav>
 			<header slot="header">
-				<h1>The musings of a webhead</h1>
+				<trvt-header>
+					<div slot="heading">The musings of a webhead</div>
+				</trvt-header>
 			</header>
-			<main class="trvt-layout-homepage" slot="main">
-				<trvt-layout type="article">
-					<trvt-article data-listing="true" slot="main">
-						<div slot="title">Article header</div>
-						<div slot="intro">
-							Introduction: Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh
-							semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette
-							vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr
-							humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui
-							tbh succulents.
-						</div>
-						<div slot="subhead">Paragraph header</div>
-						<div slot="content">
-							<p>
-								Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics
-								artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist
-								post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue
-								bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.
-							</p>
-							<h6>Request for permission</h6>
-						</div>
-						<div slot="footer">
-							<button>button element</button>
-						</div>
-					</trvt-article>
-					<trvt-aside slot="sidebar">
-						<trvt-card>
-							<img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" /> Twitter
-						</trvt-card>
-						<trvt-card>
-							<img src="https://img.icons8.com/glyph-neue/32/000000/linkedin-circled.png" /> Linkedin
-						</trvt-card>
-						<trvt-card> Informaat </trvt-card>
-						<trvt-card>
-							<img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" /> Instagram
-						</trvt-card>
-						<trvt-card> Flickr </trvt-card>
-					</trvt-aside>
-					<div slot="footer">
-						<p class="subtext">
-							Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other
-							websites. Lorem Ipsum best not make any more threats to your website. It will be met with
-							fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum?
-							An ‘extremely credible source’ has called my office and told me that Barack Obama’s
-							placeholder text is a fraud.
-						</p>
+			<main slot="main">
+				<trvt-article>
+					<div slot="title">Article header</div>
+					<div slot="intro">
+						Introduction: Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics
+						artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist
+						post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put
+						a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.
 					</div>
-				</trvt-layout>
+					<div slot="subhead">Paragraph header</div>
+					<div slot="content">
+						<p>
+							Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan
+							synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic
+							glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird
+							on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.
+						</p>
+						<h6>Request for permission</h6>
+					</div>
+					<div slot="footer">
+						<button>button element</button>
+					</div>
+				</trvt-article>
 			</main>
+			<div slot="sidebar">
+				<trvt-card>
+					<img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" /> Twitter
+				</trvt-card>
+				<trvt-card>
+					<img src="https://img.icons8.com/glyph-neue/32/000000/linkedin-circled.png" /> Linkedin
+				</trvt-card>
+				<trvt-card> Informaat </trvt-card>
+				<trvt-card>
+					<img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" /> Instagram
+				</trvt-card>
+				<trvt-card> Flickr </trvt-card>
+			</div>
 			<footer slot="footer">
+				<p class="subtext">
+					Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites.
+					Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like
+					the world has never seen. Does everybody know that pig named Lorem Ipsum? An ‘extremely credible
+					source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.
+				</p>
 				<nav>
 					<a href="https://dutchcelt.com/" class="trvt-brand-mark">
 						<span class="trvt-brand-logo">★</span>

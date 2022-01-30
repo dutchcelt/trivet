@@ -4,6 +4,9 @@
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
 	"type": "modules",
+	"files": [
+		"src/header.js"
+	],
 	"scripts": {
 		"test": "test"
 	},

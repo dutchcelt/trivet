@@ -4,6 +4,10 @@
 	"description": "Layout component for the Trivet Design System",
 	"main": "index.js",
 	"type": "modules",
+	"files": [
+		"src/layout.css",
+		"src/layout.js"
+	],
 	"scripts": {
 		"test": "test"
 	},

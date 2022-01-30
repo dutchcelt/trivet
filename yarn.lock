@@ -404,6 +404,7 @@ __metadata:
   dependencies:
     "@trvt/designtokens": ^0.0.1
     normalize.css: ^8.0.1
+    the-new-css-reset: ^1.4.7
   languageName: unknown
   linkType: soft
 
@@ -3787,6 +3788,13 @@ __metadata:
   version: 2.2.1
   resolution: "term-size@npm:2.2.1"
   checksum: 1ed981335483babc1e8206f843e06bd2bf89b85f0bf5a9a9d928033a0fcacdba183c03ba7d91814643015543ba002f1339f7112402a21da8f24b6c56b062a5a9
+  languageName: node
+  linkType: hard
+
+"the-new-css-reset@npm:^1.4.7":
+  version: 1.4.7
+  resolution: "the-new-css-reset@npm:1.4.7"
+  checksum: 62d4c307d0cc53d486e1d994bcf153217e6c8869e7dc89a8a6c224a95b520a541129d1e55e55fdffb40a17e8f089bdf73316d2ee1655e2786131f3f2fedd6be6
   languageName: node
   linkType: hard
 

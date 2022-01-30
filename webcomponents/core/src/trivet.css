@@ -20,38 +20,78 @@
 	--trvt-theme-color-primary: #6868a7;
 	--trvt-theme-color-secondary: #6868a7;
 	--trvt-theme-color-tertiary: #7a6562;
-
-	--trvt-gap: 2rem;
 }
 
 /*	###################################################################### */
 /*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 
+/* 	Behaviour */
 /* 	Parent Layout */
 /* 	Layout */
 /* 	Box Model */
 /* 	Positioning */
 /* 	Display */
 
-:host {
+/*	###################################################################### */
+
+@layer reset designsystem components whitelabel;
+
+html {
+	margin: 0;
+	font-size: 100%;
+	background: var(--trvt-colors-base-dark);
+}
+body {
+	margin: 0;
+}
+
+.trvt {
 	contain: style layout;
+	/* 	Layout */
+	display: var(--trvt-display, flex);
+	flex-direction: column;
+	justify-items: flex-start;
+
+	/* 	Box Model */
+	min-height: min(100vh - 2rem, 100vh);
+
+	/* 	Display */
+	contain: style layout;
+	font-size: 1rem;
+	letter-spacing: 0.02rem;
+	line-height: 1.6;
+	color: var(--trvt-colors-base-text);
+	background: inherit;
 }
 
 /*	################################################################ */
-/*	Page layout	Nav													 */
+/*	Page layout														 */
 
-body > * > nav {
+/* .trvt > *:is(header, nav, main) {
+	flex: none;
+}
+.trvt footer {
+	flex: auto;
+} */
+
+/* *:is(header, main, footer) {
+	padding: 0 clamp(2rem, calc((100vw - 80ch) / 2), 10ch);
+} */
+
+/*	################################################################ */
+/* 
+.trvt > * > nav {
 	position: relative;
 	padding-left: 1rem;
 	color: var(--trvt-colors-base-light);
 	background: var(--trvt-colors-base-dark);
 }
 
-main {
-	padding: 0 var(--trvt-gap);
+/* .trvt main {
+	padding: 0 2rem;
 	background: var(--trvt-colors-base-light);
 }
-footer {
+.trvt footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -59,8 +99,8 @@ footer {
 	color: var(--trvt-colors-base-light);
 	background: var(--trvt-colors-base-mid);
 	text-align: center;
-}
-.subtext {
+} */
+.trvt-subtext {
 	font-family: var(--trvt-fonts-gui-family);
 	font-variation-settings: 'wght' 300;
 	font-size: 0.8rem;
@@ -72,7 +112,7 @@ footer {
 	rotate: 0.25turn;
 	display: inline-block;
 }
-header .trvt-brand-mark {
+.trvt > header .trvt-brand-mark {
 	position: absolute;
 	left: 0;
 	top: calc((100% - 3.5rem) / 2);
@@ -80,51 +120,51 @@ header .trvt-brand-mark {
 	color: var(--trvt-theme-color-primary);
 }
 
-header h1 {
+.trvt > header h1 {
 	font-family: var(--trvt-fonts-gui-family);
 	text-transform: uppercase;
 	font-variation-settings: 'wght' 400;
 }
 
-footer .trvt-brand-logo {
+.trvt > footer .trvt-brand-logo {
 	--trvt-theme-color-logo: var(--trvt-colors-base-light);
 }
-footer .trvt-brand-mark {
+.trvt > footer .trvt-brand-mark {
 	opacity: 0.2;
 }
 
-h1 {
+.trvt h1 {
 	font-family: var(--trvt-fonts-display-family);
 	font-variation-settings: 'wght' 600;
 	line-height: 1.2;
 	font-size: 2.5rem;
 }
 
-h2 {
+.trvt h2 {
 	font-family: var(--trvt-fonts-display-family);
 	font-size: 1.75rem;
 	font-variation-settings: 'wght' 600;
 }
 
-h3 {
+.trvt h3 {
 	font-family: var(--trvt-fonts-display-family);
 	font-size: 1.25rem;
 	font-variation-settings: 'wght' 500;
 }
 
-h5 {
+.trvt h5 {
 	font-family: var(--trvt-fonts-display-family);
 	font-size: 1.25rem;
 	font-variation-settings: 'wght' 400;
 }
-h6 {
+.trvt h6 {
 	font-family: var(--trvt-fonts-display-family);
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-variation-settings: 'wght' 600;
 }
 
-button {
+.trvt button {
 	font-family: var(--trvt-fonts-gui-family);
 	padding: 0.33rem 1rem;
 	font-size: 1.2rem;
@@ -149,7 +189,7 @@ button {
 	display: inline-block;
 }
 
-trvt-aside {
+.trvt trvt-aside {
 	display: flex;
 	flex-direction: column;
 	padding-top: 2rem;

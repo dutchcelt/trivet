@@ -12,7 +12,7 @@ export class TrvtArticle extends HTMLElement {
 	}
 	render() {
 		return document.createRange().createContextualFragment(`
-			<article class="trvt-article">
+			<article>
         <h2><slot name="title"></slot></h2>
         <p class="trvt-intro"><slot name="intro"></slot></p>
         <h3><slot name="subhead"></slot></h3>

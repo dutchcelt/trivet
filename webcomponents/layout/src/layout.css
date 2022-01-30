@@ -1,41 +1,74 @@
-:host {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	gap: 0 2rem;
-	witdh: clamp(374px, clamp(100vw - 80ch), 1280px);
-}
-/* 
-<slot name="navigation"></slot>
-<slot name="header"></slot>
-<slot name="main"></slot>
-<slot name="sidebar"></slot>
-<slot name="footer"></slot> 
+/* ############################################################### */
+/* Layout Slot Rules */
 
-*/
-::slotted([slot]) {
+:host {
+	--trvt-gap: 2rem;
 }
+
+:host([type]) {
+	display: var(--display, block);
+	grid-template-columns: var(--template-comumns, 1fr);
+	grid-template-rows: var(--template-rows, auto);
+	gap: 0 var(--trvt-gap);
+	padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
+}
+
+/* ############################################################### */
+/* Layout Slot Rules */
+
+::slotted(*) {
+	grid-column: var(--grid-column, 1 / -1);
+}
+::slotted([slot='main']) {
+	padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
+	background: var(--trvt-colors-base-light, transparent);
+}
+
+/* ############################################################### */
+/* Layout Slot Properties */
+
 ::slotted([slot='navigation']) {
-	grid-column: 1 / -1;
+	--grid-column: 1 / -1;
 }
 
 ::slotted([slot='header']) {
-	grid-column: 1 / -1;
+	--grid-column: 1 / -1;
 }
 
 ::slotted([slot='main']) {
+	--padding-horizontal: var(--trvt-gap);
+	--padding-vertical: var(--trvt-gap);
+	--grid-column: 1 / -1;
 }
-:host([type='page']) ::slotted([slot='main']) {
-	grid-column: 1 / -1;
-}
-
-:host([type='article']) ::slotted([slot='main']) {
-	grid-column: 1 / -2;
-}
-:slotted([slot='main']) > ::slotted([slot='sidebar']) {
-	grid-column: -2 / -1;
+::slotted([slot='sidebar']) {
+	--grid-column: -2 / -1;
 }
 
 ::slotted([slot='footer']) {
-	grid-column: 1 / -1;
+	--grid-column: 1 / -1;
+}
+
+/* ############################################################### */
+/* Layout Type Properties */
+
+/* Page */
+:host([type='page']) {
+	--padding-horizontal: min(var(--trvt-gap), (100vw - 100ch) / 2);
+	--padding-horizontal: calc(clamp(var(--trvt-gap), (100vw - 120ch)/2, (100vw - 1280px)/2));
+	--template-comumns: 1fr;
+}
+:host([type='page']) ::slotted([slot='main']) {
+	--grid-column: 1 / -1;
+}
+
+/* Article */
+:host([type='article']) {
+	--display: grid;
+	--padding-horizontal: 0;
+}
+:host([type='article']) > article {
+	--grid-column: 1;
+}
+:host([type='article']) ::slotted([slot='sidebar']) {
+	--grid-column: 2;
 }
