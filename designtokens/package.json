@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/designtokens",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"type": "module",
 	"main": "index.js",
 	"description": "Trivet, a system for building webpages",

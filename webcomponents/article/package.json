@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/article",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -12,6 +12,6 @@
 	"license": "MIT",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/core": "^0.0.5"
+		"@trvt/core": "^0.1.0"
 	}
 }
