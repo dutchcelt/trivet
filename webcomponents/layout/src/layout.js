@@ -1,5 +1,7 @@
-import { styles } from '@trvt/core';
+import { styles, insertIntoCssLayer } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
+
+insertIntoCssLayer([layoutCSS], 'component');
 
 export class TrvtLayout extends HTMLElement {
 	constructor() {

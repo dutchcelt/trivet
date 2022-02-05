@@ -1,1 +1,1 @@
-import { TrvtElement } from '../../core/index.js';
+import { styles } from '@trvt/core';

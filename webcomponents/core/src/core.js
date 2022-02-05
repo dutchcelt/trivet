@@ -6,8 +6,8 @@ import normalize from 'normalize.css' assert { type: 'css' };
 import coreCSS from './core.css' assert { type: 'css' };
 import trvtIcons from '../assets/trvt-icons-v1.0/style.css' assert { type: 'css' };
 
-wrapWithlayerStatementBlock([reset, normalize], 'reset');
-wrapWithlayerStatementBlock([trvtTokensCSS, coreCSS, trvtCSS], 'designsystem');
+insertIntoCssLayer([reset, normalize], 'reset');
+insertIntoCssLayer([trvtTokensCSS, coreCSS, trvtCSS], 'designsystem');
 
 const { base, baseItalic, display, gui, icons } = trvtTokensFontfaces.font.face;
 
@@ -38,22 +38,32 @@ async function loadFont({ family, filename, path, style, weight, display }) {
 function hasCSSLayerSupport() {
 	const stylesheet = new CSSStyleSheet();
 	const layer = 'test';
-	stylesheet.insertRule(`@layer ${layer} { element { color: inherit;}}`, 0);
-	return stylesheet.cssRules[0].name === 'test';
+	const rule = `@layer ${layer} { 
+		:host { color: inherit }
+	}`;
+	try {
+		stylesheet.insertRule(rule, 0);
+		console.log('Has layers');
+		return true;
+	} catch (e) {
+		console.log('Does not have layers');
+		return false;
+	}
 }
 
-function wrapWithlayerStatementBlock(sheets, layer) {
-	hasCSSLayerSupport() &&
+function insertIntoCssLayer(sheets, layer) {
+	if (hasCSSLayerSupport()) {
 		sheets.forEach((sheet) => {
 			let cssText = [...sheet.cssRules].reduce((acc, rule) => (acc += rule.cssText), '');
-			sheet.replaceSync(`
+			sheet.replace(`
 			@layer ${layer} {
 				${cssText}
 			}`);
 		});
+	}
 }
 
 const styles = [reset, normalize, coreCSS, trvtIcons];
 document.adoptedStyleSheets = [trvtTokensCSS, trvtCSS];
 
-export { loadFont, trvtCSS, styles };
+export { loadFont, trvtCSS, styles, insertIntoCssLayer };

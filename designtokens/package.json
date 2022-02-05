@@ -1,15 +1,15 @@
 {
 	"name": "@trvt/designtokens",
+	"description": "Trivet, a system for building webpages",
 	"version": "0.1.0",
 	"type": "module",
 	"main": "index.js",
-	"description": "Trivet, a system for building webpages",
-	"author": "C. Egor Kloos",
-	"license": "MIT",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
 		"build": "style-dictionary build"
 	},
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
 		"style-dictionary": "^3.0.3"
 	}

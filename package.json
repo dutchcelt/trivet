@@ -6,7 +6,7 @@
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
 		"develop": "wds --config ./configs/web-dev-server.config.js",
-		"test": "echo \n\ntesting core"
+		"test": "echo \n\ntesting Trivit"
 	},
 	"author": "C. Egor Kloos",
 	"license": "MIT",
