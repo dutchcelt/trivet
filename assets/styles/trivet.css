@@ -1,43 +1,76 @@
-@layer components {
+@layer reset normalize designsystem components whitelabel;
+
+@layer designsystem {
+	/*
+		COLOR SWATCH:
+		dark #29282D
+		#625b60
+		#6868a7
+		#7a6562
+	 */
+	:root {
+		--trvt-display: flex;
+		--trvt-colors-base-light: #f9ece9;
+		--trvt-colors-base-dark: #29282d;
+		--trvt-colors-base-mid: #625b60;
+		--trvt-colors-base-text: var(--trvt-colors-base-dark);
+
+		--trvt-fonts-base-family: Bitter, sans-serif;
+		--trvt-fonts-gui-family: Rubik, sans-serif;
+		--trvt-fonts-display-family: 'Assistant', sans-serif;
+
+		--trvt-theme-color-brand: orangered;
+		--trvt-theme-color-logo: var(--trvt-theme-color-brand);
+		--trvt-theme-color-primary: #6868a7;
+		--trvt-theme-color-secondary: #6868a7;
+		--trvt-theme-color-tertiary: #7a6562;
+		--trvt-gap: 2rem;
+
+	}
 
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
-
+	/* 	Behaviour */
 	/* 	Parent Layout */
 	/* 	Layout */
 	/* 	Box Model */
 	/* 	Positioning */
 	/* 	Display */
+	/*	###################################################################### */
 
-	:host {
-		contain: style layout;
-	}
-
-	/*	################################################################ */
-	/*	Page layout	Nav													 */
-	body > * > nav {
-		position: relative;
-		padding-left: 1rem;
-		color: var(--trvt-colors-base-light);
+	html {
+		margin: 0;
+		font-size: 100%;
 		background: var(--trvt-colors-base-dark);
 	}
 
-	main {
-		padding: 0 var(--trvt-gap);
-		background: var(--trvt-colors-base-light);
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-
+	body {
+		margin: 0;
+		font-size: 1rem;
+		letter-spacing: 0.02rem;
+		line-height: 1.6;
 		color: var(--trvt-colors-base-light);
-		background: var(--trvt-colors-base-mid);
-		text-align: center;
 	}
 
-	.subtext {
+	.trvt {
+		contain: style layout;
+		/* 	Layout */
+		display: var(--trvt-display, flex);
+		flex-direction: column;
+		justify-items: flex-start;
+
+		/* 	Box Model */
+		/*min-height: min(100 vh - 2 rem, 100 vh);*/
+
+		/* 	Display */
+	/* contain: style layout;*/
+		font-size: 1rem;
+		letter-spacing: 0.02rem;
+		line-height: 1.6;
+		color: var(--trvt-colors-base-text);
+	}
+
+	.trvt-subtext {
 		font-family: var(--trvt-fonts-gui-family);
 		font-variation-settings: 'wght' 300;
 		font-size: 0.8rem;
@@ -50,7 +83,7 @@
 		display: inline-block;
 	}
 
-	header .trvt-brand-mark {
+	.trvt > header .trvt-brand-mark {
 		position: absolute;
 		left: 0;
 		top: calc((100% - 3.5rem) / 2);
@@ -58,53 +91,53 @@
 		color: var(--trvt-theme-color-primary);
 	}
 
-	header h1 {
+	.trvt > header h1 {
 		font-family: var(--trvt-fonts-gui-family);
 		text-transform: uppercase;
 		font-variation-settings: 'wght' 400;
 	}
 
-	footer .trvt-brand-logo {
+	.trvt > footer .trvt-brand-logo {
 		--trvt-theme-color-logo: var(--trvt-colors-base-light);
 	}
 
-	footer .trvt-brand-mark {
+	.trvt > footer .trvt-brand-mark {
 		opacity: 0.2;
 	}
 
-	h1 {
+	.trvt h1 {
 		font-family: var(--trvt-fonts-display-family);
 		font-variation-settings: 'wght' 600;
 		line-height: 1.2;
 		font-size: 2.5rem;
 	}
 
-	h2 {
+	.trvt h2 {
 		font-family: var(--trvt-fonts-display-family);
 		font-size: 1.75rem;
 		font-variation-settings: 'wght' 600;
 	}
 
-	h3 {
+	.trvt h3 {
 		font-family: var(--trvt-fonts-display-family);
 		font-size: 1.25rem;
 		font-variation-settings: 'wght' 500;
 	}
 
-	h5 {
+	.trvt h5 {
 		font-family: var(--trvt-fonts-display-family);
 		font-size: 1.25rem;
 		font-variation-settings: 'wght' 400;
 	}
 
-	h6 {
+	.trvt h6 {
 		font-family: var(--trvt-fonts-display-family);
 		text-transform: uppercase;
 		font-size: 1rem;
 		font-variation-settings: 'wght' 600;
 	}
 
-	button {
+	.trvt button {
 		font-family: var(--trvt-fonts-gui-family);
 		padding: 0.33rem 1rem;
 		font-size: 1.2rem;
@@ -130,7 +163,7 @@
 		display: inline-block;
 	}
 
-	trvt-aside {
+	.trvt trvt-aside {
 		display: flex;
 		flex-direction: column;
 		padding-top: 2rem;

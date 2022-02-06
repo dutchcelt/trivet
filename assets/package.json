@@ -1,0 +1,27 @@
+{
+  "name": "@trvt/assets",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "build/assets.js",
+  "files": [
+    "fonts/vendors/googlefonts/Assistant/Assistant-VariableFont_wght.woff2",
+    "fonts/vendors/googlefonts/Bitter/Bitter-Italic-VariableFont_wght.woff2",
+    "fonts/vendors/googlefonts/Bitter/Bitter-VariableFont_wght.woff2",
+    "fonts/vendors/googlefonts/Rubik/Rubik-Italic-VariableFont_wght.woff2",
+    "fonts/vendors/googlefonts/Rubik/Rubik-VariableFont_wght.woff2",
+    "icons/trvt-icons-v1.1/fonts/trvt-icons.woff",
+    "styles/trivet.css",
+    "styles/reset.css",
+    "styles/normalize.css",
+    "scripts/hasCSSLayerSupport.js",
+    "scripts/insertIntoCssLayer.js",
+    "scripts/loadFont.js",
+    "images/keyboard-purple.jpg",
+    "images/shardes.jpg"
+  ],
+  "description": "A very simple web component base class",
+  "author": "C. Egor Kloos",
+  "license": "MIT",
+  "homepage": "https://github.com/dutchcelt/trivet#readme",
+  "packageManager": "yarn@3.1.1"
+}

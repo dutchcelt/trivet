@@ -14,7 +14,6 @@ node_modules/
 # Builds
 temp
 dist
-build
 
 # logs
 *.log

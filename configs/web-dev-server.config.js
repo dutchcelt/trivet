@@ -4,10 +4,10 @@
 
 export default {
 	// whether to open the browser and/or the browser path to open on
-	open: true,
+	open: false,
 
 	// index HTML to use for SPA routing / history API fallback
-	appIndex: './templates/src/index.html',
+	appIndex: './docs/dist/index.html',
 
 	// run in watch mode, reloading when files change
 	watch: true,

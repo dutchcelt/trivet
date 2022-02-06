@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
-	"type": "modules",
+	"type": "module",
 	"files": [
 		"src/header.js"
 	],

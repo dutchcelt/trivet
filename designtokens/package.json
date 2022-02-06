@@ -4,6 +4,11 @@
 	"version": "0.1.0",
 	"type": "module",
 	"main": "index.js",
+	"files": [
+		"build/css/trvt_tokens.css",
+		"build/js/trvt_tokens.js",
+		"build/json/trvt_tokens.json"
+	],
 	"scripts": {
 		"build": "style-dictionary build"
 	},

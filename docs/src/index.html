@@ -4,7 +4,7 @@
 		<title>Trivet Web Components</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
-		<meta name="theme-color" content="#29282d" />
+<!--		<meta name="theme-color" content="#29282d" />-->
 		<!-- 		
 			<meta name="theme-color" content="#29282d" media="(prefers-color-scheme: dark)" />
 			<meta name="theme-color" content="#625b60" media="(prefers-color-scheme: light)" /> 
@@ -25,22 +25,14 @@
 			}
 		</script>
 
-		<!-- 		
 		<script type="module">
-			import '@trvt/core';
 			import '@trvt/layout';
 			import '@trvt/article';
 			import '@trvt/header';
-		</script> 
-		-->
-
-		<script type="module" src="/webcomponents/core/src/core.js"></script>
-		<script type="module" src="/webcomponents/layout/src/layout.js"></script>
-		<script type="module" src="/webcomponents/article/src/article.js"></script>
-		<script type="module" src="/webcomponents/header/src/header.js"></script>
+		</script>
 	</head>
 	<body>
-		<trvt-layout type="page" class="trvt">
+		<trvt-layout type="page">
 			<nav slot="navigation">
 				<a href="https://dutchcelt.com/" class="trvt-brand-mark">
 					<span class="trvt-brand-logo">★</span>

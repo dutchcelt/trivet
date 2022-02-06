@@ -6,13 +6,14 @@
 	"files": [
 		"src/core.css",
 		"src/core.js",
-		"src/trivet.css"
+		"../../assets/styles/trivet.css"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
 	"license": "MIT",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
+		"@trvt/assets": "workspace:^",
 		"@trvt/designtokens": "^0.1.0",
 		"normalize.css": "^8.0.1",
 		"the-new-css-reset": "^1.4.7"

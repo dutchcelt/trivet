@@ -1,1 +1,1 @@
-export { TrvtHeading } from './src/heading.js';
+export { TrvtHeader } from './src/header.js';

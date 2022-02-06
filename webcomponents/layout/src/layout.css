@@ -1,74 +1,94 @@
-/* ############################################################### */
-/* Layout Slot Rules */
+@layer components {
+	/* ############################################################### */
+	/* Layout Slot Rules */
+	:host {
+		--trvt-gap: 2rem;
+	}
 
-:host {
-	--trvt-gap: 2rem;
-}
+	:host([type]) {
+		display: var(--display, grid);
+		grid-template-columns: var(--template-comumns, 1fr);
+		grid-template-rows: var(--template-rows, auto);
+	/ / gap: 0 var(--trvt-gap);
+		padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
+		font-size: 1rem;
+		letter-spacing: 0.02rem;
+		line-height: 1.6;
+		color: var(--trvt-colors-base-text);
+		background: inherit;
+	}
 
-:host([type]) {
-	display: var(--display, block);
-	grid-template-columns: var(--template-comumns, 1fr);
-	grid-template-rows: var(--template-rows, auto);
-	gap: 0 var(--trvt-gap);
-	padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
-}
+	/* ############################################################### */
+	/* Layout Slot Rules */
+	::slotted(*) {
+		grid-column: var(--grid-column, 1 / -1);
+	}
 
-/* ############################################################### */
-/* Layout Slot Rules */
+	::slotted([slot='main']) {
+		padding: var(--trvt-gap) var(--trvt-gap);
+		background: var(--trvt-colors-base-light);
+	}
 
-::slotted(*) {
-	grid-column: var(--grid-column, 1 / -1);
-}
-::slotted([slot='main']) {
-	padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
-	background: var(--trvt-colors-base-light, transparent);
-}
+	::slotted([slot='sidebar']) {
+		padding: var(--trvt-gap) var(--trvt-gap);
+		background: var(--trvt-colors-base-light);
+	}
 
-/* ############################################################### */
-/* Layout Slot Properties */
+	/* ############################################################### */
+	/* Layout Slot Properties */
+	::slotted([slot='navigation']) {
+		--grid-column: 1 / -1;
+	}
 
-::slotted([slot='navigation']) {
-	--grid-column: 1 / -1;
-}
+	::slotted([slot='header']) {
+		--grid-column: 1 / -1;
+	}
 
-::slotted([slot='header']) {
-	--grid-column: 1 / -1;
-}
+	::slotted([slot='main']) {
+		--padding-horizontal: var(--trvt-gap);
+		--padding-vertical: var(--trvt-gap);
+		--grid-column: 1 / -1;
+	}
 
-::slotted([slot='main']) {
-	--padding-horizontal: var(--trvt-gap);
-	--padding-vertical: var(--trvt-gap);
-	--grid-column: 1 / -1;
-}
-::slotted([slot='sidebar']) {
-	--grid-column: -2 / -1;
-}
+	::slotted([slot='sidebar']) {
+		--grid-column: 1 / -1;
+	}
 
-::slotted([slot='footer']) {
-	--grid-column: 1 / -1;
-}
+	::slotted([slot='footer']) {
+		--grid-column: 1 / -1;
+	}
 
-/* ############################################################### */
-/* Layout Type Properties */
+	/* ############################################################### */
+	/* Layout Type Properties */
+	/* Page */
+	:host([type='page']) {
+		--padding-horizontal: min(var(--trvt-gap), (100vw - 100ch) / 2);
+		--padding-horizontal: calc(clamp(var(--trvt-gap), (100vw - 120ch) / 2, (100vw - 1280px) / 2));
+		--template-comumns: 1fr 1fr 1fr;
+		--template-rows: 1fr;
+	}
 
-/* Page */
-:host([type='page']) {
-	--padding-horizontal: min(var(--trvt-gap), (100vw - 100ch) / 2);
-	--padding-horizontal: calc(clamp(var(--trvt-gap), (100vw - 120ch)/2, (100vw - 1280px)/2));
-	--template-comumns: 1fr;
-}
-:host([type='page']) ::slotted([slot='main']) {
-	--grid-column: 1 / -1;
-}
+	:host([type='page']) ::slotted([slot='main']) {
+		--grid-column: 1 / -2;
+		--grid-row: 1;
+	}
 
-/* Article */
-:host([type='article']) {
-	--display: grid;
-	--padding-horizontal: 0;
-}
-:host([type='article']) > article {
-	--grid-column: 1;
-}
-:host([type='article']) ::slotted([slot='sidebar']) {
-	--grid-column: 2;
+	:host([type='page']) ::slotted([slot='sidebar']) {
+		--grid-column: -2 / -1;
+		--grid-row: 1;
+	}
+
+	/* Article */
+	:host([type='article']) {
+		--display: grid;
+		--padding-horizontal: 0;
+	}
+
+	:host([type='article']) > article {
+		--grid-column: 1;
+	}
+
+	:host([type='article']) ::slotted([slot='sidebar']) {
+		--grid-column: 2;
+	}
 }

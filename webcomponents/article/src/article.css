@@ -1,31 +1,34 @@
-:host {
-	//--trvt-colors-base-text: DarkSlateBlue;
-}
+@layer components {
+	:host {
+	/ / --trvt-colors-base-text: DarkSlateBlue;
+	}
 
-article {
-	/* Parent Layout */
+	article {
+		/* Parent Layout */
 
-	/* Layout */
+		/* Layout */
 
-	/* Box Model */
+		/* Box Model */
 
-	/* Positioning */
+		/* Positioning */
 
-	/* Display */
-}
+		/* Display */
+	}
 
-h2 {
-	font-family: var(--trvt-fonts-display-family);
-	color: var(--trvt-theme-color-secondary);
-}
-h3 {
-	font-family: var(--trvt-fonts-base-family);
-	font-style: italic;
-	color: var(--trvt-colors-base-mid);
-	font-variation-settings: 'wght' 500;
-}
+	h2 {
+		font-family: var(--trvt-fonts-display-family);
+		color: var(--trvt-theme-color-secondary);
+	}
 
-.trvt-intro {
-	font-style: italic;
-	font-variation-settings: 'wght' 550;
+	h3 {
+		font-family: var(--trvt-fonts-base-family);
+		font-style: italic;
+		color: var(--trvt-colors-base-mid);
+		font-variation-settings: 'wght' 500;
+	}
+
+	.trvt-intro {
+		font-style: italic;
+		font-variation-settings: 'wght' 550;
+	}
 }

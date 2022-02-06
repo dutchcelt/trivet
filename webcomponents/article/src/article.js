@@ -1,7 +1,6 @@
-import { styles, insertIntoCssLayer } from '@trvt/core';
+import { styles } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
 
-insertIntoCssLayer([articleCSS], 'component');
 
 export class TrvtArticle extends HTMLElement {
 	constructor() {

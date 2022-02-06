@@ -1,16 +1,18 @@
-:host {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	position: relative;
-	padding: 0 2rem;
-	color: var(--trvt-colors-base-light);
-	background-color: var(--trvt-theme-color-primary);
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 50%),
-		url('/templates/src/keyboard-purple.jpg');
-	border-bottom: 5px solid var(--trvt-theme-color-primary);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 20rem;
+@layer components {
+	:host {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+		padding: 0 2rem;
+		color: var(--trvt-colors-base-light);
+		background-color: var(--trvt-theme-color-primary);
+		background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 50%),
+		url('/assets/images/keyboard-purple.jpg');
+		border-bottom: 5px solid var(--trvt-theme-color-primary);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 20rem;
+	}
 }
