@@ -13,12 +13,10 @@ The system offers:
 
 ## Install
 
-This project is set up to look at certain browsesr feature to work in browsert. This development of this project it only worked with Chrome Canary and Safari Technical Preview.
+This project is set up to look at certain browsesr feature to work in browsers. This development of this project it only worked with Chrome Canary and Safari Technical Preview.
 It also relies on [Node 16 using corepack](https://yarnpkg.com/getting-started/install).
 
-This project uses Yarn v3 with pnpm setup and [workspace tools](https://yarnpkg.com/cli/workspaces/foreach#options-from%20%230) to run commands on multiple workspaces. So you'll to have that plugin installed. Running `yarn install` should take of that.
-
--   `yarn install`
+This project uses Zero Install setup with Yarn v3. Because of this the project adds the `.yarn/cache` so you no longer need to run `yarn install` or worry about plugins.
 
 ### Build
 
