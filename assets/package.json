@@ -2,7 +2,7 @@
   "name": "@trvt/assets",
   "version": "0.0.0",
   "type": "module",
-  "main": "build/assets.js",
+  "main": "index.js",
   "files": [
     "fonts/vendors/googlefonts/Assistant/Assistant-VariableFont_wght.woff2",
     "fonts/vendors/googlefonts/Bitter/Bitter-Italic-VariableFont_wght.woff2",
@@ -17,11 +17,23 @@
     "scripts/insertIntoCssLayer.js",
     "scripts/loadFont.js",
     "images/keyboard-purple.jpg",
-    "images/shardes.jpg"
+    "images/shardes.jpg",
+    "build/icons.js"
   ],
   "description": "A very simple web component base class",
   "author": "C. Egor Kloos",
   "license": "MIT",
   "homepage": "https://github.com/dutchcelt/trivet#readme",
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "dependencies": {
+    "@trvt/designtokens": "workspace:^"
+  },
+  "devDependencies": {
+    "rollup": "^2.67.2",
+    "rollup-plugin-styles": "^4.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "develop": "yarn build --watch"
+  }
 }

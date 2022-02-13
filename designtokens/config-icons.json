@@ -1,0 +1,16 @@
+{
+	"source": ["tokens/icons/*.json"],
+	"platforms": {
+		"css": {
+			"prefix": "trvt",
+			"transformGroup": "css",
+			"buildPath": "build/css/",
+			"files": [
+				{
+					"destination": "trvt_tokens-icons.css",
+					"format": "css/variables"
+				}
+			]
+		}
+	}
+}

@@ -6,11 +6,13 @@
 	"main": "index.js",
 	"files": [
 		"build/css/trvt_tokens.css",
+		"build/css/trvt_tokens-fonts.css",
+		"build/css/trvt_tokens-icons.css",
 		"build/js/trvt_tokens.js",
 		"build/json/trvt_tokens.json"
 	],
 	"scripts": {
-		"build": "style-dictionary build"
+		"build": "style-dictionary build && style-dictionary build -c config-icons.json && style-dictionary build -c config-fonts.json"
 	},
 	"author": "C. Egor Kloos",
 	"license": "MIT",

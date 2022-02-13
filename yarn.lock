@@ -489,6 +489,10 @@ __metadata:
 "@trvt/assets@workspace:^, @trvt/assets@workspace:assets":
   version: 0.0.0-use.local
   resolution: "@trvt/assets@workspace:assets"
+  dependencies:
+    "@trvt/designtokens": "workspace:^"
+    rollup: ^2.67.2
+    rollup-plugin-styles: ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -519,7 +523,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@trvt/designtokens@^0.1.0, @trvt/designtokens@workspace:designtokens":
+"@trvt/designtokens@^0.1.0, @trvt/designtokens@workspace:^, @trvt/designtokens@workspace:designtokens":
   version: 0.0.0-use.local
   resolution: "@trvt/designtokens@workspace:designtokens"
   dependencies:
@@ -585,8 +589,6 @@ __metadata:
   dependencies:
     "@changesets/cli": ^2.19.0
     "@web/dev-server": ^0.1.29
-    rollup: ^2.67.0
-    rollup-plugin-styles: ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -5809,7 +5811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.66.1, rollup@npm:^2.67.0":
+"rollup@npm:^2.66.1":
   version: 2.67.0
   resolution: "rollup@npm:2.67.0"
   dependencies:
@@ -5820,6 +5822,20 @@ __metadata:
   bin:
     rollup: dist/bin/rollup
   checksum: 300ddb6c63f1bcaadaac98f705e3804d8d22ddbc595e34c0582850dc1f464bde3edc3312a7cdc5f1544e35df80300d7bc7bf81f56575b24c4124924d140ec947
+  languageName: node
+  linkType: hard
+
+"rollup@npm:^2.67.2":
+  version: 2.67.2
+  resolution: "rollup@npm:2.67.2"
+  dependencies:
+    fsevents: ~2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: 9aca5251ba4b441064183cde2394b91567259002d68086bdd3906db66d55dd148ab27e57c51eb53830d7b9b813c2d4e834b7735d65e2a869780bc639d4a20c38
   languageName: node
   linkType: hard
 

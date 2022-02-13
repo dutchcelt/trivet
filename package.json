@@ -5,9 +5,10 @@
 	"type": "module",
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
-		"rollup": "rollup -c configs/rollup.config.js",
-		"tokens": "yarn workspace \"@trvt/designtokens\" build",
-		"build": "yarn tokens && yarn rollup && yarn workspace \"@trvt/docs\" build",
+		"build:assets": "yarn workspace \"@trvt/assets\" build",
+		"build:tokens": "yarn workspace \"@trvt/designtokens\" build",
+		"build:docs": "yarn workspace \"@trvt/docs\" build",
+		"build": "yarn workspaces foreach -pt run build",
 		"develop": "yarn build && wds -c configs/web-dev-server.config.js",
 		"test": "echo \n\ntesting Trivit"
 	},
@@ -16,7 +17,6 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"workspaces": [
 		"docs",
-		"templates",
 		"assets",
 		"designtokens",
 		"webcomponents/*"
@@ -24,8 +24,6 @@
 	"packageManager": "yarn@3.1.1",
 	"devDependencies": {
 		"@changesets/cli": "^2.19.0",
-		"@web/dev-server": "^0.1.29",
-		"rollup": "^2.67.0",
-		"rollup-plugin-styles": "^4.0.0"
+		"@web/dev-server": "^0.1.29"
 	}
 }

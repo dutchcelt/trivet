@@ -1,5 +1,5 @@
 {
-	"source": ["tokens/**/*.json"],
+	"source": ["tokens/{color,size}/*.json"],
 	"platforms": {
 		"css": {
 			"prefix": "trvt",
@@ -19,7 +19,7 @@
 			"files": [
 				{
 					"destination": "trvt_tokens.js",
-					"format": "javascript/es6"
+					"format": "javascript/object"
 				}
 			]
 		},
@@ -30,7 +30,7 @@
 			"files": [
 				{
 					"destination": "trvt_tokens.json",
-					"format": "json"
+					"format": "json/flat"
 				}
 			]
 		}
