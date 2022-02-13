@@ -2,15 +2,6 @@
 .idea
 .nova
 
-# npm / node
-node_modules/
-
-# local configs
-/.yarn/*
-.yarnrc
-.yarnrc.yml
-.pnp.*
-
 # Builds
 temp
 dist
