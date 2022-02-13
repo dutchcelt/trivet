@@ -2,6 +2,9 @@
 .idea
 .nova
 
+# NPM/Node
+.npmrc
+
 # Builds
 temp
 dist
