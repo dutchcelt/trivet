@@ -9,6 +9,7 @@ The system offers:
 -   Design tokens ([Style Dictionary](https://amzn.github.io/style-dictionary/#/))
 -   Layout system (Gridless)
 -   Web Components
+-   Assets like icon font
 -   Development and Testing tools
 
 ## Zero Install
