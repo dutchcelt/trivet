@@ -8,7 +8,10 @@
 			"files": [
 				{
 					"destination": "trvt_tokens.css",
-					"format": "css/variables"
+					"format": "css/variables",
+					"options": {
+						"showFileHeader": false
+					}
 				}
 			]
 		},
@@ -19,7 +22,10 @@
 			"files": [
 				{
 					"destination": "trvt_tokens.js",
-					"format": "javascript/object"
+					"format": "javascript/object",
+					"options": {
+						"showFileHeader": false
+					}
 				}
 			]
 		},
@@ -30,7 +36,10 @@
 			"files": [
 				{
 					"destination": "trvt_tokens.json",
-					"format": "json/flat"
+					"format": "json/flat",
+					"options": {
+						"showFileHeader": false
+					}
 				}
 			]
 		}

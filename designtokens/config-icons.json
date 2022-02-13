@@ -8,7 +8,10 @@
 			"files": [
 				{
 					"destination": "trvt_tokens-icons.css",
-					"format": "css/variables"
+					"format": "css/variables",
+					"options": {
+						"showFileHeader": false
+					}
 				}
 			]
 		}

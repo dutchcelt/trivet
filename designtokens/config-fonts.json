@@ -8,7 +8,10 @@
 			"files": [
 				{
 					"destination": "trvt_tokens-fonts.css",
-					"format": "css/fonts.css"
+					"format": "css/fonts.css",
+					"options": {
+						"showFileHeader": false
+					}
 				}
 			]
 		}

@@ -1,8 +1,3 @@
-/**
- * Do not edit directly
- * Generated on Sun, 13 Feb 2022 11:38:59 GMT
- */
-
 var _styleDictionary = {
   "color": {
     "base": {

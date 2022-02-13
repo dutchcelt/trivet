@@ -11,12 +11,12 @@ The system offers:
 -   Web Components
 -   Development and Testing tools
 
-## Install
+## Zero Install
 
-This project is set up to look at certain browsesr feature to work in browsers. This development of this project it only worked with Chrome Canary and Safari Technical Preview.
-It also relies on [Node 16 using corepack](https://yarnpkg.com/getting-started/install).
+This project is set up to work in certain browsers. Currently it only works in Chrome Canary and Safari Technical Preview.
+It also relies on Yarn and [Node 16 using corepack](https://yarnpkg.com/getting-started/install).
 
-This project uses Zero Install setup with Yarn v3. Because of this the project adds the `.yarn/cache` so you no longer need to run `yarn install` or worry about plugins.
+This project utilises a Zero Install setup with Yarn v3. Because of this the project adds the `.yarn/cache` so you no longer need to run `yarn install` or worry about plugins.
 
 ### Build
 
