@@ -1,26 +1,26 @@
 {
-  "name": "@trvt/docs",
-  "description": "Trivet, a system for building webpages",
-  "version": "0.1.0",
-  "type": "module",
-  "main": "index.js",
-  "author": "C. Egor Kloos",
-  "license": "MIT",
-  "homepage": "https://github.com/dutchcelt/trivet#readme",
-  "packageManager": "yarn@3.1.1",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "copyfiles": "^2.4.1"
-  },
-  "scripts": {
-    "copy": "copyfiles ../{webcomponents,designtokens}/**/*.{js,css} ./dist/packages/",
-    "build": "yarn copy && yarn eleventy --input=./src/index.html --output=./dist",
-    "start": "yarn build --serve --port=8081",
-    "develop": "yarn start --watch"
-  },
-  "dependencies": {
-    "@trvt/article": "workspace:^",
-    "@trvt/header": "workspace:^",
-    "@trvt/layout": "workspace:^"
-  }
+	"name": "@trvt/docs",
+	"description": "Trivet, a system for building webpages",
+	"version": "0.1.0",
+	"type": "module",
+	"main": "index.js",
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"packageManager": "yarn@3.1.1",
+	"devDependencies": {
+		"@11ty/eleventy": "^1.0.0",
+		"copyfiles": "^2.4.1"
+	},
+	"scripts": {
+		"copy": "copyfiles \"./images/*.{jpg,svg,png}\" dist",
+		"build": "yarn copy && yarn eleventy --input=./src/index.html --output=./dist",
+		"start": "yarn build --serve --port=8081",
+		"develop": "yarn start --watch"
+	},
+	"dependencies": {
+		"@trvt/article": "workspace:^",
+		"@trvt/header": "workspace:^",
+		"@trvt/layout": "workspace:^"
+	}
 }

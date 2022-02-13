@@ -11,6 +11,7 @@ export class TrvtHeader extends HTMLElement {
 		this.shadowRoot.appendChild(this.render());
 	}
 	render() {
+		this.style = `--header-image-src:url("${this.dataset.imageSrc}");`;
 		return document.createRange().createContextualFragment(`
 			<h1><slot name="heading"></slot></h1>
 		`);

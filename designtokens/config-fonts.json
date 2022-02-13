@@ -8,21 +8,21 @@
 			"files": [
 				{
 					"destination": "trvt_tokens-fonts.css",
-					"format": "css/fonts.css",
+					"format": "css/variables",
 					"options": {
 						"showFileHeader": false
 					}
 				}
 			]
 		},
-		"js": {
+		"json": {
 			"prefix": "trvt",
 			"transformGroup": "js",
-			"buildPath": "build/js/",
+			"buildPath": "build/json/",
 			"files": [
 				{
-					"destination": "trvt_tokens-fonts.js",
-					"format": "javascript/object",
+					"destination": "trvt_tokens-fonts.json",
+					"format": "json/nested",
 					"options": {
 						"showFileHeader": false
 					}
