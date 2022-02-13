@@ -12,11 +12,16 @@
 		"build/json/trvt_tokens.json"
 	],
 	"scripts": {
-		"build": "style-dictionary build && style-dictionary build -c config-icons.json && style-dictionary build -c config-fonts.json"
+		"build:clean": "style-dictionary clean ",
+		"build:tokens": "style-dictionary build -c config.json",
+		"build:icons": "style-dictionary build -c config-icons.json",
+		"build:fonts": "style-dictionary build -c config-fonts.json",
+		"build": "yarn build:clean && yarn build:tokens && yarn build:icons && yarn build:fonts"
 	},
 	"author": "C. Egor Kloos",
 	"license": "MIT",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"packageManager": "yarn@3.1.1",
 	"devDependencies": {
 		"style-dictionary": "^3.0.3"
 	}

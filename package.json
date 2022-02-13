@@ -5,9 +5,6 @@
 	"type": "module",
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
-		"build:assets": "yarn workspace \"@trvt/assets\" build",
-		"build:tokens": "yarn workspace \"@trvt/designtokens\" build",
-		"build:docs": "yarn workspace \"@trvt/docs\" build",
 		"build": "yarn workspaces foreach -pt run build",
 		"develop": "yarn build && wds -c configs/web-dev-server.config.js",
 		"test": "echo \n\ntesting Trivit"

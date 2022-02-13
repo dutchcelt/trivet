@@ -14,7 +14,7 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
 		"@trvt/assets": "workspace:^",
-		"@trvt/designtokens": "^0.1.0",
+		"@trvt/designtokens": "workspace:^",
 		"normalize.css": "^8.0.1",
 		"the-new-css-reset": "^1.4.7"
 	}

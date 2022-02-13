@@ -7,7 +7,7 @@ export default {
 	open: false,
 
 	// index HTML to use for SPA routing / history API fallback
-	appIndex: './docs/dist/index.html',
+	appIndex: './index.html',
 
 	// run in watch mode, reloading when files change
 	watch: true,
@@ -23,7 +23,7 @@ export default {
 
 	// the root directory to serve files from. this is useful in a monorepo
 	// when executing commands from a package
-	rootDir: '.',
+	rootDir: './docs/dist',
 
 	// prefix to strip from request urls
 	// basePath: '/dist',

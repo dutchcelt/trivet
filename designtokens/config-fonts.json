@@ -14,6 +14,20 @@
 					}
 				}
 			]
+		},
+		"js": {
+			"prefix": "trvt",
+			"transformGroup": "js",
+			"buildPath": "build/js/",
+			"files": [
+				{
+					"destination": "trvt_tokens-fonts.js",
+					"format": "javascript/object",
+					"options": {
+						"showFileHeader": false
+					}
+				}
+			]
 		}
 	}
 }

@@ -13,4 +13,4 @@ export { CSSString2CSSStyleSheet } from './scripts/CSSString2CSSStyleSheet.js';
 export { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
 
 /* icons */
-export { iconFonts } from 'build/icons.js';
+export { iconFonts } from './build/icons.js';
