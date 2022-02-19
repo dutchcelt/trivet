@@ -1,6 +1,6 @@
 @layer components {
 	:host {
-	/ / --trvt-colors-base-text: DarkSlateBlue;
+		/* 	--trvt-colors-base-text: DarkSlateBlue; */
 	}
 
 	article {
