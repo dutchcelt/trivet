@@ -22,6 +22,7 @@
 	},
 	"dependencies": {
 		"@trvt/article": "workspace:^",
+		"@trvt/dutchceltlogo": "workspace:^",
 		"@trvt/header": "workspace:^",
 		"@trvt/layout": "workspace:^"
 	}

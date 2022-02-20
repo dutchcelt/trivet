@@ -32,27 +32,17 @@
 		<script type="module">
 			import '@trvt/layout';
 			import '@trvt/article';
+			import '@trvt/dutchceltlogo';
 			import '@trvt/header';
 		</script>
 	<body>
 		<trvt-layout type="page">
 			<nav slot="navigation">
-				<a href="https://dutchcelt.com/" class="trvt-brand-mark">
-					<span class="trvt-brand-logo">★</span>
-					Dutchc<span
-						style="
-							display: inline-block;
-							transform: scale(-1, 1);
-							margin-left: -0.1rem;
-							margin-right: 0.05rem;
-						"
-						>e</span
-					>lt
-				</a>
+				<trvt-dutchcelt-logo data-trvt-href="https://dutchcelt.com/"></trvt-dutchcelt-logo>
 			</nav>
 			<header slot="header">
-				<trvt-header data-image-src="/images/print-board.jpg">
-					<div slot="heading">The musings of a webhead</div>
+				<trvt-header data-trvt-src="/assets/images/print-board-2.jpg">
+					<div slot="heading">Web Musings</div>
 				</trvt-header>
 			</header>
 			<main slot="main">

@@ -9,12 +9,12 @@
 		display: var(--display, grid);
 		grid-template-columns: var(--template-comumns, 1fr);
 		grid-template-rows: var(--template-rows, auto);
-	/ / gap: 0 var(--trvt-gap);
+		/* 	    gap: 0 var(--trvt-gap); */
 		padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
 		font-size: 1rem;
 		letter-spacing: 0.02rem;
 		line-height: 1.6;
-		color: var(--trvt-colors-base-text);
+		color: var(--trvt-colors-base-light);
 		background: inherit;
 	}
 
@@ -27,11 +27,13 @@
 	::slotted([slot='main']) {
 		padding: var(--trvt-gap) var(--trvt-gap);
 		background: var(--trvt-colors-base-light);
+		background: #f9ece911;
 	}
 
 	::slotted([slot='sidebar']) {
 		padding: var(--trvt-gap) var(--trvt-gap);
 		background: var(--trvt-colors-base-light);
+		background: #f9ece911;
 	}
 
 	/* ############################################################### */
@@ -63,7 +65,9 @@
 	/* Page */
 	:host([type='page']) {
 		--padding-horizontal: min(var(--trvt-gap), (100vw - 100ch) / 2);
-		--padding-horizontal: calc(clamp(var(--trvt-gap), (100vw - 120ch) / 2, (100vw - 1280px) / 2));
+		--padding-horizontal: calc(
+			clamp(var(--trvt-gap), (100vw - 120ch) / 2, (100vw - 1280px) / 2)
+		);
 		--template-comumns: 1fr 1fr 1fr;
 		--template-rows: 1fr;
 	}

@@ -55,6 +55,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:webcomponents/dropdown"
       },
       {
+        "name": "@trvt/dutchceltlogo",
+        "reference": "workspace:webcomponents/dutchceltlogo"
+      },
+      {
         "name": "@trvt/footer",
         "reference": "workspace:webcomponents/footer"
       },
@@ -82,6 +86,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/designtokens", ["workspace:designtokens"]],
       ["@trvt/docs", ["workspace:docs"]],
       ["@trvt/dropdown", ["workspace:webcomponents/dropdown"]],
+      ["@trvt/dutchceltlogo", ["workspace:webcomponents/dutchceltlogo"]],
       ["@trvt/footer", ["workspace:webcomponents/footer"]],
       ["@trvt/header", ["workspace:webcomponents/header"]],
       ["@trvt/layout", ["workspace:webcomponents/layout"]],
@@ -753,6 +758,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@trvt/docs", "workspace:docs"],
             ["@11ty/eleventy", "npm:1.0.0"],
             ["@trvt/article", "workspace:webcomponents/article"],
+            ["@trvt/dutchceltlogo", "workspace:webcomponents/dutchceltlogo"],
             ["@trvt/header", "workspace:webcomponents/header"],
             ["@trvt/layout", "workspace:webcomponents/layout"],
             ["copyfiles", "npm:2.4.1"]
@@ -765,6 +771,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./webcomponents/dropdown/",
           "packageDependencies": [
             ["@trvt/dropdown", "workspace:webcomponents/dropdown"],
+            ["@trvt/core", "workspace:webcomponents/core"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@trvt/dutchceltlogo", [
+        ["workspace:webcomponents/dutchceltlogo", {
+          "packageLocation": "./webcomponents/dutchceltlogo/",
+          "packageDependencies": [
+            ["@trvt/dutchceltlogo", "workspace:webcomponents/dutchceltlogo"],
             ["@trvt/core", "workspace:webcomponents/core"]
           ],
           "linkType": "SOFT",

@@ -27,6 +27,6 @@ bus.register('componentLoaded', (event) => {
 
 /* Base styles for all Trivet Components */
 import coreCSS from './core.css' assert { type: 'css' };
-const styles = [resetCSS, normalizeCSS, coreCSS];
+const styles = [normalizeCSS, coreCSS];
 
 export { loadFont, styles, insertIntoCssLayer, bus };

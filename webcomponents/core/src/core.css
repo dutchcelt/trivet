@@ -1,4 +1,4 @@
-@layer components {
+@layer designsystem {
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 
@@ -32,7 +32,7 @@
 
 	main {
 		padding: 0 var(--trvt-gap);
-		background: var(--trvt-colors-base-light);
+		//background: var(--trvt-colors-base-light);
 	}
 
 	footer {
@@ -50,34 +50,6 @@
 		font-variation-settings: 'wght' 300;
 		font-size: 0.8rem;
 		line-height: 1.4;
-	}
-
-	.trvt-brand-logo {
-		color: var(--trvt-theme-color-logo);
-		rotate: 0.25turn;
-		display: inline-block;
-	}
-
-	header .trvt-brand-mark {
-		position: absolute;
-		left: 0;
-		top: calc((100% - 3.5rem) / 2);
-		font-size: 1.2rem;
-		color: var(--trvt-theme-color-primary);
-	}
-
-	header h1 {
-		font-family: var(--trvt-fonts-gui-family);
-		text-transform: uppercase;
-		font-variation-settings: 'wght' 400;
-	}
-
-	footer .trvt-brand-logo {
-		--trvt-theme-color-logo: var(--trvt-colors-base-light);
-	}
-
-	footer .trvt-brand-mark {
-		opacity: 0.2;
 	}
 
 	h1 {
@@ -124,18 +96,6 @@
 		font-variation-settings: 'wght' 500;
 		border: 0.18rem solid darkslateblue;
 		border-radius: 2rem;
-	}
-
-	.trvt-brand-mark {
-		padding: 1rem;
-		font-family: var(--trvt-fonts-gui-family);
-		color: var(--trvt-colors-base-light);
-		font-variation-settings: 'wght' 400;
-		text-decoration: none;
-		font-size: 1.2rem;
-		/* text-transform: capitalize; */
-		letter-spacing: 0.05rem;
-		display: inline-block;
 	}
 
 	trvt-aside {

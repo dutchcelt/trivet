@@ -572,6 +572,7 @@ __metadata:
   dependencies:
     "@11ty/eleventy": ^1.0.0
     "@trvt/article": "workspace:^"
+    "@trvt/dutchceltlogo": "workspace:^"
     "@trvt/header": "workspace:^"
     "@trvt/layout": "workspace:^"
     copyfiles: ^2.4.1
@@ -581,6 +582,14 @@ __metadata:
 "@trvt/dropdown@workspace:webcomponents/dropdown":
   version: 0.0.0-use.local
   resolution: "@trvt/dropdown@workspace:webcomponents/dropdown"
+  dependencies:
+    "@trvt/core": ^0.1.0
+  languageName: unknown
+  linkType: soft
+
+"@trvt/dutchceltlogo@workspace:^, @trvt/dutchceltlogo@workspace:webcomponents/dutchceltlogo":
+  version: 0.0.0-use.local
+  resolution: "@trvt/dutchceltlogo@workspace:webcomponents/dutchceltlogo"
   dependencies:
     "@trvt/core": ^0.1.0
   languageName: unknown
