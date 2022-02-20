@@ -1,5 +1,4 @@
 @layer components {
-
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 
@@ -12,7 +11,16 @@
 	:host {
 		contain: style layout;
 	}
-
+	:host([data-loaded='true']),
+	:host:where(mds-layout) {
+		visibility: hidden;
+	}
+	:host([data-loaded='true']) {
+		visibility: visible;
+	}
+	[data-loaded='true'] [slot] {
+		display: block;
+	}
 	/*	################################################################ */
 	/*	Page layout	Nav													 */
 	body > * > nav {

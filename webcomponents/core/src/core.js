@@ -1,19 +1,32 @@
-/* Design Tokens */
-import { trvtTokensCSS, trvtTokensFontfaces } from '@trvt/designtokens';
-
 /* Trivet assets */
-import { insertIntoCssLayer, loadFont } from '@trvt/assets';
-import coreCSS from './core.css' assert { type: 'css' };
+import {
+	insertIntoCssLayer,
+	loadFont,
+	resetCSS,
+	normalizeCSS,
+	trivetCSS,
+} from '@trvt/assets';
 
-insertIntoCssLayer([trvtTokensCSS], 'designsystem');
+/* Design Tokens */
+import { trvtTokensFontfaces } from '@trvt/designtokens';
 
+/* Load the font configs in our tokens and load the ones present */
 const { base, baseItalic, display, gui } = trvtTokensFontfaces.font.face;
-
 const fontArray = [base, baseItalic, display, gui].map((f) => !!f && f);
-
 fontArray.forEach((face) => loadFont(face));
 
-const styles = [coreCSS];
-document.adoptedStyleSheets = [trvtTokensCSS];
+/* The worlds simplest event bus */
+import bus from './eventbus.js';
 
-export { loadFont, styles, insertIntoCssLayer };
+/* Register event to prevent FOUC */
+bus.register('componentLoaded', (event) => {
+	event.detail.loaded
+		? (document.body.dataset.loaded = 'true')
+		: delete document.body.dataset.loaded;
+});
+
+/* Base styles for all Trivet Components */
+import coreCSS from './core.css' assert { type: 'css' };
+const styles = [resetCSS, normalizeCSS, coreCSS];
+
+export { loadFont, styles, insertIntoCssLayer, bus };

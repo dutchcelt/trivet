@@ -13,8 +13,10 @@
 		"copyfiles": "^2.4.1"
 	},
 	"scripts": {
-		"copy": "copyfiles \"./images/*.{jpg,svg,png}\" dist",
-		"build": "yarn copy && yarn eleventy --input=./src/index.html --output=./dist",
+		"copy": "copyfiles \"./src/index.css\" dist -f",
+		"copy:tokens": "copyfiles \"../designtokens/**/*.{css,json}\" \"./dist/**.*\"",
+		"copy:assets": "copyfiles \"../assets/**/*.{css,jpg,svg,png,webp,woff,woff2}\" \"./dist/**.*\"",
+		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn eleventy --input=./src/index.html --output=./dist",
 		"start": "yarn build --serve --port=8081",
 		"develop": "yarn start --watch"
 	},

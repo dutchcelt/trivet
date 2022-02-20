@@ -1,12 +1,12 @@
 export const loadFont = async ({ family, filename, path, style, weight, display }) => {
-	const valid = [family, filename, path, style, weight].some((f) => !!f.value && typeof f.value === 'string');
-	if (valid) {
-		const url = new URL(`${path.value}${filename.value}`, import.meta.url);
+	const valid = [family, filename, path, style, weight].some((f) => !!f && typeof f === 'string');
+	if ((path.value, path)) {
+		const url = new URL(`${path}${filename}`, import.meta.url);
 		if (url) {
-			const font = new FontFace(family.value, `url(${url})`, {
-				style: style.value,
-				weight: weight.value,
-				display: display.value || auto,
+			const font = new FontFace(family, `url(${url})`, {
+				style: style,
+				weight: weight,
+				display: display || 'auto',
 			});
 			await font.load();
 			document.fonts.add(font);
@@ -16,4 +16,4 @@ export const loadFont = async ({ family, filename, path, style, weight, display 
 	} else {
 		new Error('Missing font face information. Please check the token values.');
 	}
-}
+};

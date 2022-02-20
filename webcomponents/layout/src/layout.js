@@ -1,4 +1,4 @@
-import { styles, insertIntoCssLayer } from '@trvt/core';
+import { styles, insertIntoCssLayer, bus } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
 
 insertIntoCssLayer([layoutCSS], 'component');
@@ -8,9 +8,11 @@ export class TrvtLayout extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 	}
+
 	connectedCallback() {
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
+		bus.fire('componentLoaded', { loaded: true });
 	}
 	render() {
 		const type = this.shadowRoot.host.getAttribute('type');

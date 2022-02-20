@@ -1,7 +1,8 @@
 /* styles */
-import './styles/reset.css';
-import './styles/normalize.css';
-import './styles/trivet.css';
+import resetCSS from './styles/reset.css' assert { type: 'css' };
+import normalizeCSS from './styles/normalize.css' assert { type: 'css' };
+import trivetCSS from './styles/trivet.css' assert { type: 'css' };
+export { resetCSS, normalizeCSS, trivetCSS };
 
 /* tokens */
 //import '../designtokens/build/css/trvt_tokens.css';

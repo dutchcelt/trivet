@@ -1,6 +1,5 @@
-import { styles } from '@trvt/core';
+import { styles, bus } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
-
 
 export class TrvtArticle extends HTMLElement {
 	constructor() {

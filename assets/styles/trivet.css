@@ -1,5 +1,3 @@
-@layer reset normalize designsystem components whitelabel;
-
 @layer designsystem {
 	/*
 		COLOR SWATCH:
@@ -25,7 +23,6 @@
 		--trvt-theme-color-secondary: #6868a7;
 		--trvt-theme-color-tertiary: #7a6562;
 		--trvt-gap: 2rem;
-
 	}
 
 	/*	###################################################################### */
@@ -63,7 +60,7 @@
 		/*min-height: min(100 vh - 2 rem, 100 vh);*/
 
 		/* 	Display */
-	/* contain: style layout;*/
+		/* contain: style layout;*/
 		font-size: 1rem;
 		letter-spacing: 0.02rem;
 		line-height: 1.6;
@@ -168,5 +165,16 @@
 		flex-direction: column;
 		padding-top: 2rem;
 		gap: 1rem;
+	}
+}
+
+@layer components {
+	/* 	This hides the component content until its ready. 
+		The Trivet core.js registers a componentLoaded event and the layout dispatches it after it renders its content. */
+	[slot] {
+		opacity: 0;
+	}
+	[data-loaded='true'] [slot] {
+		opacity: 1;
 	}
 }
