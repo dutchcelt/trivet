@@ -23,7 +23,7 @@ export default {
 
 	// the root directory to serve files from. this is useful in a monorepo
 	// when executing commands from a package
-	rootDir: './docs/dist',
+	rootDir: './docs/src',
 
 	// prefix to strip from request urls
 	// basePath: '/dist',

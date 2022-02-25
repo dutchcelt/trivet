@@ -6,18 +6,19 @@ export class TrvtArticle extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
+		this.title = undefined;
 	}
 	connectedCallback() {
+		this.title = this.dataset.trvtTitle;
 		this.shadowRoot.appendChild(this.render());
 	}
 	render() {
 		return document.createRange().createContextualFragment(`
 			<article>
-        <h2><slot name="title"></slot></h2>
-        <p class="trvt-intro"><slot name="intro"></slot></p>
-        <h3><slot name="subhead"></slot></h3>
-        <div><slot name="content"></slot></div>
-        <div><slot name="footer"></slot></div>
+        <h2>${this.title}</h2>
+        <slot name="intro"></slot>
+        <slot name="content"></slot>
+        <slot name="footer"></slot>
 			</article>
 		`);
 	}

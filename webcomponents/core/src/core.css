@@ -9,60 +9,54 @@
 	/* 	Display */
 
 	:host {
+		--trvt-typography-size-xxl: 3rem;
+		--trvt-typography-size-xl: 2rem;
+		--trvt-typography-size-l: 1.5rem;
+		--trvt-typography-size-m: 1.125rem;
+		--trvt-typography-size-s: 1rem;
+		--trvt-typography-size-xs: 0.875rem;
+
+		--trvt-typography-leading-l: 1.6125;
+		--trvt-typography-leading-m: 1.25;
+		--trvt-typography-leading-s: 1;
+
+		--trvt-fonts-base-family: Bitter, sans-serif;
+		--trvt-fonts-gui-family: Rubik, sans-serif;
+		--trvt-fonts-display-family: 'Assistant', sans-serif;
+	}
+	:host {
 		contain: style layout;
+		font-size: var(--trvt-typography-size-m);
+		font-family: var(--trvt-fonts-base-family);
+		line-height: var(--trvt-typography-leading-m);
+		color: var(--trvt-colors-base-light);
 	}
-	:host([data-loaded='true']),
-	:host:where(mds-layout) {
-		visibility: hidden;
-	}
-	:host([data-loaded='true']) {
-		visibility: visible;
-	}
-	[data-loaded='true'] [slot] {
-		display: block;
-	}
+
 	/*	################################################################ */
-	/*	Page layout	Nav													 */
+	/*	Page layout	Nav */
+
+	/* 	
 	body > * > nav {
 		position: relative;
 		padding-left: 1rem;
 		color: var(--trvt-colors-base-light);
 		background: var(--trvt-colors-base-dark);
 	}
-
-	main {
-		padding: 0 var(--trvt-gap);
-		//background: var(--trvt-colors-base-light);
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-
-		color: var(--trvt-colors-base-light);
-		background: var(--trvt-colors-base-mid);
-		text-align: center;
-	}
-
-	.subtext {
-		font-family: var(--trvt-fonts-gui-family);
-		font-variation-settings: 'wght' 300;
-		font-size: 0.8rem;
-		line-height: 1.4;
-	}
+    */
 
 	h1 {
 		font-family: var(--trvt-fonts-display-family);
 		font-variation-settings: 'wght' 600;
 		line-height: 1.2;
-		font-size: 2.5rem;
+		font-size: var(--trvt-typography-size-xxl);
+		line-height: var(--trvt-typography-leading-s);
 	}
 
 	h2 {
 		font-family: var(--trvt-fonts-display-family);
-		font-size: 1.75rem;
+		font-size: var(--trvt-typography-size-xl);
 		font-variation-settings: 'wght' 600;
+		line-height: var(--trvt-typography-leading-m);
 	}
 
 	h3 {

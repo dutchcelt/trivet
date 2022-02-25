@@ -1,10 +1,13 @@
 @layer components {
 	:host {
 		/* 	--trvt-colors-base-text: DarkSlateBlue; */
+		--article-display: var(--trvt-layout-display, inherit);
+		--article-text-color: var(--trvt-colors-base-light);
 	}
 
 	article {
 		/* Parent Layout */
+		display: var(--article-display);
 
 		/* Layout */
 
@@ -13,14 +16,21 @@
 		/* Positioning */
 
 		/* Display */
+		font-family: var(--trvt-fonts-base-family);
+		line-height: var(--trvt-typography-leading-l);
+		color: var(--article-text-color);
 	}
 
 	h2 {
 		font-family: var(--trvt-fonts-display-family);
 		color: var(--trvt-theme-color-secondary);
+		font-size: var(--trvt-typography-size-xxl);
+		line-height: var(--trvt-typography-leading-l);
 	}
-
-	h3 {
+	h2:empty {
+		display: none;
+	}
+	::slotted([name='content']) h3 {
 		font-family: var(--trvt-fonts-base-family);
 		font-style: italic;
 		color: var(--trvt-colors-base-mid);

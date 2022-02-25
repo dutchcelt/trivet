@@ -7,6 +7,7 @@
 	"scripts": {
 		"build": "yarn workspaces foreach -pt run build",
 		"develop": "yarn build && wds -c configs/web-dev-server.config.js",
+		"start": "yarn workspace @trvt/docs run develop",
 		"lint": "eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
 		"test": "echo \n\ntesting Trivit"
 	},
