@@ -18,7 +18,7 @@
 		"copy:assets": "copyfiles \"../assets/**/*.{css,jpg,svg,png,webp,woff,woff2}\" \"./dist/**.*\"",
 		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn eleventy --input=./src/index.html --output=./dist",
 		"start": "yarn build --serve --port=8081",
-		"develop": "yarn start --watch"
+		"develop": "yarn build --watch"
 	},
 	"dependencies": {
 		"@trvt/article": "workspace:^",

@@ -30,12 +30,12 @@
 	h2:empty {
 		display: none;
 	}
-	::slotted([name='content']) h3 {
+/*	h3 {
 		font-family: var(--trvt-fonts-base-family);
 		font-style: italic;
 		color: var(--trvt-colors-base-mid);
 		font-variation-settings: 'wght' 500;
-	}
+	}*/
 
 	.trvt-intro {
 		font-style: italic;
