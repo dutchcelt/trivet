@@ -735,6 +735,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@trvt/core", "workspace:webcomponents/core"],
             ["@trvt/assets", "workspace:assets"],
             ["@trvt/designtokens", "workspace:designtokens"],
+            ["@xstate/fsm", "npm:1.6.5"],
             ["normalize.css", "npm:8.0.1"],
             ["the-new-css-reset", "npm:1.4.7"]
           ],
@@ -1232,6 +1233,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@web/parse5-utils", "npm:1.3.0"],
             ["@types/parse5", "npm:6.0.3"],
             ["parse5", "npm:6.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@xstate/fsm", [
+        ["npm:1.6.5", {
+          "packageLocation": "./.yarn/cache/@xstate-fsm-npm-1.6.5-ce4efd1c39-da24fa4f40.zip/node_modules/@xstate/fsm/",
+          "packageDependencies": [
+            ["@xstate/fsm", "npm:1.6.5"]
           ],
           "linkType": "HARD",
         }]

@@ -11,29 +11,21 @@
 		grid-template-rows: var(--template-rows, auto);
 		/* 	    gap: 0 var(--trvt-gap); */
 		padding: var(--padding-vertical, 0) var(--padding-horizontal, 0);
-		font-size: 1rem;
-		letter-spacing: 0.02rem;
-		line-height: 1.6;
-		color: var(--trvt-colors-base-light);
-		background: inherit;
+
 	}
 
 	/* ############################################################### */
 	/* Layout Slot Rules */
 	::slotted(*) {
-		grid-column: var(--grid-column, 1 / -1);
+		grid-column: var(--grid-column);
 	}
 
 	::slotted([slot='main']) {
 		padding: var(--trvt-gap) var(--trvt-gap);
-		background: var(--trvt-colors-base-light);
-		background: #f9ece911;
 	}
 
 	::slotted([slot='sidebar']) {
 		padding: var(--trvt-gap) var(--trvt-gap);
-		background: var(--trvt-colors-base-light);
-		background: #f9ece911;
 	}
 
 	/* ############################################################### */
@@ -64,7 +56,7 @@
 	/* Layout Type Properties */
 	/* Page */
 	:host([type='page']) {
-		--padding-horizontal: min(var(--trvt-gap), (100vw - 100ch) / 2);
+		/*--padding-horizontal: min(var(--trvt-gap), (100vw - 100ch) / 2);*/
 		--padding-horizontal: calc(
 			clamp(var(--trvt-gap), (100vw - 120ch) / 2, (100vw - 1280px) / 2)
 		);

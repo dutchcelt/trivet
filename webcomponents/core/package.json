@@ -15,6 +15,7 @@
 	"dependencies": {
 		"@trvt/assets": "workspace:^",
 		"@trvt/designtokens": "workspace:^",
+		"@xstate/fsm": "^1.6.5",
 		"normalize.css": "^8.0.1",
 		"the-new-css-reset": "^1.4.7"
 	}

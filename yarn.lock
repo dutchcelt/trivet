@@ -553,6 +553,7 @@ __metadata:
   dependencies:
     "@trvt/assets": "workspace:^"
     "@trvt/designtokens": "workspace:^"
+    "@xstate/fsm": ^1.6.5
     normalize.css: ^8.0.1
     the-new-css-reset: ^1.4.7
   languageName: unknown
@@ -983,6 +984,13 @@ __metadata:
     "@types/parse5": ^6.0.1
     parse5: ^6.0.1
   checksum: 379849c1b0a060d50037c7dc90d27231dc68f57b1034d87f89129c3cd87fa27d3a0f8e550e1ab3be00bb1c0d440a8fa95c153a481ed8c2c705fd46fbc8a8433d
+  languageName: node
+  linkType: hard
+
+"@xstate/fsm@npm:^1.6.5":
+  version: 1.6.5
+  resolution: "@xstate/fsm@npm:1.6.5"
+  checksum: da24fa4f40479223da34714640cea64ec894bbfeb2281a0a870af68882ae1d6fb6d724d6e5c0d4e6929728c699b92858f7389ef7d6a5d00ac66ba8cde3934eed
   languageName: node
   linkType: hard
 

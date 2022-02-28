@@ -7,7 +7,7 @@ export class TrvtDropdown extends HTMLElement {
 		super();
 		this.block = 'dropdown';
 	}
-	static styles = [Trivet.styles, shadowStyles];
+	static styles = [...styles, shadowStyles];
 
 	render() {
 		return this.menuTemplateFunction();

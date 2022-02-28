@@ -1,7 +1,5 @@
-import { styles, insertIntoCssLayer, bus } from '@trvt/core';
+import { styles, contentLoadedMachine } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
-
-insertIntoCssLayer([layoutCSS], 'component');
 
 export class TrvtLayout extends HTMLElement {
 	constructor() {
@@ -12,7 +10,7 @@ export class TrvtLayout extends HTMLElement {
 	connectedCallback() {
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
-		bus.fire('componentLoaded', { loaded: true });
+		contentLoadedMachine.transition('loading', 'READY')
 	}
 	render() {
 		const type = this.shadowRoot.host.getAttribute('type');
