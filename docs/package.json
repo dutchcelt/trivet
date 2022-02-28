@@ -13,7 +13,7 @@
 		"copyfiles": "^2.4.1"
 	},
 	"scripts": {
-		"copy": "copyfiles \"./src/index.css\" dist -f",
+		"copy": "copyfiles \"./src/*.{css,js}\" dist -f",
 		"copy:tokens": "copyfiles \"../designtokens/**/*.{css,json}\" \"./dist/**.*\"",
 		"copy:assets": "copyfiles \"../assets/**/*.{css,jpg,svg,png,webp,woff,woff2}\" \"./dist/**.*\"",
 		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn eleventy --input=./src/index.html --output=./dist",

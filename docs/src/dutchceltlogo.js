@@ -1,17 +1,42 @@
-import dutchceltLogoCSS from './dutchceltlogo.css' assert { type: 'css' };
-
-export class TrvtDutchceltLogo extends HTMLElement {
+class DutchceltLogo extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
 		this.href = this.dataset.trvtHref || '/';
 	}
 	connectedCallback() {
-		this.shadowRoot.adoptedStyleSheets = [dutchceltLogoCSS];
 		this.shadowRoot.appendChild(this.render());
 	}
 	render() {
 		return document.createRange().createContextualFragment(`
+		<style>
+				@layer components {
+						svg {
+								fill: var(--trvt-theme-color-logo);
+								transform: rotate(0.25turn);
+								display: inline-block;
+								width: 1.1rem;
+								vertical-align: text-bottom;
+						}
+						.reverse {
+								display: inline-block;
+								transform: scale(-1, 1);
+								margin-left: -0.1rem;
+								margin-right: 0.05rem;
+						}
+						a {
+								padding: 1rem;
+								font-family: var(--trvt-fonts-gui-family);
+								color: var(--trvt-colors-base-light);
+								font-variation-settings: 'wght' 400;
+								text-decoration: none;
+								font-size: 1.2rem;
+								/* text-transform: capitalize; */
+								letter-spacing: 0.05rem;
+								display: inline-block;
+						}
+				}
+		</style>
 			<a href="${encodeURI(this.href)}">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28">
 					<title>star</title>
@@ -22,4 +47,4 @@ export class TrvtDutchceltLogo extends HTMLElement {
 		`);
 	}
 }
-customElements.define('trvt-dutchcelt-logo', TrvtDutchceltLogo);
+customElements.define('dutchcelt-logo', DutchceltLogo);

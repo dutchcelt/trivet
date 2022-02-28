@@ -25,11 +25,11 @@ export class TrvtHeader extends HTMLElement {
 		switch (name){
 			case 'data-trvt-src':
 				this.src = attributeValue || '';
-				this.__setStyle();
+				if(this.src) this.__setStyle();
 				break;
 			case 'data-trvt-title':
 				this.text = attributeValue || '';
-				this.heading.textContent = this.text;
+				if(this.heading) this.heading.textContent = this.text;
 				break;
 		}
 	}
