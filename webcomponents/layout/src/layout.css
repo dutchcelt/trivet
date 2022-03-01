@@ -16,39 +16,39 @@
 
 	/* ############################################################### */
 	/* Layout Slot Rules */
-	::slotted(*) {
+	:host > *:where(.navigation, .header, .main, .sidebar, .footer) {
 		grid-column: var(--grid-column);
 	}
 
-	::slotted([slot='main']) {
+	.main {
 		padding: var(--trvt-gap) var(--trvt-gap);
 	}
 
-	::slotted([slot='sidebar']) {
+	.sidebar {
 		padding: var(--trvt-gap) var(--trvt-gap);
 	}
 
 	/* ############################################################### */
 	/* Layout Slot Properties */
-	::slotted([slot='navigation']) {
+	.navigation {
 		--grid-column: 1 / -1;
 	}
 
-	::slotted([slot='header']) {
+	.header {
 		--grid-column: 1 / -1;
 	}
 
-	::slotted([slot='main']) {
+	.main {
 		--padding-horizontal: var(--trvt-gap);
 		--padding-vertical: var(--trvt-gap);
 		--grid-column: 1 / -1;
 	}
 
-	::slotted([slot='sidebar']) {
+	.sidebar {
 		--grid-column: 1 / -1;
 	}
 
-	::slotted([slot='footer']) {
+	.footer {
 		--grid-column: 1 / -1;
 	}
 
@@ -64,12 +64,12 @@
 		--template-rows: 1fr;
 	}
 
-	:host([type='page']) ::slotted([slot='main']) {
+	:host([type='page']) .main {
 		--grid-column: 1 / -2;
 		--grid-row: 1;
 	}
 
-	:host([type='page']) ::slotted([slot='sidebar']) {
+	:host([type='page']) .sidebar {
 		--grid-column: -2 / -1;
 		--grid-row: 1;
 	}
@@ -84,7 +84,7 @@
 		--grid-column: 1;
 	}
 
-	:host([type='article']) ::slotted([slot='sidebar']) {
+	:host([type='article']) .sidebar {
 		--grid-column: 2;
 	}
 }
