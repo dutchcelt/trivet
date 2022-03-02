@@ -8,9 +8,11 @@ The system offers:
 
 -   Design tokens ([Style Dictionary](https://amzn.github.io/style-dictionary/#/))
 -   Layout system (Gridless)
--   Web Components
+-   Web Components with state machines (using [@xstate/fsm](https://xstate.js.org/docs/packages/xstate-fsm/#features))
 -   Assets like icon font
 -   Development and Testing tools
+
+**Note**: looking to make the setup dependency free. So removing Style Dictionary and Xstate.
 
 ## Zero Install
 
@@ -28,3 +30,19 @@ The build task runs all the 'build' script inside the workspace packages.
 ### Develop
 
 -   `yarn develop`
+
+
+#### Common data attributes
+
+Trivet components only use data-* attributes to prevent namespace collisions and provide api consistency.
+
+- `data-trvt-title`
+- `data-trvt-type`
+- `data-trvt-context`
+- `data-trvt-src`
+- `data-trvt-href`
+- `data-trvt-icon`
+- `data-trvt-position`
+- `data-trvt-loaded`
+
+Internally these attributes are converted to properties and drop the `data-trvt` prefix.

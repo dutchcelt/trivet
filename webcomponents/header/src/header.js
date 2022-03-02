@@ -8,11 +8,12 @@ export class TrvtHeader extends HTMLElement {
 		this.src = this.dataset.trvtSrc || '';
 		this.type = this.dataset.trvtType || 'home';
 		this.text = this.dataset.trvtTitle || '';
+		this.dynamicCustomStyles = new CSSStyleSheet();
 	}
 	connectedCallback() {
-		this.shadowRoot.adoptedStyleSheets = [...styles, headerCSS];
-		this.shadowRoot.appendChild(this.render());
+		this.shadowRoot.adoptedStyleSheets = [...styles, headerCSS, this.dynamicCustomStyles];
 		this.heading = this.shadowRoot.querySelector('h1');
+		this.shadowRoot.appendChild(this.render());
 		this.__setStyle();
 	}
 
@@ -40,7 +41,8 @@ export class TrvtHeader extends HTMLElement {
 	 */
 	__setStyle() {
 		const src = encodeURI(this.src);
-		this.style = `--header-image-src:url("${src}");`;
+		const rule = `:host { --header-image-src: url('${src}'); }`;
+		this.dynamicCustomStyles.replace(rule);
 	}
 
 	/**

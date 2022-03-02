@@ -22,6 +22,7 @@ export class TrvtLayout extends HTMLElement {
 	connectedCallback() {
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
+		document.body.dataset.loaded = 'true';
 		contentLoadedMachine.transition('loading', 'READY')
 	}
 
