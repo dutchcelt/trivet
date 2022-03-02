@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"files": [
 		"src/core.css",
-		"src/core.js",
-		"../../assets/styles/trivet.css"
+		"src/core.js"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
@@ -14,9 +13,6 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
 		"@trvt/assets": "workspace:^",
-		"@trvt/designtokens": "workspace:^",
-		"@xstate/fsm": "^1.6.5",
-		"normalize.css": "^8.0.1",
-		"the-new-css-reset": "^1.4.7"
+		"@trvt/designtokens": "workspace:^"
 	}
 }

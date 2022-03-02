@@ -1,4 +1,4 @@
-import { styles, contentLoadedMachine } from '@trvt/core';
+import { styles, bus } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
 
 /**
@@ -22,8 +22,7 @@ export class TrvtLayout extends HTMLElement {
 	connectedCallback() {
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
-		document.body.dataset.loaded = 'true';
-		contentLoadedMachine.transition('loading', 'READY')
+		bus.fire('componentLoaded', { loaded: true });
 	}
 
 	/**

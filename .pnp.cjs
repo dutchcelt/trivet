@@ -53,10 +53,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:webcomponents/dropdown"\
       },\
       {\
-        "name": "@trvt/dutchceltlogo",\
-        "reference": "workspace:webcomponents/dutchceltlogo"\
-      },\
-      {\
         "name": "@trvt/footer",\
         "reference": "workspace:webcomponents/footer"\
       },\
@@ -84,7 +80,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/designtokens", ["workspace:designtokens"]],\
       ["@trvt/docs", ["workspace:docs"]],\
       ["@trvt/dropdown", ["workspace:webcomponents/dropdown"]],\
-      ["@trvt/dutchceltlogo", ["workspace:webcomponents/dutchceltlogo"]],\
       ["@trvt/footer", ["workspace:webcomponents/footer"]],\
       ["@trvt/header", ["workspace:webcomponents/header"]],\
       ["@trvt/layout", ["workspace:webcomponents/layout"]],\
@@ -732,10 +727,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@trvt/core", "workspace:webcomponents/core"],\
             ["@trvt/assets", "workspace:assets"],\
-            ["@trvt/designtokens", "workspace:designtokens"],\
-            ["@xstate/fsm", "npm:1.6.5"],\
-            ["normalize.css", "npm:8.0.1"],\
-            ["the-new-css-reset", "npm:1.4.7"]\
+            ["@trvt/designtokens", "workspace:designtokens"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -757,7 +749,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@trvt/docs", "workspace:docs"],\
             ["@11ty/eleventy", "npm:1.0.0"],\
             ["@trvt/article", "workspace:webcomponents/article"],\
-            ["@trvt/dutchceltlogo", "workspace:webcomponents/dutchceltlogo"],\
             ["@trvt/header", "workspace:webcomponents/header"],\
             ["@trvt/layout", "workspace:webcomponents/layout"],\
             ["copyfiles", "npm:2.4.1"]\
@@ -770,16 +761,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./webcomponents/dropdown/",\
           "packageDependencies": [\
             ["@trvt/dropdown", "workspace:webcomponents/dropdown"],\
-            ["@trvt/core", "workspace:webcomponents/core"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@trvt/dutchceltlogo", [\
-        ["workspace:webcomponents/dutchceltlogo", {\
-          "packageLocation": "./webcomponents/dutchceltlogo/",\
-          "packageDependencies": [\
-            ["@trvt/dutchceltlogo", "workspace:webcomponents/dutchceltlogo"],\
             ["@trvt/core", "workspace:webcomponents/core"]\
           ],\
           "linkType": "SOFT"\
@@ -1231,15 +1212,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@web/parse5-utils", "npm:1.3.0"],\
             ["@types/parse5", "npm:6.0.3"],\
             ["parse5", "npm:6.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@xstate/fsm", [\
-        ["npm:1.6.5", {\
-          "packageLocation": "./.yarn/cache/@xstate-fsm-npm-1.6.5-ce4efd1c39-da24fa4f40.zip/node_modules/@xstate/fsm/",\
-          "packageDependencies": [\
-            ["@xstate/fsm", "npm:1.6.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5922,15 +5894,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["normalize.css", [\
-        ["npm:8.0.1", {\
-          "packageLocation": "./.yarn/cache/normalize.css-npm-8.0.1-6124fb39b6-4698cae88e.zip/node_modules/normalize.css/",\
-          "packageDependencies": [\
-            ["normalize.css", "npm:8.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["npmlog", [\
         ["npm:6.0.0", {\
           "packageLocation": "./.yarn/cache/npmlog-npm-6.0.0-94a534434f-33d8a7fe3d.zip/node_modules/npmlog/",\
@@ -8869,15 +8832,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tfunk", "npm:4.0.0"],\
             ["chalk", "npm:1.1.3"],\
             ["dlv", "npm:1.1.3"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["the-new-css-reset", [\
-        ["npm:1.4.7", {\
-          "packageLocation": "./.yarn/cache/the-new-css-reset-npm-1.4.7-22e9d55d6f-62d4c307d0.zip/node_modules/the-new-css-reset/",\
-          "packageDependencies": [\
-            ["the-new-css-reset", "npm:1.4.7"]\
           ],\
           "linkType": "HARD"\
         }]\

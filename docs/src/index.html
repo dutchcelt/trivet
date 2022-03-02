@@ -28,7 +28,23 @@
 			  "polyfillEnable": ["css-modules", "json-modules"]
 			}
 		</script>
-
+		<script type="importmap">
+		 {
+			"imports": {
+				"@trvt/assets": "/assets/index.js",
+				"@trvt/designtokens": "/designtokens/index.js",
+				"@trvt/article": "/webcomponents/article/index.js",
+				"@trvt/button": "/webcomponents/button/index.js",
+				"@trvt/card": "/webcomponents/card/index.js",
+				"@trvt/core": "/webcomponents/core/index.js",
+				"@trvt/dropdown": "/webcomponents/dropdown/index.js",
+				"@trvt/footer": "/webcomponents/footer/index.js",
+				"@trvt/header": "/webcomponents/header/index.js",
+				"@trvt/navigation": "/webcomponents/navigation/index.js",
+				"@trvt/layout": "/webcomponents/layout/index.js"
+			}
+		  }
+		</script>
 		<script type="module">
 			import '@trvt/layout';
 			import '@trvt/article';

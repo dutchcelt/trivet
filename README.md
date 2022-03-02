@@ -8,11 +8,11 @@ The system offers:
 
 -   Design tokens ([Style Dictionary](https://amzn.github.io/style-dictionary/#/))
 -   Layout system (Gridless)
--   Web Components with state machines (using [@xstate/fsm](https://xstate.js.org/docs/packages/xstate-fsm/#features))
+-   Web Components
 -   Assets like icon font
 -   Development and Testing tools
 
-**Note**: looking to make the setup dependency free. So removing Style Dictionary and Xstate.
+**Note**: looking to make the setup dependency free. So Style Dictionary is under review.
 
 ## Zero Install
 

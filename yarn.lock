@@ -553,9 +553,6 @@ __metadata:
   dependencies:
     "@trvt/assets": "workspace:^"
     "@trvt/designtokens": "workspace:^"
-    "@xstate/fsm": ^1.6.5
-    normalize.css: ^8.0.1
-    the-new-css-reset: ^1.4.7
   languageName: unknown
   linkType: soft
 
@@ -573,7 +570,6 @@ __metadata:
   dependencies:
     "@11ty/eleventy": ^1.0.0
     "@trvt/article": "workspace:^"
-    "@trvt/dutchceltlogo": "workspace:^"
     "@trvt/header": "workspace:^"
     "@trvt/layout": "workspace:^"
     copyfiles: ^2.4.1
@@ -583,14 +579,6 @@ __metadata:
 "@trvt/dropdown@workspace:webcomponents/dropdown":
   version: 0.0.0-use.local
   resolution: "@trvt/dropdown@workspace:webcomponents/dropdown"
-  dependencies:
-    "@trvt/core": ^0.1.0
-  languageName: unknown
-  linkType: soft
-
-"@trvt/dutchceltlogo@workspace:^, @trvt/dutchceltlogo@workspace:webcomponents/dutchceltlogo":
-  version: 0.0.0-use.local
-  resolution: "@trvt/dutchceltlogo@workspace:webcomponents/dutchceltlogo"
   dependencies:
     "@trvt/core": ^0.1.0
   languageName: unknown
@@ -984,13 +972,6 @@ __metadata:
     "@types/parse5": ^6.0.1
     parse5: ^6.0.1
   checksum: 379849c1b0a060d50037c7dc90d27231dc68f57b1034d87f89129c3cd87fa27d3a0f8e550e1ab3be00bb1c0d440a8fa95c153a481ed8c2c705fd46fbc8a8433d
-  languageName: node
-  linkType: hard
-
-"@xstate/fsm@npm:^1.6.5":
-  version: 1.6.5
-  resolution: "@xstate/fsm@npm:1.6.5"
-  checksum: da24fa4f40479223da34714640cea64ec894bbfeb2281a0a870af68882ae1d6fb6d724d6e5c0d4e6929728c699b92858f7389ef7d6a5d00ac66ba8cde3934eed
   languageName: node
   linkType: hard
 
@@ -5051,13 +5032,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"normalize.css@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "normalize.css@npm:8.0.1"
-  checksum: 4698cae88ec35e3f3e82f9f9402e6ffb906c27ccd6373cad88e6b3f5634fc7a043cb38702472299e5edb73825cf8b18d5fd9283f58829eddda79ea97453049a2
-  languageName: node
-  linkType: hard
-
 "npmlog@npm:^6.0.0":
   version: 6.0.0
   resolution: "npmlog@npm:6.0.0"
@@ -7333,13 +7307,6 @@ __metadata:
     chalk: ^1.1.3
     dlv: ^1.1.3
   checksum: 91eb2880b2ba889682f4b8e3a0e7b1d2f4a637ad60479dcaa4ac726403be35a132357b1149aae7ecf6c45784d71f3d545166c50fa3d20d2e8caef45090854118
-  languageName: node
-  linkType: hard
-
-"the-new-css-reset@npm:^1.4.7":
-  version: 1.4.7
-  resolution: "the-new-css-reset@npm:1.4.7"
-  checksum: 62d4c307d0cc53d486e1d994bcf153217e6c8869e7dc89a8a6c224a95b520a541129d1e55e55fdffb40a17e8f089bdf73316d2ee1655e2786131f3f2fedd6be6
   languageName: node
   linkType: hard
 
