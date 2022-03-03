@@ -18,6 +18,7 @@ export class TrvtArticle extends HTMLElement {
         <h2>${this.title}</h2>
         <slot name="intro"></slot>
         <slot name="content"></slot>
+        <slot name="aside"></slot>
         <slot name="footer"></slot>
 			</article>
 		`);
