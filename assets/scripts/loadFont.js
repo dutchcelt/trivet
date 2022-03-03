@@ -1,3 +1,14 @@
+/**
+ * Dynamically load fonts.
+ * Matches the settings used in the Design tokens (Style Dictionary).
+ * @param family
+ * @param filename
+ * @param path
+ * @param style
+ * @param weight
+ * @param display
+ * @returns {Promise<void>}
+ */
 export const loadFont = async ({ family, filename, path, style, weight, display }) => {
 	const valid = [family, filename, path, style, weight].some((f) => !!f && typeof f === 'string');
 	if ((path.value, path)) {

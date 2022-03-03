@@ -1,3 +1,7 @@
+/**
+ * Detect support CSS at-rule for layers
+ * @returns {boolean}
+ */
 export const hasCSSLayerSupport = () => {
 	const stylesheet = new CSSStyleSheet();
 	const layer = 'test';
