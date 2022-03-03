@@ -1,7 +1,8 @@
 @layer components {
 	:host {
 		/* 	--trvt-colors-base-text: DarkSlateBlue; */
-		--article-display: var(--trvt-layout-display, inherit);
+		--article-gap: 2rem;
+		--article-display: var(--trvt-layout-display, block);
 		--article-text-color: var(--trvt-colors-base-light);
 	}
 
@@ -12,6 +13,7 @@
 		/* Layout */
 
 		/* Box Model */
+		margin-block: var(--article-gap);
 
 		/* Positioning */
 
@@ -26,6 +28,7 @@
 		color: var(--trvt-theme-color-secondary);
 		font-size: var(--trvt-typography-size-xxl);
 		line-height: var(--trvt-typography-leading-l);
+		margin-block: 0;
 	}
 	h2:empty {
 		display: none;
