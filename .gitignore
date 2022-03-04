@@ -1,6 +1,7 @@
 # Editors / IDE
 .idea
 .nova
+.vscode
 
 # NPM/Node
 .npmrc

@@ -69,7 +69,7 @@ export class TrvtLayout extends HTMLElement {
 			"header": `<div class="header"><slot name="header"></slot></div>`,
 			"main": `<div class="main"><slot name="main"></slot></div>`,
 			"sidebar": `<div class="sidebar"><slot name="sidebar"></slot></div>`,
-			"footer": `<div class="footer"><slot name="footer"></slot></div>`
+			"footer": `<div class="footer"><slot name="footer"></slot></div>`,
 		}
 	}
 }

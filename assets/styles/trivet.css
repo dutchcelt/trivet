@@ -102,4 +102,7 @@
 	[data-loaded='true'] [slot] {
 		opacity: 1;
 	}
+	body::before {
+		content: var(--trvt-icons-glyphs-loade)
+	}
 }

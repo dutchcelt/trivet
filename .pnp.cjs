@@ -695,8 +695,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@trvt/assets", "workspace:assets"],\
             ["@trvt/designtokens", "workspace:designtokens"],\
+            ["glob", "npm:7.2.0"],\
             ["rollup", "npm:2.67.2"],\
-            ["rollup-plugin-styles", "virtual:46e78f87f315b5f95ea7d8bc3135a308c9efd7ddbdd4f6aa952f914488dae117f1fcc9fb15d6f941f4124a80488242288cce56233cf931fc5e0bdbe056077667#npm:4.0.0"]\
+            ["rollup-plugin-styles", "virtual:46e78f87f315b5f95ea7d8bc3135a308c9efd7ddbdd4f6aa952f914488dae117f1fcc9fb15d6f941f4124a80488242288cce56233cf931fc5e0bdbe056077667#npm:4.0.0"],\
+            ["wawoff2", "npm:2.0.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -9210,6 +9212,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/void-elements-npm-3.1.0-4f43780839-0390f81810.zip/node_modules/void-elements/",\
           "packageDependencies": [\
             ["void-elements", "npm:3.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["wawoff2", [\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/wawoff2-npm-2.0.1-9001e03d43-7fbe0c5968.zip/node_modules/wawoff2/",\
+          "packageDependencies": [\
+            ["wawoff2", "npm:2.0.1"],\
+            ["argparse", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

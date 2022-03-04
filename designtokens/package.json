@@ -14,9 +14,8 @@
 	"scripts": {
 		"build:clean": "style-dictionary clean ",
 		"build:tokens": "style-dictionary build -c config.json",
-		"build:icons": "style-dictionary build -c config-icons.json",
 		"build:fonts": "style-dictionary build -c config-fonts.json",
-		"build": "yarn build:clean && yarn build:tokens && yarn build:icons && yarn build:fonts"
+		"build": "yarn build:clean && yarn build:tokens && yarn build:fonts"
 	},
 	"author": "C. Egor Kloos",
 	"license": "MIT",
