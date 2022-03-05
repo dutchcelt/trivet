@@ -1,5 +1,10 @@
 const iconFontVersion = `v1.1`;
-const iconFontVariableSource = `./icons/trvt-icons-${iconFontVersion}/variables.scss`;
+const iconFontName = `trvt-icons`;
+const iconFontDir = `${iconFontName}-${iconFontVersion}`;
+const iconFontPath = `${iconFontDir}/fonts`;
+const iconAssetPath = './icons';
+const iconAssetTarget = './build';
+const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
 
 /**
  * convert icon font to woff2 format
@@ -7,9 +12,9 @@ const iconFontVariableSource = `./icons/trvt-icons-${iconFontVersion}/variables.
 import wawoff from 'wawoff2';
 import fs from 'fs';
 const sourceFile = fs.readFileSync(
-	`./icons/trvt-icons-${iconFontVersion}/fonts/trvt-icons.ttf`
+	`${iconAssetPath}/${iconFontPath}/${iconFontName}.ttf`
 );
-const iconFile = './build/trvt-icons.woff2';
+const iconFile = `${iconAssetTarget}/${iconFontName}.woff2`;
 
 wawoff.compress(sourceFile).then((convertedFile) => {
 	fs.writeFileSync(iconFile, convertedFile);
@@ -21,7 +26,7 @@ wawoff.compress(sourceFile).then((convertedFile) => {
 import { sassToCss } from './scripts/sassToCss.js';
 sassToCss.convert({
 	src: iconFontVariableSource,
-	dest: './build/glyphs.css',
+	dest: `${iconAssetTarget}/glyphs.css`,
 	rule: `:root `,
 	withPropValues: true,
 });
@@ -31,17 +36,17 @@ sassToCss.convert({
  */
 sassToCss.convert({
 	src: iconFontVariableSource,
-	dest: './build/trvt-icon-classes.css',
+	dest: `${iconAssetTarget}/${iconFontName}-classes.css`,
 	rule: `@layer designsystem `,
 	withPropValues: false,
 });
 
 import styles from 'rollup-plugin-styles';
 export default {
-	input: './icons/index.js',
+	input: `${iconAssetPath}/index.js`,
 	preserveModules: false,
 	output: {
-		dir: './build',
+		dir: `${iconAssetTarget}`,
 		entryFileNames: 'icons.js',
 		chunkFileNames: '[name].js',
 		assetFileNames: '[name][extname]',
