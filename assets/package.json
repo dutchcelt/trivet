@@ -1,41 +1,44 @@
 {
-  "name": "@trvt/assets",
-  "version": "0.0.0",
-  "type": "module",
-  "main": "index.js",
-  "files": [
-    "fonts/vendors/googlefonts/Assistant/Assistant-VariableFont_wght.woff2",
-    "fonts/vendors/googlefonts/Bitter/Bitter-Italic-VariableFont_wght.woff2",
-    "fonts/vendors/googlefonts/Bitter/Bitter-VariableFont_wght.woff2",
-    "fonts/vendors/googlefonts/Rubik/Rubik-Italic-VariableFont_wght.woff2",
-    "fonts/vendors/googlefonts/Rubik/Rubik-VariableFont_wght.woff2",
-    "icons/trvt-icons-v1.1/fonts/trvt-icons.woff",
-    "styles/trivet.css",
-    "styles/reset.css",
-    "styles/normalize.css",
-    "scripts/hasCSSLayerSupport.js",
-    "scripts/insertIntoCssLayer.js",
-    "scripts/loadFont.js",
-    "images/keyboard-purple.jpg",
-    "images/shardes.jpg",
-    "build/icons.js"
-  ],
-  "description": "A very simple web component base class",
-  "author": "C. Egor Kloos",
-  "license": "MIT",
-  "homepage": "https://github.com/dutchcelt/trivet#readme",
-  "packageManager": "yarn@3.1.1",
-  "dependencies": {
-    "@trvt/designtokens": "workspace:^",
-    "wawoff2": "^2.0.1"
-  },
-  "devDependencies": {
-    "glob": "^7.2.0",
-    "rollup": "^2.67.2",
-    "rollup-plugin-styles": "^4.0.0"
-  },
-  "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "develop": "yarn build --watch"
-  }
+	"name": "@trvt/assets",
+	"version": "0.0.0",
+	"type": "module",
+	"main": "index.js",
+	"files": [
+		"fonts/vendors/googlefonts/Assistant/Assistant-VariableFont_wght.woff2",
+		"fonts/vendors/googlefonts/Bitter/Bitter-Italic-VariableFont_wght.woff2",
+		"fonts/vendors/googlefonts/Bitter/Bitter-VariableFont_wght.woff2",
+		"fonts/vendors/googlefonts/Rubik/Rubik-Italic-VariableFont_wght.woff2",
+		"fonts/vendors/googlefonts/Rubik/Rubik-VariableFont_wght.woff2",
+		"icons/trvt-icons-v1.1/fonts/trvt-icons.woff",
+		"styles/trivet.css",
+		"styles/reset.css",
+		"styles/normalize.css",
+		"scripts/hasCSSLayerSupport.js",
+		"scripts/insertIntoCssLayer.js",
+		"scripts/loadFont.js",
+		"images/keyboard-purple.jpg",
+		"images/shardes.jpg",
+		"build/icons.js",
+		"build/glyphs.css",
+		"build/trvt-icons.woff2",
+		"build/trvt-icon-classes.css"
+	],
+	"description": "A very simple web component base class",
+	"author": "C. Egor Kloos",
+	"license": "MIT",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"packageManager": "yarn@3.2.0",
+	"dependencies": {
+		"@trvt/designtokens": "workspace:^"
+	},
+	"devDependencies": {
+		"glob": "^7.2.0",
+		"rollup": "^2.67.2",
+		"rollup-plugin-styles": "^4.0.0",
+		"wawoff2": "^2.0.1"
+	},
+	"scripts": {
+		"build": "rollup -c rollup.icons.config.js",
+		"develop": "yarn build --watch"
+	}
 }
