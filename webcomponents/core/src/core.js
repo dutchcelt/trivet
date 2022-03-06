@@ -3,7 +3,7 @@ import { trvtTokensFontfaces } from '@trvt/designtokens';
 
 /* Load the font configs in our tokens and load the ones present */
 import { loadFont } from '@trvt/assets';
-const {base, baseItalic, display, gui} = trvtTokensFontfaces.font.face;
+const { base, baseItalic, display, gui } = trvtTokensFontfaces.font.face;
 const fontArray = [base, baseItalic, display, gui].map((f) => !!f && f);
 fontArray.forEach((face) => loadFont(face));
 
@@ -16,7 +16,6 @@ bus.register('componentLoaded', (event) => {
 });
 
 /* Base styles for all Trivet Components */
-import coreCSS from './core.css' assert {type: 'css'};
+import coreCSS from './core.css' assert { type: 'css' };
 import { normalizeCSS } from '@trvt/assets';
 export const styles = [normalizeCSS, coreCSS];
-

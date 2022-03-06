@@ -10,27 +10,32 @@ export class TrvtHeader extends HTMLElement {
 		this.text = this.dataset.trvtTitle || '';
 		this.dynamicCustomStyles = new CSSStyleSheet();
 	}
+
 	connectedCallback() {
-		this.shadowRoot.adoptedStyleSheets = [...styles, headerCSS, this.dynamicCustomStyles];
+		this.shadowRoot.adoptedStyleSheets = [
+			...styles,
+			headerCSS,
+			this.dynamicCustomStyles,
+		];
 		this.heading = this.shadowRoot.querySelector('h1');
 		this.shadowRoot.appendChild(this.render());
 		this.__setStyle();
 	}
 
 	static get observedAttributes() {
-		return ['data-trvt-src','data-trvt-title'];
+		return ['data-trvt-src', 'data-trvt-title'];
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
 		const attributeValue = newValue || oldValue;
-		switch (name){
+		switch (name) {
 			case 'data-trvt-src':
 				this.src = attributeValue || '';
-				if(this.src) this.__setStyle();
+				if (this.src) this.__setStyle();
 				break;
 			case 'data-trvt-title':
 				this.text = attributeValue || '';
-				if(this.heading) this.heading.textContent = this.text;
+				if (this.heading) this.heading.textContent = this.text;
 				break;
 		}
 	}

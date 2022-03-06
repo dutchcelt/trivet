@@ -1,138 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-	<title>Trivet Web Components</title>
-	<meta charset="utf-8"/>
-	<meta
-		name="viewport"
-		content="width=device-width, user-scalable=yes, initial-scale=1"
-	/>
-	<!--		<meta name="theme-color" content="#29282d" />-->
-	<!--
+	<head>
+		<title>Trivet Web Components</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=yes, initial-scale=1"
+		/>
+		<!--		<meta name="theme-color" content="#29282d" />-->
+		<!--
 		<meta name="theme-color" content="#29282d" media="(prefers-color-scheme: dark)" />
 		<meta name="theme-color" content="#625b60" media="(prefers-color-scheme: light)" />
 	-->
-	<link href="index.css" rel="stylesheet"/>
-	<script
-		async
-		crossorigin="anonymous"
-		src="https://cdn.jsdelivr.net/npm/construct-style-sheets-polyfill@3.0.4/dist/adoptedStyleSheets.min.js"
-	></script>
-	<script
-		async
-		crossorigin="anonymous"
-		src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"
-	></script>
-	<script type="esms-options">
+		<link href="index.css" rel="stylesheet" />
+		<script
+			async
+			crossorigin="anonymous"
+			src="https://cdn.jsdelivr.net/npm/construct-style-sheets-polyfill@3.0.4/dist/adoptedStyleSheets.min.js"
+		></script>
+		<script
+			async
+			crossorigin="anonymous"
+			src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"
+		></script>
+		<script type="esms-options">
 			{
 			  "polyfillEnable": ["css-modules", "json-modules"]
 			}
-
-	</script>
-	<script type="importmap">
-		 {
-			"imports": {
-				"@trvt/assets": "/assets/index.js",
-				"@trvt/designtokens": "/designtokens/index.js",
-				"@trvt/article": "/webcomponents/article/index.js",
-				"@trvt/button": "/webcomponents/button/index.js",
-				"@trvt/card": "/webcomponents/card/index.js",
-				"@trvt/core": "/webcomponents/core/index.js",
-				"@trvt/dropdown": "/webcomponents/dropdown/index.js",
-				"@trvt/footer": "/webcomponents/footer/index.js",
-				"@trvt/header": "/webcomponents/header/index.js",
-				"@trvt/navigation": "/webcomponents/navigation/index.js",
-				"@trvt/layout": "/webcomponents/layout/index.js"
+		</script>
+		<script type="importmap">
+			{
+				"imports": {
+					"@trvt/assets": "/assets/index.js",
+					"@trvt/designtokens": "/designtokens/index.js",
+					"@trvt/article": "/webcomponents/article/index.js",
+					"@trvt/button": "/webcomponents/button/index.js",
+					"@trvt/card": "/webcomponents/card/index.js",
+					"@trvt/core": "/webcomponents/core/index.js",
+					"@trvt/dropdown": "/webcomponents/dropdown/index.js",
+					"@trvt/footer": "/webcomponents/footer/index.js",
+					"@trvt/header": "/webcomponents/header/index.js",
+					"@trvt/navigation": "/webcomponents/navigation/index.js",
+					"@trvt/layout": "/webcomponents/layout/index.js"
+				}
 			}
-		  }
-
-	</script>
-	<script type="module">
-		import '@trvt/layout';
-		import '@trvt/article';
-		import './dutchceltlogo.js';
-		import '@trvt/header';
-	</script>
-</head>
-<body>
-<trvt-layout data-trvt-type="page">
-	<nav slot="navigation">
-		<dutchcelt-logo data-trvt-href="https://dutchcelt.com/"></dutchcelt-logo>
-	</nav>
-	<header slot="header">
-		<trvt-header
-			data-trvt-src="/assets/images/print-board-2.jpg"
-			data-trvt-type="home"
-			data-trvt-title="Web Musings">
-		</trvt-header>
-	</header>
-	<main slot="main">
-		<trvt-article data-trvt-title="Web Components, the tide is rising">
-			<div slot="intro">
-				<p >
-					Introduction: Lorem ipsum dolor amet mustache knausgaard
-					+1, blue bottle waistcoat tbh semiotics artisan synth
-					stumptown gastropub cornhole celiac swag. Brunch
-					raclette vexillologist post-ironic glossier ennui XOXO
-					mlkshk godard pour-over blog tumblr humblebrag. Blue
-					bottle put a bird on it twee prism biodiesel brooklyn.
-					Blue bottle ennui tbh succulents.
+		</script>
+		<script type="module">
+			import '@trvt/layout';
+			import '@trvt/article';
+			import './dutchceltlogo.js';
+			import '@trvt/header';
+		</script>
+	</head>
+	<body>
+		<trvt-layout data-trvt-type="page">
+			<nav slot="navigation">
+				<dutchcelt-logo
+					data-trvt-href="https://dutchcelt.com/"
+				></dutchcelt-logo>
+			</nav>
+			<header slot="header">
+				<trvt-header
+					data-trvt-src="/assets/images/print-board-2.jpg"
+					data-trvt-type="home"
+					data-trvt-title="Web Musings"
+				>
+				</trvt-header>
+			</header>
+			<main slot="main">
+				<trvt-article
+					data-trvt-title="Web Components, the tide is rising"
+				>
+					<div slot="intro">
+						<p>
+							Introduction: Lorem ipsum dolor amet mustache
+							knausgaard +1, blue bottle waistcoat tbh semiotics
+							artisan synth stumptown gastropub cornhole celiac
+							swag. Brunch raclette vexillologist post-ironic
+							glossier ennui XOXO mlkshk godard pour-over blog
+							tumblr humblebrag. Blue bottle put a bird on it twee
+							prism biodiesel brooklyn. Blue bottle ennui tbh
+							succulents.
+						</p>
+					</div>
+					<div slot="content">
+						<h3>Paragraph header</h3>
+						<p>
+							Lorem ipsum dolor amet mustache knausgaard +1, blue
+							bottle waistcoat tbh semiotics artisan synth
+							stumptown gastropub cornhole celiac swag. Brunch
+							raclette vexillologist post-ironic glossier ennui
+							XOXO mlkshk godard pour-over blog tumblr humblebrag.
+							Blue bottle put a bird on it twee prism biodiesel
+							brooklyn. Blue bottle ennui tbh succulents.
+						</p>
+					</div>
+					<div slot="footer">
+						<h6>Request for permission</h6>
+						<button>button element</button>
+					</div>
+				</trvt-article>
+			</main>
+			<div slot="sidebar">
+				<trvt-card>
+					<img
+						src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"
+					/>
+					Twitter
+				</trvt-card>
+				<trvt-card>
+					<img
+						src="https://img.icons8.com/glyph-neue/32/000000/linkedin-circled.png"
+					/>
+					Linkedin
+				</trvt-card>
+				<trvt-card> Informaat</trvt-card>
+				<trvt-card>
+					<img
+						src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png"
+					/>
+					Instagram
+				</trvt-card>
+				<trvt-card> Flickr</trvt-card>
+			</div>
+			<footer slot="footer">
+				<p class="subtext">
+					Lorem Ipsum is the single greatest threat. We are not - we
+					are not keeping up with other websites. Lorem Ipsum best not
+					make any more threats to your website. It will be met with
+					fire and fury like the world has never seen. Does everybody
+					know that pig named Lorem Ipsum? An ‘extremely credible
+					source’ has called my office and told me that Barack Obama’s
+					placeholder text is a fraud.
 				</p>
-			</div>
-			<div slot="content">
-				<h3>Paragraph header</h3>
-				<p>
-					Lorem ipsum dolor amet mustache knausgaard +1, blue
-					bottle waistcoat tbh semiotics artisan synth
-					stumptown gastropub cornhole celiac swag. Brunch
-					raclette vexillologist post-ironic glossier ennui
-					XOXO mlkshk godard pour-over blog tumblr humblebrag.
-					Blue bottle put a bird on it twee prism biodiesel
-					brooklyn. Blue bottle ennui tbh succulents.
-				</p>
-			</div>
-			<div slot="footer">
-				<h6>Request for permission</h6>
-				<button>button element</button>
-			</div>
-		</trvt-article>
-	</main>
-	<div slot="sidebar">
-		<trvt-card>
-			<img
-				src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"
-			/>
-			Twitter
-		</trvt-card>
-		<trvt-card>
-			<img
-				src="https://img.icons8.com/glyph-neue/32/000000/linkedin-circled.png"
-			/>
-			Linkedin
-		</trvt-card>
-		<trvt-card> Informaat</trvt-card>
-		<trvt-card>
-			<img
-				src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png"
-			/>
-			Instagram
-		</trvt-card>
-		<trvt-card> Flickr</trvt-card>
-	</div>
-	<footer slot="footer">
-		<p class="subtext">
-			Lorem Ipsum is the single greatest threat. We are not - we
-			are not keeping up with other websites. Lorem Ipsum best not
-			make any more threats to your website. It will be met with
-			fire and fury like the world has never seen. Does everybody
-			know that pig named Lorem Ipsum? An ‘extremely credible
-			source’ has called my office and told me that Barack Obama’s
-			placeholder text is a fraud.
-		</p>
-		<nav>
-			<dutchcelt-logo data-trvt-href="https://dutchcelt.com/"></dutchcelt-logo>
-		</nav>
-	</footer>
-</trvt-layout>
-</body>
+				<nav>
+					<dutchcelt-logo
+						data-trvt-href="https://dutchcelt.com/"
+					></dutchcelt-logo>
+				</nav>
+			</footer>
+		</trvt-layout>
+	</body>
 </html>

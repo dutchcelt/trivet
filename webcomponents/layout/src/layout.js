@@ -1,5 +1,5 @@
-import {styles, bus} from '@trvt/core';
-import layoutCSS from './layout.css' assert {type: 'css'};
+import { styles, bus } from '@trvt/core';
+import layoutCSS from './layout.css' assert { type: 'css' };
 
 /**
  * Lookup of the slots called in the Light DOM
@@ -7,34 +7,53 @@ import layoutCSS from './layout.css' assert {type: 'css'};
  * @returns {string[]}
  * @private
  */
-const __getSlotNames = (elms) => [...elms]
-	.filter(n => n.hasAttribute('slot'))
-	.map(e => e.getAttribute('slot'));
+const __getSlotNames = (elms) =>
+	[...elms]
+		.filter((n) => n.hasAttribute('slot'))
+		.map((e) => e.getAttribute('slot'));
 
 /**
  * Prevent the Light DOM from setting the order of the slots
  * @param control
  * @param slots
  * @returns {*}
+ * @private
  */
-const sortSlotNames = (control, slots) => control.filter(c => slots.some(s => s === c));
+const __sortSlotNames = (control, slots) =>
+	control.filter((c) => slots.some((s) => s === c));
 
 export class TrvtLayout extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow({mode: 'open'});
-		this.slotNames = sortSlotNames(Object.keys(this.__slotMarkupObject()), __getSlotNames(this.children));
+		this.attachShadow({ mode: 'open' });
+		this.trvtType = this.dataset.trvtType;
+		this.slotNames = __sortSlotNames(
+			Object.keys(this.__slotMarkupObject()),
+			__getSlotNames(this.children)
+		);
+		bus.register('trvtLayout', this.__trvtLayoutEvent.bind(this));
 	}
 
 	connectedCallback() {
 		if (this.slotNames.length === 0) {
 			// No slots, no content!
-			console.warn('trvt-layout doesn\'t have any slots');
+			console.warn("trvt-layout doesn't have any slots");
 			return false;
 		}
+
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
-		bus.fire('componentLoaded', {loaded: true});
+
+		this.__defaultSlot().addEventListener('slotchange', () => {
+			bus.fire('componentLoaded', { loaded: true });
+		});
+	}
+
+	__defaultSlot() {
+		const slotAttribute = this.slotNames.includes('main')
+			? '[name=main]'
+			: '[name]';
+		return this.shadowRoot.querySelector(`slot${slotAttribute}`);
 	}
 
 	/**
@@ -42,9 +61,8 @@ export class TrvtLayout extends HTMLElement {
 	 * @returns {DocumentFragment}
 	 */
 	render() {
-		const type = this.shadowRoot.host.getAttribute('data-trvt-type');
 		return document.createRange().createContextualFragment(`
-			${!!type ? this.__template() : ``}
+			${!!this.trvtType ? this.__template() : ``}
 		`);
 	}
 
@@ -54,7 +72,9 @@ export class TrvtLayout extends HTMLElement {
 	 * @private
 	 */
 	__template() {
-		return this.slotNames.map(name => this.__slotMarkupObject()[name] || ``).join(``);
+		return this.slotNames
+			.map((name) => this.__slotMarkupObject()[name] || ``)
+			.join(``);
 	}
 
 	/**
@@ -64,12 +84,22 @@ export class TrvtLayout extends HTMLElement {
 	 */
 	__slotMarkupObject() {
 		return {
-			"notifications": `<div class="notifications"><slot name="notifications"></slot></div>`,
-			"navigation": `<div class="navigation"><slot name="navigation"></slot></div>`,
-			"header": `<div class="header"><slot name="header"></slot></div>`,
-			"main": `<div class="main"><slot name="main"></slot></div>`,
-			"sidebar": `<div class="sidebar"><slot name="sidebar"></slot></div>`,
-			"footer": `<div class="footer"><slot name="footer"></slot></div>`,
+			notifications: `<div class="notifications"><slot name="notifications"></slot></div>`,
+			navigation: `<div class="navigation"><slot name="navigation"></slot></div>`,
+			header: `<div class="header"><slot name="header"></slot></div>`,
+			main: `<div class="main"><slot name="main"></slot></div>`,
+			sidebar: `<div class="sidebar"><slot name="sidebar"></slot></div>`,
+			footer: `<div class="footer"><slot name="footer"></slot></div>`,
+		};
+	}
+	__trvtLayoutEvent(event) {
+		const component = event.detail.component;
+		if (component && component.hasOwnProperty('trvtLayout')) {
+			component.trvtLayout = this.trvtType;
+		} else if (component && component.localName) {
+			console.warn(
+				`Can't set Layout type on <${component.localName}> because it doesn't have its own 'trvtLayout' property.`
+			);
 		}
 	}
 }
