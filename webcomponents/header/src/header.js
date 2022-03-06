@@ -41,7 +41,7 @@ export class TrvtHeader extends HTMLElement {
 	}
 
 	/**
-	 *
+	 * Add the css prop to an adopted stylesheet
 	 * @private
 	 */
 	__setStyle() {
@@ -51,7 +51,7 @@ export class TrvtHeader extends HTMLElement {
 	}
 
 	/**
-	 *
+	 * Create a <H1> element
 	 * @returns {DocumentFragment}
 	 */
 	render() {

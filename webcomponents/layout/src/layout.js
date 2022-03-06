@@ -22,6 +22,7 @@ const __getSlotNames = (elms) =>
 const __sortSlotNames = (control, slots) =>
 	control.filter((c) => slots.some((s) => s === c));
 
+
 export class TrvtLayout extends HTMLElement {
 	constructor() {
 		super();
@@ -40,15 +41,18 @@ export class TrvtLayout extends HTMLElement {
 			console.warn("trvt-layout doesn't have any slots");
 			return false;
 		}
-
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
-
 		this.__defaultSlot().addEventListener('slotchange', () => {
 			bus.fire('componentLoaded', { loaded: true });
 		});
 	}
 
+	/**
+	 * Get the main (ie default) slot or if not available any slot.
+	 * @returns {Element}
+	 * @private
+	 */
 	__defaultSlot() {
 		const slotAttribute = this.slotNames.includes('main')
 			? '[name=main]'
@@ -92,6 +96,12 @@ export class TrvtLayout extends HTMLElement {
 			footer: `<div class="footer"><slot name="footer"></slot></div>`,
 		};
 	}
+
+	/**
+	 * Setting the layout type on the dispatched web component
+	 * @param event
+	 * @private
+	 */
 	__trvtLayoutEvent(event) {
 		const component = event.detail.component;
 		if (component && component.hasOwnProperty('trvtLayout')) {
