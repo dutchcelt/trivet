@@ -9,11 +9,13 @@ fontArray.forEach((face) => loadFont(face));
 
 /* Register event to prevent FOUC */
 import { bus } from './eventbus.js';
-bus.register('componentLoaded', (event) => {
-	event.detail.loaded
-		? (document.body.dataset.loaded = 'true')
-		: delete document.body.dataset.loaded;
-});
+const componentLoadedEvent = (event) => {
+	if( event.detail.loaded === true) {
+		document.body.dataset.loaded = 'true';
+		bus.remove('componentLoaded', componentLoadedEvent);
+	}
+}
+bus.register('componentLoaded', componentLoadedEvent);
 
 /* Base styles for all Trivet Components */
 import coreCSS from './core.css' assert { type: 'css' };
