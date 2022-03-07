@@ -1,4 +1,4 @@
-import { styles, bus } from '@trvt/core';
+import { styles, dataBus } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
 
 /**
@@ -32,7 +32,7 @@ export class TrvtLayout extends HTMLElement {
 			Object.keys(this.__slotMarkupObject()),
 			__getSlotNames(this.children)
 		);
-		bus.register('trvtLayout', this.__trvtLayoutEvent.bind(this));
+		dataBus.addDetail('trvtLayout', { type: this.trvtType });
 	}
 
 	connectedCallback() {
@@ -44,7 +44,7 @@ export class TrvtLayout extends HTMLElement {
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
 		this.__defaultSlot().addEventListener('slotchange', () => {
-			bus.fire('componentLoaded', { loaded: true });
+			dataBus.fire('componentLoaded', { loaded: true });
 		});
 	}
 
@@ -95,22 +95,6 @@ export class TrvtLayout extends HTMLElement {
 			sidebar: `<div class="sidebar"><slot name="sidebar"></slot></div>`,
 			footer: `<div class="footer"><slot name="footer"></slot></div>`,
 		};
-	}
-
-	/**
-	 * Setting the layout type on the dispatched web component
-	 * @param event
-	 * @private
-	 */
-	__trvtLayoutEvent(event) {
-		const component = event.detail.component;
-		if (component && component.hasOwnProperty('trvtLayout')) {
-			component.trvtLayout = this.trvtType;
-		} else if (component && component.localName) {
-			console.warn(
-				`Can't set Layout type on <${component.localName}> because it doesn't have its own 'trvtLayout' property.`
-			);
-		}
 	}
 }
 

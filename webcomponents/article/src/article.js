@@ -1,4 +1,4 @@
-import { styles, bus } from '@trvt/core';
+import { styles, dataBus } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
 
 export class TrvtArticle extends HTMLElement {
@@ -7,11 +7,9 @@ export class TrvtArticle extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
 		this.trvtTitle = this.dataset.trvtTitle;
-		this.trvtLayout = undefined;
+		this.trvtLayout = dataBus.getDetail('trvtLayout', 'type');
 	}
 	connectedCallback() {
-		// Retrieve Layout type from the global eventbus
-		bus.fire('trvtLayout', { component: this });
 		this.shadowRoot.appendChild(this.render());
 	}
 	render() {
