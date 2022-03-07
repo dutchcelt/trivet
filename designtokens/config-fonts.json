@@ -1,20 +1,6 @@
 {
 	"source": ["tokens/fonts/*.json"],
 	"platforms": {
-		"css": {
-			"prefix": "trvt",
-			"transformGroup": "css",
-			"buildPath": "build/css/",
-			"files": [
-				{
-					"destination": "trvt_tokens-fonts.css",
-					"format": "css/variables",
-					"options": {
-						"showFileHeader": false
-					}
-				}
-			]
-		},
 		"json": {
 			"prefix": "trvt",
 			"transformGroup": "js",

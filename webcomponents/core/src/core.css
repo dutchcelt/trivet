@@ -47,7 +47,6 @@
 	h1 {
 		font-family: var(--trvt-fonts-display-family);
 		font-variation-settings: 'wght' 600;
-		line-height: 1.2;
 		font-size: var(--trvt-typography-size-xxl);
 		line-height: var(--trvt-typography-leading-s);
 	}

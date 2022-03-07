@@ -80,17 +80,6 @@
 		border-radius: 2rem;
 	}
 
-	.trvt-brand-mark {
-		padding: 1rem;
-		font-family: var(--trvt-fonts-gui-family);
-		color: var(--trvt-colors-base-light);
-		font-variation-settings: 'wght' 400;
-		text-decoration: none;
-		font-size: 1.2rem;
-		/* text-transform: capitalize; */
-		letter-spacing: 0.05rem;
-		display: inline-block;
-	}
 }
 
 @layer components {
