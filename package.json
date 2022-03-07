@@ -13,7 +13,7 @@
 	},
 	"author": "C. Egor Kloos",
 	"license": "MIT",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"repository": "https://github.com/dutchcelt/trivet",
 	"workspaces": [
 		"docs",
 		"assets",
