@@ -17,9 +17,9 @@ class EventDataBus {
 		this._bus.removeEventListener(event, callback.bind(this.data[event]));
 		delete this.data[event];
 	}
-	fire(event, data = {}) {
-		const detail = this._storeDetail(event, data);
-		this._bus.dispatchEvent(new CustomEvent(event, detail));
+	fire(event, detail = {}) {
+		const eventDetail = this._storeDetail(event, detail);
+		this._bus.dispatchEvent(new CustomEvent(event, eventDetail));
 	}
 	addDetail(name, detail) {
 		this._storeDetail(name, detail);
