@@ -10,11 +10,10 @@ class EventDataBus {
 		return this.data[name];
 	}
 	register(event, callback) {
-		this._storeDetail(event);
-		this._bus.addEventListener(event, callback.bind(this.data[event]));
+		this._bus.addEventListener(event, callback);
 	}
 	remove(event, callback) {
-		this._bus.removeEventListener(event, callback.bind(this.data[event]));
+		this._bus.removeEventListener(event, callback);
 		delete this.data[event];
 	}
 	fire(event, detail = {}) {
@@ -25,8 +24,8 @@ class EventDataBus {
 		this._storeDetail(name, detail);
 	}
 	getDetail(name, property) {
-		const data = this.data[name] && this.data[name].detail
-		return data && property ? data[property] : data;
+		const detail = this._storeDetail(name).detail;
+		return detail && property ? detail[property] : detail;
 	}
 }
 
