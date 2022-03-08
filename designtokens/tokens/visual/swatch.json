@@ -1,0 +1,21 @@
+{
+	"visual": {
+		"swatch": {
+			"brand": {
+				"value": "orangered"
+			},
+			"logo": {
+				"value": "orangered"
+			},
+			"primary": {
+				"value": "#6868a7"
+			},
+			"secondary": {
+				"value": "#6868a7"
+			},
+			"tertiary": {
+				"value": "#7a6562"
+			}
+		}
+	}
+}

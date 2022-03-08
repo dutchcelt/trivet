@@ -1,6 +1,10 @@
 {
   "color": {
     "base": {
+			"light": { "value": "#f9ece9"},
+			"mid": { "value": "#625b60"},
+			"dark": { "value": "#29282d"},
+			"text": { "value":  "{color.base.dark}"},
       "gray": {
         "light" : { "value": "#CCCCCC" },
         "medium": { "value": "#999999" },
