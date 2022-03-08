@@ -49,13 +49,13 @@ export class TrvtLayout extends HTMLElement {
 	}
 
 	/**
-	 * Get the main (ie default) slot or if not available any slot.
+	 * Get the main (ie default) slot or if not available the first available slot.
 	 * @returns {Element}
 	 * @private
 	 */
-	__defaultSlot() {
-		const slotAttribute = this.slotNames.includes('main')
-			? '[name=main]'
+	__defaultSlot(name = 'main') {
+		const slotAttribute = this.slotNames.includes(name)
+			? `[name=${name}]`
 			: '[name]';
 		return this.shadowRoot.querySelector(`slot${slotAttribute}`);
 	}
