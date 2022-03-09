@@ -1,12 +1,13 @@
 :root {
+  --trvt-color-base-light: #f9ece9;
+  --trvt-color-base-mid: #625b60;
+  --trvt-color-base-dark: #29282d;
+  --trvt-color-base-text: #29282d;
   --trvt-color-base-gray-light: #cccccc;
   --trvt-color-base-gray-medium: #999999;
   --trvt-color-base-gray-dark: #111111;
   --trvt-color-base-red: #ff0000;
   --trvt-color-base-green: #00ff00;
-  --trvt-color-font-base: #ff0000;
-  --trvt-color-font-secondary: #00ff00;
-  --trvt-color-font-tertiary: #cccccc;
   --trvt-size-font-small: 0.75rem; /* the small size of the font */
   --trvt-size-font-medium: 1rem; /* the medium size of the font */
   --trvt-size-font-large: 2rem; /* the large size of the font */

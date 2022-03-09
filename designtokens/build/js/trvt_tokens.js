@@ -1,6 +1,82 @@
 var _styleDictionary = {
   "color": {
     "base": {
+      "light": {
+        "value": "#f9ece9",
+        "filePath": "tokens/color/base.json",
+        "isSource": true,
+        "original": {
+          "value": "#f9ece9"
+        },
+        "name": "TrvtColorBaseLight",
+        "attributes": {
+          "category": "color",
+          "type": "base",
+          "item": "light"
+        },
+        "path": [
+          "color",
+          "base",
+          "light"
+        ]
+      },
+      "mid": {
+        "value": "#625b60",
+        "filePath": "tokens/color/base.json",
+        "isSource": true,
+        "original": {
+          "value": "#625b60"
+        },
+        "name": "TrvtColorBaseMid",
+        "attributes": {
+          "category": "color",
+          "type": "base",
+          "item": "mid"
+        },
+        "path": [
+          "color",
+          "base",
+          "mid"
+        ]
+      },
+      "dark": {
+        "value": "#29282d",
+        "filePath": "tokens/color/base.json",
+        "isSource": true,
+        "original": {
+          "value": "#29282d"
+        },
+        "name": "TrvtColorBaseDark",
+        "attributes": {
+          "category": "color",
+          "type": "base",
+          "item": "dark"
+        },
+        "path": [
+          "color",
+          "base",
+          "dark"
+        ]
+      },
+      "text": {
+        "value": "#29282d",
+        "filePath": "tokens/color/base.json",
+        "isSource": true,
+        "original": {
+          "value": "{color.base.dark}"
+        },
+        "name": "TrvtColorBaseText",
+        "attributes": {
+          "category": "color",
+          "type": "base",
+          "item": "text"
+        },
+        "path": [
+          "color",
+          "base",
+          "text"
+        ]
+      },
       "gray": {
         "light": {
           "value": "#cccccc",
@@ -102,65 +178,6 @@ var _styleDictionary = {
           "color",
           "base",
           "green"
-        ]
-      }
-    },
-    "font": {
-      "base": {
-        "value": "#ff0000",
-        "filePath": "tokens/color/font.json",
-        "isSource": true,
-        "original": {
-          "value": "{color.base.red.value}"
-        },
-        "name": "TrvtColorFontBase",
-        "attributes": {
-          "category": "color",
-          "type": "font",
-          "item": "base"
-        },
-        "path": [
-          "color",
-          "font",
-          "base"
-        ]
-      },
-      "secondary": {
-        "value": "#00ff00",
-        "filePath": "tokens/color/font.json",
-        "isSource": true,
-        "original": {
-          "value": "{color.base.green.value}"
-        },
-        "name": "TrvtColorFontSecondary",
-        "attributes": {
-          "category": "color",
-          "type": "font",
-          "item": "secondary"
-        },
-        "path": [
-          "color",
-          "font",
-          "secondary"
-        ]
-      },
-      "tertiary": {
-        "value": "#cccccc",
-        "filePath": "tokens/color/font.json",
-        "isSource": true,
-        "original": {
-          "value": "{color.base.gray.light.value}"
-        },
-        "name": "TrvtColorFontTertiary",
-        "attributes": {
-          "category": "color",
-          "type": "font",
-          "item": "tertiary"
-        },
-        "path": [
-          "color",
-          "font",
-          "tertiary"
         ]
       }
     }
