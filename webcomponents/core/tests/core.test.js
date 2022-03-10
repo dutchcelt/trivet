@@ -1,13 +1,6 @@
 import { expect, assert } from '@esm-bundle/chai';
 import { styles, dataBus } from "../index.js";
 
-
-
-const testEvent = (event) => {
-	event.detail.callbackTest = event.detail.testVal;
-}
-dataBus.register('testEvent', testEvent);
-
 describe('Core Styles ', async () => {
 	it('Style is array', () => {
 		assert.isArray(styles);
@@ -23,6 +16,15 @@ describe('Core Styles ', async () => {
 		expect(ss.constructor.name).to.equal('CSSLayerBlockRule');
 		expect(/@layer designsystem/ig.test(ss.cssText)).to.be.true;
 	});
+});
+
+
+const testEvent = (event) => {
+	event.detail.callbackTest = event.detail.testVal;
+}
+dataBus.register('testEvent', testEvent);
+
+describe('Databus tests ', async () => {
 	it('Eventbus callback detail', () => {
 		const testVal = 'tested';
 		dataBus.fire('testEvent', { testVal });
