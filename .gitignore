@@ -14,5 +14,8 @@ dist
 *.log
 yarn-error.log
 
+# testing
+coverage
+
 # OS files
 .DS_Store
