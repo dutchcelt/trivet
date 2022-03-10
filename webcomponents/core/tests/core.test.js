@@ -1,6 +1,12 @@
 import { expect, assert } from '@esm-bundle/chai';
-import { styles } from "../index.js";
+import { styles, dataBus } from "../index.js";
 
+
+
+const testEvent = (event) => {
+	event.detail.callbackTest = event.detail.testVal;
+}
+dataBus.register('testEvent', testEvent);
 
 describe('Core Styles ', async () => {
 	it('Style is array', () => {
@@ -17,5 +23,20 @@ describe('Core Styles ', async () => {
 		expect(ss.constructor.name).to.equal('CSSLayerBlockRule');
 		expect(/@layer designsystem/ig.test(ss.cssText)).to.be.true;
 	});
-
+	it('Eventbus callback detail', () => {
+		const testVal = 'tested';
+		dataBus.fire('testEvent', { testVal });
+		expect(dataBus.getDetail('testEvent').callbackTest).to.equal(testVal);
+	});
+	it('Eventbus add detail', () => {
+		dataBus.addDetail('testEvent', { added: 'addedDetail' });
+		expect(dataBus.getDetail('testEvent').added).to.equal('addedDetail');
+	});
+	it('Eventbus get all detail keys', () => {
+		const keys = Object.keys(dataBus.getDetail('testEvent'));
+		expect(keys.length).to.equal(3);
+		expect(keys).to.include('testVal');
+		expect(keys).to.include('callbackTest');
+		expect(keys).to.include('added');
+	});
 });
