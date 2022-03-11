@@ -1,6 +1,8 @@
+// @ts-check
+
 /**
  * Basic conversion of string entities
- * @param str
+ * @param {string} str
  * @returns {string}
  */
 const sanitizeThis = (str) => {
@@ -10,8 +12,8 @@ const sanitizeThis = (str) => {
 }
 /**
  * Restrict the type of values used and sanitize string input
- * @param detail
- * @returns {{}}
+ * @param {Object} detail
+ * @returns {Object}
  */
 const safeValues = (detail) => {
 	const cleanDetail = {};
@@ -19,7 +21,7 @@ const safeValues = (detail) => {
 		const propType = typeof detail[key];
 		const safeType = (/string|boolean|number/).test(propType)
 		if (safeType) {
-			cleanDetail[key] = safeType === 'string' ? sanitizeThis(value) : value;
+			cleanDetail[key] = propType === 'string' ? sanitizeThis(value) : value;
 		} else {
 			console.warn(`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`);
 		}
@@ -27,6 +29,9 @@ const safeValues = (detail) => {
 	return cleanDetail;
 }
 
+/**
+ * Event bus with data store based on registered events
+ */
 class EventDataBus {
 	constructor() {
 		this._bus = document.createElement('div');
@@ -35,9 +40,9 @@ class EventDataBus {
 
 	/**
 	 * Compose data to allow reuse from multiple events
-	 * @param name
-	 * @param detail
-	 * @returns {*}
+	 * @param {string} name
+	 * @param {Object} [detail={}] 
+	 * @returns {Object}
 	 * @private
 	 */
 	_storeDetail(name, detail = {}){
@@ -50,8 +55,8 @@ class EventDataBus {
 
 	/**
 	 * get the Detail object associated from an event payload
-	 * @param name
-	 * @returns {*}
+	 * @param {string} name
+	 * @returns {Object}
 	 * @private
 	 */
 	_retrieveDetail(name) {
@@ -60,7 +65,7 @@ class EventDataBus {
 
 	/**
 	 * Register custom event
-	 * @param event
+	 * @param {string} event
 	 * @param callback
 	 */
 	register(event, callback) {
@@ -69,7 +74,7 @@ class EventDataBus {
 
 	/**
 	 * Removed custom event
-	 * @param event
+	 * @param {string} event
 	 * @param callback
 	 */
 	remove(event, callback) {
@@ -79,8 +84,8 @@ class EventDataBus {
 
 	/**
 	 * trigger custom event with 'detail' payload
-	 * @param event
-	 * @param detail
+	 * @param {string} event
+	 * @param {Object} detail
 	 */
 	fire(event, detail = {}) {
 		const eventDetail = this._storeDetail(event, detail);
@@ -89,8 +94,8 @@ class EventDataBus {
 
 	/**
 	 * Added data to an event payload. Can be used autonomously.
-	 * @param name
-	 * @param detail
+	 * @param {string} name
+	 * @param {Object} detail
 	 */
 	addDetail(name, detail) {
 		this._storeDetail(name, detail);
@@ -98,9 +103,9 @@ class EventDataBus {
 
 	/**
 	 * Get the detail object from an existing event payload.
-	 * @param name
-	 * @param property
-	 * @returns {*}
+	 * @param {string} name
+	 * @param {string} property
+	 * @returns {Object}
 	 */
 	getDetail(name, property) {
 		const detail = this._retrieveDetail(name);
