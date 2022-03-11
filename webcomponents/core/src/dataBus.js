@@ -30,6 +30,21 @@ const safeValues = (detail) => {
 }
 
 /**
+ * Create a reactive store object for the event details
+ * @param {string} name
+ * @returns {Object} {{detail: {}}}
+ */
+const createStoreObject = (name) => Object.defineProperty({detail: {}}, name, {
+	get() {
+		return this.detail;
+	},
+	set(event) {
+		Object.assign(this.detail, safeValues(event.detail))
+	}
+});
+
+/**
+ * @class EventDataBus
  * Event bus with data store based on registered events
  */
 class EventDataBus {
@@ -39,36 +54,12 @@ class EventDataBus {
 	}
 
 	/**
-	 * Compose data to allow reuse from multiple events
-	 * @param {string} name
-	 * @param {Object} [detail={}] 
-	 * @returns {Object}
-	 * @private
-	 */
-	_storeDetail(name, detail = {}){
-		detail = safeValues(detail);
-		this.data[name]
-			? Object.assign(this.data[name].detail, detail)
-			: this.data[name] = { detail };
-		return this.data[name];
-	}
-
-	/**
-	 * get the Detail object associated from an event payload
-	 * @param {string} name
-	 * @returns {Object}
-	 * @private
-	 */
-	_retrieveDetail(name) {
-		return this.data[name] && this.data[name].detail;
-	}
-
-	/**
 	 * Register custom event
 	 * @param {string} event
 	 * @param callback
 	 */
 	register(event, callback) {
+		if (this.data[event] === undefined) this.data[event] = createStoreObject(event);
 		this._bus.addEventListener(event, callback);
 	}
 
@@ -85,30 +76,30 @@ class EventDataBus {
 	/**
 	 * trigger custom event with 'detail' payload
 	 * @param {string} event
-	 * @param {Object} detail
+	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		const eventDetail = this._storeDetail(event, detail);
-		this._bus.dispatchEvent(new CustomEvent(event, eventDetail));
+		if( detail ) this.data[event] = { detail };
+		this._bus.dispatchEvent(new CustomEvent(event, this.data[event]));
 	}
 
 	/**
 	 * Added data to an event payload. Can be used autonomously.
-	 * @param {string} name
+	 * @param {string} event
 	 * @param {Object} detail
 	 */
-	addDetail(name, detail) {
-		this._storeDetail(name, detail);
+	addDetail(event, detail) {
+		if (this.data.hasOwnProperty(event)) this.data[event] = { detail };
 	}
 
 	/**
 	 * Get the detail object from an existing event payload.
-	 * @param {string} name
+	 * @param {string} event
 	 * @param {string} property
 	 * @returns {Object}
 	 */
-	getDetail(name, property) {
-		const detail = this._retrieveDetail(name);
+	getDetail(event, property) {
+		const detail = this.data.hasOwnProperty(event) && this.data[event].detail;
 		return detail && property ? detail[property] : detail;
 	}
 }
