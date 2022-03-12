@@ -26,6 +26,7 @@ const safeValues = (detail) => {
 			console.warn(`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`);
 		}
 	}
+	console.log(cleanDetail);
 	return cleanDetail;
 }
 
@@ -34,12 +35,12 @@ const safeValues = (detail) => {
  * @param {string} name
  * @returns {Object} {{detail: {}}}
  */
-const createStoreObject = (name) => Object.defineProperty({detail: {}}, name, {
+const createStoreObject = (data = {}) => Object.defineProperty(data, 'detail', {
 	get() {
 		return this.detail;
 	},
 	set(event) {
-		Object.assign(this.detail, safeValues(event.detail))
+		this.detail = { ...this.detail, ...event.detail }
 	}
 });
 
@@ -59,7 +60,7 @@ class EventDataBus {
 	 * @param callback
 	 */
 	register(event, callback) {
-		if (this.data[event] === undefined) this.data[event] = createStoreObject(event);
+		if (this.data[event] === undefined) this.data[event] = createStoreObject();
 		this._bus.addEventListener(event, callback);
 	}
 
@@ -79,7 +80,7 @@ class EventDataBus {
 	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		if( detail ) this.data[event] = { detail };
+		this.data[event] = { detail };
 		this._bus.dispatchEvent(new CustomEvent(event, this.data[event]));
 	}
 
@@ -89,7 +90,8 @@ class EventDataBus {
 	 * @param {Object} detail
 	 */
 	addDetail(event, detail) {
-		if (this.data.hasOwnProperty(event)) this.data[event] = { detail };
+		if (this.data.hasOwnProperty(event)) this.data[event] = createStoreObject(event);
+		this.data[event] = {detail} ;
 	}
 
 	/**
