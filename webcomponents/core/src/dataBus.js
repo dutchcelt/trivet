@@ -26,23 +26,8 @@ const safeValues = (detail) => {
 			console.warn(`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`);
 		}
 	}
-	console.log(cleanDetail);
 	return cleanDetail;
 }
-
-/**
- * Create a reactive store object for the event details
- * @param {string} name
- * @returns {Object} {{detail: {}}}
- */
-const createStoreObject = (data = {}) => Object.defineProperty(data, 'detail', {
-	get() {
-		return this.detail;
-	},
-	set(event) {
-		this.detail = { ...this.detail, ...event.detail }
-	}
-});
 
 /**
  * @class EventDataBus
@@ -51,7 +36,16 @@ const createStoreObject = (data = {}) => Object.defineProperty(data, 'detail', {
 class EventDataBus {
 	constructor() {
 		this._bus = document.createElement('div');
-		this.data =  {};
+		this.store = {
+			detail: undefined,
+			event: undefined,
+			get [this.event]() {
+				return this.detail;
+			},
+			set [this.event](data){
+				this.detail = { ...this.detail, ...safeValues(data.detail) };
+			}
+		}
 	}
 
 	/**
@@ -60,7 +54,7 @@ class EventDataBus {
 	 * @param callback
 	 */
 	register(event, callback) {
-		if (this.data[event] === undefined) this.data[event] = createStoreObject();
+		if (this.store[event] === undefined) this.store[event] = { event };
 		this._bus.addEventListener(event, callback);
 	}
 
@@ -71,7 +65,7 @@ class EventDataBus {
 	 */
 	remove(event, callback) {
 		this._bus.removeEventListener(event, callback);
-		delete this.data[event];
+		delete this.store[event];
 	}
 
 	/**
@@ -80,8 +74,8 @@ class EventDataBus {
 	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		this.data[event] = { detail };
-		this._bus.dispatchEvent(new CustomEvent(event, this.data[event]));
+		this.store[event] = {detail};
+		this._bus.dispatchEvent(new CustomEvent(event, this.store[event]));
 	}
 
 	/**
@@ -90,8 +84,8 @@ class EventDataBus {
 	 * @param {Object} detail
 	 */
 	addDetail(event, detail) {
-		if (this.data.hasOwnProperty(event)) this.data[event] = createStoreObject(event);
-		this.data[event] = {detail} ;
+		if (this.store[event] === undefined) this.store[event] = { event };
+		this.store[event] = {detail} ;
 	}
 
 	/**
@@ -101,7 +95,7 @@ class EventDataBus {
 	 * @returns {Object}
 	 */
 	getDetail(event, property) {
-		const detail = this.data.hasOwnProperty(event) && this.data[event].detail;
+		const detail = this.store.hasOwnProperty(event) && this.store[event].detail;
 		return detail && property ? detail[property] : detail;
 	}
 }
