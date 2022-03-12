@@ -34,15 +34,15 @@ const safeValues = (detail) => {
  * Event bus with data store based on registered events
  */
 class EventDataBus {
+
 	constructor() {
 		this._bus = document.createElement('div');
 		this.store = {
 			detail: undefined,
-			event: undefined,
-			get [this.event]() {
+			get function() {
 				return this.detail;
 			},
-			set [this.event](data){
+			set function(data){
 				this.detail = { ...this.detail, ...safeValues(data.detail) };
 			}
 		}
@@ -54,7 +54,6 @@ class EventDataBus {
 	 * @param callback
 	 */
 	register(event, callback) {
-		if (this.store[event] === undefined) this.store[event] = { event };
 		this._bus.addEventListener(event, callback);
 	}
 
@@ -84,8 +83,7 @@ class EventDataBus {
 	 * @param {Object} detail
 	 */
 	addDetail(event, detail) {
-		if (this.store[event] === undefined) this.store[event] = { event };
-		this.store[event] = {detail} ;
+		this.store[event] = { detail } ;
 	}
 
 	/**
