@@ -29,6 +29,23 @@ const safeValues = (detail) => {
 	return cleanDetail;
 }
 
+const createEventObject = (store,event,props) => {
+	Object.defineProperty(store, event,{
+		enumerable: false,
+		configurable: true,
+		writable: true,
+		value:{
+			data:{...props},
+			get detail(){
+				return this.data;
+			},
+			set add(value) {
+				this.data[value] = true;
+			}
+		}
+	})
+}
+
 /**
  * @class EventDataBus
  * Event bus with data store based on registered events
@@ -37,23 +54,15 @@ class EventDataBus {
 
 	constructor() {
 		this._bus = document.createElement('div');
-		this.store = {
-			detail: undefined,
-			get function() {
-				return this.detail;
-			},
-			set function(data){
-				this.detail = { ...this.detail, ...safeValues(data.detail) };
-			}
-		}
+		this.store = {};
 	}
-
 	/**
 	 * Register custom event
 	 * @param {string} event
 	 * @param callback
 	 */
 	register(event, callback) {
+		createEventObject(this.store,event);
 		this._bus.addEventListener(event, callback);
 	}
 
@@ -73,8 +82,8 @@ class EventDataBus {
 	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		this.store[event] = {detail};
-		this._bus.dispatchEvent(new CustomEvent(event, this.store[event]));
+		detail = Object.assign(this.store[event].data, safeValues(detail));
+		this._bus.dispatchEvent(new CustomEvent(event, {detail}));
 	}
 
 	/**
@@ -83,19 +92,12 @@ class EventDataBus {
 	 * @param {Object} detail
 	 */
 	addDetail(event, detail) {
-		this.store[event] = { detail } ;
+		detail = safeValues(detail);
+		this.store[event] === undefined
+			? createEventObject(this.store, event, detail)
+			: Object.assign(this.store[event].data, detail);
 	}
 
-	/**
-	 * Get the detail object from an existing event payload.
-	 * @param {string} event
-	 * @param {string} property
-	 * @returns {Object}
-	 */
-	getDetail(event, property) {
-		const detail = this.store.hasOwnProperty(event) && this.store[event].detail;
-		return detail && property ? detail[property] : detail;
-	}
 }
 
 const dataBus = new EventDataBus();

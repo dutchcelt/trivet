@@ -7,7 +7,7 @@ export class TrvtArticle extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
 		this.trvtTitle = this.dataset.trvtTitle;
-		this.trvtLayout = dataBus.getDetail('trvtLayout', 'type');
+		this.trvtLayout = dataBus.store.trvtLayout && dataBus.store.trvtLayout.detail
 	}
 	connectedCallback() {
 		this.shadowRoot.appendChild(this.render());
@@ -23,11 +23,11 @@ export class TrvtArticle extends HTMLElement {
 		`);
 	}
 	__headingTemplate() {
-		const tag = this.trvtLayout === 'article' ? 'h1' : 'h2';
+		const tag = this.trvtLayout.type === 'article' ? 'h1' : 'h2';
 		return this.trvtTitle ? `<${tag}>${this.trvtTitle}</${tag}>` : ``;
 	}
 	__contentTemplate() {
-		return this.trvtLayout === 'article'
+		return this.trvtLayout.type === 'article'
 			? `<slot name="content"></slot><slot name="aside"></slot>`
 			: ``;
 	}
