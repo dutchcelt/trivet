@@ -7,10 +7,11 @@ export class TrvtArticle extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
 		this.trvtTitle = this.dataset.trvtTitle;
-		this.trvtLayout = dataBus.store.trvtLayout && dataBus.store.trvtLayout.detail
+		this.trvtLayout = dataBus.trvtLayout && dataBus.trvtLayout.detail
 	}
 	connectedCallback() {
 		this.shadowRoot.appendChild(this.render());
+
 	}
 	render() {
 		return document.createRange().createContextualFragment(`

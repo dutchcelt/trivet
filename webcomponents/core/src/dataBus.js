@@ -37,10 +37,10 @@ const createEventObject = (store,event,props) => {
 		value:{
 			data:{...props},
 			get detail(){
-				return this.data;
+				return this;
 			},
-			set add(value) {
-				this.data[value] = true;
+			set is(key) {
+				this[key] = true;
 			}
 		}
 	})
@@ -62,7 +62,7 @@ class EventDataBus {
 	 * @param callback
 	 */
 	register(event, callback) {
-		createEventObject(this.store,event);
+		createEventObject(this,event);
 		this._bus.addEventListener(event, callback);
 	}
 
@@ -73,7 +73,7 @@ class EventDataBus {
 	 */
 	remove(event, callback) {
 		this._bus.removeEventListener(event, callback);
-		delete this.store[event];
+		delete this[event];
 	}
 
 	/**
@@ -82,7 +82,7 @@ class EventDataBus {
 	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		detail = Object.assign(this.store[event].data, safeValues(detail));
+		detail = Object.assign(this[event].data, safeValues(detail));
 		this._bus.dispatchEvent(new CustomEvent(event, {detail}));
 	}
 
@@ -93,9 +93,9 @@ class EventDataBus {
 	 */
 	addDetail(event, detail) {
 		detail = safeValues(detail);
-		this.store[event] === undefined
-			? createEventObject(this.store, event, detail)
-			: Object.assign(this.store[event].data, detail);
+		this[event] === undefined
+			? createEventObject(this, event, detail)
+			: Object.assign(this[event].data, detail);
 	}
 
 }

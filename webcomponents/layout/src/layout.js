@@ -33,7 +33,6 @@ export class TrvtLayout extends HTMLElement {
 			__getSlotNames(this.children)
 		);
 		dataBus.addDetail('trvtLayout', { type: this.trvtType });
-
 	}
 
 	connectedCallback() {

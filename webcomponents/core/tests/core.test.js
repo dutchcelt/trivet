@@ -28,16 +28,15 @@ describe('Databus tests ', async () => {
 	it('Eventbus callback detail', () => {
 		const testVal = 'tested';
 		dataBus.fire('testEvent', { testVal });
-		const detail = dataBus.store['testEvent'].data;
+		const detail = dataBus['testEvent'].data;
 		expect(detail.callbackTest).to.equal(testVal);
-
 	});
 	it('Eventbus add detail', () => {
 		dataBus.addDetail('testEvent', { added: 'addedDetail' });
-		expect(dataBus.store['testEvent'].data.added).to.equal('addedDetail');
+		expect(dataBus['testEvent'].data.added).to.equal('addedDetail');
 	});
 	it('Eventbus get all detail keys', () => {
-		const keys = Object.keys(dataBus.store['testEvent'].data);
+		const keys = Object.keys(dataBus['testEvent'].data);
 		expect(keys.length).to.equal(3);
 		expect(keys).to.include('testVal');
 		expect(keys).to.include('callbackTest');
