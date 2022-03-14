@@ -37,10 +37,7 @@ const createEventObject = (store,event,props) => {
 		value:{
 			data:{...props},
 			get detail(){
-				return this;
-			},
-			set is(key) {
-				this[key] = true;
+				return this.data;
 			}
 		}
 	})
@@ -62,8 +59,13 @@ class EventDataBus {
 	 * @param callback
 	 */
 	register(event, callback) {
-		createEventObject(this,event);
-		this._bus.addEventListener(event, callback);
+		const eventName = event || 'anonymous';
+		if(this[eventName]) {
+			console.warn(`Can't register event '${eventName}' because it already exists.`);
+		} else {
+			createEventObject(this,eventName);
+			this._bus.addEventListener(eventName, callback);
+		}
 	}
 
 	/**
@@ -72,8 +74,9 @@ class EventDataBus {
 	 * @param callback
 	 */
 	remove(event, callback) {
-		this._bus.removeEventListener(event, callback);
-		delete this[event];
+		this[event]
+			? this._bus.removeEventListener(event, callback)
+			: console.warn(`Can't remove event '${event}' because it hasn't been registered.`);
 	}
 
 	/**
@@ -82,22 +85,13 @@ class EventDataBus {
 	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		detail = Object.assign(this[event].data, safeValues(detail));
-		this._bus.dispatchEvent(new CustomEvent(event, {detail}));
+		if(this[event]) {
+			detail = Object.assign(this[event].data, safeValues(detail));
+			this._bus.dispatchEvent(new CustomEvent(event, {detail}));
+		} else {
+			console.warn(`Can't fire event '${event}' because it hasn't been registered.`);
+		}
 	}
-
-	/**
-	 * Added data to an event payload. Can be used autonomously.
-	 * @param {string} event
-	 * @param {Object} detail
-	 */
-	addDetail(event, detail) {
-		detail = safeValues(detail);
-		this[event] === undefined
-			? createEventObject(this, event, detail)
-			: Object.assign(this[event].data, detail);
-	}
-
 }
 
 const dataBus = new EventDataBus();

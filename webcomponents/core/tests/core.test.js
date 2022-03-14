@@ -32,7 +32,7 @@ describe('Databus tests ', async () => {
 		expect(detail.callbackTest).to.equal(testVal);
 	});
 	it('Eventbus add detail', () => {
-		dataBus.addDetail('testEvent', { added: 'addedDetail' });
+		dataBus.fire('testEvent', { added: 'addedDetail' });
 		expect(dataBus['testEvent'].data.added).to.equal('addedDetail');
 	});
 	it('Eventbus get all detail keys', () => {

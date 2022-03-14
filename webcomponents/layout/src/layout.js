@@ -24,6 +24,7 @@ const __sortSlotNames = (control, slots) =>
 
 
 export class TrvtLayout extends HTMLElement {
+
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
@@ -32,7 +33,6 @@ export class TrvtLayout extends HTMLElement {
 			Object.keys(this.__slotMarkupObject()),
 			__getSlotNames(this.children)
 		);
-		dataBus.addDetail('trvtLayout', { type: this.trvtType });
 	}
 
 	connectedCallback() {
@@ -44,6 +44,7 @@ export class TrvtLayout extends HTMLElement {
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
 		this.__defaultSlot().addEventListener('slotchange', () => {
+			dataBus.fire('trvtLayout', { type: this.trvtType });
 			dataBus.fire('componentLoaded', { loaded: true });
 		});
 	}
