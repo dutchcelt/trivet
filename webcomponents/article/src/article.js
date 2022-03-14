@@ -28,10 +28,22 @@ export class TrvtArticle extends HTMLElement {
 			</article>
 		`);
 	}
+
+	/**
+	 * Article on Article pages should have an H1 header otherwise it should be an H2
+	 * @returns {string}
+	 * @private
+	 */
 	__headingTemplate() {
 		const tag = this.layoutType === 'article' ? 'h1' : 'h2';
 		return this.trvtTitle ? `<${tag}>${this.trvtTitle}</${tag}>` : ``;
 	}
+
+	/**
+	 * Only show the full article if the page type is also an 'article'
+	 * @returns {string}
+	 * @private
+	 */
 	__contentTemplate() {
 		return this.layoutType === 'article'
 			? `<slot name="content"></slot><slot name="aside"></slot>`
