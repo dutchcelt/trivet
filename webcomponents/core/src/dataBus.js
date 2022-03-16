@@ -29,7 +29,14 @@ const safeValues = (detail) => {
 	return cleanDetail;
 }
 
-const createEventObject = (store,event,props) => {
+/**
+ * @Function - For each event we create a new object, so we can retrieve data stored from the event detail
+ * @param {Object} store
+ * @param {string} event
+ * @param {Object } [props={}]
+ * @returns {{}}
+ */
+const createEventObject = (store,event,props={}) => {
 	Object.defineProperty(store, event,{
 		enumerable: false,
 		configurable: true,
