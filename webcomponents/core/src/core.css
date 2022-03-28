@@ -25,7 +25,6 @@
 		--trvt-fonts-display-family: 'Assistant', sans-serif;
 	}
 	:host {
-		contain: style layout;
 		font-size: var(--trvt-typography-size-m);
 		font-family: var(--trvt-fonts-base-family);
 		line-height: var(--trvt-typography-leading-m);

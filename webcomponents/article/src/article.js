@@ -1,18 +1,14 @@
 import { styles, dataBus } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
 
-
 export class TrvtArticle extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({mode: 'open'});
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
 		this.trvtTitle = this.dataset.trvtTitle;
-		try {
-			this.layoutDetail = dataBus.trvtLayout.detail;
-		} catch(e){
-			dataBus.register('trvtLayout', this.__layoutEvent.bind(this));
-		}
+		this.layoutDetail = dataBus?.trvtLayout?.detail;
+		if(this.layoutDetail === undefined) dataBus.register('trvtLayout', this.__layoutEvent.bind(this));
 
 	}
 	connectedCallback() {
@@ -57,10 +53,10 @@ export class TrvtArticle extends HTMLElement {
 	 * @private
 	 */
 	__layoutEvent(event= {}){
-		this.layoutType = event.detail && event.detail.type;
+		this.layoutType = event?.detail?.type;
 		this.layoutType
 			? this.shadowRoot.appendChild(this.render())
-			: console.error(`Can't set layout with type of: '${this.layoutType}'`);
+			: console.error(`Can't set layout type of: '${this.layoutType}'`);
 		event.type === "trvtLayout" && dataBus.remove('trvtLayout', this.__layoutEvent.bind(this));
 }
 
