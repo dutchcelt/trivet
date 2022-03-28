@@ -268,6 +268,84 @@ var _styleDictionary = {
           "base"
         ]
       }
+    },
+    "ratio": {
+      "square": {
+        "value": "1rem",
+        "filePath": "tokens/size/ratio.json",
+        "isSource": true,
+        "original": {
+          "value": "1 / 1"
+        },
+        "name": "TrvtSizeRatioSquare",
+        "attributes": {
+          "category": "size",
+          "type": "ratio",
+          "item": "square"
+        },
+        "path": [
+          "size",
+          "ratio",
+          "square"
+        ]
+      },
+      "wide": {
+        "value": "16rem",
+        "filePath": "tokens/size/ratio.json",
+        "isSource": true,
+        "original": {
+          "value": "16 / 9"
+        },
+        "name": "TrvtSizeRatioWide",
+        "attributes": {
+          "category": "size",
+          "type": "ratio",
+          "item": "wide"
+        },
+        "path": [
+          "size",
+          "ratio",
+          "wide"
+        ]
+      },
+      "standard": {
+        "value": "4rem",
+        "filePath": "tokens/size/ratio.json",
+        "isSource": true,
+        "original": {
+          "value": "4 / 3"
+        },
+        "name": "TrvtSizeRatioStandard",
+        "attributes": {
+          "category": "size",
+          "type": "ratio",
+          "item": "standard"
+        },
+        "path": [
+          "size",
+          "ratio",
+          "standard"
+        ]
+      },
+      "golden": {
+        "value": "1.618rem",
+        "filePath": "tokens/size/ratio.json",
+        "isSource": true,
+        "original": {
+          "value": "1.6180 / 1"
+        },
+        "name": "TrvtSizeRatioGolden",
+        "attributes": {
+          "category": "size",
+          "type": "ratio",
+          "item": "golden"
+        },
+        "path": [
+          "size",
+          "ratio",
+          "golden"
+        ]
+      }
     }
   }
 };

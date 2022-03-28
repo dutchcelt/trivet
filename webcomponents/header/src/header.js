@@ -46,7 +46,7 @@ export class TrvtHeader extends HTMLElement {
 	 */
 	__setStyle() {
 		const src = encodeURI(this.src);
-		const rule = `:host { --header-image-src: url('${src}'); }`;
+		const rule = `:host(:where(trvt-header)) { --header-image-src: url('${src}'); }`;
 		this.dynamicCustomStyles.replace(rule);
 	}
 

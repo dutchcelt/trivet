@@ -12,4 +12,8 @@
   --trvt-size-font-medium: 1rem; /* the medium size of the font */
   --trvt-size-font-large: 2rem; /* the large size of the font */
   --trvt-size-font-base: 1rem; /* the base size of the font */
+  --trvt-size-ratio-square: 1rem;
+  --trvt-size-ratio-wide: 16rem;
+  --trvt-size-ratio-standard: 4rem;
+  --trvt-size-ratio-golden: 1.618rem;
 }

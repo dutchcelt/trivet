@@ -11,5 +11,9 @@
   "TrvtSizeFontSmall": "0.75rem",
   "TrvtSizeFontMedium": "1rem",
   "TrvtSizeFontLarge": "2rem",
-  "TrvtSizeFontBase": "1rem"
+  "TrvtSizeFontBase": "1rem",
+  "TrvtSizeRatioSquare": "1rem",
+  "TrvtSizeRatioWide": "16rem",
+  "TrvtSizeRatioStandard": "4rem",
+  "TrvtSizeRatioGolden": "1.618rem"
 }
