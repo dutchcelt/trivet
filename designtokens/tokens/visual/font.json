@@ -1,0 +1,58 @@
+{
+	"visual": {
+		"font": {
+			"base": {
+				"family": {
+					"value": "Bitter",
+					"comment": "Only use with JavaScript"
+				},
+				"path": {
+					"value": "/assets/fonts/vendors/googlefonts/Bitter/"
+				},
+				"filename": { "value": "Bitter-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "normal" },
+				"weight": { "value": "normal" }
+			},
+			"baseItalic": {
+				"family": {
+					"value": "Bitter",
+					"comment": "Only use with JavaScript"
+				},
+				"path": {
+					"value": "/assets/fonts/vendors/googlefonts/Bitter/"
+				},
+				"filename": {
+					"value": "Bitter-Italic-VariableFont_wght.woff2"
+				},
+				"display": { "value": "swap" },
+				"style": { "value": "italic" },
+				"weight": { "value": "normal" }
+			},
+			"display": {
+				"family": {
+					"value": "Rubik",
+					"comment": "Only use with JavaScript"
+				},
+				"path": { "value": "/assets/fonts/vendors/googlefonts/Rubik/" },
+				"filename": { "value": "Rubik-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "normal" },
+				"weight": { "value": "bold" }
+			},
+			"gui": {
+				"family": {
+					"value": "Assistant",
+					"comment": "Only use with JavaScript"
+				},
+				"path": {
+					"value": "/assets/fonts/vendors/googlefonts/Assistant/"
+				},
+				"filename": { "value": "Assistant-VariableFont_wght.woff2" },
+				"display": { "value": "swap" },
+				"style": { "value": "normal" },
+				"weight": { "value": "normal" }
+			}
+		}
+	}
+}
