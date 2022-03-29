@@ -15,7 +15,7 @@
 		"components"
 	],
 	"author": "C. Egor Kloos",
-	"license": "MIT",
+	"license": "Apache-2.0",
 	"dependencies": {
 		"@trvt/core": "^0.1.0"
 	}

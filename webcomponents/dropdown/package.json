@@ -5,7 +5,7 @@
 	"main": "src/dropdown.js",
 	"type": "module",
 	"author": "C. Egor Kloos",
-	"license": "MIT",
+	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
 		"@trvt/core": "^0.1.0"

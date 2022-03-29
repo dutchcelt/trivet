@@ -25,7 +25,7 @@
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
-	"license": "MIT",
+	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.2.0",
 	"dependencies": {
