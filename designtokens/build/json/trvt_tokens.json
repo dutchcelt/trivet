@@ -8,12 +8,12 @@
   "TrvtColorBaseGrayDark": "#111111",
   "TrvtColorBaseRed": "#ff0000",
   "TrvtColorBaseGreen": "#00ff00",
+  "TrvtRatioSquare": "1 / 1",
+  "TrvtRatioWide": "16 / 9",
+  "TrvtRatioStandard": "4 / 3",
+  "TrvtRatioGolden": "1.6180 / 1",
   "TrvtSizeFontSmall": "0.75rem",
   "TrvtSizeFontMedium": "1rem",
   "TrvtSizeFontLarge": "2rem",
-  "TrvtSizeFontBase": "1rem",
-  "TrvtSizeRatioSquare": "1rem",
-  "TrvtSizeRatioWide": "16rem",
-  "TrvtSizeRatioStandard": "4rem",
-  "TrvtSizeRatioGolden": "1.618rem"
+  "TrvtSizeFontBase": "1rem"
 }

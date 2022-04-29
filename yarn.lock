@@ -572,7 +572,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/designtokens@workspace:designtokens"
   dependencies:
-    style-dictionary: ^3.0.3
+    style-dictionary: ^3.7.0
   languageName: unknown
   linkType: soft
 
@@ -2360,6 +2360,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^8.3.0":
+  version: 8.3.0
+  resolution: "commander@npm:8.3.0"
+  checksum: 0f82321821fc27b83bd409510bb9deeebcfa799ff0bf5d102128b500b7af22872c0c92cb6a0ebc5a4cf19c6b550fba9cedfa7329d18c6442a625f851377bacf0
+  languageName: node
+  linkType: hard
+
 "component-bind@npm:1.0.0":
   version: 1.0.0
   resolution: "component-bind@npm:1.0.0"
@@ -4002,7 +4009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.3, glob@npm:^7.0.5, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6, glob@npm:^7.2.0":
+"glob@npm:^7.0.3, glob@npm:^7.0.5, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.2.0":
   version: 7.2.0
   resolution: "glob@npm:7.2.0"
   dependencies:
@@ -5001,14 +5008,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.3":
-  version: 2.2.0
-  resolution: "json5@npm:2.2.0"
-  dependencies:
-    minimist: ^1.2.5
+"json5@npm:^2.2.0":
+  version: 2.2.1
+  resolution: "json5@npm:2.2.1"
   bin:
     json5: lib/cli.js
-  checksum: e88fc5274bb58fc99547baa777886b069d2dd96d9cfc4490b305fd16d711dabd5979e35a4f90873cefbeb552e216b041a304fe56702bedba76e19bc7845f208d
+  checksum: 74b8a23b102a6f2bf2d224797ae553a75488b5adbaee9c9b6e5ab8b510a2fc6e38f876d4c77dea672d4014a44b2399e15f2051ac2b37b87f74c0c7602003543b
   languageName: node
   linkType: hard
 
@@ -8300,22 +8305,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.0.3":
-  version: 3.1.1
-  resolution: "style-dictionary@npm:3.1.1"
+"style-dictionary@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "style-dictionary@npm:3.7.0"
   dependencies:
     chalk: ^4.0.0
     change-case: ^4.1.2
-    commander: ^5.1.0
-    fs-extra: ^8.1.0
-    glob: ^7.1.6
-    json5: ^2.1.3
+    commander: ^8.3.0
+    fs-extra: ^10.0.0
+    glob: ^7.2.0
+    json5: ^2.2.0
     jsonc-parser: ^3.0.0
     lodash: ^4.17.15
     tinycolor2: ^1.4.1
   bin:
     style-dictionary: bin/style-dictionary
-  checksum: fa1a9e1c5346025ca3ac6e81c9d168b702ce52420eb2c5834df3c2b4ff9054521639c73d46ca006592f1f717529e09b82de1b97bd17ff8174a42cdf487dc0c9c
+  checksum: 97fd972e5eb57d931a2dc2f5e6461642f7c9cdff9bc54642b8ab1372b3a9e613f57fefdca406b773b9d5e061e8450a20967ab3d0c6da5bb2787ea246cede3eac
   languageName: node
   linkType: hard
 

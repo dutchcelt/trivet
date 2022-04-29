@@ -1,9 +1,9 @@
 {
-	"source": ["tokens/{color,size}/*.json"],
+	"source": ["tokens/{color,size,ratio}/*.json"],
 	"platforms": {
 		"css": {
-			"prefix": "trvt",
 			"transformGroup": "css",
+			"prefix": "trvt",
 			"buildPath": "build/css/",
 			"files": [
 				{

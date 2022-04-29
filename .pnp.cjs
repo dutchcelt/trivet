@@ -753,7 +753,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./designtokens/",\
           "packageDependencies": [\
             ["@trvt/designtokens", "workspace:designtokens"],\
-            ["style-dictionary", "npm:3.1.1"]\
+            ["style-dictionary", "npm:3.7.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2760,6 +2760,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/commander-npm-7.2.0-19178180f8-53501cbeee.zip/node_modules/commander/",\
           "packageDependencies": [\
             ["commander", "npm:7.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:8.3.0", {\
+          "packageLocation": "./.yarn/cache/commander-npm-8.3.0-c0d18c66d5-0f82321821.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:8.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5875,11 +5882,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["json5", [\
-        ["npm:2.2.0", {\
-          "packageLocation": "./.yarn/cache/json5-npm-2.2.0-da49dc7cb5-e88fc5274b.zip/node_modules/json5/",\
+        ["npm:2.2.1", {\
+          "packageLocation": "./.yarn/cache/json5-npm-2.2.1-44675c859c-74b8a23b10.zip/node_modules/json5/",\
           "packageDependencies": [\
-            ["json5", "npm:2.2.0"],\
-            ["minimist", "npm:1.2.5"]\
+            ["json5", "npm:2.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9922,16 +9928,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["style-dictionary", [\
-        ["npm:3.1.1", {\
-          "packageLocation": "./.yarn/unplugged/style-dictionary-npm-3.1.1-545efd222e/node_modules/style-dictionary/",\
+        ["npm:3.7.0", {\
+          "packageLocation": "./.yarn/unplugged/style-dictionary-npm-3.7.0-0860ecb1f5/node_modules/style-dictionary/",\
           "packageDependencies": [\
-            ["style-dictionary", "npm:3.1.1"],\
+            ["style-dictionary", "npm:3.7.0"],\
             ["chalk", "npm:4.1.2"],\
             ["change-case", "npm:4.1.2"],\
-            ["commander", "npm:5.1.0"],\
-            ["fs-extra", "npm:8.1.0"],\
+            ["commander", "npm:8.3.0"],\
+            ["fs-extra", "npm:10.0.0"],\
             ["glob", "npm:7.2.0"],\
-            ["json5", "npm:2.2.0"],\
+            ["json5", "npm:2.2.1"],\
             ["jsonc-parser", "npm:3.0.0"],\
             ["lodash", "npm:4.17.21"],\
             ["tinycolor2", "npm:1.4.2"]\
