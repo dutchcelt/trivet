@@ -3,10 +3,12 @@
 	/* Layout Slot Rules */
 	:host {
 		--layout-gap: var(--trvt-gap, 2rem);
-		--layout-background-color: var(--trvt-colors-base-dark, transparent);
+		--layout-background-color: var(
+			--trvt-colors-base-backgound,
+			transparent
+		);
 		--padding-inline: var(--trvt-gap, 2rem);
 		--padding-block: var(--trvt-gap, 2rem);
-
 	}
 
 	:host([data-trvt-type]) {
@@ -16,7 +18,6 @@
 		gap: 0;
 		padding-block: var(--padding-block);
 		padding-inline: var(--padding-inline);
-
 	}
 
 	/* ############################################################### */
@@ -25,8 +26,18 @@
 		grid-column: var(--grid-column);
 		background-color: var(--background-color, transparent);
 	}
-
-/*	.main {
+	:host > *:where(.main, .sidebar, ) {
+		background-color: var(
+			--trvt-color-base-background-content,
+			transparent
+		);
+		color: var(--trvt-color-base-text);
+	}
+	:host > *:where(.footer, ) {
+		background-color: transparent;
+		color: var(--trvt-color-base-light);
+	}
+	/*	.main {
 		padding: var(--trvt-gap) var(--trvt-gap);
 	}
 

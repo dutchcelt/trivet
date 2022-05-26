@@ -11,7 +11,6 @@
 		--trvt-colors-base-light: #f9ece9;
 		--trvt-colors-base-dark: #29282d;
 		--trvt-colors-base-mid: #625b60;
-		--trvt-colors-base-text: var(--trvt-colors-base-dark);
 
 		--trvt-typography-size-xxl: 3rem;
 		--trvt-typography-size-xl: 2rem;
@@ -36,6 +35,25 @@
 		--trvt-gap: 2rem;
 	}
 
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--trvt-color-base-background: var(--trvt-color-base-dark);
+			--trvt-color-base-background-content: var(--trvt-color-base-mid);
+			--trvt-color-base-text: var(--trvt-color-base-light);
+			--gradient-back: var(--trvt-colors-base-dark);
+			--gradient-front: var(--trvt-colors-base-mid);
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--trvt-color-base-background: var(--trvt-color-base-mid);
+			--trvt-color-base-background-content: var(--trvt-color-base-light);
+			--trvt-color-base-text: var(--trvt-color-base-dark);
+			--gradient-back: var(--trvt-colors-base-mid);
+			--gradient-front: var(--trvt-colors-base-dark);
+		}
+	}
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 	/* 	Behaviour */
@@ -57,7 +75,11 @@
 		font-family: var(--trvt-fonts-base-family);
 		line-height: var(--trvt-typography-leading-m);
 		color: var(--trvt-colors-base-light);
-		background: linear-gradient(33.3333deg, var(--trvt-colors-base-dark) 66.6666%, var(--trvt-colors-base-mid) 100%);
+		background: linear-gradient(
+			33.3333deg,
+			var(--gradient-back) 66.6666%,
+			var(--gradient-front) 100%
+		);
 		min-height: 100vh;
 	}
 	h3 {
@@ -80,7 +102,6 @@
 		border: 0.18rem solid darkslateblue;
 		border-radius: 2rem;
 	}
-
 }
 
 @layer components {
@@ -93,6 +114,6 @@
 		opacity: 1;
 	}
 	body::before {
-		content: var(--trvt-icons-glyphs-loade)
+		content: var(--trvt-icons-glyphs-loade);
 	}
 }

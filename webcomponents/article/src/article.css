@@ -3,11 +3,10 @@
 		/* 	--trvt-colors-base-text: DarkSlateBlue; */
 		--article-gap: 2rem;
 		--article-display: var(--trvt-layout-display, block);
-		--article-text-color: var(--trvt-colors-base-light);
+		--article-text-color: var(--trvt-color-base-text);
 	}
 
 	article {
-
 		/* Parent Layout */
 		display: var(--article-display);
 
@@ -34,13 +33,10 @@
 	h2:empty {
 		display: none;
 	}
-/*	h3 {
+	/*	h3 {
 		font-family: var(--trvt-fonts-base-family);
 		font-style: italic;
 		color: var(--trvt-colors-base-mid);
 		font-variation-settings: 'wght' 500;
 	}*/
-
 }
-
-

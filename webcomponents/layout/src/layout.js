@@ -88,14 +88,14 @@ export class TrvtLayout extends HTMLElement {
 	 * @private
 	 */
 	__slotMarkupObject() {
-		return {
+		return Object.freeze({
 			notifications: `<div class="notifications"><slot name="notifications"></slot></div>`,
 			navigation: `<div class="navigation"><slot name="navigation"></slot></div>`,
 			header: `<div class="header"><slot name="header"></slot></div>`,
 			main: `<div class="main"><slot name="main"></slot></div>`,
 			sidebar: `<div class="sidebar"><slot name="sidebar"></slot></div>`,
 			footer: `<div class="footer"><slot name="footer"></slot></div>`,
-		};
+		});
 	}
 }
 

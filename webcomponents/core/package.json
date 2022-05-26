@@ -1,11 +1,12 @@
 {
 	"name": "@trvt/core",
-	"version": "0.1.0",
+	"version": "0.1.5",
 	"type": "module",
 	"main": "index.js",
 	"files": [
 		"src/core.css",
-		"src/core.js"
+		"src/core.js",
+		"src/databus.js"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",

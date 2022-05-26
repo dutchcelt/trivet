@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.0.0",
+	"version": "0.0.4",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -16,6 +16,7 @@
 		"scripts/hasCSSLayerSupport.js",
 		"scripts/insertIntoCssLayer.js",
 		"scripts/loadFont.js",
+		"scripts/CSSString2CSSStyleSheet.js",
 		"images/keyboard-purple.jpg",
 		"images/shardes.jpg",
 		"build/icons.js",
