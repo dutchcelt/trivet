@@ -526,7 +526,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/article@workspace:webcomponents/article"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
@@ -546,7 +546,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/button@workspace:webcomponents/button"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
@@ -554,11 +554,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/card@workspace:webcomponents/card"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
-"@trvt/core@^0.1.0, @trvt/core@workspace:webcomponents/core":
+"@trvt/core@^0.1.9, @trvt/core@workspace:webcomponents/core":
   version: 0.0.0-use.local
   resolution: "@trvt/core@workspace:webcomponents/core"
   dependencies:
@@ -592,7 +592,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/dropdown@workspace:webcomponents/dropdown"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
@@ -600,7 +600,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/footer@workspace:webcomponents/footer"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
@@ -608,7 +608,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/header@workspace:webcomponents/header"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
@@ -616,7 +616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/layout@workspace:webcomponents/layout"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
@@ -624,7 +624,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/navigation@workspace:webcomponents/navigation"
   dependencies:
-    "@trvt/core": ^0.1.0
+    "@trvt/core": ^0.1.9
   languageName: unknown
   linkType: soft
 
