@@ -1,5 +1,51 @@
 # @trvt/docs
 
+## 0.1.9
+
+### Patch Changes
+
+-   New heading colors and layout alignment fixes
+-   Updated dependencies
+    -   @trvt/article@0.1.8
+    -   @trvt/header@0.1.9
+    -   @trvt/layout@0.1.8
+
+## 0.1.8
+
+### Patch Changes
+
+-   font size fix and responsive layout
+-   Updated dependencies
+    -   @trvt/article@0.1.7
+    -   @trvt/header@0.1.8
+    -   @trvt/layout@0.1.7
+
+## 0.1.7
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/article@0.1.6
+    -   @trvt/header@0.1.7
+    -   @trvt/layout@0.1.6
+
+## 0.1.6
+
+### Patch Changes
+
+-   more tweeks
+-   Updated dependencies
+    -   @trvt/article@0.1.5
+    -   @trvt/header@0.1.6
+    -   @trvt/layout@0.1.5
+
+## 0.1.5
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/header@0.1.5
+
 ## 0.1.4
 
 ### Patch Changes

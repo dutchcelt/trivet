@@ -19,7 +19,7 @@ export class TrvtArticle extends HTMLElement {
 			<article>
         ${this.__headingTemplate()}
         <slot name="intro"></slot>
-        ${this.__contentTemplate()}
+        <slot name="content"></slot>
         <slot name="footer"></slot>
 			</article>
 		`);
@@ -33,17 +33,6 @@ export class TrvtArticle extends HTMLElement {
 	__headingTemplate() {
 		const tag = this.layoutType === 'article' ? 'h1' : 'h2';
 		return this.trvtTitle ? `<${tag}>${this.trvtTitle}</${tag}>` : ``;
-	}
-
-	/**
-	 * Only show the full article if the page type is also an 'article'
-	 * @returns {string}
-	 * @private
-	 */
-	__contentTemplate() {
-		return /article|overview/i.test(this.layoutType)
-			? `<slot name="content"></slot><slot name="aside"></slot>`
-			: ``;
 	}
 
 	/**

@@ -1,14 +1,14 @@
 @layer components {
 	/* ############################################################### */
 	/* Layout Slot Rules */
-	:host {
+	:host(trvt-layout) {
 		--layout-gap: var(--trvt-gap, 2rem);
 		--layout-background-color: var(
 			--trvt-colors-base-backgound,
 			transparent
 		);
-		--padding-inline: var(--trvt-gap, 2rem);
-		--padding-block: var(--trvt-gap, 2rem);
+		--padding-inline: var(--layout-gap, 2rem);
+		--padding-block: var(--layout-gap, 2rem);
 	}
 
 	:host([data-trvt-type]) {
@@ -16,34 +16,55 @@
 		grid-template-columns: var(--template-comumns, 1fr);
 		grid-template-rows: var(--template-rows, auto);
 		gap: 0;
-		padding-block: var(--padding-block);
+		padding-block: calc(var(--padding-block) / 2) var(--padding-block);
 		padding-inline: var(--padding-inline);
+	}
+	@media not all and (min-width: 768px) {
+		:host([data-trvt-type]) {
+			padding-inline: 0;
+
+			padding-block: calc(var(--padding-block) / 4) var(--padding-block);
+		}
+		:host(trvt-layout[data-trvt-type]) {
+			--template-comumns: 100%;
+			--template-rows: auto;
+		}
+		:host([data-trvt-type]) .navigation,
+		:host([data-trvt-type]) .header,
+		:host([data-trvt-type]) .main,
+		:host([data-trvt-type]) .sidebar,
+		:host([data-trvt-type]) .footer {
+			--grid-column: 1;
+		}
 	}
 
 	/* ############################################################### */
 	/* Layout Slot Rules */
-	:host > *:where(.navigation, .header, .main, .sidebar, .footer) {
+	:host(trvt-layout)
+		> *:where(.navigation, .header, .main, .sidebar, .footer) {
 		grid-column: var(--grid-column);
 		background-color: var(--background-color, transparent);
 	}
-	:host > *:where(.main, .sidebar, ) {
+	:host(trvt-layout) > *:where(.main, .sidebar, ) {
 		background-color: var(
 			--trvt-color-base-background-content,
 			transparent
 		);
-		color: var(--trvt-color-base-text);
 	}
-	:host > *:where(.footer, ) {
+	:host(trvt-layout) > *:where(.footer) {
 		background-color: transparent;
 		color: var(--trvt-color-base-light);
+		padding-inline: var(--trvt-gap);
 	}
-	/*	.main {
-		padding: var(--trvt-gap) var(--trvt-gap);
+	.main,
+	.footer {
+		padding-inline: var(--trvt-gap);
 	}
 
 	.sidebar {
-		padding: var(--trvt-gap) var(--trvt-gap);
-	}*/
+		padding-block: var(--layout-gap);
+		padding-inline: var(--layout-gap);
+	}
 
 	/* ############################################################### */
 	/* Layout Slot Properties */
@@ -76,7 +97,8 @@
 	/* ############################################################### */
 	/* Layout Type Properties */
 	/* Page */
-	:host([data-trvt-type='page']) {
+	:host([data-trvt-type='page']),
+	:host([data-trvt-type='overview']) {
 		/*--padding-inline: min(var(--trvt-gap), (100vw - 100ch) / 2);*/
 		--padding-inline: calc(
 			clamp(var(--layout-gap), (100vw - 120ch) / 2, (100vw - 1280px) / 2)
@@ -85,12 +107,14 @@
 		--template-rows: 1fr;
 	}
 
-	:host([data-trvt-type='page']) .main {
+	:host([data-trvt-type='page']) .main,
+	:host([data-trvt-type='overview']).main {
 		--grid-column: 1 / -2;
 		--grid-row: 1;
 	}
 
-	:host([data-trvt-type='page']) .sidebar {
+	:host([data-trvt-type='page']) .sidebar,
+	:host([data-trvt-type='overview']) .sidebar {
 		--grid-column: -2 / -1;
 		--grid-row: 1;
 	}

@@ -32,14 +32,24 @@
 		--trvt-theme-color-primary: #6868a7;
 		--trvt-theme-color-secondary: #6868a7;
 		--trvt-theme-color-tertiary: #7a6562;
-		--trvt-gap: 2rem;
+		--trvt-gap: 1rem;
+	}
+	@media (min-width: 768px) {
+		:root {
+			--trvt-gap: 2rem;
+		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--trvt-color-base-background: var(--trvt-color-base-dark);
-			--trvt-color-base-background-content: var(--trvt-color-base-mid);
+			--trvt-color-base-background-content: var(
+				--trvt-color-base-shade,
+				#3d3c44
+			);
 			--trvt-color-base-text: var(--trvt-color-base-light);
+			--trvt-color-base-heading: #8f8fbd;
+
 			--gradient-back: var(--trvt-colors-base-dark);
 			--gradient-front: var(--trvt-colors-base-mid);
 		}
@@ -50,6 +60,7 @@
 			--trvt-color-base-background: var(--trvt-color-base-mid);
 			--trvt-color-base-background-content: var(--trvt-color-base-light);
 			--trvt-color-base-text: var(--trvt-color-base-dark);
+			--trvt-color-base-heading: var(--trvt-theme-color-primary);
 			--gradient-back: var(--trvt-colors-base-mid);
 			--gradient-front: var(--trvt-colors-base-dark);
 		}
@@ -67,6 +78,12 @@
 	html {
 		margin: 0;
 		font-size: 100%;
+		box-sizing: border-box;
+	}
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
 	}
 
 	body {
@@ -74,7 +91,7 @@
 		font-size: var(--trvt-typography-size-m);
 		font-family: var(--trvt-fonts-base-family);
 		line-height: var(--trvt-typography-leading-m);
-		color: var(--trvt-colors-base-light);
+		color: var(--trvt-color-base-text);
 		background: linear-gradient(
 			33.3333deg,
 			var(--gradient-back) 66.6666%,
@@ -85,7 +102,7 @@
 	h3 {
 		font-family: var(--trvt-fonts-base-family);
 		font-style: italic;
-		color: var(--trvt-colors-base-mid);
+		color: var(--trvt-color-base-heading);
 		font-variation-settings: 'wght' 500;
 	}
 

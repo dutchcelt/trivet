@@ -58,25 +58,6 @@ var _styleDictionary = {
           "dark"
         ]
       },
-      "text": {
-        "value": "#29282d",
-        "filePath": "tokens/color/base.json",
-        "isSource": true,
-        "original": {
-          "value": "{color.base.dark}"
-        },
-        "name": "TrvtColorBaseText",
-        "attributes": {
-          "category": "color",
-          "type": "base",
-          "item": "text"
-        },
-        "path": [
-          "color",
-          "base",
-          "text"
-        ]
-      },
       "gray": {
         "light": {
           "value": "#cccccc",

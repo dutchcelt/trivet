@@ -1,11 +1,12 @@
 {
 	"name": "@trvt/header",
-	"version": "0.1.4",
+	"version": "0.1.9",
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
 	"type": "module",
 	"files": [
-		"src/header.js"
+		"src/header.js",
+		"src/header.css"
 	],
 	"scripts": {
 		"test": "test"
@@ -17,6 +18,6 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.1.5"
+		"@trvt/core": "^0.1.9"
 	}
 }

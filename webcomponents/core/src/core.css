@@ -24,24 +24,24 @@
 		--trvt-fonts-gui-family: Rubik, sans-serif;
 		--trvt-fonts-display-family: 'Assistant', sans-serif;
 	}
-	:host {
-		font-size: var(--trvt-typography-size-m);
-		font-family: var(--trvt-fonts-base-family);
-		line-height: var(--trvt-typography-leading-m);
-		color: var(--trvt-colors-base-light);
-	}
 
 	/*	################################################################ */
 	/*	Page layout	Nav */
 
-	/* 	
-	body > * > nav {
-		position: relative;
-		padding-left: 1rem;
-		color: var(--trvt-colors-base-light);
-		background: var(--trvt-colors-base-dark);
+	:host {
+		box-sizing: border-box;
 	}
-    */
+	:host {
+		font-size: var(--trvt-typography-size-m);
+		font-family: var(--trvt-fonts-base-family);
+		line-height: var(--trvt-typography-leading-m);
+	}
+
+	:host *,
+	:host *:before,
+	:host *:after {
+		box-sizing: inherit;
+	}
 
 	h1 {
 		font-family: var(--trvt-fonts-display-family);

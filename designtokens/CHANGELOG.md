@@ -1,5 +1,29 @@
 # @trvt/designtokens
 
+## 0.1.8
+
+### Patch Changes
+
+-   New heading colors and layout alignment fixes
+
+## 0.1.7
+
+### Patch Changes
+
+-   font size fix and responsive layout
+
+## 0.1.6
+
+### Patch Changes
+
+-   Page fix. Content is always shown
+
+## 0.1.5
+
+### Patch Changes
+
+-   more tweeks
+
 ## 0.1.4
 
 ### Patch Changes
