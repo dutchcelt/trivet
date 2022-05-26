@@ -7,12 +7,12 @@
   --trvt-color-base-gray-dark: #111111;
   --trvt-color-base-red: #ff0000;
   --trvt-color-base-green: #00ff00;
+  --trvt-ratio-square: 1 / 1;
+  --trvt-ratio-wide: 16 / 9;
+  --trvt-ratio-standard: 4 / 3;
+  --trvt-ratio-golden: 1.6180 / 1;
   --trvt-size-font-small: 0.75rem; /* the small size of the font */
   --trvt-size-font-medium: 1rem; /* the medium size of the font */
   --trvt-size-font-large: 2rem; /* the large size of the font */
   --trvt-size-font-base: 1rem; /* the base size of the font */
-  --trvt-size-ratio-square: 1rem;
-  --trvt-size-ratio-wide: 16rem;
-  --trvt-size-ratio-standard: 4rem;
-  --trvt-size-ratio-golden: 1.618rem;
 }

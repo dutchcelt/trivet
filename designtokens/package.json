@@ -24,6 +24,6 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.2.0",
 	"devDependencies": {
-		"style-dictionary": "^3.0.3"
+		"style-dictionary": "^3.7.0"
 	}
 }

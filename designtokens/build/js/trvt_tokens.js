@@ -163,6 +163,76 @@ var _styleDictionary = {
       }
     }
   },
+  "ratio": {
+    "square": {
+      "value": "1 / 1",
+      "filePath": "tokens/ratio/ratio.json",
+      "isSource": true,
+      "original": {
+        "value": "1 / 1"
+      },
+      "name": "TrvtRatioSquare",
+      "attributes": {
+        "category": "ratio",
+        "type": "square"
+      },
+      "path": [
+        "ratio",
+        "square"
+      ]
+    },
+    "wide": {
+      "value": "16 / 9",
+      "filePath": "tokens/ratio/ratio.json",
+      "isSource": true,
+      "original": {
+        "value": "16 / 9"
+      },
+      "name": "TrvtRatioWide",
+      "attributes": {
+        "category": "ratio",
+        "type": "wide"
+      },
+      "path": [
+        "ratio",
+        "wide"
+      ]
+    },
+    "standard": {
+      "value": "4 / 3",
+      "filePath": "tokens/ratio/ratio.json",
+      "isSource": true,
+      "original": {
+        "value": "4 / 3"
+      },
+      "name": "TrvtRatioStandard",
+      "attributes": {
+        "category": "ratio",
+        "type": "standard"
+      },
+      "path": [
+        "ratio",
+        "standard"
+      ]
+    },
+    "golden": {
+      "value": "1.6180 / 1",
+      "filePath": "tokens/ratio/ratio.json",
+      "isSource": true,
+      "original": {
+        "value": "1.6180 / 1"
+      },
+      "name": "TrvtRatioGolden",
+      "attributes": {
+        "category": "ratio",
+        "type": "golden"
+      },
+      "path": [
+        "ratio",
+        "golden"
+      ]
+    }
+  },
   "size": {
     "font": {
       "small": {
@@ -247,84 +317,6 @@ var _styleDictionary = {
           "size",
           "font",
           "base"
-        ]
-      }
-    },
-    "ratio": {
-      "square": {
-        "value": "1rem",
-        "filePath": "tokens/size/ratio.json",
-        "isSource": true,
-        "original": {
-          "value": "1 / 1"
-        },
-        "name": "TrvtSizeRatioSquare",
-        "attributes": {
-          "category": "size",
-          "type": "ratio",
-          "item": "square"
-        },
-        "path": [
-          "size",
-          "ratio",
-          "square"
-        ]
-      },
-      "wide": {
-        "value": "16rem",
-        "filePath": "tokens/size/ratio.json",
-        "isSource": true,
-        "original": {
-          "value": "16 / 9"
-        },
-        "name": "TrvtSizeRatioWide",
-        "attributes": {
-          "category": "size",
-          "type": "ratio",
-          "item": "wide"
-        },
-        "path": [
-          "size",
-          "ratio",
-          "wide"
-        ]
-      },
-      "standard": {
-        "value": "4rem",
-        "filePath": "tokens/size/ratio.json",
-        "isSource": true,
-        "original": {
-          "value": "4 / 3"
-        },
-        "name": "TrvtSizeRatioStandard",
-        "attributes": {
-          "category": "size",
-          "type": "ratio",
-          "item": "standard"
-        },
-        "path": [
-          "size",
-          "ratio",
-          "standard"
-        ]
-      },
-      "golden": {
-        "value": "1.618rem",
-        "filePath": "tokens/size/ratio.json",
-        "isSource": true,
-        "original": {
-          "value": "1.6180 / 1"
-        },
-        "name": "TrvtSizeRatioGolden",
-        "attributes": {
-          "category": "size",
-          "type": "ratio",
-          "item": "golden"
-        },
-        "path": [
-          "size",
-          "ratio",
-          "golden"
         ]
       }
     }
