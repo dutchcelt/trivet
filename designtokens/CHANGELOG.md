@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.2.0
+
+### Minor Changes
+
+-   Change that removes theme focused styles form the Trivet system. This will be moved to a theming solution later.
+
 ## 0.1.9
 
 ### Patch Changes

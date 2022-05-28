@@ -1,5 +1,18 @@
 # @trvt/docs
 
+## 0.2.0
+
+### Minor Changes
+
+-   Change that removes theme focused styles form the Trivet system. This will be moved to a theming solution later.
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/article@0.2.0
+    -   @trvt/header@0.2.0
+    -   @trvt/layout@0.2.0
+
 ## 0.1.10
 
 ### Patch Changes

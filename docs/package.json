@@ -1,7 +1,7 @@
 {
 	"name": "@trvt/docs",
 	"description": "Trivet, a system for building webpages",
-	"version": "0.1.10",
+	"version": "0.2.0",
 	"type": "module",
 	"main": "index.js",
 	"author": "C. Egor Kloos",

@@ -1,5 +1,16 @@
 # @trvt/footer
 
+## 0.2.0
+
+### Minor Changes
+
+-   Change that removes theme focused styles form the Trivet system. This will be moved to a theming solution later.
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.2.0
+
 ## 0.1.9
 
 ### Patch Changes
