@@ -1,5 +1,74 @@
-@layer reset normalize designsystem components whitelabel;
+@import '/assets/styles/normalize.css';
+@import '/assets/styles/trivet.css';
+@import '/designtokens/build/css/trvt_tokens.css' layer(designsystem);
 
-@import url('/designtokens/build/css/trvt_tokens.css');
-@import url('/assets/styles/normalize.css');
-@import url('/assets/styles/trivet.css');
+@layer theme {
+	/*
+		COLOR SWATCH:
+		dark #29282D
+		mid #625b60
+		pantone 2022 #6868a7
+		brown #7a6562 
+	 */
+
+	:root {
+		--trvt-display: flex;
+		--trvt-colors-base-light: #f9ece9;
+		--trvt-colors-base-dark: #29282d;
+		--trvt-colors-base-mid: #625b60;
+
+		--trvt-theme-color-brand: orangered;
+		--trvt-theme-color-logo: var(--trvt-theme-color-brand);
+		--trvt-theme-color-primary: #6868a7;
+		--trvt-theme-color-secondary: #6868a7;
+		--trvt-theme-color-tertiary: #7a6562;
+
+		--trvt-fonts-base-family: Bitter, sans-serif;
+		--trvt-fonts-gui-family: Rubik, sans-serif;
+		--trvt-fonts-display-family: 'Assistant', sans-serif;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--trvt-color-base-background: var(--trvt-color-base-dark);
+			--trvt-color-base-background-content: var(
+				--trvt-color-base-shade,
+				#3d3c44
+			);
+			--trvt-color-base-text: var(--trvt-color-base-light);
+			--trvt-color-base-heading: #8f8fbd;
+
+			--gradient-back: var(--trvt-colors-base-dark);
+			--gradient-front: var(--trvt-colors-base-mid);
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--trvt-color-base-background: var(--trvt-color-base-mid);
+			--trvt-color-base-background-content: var(--trvt-color-base-light);
+			--trvt-color-base-text: var(--trvt-color-base-dark);
+			--trvt-color-base-heading: var(--trvt-theme-color-primary);
+			--gradient-back: var(--trvt-colors-base-mid);
+			--gradient-front: var(--trvt-colors-base-dark);
+		}
+	}
+
+	body {
+		background: var(--gradient-back);
+		background-image: linear-gradient(
+			33.3333deg,
+			var(--gradient-back) 66.6666%,
+			var(--gradient-front) 100%
+		);
+		min-height: 100vh;
+	}
+	a:link,
+	a:visited,
+	a:hover,
+	a:active,
+	a:focus {
+		color: var(--trvt-color-base-link, inherit);
+		text-decoration: var(--trvt-color-base-heading, none);
+	}
+}
