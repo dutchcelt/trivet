@@ -105,6 +105,14 @@
 		color: var(--trvt-color-base-heading);
 		font-variation-settings: 'wght' 500;
 	}
+	a:link,
+	a:visited,
+	a:hover,
+	a:active,
+	a:focus {
+		color: var(--trvt-color-base-heading);
+		text-decoration: none;
+	}
 
 	button {
 		font-family: var(--trvt-fonts-gui-family);

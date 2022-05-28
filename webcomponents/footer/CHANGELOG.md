@@ -1,5 +1,13 @@
 # @trvt/footer
 
+## 0.1.9
+
+### Patch Changes
+
+-   base line link styles
+-   Updated dependencies
+    -   @trvt/core@0.1.10
+
 ## 0.1.8
 
 ### Patch Changes

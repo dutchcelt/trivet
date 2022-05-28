@@ -1,5 +1,15 @@
 # @trvt/docs
 
+## 0.1.10
+
+### Patch Changes
+
+-   base line link styles
+-   Updated dependencies
+    -   @trvt/article@0.1.9
+    -   @trvt/header@0.1.10
+    -   @trvt/layout@0.1.9
+
 ## 0.1.9
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/article",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"type": "module",
 	"scripts": {
 		"build": "echo 'no build'"
@@ -15,6 +15,6 @@
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/core": "^0.1.9"
+		"@trvt/core": "^0.1.10"
 	}
 }

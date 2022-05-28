@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.1.9
+
+### Patch Changes
+
+-   base line link styles
+
 ## 0.1.8
 
 ### Patch Changes

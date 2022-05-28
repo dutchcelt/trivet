@@ -1,5 +1,14 @@
 # @trvt/core
 
+## 0.1.10
+
+### Patch Changes
+
+-   base line link styles
+-   Updated dependencies
+    -   @trvt/assets@0.0.9
+    -   @trvt/designtokens@0.1.9
+
 ## 0.1.9
 
 ### Patch Changes
