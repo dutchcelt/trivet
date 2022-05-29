@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.3.1
+
+### Patch Changes
+
+-   missing stylesheet
+
 ## 0.3.0
 
 ### Minor Changes
