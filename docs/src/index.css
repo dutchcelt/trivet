@@ -17,15 +17,15 @@
 		--trvt-colors-base-dark: #29282d;
 		--trvt-colors-base-mid: #625b60;
 
-		--trvt-theme-color-brand: orangered;
-		--trvt-theme-color-logo: var(--trvt-theme-color-brand);
-		--trvt-theme-color-primary: #6868a7;
-		--trvt-theme-color-secondary: #6868a7;
-		--trvt-theme-color-tertiary: #7a6562;
+		--trvt-color-brand-brand: orangered;
+		--trvt-color-brand-logo: var(--trvt-color-brand-brand);
+		--trvt-color-brand-primary: #6868a7;
+		--trvt-color-brand-secondary: #6868a7;
+		--trvt-color-brand-tertiary: #7a6562;
 
-		--trvt-fonts-base-family: Bitter, sans-serif;
-		--trvt-fonts-gui-family: Rubik, sans-serif;
-		--trvt-fonts-display-family: 'Assistant', sans-serif;
+		--trvt-font-family-base: Bitter, sans-serif;
+		--trvt-font-family-gui: Rubik, sans-serif;
+		--trvt-font-family-display: 'Assistant', sans-serif;
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -48,7 +48,7 @@
 			--trvt-color-base-background: var(--trvt-color-base-mid);
 			--trvt-color-base-background-content: var(--trvt-color-base-light);
 			--trvt-color-base-text: var(--trvt-color-base-dark);
-			--trvt-color-base-heading: var(--trvt-theme-color-primary);
+			--trvt-color-base-heading: var(--trvt-color-brand-primary);
 			--gradient-back: var(--trvt-colors-base-mid);
 			--gradient-front: var(--trvt-colors-base-dark);
 		}

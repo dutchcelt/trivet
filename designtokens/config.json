@@ -1,5 +1,5 @@
 {
-	"source": ["tokens/{color,size,ratio}/*.json"],
+	"source": ["tokens/**/*.json"],
 	"platforms": {
 		"css": {
 			"transformGroup": "css",
@@ -9,34 +9,6 @@
 				{
 					"destination": "trvt_tokens.css",
 					"format": "css/variables",
-					"options": {
-						"showFileHeader": false
-					}
-				}
-			]
-		},
-		"js": {
-			"prefix": "trvt",
-			"transformGroup": "js",
-			"buildPath": "build/js/",
-			"files": [
-				{
-					"destination": "trvt_tokens.js",
-					"format": "javascript/object",
-					"options": {
-						"showFileHeader": false
-					}
-				}
-			]
-		},
-		"json": {
-			"prefix": "trvt",
-			"transformGroup": "js",
-			"buildPath": "build/json/",
-			"files": [
-				{
-					"destination": "trvt_tokens.json",
-					"format": "json/flat",
 					"options": {
 						"showFileHeader": false
 					}

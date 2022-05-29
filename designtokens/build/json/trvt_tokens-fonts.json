@@ -1,38 +1,9 @@
 {
   "font": {
-    "face": {
-      "base": {
-        "family": "Bitter",
-        "path": "/assets/fonts/vendors/googlefonts/Bitter/",
-        "filename": "Bitter-VariableFont_wght.woff2",
-        "display": "swap",
-        "style": "normal",
-        "weight": "normal"
-      },
-      "baseItalic": {
-        "family": "Bitter",
-        "path": "/assets/fonts/vendors/googlefonts/Bitter/",
-        "filename": "Bitter-Italic-VariableFont_wght.woff2",
-        "display": "swap",
-        "style": "italic",
-        "weight": "normal"
-      },
-      "display": {
-        "family": "Rubik",
-        "path": "/assets/fonts/vendors/googlefonts/Rubik/",
-        "filename": "Rubik-VariableFont_wght.woff2",
-        "display": "swap",
-        "style": "normal",
-        "weight": "bold"
-      },
-      "gui": {
-        "family": "Assistant",
-        "path": "/assets/fonts/vendors/googlefonts/Assistant/",
-        "filename": "Assistant-VariableFont_wght.woff2",
-        "display": "swap",
-        "style": "normal",
-        "weight": "normal"
-      }
+    "family": {
+      "base": "Bitter, sans-serif",
+      "display": "'Assistant', sans-serif",
+      "gui": "Rubik, sans-serif"
     }
   }
 }

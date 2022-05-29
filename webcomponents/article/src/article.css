@@ -16,7 +16,7 @@
 		/* Positioning */
 
 		/* Display */
-		font-family: var(--trvt-fonts-base-family);
+		font-family: var(--trvt-font-family-base);
 		line-height: var(--trvt-typography-leading-l);
 	}
 

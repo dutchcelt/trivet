@@ -12,7 +12,7 @@ class DutchceltLogo extends HTMLElement {
 		<style>
 				@layer components {
 						svg {
-								fill: var(--trvt-theme-color-logo);
+								fill: var(--trvt-color-brand-logo);
 								transform: rotate(0.25turn);
 								display: inline-block;
 								width: 1.2rem;
@@ -28,7 +28,7 @@ class DutchceltLogo extends HTMLElement {
 						}
 						a {
 								padding: 1rem;
-								font-family: var(--trvt-fonts-gui-family);
+								font-family: var(--trvt-font-family-gui);
 								color: var(--trvt-colors-base-light);
 								font-variation-settings: 'wght' 400;
 								text-decoration: none;

@@ -9,10 +9,15 @@
  * @param display
  * @returns {Promise<void>}
  */
-export const loadFont = async ({ family, filename, path, style, weight, display }) => {
-	const valid = [family, filename, path, style, weight].some((f) => !!f && typeof f === 'string');
+export const loadFont = async (
+	{ family, filename, path, style, weight, display },
+	localpath = ''
+) => {
+	const valid = [family, filename, path, style, weight].some(
+		(f) => !!f && typeof f === 'string'
+	);
 	if ((path.value, path)) {
-		const url = new URL(`${path}${filename}`, import.meta.url);
+		const url = new URL(`${localpath + path}${filename}`, import.meta.url);
 		if (url) {
 			const font = new FontFace(family, `url(${url})`, {
 				style: style,
@@ -25,6 +30,8 @@ export const loadFont = async ({ family, filename, path, style, weight, display 
 			new Error("Can't generate a URL");
 		}
 	} else {
-		new Error('Missing font face information. Please check the token values.');
+		new Error(
+			'Missing font face information. Please check the token values.'
+		);
 	}
 };

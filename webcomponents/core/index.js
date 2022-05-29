@@ -1,2 +1,2 @@
-export { styles } from './src/core.js';
+export { fontsLoader, styles } from './src/core.js';
 export { dataBus } from './src/dataBus.js';

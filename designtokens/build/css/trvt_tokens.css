@@ -1,18 +1,45 @@
 :root {
-	--trvt-color-base-light: #f9ece9;
-	--trvt-color-base-mid: #625b60;
-	--trvt-color-base-dark: #29282d;
-	--trvt-color-base-gray-light: #cccccc;
-	--trvt-color-base-gray-medium: #999999;
-	--trvt-color-base-gray-dark: #111111;
-	--trvt-color-base-red: #ff0000;
-	--trvt-color-base-green: #00ff00;
-	--trvt-ratio-square: 1 / 1;
-	--trvt-ratio-wide: 16 / 9;
-	--trvt-ratio-standard: 4 / 3;
-	--trvt-ratio-golden: 1.618 / 1;
-	--trvt-size-font-small: 0.75rem; /* the small size of the font */
-	--trvt-size-font-medium: 1rem; /* the medium size of the font */
-	--trvt-size-font-large: 2rem; /* the large size of the font */
-	--trvt-size-font-base: 1rem; /* the base size of the font */
+  --trvt-color-background-viewport: #ff4500;
+  --trvt-color-background-content: #ff4500;
+  --trvt-color-background-card: #6868a7;
+  --trvt-color-background-ui: #6868a7;
+  --trvt-color-base-light: #f9ece9;
+  --trvt-color-base-dark: #29282d;
+  --trvt-color-base-mid: #625b60;
+  --trvt-color-base-hightlight: #7a6562;
+  --trvt-color-base-shadow: #7a6562;
+  --trvt-color-brand-brand: #ff4500;
+  --trvt-color-brand-logo: #ff4500;
+  --trvt-color-brand-primary: #6868a7;
+  --trvt-color-brand-primary-inverted: #6868a7;
+  --trvt-color-brand-secondary: #6868a7;
+  --trvt-color-brand-secondary-inverted: #6868a7;
+  --trvt-color-brand-tertiary: #6868a7;
+  --trvt-color-brand-tertiary-inverted: #7a6562;
+  --trvt-color-feedback-note: #7a6562;
+  --trvt-color-feedback-info: #7a6562;
+  --trvt-color-feedback-attention: #7a6562;
+  --trvt-color-feedback-warning: #7a6562;
+  --trvt-color-feedback-error: #7a6562;
+  --trvt-color-feedback-pending: #7a6562;
+  --trvt-color-feedback-new: #7a6562;
+  --trvt-color-typography-text: #7a6562;
+  --trvt-color-typography-heading: #7a6562;
+  --trvt-color-typography-marker: #6868a7;
+  --trvt-color-typography-ui: #6868a7;
+  --trvt-color-line-ui: #7a6562;
+  --trvt-color-line-seperator: #7a6562;
+  --trvt-color-line-border: #7a6562;
+  --trvt-color-line-outline: #7a6562;
+  --trvt-font-family-base: Bitter, sans-serif;
+  --trvt-font-family-display: 'Assistant', sans-serif;
+  --trvt-font-family-gui: Rubik, sans-serif;
+  --trvt-ratio-square: 1 / 1;
+  --trvt-ratio-wide: 16 / 9;
+  --trvt-ratio-standard: 4 / 3;
+  --trvt-ratio-golden: 1.6180 / 1;
+  --trvt-size-font-small: 0.75rem; /* the small size of the font */
+  --trvt-size-font-medium: 1rem; /* the medium size of the font */
+  --trvt-size-font-large: 2rem; /* the large size of the font */
+  --trvt-size-font-base: 1rem; /* the base size of the font */
 }

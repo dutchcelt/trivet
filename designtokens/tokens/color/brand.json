@@ -1,0 +1,14 @@
+{
+	"color": {
+		"brand": {
+			"brand": { "value": "orangered" },
+			"logo": { "value": "orangered" },
+			"primary": { "value": "#6868a7" },
+			"primary-inverted": { "value": "#6868a7" },
+			"secondary": { "value": "#6868a7" },
+			"secondary-inverted": { "value": "#6868a7" },
+			"tertiary": { "value": "#6868a7" },
+			"tertiary-inverted": { "value": "#7a6562" }
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"color": {
+		"background": {
+			"viewport": { "value": "orangered" },
+			"content": { "value": "orangered" },
+			"card": { "value": "#6868a7" },
+			"ui": { "value": "#6868a7" }
+		}
+	}
+}

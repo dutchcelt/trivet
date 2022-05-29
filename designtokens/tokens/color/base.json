@@ -2,15 +2,10 @@
 	"color": {
 		"base": {
 			"light": { "value": "#f9ece9" },
-			"mid": { "value": "#625b60" },
 			"dark": { "value": "#29282d" },
-			"gray": {
-				"light": { "value": "#CCCCCC" },
-				"medium": { "value": "#999999" },
-				"dark": { "value": "#111111" }
-			},
-			"red": { "value": "#FF0000" },
-			"green": { "value": "#00FF00" }
+			"mid": { "value": "#625b60" },
+			"hightlight": { "value": "#7a6562" },
+			"shadow": { "value": "#7a6562" }
 		}
 	}
 }

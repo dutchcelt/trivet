@@ -1,5 +1,5 @@
 {
-	"source": ["tokens/fonts/*.json"],
+	"source": ["tokens/font/*.json"],
 	"platforms": {
 		"json": {
 			"prefix": "trvt",

@@ -1,0 +1,10 @@
+{
+	"color": {
+		"line": {
+			"ui": { "value": "#7a6562" },
+			"seperator": { "value": "#7a6562" },
+			"border": { "value": "#7a6562" },
+			"outline": { "value": "#7a6562" }
+		}
+	}
+}
