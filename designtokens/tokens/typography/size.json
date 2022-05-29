@@ -1,7 +1,17 @@
 {
 	"typography": {
 		"size": {
-
+			"xxl": { "value": "3rem" },
+			"xl": { "value": "2rem" },
+			"l": { "value": "1.5rem" },
+			"m": { "value": "1.125rem" },
+			"s": { "value": "1rem" },
+			"xs": { "value": "0.875rem" }
+		},
+		"leading": {
+			"l": { "value": "1.6125" },
+			"m": { "value": "1.25" },
+			"s": { "value": "1" }
 		}
 	}
 }

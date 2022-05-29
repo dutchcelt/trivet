@@ -1,9 +1,9 @@
 {
 	"font": {
 		"family": {
-			"base": { "value": "Bitter, sans-serif" },
-			"display": { "value": "'Assistant', sans-serif" },
-			"gui": { "value": "Rubik, sans-serif" }
+			"base": { "value": "serif" },
+			"display": { "value": "sans-serif" },
+			"gui": { "value": "sans-serif" }
 		}
 	}
 }
