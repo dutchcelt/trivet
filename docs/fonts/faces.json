@@ -14,23 +14,26 @@
 			"filename": "Bitter-Italic-VariableFont_wght.woff2",
 			"display": "swap",
 			"style": "italic",
-			"weight": "normal"
+			"weight": "normal",
+			"variationSettings": "'wght' 400"
 		},
-		"display": {
+		"gui": {
 			"family": "Rubik",
 			"path": "vendors/googlefonts/Rubik/",
 			"filename": "Rubik-VariableFont_wght.woff2",
 			"display": "swap",
 			"style": "normal",
-			"weight": "bold"
+			"weight": "normal",
+			"variationSettings": "'wght' 400"
 		},
-		"gui": {
+		"display": {
 			"family": "Assistant",
 			"path": "vendors/googlefonts/Assistant/",
 			"filename": "Assistant-VariableFont_wght.woff2",
 			"display": "swap",
 			"style": "normal",
-			"weight": "normal"
+			"weight": "bold",
+			"variationSettings": "'wght' 600"
 		}
 	}
 }

@@ -17,12 +17,6 @@
 		--trvt-colors-base-dark: #29282d;
 		--trvt-colors-base-mid: #625b60;
 
-		--trvt-color-brand-brand: orangered;
-		--trvt-color-brand-logo: var(--trvt-color-brand-brand);
-		--trvt-color-brand-primary: #6868a7;
-		--trvt-color-brand-secondary: #6868a7;
-		--trvt-color-brand-tertiary: #7a6562;
-
 		--trvt-font-family-base: Bitter, sans-serif;
 		--trvt-font-family-gui: Rubik, sans-serif;
 		--trvt-font-family-display: 'Assistant', sans-serif;

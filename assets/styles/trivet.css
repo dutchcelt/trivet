@@ -4,16 +4,6 @@
 	:root {
 		--trvt-display: flex;
 
-		/*
-		--trvt-color-base-background: var(--trvt-color-base-dark);
-		--trvt-color-base-background-content: var(--trvt-color-base-shade, #3d3c44);
-		--trvt-color-base-text: var(--trvt-color-base-light);
-		--trvt-color-base-heading: #8f8fbd;
-
-		--trvt-font-family-base: Bitter, sans-serif;
-		--trvt-font-family-gui: Rubik, sans-serif;
-		--trvt-font-family-display: 'Assistant', sans-serif; */
-
 		--trvt-typography-size-xxl: 3rem;
 		--trvt-typography-size-xl: 2rem;
 		--trvt-typography-size-l: 1.5rem;
@@ -69,7 +59,6 @@
 
 	h1 {
 		font-family: var(--trvt-font-family-display);
-		font-variation-settings: 'wght' 900;
 		font-size: var(--trvt-typography-size-xxl);
 		line-height: var(--trvt-typography-leading-s);
 	}
@@ -77,26 +66,22 @@
 	h2 {
 		font-family: var(--trvt-font-family-display);
 		font-size: var(--trvt-typography-size-xl);
-		font-variation-settings: 'wght' 600;
 		line-height: var(--trvt-typography-leading-m);
 	}
 
 	h3 {
 		font-family: var(--trvt-font-family-display);
 		font-size: 1.25rem;
-		font-variation-settings: 'wght' 600;
 	}
 
 	h4 {
 		font-family: var(--trvt-font-family-display);
 		font-size: 1.25rem;
-		font-variation-settings: 'wght' 500;
 	}
 
 	h5 {
 		font-family: var(--trvt-font-family-display);
 		font-size: 1.25rem;
-		font-variation-settings: 'wght' 400;
 	}
 
 	h6 {

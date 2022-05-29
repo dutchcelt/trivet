@@ -10,18 +10,24 @@
  * @returns {Promise<void>}
  */
 export const loadFont = async (
-	{ family, filename, path, style, weight, display },
+	{ family, filename, path, style, weight, display, variationSettings },
 	localpath = ''
 ) => {
-	const valid = [family, filename, path, style, weight].some(
-		(f) => !!f && typeof f === 'string'
-	);
+	const valid = [
+		family,
+		filename,
+		path,
+		style,
+		weight,
+		variationSettings,
+	].some((f) => !!f && typeof f === 'string');
 	if ((path.value, path)) {
 		const url = new URL(`${localpath + path}${filename}`, import.meta.url);
 		if (url) {
 			const font = new FontFace(family, `url(${url})`, {
 				style: style,
 				weight: weight,
+				variationSettings: variationSettings || 'normal',
 				display: display || 'auto',
 			});
 			await font.load();
