@@ -4,8 +4,8 @@
 			"light": { "value": "#f9ece9" },
 			"dark": { "value": "#29282d" },
 			"mid": { "value": "#625b60" },
-			"hightlight": { "value": "#7a6562" },
-			"shadow": { "value": "#7a6562" }
+			"hightlight": { "value": "#f9ece9" },
+			"shadow": { "value": "#3d3c44" }
 		}
 	}
 }

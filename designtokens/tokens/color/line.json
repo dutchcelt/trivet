@@ -1,10 +1,10 @@
 {
 	"color": {
-		"typography": {
-			"text": { "value": "#7a6562" },
-			"heading": { "value": "#7a6562" },
-			"marker": { "value": "#6868a7" },
-			"ui": { "value": "#6868a7" }
+		"line": {
+			"ui": { "value": "#7a6562" },
+			"seperator": { "value": "#7a6562" },
+			"border": { "value": "#7a6562" },
+			"outline": { "value": "#7a6562" }
 		}
 	}
 }

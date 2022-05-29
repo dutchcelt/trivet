@@ -1,6 +1,6 @@
-@import '/assets/styles/normalize.css';
-@import '/assets/styles/trivet.css';
-@import '/designtokens/build/css/trvt_tokens.css' layer(designsystem);
+@import url(/designtokens/build/css/trvt_tokens.css) layer(tokens);
+@import url(/assets/styles/normalize.css);
+@import url(/assets/styles/trivet.css);
 
 @layer theme {
 	/*
@@ -12,11 +12,6 @@
 	 */
 
 	:root {
-		--trvt-display: flex;
-		--trvt-colors-base-light: #f9ece9;
-		--trvt-colors-base-dark: #29282d;
-		--trvt-colors-base-mid: #625b60;
-
 		--trvt-font-family-base: Bitter, sans-serif;
 		--trvt-font-family-gui: Rubik, sans-serif;
 		--trvt-font-family-display: 'Assistant', sans-serif;
@@ -24,39 +19,47 @@
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--trvt-color-base-background: var(--trvt-color-base-dark);
-			--trvt-color-base-background-content: var(
+			--trvt-color-background-viewport: var(--trvt-color-base-dark);
+			--trvt-color-background-content: var(
 				--trvt-color-base-shade,
 				#3d3c44
 			);
-			--trvt-color-base-text: var(--trvt-color-base-light);
-			--trvt-color-base-heading: #8f8fbd;
+			--trvt-color-typography-text: var(--trvt-color-base-light);
+			--trvt-color-typography-heading: #8f8fbd;
 
-			--gradient-back: var(--trvt-colors-base-dark);
-			--gradient-front: var(--trvt-colors-base-mid);
+			--gradient-back: var(--trvt-color-base-dark);
+			--gradient-front: var(--trvt-color-base-mid);
 		}
 	}
 
 	@media (prefers-color-scheme: light) {
 		:root {
-			--trvt-color-base-background: var(--trvt-color-base-mid);
-			--trvt-color-base-background-content: var(--trvt-color-base-light);
-			--trvt-color-base-text: var(--trvt-color-base-dark);
-			--trvt-color-base-heading: var(--trvt-color-brand-primary);
-			--gradient-back: var(--trvt-colors-base-mid);
-			--gradient-front: var(--trvt-colors-base-dark);
+			--trvt-color-background-viewport: var(--trvt-color-base-mid);
+			--trvt-color-background-content: var(--trvt-color-base-light);
+			--trvt-color-typography-text: var(--trvt-color-base-dark);
+			--trvt-color-typography-heading: var(--trvt-color-brand-primary);
+			--gradient-back: var(--trvt-color-base-mid);
+			--gradient-front: var(--trvt-color-base-dark);
 		}
 	}
 
 	body {
-		background: var(--gradient-back);
-		background-image: linear-gradient(
-			33.3333deg,
-			var(--gradient-back) 66.6666%,
-			var(--gradient-front) 100%
-		);
+		background: var(--trvt-color-background-viewport);
 		min-height: 100vh;
 	}
+	body::before {
+		position: fixed;
+		z-index: -1;
+		aspect-ratio: 1/1;
+		width: 100vw;
+		content: '';
+		background: linear-gradient(
+			45deg,
+			var(--gradient-back) 60%,
+			var(--gradient-front) 100%
+		);
+	}
+
 	a:link,
 	a:visited,
 	a:hover,

@@ -29,7 +29,7 @@ class DutchceltLogo extends HTMLElement {
 						a {
 								padding: 1rem;
 								font-family: var(--trvt-font-family-gui);
-								color: var(--trvt-colors-base-light);
+								color: var(--trvt-color-base-light);
 								font-variation-settings: 'wght' 400;
 								text-decoration: none;
 								font-size: 1.2rem;

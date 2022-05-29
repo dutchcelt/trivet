@@ -4,7 +4,7 @@
 		flex-direction: column;
 		position: relative;
 		padding: 0 2rem;
-		color: var(--trvt-colors-base-text);
+		color: var(--trvt-color-base-text);
 		background-color: var(--trvt-color-brand-primary);
 		background-image: linear-gradient(
 				0deg,

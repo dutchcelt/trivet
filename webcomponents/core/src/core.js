@@ -12,8 +12,12 @@ const componentLoadedEvent = (event) => {
 dataBus.register('componentLoaded', componentLoadedEvent);
 
 /* Base styles for all Trivet Components */
-//import coreCSS from './core.css' assert { type: 'css' };
-import { normalizeCSS, trivetCSS as coreCSS } from '@trvt/assets';
-const styles = [normalizeCSS, coreCSS];
+import { trivetCSS } from '@trvt/assets';
+import { normalizeCSS } from '@trvt/assets';
+import coreCSS from './core.css' assert { type: 'css' };
+const styles = [normalizeCSS, trivetCSS, coreCSS];
 
 export { styles };
+
+/* Polyfills */
+import './polyfills.js';

@@ -1,4 +1,4 @@
-@layer reset normalize designsystem components theme;
+@layer tokens normalize designsystem components theme;
 
 @layer designsystem {
 	:root {
@@ -47,48 +47,52 @@
 		box-sizing: inherit;
 	}
 
-	body,
-	:host {
+	body {
 		margin: 0;
 		font-size: var(--trvt-typography-size-m);
 		font-family: var(--trvt-font-family-base);
-		line-height: var(--trvt-typography-leading-m);
-		color: var(--trvt-color-base-text);
-		background: var(--trvt-color-background, transparent);
+		line-height: var(--trvt-typography-leading-l);
+		color: var(--trvt-color-typography-text);
+		background: var(--trvt-color-background-viewport);
 	}
 
 	h1 {
 		font-family: var(--trvt-font-family-display);
 		font-size: var(--trvt-typography-size-xxl);
 		line-height: var(--trvt-typography-leading-s);
+		color: var(--trvt-color-typography-heading);
 	}
 
 	h2 {
 		font-family: var(--trvt-font-family-display);
 		font-size: var(--trvt-typography-size-xl);
 		line-height: var(--trvt-typography-leading-m);
+		color: var(--trvt-color-typography-heading);
 	}
 
 	h3 {
 		font-family: var(--trvt-font-family-display);
 		font-size: 1.25rem;
+		color: var(--trvt-color-typography-heading);
 	}
 
 	h4 {
 		font-family: var(--trvt-font-family-display);
 		font-size: 1.25rem;
+		color: var(--trvt-color-typography-heading);
 	}
 
 	h5 {
 		font-family: var(--trvt-font-family-display);
 		font-size: 1.25rem;
+		color: var(--trvt-color-typography-heading);
 	}
 
 	h6 {
 		font-family: var(--trvt-font-family-display);
 		text-transform: uppercase;
 		font-size: 1rem;
-		font-variation-settings: 'wght' 600;
+		color: var(--trvt-color-typography-heading);
 	}
 
 	a:link,
@@ -99,13 +103,11 @@
 		color: var(--trvt-color-base-link, inherit);
 		text-decoration: var(--trvt-color-base-heading, none);
 	}
-}
 
-@layer components {
 	/* 	This hides the component content until it's ready. 
 		The Trivet core.js registers a componentLoaded event and the layout dispatches it after it renders its content. */
 	[slot] {
-		opacity: 0;
+		opacity: 0.1;
 	}
 	[data-loaded='true'] [slot] {
 		opacity: 1;

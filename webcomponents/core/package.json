@@ -4,9 +4,10 @@
 	"type": "module",
 	"main": "index.js",
 	"files": [
-		"src/core.css",
 		"src/core.js",
-		"src/databus.js"
+		"src/databus.js",
+		"src/fontsLoader.js",
+		"src/polyfills.js"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",

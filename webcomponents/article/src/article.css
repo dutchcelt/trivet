@@ -1,6 +1,6 @@
 @layer components {
 	:host {
-		--article-gap: 2rem;
+		--article-gap: var(--trvt-gap, 2rem);
 		--article-display: var(--trvt-layout-display, block);
 	}
 
@@ -16,12 +16,6 @@
 		/* Positioning */
 
 		/* Display */
-		font-family: var(--trvt-font-family-base);
-		line-height: var(--trvt-typography-leading-l);
-	}
-
-	h2 {
-		color: var(--trvt-color-base-heading);
 	}
 
 	h2:empty {
