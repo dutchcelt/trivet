@@ -1,5 +1,16 @@
 # @trvt/card
 
+## 0.3.0
+
+### Minor Changes
+
+-   Moved all styling out from the system and into docs. This allows for whitelabeling the target site.
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes
