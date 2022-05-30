@@ -8,6 +8,7 @@ export class TrvtHeader extends HTMLElement {
 		this.src = this.dataset.trvtSrc || '';
 		this.type = this.dataset.trvtType || 'home';
 		this.text = this.dataset.trvtTitle || '';
+		this.size = this.dataset.trvtSize || 'l';
 		this.dynamicCustomStyles = new CSSStyleSheet();
 	}
 
@@ -47,6 +48,7 @@ export class TrvtHeader extends HTMLElement {
 	__setStyle() {
 		const src = encodeURI(this.src);
 		const rule = `:host(:where(trvt-header)) { --header-image-src: url('${src}'); }`;
+
 		this.dynamicCustomStyles.replace(rule);
 	}
 
@@ -55,7 +57,9 @@ export class TrvtHeader extends HTMLElement {
 	 * @returns {DocumentFragment}
 	 */
 	render() {
-		const heading = this.text ? `<h1>${this.text}</h1>` : ``;
+		const heading = this.text
+			? `<div part="heading">${this.text}</div>`
+			: ``;
 		return document.createRange().createContextualFragment(`${heading}`);
 	}
 }

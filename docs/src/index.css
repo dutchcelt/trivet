@@ -68,4 +68,17 @@
 		color: var(--trvt-color-base-link, inherit);
 		text-decoration: var(--trvt-color-base-heading, none);
 	}
+
+	trvt-header::part(heading) {
+		font-family: var(--trvt-font-family-gui);
+		text-transform: uppercase;
+		font-variation-settings: 'wght' 500;
+		font-size: 5rem;
+		line-height: 0.9;
+		text-align: end;
+		opacity: 0.9;
+		color: orange;
+		margin: var(--trvt-gap);
+		padding: 0;
+	}
 }

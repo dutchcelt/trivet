@@ -1,5 +1,11 @@
 # @trvt/header
 
+## 0.4.0
+
+### Minor Changes
+
+-   Using ::part() to style the text inside the header componenet. God help me.
+
 ## 0.3.0
 
 ### Minor Changes

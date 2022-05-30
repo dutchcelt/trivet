@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.3.1
+
+### Patch Changes
+
+-   added configs to files list
+
 ## 0.3.0
 
 ### Minor Changes
