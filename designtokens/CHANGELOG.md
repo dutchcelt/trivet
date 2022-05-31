@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.3.2
+
+### Patch Changes
+
+-   New color value for anchors
+
 ## 0.3.1
 
 ### Patch Changes
