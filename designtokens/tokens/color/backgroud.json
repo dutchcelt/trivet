@@ -4,6 +4,7 @@
 			"viewport": { "value": "{color.base.dark.value}" },
 			"content": { "value": "{color.base.light.value}" },
 			"card": { "value": "{color.base.light.value}" },
+			"marker": { "value": "{color.base.light.value}" },
 			"ui": { "value": "{color.base.light.value}" }
 		}
 	}

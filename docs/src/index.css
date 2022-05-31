@@ -60,13 +60,20 @@
 		);
 	}
 
-	a:link,
-	a:visited,
-	a:hover,
-	a:active,
-	a:focus {
-		color: var(--trvt-color-base-link, inherit);
-		text-decoration: var(--trvt-color-base-heading, none);
+	a:link {
+		--trvt-color-typography-anchor: steelblue;
+	}
+	a:visited {
+		---trvt-color-typography-anchor: rebeccapurple;
+	}
+	a:hover {
+		---trvt-color-typography-anchor: darkblue;
+	}
+	a:active {
+		---trvt-color-typography-anchor: steelblue;
+	}
+	a:focus-visible {
+		---trvt-color-typography-anchor: steelblue;
 	}
 
 	trvt-header::part(heading) {
