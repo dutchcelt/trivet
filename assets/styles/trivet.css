@@ -84,7 +84,7 @@
 	a:hover,
 	a:active,
 	a:focus {
-		color: var(---trvt-color-typography-anchor, inherit);
+		color: var(---trvt-color-typography-anchor);
 	}
 
 	/* 	This hides the component content until it's ready. 

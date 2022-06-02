@@ -59,6 +59,29 @@
 			var(--gradient-front) 100%
 		);
 	}
+	a:link,
+	a:visited,
+	a:hover,
+	a:active,
+	a:focus {
+		color: var(---trvt-color-typography-anchor, inherit);
+	}
+
+	trvt-header::part(heading) {
+		font-family: var(--trvt-font-family-gui);
+		text-transform: uppercase;
+		font-variation-settings: 'wght' 500;
+		font-size: 5rem;
+		line-height: 0.9;
+		text-align: end;
+		opacity: 0.9;
+		color: orange;
+		margin: var(--trvt-gap);
+		padding: 0;
+	}
+
+	/*	###################################################################### */
+	/*	Initial prop assignments */
 
 	a:link {
 		--trvt-color-typography-anchor: steelblue;
@@ -74,18 +97,5 @@
 	}
 	a:focus-visible {
 		---trvt-color-typography-anchor: steelblue;
-	}
-
-	trvt-header::part(heading) {
-		font-family: var(--trvt-font-family-gui);
-		text-transform: uppercase;
-		font-variation-settings: 'wght' 500;
-		font-size: 5rem;
-		line-height: 0.9;
-		text-align: end;
-		opacity: 0.9;
-		color: orange;
-		margin: var(--trvt-gap);
-		padding: 0;
 	}
 }
