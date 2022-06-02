@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.2.3
+
+### Patch Changes
+
+-   Removed the inherit value. It should be initial but best to leave it empty
+
 ## 0.2.2
 
 ### Patch Changes

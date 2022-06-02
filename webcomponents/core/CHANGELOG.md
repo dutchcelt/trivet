@@ -1,5 +1,12 @@
 # @trvt/core
 
+## 0.3.4
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/assets@0.2.3
+
 ## 0.3.3
 
 ### Patch Changes
