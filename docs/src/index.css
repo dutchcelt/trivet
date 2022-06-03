@@ -64,7 +64,7 @@
 	a:hover,
 	a:active,
 	a:focus {
-		color: var(---trvt-color-typography-anchor, inherit);
+		color: var(--trvt-color-typography-anchor, inherit);
 	}
 
 	trvt-header::part(heading) {
@@ -87,15 +87,15 @@
 		--trvt-color-typography-anchor: steelblue;
 	}
 	a:visited {
-		---trvt-color-typography-anchor: rebeccapurple;
+		--trvt-color-typography-anchor: rebeccapurple;
 	}
 	a:hover {
-		---trvt-color-typography-anchor: darkblue;
+		--trvt-color-typography-anchor: darkblue;
 	}
 	a:active {
-		---trvt-color-typography-anchor: steelblue;
+		--trvt-color-typography-anchor: steelblue;
 	}
 	a:focus-visible {
-		---trvt-color-typography-anchor: steelblue;
+		--trvt-color-typography-anchor: steelblue;
 	}
 }
