@@ -1,5 +1,13 @@
 # @trvt/navigation
 
+## 0.3.1
+
+### Patch Changes
+
+-   Missing tokens
+-   Updated dependencies
+    -   @trvt/core@0.3.5
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,5 +1,15 @@
 # @trvt/docs
 
+## 0.3.2
+
+### Patch Changes
+
+-   Missing tokens
+-   Updated dependencies
+    -   @trvt/article@0.3.1
+    -   @trvt/header@0.4.1
+    -   @trvt/layout@0.3.1
+
 ## 0.3.1
 
 ### Patch Changes

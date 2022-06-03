@@ -1,5 +1,13 @@
 # @trvt/header
 
+## 0.4.1
+
+### Patch Changes
+
+-   Missing tokens
+-   Updated dependencies
+    -   @trvt/core@0.3.5
+
 ## 0.4.0
 
 ### Minor Changes
