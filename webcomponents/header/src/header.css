@@ -12,8 +12,6 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		padding-block: 0;
-		padding-inline: var(--trvt-gap);
 		color: var(--trvt-color-base-text);
 		background-color: var(--trvt-color-background-content);
 		background-image: var(--header-image-src);
