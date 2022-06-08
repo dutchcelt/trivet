@@ -1,5 +1,11 @@
 # @trvt/header
 
+## 0.4.2
+
+### Patch Changes
+
+-   Removed padding
+
 ## 0.4.1
 
 ### Patch Changes
