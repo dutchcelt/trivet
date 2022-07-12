@@ -37,10 +37,10 @@ export default {
 	// mimeTypes: MimeTypeMappings,
 
 	// middleware used by the server to modify requests/responses, for example to proxy requests or rewrite urls
-	// middleware: Middleware[],
+	// middleware: Middleware{},
 
 	// plugins used by the server to serve or transform files
-	// plugins: Plugin[],
+	// plugins: Plugin{},
 
 	// configuration for the server
 	protocol: 'https',

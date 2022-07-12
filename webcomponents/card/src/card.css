@@ -1,0 +1,35 @@
+@layer components {
+	:host {
+		--card-text-color: var(--trvt-color-typography-text);
+		--card-border-color: var(--trvt-color-line-border);
+		--card-background-color: var(--trvt-color-background-card);
+	}
+	.trvt-card {
+		font-family: var(--trvt-font-family-gui);
+		font-variation-settings: 'wght' 300;
+		line-height: 1.3;
+		margin-block: var(--trvt-gap);
+	}
+	.trvt-card:first-child {
+		margin-block-start: 0;
+	}
+	.trvt-card:last-child {
+		margin-block-end: 0;
+	}
+
+	.trvt-card p {
+		font-size: 0.75rem;
+		margin-block: 0;
+	}
+	.trvt-card a {
+		display: block;
+		font-variation-settings: 'wght' 400;
+		text-decoration: none;
+		font-size: 1.1rem;
+		margin-block: 1rem 0.5rem;
+	}
+	.trvt-card h6 {
+		font-variation-settings: 'wght' 400;
+		margin-block: 0 1rem;
+	}
+}

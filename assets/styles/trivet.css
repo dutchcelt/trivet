@@ -3,13 +3,12 @@
 @layer designsystem {
 	:root {
 		--trvt-display: initial;
-		--trvt-gap: 1rem;
+		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
+
+		--ON: initial;
+		--OFF: ;
 	}
-	@media (min-width: 768px) {
-		:root {
-			--trvt-gap: 2rem;
-		}
-	}
+
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 	/* 	Behaviour */
@@ -33,7 +32,7 @@
 
 	body {
 		margin: 0;
-		font-size: var(--trvt-typography-size-m);
+		font-size: var(--trvt-typography-size-copy);
 		font-family: var(--trvt-font-family-base);
 		line-height: var(--trvt-typography-leading-l);
 		color: var(--trvt-color-typography-text);

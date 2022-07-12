@@ -9,6 +9,7 @@ export class TrvtHeader extends HTMLElement {
 		this.type = this.dataset.trvtType || 'home';
 		this.text = this.dataset.trvtTitle || '';
 		this.size = this.dataset.trvtSize || 'l';
+		this.gradient = this.dataset.trvtGradient || '';
 		this.dynamicCustomStyles = new CSSStyleSheet();
 	}
 
@@ -30,6 +31,10 @@ export class TrvtHeader extends HTMLElement {
 	attributeChangedCallback(name, oldValue, newValue) {
 		const attributeValue = newValue || oldValue;
 		switch (name) {
+			case 'data-trvt-gradient':
+				this.src = attributeValue || '';
+				if (this.gradient) this.__setStyle();
+				break;
 			case 'data-trvt-src':
 				this.src = attributeValue || '';
 				if (this.src) this.__setStyle();
@@ -46,8 +51,13 @@ export class TrvtHeader extends HTMLElement {
 	 * @private
 	 */
 	__setStyle() {
-		const src = encodeURI(this.src);
-		const rule = `:host(:where(trvt-header)) { --header-image-src: url('${src}'); }`;
+		const url = this.src
+			? ` --header-image-src: url('${encodeURI(this.src)}'),`
+			: '';
+		const gradient = this.gradient
+			? `--header-gradient: ${this.gradient};`
+			: '';
+		const rule = `:host(:where(trvt-header)) { ${url} ${gradient}; }`;
 
 		this.dynamicCustomStyles.replace(rule);
 	}
