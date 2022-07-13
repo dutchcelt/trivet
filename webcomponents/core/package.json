@@ -8,7 +8,8 @@
 		"src/core.js",
 		"src/databus.js",
 		"src/fontsLoader.js",
-		"src/polyfills.js"
+		"src/polyfills.js",
+		"src/defineElement.js"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",

@@ -19,7 +19,11 @@
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--trvt-color-background-viewport: var(--trvt-color-base-dark);
+			--trvt-color-background-viewport: linear-gradient(
+				to bottom right,
+				#536976,
+				#292e49
+			);
 			--trvt-color-background-content: var(
 				--trvt-color-base-shade,
 				#3d3c44
@@ -34,7 +38,17 @@
 
 	@media (prefers-color-scheme: light) {
 		:root {
-			--trvt-color-background-viewport: var(--trvt-color-base-mid);
+			--trvt-color-background-viewport: linear-gradient(
+				to bottom right,
+				#1f005c,
+				#5b0060,
+				#870160,
+				#ac255e,
+				#ca485c,
+				#e16b5c,
+				#f39060,
+				#ffb56b
+			);
 			--trvt-color-background-content: var(--trvt-color-base-light);
 			--trvt-color-typography-text: var(--trvt-color-base-dark);
 			--trvt-color-typography-heading: var(--trvt-color-brand-primary);
@@ -47,18 +61,7 @@
 		background: var(--trvt-color-background-viewport);
 		min-height: 100vh;
 	}
-	body::before {
-		position: fixed;
-		z-index: -1;
-		aspect-ratio: 1/1;
-		width: 100vw;
-		content: '';
-		background: linear-gradient(
-			45deg,
-			var(--gradient-back) 60%,
-			var(--gradient-front) 100%
-		);
-	}
+
 	a:link,
 	a:visited,
 	a:hover,

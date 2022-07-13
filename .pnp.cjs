@@ -25,6 +25,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:assets"\
       },\
       {\
+        "name": "@trvt/cli",\
+        "reference": "workspace:cli"\
+      },\
+      {\
         "name": "@trvt/designtokens",\
         "reference": "workspace:designtokens"\
       },\
@@ -76,6 +80,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/assets", ["workspace:assets"]],\
       ["@trvt/button", ["workspace:webcomponents/button"]],\
       ["@trvt/card", ["workspace:webcomponents/card"]],\
+      ["@trvt/cli", ["workspace:cli"]],\
       ["@trvt/core", ["workspace:webcomponents/core"]],\
       ["@trvt/designtokens", ["workspace:designtokens"]],\
       ["@trvt/docs", ["workspace:docs"]],\
@@ -732,6 +737,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@trvt/card", "workspace:webcomponents/card"],\
             ["@trvt/core", "workspace:webcomponents/core"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@trvt/cli", [\
+        ["workspace:cli", {\
+          "packageLocation": "./cli/",\
+          "packageDependencies": [\
+            ["@trvt/cli", "workspace:cli"],\
+            ["@trvt/assets", "workspace:assets"],\
+            ["@trvt/core", "workspace:webcomponents/core"],\
+            ["@trvt/designtokens", "workspace:designtokens"]\
           ],\
           "linkType": "SOFT"\
         }]\

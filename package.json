@@ -16,9 +16,10 @@
 	"license": "Apache-2.0",
 	"repository": "https://github.com/dutchcelt/trivet",
 	"workspaces": [
-		"docs",
 		"assets",
+		"cli",
 		"designtokens",
+		"docs",
 		"webcomponents/*"
 	],
 	"packageManager": "yarn@3.2.0",

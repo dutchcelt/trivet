@@ -11,6 +11,8 @@
 		"scripts/insertIntoCssLayer.js",
 		"scripts/loadFont.js",
 		"scripts/CSSString2CSSStyleSheet.js",
+		"scripts/generateUUID.js",
+		"scripts/injectDocumentStyles.js",
 		"fonts/faces.js",
 		"build/icons.js",
 		"build/glyphs.css",

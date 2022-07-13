@@ -8,6 +8,8 @@ export { normalizeCSS, trivetCSS };
 export { loadFont } from './scripts/loadFont.js';
 //export { CSSString2CSSStyleSheet } from './scripts/CSSString2CSSStyleSheet.js';
 //export { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
+//export { generateUUID } from './scripts/generateUUID.js';
+//export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 /* icons */
 export { iconFonts } from './build/icons.js';
