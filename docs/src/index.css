@@ -12,9 +12,9 @@
 	 */
 
 	:root {
-		--trvt-font-family-base: Bitter, sans-serif;
-		--trvt-font-family-gui: Rubik, sans-serif;
-		--trvt-font-family-display: 'Assistant', sans-serif;
+		--trvt-font-family-base: Arial, sans-serif;
+		--trvt-font-family-gui: Arial, sans-serif;
+		--trvt-font-family-display: 'Arial', sans-serif;
 	}
 
 	@media (prefers-color-scheme: dark) {

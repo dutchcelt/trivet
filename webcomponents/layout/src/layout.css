@@ -2,6 +2,8 @@
 	/* ############################################################### */
 	/* Layout Slot Rules */
 	:host(trvt-layout) {
+		--layout-width-min: 375px;
+		--layout-width-max: 1280px;
 		--layout-gap: var(--trvt-gap, 2rem);
 		--padding-inline: var(--layout-gap, 2rem);
 		--padding-block: var(--layout-gap, 2rem);
@@ -14,7 +16,8 @@
 		gap: 0;
 		padding-block: calc(var(--padding-block) / 2) var(--padding-block);
 		padding-inline: var(--padding-inline);
-		//width: min(1280px, 100%);
+		width: min(var(--layout-width-max), 100%);
+		margin-inline: auto;
 	}
 	@media not all and (min-width: 768px) {
 		:host([data-trvt-type]) {
@@ -92,10 +95,6 @@
 	/* Page */
 	:host([data-trvt-type='page']),
 	:host([data-trvt-type='overview']) {
-		/*--padding-inline: min(var(--trvt-gap), (100vw - 100ch) / 2);*/
-		--padding-inline: calc(
-			clamp(var(--layout-gap), (100vw - 120ch) / 2, (100vw - 1280px) / 2)
-		);
 		--template-comumns: 1fr 1fr 1fr;
 		--template-rows: 1fr;
 	}
