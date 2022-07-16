@@ -58,7 +58,6 @@ export class TrvtHeader extends HTMLElement {
 			? `--header-gradient: ${this.gradient};`
 			: '';
 		const rule = `:host(:where(trvt-header)) { ${url} ${gradient}; }`;
-
 		this.dynamicCustomStyles.replace(rule);
 	}
 
