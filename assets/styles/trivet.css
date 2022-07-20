@@ -1,4 +1,4 @@
-@layer tokens normalize designsystem components theme;
+@layer tokens, normalize, designsystem, components, theme;
 
 @layer designsystem {
 	:root {
