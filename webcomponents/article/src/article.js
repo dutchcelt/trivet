@@ -16,7 +16,7 @@ export class TrvtArticle extends HTMLElement {
 	}
 	render() {
 		return document.createRange().createContextualFragment(`
-			<article>
+			<article class="component">
         ${this.__headingTemplate()}
         <slot name="intro"></slot>
         <slot name="content"></slot>

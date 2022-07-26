@@ -1,4 +1,7 @@
 @layer components {
-	:host {
+	@layer props selectors variants;
+	@layer props {
+		:host {
+		}
 	}
 }

@@ -17,8 +17,8 @@
 		"copy:webcomponents": "copyfiles \"../webcomponents/**/*.{css,js}\" \"../dist/**.*\"",
 		"copy:tokens": "copyfiles \"../designtokens/**/*.{css,json}\" \"../dist/**.*\"",
 		"copy:assets": "copyfiles \"../assets/**/*.{css,jpg,svg,png,webp,woff,woff2}\" \"../dist/**.*\"",
-		"build:old": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn eleventy --input=./src/index.html --output=../dist",
-		"build": "echo 'build docs on hold'",
+		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn copy:webcomponents && yarn eleventy --input=./src/index.html --output=../dist",
+		"build-old": "echo 'build docs on hold'",
 		"start": "yarn build --serve --port=8081",
 		"develop": "yarn build --watch"
 	},

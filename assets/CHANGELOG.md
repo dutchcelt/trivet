@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.2.5
+
+### Patch Changes
+
+-   Missing comma's in the layer definitions.
+
 ## 0.2.4
 
 ### Patch Changes

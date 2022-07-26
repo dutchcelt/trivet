@@ -1,24 +1,28 @@
 @layer components {
-	:host {
-		--article-gap: var(--trvt-gap, 2rem);
-		--article-display: var(--trvt-layout-display, block);
+	@layer props {
+		:host(trvt-article) {
+			--article-gap: var(--trvt-gap, 2rem);
+			--article-display: var(--trvt-layout-display, block);
+		}
 	}
 
-	article {
-		/* Parent Layout */
-		display: var(--article-display);
+	@layer selectors {
+		article {
+			/* Parent Layout */
+			display: var(--article-display);
 
-		/* Layout */
+			/* Layout */
 
-		/* Box Model */
-		margin-block: var(--article-gap);
+			/* Box Model */
+			margin-block: var(--article-gap);
 
-		/* Positioning */
+			/* Positioning */
 
-		/* Display */
-	}
+			/* Display */
+		}
 
-	h2:empty {
-		display: none;
+		h2:empty {
+			display: none;
+		}
 	}
 }
