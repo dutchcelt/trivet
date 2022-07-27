@@ -1,4 +1,4 @@
-import { styles, dataBus } from '@trvt/core';
+import { styles, dataBus, createFragment } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
 
 export class TrvtArticle extends HTMLElement {
@@ -14,8 +14,9 @@ export class TrvtArticle extends HTMLElement {
 	connectedCallback() {
 		this.layoutDetail && this.__layoutEvent({ detail: this.layoutDetail });
 	}
+
 	render() {
-		return document.createRange().createContextualFragment(`
+		return createFragment(`
 			<article class="component">
         ${this.__headingTemplate()}
         <slot name="intro"></slot>
