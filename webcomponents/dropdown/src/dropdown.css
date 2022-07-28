@@ -1,4 +1,4 @@
-@layer components {
+@layer componentlibrary {
 	:host(trvt-dropdown) [data-menu-component] {
 		position: relative;
 		display: inline-block;
@@ -28,7 +28,7 @@
 		text-decoration: none;
 	}
 
-	:host(trvt-dropdown) [type="checkbox"]:focus + [data-opens-menu],
+	:host(trvt-dropdown) [type='checkbox']:focus + [data-opens-menu],
 	:host(trvt-dropdown) a:focus {
 		outline: none;
 		background: darkBlue;
@@ -42,24 +42,30 @@
 		display: none;
 	}
 
-	:host(trvt-dropdown) [type="checkbox"]:not(:checked) + label .expanded-text {
+	:host(trvt-dropdown)
+		[type='checkbox']:not(:checked)
+		+ label
+		.expanded-text {
 		display: none;
 	}
 
-	:host(trvt-dropdown) [type="checkbox"]:not(:checked) + label .collapsed-text {
+	:host(trvt-dropdown)
+		[type='checkbox']:not(:checked)
+		+ label
+		.collapsed-text {
 		display: inline;
 	}
 
-	:host(trvt-dropdown) [role=menu] {
+	:host(trvt-dropdown) [role='menu'] {
 		display: none;
 	}
 
-	:host(trvt-dropdown) :checked ~ [role=menu] {
+	:host(trvt-dropdown) :checked ~ [role='menu'] {
 		position: relative;
 		display: block;
 	}
 
-	:host(trvt-dropdown) [data-menu-origin="right"] {
+	:host(trvt-dropdown) [data-menu-origin='right'] {
 		left: auto;
 		right: 0;
 	}

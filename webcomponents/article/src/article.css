@@ -1,4 +1,4 @@
-@layer components {
+@layer componentlibrary {
 	@layer props {
 		:host(trvt-article) {
 			--article-gap: var(--trvt-gap, 2rem);

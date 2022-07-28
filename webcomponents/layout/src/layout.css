@@ -1,4 +1,4 @@
-@layer components {
+@layer componentlibrary {
 	/* ############################################################### */
 	/* Layout Slot Rules */
 	:host(trvt-layout) {

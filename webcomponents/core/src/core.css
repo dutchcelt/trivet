@@ -1,7 +1,3 @@
-@layer components {
-	@layer props selectors variants;
-	@layer props {
-		:host {
-		}
-	}
+@layer componentlibrary {
+	/* no styles for core */
 }

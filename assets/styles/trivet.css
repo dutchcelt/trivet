@@ -1,4 +1,19 @@
-@layer tokens, normalize, designsystem, components, theme;
+/*
+ * Define the layers and child layers upfront 
+ */
+@layer normalize,
+	designsystem,
+		designsystem.props,
+		designsystem.selectors,
+		designsystem.modifiers,
+	theme,
+		theme.props,
+		theme.selectors,
+		theme.modifiers,
+	componentlibrary,
+		componentlibrary.props,
+		componentlibrary.selectors,
+		componentlibrary.modifiers;
 
 @layer designsystem {
 	:root {
