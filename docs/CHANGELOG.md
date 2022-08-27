@@ -1,5 +1,12 @@
 # @trvt/docs
 
+## 0.3.5
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/header@0.4.4
+
 ## 0.3.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.3.8
+
+### Patch Changes
+
+-   missing script
+
 ## 0.3.7
 
 ### Patch Changes

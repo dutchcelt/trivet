@@ -52,7 +52,7 @@ export class TrvtHeader extends HTMLElement {
 	 */
 	__setStyle() {
 		const url = this.src
-			? ` --header-image-src: url('${encodeURI(this.src)}'),`
+			? ` --header-image-src: url('${encodeURI(this.src)}')`
 			: '';
 		const gradient = this.gradient
 			? `--header-gradient: ${this.gradient};`

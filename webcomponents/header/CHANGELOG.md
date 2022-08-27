@@ -1,5 +1,11 @@
 # @trvt/header
 
+## 0.4.4
+
+### Patch Changes
+
+-   Missing image (bug in custom property)
+
 ## 0.4.3
 
 ### Patch Changes
