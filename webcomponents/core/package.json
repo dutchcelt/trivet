@@ -9,7 +9,8 @@
 		"src/databus.js",
 		"src/fontsLoader.js",
 		"src/polyfills.js",
-		"src/defineElement.js"
+		"src/defineElement.js",
+		"src/createFragment.js"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
