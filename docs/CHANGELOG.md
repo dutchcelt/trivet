@@ -1,5 +1,15 @@
 # @trvt/docs
 
+## 0.3.4
+
+### Patch Changes
+
+-   Font size change: https://utopia.fyi/type/calculator/?c=375,18,1.2,1280,21,1.25,4,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l
+-   Updated dependencies
+    -   @trvt/article@0.3.2
+    -   @trvt/header@0.4.3
+    -   @trvt/layout@0.3.2
+
 ## 0.3.3
 
 ### Patch Changes
