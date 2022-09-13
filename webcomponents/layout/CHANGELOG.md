@@ -1,5 +1,11 @@
 # @trvt/layout
 
+## 0.3.3
+
+### Patch Changes
+
+-   Wrong layer order, now defined and corrected
+
 ## 0.3.2
 
 ### Patch Changes
