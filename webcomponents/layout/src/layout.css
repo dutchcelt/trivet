@@ -1,4 +1,6 @@
 @layer componentlibrary {
+	@layer props, selectors, modifiers;
+
 	/* ############################################################### */
 	/* Layout Slot Rules */
 
@@ -10,7 +12,6 @@
 			--padding-inline: var(--layout-gap, 2rem);
 			--padding-block: var(--layout-gap, 2rem);
 		}
-
 	}
 	@layer modifiers {
 		/* ############################################################### */
@@ -62,6 +63,21 @@
 			--grid-row: 1;
 		}
 
+		@media not all and (min-width: 768px) {
+			:host(trvt-layout[data-trvt-type]) {
+				--template-comumns: 100%;
+				--template-rows: auto;
+			}
+
+			:host([data-trvt-type]) .navigation,
+			:host([data-trvt-type]) .header,
+			:host([data-trvt-type]) .main,
+			:host([data-trvt-type]) .sidebar,
+			:host([data-trvt-type]) .footer {
+				--grid-column: 1;
+			}
+		}
+
 		/* Article */
 		:host([data-trvt-type='article']) {
 			--display: grid;
@@ -88,25 +104,12 @@
 			margin-inline: auto;
 		}
 
-
 		@media not all and (min-width: 768px) {
 			:host([data-trvt-type]) {
 				padding-inline: 0;
 
-				padding-block: calc(var(--padding-block) / 4) var(--padding-block);
-			}
-
-			:host(trvt-layout[data-trvt-type]) {
-				--template-comumns: 100%;
-				--template-rows: auto;
-			}
-
-			:host([data-trvt-type]) .navigation,
-			:host([data-trvt-type]) .header,
-			:host([data-trvt-type]) .main,
-			:host([data-trvt-type]) .sidebar,
-			:host([data-trvt-type]) .footer {
-				--grid-column: 1;
+				padding-block: calc(var(--padding-block) / 4)
+					var(--padding-block);
 			}
 		}
 
@@ -137,5 +140,4 @@
 			padding-inline: var(--layout-gap);
 		}
 	}
-
 }
