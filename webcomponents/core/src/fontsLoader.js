@@ -1,6 +1,8 @@
 import { loadFont } from '@trvt/assets';
-const fontsLoader = (faceObject, localpath) => {
-	const fontArray = Object.keys(faceObject).map((face) => faceObject[face]);
-	fontArray.forEach((face) => loadFont(face, localpath));
+const fontsLoader = (faces, localpath) => {
+	const facesArray = Array.isArray(faces)
+		? faces
+		: Object.keys(faces).map((face) => faces[face]);
+	facesArray.forEach((face) => loadFont(face, localpath));
 };
 export { fontsLoader };

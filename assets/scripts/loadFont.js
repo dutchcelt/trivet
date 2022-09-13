@@ -1,27 +1,24 @@
 /**
  * Dynamically load fonts.
  * Matches the settings used in the Design tokens (Style Dictionary).
- * @param family
- * @param filename
- * @param path
- * @param style
- * @param weight
- * @param display
+ * @param opts
+ * @param localpath
  * @returns {Promise<void>}
  */
-export const loadFont = async (
-	{ family, filename, path, style, weight, display, variationSettings },
-	localpath = ''
-) => {
-	const valid = [
+export const loadFont = async (opts, localpath = '') => {
+	const {
 		family,
 		filename,
 		path,
 		style,
 		weight,
+		display,
 		variationSettings,
-	].some((f) => !!f && typeof f === 'string');
-	if ((path.value, path)) {
+	} = opts;
+	const valid = Object.values(opts).some((f) => typeof f === 'string');
+	if ((valid, !!filename, !!family, !!path)) {
+		if (!/^\//.test(path)) path = `/${path}`;
+		if (!/^\//.test(filename)) filename = `/${filename}`;
 		const url = new URL(`${localpath + path}${filename}`, import.meta.url);
 		if (url) {
 			const font = new FontFace(family, `url(${url})`, {
