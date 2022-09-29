@@ -63,7 +63,7 @@
 			--grid-row: 1;
 		}
 
-		@media not all and (min-width: 768px) {
+		@media not all and (min-width: 960px) {
 			:host(trvt-layout[data-trvt-type]) {
 				--template-comumns: 100%;
 				--template-rows: auto;
@@ -104,7 +104,7 @@
 			margin-inline: auto;
 		}
 
-		@media not all and (min-width: 768px) {
+		@media not all and (min-width: 960px) {
 			:host([data-trvt-type]) {
 				padding-inline: 0;
 

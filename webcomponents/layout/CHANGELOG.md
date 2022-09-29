@@ -1,5 +1,11 @@
 # @trvt/layout
 
+## 0.3.4
+
+### Patch Changes
+
+-   New breakpoint
+
 ## 0.3.3
 
 ### Patch Changes
