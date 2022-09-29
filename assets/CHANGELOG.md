@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.2.7
+
+### Patch Changes
+
+-   Moved font sizing to root
+
 ## 0.2.6
 
 ### Patch Changes
