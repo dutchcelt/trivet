@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.2.8
+
+### Patch Changes
+
+-   Using root tokens for stability and predictability
+
 ## 0.2.7
 
 ### Patch Changes

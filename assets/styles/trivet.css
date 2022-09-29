@@ -36,8 +36,8 @@
 
 	:root {
 		margin: 0;
-		font-size: var(--trvt-typography-size-copy);
-		line-height: var(--trvt-typography-leading-l);
+		font-size: var(--trvt-typography-size-root, 100%);
+		line-height: var(--trvt-typography-leading-root, 1.5);
 		box-sizing: border-box;
 	}
 	*,
