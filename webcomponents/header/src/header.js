@@ -27,7 +27,11 @@ export class TrvtHeader extends HTMLElement {
 	static get observedAttributes() {
 		return ['data-trvt-src', 'data-trvt-title'];
 	}
-
+	/**
+	 * @param name
+	 * @param oldValue
+	 * @param newValue
+	 */
 	attributeChangedCallback(name, oldValue, newValue) {
 		const attributeValue = newValue || oldValue;
 		switch (name) {
