@@ -10,7 +10,9 @@
 		"src/fontsLoader.js",
 		"src/polyfills.js",
 		"src/defineElement.js",
-		"src/createFragment.js"
+		"src/createFragment.js",
+		"src/adoptStyles.js",
+		"src/shadowStyles.js"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
