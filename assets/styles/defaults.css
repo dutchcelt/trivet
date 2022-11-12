@@ -1,0 +1,112 @@
+/* 	Based on a reset by Mayank 
+ *	https://www.npmjs.com/package/@acab/reset.css 
+ */
+@layer defaults.reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+	[hidden] {
+		display: none !important;
+	}
+	html {
+		-webkit-text-size-adjust: none;
+		color-scheme: dark light;
+	}
+	body {
+		font-family: system-ui, sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+		color: inherit;
+	}
+	button, label, select, summary, [role='button'], [role='option']) {
+		cursor: pointer;
+	}
+	:disabled {
+		cursor: not-allowed;
+	}
+	label:has(> input:disabled),
+	label:has(+ input:disabled) {
+		cursor: not-allowed;
+	}
+	button {
+		border-style: solid;
+	}
+	img,
+	svg,
+	video,
+	canvas,
+	audio,
+	iframe,
+	embed,
+	object {
+		display: block;
+	}
+
+	img,
+	picture,
+	svg {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@layer default.options {
+	*,
+	*::before,
+	*::after {
+		margin: var(--default_margin, initial);
+		padding: var(--default_padding, initial);
+	}
+	body {
+		min-height: var(--default_body_min-height, initial);
+		line-height: var(--default_line-height, 1.5);
+	}
+	a {
+		text-underline-offset: var(--default_text-underline-offset, 0.2ex);
+	}
+
+	h1,
+	h2,
+	h3 {
+		line-height: var(--default_heading_line-height, calc(1em + 0.5rem));
+	}
+
+	:focus-visible {
+		outline: var(--default_outline-witdh, 2px)
+			var(--default_outline-style, solid) var(--focus-color, Highlight);
+		outline-offset: var(--default_outline-offset, 2px);
+	}
+	textarea {
+		resize: var(--default_textarea_resize, vertical);
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		html:focus-within {
+			scroll-behavior: var(--default_focus_scroll-behaviour, smooth);
+		}
+	}
+}
+
+@layer default.utilities {
+	hr {
+		border-width: 1px 0 0 0;
+		color: inherit;
+		height: 0;
+		overflow: visible;
+	}
+	.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden) {
+		clip-path: inset(50%) !important;
+		height: 1px !important;
+		width: 1px !important;
+		overflow: hidden !important;
+		position: absolute !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	}
+}
