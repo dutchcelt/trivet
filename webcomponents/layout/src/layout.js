@@ -22,9 +22,7 @@ const __getSlotNames = (elms) =>
 const __sortSlotNames = (control, slots) =>
 	control.filter((c) => slots.some((s) => s === c));
 
-
 export class TrvtLayout extends HTMLElement {
-
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
@@ -43,7 +41,7 @@ export class TrvtLayout extends HTMLElement {
 		}
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
-		this.__defaultSlot().addEventListener('slotchange', () => {
+		this.#defaultSlot().addEventListener('slotchange', () => {
 			dataBus.fire('trvtLayout', { type: this.trvtType });
 			dataBus.fire('componentLoaded', { loaded: true });
 		});
@@ -54,7 +52,7 @@ export class TrvtLayout extends HTMLElement {
 	 * @returns {Element}
 	 * @private
 	 */
-	__defaultSlot(name = 'main') {
+	#defaultSlot(name = 'main') {
 		const slotAttribute = this.slotNames.includes(name)
 			? `[name=${name}]`
 			: '[name]';
@@ -67,7 +65,7 @@ export class TrvtLayout extends HTMLElement {
 	 */
 	render() {
 		return document.createRange().createContextualFragment(`
-			${!!this.trvtType ? this.__template() : ``}
+			${!!this.trvtType ? this.#template() : ``}
 		`);
 	}
 
@@ -76,9 +74,9 @@ export class TrvtLayout extends HTMLElement {
 	 * @returns {string}
 	 * @private
 	 */
-	__template() {
+	#template() {
 		return this.slotNames
-			.map((name) => this.__slotMarkupObject()[name] || ``)
+			.map((name) => this.#slotMarkupObject()[name] || ``)
 			.join(``);
 	}
 
@@ -87,7 +85,7 @@ export class TrvtLayout extends HTMLElement {
 	 * @returns {{navigation: string, footer: string, sidebar: string, header: string, main: string, notifications: string}}
 	 * @private
 	 */
-	__slotMarkupObject() {
+	#slotMarkupObject() {
 		return Object.freeze({
 			notifications: `<div class="notifications"><slot name="notifications"></slot></div>`,
 			navigation: `<div class="navigation"><slot name="navigation"></slot></div>`,
