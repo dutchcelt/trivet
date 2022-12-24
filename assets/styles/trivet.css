@@ -1,11 +1,11 @@
 /*
  * Define the layers and child layers upfront 
  */
-@layer default,
-	default.reset,
-	default.options,
-	default.utilities,
-	normalize,
+@layer defaults,
+	defaults.reset,
+	defaults.normalize,
+	defaults.options,
+	defaults.utilities,
 	designsystem,
 		designsystem.props,
 		designsystem.selectors,
