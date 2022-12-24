@@ -65,7 +65,7 @@ export class TrvtLayout extends HTMLElement {
 	 */
 	render() {
 		return document.createRange().createContextualFragment(`
-			${!!this.trvtType ? this.#template() : ``}
+			<div class="trvt-layout">${!!this.trvtType ? this.#template() : ``}</div>
 		`);
 	}
 
