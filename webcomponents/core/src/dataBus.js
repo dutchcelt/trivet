@@ -9,7 +9,7 @@ const sanitizeThis = (str) => {
 	const el = document.createElement('div');
 	el.innerText = str;
 	return el.innerHTML;
-}
+};
 /**
  * Restrict the type of values used and sanitize string input
  * @param {Object} detail
@@ -19,15 +19,18 @@ const safeValues = (detail) => {
 	const cleanDetail = {};
 	for (const [key, value] of Object.entries(detail)) {
 		const propType = typeof detail[key];
-		const safeType = (/string|boolean|number/).test(propType)
+		const safeType = /string|boolean|number/.test(propType);
 		if (safeType) {
-			cleanDetail[key] = propType === 'string' ? sanitizeThis(value) : value;
+			cleanDetail[key] =
+				propType === 'string' ? sanitizeThis(value) : value;
 		} else {
-			console.warn(`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`);
+			console.warn(
+				`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`
+			);
 		}
 	}
 	return cleanDetail;
-}
+};
 
 /**
  * @Function - For each event we create a new object, so we can retrieve data stored from the event detail
@@ -36,26 +39,25 @@ const safeValues = (detail) => {
  * @param {Object } [props={}]
  * @returns {{}}
  */
-const createEventObject = (store,event,props={}) => {
-	Object.defineProperty(store, event,{
+const createEventObject = (store, event, props = {}) => {
+	Object.defineProperty(store, event, {
 		enumerable: false,
 		configurable: true,
 		writable: true,
-		value:{
-			data:{...props},
-			get detail(){
+		value: {
+			data: { ...props },
+			get detail() {
 				return this.data;
-			}
-		}
-	})
-}
+			},
+		},
+	});
+};
 
 /**
  * @class EventDataBus
  * Event bus with data store based on registered events
  */
 class EventDataBus {
-
 	constructor() {
 		this._bus = document.createElement('div');
 		this.store = {};
@@ -67,10 +69,12 @@ class EventDataBus {
 	 */
 	register(event, callback) {
 		const eventName = event || 'anonymous';
-		if(this[eventName]) {
-			console.warn(`Can't register event '${eventName}' because it already exists.`);
+		if (this[eventName]) {
+			console.warn(
+				`Can't register event '${eventName}' because it already exists.`
+			);
 		} else {
-			createEventObject(this,eventName);
+			createEventObject(this, eventName);
 			this._bus.addEventListener(eventName, callback);
 		}
 	}
@@ -83,7 +87,9 @@ class EventDataBus {
 	remove(event, callback) {
 		this[event]
 			? this._bus.removeEventListener(event, callback)
-			: console.warn(`Can't remove event '${event}' because it hasn't been registered.`);
+			: console.warn(
+					`Can't remove event '${event}' because it hasn't been registered.`
+			  );
 	}
 
 	/**
@@ -92,14 +98,16 @@ class EventDataBus {
 	 * @param {Object} [detail={}]
 	 */
 	fire(event, detail = {}) {
-		if(this[event]) {
+		if (this[event]) {
 			detail = Object.assign(this[event].data, safeValues(detail));
-			this._bus.dispatchEvent(new CustomEvent(event, {detail}));
+			this._bus.dispatchEvent(new CustomEvent(event, { detail }));
 		} else {
-			console.warn(`Can't fire event '${event}' because it hasn't been registered.`);
+			console.warn(
+				`Can't fire event '${event}' because it hasn't been registered.`
+			);
 		}
 	}
 }
 
 const dataBus = new EventDataBus();
-export { dataBus }
+export { dataBus };

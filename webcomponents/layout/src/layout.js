@@ -28,7 +28,7 @@ export class TrvtLayout extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.trvtType = this.dataset.trvtType;
 		this.slotNames = __sortSlotNames(
-			Object.keys(this.__slotMarkupObject()),
+			Object.keys(this.#slotMarkupObject()),
 			__getSlotNames(this.children)
 		);
 	}

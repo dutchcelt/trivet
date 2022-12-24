@@ -10,12 +10,12 @@
 	[hidden] {
 		display: none !important;
 	}
-	html {
+	html,
+	:host {
 		-webkit-text-size-adjust: none;
 		color-scheme: dark light;
 	}
 	body {
-		font-family: system-ui, sans-serif;
 		-webkit-font-smoothing: antialiased;
 	}
 	input,
@@ -57,38 +57,55 @@
 	}
 }
 
+/*
+	default tokens work as follows:
+	--scope_element_property
+	Root element are not included in the naming convention. 
+	The root or host element is where the cascade starts. 
+*/
+
 @layer default.options {
-	*,
-	*::before,
-	*::after {
-		margin: var(--default_margin, initial);
-		padding: var(--default_padding, initial);
+	html,
+	:host {
+		font-family: var(--trvt-defaults_font-family, system-ui, sans-serif);
+		font-size: var(--trvt-defaults_font-size, 100%);
+		line-height: var(--trvt-defaults_line-height, 2ex);
 	}
 	body {
-		min-height: var(--default_body_min-height, initial);
-		line-height: var(--default_line-height, 1.5);
+		margin: var(--trvt-defaults_body_margin, 0);
+		min-height: var(--trvt-defaults_body_min-height, 100dvh);
 	}
 	a {
-		text-underline-offset: var(--default_text-underline-offset, 0.2ex);
+		text-underline-offset: var(
+			--trvt-defaults_text-underline-offset,
+			0.2ex
+		);
+		text-decoration-thickness: var(
+			--trvt-defaults_anchor_text-decoration-thickness
+		);
 	}
 
 	h1,
 	h2,
 	h3 {
-		line-height: var(--default_heading_line-height, calc(1em + 0.5rem));
+		line-height: var(--trvt-defaults_heading_line-height, 1ex);
 	}
 
 	:focus-visible {
-		outline: var(--default_outline-witdh, 2px)
-			var(--default_outline-style, solid) var(--focus-color, Highlight);
-		outline-offset: var(--default_outline-offset, 2px);
+		outline: var(--trvt-defaults_outline-witdh, 2px)
+			var(--trvt-defaults_outline-style, solid)
+			var(--focus-color, Highlight);
+		outline-offset: var(--trvt-defaults_outline-offset, 2px);
 	}
 	textarea {
-		resize: var(--default_textarea_resize, vertical);
+		resize: var(--trvt-defaults_textarea_resize, vertical);
 	}
 	@media (prefers-reduced-motion: no-preference) {
 		html:focus-within {
-			scroll-behavior: var(--default_focus_scroll-behaviour, smooth);
+			scroll-behavior: var(
+				--trvt-defaults_focus_scroll-behaviour,
+				smooth
+			);
 		}
 	}
 }

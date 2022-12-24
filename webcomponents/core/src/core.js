@@ -1,6 +1,3 @@
-/* Design Tokens */
-import { trvtTokensFontfaces } from '@trvt/designtokens';
-
 /* Register event to prevent FOUC */
 import { dataBus } from './dataBus.js';
 const componentLoadedEvent = (event) => {
@@ -18,6 +15,3 @@ import coreCSS from './core.css' assert { type: 'css' };
 const styles = [normalizeCSS, trivetCSS, coreCSS];
 
 export { styles };
-
-/* Polyfills */
-import './polyfills.js';

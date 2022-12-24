@@ -5,9 +5,9 @@ export class TrvtHeader extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
-		this.src = this.dataset.trvtSrc || '';
-		this.type = this.dataset.trvtType || 'home';
-		this.text = this.dataset.trvtTitle || '';
+		this.context = this.dataset.trvtContext || '';
+		this.imageSource = this.dataset.trvtSrc || '';
+		this.titleString = this.dataset.trvtTitle || '';
 		this.size = this.dataset.trvtSize || 'l';
 		this.gradient = this.dataset.trvtGradient || '';
 		this.dynamicCustomStyles = new CSSStyleSheet();
@@ -21,7 +21,7 @@ export class TrvtHeader extends HTMLElement {
 		];
 		this.heading = this.shadowRoot.querySelector('h1');
 		this.shadowRoot.appendChild(this.render());
-		this.__setStyle();
+		this.#setStyle();
 	}
 
 	static get observedAttributes() {
@@ -36,16 +36,16 @@ export class TrvtHeader extends HTMLElement {
 		const attributeValue = newValue || oldValue;
 		switch (name) {
 			case 'data-trvt-gradient':
-				this.src = attributeValue || '';
-				if (this.gradient) this.__setStyle();
+				this.imageSource = attributeValue || '';
+				if (this.gradient) this.#setStyle();
 				break;
 			case 'data-trvt-src':
-				this.src = attributeValue || '';
-				if (this.src) this.__setStyle();
+				this.imageSource = attributeValue || '';
+				if (this.imageSource) this.#setStyle();
 				break;
 			case 'data-trvt-title':
-				this.text = attributeValue || '';
-				if (this.heading) this.heading.textContent = this.text;
+				this.titleString = attributeValue || '';
+				if (this.heading) this.heading.textContent = this.titleString;
 				break;
 		}
 	}
@@ -54,9 +54,9 @@ export class TrvtHeader extends HTMLElement {
 	 * Add the css prop to an adopted stylesheet
 	 * @private
 	 */
-	__setStyle() {
-		const url = this.src
-			? ` --header-image-src: url('${encodeURI(this.src)}')`
+	#setStyle() {
+		const url = this.imageSource
+			? ` --header-image-src: url('${encodeURI(this.imageSource)}')`
 			: '';
 		const gradient = this.gradient
 			? `--header-gradient: ${this.gradient};`
@@ -70,8 +70,8 @@ export class TrvtHeader extends HTMLElement {
 	 * @returns {DocumentFragment}
 	 */
 	render() {
-		const heading = this.text
-			? `<div part="heading">${this.text}</div>`
+		const heading = this.titleString
+			? `<div part="heading">${this.titleString}</div>`
 			: ``;
 		return document.createRange().createContextualFragment(`${heading}`);
 	}
