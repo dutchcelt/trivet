@@ -1,6 +1,6 @@
 @layer componentlibrary {
 	@layer props {
-		:host(trvt-article) {
+		:host {
 			--article-gap: var(--trvt-gap, 2rem);
 			--article-display: var(--trvt-layout-display, block);
 		}

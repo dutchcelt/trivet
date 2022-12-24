@@ -5,7 +5,7 @@
 	/* Layout Slot Rules */
 
 	@layer props {
-		:host(trvt-layout) {
+		:host {
 			--layout-width-min: 375px;
 			--layout-width-max: 1280px;
 			--layout-gap: var(--trvt-gap, 2rem);
