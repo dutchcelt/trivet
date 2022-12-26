@@ -1,3 +1,8 @@
 @layer componentlibrary {
-	/* no styles for core */
+	:root {
+		--ON: initial;
+		--OFF: ;
+		--TRUE: initial;
+		--FALSE: ;
+	}
 }
