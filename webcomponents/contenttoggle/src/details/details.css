@@ -1,0 +1,89 @@
+@layer props {
+	:host {
+		--detail-surface-color: var(--color-light, white);
+		--detail-surface-color-active: var(--toggle-active-canvas, var(--detail-surface-color));
+		--detail-text-color: var(--color-dark, black);
+		--detail-display: var(--toggle-display, block);
+		--detail-block-space: var(--space-block, 1rem);
+		--detail-inline-space: var(--space-inline, 1rem);
+		--detail-font-family: var(--font-family, sans-serif);
+		--detail-font-weight: var(--font-weight-normal, normal);
+		--detail-line-height: var(--default-line-height, normal);
+
+		--summary-surface-color: var(--color-dark, black);
+		--summary-surface-color-active: var(--toggle-active, var(--summary-surface-color));
+		--summary-text-color: var(--color-light, white);
+		--summary-icon-surface-color: var(--color-light, white);
+		--summary-icon-text-color: var(--color-dark, black);
+		--summary-icon-font-weight: var(--font-weight-heavy, bolder);
+		--summary-icon-open-char: var(--icon-minus-char, "-");
+		--summary-icon-closed-char: var(--icon-plus-char, "+");
+		--summary-block-space: var(--space-block, 1rem);
+		--summary-inline-space: var(--space-inline, 1rem);
+		--summary-font-weight: var(--font-weight-bold, bold);
+	}
+}
+@layer rules {
+	:host {
+		margin-block: var(--detail-block-space);
+	}
+	:host,
+	details {
+		display: var(--detail-display);
+	}
+	summary::-webkit-details-marker {
+		display: none;
+	}
+	.content {
+		display: block;
+		grid-row: 2;
+		grid-column: 1 / span var(--numOfToggles, -1);
+		
+		padding-block: var(--detail-block-space);
+		padding-inline: var(--detail-inline-space);
+		
+		line-height: var(--ds-line-height);
+		
+		background: var(--detail-surface-color);
+		color: var(--detail-text-color);
+	}
+
+	summary {
+		display: flex;
+		grid-row: 1;
+		gap: var(--summary-block-space) var(--summary-inline-space);
+		align-items: center;
+		
+		padding-block: var(--summary-block-space);
+		padding-inline: var(--summary-inline-space);
+		background-color: var(--summary-surface-color);
+		color: var(--summary-text-color);
+		
+		font-weight: var(--summary-font-weight);
+		cursor: pointer;
+	}
+
+	summary::after {
+		display: flex;
+		content: var(--is-accordion, var(--summary-icon-closed-char));
+		width: 1em;
+		height: 1em;
+		justify-content: center;
+		line-height: 0.9;
+		background: var(--summary-icon-surface-color);
+		color: var(--summary-icon-text-color);
+		margin-inline-start: auto;
+		font-weight: var(--summary-icon-font-weight);
+	}
+	details[open] summary::after {
+		content: var(--is-accordion, var(--summary-icon-open-char));
+	}
+}
+@layer modifiers {
+	[open] {
+		--detail-surface-color: var(--detail-surface-color-active);
+		--summary-surface-color: var(--summary-surface-color-active);
+	}
+}
+
+

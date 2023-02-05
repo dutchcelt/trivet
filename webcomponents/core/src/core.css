@@ -1,4 +1,4 @@
-@layer componentlibrary {
+@layer componentlibrary.props {
 	:root {
 		--ON: initial;
 		--OFF: ;

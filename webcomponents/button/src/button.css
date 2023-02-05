@@ -1,6 +1,8 @@
 @layer componentlibrary {
-	:host {
-	}
-	button {
+	@layer selectors {
+		:host {
+		}
+		button {
+		}
 	}
 }

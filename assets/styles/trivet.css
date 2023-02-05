@@ -1,30 +1,31 @@
 /*
  * Define the layers and child layers upfront 
  */
-@layer defaults,
-	defaults.reset,
+@layer defaults.reset,
 	defaults.normalize,
 	defaults.options,
 	defaults.utilities,
-	designsystem,
-		designsystem.props,
-		designsystem.selectors,
-		designsystem.modifiers,
-	theme,
-		theme.props,
-		theme.selectors,
-		theme.modifiers,
-	componentlibrary,
-		componentlibrary.props,
-		componentlibrary.selectors,
-		componentlibrary.modifiers;
+	
+	designsystem.props,
+	designsystem.selectors,
+	designsystem.modifiers,
+	
+	theme.props,
+	theme.selectors,
+	theme.modifiers,
+	
+	componentlibrary.props,
+	componentlibrary.selectors,
+	componentlibrary.modifiers;
 
-@layer designsystem {
+@layer designsystem.props {
 	:root {
 		--trvt-display: initial;
 		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
 	}
+}
 
+@layer designsystem.selectors {
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 	/* 	Behaviour */

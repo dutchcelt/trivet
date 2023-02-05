@@ -1,25 +1,29 @@
 @layer componentlibrary {
-	:host([data-trvt-size='l']) {
-		--header-size: 20rem;
+	@layer props {
+		:host([data-trvt-size='l']) {
+			--header-size: 20rem;
+		}
+		:host([data-trvt-size='m']) {
+			--header-size: 10rem;
+		}
+		:host([data-trvt-size='s']) {
+			--header-size: 5rem;
+		}
 	}
-	:host([data-trvt-size='m']) {
-		--header-size: 10rem;
-	}
-	:host([data-trvt-size='s']) {
-		--header-size: 5rem;
-	}
-	:host {
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		color: var(--trvt-color-base-text);
-		background-color: var(--trvt-color-background-content);
-		background-image: var(--header-image-src, var(--header-gradient));
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		height: var(--header-size, 20rem);
-		overflow: hidden;
-		justify-content: end;
+	@layer selectors {
+		:host {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			color: var(--trvt-color-base-text);
+			background-color: var(--trvt-color-background-content);
+			background-image: var(--header-image-src, var(--header-gradient));
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: var(--header-size, 20rem);
+			overflow: hidden;
+			justify-content: end;
+		}
 	}
 }

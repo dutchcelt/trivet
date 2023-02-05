@@ -1,0 +1,37 @@
+@layer system.tokens {
+  :root {
+
+    --ON: initial;
+    --OFF: ;
+	  
+		--ds-font-family: Inter, Gilroy, sans-serif;
+    --ds-line-height: 1.5;
+    --space-block: 1ex;
+    --space-inline: 1ch;
+    --color-dark: #333;
+    --color-light: #efefef;
+    --color-accent: #a2d9fb;
+		--color-active: #0080ff;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --font-weight-heavy: 900;
+
+    --icon-minus-char: "\2212";
+    --icon-plus-char: "\002B";
+
+  }
+}
+
+@layer system.foundations {
+  body {
+		padding: 2ex 2ch;
+    font-family: var(--ds-font-family, sans-serif);
+    line-height: var(--ds-line-height, normal);
+    background: var(--color-light, canvas);
+    color: var(--color-dark, canvasText);
+  }
+	h1 {
+		font-weight: var(--font-weight-heavy);
+	}
+
+}

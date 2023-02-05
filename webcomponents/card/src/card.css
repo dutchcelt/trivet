@@ -1,35 +1,85 @@
 @layer componentlibrary {
-	:host {
-		--card-text-color: var(--trvt-color-typography-text);
-		--card-border-color: var(--trvt-color-line-border);
-		--card-background-color: var(--trvt-color-background-card);
+	@layer props {
+		:host {
+			--card-text-color: var(--trvt-color-typography-text);
+			--card-border-color: var(--trvt-color-line-border);
+			--card-background-color: var(--trvt-color-background-card);
+		}
 	}
-	.trvt-card {
-		font-family: var(--trvt-font-family-gui);
-		font-variation-settings: 'wght' 300;
-		line-height: 1.3;
-		margin-block: var(--trvt-gap);
-	}
-	.trvt-card:first-child {
-		margin-block-start: 0;
-	}
-	.trvt-card:last-child {
-		margin-block-end: 0;
+	@layer selectors {
+		.trvt-card {
+			font-family: var(--trvt-font-family-gui);
+			font-variation-settings: 'wght' 300;
+			line-height: 1.3;
+			margin-block: var(--trvt-gap);
+		}
+		.trvt-card:first-child {
+			margin-block-start: 0;
+		}
+		.trvt-card:last-child {
+			margin-block-end: 0;
+		}
+
+		.trvt-card p {
+			font-size: 0.75rem;
+			margin-block: 0;
+		}
+		.trvt-card a {
+			display: block;
+			font-variation-settings: 'wght' 400;
+			text-decoration: none;
+			font-size: 1.1rem;
+			margin-block: 1rem 0.5rem;
+		}
+		.trvt-card h6 {
+			font-variation-settings: 'wght' 400;
+			margin-block: 0 1rem;
+		}
 	}
 
-	.trvt-card p {
-		font-size: 0.75rem;
-		margin-block: 0;
+	@layer props {
+		article {
+			--card-display: grid;
+			--card-columns: 1fr;
+			--card-row-gap: var(--row-gap);
+			--card-column-gap: var(--column-gap);
+			--card-padding: var(--size-2, 1rem);
+			--card-surface-color: var(--surface-1, canvas);
+			--card-heading-color: var(--text-3);
+		}
 	}
-	.trvt-card a {
-		display: block;
-		font-variation-settings: 'wght' 400;
-		text-decoration: none;
-		font-size: 1.1rem;
-		margin-block: 1rem 0.5rem;
+	@layer selectors {
+		:host {
+			display: block;
+			break-inside: avoid;
+			container: component / inline-size;
+			flex: 1;
+			min-width: min(20rem, 100%);
+		}
+
+		article {
+			display: var(--card-display);
+			grid-template-columns: var(--card-columns);
+			row-gap: var(--card-row-gap);
+			column-gap: var(--card-column-gap);
+			padding: var(--card-padding);
+			background-color: var(--card-surface-color);
+			margin-block: var(--is-multicol, calc(var(--row-gap) / 2));
+			height: calc(100% - (var(--card-padding) * 2));
+			align-content: start;
+		}
+		h2 {
+			margin: 0;
+		}
 	}
-	.trvt-card h6 {
-		font-variation-settings: 'wght' 400;
-		margin-block: 0 1rem;
+	@layer modifiers {
+		article:has(h2) {
+			--card-padding: var(--size-7, 2rem);
+		}
+		@container component (min-width: 35em) {
+			article {
+				--card-columns: 1fr 1fr;
+			}
+		}
 	}
 }

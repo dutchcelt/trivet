@@ -1,0 +1,2 @@
+import "detailsComponent";
+import "detailsContainer";

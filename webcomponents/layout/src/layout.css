@@ -1,6 +1,4 @@
 @layer componentlibrary {
-	@layer props, selectors, modifiers;
-
 	/* ############################################################### */
 	/* Layout Slot Rules */
 
