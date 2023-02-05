@@ -110,4 +110,7 @@
 	[data-loaded='true'] [slot] {
 		opacity: 1;
 	}
+	trvt-layout:has(:not(:defined)) {
+		visibility: hidden;
+	}
 }
