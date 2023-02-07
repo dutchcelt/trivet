@@ -6,10 +6,17 @@
 	defaults.options,
 	defaults.utilities,
 	
+	designsystem.tokens,
+	designsystem.foundations,
+	/* 	todo: remove props, selectors, and modifiers from designsystem */
 	designsystem.props,
 	designsystem.selectors,
 	designsystem.modifiers,
 	
+	/* 	todo: remove props, selectors, and modifiers from theme
+		Just have the 'theme' layer without any sub layers
+		Allow developers to manage their own layers
+	 */
 	theme.props,
 	theme.selectors,
 	theme.modifiers,
@@ -25,7 +32,7 @@
 	}
 }
 
-@layer designsystem.selectors {
+@layer designsystem.foundation {
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 	/* 	Behaviour */
@@ -101,7 +108,10 @@
 	a:focus {
 		color: var(--trvt-color-typography-anchor);
 	}
+}
 
+@layer deisgnsystem.foundation {
+	
 	/* 	This hides the component content until it's ready. 
 		The Trivet core.js registers a componentLoaded event and the layout dispatches it after it renders its content. */
 	[slot] {
@@ -110,7 +120,13 @@
 	[data-loaded='true'] [slot] {
 		opacity: 1;
 	}
+	
+	.content:has(> slot) {
+		margin-trim: block;
+	}
+	/*	Container control */
 	trvt-layout:has(:not(:defined)) {
 		visibility: hidden;
 	}
+
 }
