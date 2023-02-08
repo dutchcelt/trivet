@@ -9,9 +9,9 @@ const componentLoadedEvent = (event) => {
 dataBus.register('componentLoaded', componentLoadedEvent);
 
 /* Base styles for all Trivet Components */
+import { indexCSS } from '@trvt/assets';
+import { defaultsCSS } from '@trvt/assets';
 import { trivetCSS } from '@trvt/assets';
-import { normalizeCSS } from '@trvt/assets';
-import coreCSS from './core.css' assert { type: 'css' };
-const styles = [normalizeCSS, trivetCSS, coreCSS];
+const styles = [indexCSS, defaultsCSS, trivetCSS];
 
 export { styles };

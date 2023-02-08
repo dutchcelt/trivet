@@ -3,7 +3,8 @@
     "family": {
       "base": "serif",
       "display": "sans-serif",
-      "gui": "sans-serif"
+      "gui": "sans-serif",
+      "code": "monospace"
     }
   }
 }

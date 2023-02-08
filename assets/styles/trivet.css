@@ -1,38 +1,16 @@
-/*
- * Define the layers and child layers upfront 
- */
-@layer defaults.reset,
-	defaults.normalize,
-	defaults.options,
-	defaults.utilities,
-	
-	designsystem.tokens,
-	designsystem.foundations,
-	/* 	todo: remove props, selectors, and modifiers from designsystem */
-	designsystem.props,
-	designsystem.selectors,
-	designsystem.modifiers,
-	
-	/* 	todo: remove props, selectors, and modifiers from theme
-		Just have the 'theme' layer without any sub layers
-		Allow developers to manage their own layers
-	 */
-	theme.props,
-	theme.selectors,
-	theme.modifiers,
-	
-	componentlibrary.props,
-	componentlibrary.selectors,
-	componentlibrary.modifiers;
-
-@layer designsystem.props {
+@layer trivet.props {
 	:root {
+		--ON: initial;
+		--OFF: ;
+		--TRUE: initial;
+		--FALSE: ;
+
 		--trvt-display: initial;
 		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
 	}
 }
 
-@layer designsystem.foundation {
+@layer trivet.foundation {
 	/*	###################################################################### */
 	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
 	/* 	Behaviour */
@@ -110,8 +88,7 @@
 	}
 }
 
-@layer deisgnsystem.foundation {
-	
+@layer trivet.foundation {
 	/* 	This hides the component content until it's ready. 
 		The Trivet core.js registers a componentLoaded event and the layout dispatches it after it renders its content. */
 	[slot] {
@@ -120,13 +97,22 @@
 	[data-loaded='true'] [slot] {
 		opacity: 1;
 	}
-	
+
 	.content:has(> slot) {
 		margin-trim: block;
 	}
+
+	@supports not (margin-trim: block) {
+		.content > ::slotted(*:first-child) {
+			margin-block-start: 0 !important;
+		}
+		.content > ::slotted(*:last-child) {
+			margin-block-end: 0 !important;
+		}
+	}
+
 	/*	Container control */
 	trvt-layout:has(:not(:defined)) {
 		visibility: hidden;
 	}
-
 }

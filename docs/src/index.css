@@ -1,5 +1,6 @@
-@import url(/designtokens/build/css/trvt_tokens.css) layer(designsystem);
-@import url(/assets/styles/normalize.css);
+@import url(/assets/styles/index.css);
+@import url(/designtokens/build/css/trvt_tokens.css) layer(trivet.tokens);
+@import url(/assets/styles/defaults.css);
 @import url(/assets/styles/trivet.css);
 
 @layer theme {

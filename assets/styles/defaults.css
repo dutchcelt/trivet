@@ -105,17 +105,4 @@
 		white-space: nowrap !important;
 		border: 0 !important;
 	}
-
-	.content:has(> slot) {
-		margin-trim: block;
-	}
-
-	@supports not (margin-trim: block) {
-		.content > ::slotted(*:first-child) {
-			margin-block-start: 0 !important;
-		}
-		.content > ::slotted(*:last-child) {
-			margin-block-end: 0 !important;
-		}
-	}
 }

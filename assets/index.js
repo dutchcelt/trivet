@@ -1,7 +1,8 @@
 /* styles */
-import normalizeCSS from './styles/normalize.css' assert { type: 'css' };
+import defaultsCSS from './styles/defaults.css' assert { type: 'css' };
+import indexCSS from './styles/index.css' assert { type: 'css' };
 import trivetCSS from './styles/trivet.css' assert { type: 'css' };
-export { normalizeCSS, trivetCSS };
+export { indexCSS, defaultsCSS, trivetCSS };
 
 /* Scripts */
 //export { hasCSSLayerSupport } from './scripts/hasCSSLayerSupport.js';

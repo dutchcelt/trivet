@@ -1,0 +1,20 @@
+/*
+ * Define the layers and child layers upfront 
+ */
+@layer defaults.reset,
+	defaults.normalize,
+	defaults.options,
+	defaults.utilities,
+	
+	trivet.tokens,
+	trivet.foundations,
+	
+	/* 	The 'theme' layer has no sub layers.
+		Allow developers to manage their own layers
+	 */
+	theme,
+	
+	/* 'component' styles will be defined inside the web component but we will reuse these layer definitions */
+	component.props,
+	component.selectors,
+	component.modifiers;

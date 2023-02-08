@@ -37,7 +37,7 @@ sassToCss.convert({
 sassToCss.convert({
 	src: iconFontVariableSource,
 	dest: `${iconAssetTarget}/${iconFontName}-classes.css`,
-	rule: `@layer designsystem `,
+	rule: `@layer trivet.tokens `,
 	withPropValues: false,
 });
 
