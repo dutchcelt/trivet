@@ -1,4 +1,4 @@
-import { styles } from '@trvt/core';
+import { styles, createFragment } from '@trvt/core';
 import headerCSS from './header.css' assert { type: 'css' };
 
 export class TrvtHeader extends HTMLElement {
@@ -73,7 +73,7 @@ export class TrvtHeader extends HTMLElement {
 		const heading = this.titleString
 			? `<div part="heading">${this.titleString}</div>`
 			: ``;
-		return document.createRange().createContextualFragment(`${heading}`);
+		return createFragment(`${heading}`);
 	}
 }
 customElements.define('trvt-header', TrvtHeader);

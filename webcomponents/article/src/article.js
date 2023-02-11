@@ -1,4 +1,4 @@
-import { styles, dataBus, createFragment } from '@trvt/core';
+import { styles, createFragment } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
 
 export class TrvtArticle extends HTMLElement {
@@ -7,18 +7,15 @@ export class TrvtArticle extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
 		this.trvtTitle = this.dataset.trvtTitle;
-		this.layoutDetail = dataBus?.trvtLayout?.detail;
-		if (this.layoutDetail === undefined)
-			dataBus.register('trvtLayout', this.__layoutEvent.bind(this));
+		this.layoutType = 'article';
+		this.shadowRoot.appendChild(this.render());
 	}
-	connectedCallback() {
-		this.layoutDetail && this.__layoutEvent({ detail: this.layoutDetail });
-	}
+	connectedCallback() {}
 
 	render() {
 		return createFragment(`
-			<article class="component">
-        ${this.__headingTemplate()}
+			<article class="component content">
+        ${this.#headingTemplate()}
         <slot name="intro"></slot>
         <slot name="content"></slot>
         <slot name="footer"></slot>
@@ -31,24 +28,9 @@ export class TrvtArticle extends HTMLElement {
 	 * @returns {string}
 	 * @private
 	 */
-	__headingTemplate() {
+	#headingTemplate() {
 		const tag = this.layoutType === 'article' ? 'h1' : 'h2';
 		return this.trvtTitle ? `<${tag}>${this.trvtTitle}</${tag}>` : ``;
-	}
-
-	/**
-	 * Renders out the article based on the layout type
-	 * Gets the type from an event or state.
-	 * @param {Object} event
-	 * @private
-	 */
-	__layoutEvent(event = {}) {
-		this.layoutType = event?.detail?.type;
-		this.layoutType
-			? this.shadowRoot.appendChild(this.render())
-			: console.error(`Can't set layout type of: '${this.layoutType}'`);
-		event.type === 'trvtLayout' &&
-			dataBus.remove('trvtLayout', this.__layoutEvent.bind(this));
 	}
 }
 customElements.define('trvt-article', TrvtArticle);

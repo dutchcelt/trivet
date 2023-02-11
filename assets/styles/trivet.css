@@ -89,15 +89,6 @@
 }
 
 @layer trivet.foundation {
-	/* 	This hides the component content until it's ready. 
-		The Trivet core.js registers a componentLoaded event and the layout dispatches it after it renders its content. */
-	[slot] {
-		opacity: 0.1;
-	}
-	[data-loaded='true'] [slot] {
-		opacity: 1;
-	}
-
 	.content:has(> slot) {
 		margin-trim: block;
 	}
@@ -111,7 +102,7 @@
 		}
 	}
 
-	/*	Container control */
+	/*	This hides the sub components until they're all registered.  */
 	trvt-layout:has(:not(:defined)) {
 		visibility: hidden;
 	}

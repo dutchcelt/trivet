@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "yarn workspaces foreach -pt run build",
 		"server": "wds -c configs/web-dev-server.config.js",
-		"develop": "yarn server & yarn build",
+		"develop": "yarn build & yarn server",
 		"start": "yarn workspace @trvt/docs run develop",
 		"lint": "eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
 		"test": "wtr ./webcomponents/**/*.test.js --node-resolve"

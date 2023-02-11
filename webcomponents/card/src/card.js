@@ -1,7 +1,7 @@
 import { styles, createFragment } from '@trvt/core';
 import cardCSS from './card.css' assert { type: 'css' };
 
-class TrvtCard extends HTMLElement {
+export class TrvtCard extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });

@@ -1,4 +1,4 @@
-import { styles, dataBus } from '@trvt/core';
+import { styles, createFragment } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
 
 /**
@@ -26,6 +26,7 @@ export class TrvtLayout extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
+
 		this.trvtType = this.dataset.trvtType;
 		this.slotNames = __sortSlotNames(
 			Object.keys(this.#slotMarkupObject()),
@@ -41,10 +42,6 @@ export class TrvtLayout extends HTMLElement {
 		}
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.appendChild(this.render());
-		this.#defaultSlot().addEventListener('slotchange', () => {
-			dataBus.fire('trvtLayout', { type: this.trvtType });
-			dataBus.fire('componentLoaded', { loaded: true });
-		});
 	}
 
 	/**
@@ -64,7 +61,7 @@ export class TrvtLayout extends HTMLElement {
 	 * @returns {DocumentFragment}
 	 */
 	render() {
-		return document.createRange().createContextualFragment(`
+		return createFragment(`
 			<div class="trvt-layout">${!!this.trvtType ? this.#template() : ``}</div>
 		`);
 	}
@@ -86,14 +83,14 @@ export class TrvtLayout extends HTMLElement {
 	 * @private
 	 */
 	#slotMarkupObject() {
-		return Object.freeze({
+		return {
 			notifications: `<div class="notifications"><slot name="notifications"></slot></div>`,
 			navigation: `<div class="navigation"><slot name="navigation"></slot></div>`,
 			header: `<div class="header"><slot name="header"></slot></div>`,
-			main: `<div class="main"><slot name="main"></slot></div>`,
-			sidebar: `<div class="sidebar"><slot name="sidebar"></slot></div>`,
+			main: `<div class="main content"><slot name="main"></slot></div>`,
+			sidebar: `<div class="sidebar content"><slot name="sidebar"></slot></div>`,
 			footer: `<div class="footer"><slot name="footer"></slot></div>`,
-		});
+		};
 	}
 }
 
