@@ -52,6 +52,8 @@
 					"@trvt/footer": "/webcomponents/footer/index.js",
 					"@trvt/header": "/webcomponents/header/index.js",
 					"@trvt/navigation": "/webcomponents/navigation/index.js",
+					"@trvt/contenttoggle": "/webcomponents/contenttoggle/index.js",
+					"@trvt/datatable": "/webcomponents/datatable/index.js",
 					"@trvt/layout": "/webcomponents/layout/index.js"
 				}
 			}
@@ -62,6 +64,8 @@
 			import '@trvt/article';
 			import './dutchceltlogo.js';
 			import '@trvt/header';
+			import '@trvt/contenttoggle';
+			import '@trvt/datatable';
 
 			// import { fontsLoader } from '@trvt/core';
 			// import facesObject from '../fonts/faces.json' assert { type: 'json' };
@@ -121,8 +125,126 @@
 						<h6>Request for permission</h6>
 					</div>
 				</trvt-article>
+				<trvt-tab-container>
+					<trvt-toggle-details
+						title="Title Text One (open by default)"
+						open
+					>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Sint, magnam dignissimos. Reiciendis magnam
+							molestiae delectus rem soluta, magni aliquam quo
+							dolores quibusdam esse reprehenderit quos tempora at
+							ratione perspiciatis temporibus.
+						</p>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing
+							elit. Voluptatibus modi magni, possimus fugiat
+							placeat cupiditate non perspiciatis sint est
+							voluptatum amet aliquam incidunt illum totam sit
+							ipsa alias ut maiores!
+						</p>
+					</trvt-toggle-details>
+					<trvt-toggle-details title="Title Text Two">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Provident ducimus distinctio impedit similique
+							velit molestiae accusantium, mollitia id delectus
+							sapiente, facilis dolorem praesentium placeat
+							deleniti cumque? Nisi atque delectus eos.
+						</p>
+					</trvt-toggle-details>
+					<trvt-toggle-details title="Title Text Three">
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing
+							elit. Sit quasi tenetur nisi adipisci delectus,
+							incidunt modi dignissimos id temporibus odio vitae
+							amet dolore aut quo nostrum! Excepturi omnis beatae
+							deserunt!
+						</p>
+					</trvt-toggle-details>
+					<trvt-toggle-details title="Title Text Four">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Magni repellat mollitia delectus? Maiores eos
+							velit, nemo est, qui ipsa labore laborum ipsam iusto
+							praesentium earum quo quas architecto. Ipsum, alias!
+						</p>
+					</trvt-toggle-details>
+					<trvt-toggle-details title="Title Text Five">
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing
+							elit. Nihil praesentium, ad ea saepe officia quo
+							laboriosam dolorum amet blanditiis soluta explicabo
+							hic maiores a. Eligendi voluptatem rem quisquam
+							quaerat labore?
+						</p>
+					</trvt-toggle-details>
+				</trvt-tab-container>
+				<trvt-table>
+					<trvt-thead>
+						<trvt-row>
+							<trvt-header-cell>Cell 1.1</trvt-header-cell>
+							<trvt-header-cell colspan="2"
+								>Cell 1.2</trvt-header-cell
+							>
+						</trvt-row>
+					</trvt-thead>
+					<trvt-tbody>
+						<trvt-row>
+							<trvt-cell>Cell 2.1</trvt-cell>
+							<trvt-cell
+								>Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Accusantium illo architecto
+								deleniti iure nisi, cupiditate ut? Voluptates ex
+								impedit laboriosam aut eius recusandae ab
+								tempore autem, libero, consectetur dolorum
+								nemo.</trvt-cell
+							>
+							<trvt-cell rowspan="2" type="info"
+								>Cell 2.3</trvt-cell
+							>
+						</trvt-row>
+						<trvt-row>
+							<trvt-cell>Cell 3.1</trvt-cell>
+							<trvt-cell>Cell 3.2</trvt-cell>
+						</trvt-row>
+						<trvt-row>
+							<trvt-cell rowspan="2"
+								>Cell 4.1 <br />Voluptates ex impedit laboriosam
+								aut eius recusandae
+							</trvt-cell>
+							<trvt-cell>Cell 4.2</trvt-cell>
+							<trvt-cell>Cell 4.3</trvt-cell>
+						</trvt-row>
+						<trvt-row>
+							<trvt-cell colstart="2" colspan="2"
+								>Cell 5.2</trvt-cell
+							>
+						</trvt-row>
+					</trvt-tbody>
+					<trvt-tfoot>
+						<trvt-row>
+							<trvt-cell colspan="3"
+								>Cell 6.1 - A Table Footer</trvt-cell
+							>
+						</trvt-row>
+					</trvt-tfoot>
+				</trvt-table>
 			</main>
 			<div slot="sidebar">
+				<trvt-toggle-details title="Sidebar 1" open>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</p>
+				</trvt-toggle-details>
+				<trvt-toggle-details title="Sidebar 2">
+					<p>
+						Facilis dolorem praesentium placeat deleniti cumque?
+						Nisi atque delectus eos.
+					</p>
+				</trvt-toggle-details>
+
 				<trvt-card>
 					<img
 						alt="Twitter logo"

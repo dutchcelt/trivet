@@ -14,6 +14,7 @@
 		"scripts/CSSString2CSSStyleSheet.js",
 		"scripts/generateUUID.js",
 		"scripts/injectDocumentStyles.js",
+		"scripts/throttler.js",
 		"fonts/faces.js",
 		"build/icons.js",
 		"build/glyphs.css",

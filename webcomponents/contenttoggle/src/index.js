@@ -1,2 +1,0 @@
-import "detailsComponent";
-import "detailsContainer";

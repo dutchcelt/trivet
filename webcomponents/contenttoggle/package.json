@@ -1,0 +1,25 @@
+{
+	"name": "@trvt/contenttoggle",
+	"version": "0.0.0",
+	"description": "Toggle content as an accordion or as tabs",
+	"main": "index.js",
+	"files": [
+		"src/details/details.css",
+		"src/details/index.js",
+		"src/toggleContainer/toggleContainer.css",
+		"src/toggleContainer/index.js"
+	],
+	"type": "modules",
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"web",
+		"components"
+	],
+	"author": "C. Egor Kloos",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"@trvt/core": "^0.3.7"
+	}
+}

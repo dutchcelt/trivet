@@ -1,0 +1,22 @@
+@layer components.selectors {
+	:host {
+		writing-mode: horizontal-tb;
+		grid-column: var(--trvt-cell-col-start) / span var(--trvt-cell-col-span);
+		grid-row: var(--grid-row, auto) / span var(--trvt-cell-row-span);
+
+		border-bottom: 2px solid var(--canvasText);
+		border-left: 2px solid var(--canvasText);
+		background-color: var(--canvas);
+		color: var(--canvasText);
+		text-align: var(--cell-justify, initial);
+	}
+
+	:host([type='info']) {
+		font-style: italic;
+		font-size: smaller;
+	}
+	div {
+		padding: 1ex 1ch;
+		max-width: var(--table-cell-width);
+	}
+}

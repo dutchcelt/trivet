@@ -49,8 +49,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:webcomponents/card"\
       },\
       {\
+        "name": "@trvt/contenttoggle",\
+        "reference": "workspace:webcomponents/contenttoggle"\
+      },\
+      {\
         "name": "@trvt/core",\
         "reference": "workspace:webcomponents/core"\
+      },\
+      {\
+        "name": "@trvt/datatable",\
+        "reference": "workspace:webcomponents/datatable"\
       },\
       {\
         "name": "@trvt/dropdown",\
@@ -81,7 +89,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/button", ["workspace:webcomponents/button"]],\
       ["@trvt/card", ["workspace:webcomponents/card"]],\
       ["@trvt/cli", ["workspace:cli"]],\
+      ["@trvt/contenttoggle", ["workspace:webcomponents/contenttoggle"]],\
       ["@trvt/core", ["workspace:webcomponents/core"]],\
+      ["@trvt/datatable", ["workspace:webcomponents/datatable"]],\
       ["@trvt/designtokens", ["workspace:designtokens"]],\
       ["@trvt/docs", ["workspace:docs"]],\
       ["@trvt/dropdown", ["workspace:webcomponents/dropdown"]],\
@@ -753,6 +763,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["@trvt/contenttoggle", [\
+        ["workspace:webcomponents/contenttoggle", {\
+          "packageLocation": "./webcomponents/contenttoggle/",\
+          "packageDependencies": [\
+            ["@trvt/contenttoggle", "workspace:webcomponents/contenttoggle"],\
+            ["@trvt/core", "workspace:webcomponents/core"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@trvt/core", [\
         ["workspace:webcomponents/core", {\
           "packageLocation": "./webcomponents/core/",\
@@ -761,6 +781,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@esm-bundle/chai", "npm:4.3.4"],\
             ["@trvt/assets", "workspace:assets"],\
             ["@trvt/designtokens", "workspace:designtokens"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@trvt/datatable", [\
+        ["workspace:webcomponents/datatable", {\
+          "packageLocation": "./webcomponents/datatable/",\
+          "packageDependencies": [\
+            ["@trvt/datatable", "workspace:webcomponents/datatable"],\
+            ["@trvt/core", "workspace:webcomponents/core"]\
           ],\
           "linkType": "SOFT"\
         }]\
