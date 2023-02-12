@@ -54,6 +54,7 @@
 					"@trvt/navigation": "/webcomponents/navigation/index.js",
 					"@trvt/contenttoggle": "/webcomponents/contenttoggle/index.js",
 					"@trvt/datatable": "/webcomponents/datatable/index.js",
+					"@trvt/dragscroller": "/webcomponents/dragscroller/index.js",
 					"@trvt/layout": "/webcomponents/layout/index.js"
 				}
 			}
@@ -66,6 +67,7 @@
 			import '@trvt/header';
 			import '@trvt/contenttoggle';
 			import '@trvt/datatable';
+			import '@trvt/dragscroller';
 
 			// import { fontsLoader } from '@trvt/core';
 			// import facesObject from '../fonts/faces.json' assert { type: 'json' };
@@ -231,6 +233,12 @@
 						</trvt-row>
 					</trvt-tfoot>
 				</trvt-table>
+
+				<trvt-drag-scroller>
+					<img src="https://via.placeholder.com/1600x900.webp" />
+					<img src="https://via.placeholder.com/1600x900.webp" />
+					<img src="https://via.placeholder.com/1600x900.webp" />
+				</trvt-drag-scroller>
 			</main>
 			<div slot="sidebar">
 				<trvt-toggle-details title="Sidebar 1" open>

@@ -1,0 +1,23 @@
+{
+	"name": "@trvt/dragscroller",
+	"version": "0.0.0",
+	"description": "Drag the conents of a scrollbox",
+	"main": "index.js",
+	"files": [
+		"src/dragscroller.css",
+		"src/index.js"
+	],
+	"type": "modules",
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"web",
+		"components"
+	],
+	"author": "C. Egor Kloos",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"@trvt/core": "^0.3.7"
+	}
+}

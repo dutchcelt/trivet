@@ -614,6 +614,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@trvt/dragscroller@workspace:webcomponents/dragscroller":
+  version: 0.0.0-use.local
+  resolution: "@trvt/dragscroller@workspace:webcomponents/dragscroller"
+  dependencies:
+    "@trvt/core": ^0.3.7
+  languageName: unknown
+  linkType: soft
+
 "@trvt/dropdown@workspace:webcomponents/dropdown":
   version: 0.0.0-use.local
   resolution: "@trvt/dropdown@workspace:webcomponents/dropdown"

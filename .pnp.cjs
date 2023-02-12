@@ -61,6 +61,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:webcomponents/datatable"\
       },\
       {\
+        "name": "@trvt/dragscroller",\
+        "reference": "workspace:webcomponents/dragscroller"\
+      },\
+      {\
         "name": "@trvt/dropdown",\
         "reference": "workspace:webcomponents/dropdown"\
       },\
@@ -94,6 +98,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/datatable", ["workspace:webcomponents/datatable"]],\
       ["@trvt/designtokens", ["workspace:designtokens"]],\
       ["@trvt/docs", ["workspace:docs"]],\
+      ["@trvt/dragscroller", ["workspace:webcomponents/dragscroller"]],\
       ["@trvt/dropdown", ["workspace:webcomponents/dropdown"]],\
       ["@trvt/footer", ["workspace:webcomponents/footer"]],\
       ["@trvt/header", ["workspace:webcomponents/header"]],\
@@ -815,6 +820,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@trvt/header", "workspace:webcomponents/header"],\
             ["@trvt/layout", "workspace:webcomponents/layout"],\
             ["copyfiles", "npm:2.4.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@trvt/dragscroller", [\
+        ["workspace:webcomponents/dragscroller", {\
+          "packageLocation": "./webcomponents/dragscroller/",\
+          "packageDependencies": [\
+            ["@trvt/dragscroller", "workspace:webcomponents/dragscroller"],\
+            ["@trvt/core", "workspace:webcomponents/core"]\
           ],\
           "linkType": "SOFT"\
         }]\

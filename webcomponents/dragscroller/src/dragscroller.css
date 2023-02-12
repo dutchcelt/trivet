@@ -1,0 +1,17 @@
+@layer components.selectors {
+	:host {
+		display: block;
+	}
+	.scollbox {
+		cursor: grab;
+		overflow: auto;
+		display: flex;
+		width: 100%;
+		gap: 0.5ch;
+		height: 300px;
+	}
+	::slotted(img) {
+		aspect-ratio: 16 / 9 !important;
+		pointer-events: none !important;
+	}
+}
