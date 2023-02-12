@@ -7,12 +7,11 @@ export class TrvtDragScroller extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, dragscrollerCSS];
 		this.shadowRoot.appendChild(this.render());
-		this.pos = { top: undefined, left: undefined, x: 0, y: 0 };
+		this.pos = { top: 0, left: 0, x: 0, y: 0 };
 	}
 	render() {
 		return createFragment(`<div class="scollbox"><slot></slot></div>`);
 	}
-
 	connectedCallback() {
 		this.scollbox = this.shadowRoot.querySelector('.scollbox');
 		this.scollbox.addEventListener('mousedown', this);

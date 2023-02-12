@@ -9,9 +9,11 @@
 		width: 100%;
 		gap: 0.5ch;
 		height: 300px;
+		scroll-snap-type: x proximity;
 	}
 	::slotted(img) {
 		aspect-ratio: 16 / 9 !important;
 		pointer-events: none !important;
+		scroll-snap-align: center !important;
 	}
 }
