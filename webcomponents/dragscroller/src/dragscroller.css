@@ -1,22 +1,33 @@
 @layer components.selectors {
 	:host {
+		--TRUE: initial;
+		--FALSE: ;
+
 		display: block;
 	}
-	.scollbox {
+	.scrollbox {
 		cursor: grab;
 		overflow: auto;
 		display: flex;
 		width: 100%;
 		gap: 0.5ch;
 		height: 300px;
-		scroll-snap-type: x proximity;
+		scroll-snap-type: x mandatory;
 	}
+	.scrollbox::-webkit-scrollbar {
+		height: 4px;
+		border: 0;
+	}
+	.scrollbox::-webkit-scrollbar-thumb {
+		background: #222;
+	}
+	.scrollbox::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
 	::slotted(img) {
 		aspect-ratio: 16 / 9 !important;
 		pointer-events: none !important;
-		scroll-snap-align: var(
-			--trvt-dragscroller-snap-align,
-			center
-		) !important;
+		scroll-snap-align: var(--if-sanp, center) !important;
 	}
 }

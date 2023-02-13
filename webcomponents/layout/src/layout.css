@@ -21,6 +21,7 @@
 			);
 		}
 	}
+
 	@layer modifiers {
 		/* ############################################################### */
 		/* Layout Slot Properties */
@@ -100,8 +101,13 @@
 			--grid-column: 2;
 		}
 	}
+
 	@layer selectors {
-		:host([data-trvt-type]) {
+		:host {
+			display: block;
+			container: layout / inline-size;
+		}
+		.trvt-layout {
 			display: var(--display, grid);
 			grid-template-columns: var(--template-comumns, 1fr);
 			grid-template-rows: var(--template-rows, auto);
@@ -111,11 +117,9 @@
 			width: min(var(--layout-width-max), 100%);
 			margin-inline: auto;
 		}
-
-		@media not all and (min-width: 960px) {
-			:host([data-trvt-type]) {
+		@container layout (max-width: 960px) {
+			.trvt-layout {
 				padding-inline: 0;
-
 				padding-block: calc(var(--padding-block) / 4)
 					var(--padding-block);
 			}
