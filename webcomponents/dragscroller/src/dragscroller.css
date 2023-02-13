@@ -14,6 +14,9 @@
 	::slotted(img) {
 		aspect-ratio: 16 / 9 !important;
 		pointer-events: none !important;
-		scroll-snap-align: center !important;
+		scroll-snap-align: var(
+			--trvt-dragscroller-snap-align,
+			center
+		) !important;
 	}
 }

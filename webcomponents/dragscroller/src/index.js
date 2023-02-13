@@ -20,6 +20,10 @@ export class TrvtDragScroller extends HTMLElement {
 		if (event.type === 'mousedown') {
 			this.scollbox.style.cursor = 'grabbing';
 			this.scollbox.style.userSelect = 'none';
+			this.scollbox.style.setProperty(
+				'--trvt-dragscroller-snap-align',
+				'unset'
+			);
 			this.pos = {
 				// The current scroll
 				left: this.scollbox.scrollLeft,
@@ -42,6 +46,10 @@ export class TrvtDragScroller extends HTMLElement {
 		if (event.type === 'mouseup') {
 			this.scollbox.style.cursor = 'grab';
 			this.scollbox.style.removeProperty('user-select');
+			this.scollbox.style.setProperty(
+				'--trvt-dragscroller-snap-align',
+				'center'
+			);
 			document.removeEventListener('mousemove', this);
 			document.removeEventListener('mouseup', this);
 		}
