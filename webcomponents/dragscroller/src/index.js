@@ -45,11 +45,11 @@ export class TrvtDragScroller extends HTMLElement {
 		this.scrollbox.scrollLeft = this.pos.left - dx;
 	}
 	mouseup(event) {
+		document.removeEventListener('mousemove', this);
+		document.removeEventListener('mouseup', this);
 		this.scrollbox.style.cursor = 'grab';
 		this.scrollbox.style.removeProperty('user-select');
 		this.scrollbox.style.setProperty('--if-snap', 'var(--TRUE)');
-		document.removeEventListener('mousemove', this);
-		document.removeEventListener('mouseup', this);
 	}
 }
 customElements.define('trvt-drag-scroller', TrvtDragScroller);
