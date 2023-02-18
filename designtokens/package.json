@@ -19,7 +19,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"packageManager": "yarn@3.2.0",
+	"packageManager": "yarn@3.4.1",
 	"devDependencies": {
 		"style-dictionary": "^3.7.0"
 	}

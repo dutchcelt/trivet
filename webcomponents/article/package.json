@@ -2,9 +2,6 @@
 	"name": "@trvt/article",
 	"version": "0.3.2",
 	"type": "module",
-	"scripts": {
-		"build": "echo 'no build'"
-	},
 	"main": "index.js",
 	"files": [
 		"src/article.css",

@@ -7,19 +7,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"packageManager": "yarn@3.2.0",
-	"devDependencies": {
-		"copyfiles": "^2.4.1"
-	},
-	"scripts": {
-		"copy": "copyfiles \"./src/*.{css,js,html}\" \"../dist\" -f",
-		"copy:webcomponents": "copyfiles \"../webcomponents/**/*.{css,js}\" \"../dist/**.*\"",
-		"copy:tokens": "copyfiles \"../designtokens/**/*.{css,js,json}\" \"../dist/**.*\"",
-		"copy:assets": "copyfiles \"../assets/**/*.{css,jpg,svg,png,webp,woff,woff2,js}\" \"../dist/**.*\"",
-		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn copy:webcomponents",
-		"start": "yarn build --serve --port=8081",
-		"develop": "yarn build --watch"
-	},
+	"packageManager": "yarn@3.4.1",
 	"dependencies": {
 		"@trvt/article": "workspace:^",
 		"@trvt/header": "workspace:^",
