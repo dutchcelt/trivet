@@ -9,16 +9,14 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.2.0",
 	"devDependencies": {
-		"@11ty/eleventy": "^1.0.0",
 		"copyfiles": "^2.4.1"
 	},
 	"scripts": {
-		"copy": "copyfiles \"./src/*.{css,js}\" \"../dist\" -f",
+		"copy": "copyfiles \"./src/*.{css,js,html}\" \"../dist\" -f",
 		"copy:webcomponents": "copyfiles \"../webcomponents/**/*.{css,js}\" \"../dist/**.*\"",
 		"copy:tokens": "copyfiles \"../designtokens/**/*.{css,js,json}\" \"../dist/**.*\"",
 		"copy:assets": "copyfiles \"../assets/**/*.{css,jpg,svg,png,webp,woff,woff2,js}\" \"../dist/**.*\"",
-		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn copy:webcomponents && yarn eleventy --input=./src/index.html --output=../dist",
-		"build-old": "echo 'build docs on hold'",
+		"build": "yarn copy && yarn copy:assets && yarn copy:tokens && yarn copy:webcomponents",
 		"start": "yarn build --serve --port=8081",
 		"develop": "yarn build --watch"
 	},
