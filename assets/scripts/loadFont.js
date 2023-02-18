@@ -6,15 +6,8 @@
  * @returns {Promise<void>}
  */
 export const loadFont = async (opts, localpath = '') => {
-	const {
-		family,
-		filename,
-		path,
-		style,
-		weight,
-		display,
-		variationSettings,
-	} = opts;
+	let { family, filename, path, style, weight, display, variationSettings } =
+		opts;
 	const valid = Object.values(opts).some((f) => typeof f === 'string');
 	if ((valid, !!filename, !!family, !!path)) {
 		if (!/^\//.test(path)) path = `/${path}`;
