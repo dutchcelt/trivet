@@ -76,6 +76,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:webcomponents/layout"\
       },\
       {\
+        "name": "@trvt/lists",\
+        "reference": "workspace:webcomponents/lists"\
+      },\
+      {\
         "name": "@trvt/navigation",\
         "reference": "workspace:webcomponents/navigation"\
       }\
@@ -98,6 +102,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/footer", ["workspace:webcomponents/footer"]],\
       ["@trvt/header", ["workspace:webcomponents/header"]],\
       ["@trvt/layout", ["workspace:webcomponents/layout"]],\
+      ["@trvt/lists", ["workspace:webcomponents/lists"]],\
       ["@trvt/navigation", ["workspace:webcomponents/navigation"]],\
       ["@trvt/root", ["workspace:."]]\
     ],\
@@ -802,6 +807,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./webcomponents/layout/",\
           "packageDependencies": [\
             ["@trvt/layout", "workspace:webcomponents/layout"],\
+            ["@trvt/core", "workspace:webcomponents/core"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@trvt/lists", [\
+        ["workspace:webcomponents/lists", {\
+          "packageLocation": "./webcomponents/lists/",\
+          "packageDependencies": [\
+            ["@trvt/lists", "workspace:webcomponents/lists"],\
             ["@trvt/core", "workspace:webcomponents/core"]\
           ],\
           "linkType": "SOFT"\

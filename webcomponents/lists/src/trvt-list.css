@@ -1,0 +1,8 @@
+:host {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1ex 1ch;
+}
+::slotted(*:first-child) {
+  counter-reset: trivetlist var(--counter-start, 0);
+}

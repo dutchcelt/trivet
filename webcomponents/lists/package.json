@@ -1,0 +1,25 @@
+{
+	"name": "@trvt/lists",
+	"version": "0.0.0",
+	"description": "Lists using subgrid",
+	"main": "index.js",
+	"files": [
+		"src/trvt-list.css",
+		"src/trvt-list.js",
+		"src/trvt-li.css",
+		"src/trvt-li.js"
+	],
+	"type": "modules",
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"web",
+		"components"
+	],
+	"author": "C. Egor Kloos",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"@trvt/core": "^0.3.7"
+	}
+}

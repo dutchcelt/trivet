@@ -573,6 +573,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@trvt/lists@workspace:webcomponents/lists":
+  version: 0.0.0-use.local
+  resolution: "@trvt/lists@workspace:webcomponents/lists"
+  dependencies:
+    "@trvt/core": ^0.3.7
+  languageName: unknown
+  linkType: soft
+
 "@trvt/navigation@workspace:webcomponents/navigation":
   version: 0.0.0-use.local
   resolution: "@trvt/navigation@workspace:webcomponents/navigation"
