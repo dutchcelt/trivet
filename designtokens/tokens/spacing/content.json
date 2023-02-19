@@ -2,22 +2,22 @@
 	"spacing": {
 		"content": {
 			"block": {
-				"xxs": "0.25ex",
-				"xs": "0.5ex",
-				"s": "1ex",
-				"m": "2ex",
-				"l": "4ex",
-				"xl": "6ex",
-				"xxl": "8ex"
+				"xxs": { "value": "0.25ex" },
+				"xs": { "value": "0.5ex" },
+				"s": { "value": "1ex" },
+				"m": { "value": "2ex" },
+				"l": { "value": "4ex" },
+				"xl": { "value": "6ex" },
+				"xxl": { "value": "8ex" }
 			},
 			"inline": {
-				"xxs": "0.25ch",
-				"xs": "0.5ch",
-				"s": "1ch",
-				"m": "2ch",
-				"l": "4ch",
-				"xl": "6ch",
-				"xxl": "8ch"
+				"xxs": { "value": "0.25ch" },
+				"xs": { "value": "0.5ch" },
+				"s": { "value": "1ch" },
+				"m": { "value": "2ch" },
+				"l": { "value": "4ch" },
+				"xl": { "value": "6ch" },
+				"xxl": { "value": "8ch" }
 			}
 		}
 	}

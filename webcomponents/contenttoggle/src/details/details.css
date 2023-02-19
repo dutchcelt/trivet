@@ -15,8 +15,8 @@
 			--trvt-typography-whitespace-default-block-end,
 			1rem
 		);
-		--detail-block-space: var(--spacing-content-block-s, 1rem);
-		--detail-inline-space: var(--spacing-content-inline-s, 1rem);
+		--detail-block-space: var(--trvt-spacing-content-block-m, 1rem);
+		--detail-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
 		--detail-font-family: var(--font-family, sans-serif);
 		--detail-font-weight: var(--font-weight-normal, normal);
 		--detail-line-height: var(--default-line-height, normal);
@@ -32,8 +32,8 @@
 		--summary-icon-font-weight: var(--font-weight-heavy, bolder);
 		--summary-icon-open-char: var(--icon-minus-char, '-');
 		--summary-icon-closed-char: var(--icon-plus-char, '+');
-		--summary-block-space: var(--space-block, 1rem);
-		--summary-inline-space: var(--space-inline, 1rem);
+		--summary-block-space: var(--trvt-spacing-content-block-xs, 1rem);
+		--summary-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
 		--summary-font-weight: var(--font-weight-bold, bold);
 	}
 }
