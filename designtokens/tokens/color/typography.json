@@ -1,11 +1,13 @@
 {
 	"color": {
 		"typography": {
-			"text": { "value": "{color.base.dark.value}" },
-			"heading": { "value": "{color.base.dark.value}" },
-			"marker": { "value": "{color.base.dark.value}" },
-			"ui": { "value": "{color.base.dark.value}" },
-			"anchor": { "value": "steelblue" }
+			"text": { "value": "CanvasText" },
+			"heading": { "value": "CanvasText" },
+			"icon": { "value": "CanvasText" },
+			"ui": { "value": "ButtonText" },
+			"anchor": { "value": "LinkText" },
+			"anchor-visited": { "value": "VisitedText" },
+			"anchor-active": { "value": "ActiveText" }
 		}
 	}
 }

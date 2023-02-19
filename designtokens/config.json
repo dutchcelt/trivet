@@ -2,6 +2,7 @@
 	"source": ["tokens/**/*.json"],
 	"platforms": {
 		"css": {
+			"transforms": ["name/cti/kebab"],
 			"transformGroup": "css",
 			"prefix": "trvt",
 			"buildPath": "build/css/",

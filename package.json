@@ -6,7 +6,7 @@
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
 		"build": "yarn workspaces foreach -pt run build",
-		"develop": "yarn build && yarn server & yarn workspaces foreach -pt run develop",
+		"develop": "yarn server & yarn workspaces foreach -pt run develop",
 		"server": "wds -c configs/web-dev-server.config.js",
 		"lint": "eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
 		"test": "wtr ./webcomponents/**/*.test.js --node-resolve"

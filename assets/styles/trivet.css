@@ -1,3 +1,8 @@
+@import url(/assets/styles/index.css);
+@import url(/assets/styles/defaults.css);
+@import url(/designtokens/build/css/trvt_tokens.css) layer(trivet.tokens);
+@import url(/assets/styles/defaults.css);
+
 @layer trivet.props {
 	:root {
 		--ON: initial;
@@ -20,24 +25,23 @@
 /* 	Display */
 /*	###################################################################### */
 @layer trivet.foundation {
-	:root {
-		margin: 0;
-		font-size: var(--trvt-typography-size-root, 100%);
-		line-height: var(--trvt-typography-leading-root, 1.5);
-		box-sizing: border-box;
-		color-scheme: light dark;
-	}
 	*,
 	*::before,
 	*::after {
 		box-sizing: inherit;
 	}
+	:root {
+		margin: 0;
+		font-family: var(--trvt-typography-family-base);
+		font-size: var(--trvt-typography-size-copy, 100%);
+		line-height: var(--trvt-typography-leading-l, 1.5);
+		color-scheme: light dark;
+	}
 
 	body {
 		margin: 0;
-		font-family: var(--trvt-typography-family-base);
-		color: var(--trvt-color-typography-text);
-		background: var(--trvt-color-background-viewport);
+		color: var(--trvt-color-base-text);
+		background-color: var(--trvt-color-background-viewport);
 	}
 
 	h1,
@@ -98,12 +102,20 @@
 		);
 	}
 
-	a:link,
-	a:visited,
-	a:hover,
-	a:active,
+	a:link {
+		color: var(--trvt-color-base-link);
+	}
+	a:visited {
+		color: var(--trvt-color-base-visited);
+	}
+	a:hover {
+		color: var(--trvt-color-base-accentcolor);
+	}
+	a:active {
+		color: var(--trvt-color-base-active);
+	}
 	a:focus {
-		color: var(--trvt-color-typography-anchor);
+		color: var(--trvt-color-base-text);
 	}
 }
 

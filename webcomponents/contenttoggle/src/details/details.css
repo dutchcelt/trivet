@@ -1,11 +1,11 @@
 @layer components.props {
 	:host {
-		--detail-surface-color: var(--color-light, white);
+		--detail-surface-color: var(--trvt-color-background-content, white);
 		--detail-surface-color-active: var(
 			--toggle-active-canvas,
 			var(--detail-surface-color)
 		);
-		--detail-text-color: var(--color-dark, black);
+		--detail-text-color: var(--trvt-color-typography-text, black);
 		--detail-display: var(--toggle-display, block);
 		--detail-block-start: var(
 			--trvt-typography-whitespace-default-block-start,
@@ -17,23 +17,24 @@
 		);
 		--detail-block-space: var(--trvt-spacing-content-block-m, 1rem);
 		--detail-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
-		--detail-font-family: var(--font-family, sans-serif);
+		--detail-font-family: var(--trvt-typography-family-base, sans-serif);
 		--detail-font-weight: var(--font-weight-normal, normal);
 		--detail-line-height: var(--default-line-height, normal);
 
-		--summary-surface-color: var(--color-dark, black);
+		--summary-surface-color: var(--trvt-color-base-dark, black);
 		--summary-surface-color-active: var(
 			--toggle-active,
 			var(--summary-surface-color)
 		);
-		--summary-text-color: var(--color-light, white);
-		--summary-icon-surface-color: var(--color-light, white);
-		--summary-icon-text-color: var(--color-dark, black);
+		--summary-text-color: var(--trvt-color-base-light, white);
+		--summary-icon-surface-color: var(--trvt-color-base-light, white);
+		--summary-icon-text-color: var(--trvt-color-base-dark, black);
 		--summary-icon-font-weight: var(--font-weight-heavy, bolder);
 		--summary-icon-open-char: var(--icon-minus-char, '-');
 		--summary-icon-closed-char: var(--icon-plus-char, '+');
 		--summary-block-space: var(--trvt-spacing-content-block-xs, 1rem);
 		--summary-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
+		--summary-font-family: var(--trvt-typography-family-gui, sans-serif);
 		--summary-font-weight: var(--font-weight-bold, bold);
 	}
 }
@@ -75,6 +76,7 @@
 		background-color: var(--summary-surface-color);
 		color: var(--summary-text-color);
 
+		font-family: var(---summary-font-family);
 		font-weight: var(--summary-font-weight);
 		cursor: pointer;
 	}
@@ -93,6 +95,9 @@
 	}
 	details[open] summary::after {
 		content: var(--is-accordion, var(--summary-icon-open-char));
+	}
+	::slotted(*) {
+		font-family: var(---detail-font-family) !important;
 	}
 }
 @layer components.modifiers {

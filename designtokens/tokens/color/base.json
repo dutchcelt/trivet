@@ -4,8 +4,19 @@
 			"light": { "value": "#f9ece9" },
 			"dark": { "value": "#29282d" },
 			"mid": { "value": "#625b60" },
-			"hightlight": { "value": "#f9ece9" },
-			"shadow": { "value": "#3d3c44" }
+			"bright": { "value": "#f9ece9" },
+			"shadow": { "value": "#3d3c44" },
+			"text": { "value": "CanvasText" },
+			"link": { "value": "LinkText" },
+			"visited": { "value": "VisitedText" },
+			"active": { "value": "ActiveText" },
+			"hightlight": { "value": "HighlightText" },
+			"accentcolor": { "value": "AccentColorText" },
+			"button": { "value": "ButtonText" },
+			"field": { "value": "FieldText" },
+			"selected": { "value": "SelectedItemText" },
+			"mark": { "value": "MarkText" },
+			"disabled": { "value": "GrayText" }
 		}
 	}
 }

@@ -520,7 +520,7 @@ __metadata:
   resolution: "@trvt/designtokens@workspace:designtokens"
   dependencies:
     chokidar-cli: ^3.0.0
-    style-dictionary: ^3.7.0
+    style-dictionary: ^3.7.2
   languageName: unknown
   linkType: soft
 
@@ -6778,9 +6778,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.7.0":
-  version: 3.7.0
-  resolution: "style-dictionary@npm:3.7.0"
+"style-dictionary@npm:^3.7.2":
+  version: 3.7.2
+  resolution: "style-dictionary@npm:3.7.2"
   dependencies:
     chalk: ^4.0.0
     change-case: ^4.1.2
@@ -6793,7 +6793,7 @@ __metadata:
     tinycolor2: ^1.4.1
   bin:
     style-dictionary: bin/style-dictionary
-  checksum: 97fd972e5eb57d931a2dc2f5e6461642f7c9cdff9bc54642b8ab1372b3a9e613f57fefdca406b773b9d5e061e8450a20967ab3d0c6da5bb2787ea246cede3eac
+  checksum: eaa78247304a8ddf2f8771deabe72b91ba59392bc3e5071ea7f286d4ae7e294e785d7b13e592dea7debcc3cd2f38dbda937ef191cdbb79056550c4982b496aa5
   languageName: node
   linkType: hard
 

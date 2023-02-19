@@ -9,7 +9,7 @@ export class TrvtTabContainer extends HTMLElement {
 		this.addEventListener('toggle', this);
 		this.addEventListener('click', this);
 		this.shadowRoot.innerHTML = `
-      <div class="container">
+      <div class="content">
 		    <slot></slot>
       </div>
 	`;

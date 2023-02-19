@@ -13,8 +13,7 @@
 	"scripts": {
 		"build:clean": "style-dictionary clean ",
 		"build:tokens": "style-dictionary build -c config.json",
-		"build:fonts": "style-dictionary build -c config-fonts.json",
-		"build": "yarn build:clean && yarn build:tokens && yarn build:fonts",
+		"build": "yarn build:clean && yarn build:tokens",
 		"watch:tokens": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
 		"watch:fonts": "chokidar \"tokens/fonts/**/*.json\" -c \"yarn build:fonts\"",
 		"watch": "yarn watch:tokens",
@@ -26,6 +25,6 @@
 	"packageManager": "yarn@3.4.1",
 	"devDependencies": {
 		"chokidar-cli": "^3.0.0",
-		"style-dictionary": "^3.7.0"
+		"style-dictionary": "^3.7.2"
 	}
 }

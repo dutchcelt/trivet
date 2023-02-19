@@ -1,11 +1,16 @@
 {
 	"color": {
 		"background": {
-			"viewport": { "value": "{color.base.dark.value}" },
-			"content": { "value": "{color.base.light.value}" },
-			"card": { "value": "{color.base.light.value}" },
-			"marker": { "value": "{color.base.light.value}" },
-			"ui": { "value": "{color.base.light.value}" }
+			"viewport": { "value": "Canvas" },
+			"content": { "value": "Canvas" },
+			"surface": { "value": "Canvas" },
+			"icon": { "value": "Canvas" },
+			"highlight": { "value": "Highlight" },
+			"accentcolor": { "value": "AccentColor" },
+			"button": { "value": "ButtonFace" },
+			"field": { "value": "Field" },
+			"selected": { "value": "SelectedItem" },
+			"mark": { "value": "Mark" }
 		}
 	}
 }

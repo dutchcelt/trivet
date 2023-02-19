@@ -746,7 +746,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@trvt/designtokens", "workspace:designtokens"],\
             ["chokidar-cli", "npm:3.0.0"],\
-            ["style-dictionary", "npm:3.7.0"]\
+            ["style-dictionary", "npm:3.7.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -8233,10 +8233,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["style-dictionary", [\
-        ["npm:3.7.0", {\
-          "packageLocation": "./.yarn/unplugged/style-dictionary-npm-3.7.0-0860ecb1f5/node_modules/style-dictionary/",\
+        ["npm:3.7.2", {\
+          "packageLocation": "./.yarn/unplugged/style-dictionary-npm-3.7.2-441e73ea78/node_modules/style-dictionary/",\
           "packageDependencies": [\
-            ["style-dictionary", "npm:3.7.0"],\
+            ["style-dictionary", "npm:3.7.2"],\
             ["chalk", "npm:4.1.2"],\
             ["change-case", "npm:4.1.2"],\
             ["commander", "npm:8.3.0"],\

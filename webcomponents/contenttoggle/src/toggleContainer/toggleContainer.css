@@ -1,6 +1,6 @@
 @layer components.props {
 	:host {
-		--is-accordion: var(--ON);
+		--is-accordion: var(--TRUE);
 		--toggle-display: block;
 		--container-display: block;
 		--toggle-active: var(--color-active, dodgerblue);
@@ -12,7 +12,7 @@
 		display: block;
 		container: toggles / inline-size;
 	}
-	.container {
+	.content {
 		display: var(--container-display);
 		grid-template-columns: repeat(auto-fill, 1fr);
 		grid-template-rows: auto auto;
@@ -23,9 +23,9 @@
 }
 @layer components.modifiers {
 	@container toggles (min-width: 640px) {
-		.container {
-			--is-accordion: var(--OFF);
-			--is-tabbed: var(--ON);
+		.content {
+			--is-accordion: var(--FALSE);
+			--is-tabbed: var(--TRUE);
 			--container-display: grid;
 			--toggle-display: contents;
 		}
