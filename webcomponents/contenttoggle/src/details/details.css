@@ -7,8 +7,16 @@
 		);
 		--detail-text-color: var(--color-dark, black);
 		--detail-display: var(--toggle-display, block);
-		--detail-block-space: var(--space-block, 1rem);
-		--detail-inline-space: var(--space-inline, 1rem);
+		--detail-block-start: var(
+			--trvt-typography-whitespace-default-block-start,
+			1rem
+		);
+		--detail-block-end: var(
+			--trvt-typography-whitespace-default-block-end,
+			1rem
+		);
+		--detail-block-space: var(--spacing-content-block-s, 1rem);
+		--detail-inline-space: var(--spacing-content-inline-s, 1rem);
 		--detail-font-family: var(--font-family, sans-serif);
 		--detail-font-weight: var(--font-weight-normal, normal);
 		--detail-line-height: var(--default-line-height, normal);
@@ -29,9 +37,11 @@
 		--summary-font-weight: var(--font-weight-bold, bold);
 	}
 }
+
 @layer components.selectors {
 	:host {
-		margin-block: var(--detail-block-space);
+		margin-block-start: var(--detail-block-start);
+		margin-block-end: var(--detail-block-end);
 	}
 	:host,
 	details {

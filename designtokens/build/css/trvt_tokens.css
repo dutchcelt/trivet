@@ -48,14 +48,17 @@
   --trvt-color-typography-marker: #29282d;
   --trvt-color-typography-ui: #29282d;
   --trvt-color-typography-anchor: #4682b4;
-  --trvt-font-family-base: serif;
-  --trvt-font-family-display: sans-serif;
-  --trvt-font-family-gui: sans-serif;
-  --trvt-font-family-code: monospace;
   --trvt-ratio-square: 1 / 1;
   --trvt-ratio-wide: 16 / 9;
   --trvt-ratio-standard: 4 / 3;
   --trvt-ratio-golden: 1.6180 / 1;
+  --trvt-typography-family-base: sans-serif;
+  --trvt-typography-family-display: sans-serif;
+  --trvt-typography-family-gui: sans-serif;
+  --trvt-typography-family-code: monospace;
+  --trvt-typography-leading-l: 1.6125;
+  --trvt-typography-leading-m: 1.25;
+  --trvt-typography-leading-s: 1;
   --trvt-typography-size-copy: clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem); /* Fluid font sizes: https://utopia.fyi/type/calculator/?c=375,18,1.2,1280,21,1.333,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
   --trvt-typography-size-xxl: clamp(1.94rem, calc(1.46rem + 2.06vw), 3.11rem);
   --trvt-typography-size-xl: clamp(1.62rem, calc(1.33rem + 1.26vw), 2.33rem);
@@ -63,7 +66,12 @@
   --trvt-typography-size-m: clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem);
   --trvt-typography-size-s: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
   --trvt-typography-size-xs: clamp(0.74rem, calc(0.8rem + -0.08vw), 0.78rem);
-  --trvt-typography-leading-l: 1.6125;
-  --trvt-typography-leading-m: 1.25;
-  --trvt-typography-leading-s: 1;
+  --trvt-typography-whitespace-heading-block-start: 1em;
+  --trvt-typography-whitespace-heading-block-end: 1ex;
+  --trvt-typography-whitespace-heading-inline-start: 0;
+  --trvt-typography-whitespace-heading-inline-end: 0;
+  --trvt-typography-whitespace-default-block-start: 2ex;
+  --trvt-typography-whitespace-default-block-end: 2ex;
+  --trvt-typography-whitespace-default-inline-start: 2ch;
+  --trvt-typography-whitespace-default-inline-end: 2ch;
 }

@@ -15,11 +15,6 @@
 			"m": { "value": "clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem)" },
 			"s": { "value": "clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem)" },
 			"xs": { "value": "clamp(0.74rem, calc(0.8rem + -0.08vw), 0.78rem)" }
-		},
-		"leading": {
-			"l": { "value": "1.6125" },
-			"m": { "value": "1.25" },
-			"s": { "value": "1" }
 		}
 	}
 }

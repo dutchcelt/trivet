@@ -1,0 +1,9 @@
+{
+	"typography": {
+		"leading": {
+			"l": { "value": "1.6125" },
+			"m": { "value": "1.25" },
+			"s": { "value": "1" }
+		}
+	}
+}

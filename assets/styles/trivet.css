@@ -10,73 +10,92 @@
 	}
 }
 
+/*	###################################################################### */
+/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
+/* 	Behaviour */
+/* 	Parent Layout */
+/* 	Layout */
+/* 	Box Model */
+/* 	Positioning */
+/* 	Display */
+/*	###################################################################### */
 @layer trivet.foundation {
-	/*	###################################################################### */
-	/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
-	/* 	Behaviour */
-	/* 	Parent Layout */
-	/* 	Layout */
-	/* 	Box Model */
-	/* 	Positioning */
-	/* 	Display */
-	/*	###################################################################### */
-
 	:root {
 		margin: 0;
 		font-size: var(--trvt-typography-size-root, 100%);
 		line-height: var(--trvt-typography-leading-root, 1.5);
 		box-sizing: border-box;
+		color-scheme: light dark;
 	}
 	*,
-	*:before,
-	*:after {
+	*::before,
+	*::after {
 		box-sizing: inherit;
 	}
 
 	body {
 		margin: 0;
-		font-family: var(--trvt-font-family-base);
+		font-family: var(--trvt-typography-family-base);
 		color: var(--trvt-color-typography-text);
 		background: var(--trvt-color-background-viewport);
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--trvt-typography-family-display);
+		margin-block-start: var(
+			--trvt-typography-whitespace-heading-block-start,
+			1em
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-heading-block-end,
+			1ex
+		);
+		color: var(--trvt-color-typography-heading);
+	}
+
 	h1 {
-		font-family: var(--trvt-font-family-display);
 		font-size: var(--trvt-typography-size-xxl);
 		line-height: var(--trvt-typography-leading-s);
-		color: var(--trvt-color-typography-heading);
 	}
 
 	h2 {
-		font-family: var(--trvt-font-family-display);
 		font-size: var(--trvt-typography-size-xl);
 		line-height: var(--trvt-typography-leading-m);
-		color: var(--trvt-color-typography-heading);
 	}
 
 	h3 {
-		font-family: var(--trvt-font-family-display);
-		font-size: 1.25rem;
+		font-size: var(--trvt-typography-size-l);
 		color: var(--trvt-color-typography-heading);
 	}
 
 	h4 {
-		font-family: var(--trvt-font-family-display);
-		font-size: 1.25rem;
-		color: var(--trvt-color-typography-heading);
+		font-family: var(--trvt-typography-family-display);
+		font-size: var(--trvt-typography-size-l);
 	}
 
 	h5 {
-		font-family: var(--trvt-font-family-display);
-		font-size: 1.25rem;
-		color: var(--trvt-color-typography-heading);
+		font-size: var(--trvt-typography-size-l);
 	}
 
 	h6 {
-		font-family: var(--trvt-font-family-display);
-		text-transform: uppercase;
-		font-size: 1rem;
-		color: var(--trvt-color-typography-heading);
+		font-size: var(--trvt-typography-size-m);
+	}
+	p,
+	form,
+	fieldset {
+		margin-block-start: var(
+			--trvt-typography-whitespace-default-block-start,
+			1rem
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-default-block-end,
+			1rem
+		);
 	}
 
 	a:link,
@@ -88,7 +107,24 @@
 	}
 }
 
-@layer trivet.foundation {
+@layer trivet.utilities {
+	hr {
+		border: none;
+		border-block-start: 1px solid;
+		color: inherit;
+		block-size: 0;
+		overflow: visible;
+	}
+	.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden) {
+		clip-path: inset(50%) !important;
+		height: 1px !important;
+		width: 1px !important;
+		overflow: hidden !important;
+		position: absolute !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	}
+
 	.content:has(> slot) {
 		margin-trim: block;
 	}

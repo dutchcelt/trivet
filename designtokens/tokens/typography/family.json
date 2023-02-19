@@ -1,7 +1,7 @@
 {
-	"font": {
+	"typography": {
 		"family": {
-			"base": { "value": "serif" },
+			"base": { "value": "sans-serif" },
 			"display": { "value": "sans-serif" },
 			"gui": { "value": "sans-serif" },
 			"code": { "value": "monospace" }

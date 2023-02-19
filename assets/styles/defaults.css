@@ -51,7 +51,7 @@
 	}
 }
 
-@layer default.options {
+@layer defaults.base {
 	html {
 		font-size: 100%;
 		font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
@@ -86,23 +86,5 @@
 		html:focus-within {
 			scroll-behavior: smooth;
 		}
-	}
-}
-
-@layer default.utilities {
-	hr {
-		border-width: 1px 0 0 0;
-		color: inherit;
-		height: 0;
-		overflow: visible;
-	}
-	.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden) {
-		clip-path: inset(50%) !important;
-		height: 1px !important;
-		width: 1px !important;
-		overflow: hidden !important;
-		position: absolute !important;
-		white-space: nowrap !important;
-		border: 0 !important;
 	}
 }

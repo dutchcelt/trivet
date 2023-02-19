@@ -2,12 +2,11 @@
  * Define the layers and child layers upfront 
  */
 @layer defaults.reset,
-	defaults.normalize,
-	defaults.options,
-	defaults.utilities,
+	defaults.base,
 	
 	trivet.tokens,
 	trivet.foundations,
+	trivet.utilities,
 	
 	/* 	The 'theme' layer has no sub layers.
 		Allow developers to manage their own layers

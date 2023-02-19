@@ -1,0 +1,18 @@
+{
+	"typography": {
+		"whitespace": {
+			"heading": {
+				"block-start": { "value": "1em" },
+				"block-end": { "value": "1ex" },
+				"inline-start": { "value": "0" },
+				"inline-end": { "value": "0" }
+			},
+			"default": {
+				"block-start": { "value": "2ex" },
+				"block-end": { "value": "2ex" },
+				"inline-start": { "value": "2ch" },
+				"inline-end": { "value": "2ch" }
+			}
+		}
+	}
+}
