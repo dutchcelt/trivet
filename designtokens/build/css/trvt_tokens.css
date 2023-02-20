@@ -69,6 +69,10 @@
   --trvt-color-typography-anchor: LinkText;
   --trvt-color-typography-anchor-visited: VisitedText;
   --trvt-color-typography-anchor-active: ActiveText;
+  --trvt-functional-boolean-true: initial;
+  --trvt-functional-boolean-false: ;
+  --trvt-functional-boolean-on: initial;
+  --trvt-functional-boolean-off: ;
   --trvt-layout-display-viewport: block;
   --trvt-layout-display-content: block;
   --trvt-layout-display-ui: flex;
