@@ -43,7 +43,7 @@
 	:root {
 		margin: 0;
 		font-family: var(--trvt-typography-family-base);
-		font-size: var(--trvt-typography-size-copy, 100%);
+		font-size: var(--trvt-typography-size-root, 100%);
 		line-height: var(--trvt-typography-leading-l, 1.5);
 		color-scheme: light dark;
 	}

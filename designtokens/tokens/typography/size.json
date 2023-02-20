@@ -1,7 +1,7 @@
 {
 	"typography": {
 		"size": {
-			"copy": { "value": "medium" },
+			"root": { "value": "112.5%", "comment": "set root to 18px" },
 			"xxxl": { "value": "xxx-large" },
 			"xxl": { "value": "xx-large" },
 			"xl": { "value": "x-large" },

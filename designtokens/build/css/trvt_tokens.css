@@ -98,7 +98,7 @@
   --trvt-typography-leading-l: 1.6125;
   --trvt-typography-leading-m: 1.25;
   --trvt-typography-leading-s: 1;
-  --trvt-typography-size-copy: medium;
+  --trvt-typography-size-root: 112.5%; /* set root to 18px */
   --trvt-typography-size-xxxl: xxx-large;
   --trvt-typography-size-xxl: xx-large;
   --trvt-typography-size-xl: x-large;
