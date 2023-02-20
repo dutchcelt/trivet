@@ -3,7 +3,8 @@
 		"background": {
 			"viewport": { "value": "Canvas" },
 			"content": { "value": "Canvas" },
-			"surface": { "value": "Canvas" },
+			"surface": { "value": "Grey" },
+			"header": { "value": "CanvasText" },
 			"icon": { "value": "Canvas" },
 			"highlight": { "value": "Highlight" },
 			"accentcolor": { "value": "AccentColor" },

@@ -1,20 +1,15 @@
 {
 	"typography": {
 		"size": {
-			"copy": {
-				"value": "clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem)",
-				"comment": "Fluid font sizes: https://utopia.fyi/type/calculator/?c=375,18,1.2,1280,21,1.333,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l"
-			},
-			"xxl": {
-				"value": "clamp(1.94rem, calc(1.46rem + 2.06vw), 3.11rem)"
-			},
-			"xl": {
-				"value": "clamp(1.62rem, calc(1.33rem + 1.26vw), 2.33rem)"
-			},
-			"l": { "value": "clamp(1.35rem, calc(1.18rem + 0.71vw), 1.75rem)" },
-			"m": { "value": "clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem)" },
-			"s": { "value": "clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem)" },
-			"xs": { "value": "clamp(0.74rem, calc(0.8rem + -0.08vw), 0.78rem)" }
+			"copy": { "value": "medium" },
+			"xxxl": { "value": "xxx-large" },
+			"xxl": { "value": "xx-large" },
+			"xl": { "value": "x-large" },
+			"l": { "value": "large" },
+			"m": { "value": "medium" },
+			"s": { "value": "small" },
+			"xs": { "value": "x-small" },
+			"xxs": { "value": "xx-small" }
 		}
 	}
 }

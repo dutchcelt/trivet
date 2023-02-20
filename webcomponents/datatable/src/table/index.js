@@ -48,10 +48,10 @@ export class trvtTable extends HTMLElement {
 		const direction = rotated ? 'vertical-lr' : 'horizontal-tb';
 		const sticky = rotated ? 'sticky' : 'unset';
 
-		this.style.setProperty('--table-writing-mode', direction);
-		this.style.setProperty('--table-sticky-cell', sticky);
-		this.style.setProperty('--table-sticky-header', sticky);
-		this.style.setProperty('--table-scroll', sticky);
+		this.style.setProperty('--_table-writing-mode', direction);
+		this.style.setProperty('--_table-sticky-cell', sticky);
+		this.style.setProperty('--_table-sticky-header', sticky);
+		this.style.setProperty('--_table-scroll', sticky);
 	}
 }
 customElements.define('trvt-table', trvtTable);

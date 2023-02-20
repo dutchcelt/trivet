@@ -1,12 +1,13 @@
 @layer components.props {
 	:host {
+		--_table-writing-mode: horizontal-tb;
+		--_table-scroll: unset;
+		--_table-sticky-cell: unset;
+		--_table-sticky-header: unset;
+
 		--nested-grid-diplay: contents;
-		--canvas: #ffffff;
-		--canvasText: #1e1e1e;
-		--table-writing-mode: horizontal-tb;
-		--table-scroll: unset;
-		--table-sticky-cell: unset;
-		--table-sticky-header: unset;
+		--canvas: var(--trvt-color-background-content);
+		--canvasText: var(--trvt-color-base-text);
 		--table-cell-width: 75ch;
 	}
 }
@@ -24,12 +25,12 @@
 	}
 	@container test (max-width: 680px) {
 		.scrollbox {
-			--table-scroll: scroll;
+			--_table-scroll: scroll;
 		}
 		.table {
-			--table-writing-mode: vertical-lr;
-			--table-sticky-cell: sticky;
-			--table-sticky-header: sticky;
+			--_table-writing-mode: vertical-lr;
+			--_table-sticky-cell: sticky;
+			--_table-sticky-header: sticky;
 			--table-cell-width: 30ch;
 		}
 	}
@@ -49,12 +50,12 @@
 		);
 	}
 	.scrollbox {
-		overflow-x: var(--table-scroll);
+		overflow-x: var(--_table-scroll);
 		height: 100%;
 	}
 
 	.table {
-		writing-mode: var(--table-writing-mode);
+		writing-mode: var(--_table-writing-mode);
 		display: grid;
 		grid-template-columns: repeat(
 			var(--number-of-columns, var(--trvt-number-of-columns)),

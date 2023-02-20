@@ -6,6 +6,8 @@
 			"mid": { "value": "#625b60" },
 			"bright": { "value": "#f9ece9" },
 			"shadow": { "value": "#3d3c44" },
+			"header": { "value": "Canvas" },
+			"icon": { "value": "CanvasText" },
 			"text": { "value": "CanvasText" },
 			"link": { "value": "LinkText" },
 			"visited": { "value": "VisitedText" },

@@ -1,7 +1,8 @@
 :root {
   --trvt-color-background-viewport: Canvas;
   --trvt-color-background-content: Canvas;
-  --trvt-color-background-surface: Canvas;
+  --trvt-color-background-surface: Grey;
+  --trvt-color-background-header: CanvasText;
   --trvt-color-background-icon: Canvas;
   --trvt-color-background-highlight: Highlight;
   --trvt-color-background-accentcolor: AccentColor;
@@ -14,6 +15,8 @@
   --trvt-color-base-mid: #625b60;
   --trvt-color-base-bright: #f9ece9;
   --trvt-color-base-shadow: #3d3c44;
+  --trvt-color-base-header: Canvas;
+  --trvt-color-base-icon: CanvasText;
   --trvt-color-base-text: CanvasText;
   --trvt-color-base-link: LinkText;
   --trvt-color-base-visited: VisitedText;
@@ -66,6 +69,10 @@
   --trvt-color-typography-anchor: LinkText;
   --trvt-color-typography-anchor-visited: VisitedText;
   --trvt-color-typography-anchor-active: ActiveText;
+  --trvt-layout-display-viewport: block;
+  --trvt-layout-display-content: block;
+  --trvt-layout-display-ui: flex;
+  --trvt-layout-display-grid: grid;
   --trvt-ratio-square: 1 / 1;
   --trvt-ratio-wide: 16 / 9;
   --trvt-ratio-standard: 4 / 3;
@@ -91,19 +98,40 @@
   --trvt-typography-leading-l: 1.6125;
   --trvt-typography-leading-m: 1.25;
   --trvt-typography-leading-s: 1;
-  --trvt-typography-size-copy: clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem); /* Fluid font sizes: https://utopia.fyi/type/calculator/?c=375,18,1.2,1280,21,1.333,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-  --trvt-typography-size-xxl: clamp(1.94rem, calc(1.46rem + 2.06vw), 3.11rem);
-  --trvt-typography-size-xl: clamp(1.62rem, calc(1.33rem + 1.26vw), 2.33rem);
-  --trvt-typography-size-l: clamp(1.35rem, calc(1.18rem + 0.71vw), 1.75rem);
-  --trvt-typography-size-m: clamp(1.13rem, calc(1.05rem + 0.33vw), 1.31rem);
-  --trvt-typography-size-s: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
-  --trvt-typography-size-xs: clamp(0.74rem, calc(0.8rem + -0.08vw), 0.78rem);
-  --trvt-typography-whitespace-heading-block-start: 1em;
+  --trvt-typography-size-copy: medium;
+  --trvt-typography-size-xxxl: xxx-large;
+  --trvt-typography-size-xxl: xx-large;
+  --trvt-typography-size-xl: x-large;
+  --trvt-typography-size-l: large;
+  --trvt-typography-size-m: medium;
+  --trvt-typography-size-s: small;
+  --trvt-typography-size-xs: x-small;
+  --trvt-typography-size-xxs: xx-small;
+  --trvt-typography-weight-thin: 100;
+  --trvt-typography-weight-ultralight: 200;
+  --trvt-typography-weight-light: 300;
+  --trvt-typography-weight-medium: 400;
+  --trvt-typography-weight-semibold: 500;
+  --trvt-typography-weight-bold: 600;
+  --trvt-typography-weight-extrabold: 700;
+  --trvt-typography-weight-heavy: 800;
+  --trvt-typography-weight-black: 900;
+  --trvt-typography-whitespace-heading-block-start: 1.3333em;
   --trvt-typography-whitespace-heading-block-end: 1ex;
   --trvt-typography-whitespace-heading-inline-start: 0;
   --trvt-typography-whitespace-heading-inline-end: 0;
+  --trvt-typography-whitespace-heading-row-gap: 1ex;
+  --trvt-typography-whitespace-heading-column-gap: 1ch;
+  --trvt-typography-whitespace-compact-block-start: 1ex;
+  --trvt-typography-whitespace-compact-block-end: 1ex;
+  --trvt-typography-whitespace-compact-inline-start: 1ch;
+  --trvt-typography-whitespace-compact-inline-end: 1ch;
+  --trvt-typography-whitespace-compact-row-gap: 1ex;
+  --trvt-typography-whitespace-compact-column-gap: 1ch;
   --trvt-typography-whitespace-default-block-start: 2ex;
   --trvt-typography-whitespace-default-block-end: 2ex;
   --trvt-typography-whitespace-default-inline-start: 2ch;
   --trvt-typography-whitespace-default-inline-end: 2ch;
+  --trvt-typography-whitespace-default-row-gap: 2ex;
+  --trvt-typography-whitespace-default-column-gap: 2ch;
 }

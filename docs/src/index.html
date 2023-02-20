@@ -93,9 +93,10 @@
 				</trvt-header>
 			</header>
 			<main slot="main">
-				<trvt-article
-					data-trvt-title="Trivet, a base built with web components!"
-				>
+				<trvt-article data-trvt-title="">
+					<h1 slot="heading">
+						Trivet, a base built with web components!
+					</h1>
 					<div slot="intro">
 						<p>
 							Introduction: Lorem ipsum dolor amet mustache
@@ -182,7 +183,7 @@
 						</p>
 					</trvt-toggle-details>
 				</trvt-tab-container>
-				<trvt-table>
+				<trvt-table style="--canvas">
 					<trvt-thead>
 						<trvt-row>
 							<trvt-header-cell>Cell 1.1</trvt-header-cell>

@@ -1,10 +1,21 @@
 @layer components.props {
 	:host {
 		--is-accordion: var(--TRUE);
+		--is-tabbed: ;
 		--toggle-display: block;
 		--container-display: block;
-		--toggle-active: var(--color-active, dodgerblue);
-		--toggle-active-canvas: var(--color-accent, lightskyblue);
+		--toggle-summary-active-canvas: var(
+			--trvt-color-background-surface,
+			canvas
+		);
+		--toggle-summary-active-text: var(--trvt-color-base-text, canvasText);
+		--toggle-detail-active-canvas: var(
+			--trvt-color-background-surface,
+			canvas
+		);
+	}
+	.content {
+		--tab-radius: var(--is-tabbed, 1ex);
 	}
 }
 @layer components.selectors {
@@ -25,7 +36,7 @@
 	@container toggles (min-width: 640px) {
 		.content {
 			--is-accordion: var(--FALSE);
-			--is-tabbed: var(--TRUE);
+			--is-tabbed: initial;
 			--container-display: grid;
 			--toggle-display: contents;
 		}

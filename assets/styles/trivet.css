@@ -3,7 +3,7 @@
 @import url(/designtokens/build/css/trvt_tokens.css) layer(trivet.tokens);
 @import url(/assets/styles/defaults.css);
 
-@layer trivet.props {
+@layer trivet.tokens {
 	:root {
 		--ON: initial;
 		--OFF: ;
@@ -12,6 +12,16 @@
 
 		--trvt-display: initial;
 		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
+	}
+	@supports not (font-size: xxx-large) {
+		:root {
+			--trvt-typography-size-xxxl: -webkit-xxx-large;
+		}
+	}
+	@supports not (font-size: -webkit-xxx-large) {
+		:root {
+			--trvt-typography-size-xxxl: 3rem;
+		}
 	}
 }
 
@@ -61,19 +71,18 @@
 		);
 		color: var(--trvt-color-typography-heading);
 	}
-
 	h1 {
-		font-size: var(--trvt-typography-size-xxl);
+		font-size: var(--trvt-typography-size-xxxl);
 		line-height: var(--trvt-typography-leading-s);
 	}
 
 	h2 {
-		font-size: var(--trvt-typography-size-xl);
+		font-size: var(--trvt-typography-size-xxl);
 		line-height: var(--trvt-typography-leading-m);
 	}
 
 	h3 {
-		font-size: var(--trvt-typography-size-l);
+		font-size: var(--trvt-typography-size-xl);
 		color: var(--trvt-color-typography-heading);
 	}
 

@@ -13,7 +13,7 @@
 	}
 	@supports not (grid-template-columns: subgrid) {
 		:host {
-			position: var(--table-sticky-cell);
+			position: var(--_table-sticky-cell);
 			left: 0;
 		}
 	}

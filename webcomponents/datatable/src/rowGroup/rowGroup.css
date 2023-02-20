@@ -7,7 +7,7 @@
 @layer components.modifiers {
 	@supports (grid-template-columns: subgrid) {
 		:host(trvt-thead) {
-			position: var(--table-sticky-header);
+			position: var(--_table-sticky-header);
 			left: 0;
 		}
 	}

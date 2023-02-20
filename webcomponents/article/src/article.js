@@ -6,7 +6,6 @@ export class TrvtArticle extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, articleCSS];
-		this.trvtTitle = this.dataset.trvtTitle;
 		this.layoutType = 'article';
 		this.shadowRoot.appendChild(this.render());
 	}
@@ -15,8 +14,8 @@ export class TrvtArticle extends HTMLElement {
 	render() {
 		return createFragment(`
 			<article class="component content">
-        ${this.#headingTemplate()}
-        <slot name="intro"></slot>
+				<slot name="heading"></slot>
+				<slot name="intro"></slot>
         <slot name="content"></slot>
         <slot name="footer"></slot>
 			</article>
