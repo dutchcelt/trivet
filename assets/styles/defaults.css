@@ -1,7 +1,7 @@
 /* 	Based on a reset by Mayank 
  *	https://www.npmjs.com/package/@acab/reset.css 
  */
-@layer defaults.reset {
+@layer base.reset {
 	[hidden] {
 		display: none !important;
 	}
@@ -51,7 +51,7 @@
 	}
 }
 
-@layer defaults.base {
+@layer base.default {
 	html {
 		font-size: 100%;
 		font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,

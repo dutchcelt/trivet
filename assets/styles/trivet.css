@@ -3,7 +3,7 @@
 @import url(/designtokens/build/css/trvt_tokens.css) layer(trivet.tokens);
 @import url(/assets/styles/defaults.css);
 
-@layer trivet.tokens {
+@layer design.tokens {
 	:root,
 	:host {
 		--ON: var(--trvt-functional-boolean-on);
@@ -35,7 +35,7 @@
 /* 	Positioning */
 /* 	Display */
 /*	###################################################################### */
-@layer trivet.foundation {
+@layer design.foundation {
 	*,
 	*::before,
 	*::after {
@@ -132,7 +132,7 @@
 	}
 }
 
-@layer trivet.utilities {
+@layer design.utilities {
 	hr {
 		border: none;
 		border-block-start: 1px solid;
