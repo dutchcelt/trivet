@@ -1,8 +1,6 @@
 /* styles */
-import defaultsCSS from './styles/defaults.css' assert { type: 'css' };
-import indexCSS from './styles/index.css' assert { type: 'css' };
 import trivetCSS from './styles/trivet.css' assert { type: 'css' };
-export { indexCSS, defaultsCSS, trivetCSS };
+export { trivetCSS };
 
 /* Scripts */
 //export { hasCSSLayerSupport } from './scripts/hasCSSLayerSupport.js';
