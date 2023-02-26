@@ -13,8 +13,6 @@ export const trivetCSS = [
 	utilitiesCSS,
 ];
 
-export trivetCSSString from './build/trivet.js';
-
 /* Scripts */
 //export { hasCSSLayerSupport } from './scripts/hasCSSLayerSupport.js';
 export { loadFont } from './scripts/loadFont.js';
