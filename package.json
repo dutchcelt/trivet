@@ -21,6 +21,10 @@
 		"docs",
 		"webcomponents/*"
 	],
+	"engines": {
+		"node": "18.14.2",
+		"yarn": "3.4.1"
+	},
 	"packageManager": "yarn@3.4.1",
 	"devDependencies": {
 		"@changesets/cli": "^2.19.0",

@@ -25,7 +25,7 @@
 /* Import the 'design system' */
 
 @import url('/assets/styles/base/reset.css');
-@import url('/assets/styles/base/defaults.css');
+@import url(/assets/styles/base/defaults.css);
 @import url(/assets/styles/base/normalize.css);
 @import url(/designtokens/build/css/trvt_tokens.css) layer(design.tokens);
 @import url(/assets/styles/design/tokens.css);
