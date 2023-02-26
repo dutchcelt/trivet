@@ -1,11 +1,11 @@
 {
 	"color": {
 		"base": {
-			"light": { "value": "#f9ece9" },
-			"dark": { "value": "#29282d" },
-			"mid": { "value": "#625b60" },
-			"bright": { "value": "#f9ece9" },
-			"shadow": { "value": "#3d3c44" },
+			"light": { "value": "#efefef" },
+			"dark": { "value": "#ddd" },
+			"mid": { "value": "#999" },
+			"bright": { "value": "#ffff00" },
+			"shadow": { "value": "#ccc" },
 			"header": { "value": "Canvas" },
 			"icon": { "value": "CanvasText" },
 			"text": { "value": "CanvasText" },

@@ -1,13 +1,13 @@
 {
 	"color": {
 		"feedback": {
-			"note": { "value": "#7a6562" },
-			"info": { "value": "#7a6562" },
-			"attention": { "value": "#7a6562" },
-			"warning": { "value": "#7a6562" },
-			"error": { "value": "#7a6562" },
-			"pending": { "value": "#7a6562" },
-			"new": { "value": "#7a6562" }
+			"note": { "value": "lightblue" },
+			"info": { "value": "steal" },
+			"attention": { "value": "orange" },
+			"warning": { "value": "crimson" },
+			"error": { "value": "red" },
+			"pending": { "value": "purple" },
+			"new": { "value": "green" }
 		}
 	}
 }
