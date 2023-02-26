@@ -1,7 +1,7 @@
+@import url(/designtokens/build/css/trvt_tokens.css) layer(design.tokens);
 
 @layer design.tokens {
-	:root,
-	:host {
+	:root {
 		--ON: var(--trvt-functional-boolean-on);
 		--OFF: var(--trvt-functional-boolean-off);
 		--TRUE: var(--trvt-functional-boolean-true);

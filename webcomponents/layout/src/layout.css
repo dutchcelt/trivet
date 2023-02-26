@@ -129,16 +129,9 @@
 		/* Layout Slot Rules */
 		*:where(.navigation, .header, .main, .sidebar, .footer) {
 			grid-column: var(--grid-column);
-			background-color: var(--layout-background-color, transparent);
-		}
-
-		*:where(.main, .sidebar, ) {
-			background-color: var(--trvt-color-background-content, transparent);
 		}
 
 		*:where(.footer) {
-			background-color: transparent;
-			color: var(--trvt-color-base-light);
 			padding-block: var(--padding-block);
 			padding-inline: var(--padding-inline);
 		}

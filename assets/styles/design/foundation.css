@@ -13,7 +13,7 @@
 	*::after {
 		box-sizing: inherit;
 	}
-	:root {
+	html {
 		margin: 0;
 		font-family: var(--trvt-typography-family-base);
 		font-size: var(--trvt-typography-size-root, 100%);

@@ -11,10 +11,10 @@
   --trvt-color-background-selected: SelectedItem;
   --trvt-color-background-mark: Mark;
   --trvt-color-base-light: #efefef;
-  --trvt-color-base-dark: #ddd;
-  --trvt-color-base-mid: #999;
+  --trvt-color-base-dark: #999;
+  --trvt-color-base-mid: #ccc;
   --trvt-color-base-bright: #ffff00;
-  --trvt-color-base-shadow: #ccc;
+  --trvt-color-base-shadow: #ddd;
   --trvt-color-base-header: Canvas;
   --trvt-color-base-icon: CanvasText;
   --trvt-color-base-text: CanvasText;
@@ -37,7 +37,7 @@
   --trvt-color-brand-tertiary: CanvasText;
   --trvt-color-brand-tertiary-inverted: Canvas;
   --trvt-color-feedback-note: lightblue;
-  --trvt-color-feedback-info: steal;
+  --trvt-color-feedback-info: lightsteel;
   --trvt-color-feedback-attention: orange;
   --trvt-color-feedback-warning: crimson;
   --trvt-color-feedback-error: red;

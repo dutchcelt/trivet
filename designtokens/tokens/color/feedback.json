@@ -2,7 +2,7 @@
 	"color": {
 		"feedback": {
 			"note": { "value": "lightblue" },
-			"info": { "value": "steal" },
+			"info": { "value": "lightsteel" },
 			"attention": { "value": "orange" },
 			"warning": { "value": "crimson" },
 			"error": { "value": "red" },

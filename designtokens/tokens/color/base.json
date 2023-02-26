@@ -2,10 +2,10 @@
 	"color": {
 		"base": {
 			"light": { "value": "#efefef" },
-			"dark": { "value": "#ddd" },
-			"mid": { "value": "#999" },
+			"dark": { "value": "#999" },
+			"mid": { "value": "#ccc" },
 			"bright": { "value": "#ffff00" },
-			"shadow": { "value": "#ccc" },
+			"shadow": { "value": "#ddd" },
 			"header": { "value": "Canvas" },
 			"icon": { "value": "CanvasText" },
 			"text": { "value": "CanvasText" },
