@@ -1,0 +1,170 @@
+@import url(/assets/styles/index.css);
+@import url(/assets/styles/defaults.css);
+@import url(/designtokens/build/css/trvt_tokens.css) layer(design.tokens);
+@import url(/assets/styles/defaults.css);
+
+@layer design.tokens {
+	:root,
+	:host {
+		--ON: var(--trvt-functional-boolean-on);
+		--OFF: var(--trvt-functional-boolean-off);
+		--TRUE: var(--trvt-functional-boolean-true);
+		--FALSE: var(--trvt-functional-boolean-false);
+
+		--trvt-display: initial;
+		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
+	}
+	@supports not (font-size: xxx-large) {
+		:root {
+			--trvt-typography-size-xxxl: -webkit-xxx-large;
+		}
+	}
+	@supports not (font-size: -webkit-xxx-large) {
+		:root {
+			--trvt-typography-size-xxxl: 3rem;
+		}
+	}
+}
+
+/*	###################################################################### */
+/*	https://rehansaeed.com/system-for-grouping-and-sorting-css-properties/ */
+/* 	Behaviour */
+/* 	Parent Layout */
+/* 	Layout */
+/* 	Box Model */
+/* 	Positioning */
+/* 	Display */
+/*	###################################################################### */
+@layer design.foundation {
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+	:root {
+		margin: 0;
+		font-family: var(--trvt-typography-family-base);
+		font-size: var(--trvt-typography-size-root, 100%);
+		line-height: var(--trvt-typography-leading-l, 1.5);
+		color-scheme: light dark;
+	}
+
+	body {
+		margin: 0;
+		color: var(--trvt-color-base-text);
+		background-color: var(--trvt-color-background-viewport);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--trvt-typography-family-display);
+		margin-block-start: var(
+			--trvt-typography-whitespace-heading-block-start,
+			1em
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-heading-block-end,
+			1ex
+		);
+		color: var(--trvt-color-typography-heading);
+	}
+	h1 {
+		font-size: var(--trvt-typography-size-xxxl);
+		font-weight: var(--trvt-typography-weight-black);
+		line-height: var(--trvt-typography-leading-s);
+	}
+
+	h2 {
+		font-size: var(--trvt-typography-size-xxl);
+		font-weight: var(--trvt-typography-weight-black);
+		line-height: var(--trvt-typography-leading-m);
+	}
+
+	h3 {
+		font-size: var(--trvt-typography-size-xl);
+		font-weight: var(--trvt-typography-weight-black);
+		color: var(--trvt-color-typography-heading);
+	}
+
+	h4 {
+		font-family: var(--trvt-typography-family-display);
+		font-size: var(--trvt-typography-size-l);
+	}
+
+	h5 {
+		font-size: var(--trvt-typography-size-l);
+	}
+
+	h6 {
+		font-size: var(--trvt-typography-size-m);
+	}
+	p,
+	form,
+	fieldset {
+		margin-block-start: var(
+			--trvt-typography-whitespace-default-block-start,
+			1rem
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-default-block-end,
+			1rem
+		);
+	}
+
+	a:link {
+		color: var(--trvt-color-base-link);
+	}
+	a:visited {
+		color: var(--trvt-color-base-visited);
+	}
+	a:hover {
+		color: var(--trvt-color-base-accentcolor);
+	}
+	a:active {
+		color: var(--trvt-color-base-active);
+	}
+	a:focus {
+		color: var(--trvt-color-base-text);
+	}
+}
+
+@layer design.utilities {
+	hr {
+		border: none;
+		border-block-start: 1px solid;
+		color: inherit;
+		block-size: 0;
+		overflow: visible;
+	}
+	.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden) {
+		clip-path: inset(50%) !important;
+		height: 1px !important;
+		width: 1px !important;
+		overflow: hidden !important;
+		position: absolute !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	}
+
+	.content:has(> slot) {
+		margin-trim: block;
+	}
+
+	@supports not (margin-trim: block) {
+		.content > ::slotted(*:first-child) {
+			margin-block-start: 0 !important;
+		}
+		.content > ::slotted(*:last-child) {
+			margin-block-end: 0 !important;
+		}
+	}
+
+	/*	This hides the sub components until they're all registered.  */
+	trvt-layout:has(:not(:defined)) {
+		visibility: hidden;
+	}
+}
