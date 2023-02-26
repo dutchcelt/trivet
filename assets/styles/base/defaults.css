@@ -1,4 +1,9 @@
 @layer base.default {
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
 	html {
 		font-size: 100%;
 		font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,

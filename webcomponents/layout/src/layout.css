@@ -108,10 +108,11 @@
 			container: layout / inline-size;
 		}
 		.trvt-layout {
+			box-sizing: border-box;
 			display: var(--display, grid);
 			grid-template-columns: var(--template-comumns, 1fr);
 			grid-template-rows: var(--template-rows, auto);
-			gap: 0;
+			gap: var(--layout-gap);
 			padding-block: calc(var(--padding-block) / 2) var(--padding-block);
 			padding-inline: var(--padding-inline);
 			width: min(var(--layout-width-max), 100%);
@@ -131,7 +132,7 @@
 			grid-column: var(--grid-column);
 		}
 
-		*:where(.footer) {
+		/* *:where(.footer) {
 			padding-block: var(--padding-block);
 			padding-inline: var(--padding-inline);
 		}
@@ -144,6 +145,6 @@
 		.sidebar {
 			padding-block: var(--layout-gap);
 			padding-inline: var(--layout-gap);
-		}
+		} */
 	}
 }

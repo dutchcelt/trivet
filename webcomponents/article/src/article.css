@@ -1,4 +1,4 @@
-@layer componentlibrary {
+@layer components {
 	@layer props {
 		:host {
 			--article-display: var(--trvt-layout-display-content, block);

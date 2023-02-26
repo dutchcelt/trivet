@@ -8,11 +8,6 @@
 /* 	Display */
 /*	###################################################################### */
 @layer design.foundation {
-	*,
-	*::before,
-	*::after {
-		box-sizing: inherit;
-	}
 	html {
 		margin: 0;
 		font-family: var(--trvt-typography-family-base);

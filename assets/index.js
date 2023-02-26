@@ -1,6 +1,19 @@
 /* styles */
-import trivetCSS from './styles/trivet.css' assert { type: 'css' };
-export { trivetCSS };
+import resetCSS from './styles/base/reset.css' assert { type: 'css' };
+import defaultsCSS from './styles/base/defaults.css' assert { type: 'css' };
+import tokensCSS from './styles/design/tokens.css' assert { type: 'css' };
+import foundationCSS from './styles/design/foundation.css' assert { type: 'css' };
+import utilitiesCSS from './styles/design/utilities.css' assert { type: 'css' };
+
+export const trivetCSS = [
+	resetCSS,
+	defaultsCSS,
+	tokensCSS,
+	foundationCSS,
+	utilitiesCSS,
+];
+
+export trivetCSSString from './build/trivet.js';
 
 /* Scripts */
 //export { hasCSSLayerSupport } from './scripts/hasCSSLayerSupport.js';

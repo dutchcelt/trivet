@@ -24,9 +24,8 @@
 
 /* Import the 'design system' */
 
-@import url('/assets/styles/base/reset.css');
-@import url(/assets/styles/base/defaults.css);
-@import url(/assets/styles/base/normalize.css);
-@import url(/assets/styles/design/tokens.css);
-@import url(/assets/styles/design/foundation.css);
-@import url(/assets/styles/design/utilities.css);
+@import url(base/reset.css);
+@import url(base/defaults.css);
+@import url(design/tokens.css);
+@import url(design/foundation.css);
+@import url(design/utilities.css);

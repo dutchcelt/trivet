@@ -3,6 +3,8 @@ const iconFontName = `trvt-icons`;
 const iconFontDir = `${iconFontName}-${iconFontVersion}`;
 const iconFontPath = `${iconFontDir}/fonts`;
 const iconAssetPath = './icons';
+const stylesAssetPath = './styles';
+const stylesAssetTarget = './build';
 const iconAssetTarget = './build';
 const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
 

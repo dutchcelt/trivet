@@ -21,6 +21,8 @@
 		"fonts/faces.js",
 		"build/icons.js",
 		"build/glyphs.css",
+		"build/trivet.css",
+		"build/trivet.js",
 		"build/trvt-icons.woff2",
 		"build/trvt-icon-classes.css"
 	],
@@ -34,12 +36,15 @@
 	},
 	"devDependencies": {
 		"glob": "^7.2.0",
+		"lightningcss": "^1.19.0",
+		"lightningcss-cli": "^1.19.0",
 		"rollup": "^2.67.2",
 		"rollup-plugin-styles": "^4.0.0",
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
 		"build": "rollup -c rollup.icons.config.js",
+		"build:trivet": "lightningcss --minify --bundle styles/trivet.css -o build/trivet.css --error-recovery",
 		"develop": "yarn build --watch"
 	}
 }
