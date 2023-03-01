@@ -19,7 +19,12 @@
 		font: inherit;
 		color: inherit;
 	}
-	button, label, select, summary, [role='button'], [role='option']) {
+	button,
+	label,
+	select,
+	summary,
+	[role='button'],
+	[role='option'] {
 		cursor: pointer;
 	}
 	:disabled {

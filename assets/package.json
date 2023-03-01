@@ -7,7 +7,6 @@
 		"styles/trivet.css",
 		"styles/base/reset.css",
 		"styles/base/defaults.css",
-		"styles/base/normalize.css",
 		"styles/design/tokens.css",
 		"styles/design/foundation.css",
 		"styles/design/utilities.css",
@@ -19,9 +18,14 @@
 		"scripts/injectDocumentStyles.js",
 		"scripts/throttler.js",
 		"fonts/faces.js",
-		"build/icons.js",
-		"build/glyphs.css",
+		"build/index.js",
+		"build/styles-e4c0806b.css",
+		"build/styles-344b213f.css",
+		"build/styles-0d39a441.css",
+		"build/styles-269c8265.css",
+		"build/styles-284212f6.css",
 		"build/trvt-icons.woff2",
+		"build/glyphs.css",
 		"build/trvt-icon-classes.css"
 	],
 	"description": "A very simple web component base class",
@@ -34,12 +38,13 @@
 	},
 	"devDependencies": {
 		"glob": "^7.2.0",
-		"rollup": "^2.67.2",
-		"rollup-plugin-styles": "^4.0.0",
+		"lightningcss": "^1.19.0",
+		"rollup": "^3.17.3",
+		"rollup-plugin-native-css-modules": "^1.1.1",
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
-		"build": "rollup -c rollup.icons.config.js",
+		"build": "rollup -c rollup.config.js",
 		"develop": "yarn build --watch"
 	}
 }

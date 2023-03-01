@@ -23,4 +23,4 @@ export { throttler } from './scripts/throttler.js';
 //export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 /* icons */
-export { iconFonts } from './build/icons.js';
+//export { iconFonts } from './build/icons.js';
