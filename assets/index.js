@@ -1,4 +1,5 @@
 /* styles */
+import indexCSS from './styles/index.css' assert { type: 'css' };
 import resetCSS from './styles/base/reset.css' assert { type: 'css' };
 import defaultsCSS from './styles/base/defaults.css' assert { type: 'css' };
 import tokensCSS from './styles/design/tokens.css' assert { type: 'css' };
@@ -6,6 +7,7 @@ import foundationCSS from './styles/design/foundation.css' assert { type: 'css' 
 import utilitiesCSS from './styles/design/utilities.css' assert { type: 'css' };
 
 export const trivetCSS = [
+	indexCSS,
 	resetCSS,
 	defaultsCSS,
 	tokensCSS,
@@ -23,4 +25,7 @@ export { throttler } from './scripts/throttler.js';
 //export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 /* icons */
-//export { iconFonts } from './build/icons.js';
+import iconFace from './icons/icons.css' assert { type: 'css' };
+import glyphs from './build/glyphs.css' assert { type: 'css' };
+import classes from './build/trvt-icons-classes.css' assert { type: 'css' };
+export const iconFonts = [iconFace, glyphs, classes];

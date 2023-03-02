@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'trvt-icons';
-	src: url('../build/trvt-icons.woff2') format('woff2');
+	src: url('trvt-icons.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;

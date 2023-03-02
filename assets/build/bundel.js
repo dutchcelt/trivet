@@ -1,8 +1,12 @@
+import indexCSS from './styles-1714a140.css' assert { type: 'css' };
 import resetCSS from './styles-e4c0806b.css' assert { type: 'css' };
 import defaultsCSS from './styles-344b213f.css' assert { type: 'css' };
 import tokensCSS from './styles-0d39a441.css' assert { type: 'css' };
 import foundationCSS from './styles-269c8265.css' assert { type: 'css' };
 import utilitiesCSS from './styles-284212f6.css' assert { type: 'css' };
+import iconFace from './styles-6a83ed61.css' assert { type: 'css' };
+import glyphs from './styles-d9bfee46.css' assert { type: 'css' };
+import classes from './styles-f31ac684.css' assert { type: 'css' };
 
 /**
  * Dynamically load fonts.
@@ -69,18 +73,13 @@ const throttler = (callback, ms, scope) => {
 /* styles */
 
 const trivetCSS = [
+	indexCSS,
 	resetCSS,
 	defaultsCSS,
 	tokensCSS,
 	foundationCSS,
 	utilitiesCSS,
 ];
-//export { CSSString2CSSStyleSheet } from './scripts/CSSString2CSSStyleSheet.js';
-//export { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
-//export { generateUUID } from './scripts/generateUUID.js';
-//export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
+const iconFonts = [iconFace, glyphs, classes];
 
-/* icons */
-//export { iconFonts } from './build/icons.js';
-
-export { loadFont, throttler, trivetCSS };
+export { iconFonts, loadFont, throttler, trivetCSS };
