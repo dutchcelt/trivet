@@ -668,7 +668,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@trvt/assets", "workspace:assets"],\
             ["@trvt/designtokens", "workspace:designtokens"],\
-            ["glob", "npm:7.2.0"],\
             ["lightningcss", "npm:1.19.0"],\
             ["rollup", "npm:3.17.3"],\
             ["rollup-plugin-native-css-modules", "npm:1.1.1"],\

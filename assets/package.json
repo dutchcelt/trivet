@@ -22,7 +22,6 @@
 		"@trvt/designtokens": "workspace:^"
 	},
 	"devDependencies": {
-		"glob": "^7.2.0",
 		"lightningcss": "^1.19.0",
 		"rollup": "^3.17.3",
 		"rollup-plugin-native-css-modules": "^1.1.1",
