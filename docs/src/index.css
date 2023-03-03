@@ -1,1 +1,4 @@
-@import url(/assets/styles/index.css);
+trvt-layout:not(:defined),
+trvt-layout:has(:not(:defined)) {
+	visibility: hidden;
+}

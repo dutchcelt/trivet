@@ -50,8 +50,8 @@ export default [
 	{
 		input: ['index.js'],
 		output: {
-			format: 'esm',
-			file: 'build/bundel.js',
+			format: 'es',
+			file: 'build/bundle.js',
 		},
 		plugins: [
 			css({
