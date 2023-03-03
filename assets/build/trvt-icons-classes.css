@@ -1,4 +1,4 @@
-@layer trivet.tokens {
+@layer design.tokens {
 	.trvt-icon-twitter-square::before { content: var(--trvt-icon-twitter-square); }
 	.trvt-icon-facebook-square::before { content: var(--trvt-icon-facebook-square); }
 	.trvt-icon-camera-retro::before { content: var(--trvt-icon-camera-retro); }

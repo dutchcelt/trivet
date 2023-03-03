@@ -39,7 +39,7 @@ sassToCss.convert({
 sassToCss.convert({
 	src: iconFontVariableSource,
 	dest: `${iconAssetTarget}/${iconFontName}-classes.css`,
-	rule: `@layer trivet.tokens `,
+	rule: `@layer design.tokens `,
 	withPropValues: false,
 });
 
@@ -50,8 +50,8 @@ export default [
 	{
 		input: ['index.js'],
 		output: {
-			format: 'es',
-			file: 'build/bundle.js',
+			format: 'esm',
+			file: 'build/bundel.js',
 		},
 		plugins: [
 			css({
