@@ -1,23 +1,6 @@
-/*
- *	Define the layers and child layers upfront 
- */
-@layer base.reset,
-	base.defaults,
-	
-	design.tokens,
-	design.foundations,
-	design.utilities,
-	
-	/*
-	 *	The 'theme' layer has no sub layers.
-	 *	Allow developers to manage their own layers
-	 */
-	theme,
-	
-	/* 
-	 *	'components' styles can also be defined inside the web component 
-	 *	and will reuse these layer definitions 
-	 */
-	components.props,
-	components.selectors,
-	components.modifiers;
+@import url('/assets/styles/layers.css');
+@import url('/assets/styles/base/reset.css');
+@import url('/assets/styles/base/defaults.css');
+@import url('/assets/styles/design/tokens.css');
+@import url('/assets/styles/design/foundation.css');
+@import url('/assets/styles/design/utilities.css');

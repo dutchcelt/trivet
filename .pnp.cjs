@@ -669,6 +669,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@trvt/assets", "workspace:assets"],\
             ["@trvt/designtokens", "workspace:designtokens"],\
             ["lightningcss", "npm:1.19.0"],\
+            ["lightningcss-cli", "npm:1.19.0"],\
             ["rollup", "npm:3.17.3"],\
             ["rollup-plugin-native-css-modules", "npm:1.1.1"],\
             ["wawoff2", "npm:2.0.1"]\
@@ -4854,6 +4855,96 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lightningcss-linux-x64-gnu", "npm:1.19.0"],\
             ["lightningcss-linux-x64-musl", "npm:1.19.0"],\
             ["lightningcss-win32-x64-msvc", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-npm-1.19.0-19e4db343d/node_modules/lightningcss-cli/",\
+          "packageDependencies": [\
+            ["lightningcss-cli", "npm:1.19.0"],\
+            ["detect-libc", "npm:1.0.3"],\
+            ["lightningcss-cli-darwin-arm64", "npm:1.19.0"],\
+            ["lightningcss-cli-darwin-x64", "npm:1.19.0"],\
+            ["lightningcss-cli-linux-arm-gnueabihf", "npm:1.19.0"],\
+            ["lightningcss-cli-linux-arm64-gnu", "npm:1.19.0"],\
+            ["lightningcss-cli-linux-arm64-musl", "npm:1.19.0"],\
+            ["lightningcss-cli-linux-x64-gnu", "npm:1.19.0"],\
+            ["lightningcss-cli-linux-x64-musl", "npm:1.19.0"],\
+            ["lightningcss-cli-win32-x64-msvc", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-darwin-arm64", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-darwin-arm64-npm-1.19.0-9664b3b9fd/node_modules/lightningcss-cli-darwin-arm64/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-darwin-arm64", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-darwin-x64", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-darwin-x64-npm-1.19.0-a122d69f68/node_modules/lightningcss-cli-darwin-x64/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-darwin-x64", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-linux-arm-gnueabihf", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-linux-arm-gnueabihf-npm-1.19.0-38b8252799/node_modules/lightningcss-cli-linux-arm-gnueabihf/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-linux-arm-gnueabihf", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-linux-arm64-gnu", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-linux-arm64-gnu-npm-1.19.0-5362fbfb99/node_modules/lightningcss-cli-linux-arm64-gnu/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-linux-arm64-gnu", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-linux-arm64-musl", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-linux-arm64-musl-npm-1.19.0-e499d3dd4a/node_modules/lightningcss-cli-linux-arm64-musl/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-linux-arm64-musl", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-linux-x64-gnu", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-linux-x64-gnu-npm-1.19.0-b06552fef9/node_modules/lightningcss-cli-linux-x64-gnu/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-linux-x64-gnu", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-linux-x64-musl", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-linux-x64-musl-npm-1.19.0-f71e3723c0/node_modules/lightningcss-cli-linux-x64-musl/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-linux-x64-musl", "npm:1.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightningcss-cli-win32-x64-msvc", [\
+        ["npm:1.19.0", {\
+          "packageLocation": "./.yarn/unplugged/lightningcss-cli-win32-x64-msvc-npm-1.19.0-602a94cc1b/node_modules/lightningcss-cli-win32-x64-msvc/",\
+          "packageDependencies": [\
+            ["lightningcss-cli-win32-x64-msvc", "npm:1.19.0"]\
           ],\
           "linkType": "HARD"\
         }]\

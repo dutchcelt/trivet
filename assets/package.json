@@ -23,12 +23,14 @@
 	},
 	"devDependencies": {
 		"lightningcss": "^1.19.0",
+		"lightningcss-cli": "^1.19.0",
 		"rollup": "^3.17.3",
 		"rollup-plugin-native-css-modules": "^1.1.1",
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
 		"build": "rollup -c rollup.config.js",
+		"build:css": "lightningcss --bundle styles/layers.css -o build/bundle.css",
 		"develop": "yarn build --watch"
 	}
 }

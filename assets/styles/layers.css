@@ -1,0 +1,23 @@
+/*
+ *	Define the layers and child layers upfront 
+ */
+@layer base.reset,
+	base.defaults,
+	
+	design.tokens,
+	design.foundations,
+	design.utilities,
+	
+	/*
+	 *	The 'theme' layer has no sub layers.
+	 *	Allow developers to manage their own layers
+	 */
+	theme,
+	
+	/* 
+	 *	'components' styles can also be defined inside the web component 
+	 *	and will reuse these layer definitions 
+	 */
+	components.props,
+	components.selectors,
+	components.modifiers;

@@ -454,6 +454,7 @@ __metadata:
   dependencies:
     "@trvt/designtokens": "workspace:^"
     lightningcss: ^1.19.0
+    lightningcss-cli: ^1.19.0
     rollup: ^3.17.3
     rollup-plugin-native-css-modules: ^1.1.1
     wawoff2: ^2.0.1
@@ -4118,6 +4119,98 @@ __metadata:
     debug: ^2.6.9
     marky: ^1.2.2
   checksum: 82655f1862779dc5a917de62567a23dbf47bbde9a53abbdd4d72b2cf80d6c2595bc84de7ef836c94c76a2e4e3f3ec613a2e1ec021367959d397aeb5aae97a7cb
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-darwin-arm64@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-darwin-arm64@npm:1.19.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-darwin-x64@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-darwin-x64@npm:1.19.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-linux-arm-gnueabihf@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-linux-arm-gnueabihf@npm:1.19.0"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-linux-arm64-gnu@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-linux-arm64-gnu@npm:1.19.0"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-linux-arm64-musl@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-linux-arm64-musl@npm:1.19.0"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-linux-x64-gnu@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-linux-x64-gnu@npm:1.19.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-linux-x64-musl@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-linux-x64-musl@npm:1.19.0"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli-win32-x64-msvc@npm:1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli-win32-x64-msvc@npm:1.19.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss-cli@npm:^1.19.0":
+  version: 1.19.0
+  resolution: "lightningcss-cli@npm:1.19.0"
+  dependencies:
+    detect-libc: ^1.0.3
+    lightningcss-cli-darwin-arm64: 1.19.0
+    lightningcss-cli-darwin-x64: 1.19.0
+    lightningcss-cli-linux-arm-gnueabihf: 1.19.0
+    lightningcss-cli-linux-arm64-gnu: 1.19.0
+    lightningcss-cli-linux-arm64-musl: 1.19.0
+    lightningcss-cli-linux-x64-gnu: 1.19.0
+    lightningcss-cli-linux-x64-musl: 1.19.0
+    lightningcss-cli-win32-x64-msvc: 1.19.0
+  dependenciesMeta:
+    lightningcss-cli-darwin-arm64:
+      optional: true
+    lightningcss-cli-darwin-x64:
+      optional: true
+    lightningcss-cli-linux-arm-gnueabihf:
+      optional: true
+    lightningcss-cli-linux-arm64-gnu:
+      optional: true
+    lightningcss-cli-linux-arm64-musl:
+      optional: true
+    lightningcss-cli-linux-x64-gnu:
+      optional: true
+    lightningcss-cli-linux-x64-musl:
+      optional: true
+    lightningcss-cli-win32-x64-msvc:
+      optional: true
+  bin:
+    lightningcss: lightningcss
+  checksum: 3e7dcb11a70d3a59b007ebd012608c6ceff880adaf8994fb560caa1ee6de7fe6724fd0cc0ca2ea20e8cd0844382415f187c89d7352e82358271358daead85add
   languageName: node
   linkType: hard
 
