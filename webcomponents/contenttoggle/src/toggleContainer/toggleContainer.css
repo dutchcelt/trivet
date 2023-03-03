@@ -5,14 +5,15 @@
 		--toggle-display: block;
 		--container-display: block;
 		--toggle-summary-active-canvas: var(
-			--trvt-color-background-surface,
+			--trvt-color-background-surfaces,
 			canvas
 		);
-		--toggle-summary-active-text: var(--trvt-color-base-text, canvasText);
+		--toggle-summary-active-text: var(--trvt-color-base-texts, canvasText);
 		--toggle-detail-active-canvas: var(
-			--trvt-color-background-surface,
+			--trvt-color-background-surfaces,
 			canvas
 		);
+		--toggle-border-color: canvasText;
 	}
 	.content {
 		--tab-radius: var(--is-tabbed, 1ex);
