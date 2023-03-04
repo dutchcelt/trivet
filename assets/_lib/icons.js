@@ -1,11 +1,14 @@
+import { URL } from 'url';
+const __parentname = new URL('..', import.meta.url).pathname;
+
 const iconFontVersion = `v1.1`;
 const iconFontName = `trvt-icons`;
 const iconFontDir = `${iconFontName}-${iconFontVersion}`;
 const iconFontPath = `${iconFontDir}/fonts`;
-const iconAssetPath = './icons';
-const stylesAssetPath = './styles';
-const stylesAssetTarget = './build';
-const iconAssetTarget = './build';
+const iconAssetPath = `${__parentname}/icons`;
+const stylesAssetPath = `${__parentname}/styles`;
+const stylesAssetTarget = `${__parentname}/build`;
+const iconAssetTarget = `${__parentname}/build`;
 const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
 
 /**
@@ -25,7 +28,7 @@ wawoff.compress(sourceFile).then((convertedFile) => {
 /**
  * Convert a scss var file to a css :root custom property file
  */
-import { sassToCss } from './scripts/sassToCss.js';
+import { sassToCss } from './sassToCss.js';
 sassToCss.convert({
 	src: iconFontVariableSource,
 	dest: `${iconAssetTarget}/glyphs.css`,
@@ -42,26 +45,3 @@ sassToCss.convert({
 	rule: `@layer design.tokens `,
 	withPropValues: false,
 });
-
-import css from 'rollup-plugin-native-css-modules';
-import { transform } from 'lightningcss';
-
-export default [
-	{
-		input: ['index.js'],
-		output: {
-			format: 'esm',
-			file: 'build/bundel.js',
-		},
-		plugins: [
-			css({
-				transform: (css) =>
-					transform({
-						code: Buffer.from(css),
-						minify: true,
-						sourceMap: false,
-					}).code.toString(),
-			}),
-		],
-	},
-];

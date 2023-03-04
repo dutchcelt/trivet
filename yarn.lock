@@ -453,11 +453,6 @@ __metadata:
   resolution: "@trvt/assets@workspace:assets"
   dependencies:
     "@trvt/designtokens": "workspace:^"
-    lightningcss: ^1.19.0
-    postcss: ^8.4.21
-    postcss-cli: ^10.1.0
-    rollup: ^3.17.3
-    rollup-plugin-native-css-modules: ^1.1.1
     wawoff2: ^2.0.1
   languageName: unknown
   linkType: soft
@@ -600,7 +595,12 @@ __metadata:
     browser-env: ^3.3.0
     eslint: ^8.9.0
     eslint-config-prettier: ^8.4.0
+    lightningcss: ^1.19.0
+    postcss: ^8.4.21
+    postcss-cli: ^10.1.0
     prettier: ^2.5.1
+    rollup: ^3.17.3
+    rollup-plugin-native-css-modules: ^1.1.1
     stylelint: ^14.5.1
     stylelint-config-prettier: ^9.0.3
     stylelint-config-standard: ^25.0.0

@@ -1,7 +1,8 @@
 import layersCSS from './styles-1714a140.css' assert { type: 'css' };
 import resetCSS from './styles-e4c0806b.css' assert { type: 'css' };
 import defaultsCSS from './styles-344b213f.css' assert { type: 'css' };
-import tokensCSS from './styles-0d39a441.css' assert { type: 'css' };
+import tokensCSS from './styles-eb16242b.css' assert { type: 'css' };
+import styleDictionaryCSSRoot from './styles-712ca86c.css' assert { type: 'css' };
 import foundationCSS from './styles-269c8265.css' assert { type: 'css' };
 import utilitiesCSS from './styles-284212f6.css' assert { type: 'css' };
 import iconFace from './styles-6a83ed61.css' assert { type: 'css' };
@@ -24,6 +25,26 @@ const hasCSSLayerSupport = () => {
 	} catch (e) {
 		console.warn('Does not have layers');
 		return false;
+	}
+};
+
+/**
+ * External stylesheet often to not a layers. This allows us wrap that sheet in at-rule layer.
+ * @param sheets
+ * @param layer
+ */
+const insertIntoCssLayer = (sheets, layer) => {
+	if (hasCSSLayerSupport()) {
+		return sheets.forEach((sheet) => {
+			let cssText = [...sheet.cssRules].reduce(
+				(acc, rule) => (acc += rule.cssText),
+				''
+			);
+			sheet.replace(`
+			@layer ${layer} {
+				${cssText}
+			}`);
+		});
 	}
 };
 
@@ -106,26 +127,6 @@ const CSSString2CSSStyleSheet = ( css ) => {
 	return sheet;
 };
 
-/**
- * External stylesheet often to not a layers. This allows us wrap that sheet in at-rule layer.
- * @param sheets
- * @param layer
- */
-const insertIntoCssLayer = (sheets, layer) => {
-	if (hasCSSLayerSupport()) {
-		return sheets.forEach((sheet) => {
-			let cssText = [...sheet.cssRules].reduce(
-				(acc, rule) => (acc += rule.cssText),
-				''
-			);
-			sheet.replace(`
-			@layer ${layer} {
-				${cssText}
-			}`);
-		});
-	}
-};
-
 const generateUUID = () => {
 	function ff(s) {
 		var pt = (Math.random().toString(16)+"000000000").substr(2,8);
@@ -152,12 +153,17 @@ const injectDocumentStyles = (styleSheetArray, tag='unknown') => {
 };
 
 /* styles */
+const styleDictionaryCSS = insertIntoCssLayer(
+	[styleDictionaryCSSRoot],
+	'design.tokens'
+);
 
 const trivetCSS = [
 	layersCSS,
 	resetCSS,
 	defaultsCSS,
 	tokensCSS,
+	styleDictionaryCSS,
 	foundationCSS,
 	utilitiesCSS,
 ];

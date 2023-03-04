@@ -3,14 +3,22 @@ import layersCSS from './styles/layers.css' assert { type: 'css' };
 import resetCSS from './styles/base/reset.css' assert { type: 'css' };
 import defaultsCSS from './styles/base/defaults.css' assert { type: 'css' };
 import tokensCSS from './styles/design/tokens.css' assert { type: 'css' };
+import styleDictionaryCSSRoot from '../designtokens/build/css/trvt_tokens.css' assert { type: 'css' };
 import foundationCSS from './styles/design/foundation.css' assert { type: 'css' };
 import utilitiesCSS from './styles/design/utilities.css' assert { type: 'css' };
+
+// import { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
+// const styleDictionaryCSS = insertIntoCssLayer(
+// 	[styleDictionaryCSSRoot],
+// 	'design.tokens'
+// );
 
 export const trivetCSS = [
 	layersCSS,
 	resetCSS,
 	defaultsCSS,
 	tokensCSS,
+	styleDictionaryCSSRoot,
 	foundationCSS,
 	utilitiesCSS,
 ];

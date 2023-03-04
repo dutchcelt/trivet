@@ -14,6 +14,7 @@
 			canvas
 		);
 		--toggle-border-color: canvasText;
+		--toggle-border-width: 2px;
 	}
 	.content {
 		--tab-radius: var(--is-tabbed, 1ex);
