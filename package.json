@@ -35,8 +35,6 @@
 		"eslint": "^8.9.0",
 		"eslint-config-prettier": "^8.4.0",
 		"lightningcss": "^1.19.0",
-		"postcss": "^8.4.21",
-		"postcss-cli": "^10.1.0",
 		"prettier": "^2.5.1",
 		"rollup": "^3.17.3",
 		"rollup-plugin-native-css-modules": "^1.1.1",

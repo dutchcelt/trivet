@@ -10,7 +10,6 @@ export default [
 		output: {
 			format: 'esm',
 			dir: 'build',
-			assetFileNames: `[name]-[hash][extname].js`,
 		},
 		plugins: [
 			css({

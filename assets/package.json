@@ -21,7 +21,6 @@
 	},
 	"scripts": {
 		"build": "node ./_lib/icons.js && rollup -c ../configs/rollup.config.js",
-		"build:postcss": "postcss styles/index.css -o build/bundle.css",
 		"develop": "yarn build --watch"
 	}
 }

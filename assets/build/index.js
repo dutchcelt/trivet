@@ -29,26 +29,6 @@ const hasCSSLayerSupport = () => {
 };
 
 /**
- * External stylesheet often to not a layers. This allows us wrap that sheet in at-rule layer.
- * @param sheets
- * @param layer
- */
-const insertIntoCssLayer = (sheets, layer) => {
-	if (hasCSSLayerSupport()) {
-		return sheets.forEach((sheet) => {
-			let cssText = [...sheet.cssRules].reduce(
-				(acc, rule) => (acc += rule.cssText),
-				''
-			);
-			sheet.replace(`
-			@layer ${layer} {
-				${cssText}
-			}`);
-		});
-	}
-};
-
-/**
  * Dynamically load fonts.
  * Matches the settings used in the Design tokens (Style Dictionary).
  * @param opts
@@ -127,6 +107,26 @@ const CSSString2CSSStyleSheet = ( css ) => {
 	return sheet;
 };
 
+/**
+ * External stylesheet often to not a layers. This allows us wrap that sheet in at-rule layer.
+ * @param sheets
+ * @param layer
+ */
+const insertIntoCssLayer = (sheets, layer) => {
+	if (hasCSSLayerSupport()) {
+		return sheets.forEach((sheet) => {
+			let cssText = [...sheet.cssRules].reduce(
+				(acc, rule) => (acc += rule.cssText),
+				''
+			);
+			sheet.replace(`
+			@layer ${layer} {
+				${cssText}
+			}`);
+		});
+	}
+};
+
 const generateUUID = () => {
 	function ff(s) {
 		var pt = (Math.random().toString(16)+"000000000").substr(2,8);
@@ -153,17 +153,19 @@ const injectDocumentStyles = (styleSheetArray, tag='unknown') => {
 };
 
 /* styles */
-const styleDictionaryCSS = insertIntoCssLayer(
-	[styleDictionaryCSSRoot],
-	'design.tokens'
-);
+
+// import { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
+// const styleDictionaryCSS = insertIntoCssLayer(
+// 	[styleDictionaryCSSRoot],
+// 	'design.tokens'
+// );
 
 const trivetCSS = [
 	layersCSS,
 	resetCSS,
 	defaultsCSS,
 	tokensCSS,
-	styleDictionaryCSS,
+	styleDictionaryCSSRoot,
 	foundationCSS,
 	utilitiesCSS,
 ];
