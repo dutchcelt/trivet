@@ -1,5 +1,18 @@
 # @trvt/cli
 
+## 0.1.0
+
+### Minor Changes
+
+-   Reduced overhead and support for css assert using native css modules
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/assets@0.3.0
+    -   @trvt/designtokens@0.4.0
+    -   @trvt/core@0.4.0
+
 ## 0.0.5
 
 ### Patch Changes

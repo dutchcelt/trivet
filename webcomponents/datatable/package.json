@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/datatable",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Static datatable",
 	"main": "index.js",
 	"files": [
@@ -29,6 +29,6 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.3.7"
+		"@trvt/core": "^0.4.0"
 	}
 }

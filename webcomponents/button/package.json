@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/button",
-	"version": "0.3.2",
+	"version": "0.4.0",
 	"description": "Botton component for the Trivet Design System",
 	"main": "index.js",
 	"type": "modules",
@@ -14,6 +14,6 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.3.7"
+		"@trvt/core": "^0.4.0"
 	}
 }

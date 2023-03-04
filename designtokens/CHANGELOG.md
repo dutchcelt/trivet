@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.4.0
+
+### Minor Changes
+
+-   Reduced overhead and support for css assert using native css modules
+
 ## 0.3.4
 
 ### Patch Changes

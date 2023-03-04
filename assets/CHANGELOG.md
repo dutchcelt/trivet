@@ -1,5 +1,16 @@
 # @trvt/assets
 
+## 0.3.0
+
+### Minor Changes
+
+-   Reduced overhead and support for css assert using native css modules
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/designtokens@0.4.0
+
 ## 0.2.8
 
 ### Patch Changes

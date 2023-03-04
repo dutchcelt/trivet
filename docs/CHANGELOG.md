@@ -1,5 +1,18 @@
 # @trvt/docs
 
+## 0.4.0
+
+### Minor Changes
+
+-   Reduced overhead and support for css assert using native css modules
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/article@0.4.0
+    -   @trvt/header@0.5.0
+    -   @trvt/layout@0.4.0
+
 ## 0.3.7
 
 ### Patch Changes
