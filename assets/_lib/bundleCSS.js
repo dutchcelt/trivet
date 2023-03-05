@@ -3,6 +3,7 @@ import path from 'path';
 
 const buildFolder = path.resolve(`build`);
 const bundleFile = path.resolve(buildFolder, `bundle.css`);
+const cssfileReg = /styles-\w+\.css$/;
 
 try {
 	if (!fs.existsSync(buildFolder)) {
@@ -12,7 +13,7 @@ try {
 	console.error(err);
 }
 
-fs.writeFileSync(bundleFile, `/* Special bundle of hashed files */\n`);
+fs.writeFileSync(bundleFile, `/* Bundle of hashed files */\n`);
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
@@ -21,7 +22,7 @@ const getFileContent = (file) => {
 
 await fs.readdir(buildFolder, async (err, files) => {
 	files.forEach(async (file) => {
-		if (/styles-\w+\.css$/.test(file)) {
+		if (cssfileReg.test(file)) {
 			await getFileContent(`${buildFolder}/${file}`);
 		}
 	});
