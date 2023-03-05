@@ -4,10 +4,7 @@
 	"description": "Lists using subgrid",
 	"main": "index.js",
 	"files": [
-		"src/trvt-list.css",
-		"src/trvt-list.js",
-		"src/trvt-li.css",
-		"src/trvt-li.js"
+		"src/*"
 	],
 	"type": "modules",
 	"scripts": {

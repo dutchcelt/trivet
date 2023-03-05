@@ -20,7 +20,10 @@
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
-		"build": "node ./_lib/icons.js && rollup -c ../configs/rollup.config.js",
+		"build:icons": "node ./_lib/icons.js",
+		"build:rollup": "rollup -c ../configs/rollup.config.js",
+		"build:css": "node ./_lib/bundleCSS.js",
+		"build": "yarn build:icons && yarn build:rollup && yarn build:css",
 		"develop": "yarn build --watch"
 	}
 }

@@ -7,9 +7,16 @@ const iconFontDir = `${iconFontName}-${iconFontVersion}`;
 const iconFontPath = `${iconFontDir}/fonts`;
 const iconAssetPath = `${__parentname}/icons`;
 const stylesAssetPath = `${__parentname}/styles`;
-const stylesAssetTarget = `${__parentname}/build`;
-const iconAssetTarget = `${__parentname}/build`;
+const buildPath = `${__parentname}/build`;
 const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
+
+try {
+	if (!fs.existsSync(buildPath)) {
+		fs.mkdirSync(buildPath);
+	}
+} catch (err) {
+	console.error(err);
+}
 
 /**
  * convert icon font to woff2 format
@@ -19,7 +26,7 @@ import fs from 'fs';
 const sourceFile = fs.readFileSync(
 	`${iconAssetPath}/${iconFontPath}/${iconFontName}.ttf`
 );
-const iconFile = `${iconAssetTarget}/${iconFontName}.woff2`;
+const iconFile = `${buildPath}/${iconFontName}.woff2`;
 
 wawoff.compress(sourceFile).then((convertedFile) => {
 	fs.writeFileSync(iconFile, convertedFile);
@@ -31,7 +38,7 @@ wawoff.compress(sourceFile).then((convertedFile) => {
 import { sassToCss } from './sassToCss.js';
 sassToCss.convert({
 	src: iconFontVariableSource,
-	dest: `${iconAssetTarget}/glyphs.css`,
+	dest: `${buildPath}/glyphs.css`,
 	rule: `:root `,
 	withPropValues: true,
 });
@@ -41,7 +48,7 @@ sassToCss.convert({
  */
 sassToCss.convert({
 	src: iconFontVariableSource,
-	dest: `${iconAssetTarget}/${iconFontName}-classes.css`,
+	dest: `${buildPath}/${iconFontName}-classes.css`,
 	rule: `@layer design.tokens `,
 	withPropValues: false,
 });
