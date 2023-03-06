@@ -1,6 +1,8 @@
 @layer components.props {
-	--TRUE: initial;
-	--FALSE: ;
+	:host {
+		--TRUE: initial;
+		--FALSE: ;
+	}
 }
 @layer components.selectors {
 	:host {

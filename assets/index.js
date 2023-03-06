@@ -33,7 +33,7 @@ export { generateUUID } from './scripts/generateUUID.js';
 export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 /* icons */
-import iconFace from './icons/icons.css' assert { type: 'css' };
-import glyphs from './build/glyphs.css' assert { type: 'css' };
-import classes from './build/trvt-icons-classes.css' assert { type: 'css' };
-export const iconFonts = [iconFace, glyphs, classes];
+// import iconFace from './icons/icons.css' assert { type: 'css' };
+// import glyphs from './build/glyphs.css' assert { type: 'css' };
+// import classes from './build/trvt-icons-classes.css' assert { type: 'css' };
+// export const iconFonts = [iconFace, glyphs, classes];

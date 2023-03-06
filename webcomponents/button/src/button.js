@@ -1,4 +1,4 @@
-import { styles, dataBus } from '@trvt/core';
+import { styles } from '@trvt/core';
 import buttonCSS from './button.css' assert { type: 'css' };
 
 export class TrvtButton extends HTMLElement {
@@ -21,9 +21,6 @@ export class TrvtButton extends HTMLElement {
 		this.trvtType = this.dataset.trvtType || 'button';
 
 		this.shadowRoot.appendChild(this.render());
-	}
-	connectedCallback() {
-		this.layoutDetail && this.__layoutEvent({ detail: this.layoutDetail });
 	}
 	render() {
 		return document.createRange().createContextualFragment(`

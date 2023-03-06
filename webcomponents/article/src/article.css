@@ -8,8 +8,8 @@
 			--article-offset-block-end: var(
 				--trvt-typography-whitespace-default-block-end
 			);
-			--article-inset-block-start: var(--trvt-spacing-content-block-m;);
-			--article-inset-block-end: var(--trvt-spacing-content-block-m;);
+			--article-inset-block-start: var(--trvt-spacing-content-block-m);
+			--article-inset-block-end: var(--trvt-spacing-content-block-m);
 		}
 	}
 

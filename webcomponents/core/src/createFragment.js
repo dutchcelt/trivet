@@ -6,7 +6,7 @@ const createFragment = (string) => {
 
 export { createFragment };
 
-/*!
+/**
  * Sanitize an HTML string
  * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {String}          str   The HTML string to sanitize

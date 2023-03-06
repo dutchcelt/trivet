@@ -1,5 +1,5 @@
 /* Base styles for all Trivet Components */
-import { iconFonts, loadFont, throttler, trivetCSS } from '@trvt/assets';
-const styles = [...iconFonts, ...trivetCSS];
+import { loadFont, throttler, trivetCSS } from '@trvt/assets';
+const styles = [...trivetCSS];
 document.adoptedStyleSheets = [...document.adoptedStyleSheets, ...styles];
 export { styles };

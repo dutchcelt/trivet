@@ -2,15 +2,11 @@
 	"name": "@trvt/dragscroller",
 	"version": "0.1.0",
 	"description": "Drag the conents of a scrollbox",
-	"main": "index.js",
+	"main": "build/index.js",
 	"files": [
-		"src/dragscroller.css",
-		"src/index.js"
+		"src/*"
 	],
 	"type": "modules",
-	"scripts": {
-		"test": "test"
-	},
 	"keywords": [
 		"web",
 		"components"
@@ -19,5 +15,10 @@
 	"license": "Apache-2.0",
 	"dependencies": {
 		"@trvt/core": "^0.4.0"
+	},
+	"scripts": {
+		"build:rollup": "rollup -c ../../configs/rollup.config.js",
+		"build": "yarn build:rollup",
+		"develop": "yarn build --watch"
 	}
 }

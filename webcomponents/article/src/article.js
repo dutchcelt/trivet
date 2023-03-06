@@ -9,7 +9,6 @@ export class TrvtArticle extends HTMLElement {
 		this.layoutType = 'article';
 		this.shadowRoot.appendChild(this.render());
 	}
-	connectedCallback() {}
 
 	render() {
 		return createFragment(`

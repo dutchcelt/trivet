@@ -1,5 +1,6 @@
 import css from 'rollup-plugin-native-css-modules';
 import { transform } from 'lightningcss';
+import terser from '@rollup/plugin-terser';
 
 import { URL } from 'url';
 const __dirname = new URL('.', import.meta.url).pathname;
@@ -20,6 +21,7 @@ export default [
 						sourceMap: false,
 					}).code.toString(),
 			}),
+			terser(),
 		],
 	},
 ];
