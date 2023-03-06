@@ -4,7 +4,7 @@
 	"type": "module",
 	"main": "index.js",
 	"files": [],
-	"description": "Use your own custom tokens, fonts, and icons",
+	"description": "Use your own custom tokens, fonts, and icons with Trivet",
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",

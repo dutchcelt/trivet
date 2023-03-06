@@ -1,1 +1,1 @@
-# Drag and Scroll
+# Trivet Drag and Scroll Web Component

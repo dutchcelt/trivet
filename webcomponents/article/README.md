@@ -1,1 +1,1 @@
-# Trivet
+# Trivet Article Web Component

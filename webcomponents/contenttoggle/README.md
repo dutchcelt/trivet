@@ -1,1 +1,1 @@
-# Content Toggles
+# Trivet Content Toggles Web Component

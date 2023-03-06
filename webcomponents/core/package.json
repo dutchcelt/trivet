@@ -6,7 +6,7 @@
 	"files": [
 		"src/*"
 	],
-	"description": "A very simple web component base class",
+	"description": "Core loader for Trivet",
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",

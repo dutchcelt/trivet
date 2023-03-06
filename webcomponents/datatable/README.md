@@ -1,1 +1,1 @@
-# Data Table
+# Trivet Data Table Web Component

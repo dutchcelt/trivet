@@ -32,4 +32,4 @@ import{styles as e}from"@trvt/core";import t from"./dropdown.css";class s extend
 					</ul>
 				</div>
 			</nav>
-		`}static get properties(){return{menu:{type:Array}}}}customElements.define("trvt-dropdown",s),customElements.define("trvt-dropdown",s);
+		`}static get properties(){return{menu:{type:Array}}}}customElements.define("trvt-dropdown",s);

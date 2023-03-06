@@ -4,19 +4,7 @@
 	"description": "Static datatable",
 	"main": "build/index.js",
 	"files": [
-		"src/cell/cell.css",
-		"src/cell/index.js",
-		"src/row/row.css",
-		"src/row/index.js",
-		"src/rowGroup/rowGroup.css",
-		"src/rowGroup/index.js",
-		"src/rowGroup/trvtThead.js",
-		"src/rowGroup/trvtTbody.js",
-		"src/rowGroup/trvtTfoot.js",
-		"src/headerCell/headerCell.css",
-		"src/headerCell/index.js",
-		"src/table/table.css",
-		"src/table/index.js"
+		"src/*"
 	],
 	"type": "modules",
 	"keywords": [
