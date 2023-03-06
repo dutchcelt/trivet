@@ -556,7 +556,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/core@workspace:webcomponents/core"
   dependencies:
-    "@esm-bundle/chai": ^4.3.4-fix.0
     "@trvt/assets": "workspace:^"
     "@trvt/designtokens": "workspace:^"
   languageName: unknown

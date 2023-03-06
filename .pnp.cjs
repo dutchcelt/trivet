@@ -801,7 +801,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./webcomponents/core/",\
           "packageDependencies": [\
             ["@trvt/core", "workspace:webcomponents/core"],\
-            ["@esm-bundle/chai", "npm:4.3.4"],\
             ["@trvt/assets", "workspace:assets"],\
             ["@trvt/designtokens", "workspace:designtokens"]\
           ],\
