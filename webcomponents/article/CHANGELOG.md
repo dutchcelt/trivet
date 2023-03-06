@@ -1,5 +1,13 @@
 # @trvt/article
 
+## 0.5.1
+
+### Patch Changes
+
+-   Updated missing descriptions and readme files.
+-   Updated dependencies
+    -   @trvt/core@0.5.1
+
 ## 0.5.0
 
 ### Minor Changes

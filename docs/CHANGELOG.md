@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.5.1
+
+### Patch Changes
+
+-   Updated missing descriptions and readme files.
+
 ## 0.5.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/contenttoggle",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Toggle content as an accordion or as tabs",
 	"main": "index.js",
 	"files": [
@@ -17,7 +17,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.5.0"
+		"@trvt/core": "^0.5.1"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
