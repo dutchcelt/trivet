@@ -1,5 +1,18 @@
 # @trvt/cli
 
+## 0.2.0
+
+### Minor Changes
+
+-   Added build step with the bundled version as the index.
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/assets@0.4.0
+    -   @trvt/designtokens@0.5.0
+    -   @trvt/core@0.5.0
+
 ## 0.1.0
 
 ### Minor Changes

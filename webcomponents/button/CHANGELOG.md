@@ -1,5 +1,16 @@
 # @trvt/button
 
+## 0.5.0
+
+### Minor Changes
+
+-   Added build step with the bundled version as the index.
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.5.0
+
 ## 0.4.0
 
 ### Minor Changes

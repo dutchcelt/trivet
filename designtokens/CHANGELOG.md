@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.5.0
+
+### Minor Changes
+
+-   Added build step with the bundled version as the index.
+
 ## 0.4.0
 
 ### Minor Changes
