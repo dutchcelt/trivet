@@ -1,4 +1,4 @@
-import { styles, createFragment } from '@trvt/core';
+import { styles } from '@trvt/core';
 import details from './details.css' assert { type: 'css' };
 
 export class TrvtToggleDetails extends HTMLElement {

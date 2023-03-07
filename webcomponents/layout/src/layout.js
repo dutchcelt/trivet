@@ -1,4 +1,4 @@
-import { styles, createFragment } from '@trvt/core';
+import { styles } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
 
 /**

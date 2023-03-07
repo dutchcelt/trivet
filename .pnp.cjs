@@ -773,10 +773,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:cli", {\
           "packageLocation": "./cli/",\
           "packageDependencies": [\
-            ["@trvt/cli", "workspace:cli"],\
-            ["@trvt/assets", "workspace:assets"],\
-            ["@trvt/core", "workspace:webcomponents/core"],\
-            ["@trvt/designtokens", "workspace:designtokens"]\
+            ["@trvt/cli", "workspace:cli"]\
           ],\
           "linkType": "SOFT"\
         }]\

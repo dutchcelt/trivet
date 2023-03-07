@@ -1,4 +1,3 @@
-import { loadFont } from '@trvt/assets';
 const fontsLoader = (faces, localpath) => {
 	const facesArray = Array.isArray(faces)
 		? faces

@@ -1,9 +1,22 @@
 import css from 'rollup-plugin-native-css-modules';
 import { transform } from 'lightningcss';
 import terser from '@rollup/plugin-terser';
+import fs from 'fs';
+import path from 'path';
+const pathArray = path.resolve().split(path.sep);
+const packagename = pathArray.pop();
+const isWebcomponent = /webcomponents/i.test(path.resolve());
+const buildfolder = path.resolve('build');
 
-import { URL } from 'url';
-const __dirname = new URL('.', import.meta.url).pathname;
+console.info(
+	`\n\n=== ${packagename} =========================================`
+);
+
+if (isWebcomponent && fs.existsSync(buildfolder)) {
+	fs.rm(buildfolder, { recursive: true, force: true }, (err) => {
+		//console.error(err);
+	});
+}
 
 export default [
 	{
