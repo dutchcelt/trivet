@@ -1,5 +1,17 @@
 # @trvt/layout
 
+## 0.6.0
+
+### Minor Changes
+
+-   Refactored CSS approach for layouts
+
+### Patch Changes
+
+-   Updataed readme files with basic text.
+-   Updated dependencies
+    -   @trvt/core@0.5.3
+
 ## 0.5.2
 
 ### Patch Changes

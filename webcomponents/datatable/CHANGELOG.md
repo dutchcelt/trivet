@@ -1,5 +1,13 @@
 # @trvt/datatable
 
+## 0.2.4
+
+### Patch Changes
+
+-   Updataed readme files with basic text.
+-   Updated dependencies
+    -   @trvt/core@0.5.3
+
 ## 0.2.3
 
 ### Patch Changes

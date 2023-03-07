@@ -1,5 +1,13 @@
 # @trvt/lists
 
+## 0.2.3
+
+### Patch Changes
+
+-   Updataed readme files with basic text.
+-   Updated dependencies
+    -   @trvt/core@0.5.3
+
 ## 0.2.2
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.4.3
+
+### Patch Changes
+
+-   Updataed readme files with basic text.
+-   Updated dependencies
+    -   @trvt/designtokens@0.5.3
+
 ## 0.4.2
 
 ### Patch Changes
