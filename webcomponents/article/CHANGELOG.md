@@ -1,5 +1,13 @@
 # @trvt/article
 
+## 0.5.2
+
+### Patch Changes
+
+-   Missing files in packages
+-   Updated dependencies
+    -   @trvt/core@0.5.2
+
 ## 0.5.1
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.4.2
+
+### Patch Changes
+
+-   Missing files in packages
+-   Updated dependencies
+    -   @trvt/designtokens@0.5.2
+
 ## 0.4.1
 
 ### Patch Changes

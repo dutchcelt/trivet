@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.5.2
+
+### Patch Changes
+
+-   Missing files in packages
+
 ## 0.5.1
 
 ### Patch Changes

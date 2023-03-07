@@ -1,5 +1,13 @@
 # @trvt/dragscroller
 
+## 0.2.2
+
+### Patch Changes
+
+-   Missing files in packages
+-   Updated dependencies
+    -   @trvt/core@0.5.2
+
 ## 0.2.1
 
 ### Patch Changes

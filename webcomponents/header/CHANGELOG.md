@@ -1,5 +1,13 @@
 # @trvt/header
 
+## 0.6.1
+
+### Patch Changes
+
+-   Missing files in packages
+-   Updated dependencies
+    -   @trvt/core@0.5.2
+
 ## 0.6.0
 
 ### Minor Changes
