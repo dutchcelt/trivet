@@ -27,21 +27,19 @@ export class TrvtLayout extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 
-		this.trvtType = this.dataset.trvtType;
 		this.slotNames = __sortSlotNames(
 			Object.keys(this.#slotMarkupObject()),
 			__getSlotNames(this.children)
 		);
+		this.type = this.dataset?.type || 'page';
+		this.position = this.dataset?.contentPosition || 'start';
+		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
+		this.shadowRoot.innerHTML = `<div class="trvt-layout"></div>`;
 	}
 
 	connectedCallback() {
-		if (this.slotNames.length === 0) {
-			// No slots, no content!
-			console.warn("trvt-layout doesn't have any slots");
-			return false;
-		}
-		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
-		this.shadowRoot.appendChild(this.render());
+		this.layoutElement = this.shadowRoot.querySelector('.trvt-layout');
+		this.render(this.layoutElement);
 	}
 
 	/**
@@ -58,12 +56,14 @@ export class TrvtLayout extends HTMLElement {
 
 	/**
 	 * Render out the slots template to the custom element
-	 * @returns {DocumentFragment}
+	 * @returns {string}
 	 */
-	render() {
-		return createFragment(`
-			<div class="trvt-layout">${!!this.trvtType ? this.#template() : ``}</div>
-		`);
+	render(element) {
+		this.layoutElement.classList.add(this.type, this.position);
+		if (element)
+			element.innerHTML = this.slotNames.length
+				? this.#template()
+				: `<slot></slot>`;
 	}
 
 	/**
@@ -85,7 +85,7 @@ export class TrvtLayout extends HTMLElement {
 	#slotMarkupObject() {
 		return {
 			notifications: `<div class="notifications"><slot name="notifications"></slot></div>`,
-			navigation: `<div class="navigation"><slot name="navigation"></slot></div>`,
+			navigation: `<nav class="navigation"><slot name="navigation"></slot></nav>`,
 			header: `<div class="header"><slot name="header"></slot></div>`,
 			main: `<div class="main content"><slot name="main"></slot></div>`,
 			sidebar: `<div class="sidebar content"><slot name="sidebar"></slot></div>`,
