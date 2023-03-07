@@ -51,15 +51,15 @@
 				'notification';
 		}
 
-		/* Asymetric (3/1) layout - Content in the starting position */
 		@container layout (min-width: 680px) {
 			.trvt-layout {
 				--layout-row-gap: 1rem;
 				--layout-column-gap: 1rem;
-				--padding-inline: 1rem;
-				--padding-block: 1rem;
+				--padding-inline: 0;
+				--padding-block: 0;
 			}
 
+			/* Asymetric (3/1) layout - Content in the starting position */
 			.asymmetric.start {
 				--template-columns: repeat(3, minmax(0, 1fr));
 				--template-areas: 'notification notification notification'
@@ -100,24 +100,6 @@
 				--template-areas: 'notification' 'navigation' 'header' 'main'
 					'sidebar' 'footer';
 			}
-		}
-
-		/* Demo colors */
-		*:where(.notification, .header) {
-			--surface: lightyellow;
-		}
-		.navigation {
-			--surface: khaki;
-		}
-
-		.main {
-			--surface: lightblue;
-		}
-		.footer {
-			--surface: lightgreen;
-		}
-		.sidebar {
-			--surface: pink;
 		}
 	}
 
