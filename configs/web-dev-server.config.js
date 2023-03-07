@@ -4,7 +4,7 @@
 
 export default {
 	// whether to open the browser and/or the browser path to open on
-	open: 'docs/src/index.html',
+	open: 'docs/index.html',
 
 	// index HTML to use for SPA routing / history API fallback
 	// appIndex: './docs/src/index.html',

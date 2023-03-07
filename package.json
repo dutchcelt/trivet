@@ -18,7 +18,6 @@
 		"assets",
 		"cli",
 		"designtokens",
-		"docs",
 		"webcomponents/*"
 	],
 	"engines": {

@@ -2,9 +2,10 @@
 	"name": "@trvt/datatable",
 	"version": "0.2.1",
 	"description": "Static datatable",
-	"main": "build/index.js",
+	"main": "index.js",
 	"files": [
-		"src/*"
+		"src/*",
+		"build/*"
 	],
 	"type": "modules",
 	"keywords": [

@@ -501,11 +501,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trvt/article@workspace:^, @trvt/article@workspace:webcomponents/article":
+"@trvt/article@workspace:webcomponents/article":
   version: 0.0.0-use.local
   resolution: "@trvt/article@workspace:webcomponents/article"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -522,7 +522,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/button@workspace:webcomponents/button"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -530,7 +530,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/card@workspace:webcomponents/card"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -548,11 +548,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/contenttoggle@workspace:webcomponents/contenttoggle"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
-"@trvt/core@^0.4.0, @trvt/core@workspace:^, @trvt/core@workspace:webcomponents/core":
+"@trvt/core@^0.5.1, @trvt/core@workspace:^, @trvt/core@workspace:webcomponents/core":
   version: 0.0.0-use.local
   resolution: "@trvt/core@workspace:webcomponents/core"
   dependencies:
@@ -565,7 +565,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/datatable@workspace:webcomponents/datatable"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -581,10 +581,6 @@ __metadata:
 "@trvt/docs@workspace:docs":
   version: 0.0.0-use.local
   resolution: "@trvt/docs@workspace:docs"
-  dependencies:
-    "@trvt/article": "workspace:^"
-    "@trvt/header": "workspace:^"
-    "@trvt/layout": "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -592,7 +588,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/dragscroller@workspace:webcomponents/dragscroller"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -600,7 +596,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/dropdown@workspace:webcomponents/dropdown"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -608,23 +604,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/footer@workspace:webcomponents/footer"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
-"@trvt/header@workspace:^, @trvt/header@workspace:webcomponents/header":
-  version: 0.0.0-use.local
-  resolution: "@trvt/header@workspace:webcomponents/header"
-  dependencies:
-    "@trvt/core": ^0.4.0
-  languageName: unknown
-  linkType: soft
-
-"@trvt/layout@workspace:^, @trvt/layout@workspace:webcomponents/layout":
+"@trvt/layout@workspace:webcomponents/layout":
   version: 0.0.0-use.local
   resolution: "@trvt/layout@workspace:webcomponents/layout"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -632,7 +620,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/lists@workspace:webcomponents/lists"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -640,7 +628,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/navigation@workspace:webcomponents/navigation"
   dependencies:
-    "@trvt/core": ^0.4.0
+    "@trvt/core": ^0.5.1
   languageName: unknown
   linkType: soft
 

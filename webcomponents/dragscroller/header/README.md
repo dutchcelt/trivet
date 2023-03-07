@@ -1,1 +1,0 @@
-Trivet Header Web Component

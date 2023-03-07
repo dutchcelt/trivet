@@ -3,6 +3,10 @@
 	"version": "0.5.1",
 	"description": "Navigation component for the Trivet Design System",
 	"main": "index.js",
+	"files": [
+		"src/*",
+		"build/*"
+	],
 	"type": "modules",
 	"keywords": [
 		"web",

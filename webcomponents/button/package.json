@@ -2,10 +2,11 @@
 	"name": "@trvt/button",
 	"version": "0.5.1",
 	"description": "Botton component for the Trivet Design System",
-	"main": "build/index.js",
 	"type": "modules",
+	"main": "index.js",
 	"files": [
-		"src/*"
+		"src/*",
+		"build/*"
 	],
 	"keywords": [
 		"web",

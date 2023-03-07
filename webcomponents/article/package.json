@@ -2,9 +2,10 @@
 	"name": "@trvt/article",
 	"version": "0.5.1",
 	"type": "module",
-	"main": "build/index.js",
+	"main": "index.js",
 	"files": [
-		"src/*"
+		"src/*",
+		"build/*"
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",

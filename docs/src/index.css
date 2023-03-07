@@ -1,4 +1,0 @@
-trvt-layout:not(:defined),
-trvt-layout:has(:not(:defined)) {
-	visibility: hidden;
-}

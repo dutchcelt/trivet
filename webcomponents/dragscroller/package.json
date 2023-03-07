@@ -2,9 +2,10 @@
 	"name": "@trvt/dragscroller",
 	"version": "0.2.1",
 	"description": "Drag the conents of a scrollbox",
-	"main": "build/index.js",
+	"main": "index.js",
 	"files": [
-		"src/*"
+		"src/*",
+		"build/*"
 	],
 	"type": "modules",
 	"keywords": [

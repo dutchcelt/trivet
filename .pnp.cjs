@@ -68,10 +68,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:webcomponents/footer"\
       },\
       {\
-        "name": "@trvt/header",\
-        "reference": "workspace:webcomponents/header"\
-      },\
-      {\
         "name": "@trvt/layout",\
         "reference": "workspace:webcomponents/layout"\
       },\
@@ -100,7 +96,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@trvt/dragscroller", ["workspace:webcomponents/dragscroller"]],\
       ["@trvt/dropdown", ["workspace:webcomponents/dropdown"]],\
       ["@trvt/footer", ["workspace:webcomponents/footer"]],\
-      ["@trvt/header", ["workspace:webcomponents/header"]],\
       ["@trvt/layout", ["workspace:webcomponents/layout"]],\
       ["@trvt/lists", ["workspace:webcomponents/lists"]],\
       ["@trvt/navigation", ["workspace:webcomponents/navigation"]],\
@@ -832,10 +827,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:docs", {\
           "packageLocation": "./docs/",\
           "packageDependencies": [\
-            ["@trvt/docs", "workspace:docs"],\
-            ["@trvt/article", "workspace:webcomponents/article"],\
-            ["@trvt/header", "workspace:webcomponents/header"],\
-            ["@trvt/layout", "workspace:webcomponents/layout"]\
+            ["@trvt/docs", "workspace:docs"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -865,16 +857,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./webcomponents/footer/",\
           "packageDependencies": [\
             ["@trvt/footer", "workspace:webcomponents/footer"],\
-            ["@trvt/core", "workspace:webcomponents/core"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@trvt/header", [\
-        ["workspace:webcomponents/header", {\
-          "packageLocation": "./webcomponents/header/",\
-          "packageDependencies": [\
-            ["@trvt/header", "workspace:webcomponents/header"],\
             ["@trvt/core", "workspace:webcomponents/core"]\
           ],\
           "linkType": "SOFT"\
