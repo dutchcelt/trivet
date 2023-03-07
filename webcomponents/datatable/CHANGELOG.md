@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.2.3
+
+### Patch Changes
+
+-   Missing nested files and folders
+
 ## 0.2.2
 
 ### Patch Changes

@@ -1,10 +1,10 @@
 {
 	"name": "@trvt/contenttoggle",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"description": "Toggle content as an accordion or as tabs",
 	"main": "index.js",
 	"files": [
-		"src/*",
+		"src/**/*",
 		"build/**/*"
 	],
 	"type": "modules",
