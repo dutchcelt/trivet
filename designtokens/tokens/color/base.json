@@ -10,6 +10,7 @@
 			"icon": { "value": "CanvasText" },
 			"text": { "value": "CanvasText" },
 			"link": { "value": "LinkText" },
+			"canvastext": { "value": "CanvasText" },
 			"visited": { "value": "VisitedText" },
 			"active": { "value": "ActiveText" },
 			"hightlight": { "value": "HighlightText" },

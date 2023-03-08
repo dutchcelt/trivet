@@ -19,8 +19,8 @@
 
 	body {
 		margin: 0;
-		color: var(--trvt-color-base-text);
-		background-color: var(--trvt-color-background-viewport);
+		color: var(--trvt-color-base-canvastext);
+		background-color: var(--trvt-color-background-canvas);
 	}
 
 	h1,

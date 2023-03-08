@@ -1,6 +1,10 @@
 @import url('font-faces.css') layer(theme);
 
 @layer theme {
+	:root {
+		--scratched-canvas: var(--trvt-color-background-canvas, #fff);
+		--scratched: var(--trvt-color-base-canvastext, #222);
+	}
 	trvt-layout:not(:defined),
 	trvt-layout:has(:not(:defined)) {
 		visibility: hidden;
