@@ -22,8 +22,6 @@
 			media="(prefers-color-scheme: light)"
 		/> -->
 
-		<link href="index.css" rel="stylesheet" />
-
 		<script
 			async
 			crossorigin="anonymous"
@@ -75,6 +73,7 @@
 			// import facesObject from '../fonts/faces.json' assert { type: 'json' };
 			// fontsLoader(facesObject.faces, '/docs/fonts/');
 		</script>
+		<link href="theme.css" rel="stylesheet" />
 	</head>
 	<body>
 		<trvt-layout data-type="asymmetric" data-content-position="start">
@@ -85,18 +84,17 @@
 			</nav>
 			<header slot="header">
 				<trvt-header
-					data-trvt-gradient="linear-gradient(225deg, rgba(92,0,238,1) 4%, rgba(181,13,213,1) 40%, rgba(1,215,255,1) 88%)"
+					data-trvt-gradient="repeating-linear-gradient(135deg, 
+					canvasText 0 .25em, canvas 0 .75em)"
 					data-trvt-context="home"
-					data-trvt-size="l"
-					data-trvt-title="Web Musings of a web head"
+					data-trvt-size="m"
+					data-trvt-title="Trivet"
 				>
 				</trvt-header>
 			</header>
 			<main slot="main">
 				<trvt-article data-trvt-title="">
-					<h1 slot="heading">
-						Trivet, a base built with web components!
-					</h1>
+					<h1 slot="heading">Trivet. A Web Component base!</h1>
 					<div slot="intro">
 						<p>
 							Introduction: Lorem ipsum dolor amet mustache

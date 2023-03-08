@@ -1,0 +1,11 @@
+@layer theme {
+	trvt-layout:not(:defined),
+	trvt-layout:has(:not(:defined)) {
+		visibility: hidden;
+	}
+	trvt-header::part(heading) {
+		font-size: 8rem;
+		font-weight: 900;
+		line-height: 1.2;
+	}
+}
