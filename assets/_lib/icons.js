@@ -1,3 +1,4 @@
+import fs from 'fs';
 import { URL } from 'url';
 const __parentname = new URL('..', import.meta.url).pathname;
 
@@ -11,9 +12,9 @@ const buildPath = `${__parentname}/build`;
 const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
 
 try {
-	if (!fs.existsSync(buildPath)) {
-		fs.mkdirSync(buildPath);
-	}
+	fs.existsSync(buildPath) &&
+		fs.rmSync(buildPath, { recursive: true, force: true }, (err) => {});
+	fs.mkdirSync(buildPath);
 } catch (err) {
 	console.error(err);
 }
@@ -22,7 +23,6 @@ try {
  * convert icon font to woff2 format
  */
 import wawoff from 'wawoff2';
-import fs from 'fs';
 const sourceFile = fs.readFileSync(
 	`${iconAssetPath}/${iconFontPath}/${iconFontName}.ttf`
 );

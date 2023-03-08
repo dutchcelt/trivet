@@ -18,6 +18,14 @@ if (isWebcomponent && fs.existsSync(buildfolder)) {
 	});
 }
 
+const compressStylesFunc = (css) => {
+	return transform({
+		code: Buffer.from(css),
+		minify: true,
+		sourceMap: false,
+	}).code.toString();
+};
+
 export default [
 	{
 		input: ['index.js'],
@@ -27,12 +35,7 @@ export default [
 		},
 		plugins: [
 			css({
-				transform: (css) =>
-					transform({
-						code: Buffer.from(css),
-						minify: true,
-						sourceMap: false,
-					}).code.toString(),
+				transform: compressStylesFunc,
 			}),
 			terser(),
 		],

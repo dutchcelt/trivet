@@ -1,10 +1,8 @@
 import { default as fs, unlink } from 'fs';
 import path from 'path';
 
-const buildFolder = path.resolve(`build`);
-const bundleFile = path.resolve(buildFolder, `bundle.css`);
-const importerFile = path.resolve(buildFolder, `importer.css`);
-const cssfileReg = /styles-\w+\.css$/;
+const buildFolder = path.resolve(`build`, `css`);
+const cssfileReg = /\.css$/;
 
 try {
 	if (!fs.existsSync(buildFolder)) {
@@ -14,19 +12,18 @@ try {
 	console.error(err);
 }
 
-fs.writeFileSync(bundleFile, `/* Bundle of hashed files */\n`);
-fs.writeFileSync(importerFile, `/* Import the hashed files */\n`);
+//fs.writeFileSync(bundleFile, `/* Bundle of hashed files */\n`);
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	fs.appendFile(bundleFile, data);
-	const transformedData = `@import url('${path.basename(file)}');\n`;
+	const transformedData = `@layer design.tokens {\n ${data} \n}\n`;
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
 		transformedData,
 		'utf8'
 	);
-	fs.appendFile(importerFile, bufferedData);
+
+	fs.writeFileSync(file, bufferedData);
 };
 
 await fs.readdir(buildFolder, async (err, files) => {

@@ -27,37 +27,37 @@
 		margin-inline: auto;
 	}
 	html {
-		--trvt-typography-family-base: Figtree, sans-serif !important;
-		--trvt-typography-family-display: Figtree, sans-serif !important;
+		--trvt-typography-family-base: Figtree, sans-serif;
+		--trvt-typography-family-display: Figtree, sans-serif;
 
-		--trvt-typography-weight-thin: 100 !important;
-		--trvt-typography-weight-ultralight: 150 !important;
-		--trvt-typography-weight-light: 200 !important;
-		--trvt-typography-weight-medium: 300 !important;
-		--trvt-typography-weight-semibold: 400 !important;
-		--trvt-typography-weight-bold: 550 !important;
-		--trvt-typography-weight-extrabold: 700 !important;
-		--trvt-typography-weight-heavy: 800 !important;
-		--trvt-typography-weight-black: 900 !important;
+		--trvt-typography-weight-thin: 100;
+		--trvt-typography-weight-ultralight: 150;
+		--trvt-typography-weight-light: 200;
+		--trvt-typography-weight-medium: 300;
+		--trvt-typography-weight-semibold: 400;
+		--trvt-typography-weight-bold: 550;
+		--trvt-typography-weight-extrabold: 700;
+		--trvt-typography-weight-heavy: 800;
+		--trvt-typography-weight-black: 900;
 
 		/* 125% => 20px. 150% => 24px */
-		font-size: 125% !important;
+		font-size: 125%;
 	}
 	body {
-		letter-spacing: 0.02ch !important;
-		padding-inline: 2ch !important;
+		letter-spacing: 0.02ch;
+		padding-inline: 2ch;
 	}
 
 	h1 {
-		font-size: var(--trvt-typography-size-xxl) !important;
-		font-weight: var(--trvt-typography-weight-bold) !important;
+		font-size: var(--trvt-typography-size-xxl);
+		font-weight: var(--trvt-typography-weight-bold);
 	}
 
 	h2 {
-		font-weight: var(--trvt-typography-weight-bold) !important;
+		font-weight: var(--trvt-typography-weight-bold);
 	}
 
 	h3 {
-		font-weight: var(--trvt-typography-weight-bold) !important;
+		font-weight: var(--trvt-typography-weight-bold);
 	}
 }

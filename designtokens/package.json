@@ -12,7 +12,7 @@
 	],
 	"scripts": {
 		"build:clean": "style-dictionary clean ",
-		"build:tokens": "style-dictionary build -c config.json",
+		"build:tokens": "style-dictionary build -c config.json && node ./_lib/addlayer.js",
 		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:tokens",
 		"watch:tokens": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
 		"watch:fonts": "chokidar \"tokens/fonts/**/*.json\" -c \"yarn build:fonts\"",
