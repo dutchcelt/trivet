@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/footer",
-	"version": "0.5.3",
+	"version": "0.5.4",
 	"description": "Footer component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.5.3"
+		"@trvt/core": "^0.6.0"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",

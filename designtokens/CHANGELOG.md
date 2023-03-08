@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.6.0
+
+### Minor Changes
+
+-   New way of loading in styles and some adjustments to make web components more themable.
+
 ## 0.5.3
 
 ### Patch Changes

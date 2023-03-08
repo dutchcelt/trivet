@@ -14,6 +14,8 @@
 		font-size: 8rem;
 		font-weight: 800;
 		line-height: 1.5;
+		letter-spacing: -0.05ch;
+
 		background: url('scratched.svg') no-repeat 50% 50%;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -23,22 +25,13 @@
 		/* font-family: 'Arial Black'; */
 	}
 	trvt-layout {
-		max-width: 1400px;
+		max-width: 65ch;
 		margin-inline: auto;
 	}
 	html {
 		--trvt-typography-family-base: Figtree, sans-serif;
 		--trvt-typography-family-display: Figtree, sans-serif;
-
-		--trvt-typography-weight-thin: 100;
-		--trvt-typography-weight-ultralight: 150;
-		--trvt-typography-weight-light: 200;
-		--trvt-typography-weight-medium: 300;
-		--trvt-typography-weight-semibold: 400;
-		--trvt-typography-weight-bold: 550;
-		--trvt-typography-weight-extrabold: 700;
-		--trvt-typography-weight-heavy: 800;
-		--trvt-typography-weight-black: 900;
+		--trvt-typography-family-gui: Figtree, sans-serif;
 
 		/* 125% => 20px. 150% => 24px */
 		font-size: 125%;
@@ -46,18 +39,33 @@
 	body {
 		letter-spacing: 0.02ch;
 		padding-inline: 2ch;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
 	}
-
+	@supports not (font-size: xxx-large) {
+		:root {
+			--trvt-typography-size-xxxl: -webkit-xxx-large;
+		}
+	}
+	@supports not (font-size: -webkit-xxx-large) {
+		:root {
+			--trvt-typography-size-xxxl: 2rem;
+		}
+	}
 	h1 {
-		font-size: var(--trvt-typography-size-xxl);
-		font-weight: var(--trvt-typography-weight-bold);
+		font-size: var(--trvt-typography-size-xxxl);
+		font-weight: var(--trvt-typography-weight-extrabold);
+		letter-spacing: 0;
 	}
 
 	h2 {
 		font-weight: var(--trvt-typography-weight-bold);
+		letter-spacing: 0;
 	}
 
 	h3 {
 		font-weight: var(--trvt-typography-weight-bold);
+		letter-spacing: 0;
 	}
 }

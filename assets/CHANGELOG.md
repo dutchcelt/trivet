@@ -1,5 +1,16 @@
 # @trvt/assets
 
+## 0.5.0
+
+### Minor Changes
+
+-   New way of loading in styles and some adjustments to make web components more themable.
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/designtokens@0.6.0
+
 ## 0.4.3
 
 ### Patch Changes
