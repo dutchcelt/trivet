@@ -10,6 +10,7 @@
 @layer design.foundation {
 	html {
 		margin: 0;
+		font-weight: var(--trvt-typography-weight-medium);
 		font-family: var(--trvt-typography-family-base);
 		font-size: var(--trvt-typography-size-root, 100%);
 		line-height: var(--trvt-typography-leading-l, 1.5);
