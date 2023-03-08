@@ -1,14 +1,4 @@
-@font-face {
-	font-family: 'Figtree';
-	src: url('Figtree-VariableFont_wght.woff2') format('woff2-variations');
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Figtree';
-	src: url('Figtree-Italic-VariableFont_wght.woff2')
-		format('woff2-variations');
-	font-style: italic;
-}
+@import url('font-faces.css') layer(theme);
 
 @layer theme {
 	trvt-layout:not(:defined),
@@ -36,11 +26,34 @@
 		--trvt-typography-family-base: Figtree, sans-serif !important;
 		--trvt-typography-family-display: Figtree, sans-serif !important;
 
+		--trvt-typography-weight-thin: 100 !important;
+		--trvt-typography-weight-ultralight: 200 !important;
+		--trvt-typography-weight-light: 300 !important;
+		--trvt-typography-weight-medium: 400 !important;
+		--trvt-typography-weight-semibold: 500 !important;
+		--trvt-typography-weight-bold: 600 !important;
+		--trvt-typography-weight-extrabold: 700 !important;
+		--trvt-typography-weight-heavy: 800 !important;
+		--trvt-typography-weight-black: 900 !important;
+
 		/* 125% => 20px. 150% => 24px */
 		font-size: 125% !important;
 	}
 	body {
 		letter-spacing: 0.02ch !important;
 		padding-inline: 2ch !important;
+	}
+
+	h1 {
+		font-size: var(--trvt-typography-size-xxl) !important;
+		font-weight: var(--trvt-typography-weight-bold) !important;
+	}
+
+	h2 {
+		font-weight: var(--trvt-typography-weight-bold) !important;
+	}
+
+	h3 {
+		font-weight: var(--trvt-typography-weight-bold) !important;
 	}
 }
