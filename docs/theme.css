@@ -1,11 +1,58 @@
+@font-face {
+	font-family: 'Rubik';
+	src: url('https://assets.codepen.io/25444/Rubik-VariableFont_wght.woff2')
+		format('woff2-variations');
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Rubik';
+	src: url('https://assets.codepen.io/25444/Rubik-Italic-VariableFont_wght.woff2')
+		format('woff2-variations');
+	font-style: italic;
+}
+
 @layer theme {
 	trvt-layout:not(:defined),
 	trvt-layout:has(:not(:defined)) {
 		visibility: hidden;
 	}
 	trvt-header::part(heading) {
+		display: inline-block;
 		font-size: 8rem;
-		font-weight: 900;
-		line-height: 1.2;
+		font-weight: 650;
+		line-height: 1.5;
+		background: url('scratched.svg') no-repeat 50% 50%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 12em;
+		background-size: 200%;
+		width: 5ch;
+	}
+	trvt-layout {
+		max-width: 1400px;
+		margin-inline: auto;
+	}
+	html {
+		--trvt-typography-family-base: Rubik, sans-serif !important;
+		--trvt-typography-family-display: Rubik, sans-serif !important;
+		--trvt-typography-family-gui: Rubik, sans-serif;
+		--trvt-typography-family-code: monospace;
+
+		--trvt-typography-weight-thin: 100 !important;
+		--trvt-typography-weight-ultralight: 200 !important;
+		--trvt-typography-weight-light: 300 !important;
+		--trvt-typography-weight-medium: 400 !important;
+		--trvt-typography-weight-semibold: 500 !important;
+		--trvt-typography-weight-bold: 500 !important;
+		--trvt-typography-weight-extrabold: 600 !important;
+		--trvt-typography-weight-heavy: 600 !important;
+		--trvt-typography-weight-black: 600 !important;
+
+		/* 125% => 20px. 150% => 24px */
+		font-size: 125% !important;
+	}
+	body {
+		letter-spacing: 0.01ch !important;
+		padding-inline: 2ch !important;
 	}
 }

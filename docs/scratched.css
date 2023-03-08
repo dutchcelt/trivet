@@ -1,0 +1,6 @@
+@namespace svg url(http://www.w3.org/2000/svg);
+
+:root {
+	--scratched-canvas: white;
+	--scratched: #222;
+}
