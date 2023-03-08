@@ -24,6 +24,9 @@ export class TrvtOl extends TrvtList {
 		super();
 		this.start = this.dataset?.start || 1;
 		this.addCSSPropertiesToHost([`--counter-start: ${this.start - 1};`]);
+		if (!CSS.supports('grid-template-columns', 'subgrid')) {
+			this.shadowRoot.innerHTML = `<ol start=${this.start}><slot></slot></ol>`;
+		}
 	}
 }
 customElements.define('trvt-ol', TrvtOl);
@@ -32,6 +35,9 @@ export class TrvtUl extends TrvtList {
 	constructor() {
 		super();
 		this.addCSSPropertiesToHost([`--ul-marker: "\\02022";`]);
+		if (!CSS.supports('grid-template-columns', 'subgrid')) {
+			this.shadowRoot.innerHTML = `<ul><slot></slot></ul>`;
+		}
 	}
 }
 customElements.define('trvt-ul', TrvtUl);

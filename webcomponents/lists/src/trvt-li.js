@@ -6,11 +6,16 @@ export class TrvtLi extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.adoptedStyleSheets = [...styles, trvtItemCSS];
-		this.setAttribute('role', 'listitem');
-		if ((this.value = this.dataset?.value)) {
-			this.style.setProperty('--counter-value', `${this.value - 1}`);
+		this.value = this.dataset?.value;
+		if (!CSS.supports('grid-template-columns', 'subgrid')) {
+			this.shadowRoot.innerHTML = `<li class="list-item" value="${this.value}"><slot></slot></li>`;
+		} else {
+			if (this.value) {
+				this.style.setProperty('--counter-value', `${this.value - 1}`);
+			}
+			this.setAttribute('role', 'listitem');
+			this.shadowRoot.innerHTML = `<div class="list-item"><slot></slot></div>`;
 		}
-		this.shadowRoot.innerHTML = `<div class="list-item"><slot></slot></div>`;
 	}
 }
 customElements.define('trvt-li', TrvtLi);
