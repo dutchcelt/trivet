@@ -8,7 +8,7 @@
 		background-color: var(--canvasText);
 		color: var(--canvas);
 		white-space: nowrap;
-		font-weight: 900;
+		font-weight: var(--trvt-typography-weight-bold);
 		text-align: center;
 	}
 	@supports not (grid-template-columns: subgrid) {

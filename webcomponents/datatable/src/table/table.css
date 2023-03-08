@@ -19,8 +19,8 @@
 	}
 	@media (prefers-color-scheme: dark) {
 		:host {
-			--canvas: #1e1e1e;
-			--canvasText: #ffffff;
+			--canvas: canvas;
+			--canvasText: canvasText;
 		}
 	}
 	@container test (max-width: 680px) {

@@ -13,7 +13,7 @@
 
 	:host([type='info']) {
 		font-style: italic;
-		font-size: smaller;
+		font-size: var(--trvt-typography-size-s);
 	}
 	div {
 		padding: 1ex 1ch;
