@@ -15,9 +15,9 @@ class DutchceltLogo extends HTMLElement {
 								fill: canvasText;
 								transform: rotate(0.25turn);
 								display: inline-block;
-								width: 1.2rem;
+								width: 0.9rem;
 								vertical-align: text-bottom;
-								
+								margin-block-end: -2px;
 								position: relative;
 						}
 						.reverse {
@@ -32,7 +32,7 @@ class DutchceltLogo extends HTMLElement {
 								color: canvasText;
 								font-variation-settings: 'wght' 400;
 								text-decoration: none;
-								font-size: 1.2rem;
+								font-size: 1rem;
 								/* text-transform: capitalize; */
 								letter-spacing: 0.05rem;
 								display: inline-block;
