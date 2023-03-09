@@ -1,6 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 768 768" preserveAspectRatio="xMidYMid slice">
-	
-	<link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="theme.css" type="text/css"/>
+	<style>
+		:root {
+			--scratched-canvas: transparent;
+		}
+		@media (prefers-color-scheme: light) {
+			:root {
+				--scratched: #222222;
+			}
+		}
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--scratched: #e1e1e1;
+			}
+		}	  
+	</style>
 	
 	<rect width="768" height="768" fill="var(--scratched-canvas,#ffffff)"></rect>
 	<g mask="url(&quot;#SvgjsMask1000&quot;)">
