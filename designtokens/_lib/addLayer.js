@@ -1,4 +1,4 @@
-import { default as fs, unlink } from 'fs';
+import fs from 'fs';
 import path from 'path';
 
 const buildFolder = path.resolve(`build`, `css`);
@@ -11,8 +11,6 @@ try {
 } catch (err) {
 	console.error(err);
 }
-
-//fs.writeFileSync(bundleFile, `/* Bundle of hashed files */\n`);
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });

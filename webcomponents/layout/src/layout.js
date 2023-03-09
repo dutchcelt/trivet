@@ -32,6 +32,7 @@ export class TrvtLayout extends HTMLElement {
 			__getSlotNames(this.children)
 		);
 		this.type = this.dataset?.type || 'page';
+		this.collapsed = this.dataset?.collapse;
 		this.position = this.dataset?.contentPosition || 'start';
 		this.shadowRoot.adoptedStyleSheets = [...styles, layoutCSS];
 		this.shadowRoot.innerHTML = `<div class="trvt-layout"></div>`;
@@ -40,6 +41,24 @@ export class TrvtLayout extends HTMLElement {
 	connectedCallback() {
 		this.layoutElement = this.shadowRoot.querySelector('.trvt-layout');
 		this.render(this.layoutElement);
+		switch (this.collapsed) {
+			case 'block':
+				this.layoutElement.style.setProperty('--layout-row-gap', ' ');
+				break;
+			case 'inline':
+				this.layoutElement.style.setProperty(
+					'--layout-column-gap',
+					' '
+				);
+				break;
+			case 'both':
+				this.layoutElement.style.setProperty('--layout-row-gap', ' ');
+				this.layoutElement.style.setProperty(
+					'--layout-column-gap',
+					' '
+				);
+				break;
+		}
 	}
 
 	/**
