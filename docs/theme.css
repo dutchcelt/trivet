@@ -1,5 +1,6 @@
 @import url('font-faces.css') layer(theme);
 
+@import url('header.css');
 @layer theme {
 	trvt-layout:not(:defined),
 	trvt-layout:has(:not(:defined)) {
@@ -12,20 +13,6 @@
 		--header-size: 8em;
 	}
 
-	trvt-header::part(heading) {
-		display: inline-block;
-		font-weight: 800;
-		line-height: 0.8;
-		font-size: 7em;
-		line-height: 0.8;
-		letter-spacing: -0.05ch;
-		background: url('scratched.svg') no-repeat 50% 50%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200%;
-
-		/* font-family: 'Arial Black'; */
-	}
 	@container layout (min-width: 640px) {
 		trvt-header {
 			--header-size: 20em;

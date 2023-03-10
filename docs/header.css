@@ -1,0 +1,31 @@
+@layer theme {
+	:root {
+		--scratched-canvas: red;
+	}
+	@media (prefers-color-scheme: light) {
+		:root {
+			--scratched: #222222;
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--scratched: #e1e1e1;
+		}
+	}
+
+	trvt-header::part(heading) {
+		display: inline-block;
+		font-size: 8rem;
+		font-weight: 800;
+		line-height: 1.5;
+		letter-spacing: -0.05ch;
+
+		background: url('scratched.svg') no-repeat 50% 50%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 12em;
+		background-size: 200%;
+		width: 5ch;
+		/* font-family: 'Arial Black'; */
+	}
+}
