@@ -18,13 +18,13 @@ export const trivetCSS = [
 ];
 
 /* Scripts */
-// export { hasCSSLayerSupport } from './scripts/hasCSSLayerSupport.js';
-// export { loadFont } from './scripts/loadFont.js';
-// export { throttler } from './scripts/throttler.js';
-// export { CSSString2CSSStyleSheet } from './scripts/CSSString2CSSStyleSheet.js';
-// export { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
-// export { generateUUID } from './scripts/generateUUID.js';
-// export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
+export { hasCSSLayerSupport } from './scripts/hasCSSLayerSupport.js';
+export { loadFont } from './scripts/loadFont.js';
+export { throttler } from './scripts/throttler.js';
+export { CSSString2CSSStyleSheet } from './scripts/CSSString2CSSStyleSheet.js';
+export { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
+export { generateUUID } from './scripts/generateUUID.js';
+export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 /* icons */
 // import iconFace from './icons/icons.css' assert { type: 'css' };

@@ -6,6 +6,7 @@
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
 		"build": "yarn workspaces foreach -pt run build",
+		"build:site": "rollup -c configs/rollup.docs.config.js && copyfiles docs/*.{js,css,svg,woff2} dist/assets -f",
 		"build:docs": "copyfiles docs/**/*.{html,css,woff2,svg,js} dist -f",
 		"develop": "yarn server & yarn workspaces foreach -pt run develop",
 		"server": "wds -c configs/web-dev-server.config.js",

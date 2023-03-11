@@ -13,7 +13,7 @@ export default {
 	watch: true,
 
 	// resolve bare module imports
-	nodeResolve: false,
+	nodeResolve: true,
 
 	// JS language target to compile down to using esbuild. Recommended value is "auto", which compiles based on user agent.
 	// esbuildTarget: 'auto',
