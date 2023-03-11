@@ -1,13 +1,13 @@
 @layer theme {
-	trvt-layout {
-		container: layout / inline-size;
+	[slot='header'] {
+		container: header / inline-size;
 	}
 
 	trvt-header {
 		--header-size: 8em;
 	}
 
-	@container layout (min-width: 640px) {
+	@container header (min-width: 640px) {
 		trvt-header {
 			--header-size: 20em;
 		}
@@ -24,7 +24,7 @@
 		line-height: 1.5;
 		letter-spacing: -0.05ch;
 
-		background: url('scratched.svg') no-repeat 50% 50%;
+		background: url('scratched-optimized.svg') no-repeat 50% 50%;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-size: 12em;
