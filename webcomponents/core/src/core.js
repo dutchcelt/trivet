@@ -1,5 +1,2 @@
 /* Base styles for all Trivet Components */
-import { trivetCSS } from '@trvt/assets';
-const styles = [...trivetCSS];
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, ...styles];
-export { styles };
+export { trivetCSS as styles } from '@trvt/assets';
