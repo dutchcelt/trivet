@@ -1,11 +1,13 @@
-@font-face {
-	font-family: 'Figtree';
-	src: url('Figtree-VariableFont_wght.woff2') format('woff2-variations');
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Figtree';
-	src: url('Figtree-Italic-VariableFont_wght.woff2')
-		format('woff2-variations');
-	font-style: italic;
+@layer theme {
+	@font-face {
+		font-family: 'Figtree';
+		src: url('Figtree-VariableFont_wght.woff2') format('woff2-variations');
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Figtree';
+		src: url('Figtree-Italic-VariableFont_wght.woff2')
+			format('woff2-variations');
+		font-style: italic;
+	}
 }

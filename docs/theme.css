@@ -1,6 +1,6 @@
-@import url('font-faces.css') layer(theme);
-
+@import url('font-faces.css');
 @import url('header.css');
+
 @layer theme {
 	trvt-layout:not(:defined),
 	trvt-layout:has(:not(:defined)) {
