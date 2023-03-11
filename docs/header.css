@@ -1,5 +1,5 @@
 @layer theme {
-	[slot='header'] {
+	header {
 		container: header / inline-size;
 	}
 
@@ -7,6 +7,23 @@
 		--header-size: 8em;
 	}
 
+	trvt-header::part(heading) {
+		display: inline-block;
+		font-size: 7rem;
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.05ch;
+		background: url('scratched-optimized.svg') no-repeat 50% 50%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 200%;
+		width: 5ch;
+	}
+	@container header (max-width: 375px) {
+		trvt-header::part(heading) {
+			font-size: 6em;
+		}
+	}
 	@container header (min-width: 640px) {
 		trvt-header {
 			--header-size: 20em;
@@ -16,20 +33,6 @@
 			line-height: 1.5;
 			width: 5ch;
 		}
-	}
-	trvt-header::part(heading) {
-		display: inline-block;
-		font-size: 8rem;
-		font-weight: 800;
-		line-height: 1.5;
-		letter-spacing: -0.05ch;
-
-		background: url('scratched-optimized.svg') no-repeat 50% 50%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-size: 12em;
-		background-size: 200%;
-		width: 5ch;
 	}
 	@media (prefers-color-scheme: light) {
 		trvt-header::part(heading) {
