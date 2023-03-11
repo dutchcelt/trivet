@@ -1,4 +1,4 @@
-@layer componentlibrary {
+@layer components {
 	@layer props {
 		:host {
 			--card-text-color: var(--trvt-color-typography-text);

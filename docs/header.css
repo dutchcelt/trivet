@@ -1,18 +1,22 @@
 @layer theme {
-	:root {
-		--scratched-canvas: red;
-	}
-	@media (prefers-color-scheme: light) {
-		:root {
-			--scratched: #222222;
-		}
-	}
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--scratched: #e1e1e1;
-		}
+	trvt-layout {
+		container: layout / inline-size;
 	}
 
+	trvt-header {
+		--header-size: 8em;
+	}
+
+	@container layout (min-width: 640px) {
+		trvt-header {
+			--header-size: 20em;
+		}
+		trvt-header::part(heading) {
+			font-size: 12em;
+			line-height: 1.5;
+			width: 5ch;
+		}
+	}
 	trvt-header::part(heading) {
 		display: inline-block;
 		font-size: 8rem;
@@ -26,6 +30,15 @@
 		font-size: 12em;
 		background-size: 200%;
 		width: 5ch;
-		/* font-family: 'Arial Black'; */
+	}
+	@media (prefers-color-scheme: light) {
+		trvt-header::part(heading) {
+			filter: opacity(80%);
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		trvt-header::part(heading) {
+			filter: opacity(80%) invert(100%);
+		}
 	}
 }

@@ -7,23 +7,6 @@
 		visibility: hidden;
 	}
 	trvt-layout {
-		container: layout / inline-size;
-	}
-	trvt-header {
-		--header-size: 8em;
-	}
-
-	@container layout (min-width: 640px) {
-		trvt-header {
-			--header-size: 20em;
-		}
-		trvt-header::part(heading) {
-			font-size: 12em;
-			line-height: 1.5;
-			width: 5ch;
-		}
-	}
-	trvt-layout {
 		--trvt-row-gap: 0;
 		max-width: 65ch;
 		margin-inline: auto;

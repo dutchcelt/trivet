@@ -1,4 +1,4 @@
-@layer componentlibrary {
+@layer components {
 	@layer props {
 		:host([data-trvt-size='l']) {
 			--header-size: 20rem;
