@@ -1,4 +1,4 @@
-import { default as fs, unlink } from 'fs';
+import { default as fs } from 'fs';
 import path from 'path';
 
 const buildFolder = path.resolve(`build`);
@@ -19,14 +19,14 @@ fs.writeFileSync(importerFile, `/* Import the hashed files */\n`);
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	fs.appendFile(bundleFile, data);
+	fs.appendFileSync(bundleFile, data);
 	const transformedData = `@import url('${path.basename(file)}');\n`;
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
 		transformedData,
 		'utf8'
 	);
-	fs.appendFile(importerFile, bufferedData);
+	fs.appendFileSync(importerFile, bufferedData);
 };
 
 await fs.readdir(buildFolder, async (err, files) => {

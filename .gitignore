@@ -5,6 +5,7 @@
 
 # NPM/Node
 .npmrc
+node_modules
 
 # Builds
 temp
