@@ -10,13 +10,16 @@ export class trvtRow extends HTMLElement {
 		this.shadowRoot.innerHTML = `<slot></slot>`;
 	}
 	connectedCallback() {
-		if (CSS.supports('grid-template-columns', 'subgrid')) {
-			this.rowNumber = [...this.parentElement.children].indexOf(this) + 1;
-		} else {
-			const table = this.closest('trvt-table');
-			this.rowNumber = [...table.rowElements].indexOf(this) + 1;
-		}
-		this.style.setProperty('--trvt-row-number', this.rowNumber);
+		try {
+			if (CSS.supports('grid-template-columns', 'subgrid')) {
+				this.rowNumber =
+					[...this.parentElement.children].indexOf(this) + 1;
+			} else {
+				const table = this.closest('trvt-table');
+				this.rowNumber = [...table.rowElements].indexOf(this) + 1;
+			}
+			this.style.setProperty('--trvt-row-number', this.rowNumber);
+		} catch (error) {}
 	}
 }
 customElements.define('trvt-row', trvtRow);
