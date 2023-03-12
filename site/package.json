@@ -1,16 +1,16 @@
 {
-	"name": "@trvt/cli",
+	"name": "@trvt/site",
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
 	"main": "index.js",
 	"files": [],
-	"description": "Use your own custom tokens, fonts, and icons with Trivet",
+	"description": "The Trivet web site.",
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
-		"build": "echo 'CLI: no build'",
-		"develop": "echo 'CLI: no develop'"
+		"build": "echo 'Site: no build'",
+		"develop": "echo 'Site: no develop'"
 	}
 }

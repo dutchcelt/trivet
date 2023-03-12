@@ -13,7 +13,7 @@
 		font-weight: 800;
 		line-height: 1;
 		letter-spacing: -0.05ch;
-		background: url('scratched-optimized.svg') no-repeat 50% 50%;
+		background: url('../images/scratched-optimized.svg') no-repeat 50% 50%;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 200%;

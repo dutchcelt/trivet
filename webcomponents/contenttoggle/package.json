@@ -19,7 +19,7 @@
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
-		"build": "echo 'Content Toggle' && yarn build:rollup",
+		"build": "yarn build:rollup",
 		"develop": "yarn build --watch"
 	}
 }

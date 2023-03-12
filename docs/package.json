@@ -1,0 +1,21 @@
+{
+	"name": "@trvt/docs",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"main": "index.html",
+	"files": [],
+	"description": "Documents",
+	"author": "C. Egor Kloos",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"scripts": {
+		"build:copy": "copyfiles **/*.{js,css,svg,woff2} dist",
+		"build:rollup": "rollup -c ../configs/rollup.docs.config.js",
+		"build": "yarn build:copy && yarn build:rollup",
+		"develop": "yarn build --watch"
+	},
+	"devDependencies": {
+		"copyfiles": "^2.4.1"
+	}
+}
