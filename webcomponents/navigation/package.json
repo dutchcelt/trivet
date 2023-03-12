@@ -2,6 +2,7 @@
 	"name": "@trvt/navigation",
 	"version": "0.5.4",
 	"description": "Navigation component for the Trivet Design System",
+	"private": true,
 	"main": "index.js",
 	"files": [
 		"src/*",

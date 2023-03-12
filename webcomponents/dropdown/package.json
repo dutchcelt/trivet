@@ -2,6 +2,7 @@
 	"name": "@trvt/dropdown",
 	"version": "0.5.4",
 	"description": "A very simple dynamic loader of web components and styles",
+	"private": true,
 	"main": "index.js",
 	"files": [
 		"src/*",
