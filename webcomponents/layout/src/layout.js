@@ -78,11 +78,12 @@ export class TrvtLayout extends HTMLElement {
 	 * @returns {string}
 	 */
 	render(element) {
-		this.layoutElement.classList.add(this.type, this.position);
-		if (element)
+		if (element) {
+			element.classList.add(this.type, this.position);
 			element.innerHTML = this.slotNames.length
 				? this.#template()
 				: `<slot></slot>`;
+		}
 	}
 
 	/**

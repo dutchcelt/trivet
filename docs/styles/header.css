@@ -9,6 +9,8 @@
 
 	trvt-header::part(heading) {
 		display: inline-block;
+		font-family: var(--trvt-typography-family-display);
+		font-stretch: 105%;
 		font-size: 7rem;
 		font-weight: 800;
 		line-height: 1;

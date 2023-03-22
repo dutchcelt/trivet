@@ -31,8 +31,12 @@
 			/* Display */
 		}
 
-		h2:empty {
-			display: none;
+		slot[name='footer']:empty {
+			background: green !important;
+		}
+
+		*:is(h1, h2, h3) > slot[name='heading']::slotted(*) {
+			all: unset !important;
 		}
 	}
 }

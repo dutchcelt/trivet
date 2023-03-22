@@ -82,7 +82,7 @@
 		color: var(--summary-text-color);
 		border: var(--toggle-border-width, 2px) solid var(--toggle-border-color);
 		border-bottom: 0;
-		font-family: var(---summary-font-family);
+		font-family: var(--summary-font-family);
 		font-weight: var(--summary-font-weight);
 		cursor: pointer;
 		margin-bottom: -2px;

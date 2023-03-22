@@ -17,7 +17,7 @@ class DutchceltLogo extends HTMLElement {
 								display: inline-block;
 								width: 0.9rem;
 								vertical-align: text-bottom;
-								margin-block-end: -2px;
+								margin-block-end: -4px;
 								position: relative;
 						}
 						.reverse {

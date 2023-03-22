@@ -29,6 +29,7 @@
 	h4,
 	h5,
 	h6 {
+		font-weight: var(--trvt-typography-weight-bold);
 		font-family: var(--trvt-typography-family-display);
 		margin-block-start: var(
 			--trvt-typography-whitespace-heading-block-start,
@@ -42,24 +43,20 @@
 	}
 	h1 {
 		font-size: var(--trvt-typography-size-xxxl);
-		font-weight: var(--trvt-typography-weight-black);
 		line-height: var(--trvt-typography-leading-s);
 	}
 
 	h2 {
 		font-size: var(--trvt-typography-size-xxl);
-		font-weight: var(--trvt-typography-weight-black);
 		line-height: var(--trvt-typography-leading-m);
 	}
 
 	h3 {
 		font-size: var(--trvt-typography-size-xl);
-		font-weight: var(--trvt-typography-weight-black);
 		color: var(--trvt-color-typography-heading);
 	}
 
 	h4 {
-		font-family: var(--trvt-typography-family-display);
 		font-size: var(--trvt-typography-size-l);
 	}
 

@@ -12,15 +12,14 @@
 		margin-inline: auto;
 	}
 	html {
-		--trvt-typography-family-base: Figtree, sans-serif;
-		--trvt-typography-family-display: Figtree, sans-serif;
-		--trvt-typography-family-gui: Figtree, sans-serif;
+		--trvt-typography-family-base: 'Mona Sans', sans-serif;
+		--trvt-typography-family-display: 'Hubot Sans', sans-serif;
+		--trvt-typography-family-gui: 'Hubot Sans', sans-serif;
 
 		/* 125% => 20px. 150% => 24px */
 		font-size: 125%;
 	}
 	body {
-		letter-spacing: 0.02ch;
 		padding-inline: 2ch;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -39,16 +38,14 @@
 	h1 {
 		font-size: var(--trvt-typography-size-xxxl);
 		font-weight: var(--trvt-typography-weight-extrabold);
-		letter-spacing: 0;
+		letter-spacing: -0.02ch;
 	}
 
 	h2 {
-		font-weight: var(--trvt-typography-weight-bold);
-		letter-spacing: 0;
+		font-weight: var(--trvt-typography-weight-extrabold);
 	}
 
 	h3 {
-		font-weight: var(--trvt-typography-weight-bold);
-		letter-spacing: 0;
+		font-weight: var(--trvt-typography-weight-extrabold);
 	}
 }

@@ -8,6 +8,7 @@
 		background-color: var(--canvasText);
 		color: var(--canvas);
 		white-space: nowrap;
+		font-family: var(--trvt-typography-family-gui);
 		font-weight: var(--trvt-typography-weight-bold);
 		text-align: center;
 	}
