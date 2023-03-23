@@ -10,14 +10,14 @@ class DutchceltLogo extends HTMLElement {
 	render() {
 		return document.createRange().createContextualFragment(`
 		<style>
-				@layer components {
+				@layer components.selectors {
 						svg {
 								fill: canvasText;
 								transform: rotate(0.25turn);
 								display: inline-block;
 								width: 0.9rem;
 								vertical-align: text-bottom;
-								margin-block-end: -4px;
+								margin-block-end: -2px;
 								position: relative;
 						}
 						.reverse {
@@ -28,7 +28,7 @@ class DutchceltLogo extends HTMLElement {
 						}
 						a {
 								padding: 1rem;
-								font-family: var(--trvt-font-family-gui);
+								font-family: 'Rubik';
 								color: canvasText;
 								font-variation-settings: 'wght' 400;
 								text-decoration: none;
