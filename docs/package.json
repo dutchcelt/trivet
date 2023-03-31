@@ -10,7 +10,7 @@
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
-		"build:copy": "copyfiles ./[fonts|images|styles|webcomponents]/**/*.{js,css,svg,woff2} dist",
+		"build:copy": "copyfiles ./{fonts,images,styles,webcomponents}/**/*.{js,css,svg,woff2} dist",
 		"build:rollup": "rollup -c ../configs/rollup.docs.config.js",
 		"build": "yarn build:copy & yarn build:rollup",
 		"develop": "yarn build --watch"

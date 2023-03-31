@@ -1,7 +1,7 @@
 {
 	"color": {
 		"background": {
-			"canvas": { "value": "Canvas" },
+			"canvas": { "value": "Canvas"},
 			"viewport": { "value": "Canvas" },
 			"content": { "value": "Canvas" },
 			"surface": { "value": "Grey" },

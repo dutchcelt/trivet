@@ -9,10 +9,10 @@
 
 	trvt-header::part(heading) {
 		display: inline-block;
-		font-family: var(--trvt-typography-family-display);
-		font-stretch: 105%;
+		font-family: 'Figtree';
+		font-stretch: 100%;
 		font-size: 7rem;
-		font-weight: 800;
+		font-weight:800;
 		line-height: 1;
 		letter-spacing: -0.05ch;
 		background: url('../images/scratched-optimized.svg') no-repeat 50% 50%;
