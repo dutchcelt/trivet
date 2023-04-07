@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.6.1
+
+### Patch Changes
+
+-   Refactored to align workspace packages
+
 ## 0.6.0
 
 ### Minor Changes

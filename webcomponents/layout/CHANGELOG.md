@@ -1,5 +1,13 @@
 # @trvt/layout
 
+## 0.7.1
+
+### Patch Changes
+
+-   Refactored to align workspace packages
+-   Updated dependencies
+    -   @trvt/core@0.6.1
+
 ## 0.7.0
 
 ### Minor Changes

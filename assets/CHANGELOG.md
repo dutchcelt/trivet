@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.5.1
+
+### Patch Changes
+
+-   Refactored to align workspace packages
+-   Updated dependencies
+    -   @trvt/designtokens@0.6.1
+
 ## 0.5.0
 
 ### Minor Changes

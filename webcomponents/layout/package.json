@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/layout",
-	"version": "0.7.0",
+	"version": "0.7.1",
 	"description": "Layout component for the Trivet Design System",
 	"type": "modules",
 	"main": "index.js",
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.6.0"
+		"@trvt/core": "^0.6.1"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
