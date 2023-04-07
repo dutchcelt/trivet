@@ -7,7 +7,7 @@
 /* 	Positioning */
 /* 	Display */
 /*	###################################################################### */
-@layer design.foundation {
+@layer design.foundations {
 	html {
 		margin: 0;
 		font-weight: var(--trvt-typography-weight-medium);

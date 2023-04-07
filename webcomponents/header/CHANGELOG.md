@@ -1,5 +1,13 @@
 # @trvt/header
 
+## 0.7.2
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+-   Updated dependencies
+    -   @trvt/core@0.6.3
+
 ## 0.7.1
 
 ### Patch Changes

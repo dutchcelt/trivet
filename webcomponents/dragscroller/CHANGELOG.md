@@ -1,5 +1,13 @@
 # @trvt/dragscroller
 
+## 0.2.6
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+-   Updated dependencies
+    -   @trvt/core@0.6.3
+
 ## 0.2.5
 
 ### Patch Changes

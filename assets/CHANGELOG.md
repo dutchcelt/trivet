@@ -1,5 +1,19 @@
 # @trvt/assets
 
+## 0.5.3
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+-   Updated dependencies
+    -   @trvt/designtokens@0.6.2
+
+## 0.5.2
+
+### Patch Changes
+
+-   Fixed incorrect layer name
+
 ## 0.5.1
 
 ### Patch Changes

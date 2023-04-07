@@ -1,5 +1,13 @@
 # @trvt/article
 
+## 0.5.6
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+-   Updated dependencies
+    -   @trvt/core@0.6.3
+
 ## 0.5.5
 
 ### Patch Changes

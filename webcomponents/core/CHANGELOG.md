@@ -1,5 +1,21 @@
 # @trvt/core
 
+## 0.6.3
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+-   Updated dependencies
+    -   @trvt/assets@0.5.3
+    -   @trvt/designtokens@0.6.2
+
+## 0.6.2
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/assets@0.5.2
+
 ## 0.6.1
 
 ### Patch Changes

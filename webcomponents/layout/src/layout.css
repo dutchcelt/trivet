@@ -4,8 +4,8 @@
 
 	@layer props {
 		.trvt-layout {
-			--layout-width-min: 375px;
-			--layout-width-max: 1280px;
+			--layout-min-width: var(--trvt-layout-min-width, 375px);
+			--layout-min-width: var(--trvt-layout-max-width, 1280px);
 			--padding-inline: var(--trvt-row-gap, 2rem);
 			--padding-block: var(--trvt-column-gap, 2rem);
 			--layout-row-gap: var(--trvt-row-gap, 2rem);
@@ -13,9 +13,7 @@
 		}
 
 		/* Layout Slot Properties */
-		*:where(.notification, .navigation, .header, .main, .sidebar, .footer) {
-			--surface: transparent;
-		}
+	
 		.notifications {
 			--grid-area: notifications;
 		}
@@ -50,7 +48,7 @@
 			--template-areas: 'navigation' 'header' 'main' 'sidebar' 'footer'
 				'notification';
 		}
-
+		
 		@container layout (min-width: 680px) {
 			.trvt-layout {
 				--layout-row-gap: 1rem;
@@ -118,6 +116,8 @@
 			padding-inline: var(--padding-inline);
 			margin-block: 0;
 			margin-inline: auto;
+			min-width: var(--layout-min-width);
+			max-width: var(--layout-max-width);
 		}
 
 		/* ############################################################### */
@@ -126,7 +126,7 @@
 			grid-area: var(--grid-area);
 			padding-block: var(--padding-block);
 			padding-inline: var(--padding-inline);
-			background-color: var(--surface);
+			background-color: var(--trvt-layout-surface, transparent);
 			margin-trim: block;
 		}
 	}

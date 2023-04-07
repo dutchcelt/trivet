@@ -1,5 +1,19 @@
 # @trvt/layout
 
+## 0.7.3
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+-   Updated dependencies
+    -   @trvt/core@0.6.3
+
+## 0.7.2
+
+### Patch Changes
+
+-   layout margin and background fixes
+
 ## 0.7.1
 
 ### Patch Changes

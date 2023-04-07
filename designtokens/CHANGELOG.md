@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.6.2
+
+### Patch Changes
+
+-   Added missing build bundles. Doh!
+
 ## 0.6.1
 
 ### Patch Changes
