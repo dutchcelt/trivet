@@ -1,5 +1,21 @@
 # @trvt/dragscroller
 
+## 0.2.8
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/core@0.6.7
+
+## 0.2.7
+
+### Patch Changes
+
+-   New deps and builds
+-   Updated dependencies
+    -   @trvt/core@0.6.5
+
 ## 0.2.6
 
 ### Patch Changes

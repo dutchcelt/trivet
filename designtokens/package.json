@@ -1,7 +1,7 @@
 {
 	"name": "@trvt/designtokens",
 	"description": "Trivet, a system for building webpages",
-	"version": "0.6.2",
+	"version": "0.6.4",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -12,8 +12,9 @@
 	],
 	"scripts": {
 		"build:clean": "style-dictionary clean ",
+		"build:copy": "copyfiles ./*.js build",
 		"build:tokens": "style-dictionary build -c config.json && node ./_lib/addlayer.js",
-		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:tokens",
+		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:copy && yarn build:tokens",
 		"watch:tokens": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
 		"watch:fonts": "chokidar \"tokens/fonts/**/*.json\" -c \"yarn build:fonts\"",
 		"watch": "yarn watch:tokens",
@@ -25,6 +26,7 @@
 	"packageManager": "yarn@3.4.1",
 	"devDependencies": {
 		"chokidar-cli": "^3.0.0",
+		"copyfiles": "^2.4.1",
 		"style-dictionary": "^3.7.2"
 	}
 }

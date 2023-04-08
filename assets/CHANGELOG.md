@@ -1,5 +1,27 @@
 # @trvt/assets
 
+## 0.5.6
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/designtokens@0.6.4
+
+## 0.5.5
+
+### Patch Changes
+
+-   New deps and builds
+-   Updated dependencies
+    -   @trvt/designtokens@0.6.3
+
+## 0.5.4
+
+### Patch Changes
+
+-   New Core version
+
 ## 0.5.3
 
 ### Patch Changes

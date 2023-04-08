@@ -1,5 +1,21 @@
 # @trvt/lists
 
+## 0.3.4
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/core@0.6.7
+
+## 0.3.3
+
+### Patch Changes
+
+-   New deps and builds
+-   Updated dependencies
+    -   @trvt/core@0.6.5
+
 ## 0.3.2
 
 ### Patch Changes

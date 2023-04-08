@@ -1,5 +1,27 @@
 # @trvt/article
 
+## 0.5.9
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/core@0.6.7
+
+## 0.5.8
+
+### Patch Changes
+
+-   New deps and builds
+-   Updated dependencies
+    -   @trvt/core@0.6.5
+
+## 0.5.7
+
+### Patch Changes
+
+-   New Core version
+
 ## 0.5.6
 
 ### Patch Changes

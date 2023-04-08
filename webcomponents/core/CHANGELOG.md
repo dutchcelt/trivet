@@ -1,5 +1,35 @@
 # @trvt/core
 
+## 0.6.7
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/assets@0.5.6
+    -   @trvt/designtokens@0.6.4
+
+## 0.6.6
+
+### Patch Changes
+
+-   Referencing workspace in package dependency
+
+## 0.6.5
+
+### Patch Changes
+
+-   New deps and builds
+-   Updated dependencies
+    -   @trvt/assets@0.5.5
+    -   @trvt/designtokens@0.6.3
+
+## 0.6.4
+
+### Patch Changes
+
+-   Missing dependency version number in package
+
 ## 0.6.3
 
 ### Patch Changes

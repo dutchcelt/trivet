@@ -41,24 +41,6 @@ export class TrvtLayout extends HTMLElement {
 	connectedCallback() {
 		this.layoutElement = this.shadowRoot.querySelector('.trvt-layout');
 		this.render(this.layoutElement);
-		switch (this.collapsed) {
-			case 'block':
-				this.layoutElement.style.setProperty('--layout-row-gap', ' ');
-				break;
-			case 'inline':
-				this.layoutElement.style.setProperty(
-					'--layout-column-gap',
-					' '
-				);
-				break;
-			case 'both':
-				this.layoutElement.style.setProperty('--layout-row-gap', ' ');
-				this.layoutElement.style.setProperty(
-					'--layout-column-gap',
-					' '
-				);
-				break;
-		}
 	}
 
 	/**

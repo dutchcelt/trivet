@@ -1,5 +1,13 @@
 # @trvt/card
 
+## 0.5.7
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/core@0.6.7
+
 ## 0.5.6
 
 ### Patch Changes

@@ -48,16 +48,11 @@
 		/* ############################################################### */
 		/* Layout Type Properties */
 
-		:host([data-collapse="block"]){
-			--_layout-row-gap: var(--trvt-layout-row-gap, 0);
-			--_layout-column-gap: var(--trvt-layout-column-gap, 0);
-		}
-
 		/* Overrides - tablet-desktop */
 		@container layout (min-width: 680px) {
 			.trvt-layout {
 				--_layout-row-gap: var(--trvt-layout-row-gap, 2rem);
-				--_layout-column-gap: var(--trvt-column-gap, 2rem);
+				--_layout-column-gap: var(--trvt-layout-column-gap, 2rem);
 			}
 
 			/* Asymetric (3/1) layout - Content in the starting position */
@@ -102,6 +97,18 @@
 					'sidebar' 'footer';
 			}
 		}
+		
+		:host([data-collapse="both"]) .trvt-layout {
+			--_layout-row-gap: 0;
+			--_layout-column-gap: 0;
+		}
+		:host([data-collapse="block"]) .trvt-layout {
+			--_layout-row-gap: 0;
+		}
+		:host([data-collapse="inline"]) .trvt-layout {
+			--_layout-column-gap: 0;
+		}
+
 	}
 
 	@layer selectors {
@@ -121,13 +128,14 @@
 			margin-inline: auto;
 			min-width: var(--_layout-min-width);
 			max-width: var(--_layout-max-width);
+			background-color: var(--trvt-layout-surface, transparent);
 		}
 
 		/* ############################################################### */
 		/* Layout Slot Rules */
 		*:where(.notification, .navigation, .header, .main, .sidebar, .footer) {
 			grid-area: var(--_grid--area);
-			background-color: var(--trvt-layout-surface, transparent);
+			background-color: var(--trvt-layout-slot-surface, transparent);
 			margin-trim: block;
 		}
 	}

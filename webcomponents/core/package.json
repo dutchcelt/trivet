@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/core",
-	"version": "0.6.3",
+	"version": "0.6.7",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -12,8 +12,8 @@
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/assets": "workspace:^",
-		"@trvt/designtokens": "workspace:^"
+		"@trvt/assets": "^0.5.6",
+		"@trvt/designtokens": "^0.6.4"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",

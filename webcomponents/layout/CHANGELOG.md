@@ -1,5 +1,21 @@
 # @trvt/layout
 
+## 0.7.7
+
+### Patch Changes
+
+-   New deps
+-   Updated dependencies
+    -   @trvt/core@0.6.7
+
+## 0.7.6
+
+### Patch Changes
+
+-   New deps and builds
+-   Updated dependencies
+    -   @trvt/core@0.6.5
+
 ## 0.7.5
 
 ### Patch Changes

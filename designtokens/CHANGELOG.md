@@ -1,5 +1,17 @@
 # @trvt/designtokens
 
+## 0.6.4
+
+### Patch Changes
+
+-   New deps
+
+## 0.6.3
+
+### Patch Changes
+
+-   New deps and builds
+
 ## 0.6.2
 
 ### Patch Changes

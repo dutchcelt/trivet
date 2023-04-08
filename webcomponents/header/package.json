@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/header",
-	"version": "0.7.2",
+	"version": "0.7.4",
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.6.3"
+		"@trvt/core": "^0.6.7"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
