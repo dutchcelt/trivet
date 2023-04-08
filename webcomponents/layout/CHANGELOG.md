@@ -1,5 +1,11 @@
 # @trvt/layout
 
+## 0.7.4
+
+### Patch Changes
+
+-   Cleanup of props and api props
+
 ## 0.7.3
 
 ### Patch Changes
