@@ -4,7 +4,7 @@
 
 	@layer props {
 		.trvt-layout {
-			--_layout-min-width: var(--trvt-layout-min-width, 375px);
+			--_layout-min-width: var(--trvt-layout-min-width, 320px);
 			--_layout-max-width: var(--trvt-layout-max-width, 1280px);
 			
 			--_padding-inline: var(--trvt-layout-inline-spacing, 0);
@@ -98,6 +98,18 @@
 			}
 		}
 		
+		@container layout (max-width: 680px) {
+			.trvt-layout
+				--_template--columns: 1fr;
+				--_template--areas: 'notification'
+					'navigation'
+					'header'
+					'main'
+					'footer';
+				--_layout-column-gap: var(--trvt-layout-column-gap, 2rem);
+
+			}
+		}
 		:host([data-collapse="both"]) .trvt-layout {
 			--_layout-row-gap: 0;
 			--_layout-column-gap: 0;
