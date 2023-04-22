@@ -22,6 +22,7 @@ const compressStylesFunc = (css) => {
 	return transform({
 		code: Buffer.from(css),
 		minify: true,
+		errorRecovery: true,
 		sourceMap: false,
 	}).code.toString();
 };

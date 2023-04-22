@@ -14,7 +14,7 @@ try {
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	const transformedData = `@layer design.tokens {\n ${data} \n}\n`;
+	const transformedData = `@layer design.tokens {\n${data}\n}\n`;
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
 		transformedData,

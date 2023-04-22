@@ -1,5 +1,5 @@
 @layer design.tokens {
- :root {
+:root {
   --trvt-color-background-canvas: Canvas;
   --trvt-color-background-viewport: Canvas;
   --trvt-color-background-content: Canvas;
@@ -142,5 +142,5 @@
   --trvt-typography-whitespace-default-row-gap: 2ex;
   --trvt-typography-whitespace-default-column-gap: 2ch;
 }
- 
+
 }
