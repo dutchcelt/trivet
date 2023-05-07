@@ -14,7 +14,7 @@
 	html {
 		--trvt-typography-family-base: 'Mona Sans', sans-serif;
 		--trvt-typography-family-display: 'Hubot Sans', sans-serif;
-		--trvt-typography-family-gui: 'Rubik', sans-serif;
+		--trvt-typography-family-gui: 'Hubot Sans', sans-serif;
 
 		/* 125% => 20px. 150% => 24px */
 		font-size: 125%;

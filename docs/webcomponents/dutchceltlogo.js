@@ -28,9 +28,9 @@ class DutchceltLogo extends HTMLElement {
 						}
 						a {
 								padding: 1rem;
-								font-family: 'Rubik';
+								font-family: 'Mona Sans';
 								color: canvasText;
-								font-variation-settings: 'wght' 400;
+								font-variation-settings: 'wght' 500;
 								text-decoration: none;
 								font-size: 1rem;
 								/* text-transform: capitalize; */
