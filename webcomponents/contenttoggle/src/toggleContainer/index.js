@@ -15,11 +15,13 @@ export class TrvtTabContainer extends HTMLElement {
 	`;
 		this.shadowRoot.adoptedStyleSheets = [...styles, toggleContainerCSS];
 		this.slotElement = this.shadowRoot.querySelector('slot');
-		this.toggleComponents = [...this.slotElement.assignedNodes()].filter(
-			(wc) => /toggle/gi.test(wc.tagName)
-		);
+		this.toggleComponents = [
+			...this.slotElement.assignedElements({ flatten: true }),
+		].filter((wc) => /toggle/gi.test(wc.tagName));
 		this.style = `--numOfToggles:${this.toggleComponents.length}`;
 	}
+	connectedCallback() {}
+
 	handleEvent(event) {
 		event.stopPropagation();
 		this.activeDetail === event.target && event.preventDefault();

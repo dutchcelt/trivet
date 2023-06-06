@@ -1,4 +1,4 @@
-@layer design.tokens {
+@layer design.foundations {
 	:root {
 		--ON: var(--trvt-functional-boolean-on);
 		--OFF: var(--trvt-functional-boolean-off);

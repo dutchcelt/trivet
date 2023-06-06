@@ -1,10 +1,12 @@
 @layer theme {
 	header {
+		display: block;
 		container: header / inline-size;
 	}
 
 	trvt-header {
 		--header-size: 8em;
+		pointer-events: none;
 	}
 
 	trvt-header::part(heading) {
@@ -12,13 +14,9 @@
 		font-family: 'Figtree';
 		font-stretch: 100%;
 		font-size: 7rem;
-		font-weight:800;
+		font-weight: 800;
 		line-height: 1;
 		letter-spacing: -0.05ch;
-		background: url('../images/scratched-optimized.svg') no-repeat 50% 50%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200%;
 		width: 5ch;
 	}
 	@container header (max-width: 375px) {
@@ -36,14 +34,28 @@
 			width: 5ch;
 		}
 	}
+
 	@media (prefers-color-scheme: light) {
 		trvt-header::part(heading) {
-			filter: opacity(80%);
+			background: url('../images/scratched-optimized-dark.svg') no-repeat
+				50% 50%;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		background-size: 200%;
+				width: 5ch;
+			}
 		}
 	}
+
 	@media (prefers-color-scheme: dark) {
 		trvt-header::part(heading) {
-			filter: opacity(80%) invert(100%);
+			background: url('../images/scratched-optimized-light.svg') no-repeat
+				50% 50%;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		background-size: 200%;
+				width: 5ch;
+			}
 		}
 	}
 }

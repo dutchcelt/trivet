@@ -15,7 +15,6 @@ export class TrvtArticle extends HTMLElement {
 
 		this.type = this.getAttribute('type');
 		this.#tag = articleTypes[this.type] || articleTypes.default;
-		console.log(this.type, this.#tag);
 		this.shadowRoot.appendChild(this.render());
 	}
 
