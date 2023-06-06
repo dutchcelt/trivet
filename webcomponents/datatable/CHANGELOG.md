@@ -1,5 +1,13 @@
 # @trvt/datatable
 
+## 0.2.10
+
+### Patch Changes
+
+-   Fix for build
+-   Updated dependencies
+    -   @trvt/core@0.6.8
+
 ## 0.2.9
 
 ### Patch Changes

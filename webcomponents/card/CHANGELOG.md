@@ -1,5 +1,13 @@
 # @trvt/card
 
+## 0.5.8
+
+### Patch Changes
+
+-   Fix for build
+-   Updated dependencies
+    -   @trvt/core@0.6.8
+
 ## 0.5.7
 
 ### Patch Changes

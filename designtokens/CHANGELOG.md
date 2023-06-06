@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.6.5
+
+### Patch Changes
+
+-   Fix for build
+
 ## 0.6.4
 
 ### Patch Changes

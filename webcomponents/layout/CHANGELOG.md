@@ -1,5 +1,13 @@
 # @trvt/layout
 
+## 0.7.8
+
+### Patch Changes
+
+-   Fix for build
+-   Updated dependencies
+    -   @trvt/core@0.6.8
+
 ## 0.7.7
 
 ### Patch Changes
