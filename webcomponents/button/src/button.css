@@ -1,8 +1,14 @@
 @layer components {
-	@layer selectors {
-		:host {
-		}
+	@layer props {
 		button {
+			--_radius: 0.5ch;
+			--_background-color: canvas;
+		}
+	}
+	@layer selectors {
+		button {
+			border-radius: var(--_radius);
+			background: var(--_background-color);
 		}
 	}
 }

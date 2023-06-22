@@ -61,7 +61,9 @@
 					"@trvt/layout": "https://cdn.jsdelivr.net/npm/@trvt/layout/build/index.js",
 					"@trvt/layout/": "https://cdn.jsdelivr.net/npm/@trvt/layout/src/",
 					"@trvt/lists": "https://cdn.jsdelivr.net/npm/@trvt/lists/build/index.js",
-					"@trvt/lists/": "https://cdn.jsdelivr.net/npm/@trvt/lists/src/"
+					"@trvt/lists/": "https://cdn.jsdelivr.net/npm/@trvt/lists/src/",
+					"@trvt/button": "../webcomponents/button/build/index.js",
+					"@trvt/button/": "../webcomponents/button/src/"
 				}
 			}
 		</script>
@@ -75,6 +77,7 @@
 			import '@trvt/datatable';
 			import '@trvt/dragscroller';
 			import '@trvt/lists';
+			import '@trvt/button';
 
 			// import { fontsLoader } from '@trvt/core';
 			// import facesObject from '../fonts/faces.json' assert { type: 'json' };
@@ -161,6 +164,11 @@
 							dolores quibusdam esse reprehenderit quos tempora at
 							ratione perspiciatis temporibus.
 						</p>
+						<form action="#">
+							<trvt-button id="test" data-trvt-type="submit"
+								>test</trvt-button
+							>
+						</form>
 						<p>
 							Lorem ipsum dolor sit, amet consectetur adipisicing
 							elit. Voluptatibus modi magni, possimus fugiat
