@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.6.1
+
+### Patch Changes
+
+-   Added lightDOM fix for focus on buttons in Safari
+
 ## 0.6.0
 
 ### Minor Changes

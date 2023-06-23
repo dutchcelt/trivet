@@ -1,5 +1,13 @@
 # @trvt/card
 
+## 0.5.9
+
+### Patch Changes
+
+-   Cards and Article subclass the content class in Core.
+-   Updated dependencies
+    -   @trvt/core@0.6.9
+
 ## 0.5.8
 
 ### Patch Changes
