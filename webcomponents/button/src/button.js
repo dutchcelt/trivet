@@ -1,5 +1,8 @@
 import { styles } from '@trvt/core';
 import buttonCSS from './button.css' assert { type: 'css' };
+import buttonLightDomCSS from './button-lightdom.css' assert { type: 'css' };
+
+document.adoptedStyleSheets.push(buttonLightDomCSS);
 
 export class TrvtButton extends HTMLElement {
 	static formAssociated = true;
@@ -13,7 +16,7 @@ export class TrvtButton extends HTMLElement {
 		this.#internals = this.attachInternals();
 		this.#shadowRoot = this.attachShadow({ mode: 'closed' });
 		this.#shadowRoot.adoptedStyleSheets = [...styles, buttonCSS];
-
+		this.tabIndex = 0;
 		this.#type = this.dataset.trvtType || 'button';
 		delete this.dataset.trvtType;
 		this.#value = this.dataset.trvtValue || '';

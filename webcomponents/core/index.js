@@ -4,3 +4,4 @@ export { fontsLoader } from './src/fontsLoader.js';
 export { defineElement } from './src/defineElement.js';
 export { createFragment } from './src/createFragment.js';
 export { ShadowStyles } from './src/shadowStyles.js';
+export { ContentElementClass } from './src/contentClass.js';

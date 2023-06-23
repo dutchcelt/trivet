@@ -1,14 +1,38 @@
 @layer components {
 	@layer props {
-		button {
+		:host {
+			/* This is to style the 'button' in the light DOM via the Custom Element. */
 			--_radius: 0.5ch;
+			--_outline-color: dodgerblue;
+			--_outline-width: 4px;
+			--_outline-offset: 2px;
+		}
+		button {
+			--_padding-block: var(--trvt-spacing-content-block-xs, 0.5rem);
+			--_padding-inline: var(--trvt-spacing-content-inline-s, 0.5rem);
+			--_row-gap: var(--trvt-spacing-content-block-xs, 0.5rem);
+			--_column-gap: var(--trvt-spacing-content-inline-s, 0.5rem);
 			--_background-color: canvas;
 		}
 	}
 	@layer selectors {
+		:host {
+			display: inline-block;
+			contain: layout;
+		}
 		button {
+			display: inline-flex;
+			row-gap: var(--_row-gap);
+			column-gap: var(--_column-gap);
 			border-radius: var(--_radius);
+			padding-block: var(--_padding-block);
+			padding-inline: var(--_padding-inline);
 			background: var(--_background-color);
+		}
+	}
+	@layer modifiers {
+		button:focus-visible {
+			outline: unset;
 		}
 	}
 }
