@@ -1,5 +1,13 @@
 # @trvt/article
 
+## 0.5.12
+
+### Patch Changes
+
+-   Rebuild for publishing correct files and dependencies
+-   Updated dependencies
+    -   @trvt/core@0.6.10
+
 ## 0.5.11
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @trvt/contenttoggle
 
+## 0.2.11
+
+### Patch Changes
+
+-   Rebuild for publishing correct files and dependencies
+-   Updated dependencies
+    -   @trvt/core@0.6.10
+
 ## 0.2.10
 
 ### Patch Changes

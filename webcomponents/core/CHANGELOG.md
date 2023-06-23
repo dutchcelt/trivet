@@ -1,5 +1,13 @@
 # @trvt/core
 
+## 0.6.10
+
+### Patch Changes
+
+-   Rebuild for publishing correct files and dependencies
+-   Updated dependencies
+    -   @trvt/assets@0.5.8
+
 ## 0.6.9
 
 ### Patch Changes
