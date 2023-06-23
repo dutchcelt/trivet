@@ -40,7 +40,10 @@
 		--summary-icon-closed-char: var(--icon-plus-char, '+');
 		--summary-block-space: var(--trvt-spacing-content-block-xs, 1rem);
 		--summary-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
-		--summary-font-family: var(--trvt-typography-family-display, sans-serif);
+		--summary-font-family: var(
+			--trvt-typography-family-display,
+			sans-serif
+		);
 		--summary-font-weight: var(--font-weight-bold, 600);
 	}
 }
@@ -126,5 +129,10 @@
 	[open] {
 		--detail-surface-color: var(--detail-surface-color-active);
 		--summary-surface-color: var(--summary-surface-color-active);
+	}
+
+	summary:is(:focus, :focus-visible) {
+		outline-offset: 2px;
+		outline: 4px solid dodgerblue;
 	}
 }

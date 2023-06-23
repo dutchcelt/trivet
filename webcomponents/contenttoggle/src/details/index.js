@@ -8,6 +8,7 @@ export class TrvtToggleDetails extends HTMLElement {
 		this.render();
 		this.shadowRoot.adoptedStyleSheets = [...styles, details];
 		this.detailsElement = this.shadowRoot.querySelector('details');
+		this.contentElement = this.shadowRoot.querySelector('.content');
 		this.detailsElement.addEventListener('toggle', this);
 		this.toggleEvent = new Event('toggle', {
 			bubbles: true,
@@ -19,6 +20,7 @@ export class TrvtToggleDetails extends HTMLElement {
 		if (oldValue === newValue) return;
 		const isOpen = newValue !== null;
 		this.detailsElement.toggleAttribute('open', isOpen);
+		this.contentElement.toggleAttribute('inert', !isOpen);
 	}
 	static get observedAttributes() {
 		return ['open'];
@@ -40,7 +42,7 @@ export class TrvtToggleDetails extends HTMLElement {
 	}
 	render() {
 		this.shadowRoot.innerHTML = `
-    		<details ${this.open ? 'open' : ''}>
+    		<details>
 				<summary>${this.title}</summary>
 				<div class="content"><slot></slot></div>
 			</details>
