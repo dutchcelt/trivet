@@ -512,11 +512,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/article@workspace:webcomponents/article"
   dependencies:
-    "@trvt/core": ^0.6.9
+    "@trvt/core": ^0.6.10
   languageName: unknown
   linkType: soft
 
-"@trvt/assets@^0.5.7, @trvt/assets@workspace:assets":
+"@trvt/assets@^0.5.8, @trvt/assets@workspace:assets":
   version: 0.0.0-use.local
   resolution: "@trvt/assets@workspace:assets"
   dependencies:
@@ -529,7 +529,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/button@workspace:webcomponents/button"
   dependencies:
-    "@trvt/core": ^0.6.8
+    "@trvt/core": ^0.6.10
   languageName: unknown
   linkType: soft
 
@@ -537,7 +537,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/card@workspace:webcomponents/card"
   dependencies:
-    "@trvt/core": ^0.6.9
+    "@trvt/core": ^0.6.10
   languageName: unknown
   linkType: soft
 
@@ -551,15 +551,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/contenttoggle@workspace:webcomponents/contenttoggle"
   dependencies:
-    "@trvt/core": ^0.6.8
+    "@trvt/core": ^0.6.10
   languageName: unknown
   linkType: soft
 
-"@trvt/core@^0.6.8, @trvt/core@^0.6.9, @trvt/core@workspace:webcomponents/core":
+"@trvt/core@^0.6.10, @trvt/core@^0.6.8, @trvt/core@workspace:webcomponents/core":
   version: 0.0.0-use.local
   resolution: "@trvt/core@workspace:webcomponents/core"
   dependencies:
-    "@trvt/assets": ^0.5.7
+    "@trvt/assets": ^0.5.8
     "@trvt/designtokens": ^0.6.5
   languageName: unknown
   linkType: soft
