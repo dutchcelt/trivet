@@ -8,7 +8,7 @@
   --trvt-color-background-icon: Canvas;
   --trvt-color-background-highlight: Highlight;
   --trvt-color-background-accentcolor: AccentColor;
-  --trvt-color-background-button: ButtonFace;
+  --trvt-color-background-button: Canvas; /* ButtonFace is the standard value but it's too dark. */
   --trvt-color-background-field: Field;
   --trvt-color-background-selected: SelectedItem;
   --trvt-color-background-mark: Mark;
@@ -39,13 +39,18 @@
   --trvt-color-brand-secondary-inverted: Canvas;
   --trvt-color-brand-tertiary: CanvasText;
   --trvt-color-brand-tertiary-inverted: Canvas;
-  --trvt-color-feedback-note: lightblue;
-  --trvt-color-feedback-info: lightsteel;
-  --trvt-color-feedback-attention: orange;
-  --trvt-color-feedback-warning: crimson;
-  --trvt-color-feedback-error: red;
-  --trvt-color-feedback-pending: purple;
-  --trvt-color-feedback-new: green;
+  --trvt-color-context-cta: #364fc7;
+  --trvt-color-context-new: #5c940d;
+  --trvt-color-context-note: #e67700;
+  --trvt-color-context-info: #862e9c;
+  --trvt-color-context-attention: #087f5b;
+  --trvt-color-context-warning: #d9480f;
+  --trvt-color-context-error: #c92a2a;
+  --trvt-color-context-pending: #5f3dc4;
+  --trvt-color-context-success: #2b8a3e;
+  --trvt-color-context-primary: #1864ab;
+  --trvt-color-context-secondary: #1864ab;
+  --trvt-color-context-tertiary: #1864ab;
   --trvt-color-line-ui: CanvasText;
   --trvt-color-line-seperator: CanvasText;
   --trvt-color-line-border: CanvasText;
@@ -66,6 +71,7 @@
   --trvt-color-open-yellow: #e67700;
   --trvt-color-open-orange: #d9480f;
   --trvt-color-typography-text: CanvasText;
+  --trvt-color-typography-text-inverted: Canvas;
   --trvt-color-typography-heading: CanvasText;
   --trvt-color-typography-icon: CanvasText;
   --trvt-color-typography-ui: ButtonText;

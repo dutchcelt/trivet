@@ -2,6 +2,7 @@
 	"color": {
 		"typography": {
 			"text": { "value": "CanvasText" },
+			"text-inverted": { "value": "Canvas" },
 			"heading": { "value": "CanvasText" },
 			"icon": { "value": "CanvasText" },
 			"ui": { "value": "ButtonText" },

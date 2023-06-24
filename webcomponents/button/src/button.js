@@ -25,12 +25,11 @@ export class TrvtButton extends HTMLElement {
 		this.#type = this.dataset.trvtType || 'button';
 		delete this.dataset.trvtType;
 		this.#value = this.dataset.trvtValue || '';
-
+		this.context = this.dataset.trvtContext || 'default';
 		this.trvtDisabled = this.dataset.trvtDisabled || false;
 		this.#shadowRoot.appendChild(this.#render());
-		this.#button = this.#shadowRoot.querySelector('button');
 
-		this.#button.addEventListener('click', () => this.#clickHandler());
+		this.addEventListener('click', () => this.#clickHandler());
 		this.addEventListener('mousedown', this.#mousedownHandler);
 		this.addEventListener('keydown', this.#keydownHandler);
 		this.addEventListener('keyup', this.#keyupHandler);
@@ -58,6 +57,7 @@ export class TrvtButton extends HTMLElement {
 				${!!this.trvtDisabled && ` disabled="true"`}
 				${!!this.id && ` id="${this.id}"`}
 				${!!this.name && ` name="${this.name}"`}
+				${' ' + this.context}
 			>
 				<slot></slot>
 			</button>
@@ -116,7 +116,7 @@ export class TrvtButton extends HTMLElement {
 	 * @private
 	 */
 	#keyupHandler(event) {
-		isKeyboardClickEvent(event) && this.#button.click();
+		isKeyboardClickEvent(event) && this.#clickHandler();
 	}
 }
 customElements.define('trvt-button', TrvtButton);

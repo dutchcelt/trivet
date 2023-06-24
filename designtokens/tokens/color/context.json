@@ -1,0 +1,18 @@
+{
+	"color": {
+		"context": {
+			"cta": { "value": "{color.open.indigo.value}" },
+			"new": { "value": "{color.open.lime.value}" },
+			"note": { "value": "{color.open.yellow.value}" },
+			"info": { "value": "{color.open.grape.value}" },
+			"attention": { "value": "{color.open.teal.value}" },
+			"warning": { "value": "{color.open.orange.value}" },
+			"error": { "value": "{color.open.red.value}" },
+			"pending": { "value": "{color.open.violet.value}" },
+			"success": { "value": "{color.open.green.value}" },
+			"primary": { "value": "{color.open.blue.value}" },
+			"secondary": { "value": "{color.open.blue.value}" },
+			"tertiary": { "value": "{color.open.blue.value}" }
+		}
+	}
+}

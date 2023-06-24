@@ -133,6 +133,6 @@
 
 	summary:is(:focus, :focus-visible) {
 		outline-offset: 2px;
-		outline: 4px solid dodgerblue;
+		outline: 4px solid var(--trvt-color-line-outline);
 	}
 }

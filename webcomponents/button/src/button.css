@@ -3,7 +3,7 @@
 		:host {
 			/* This is to style the 'button' in the light DOM via the Custom Element. */
 			--_radius: 0.5ch;
-			--_outline-color: dodgerblue;
+			--_outline-color: var(--trvt-color-line-outline);
 			--_outline-width: 4px;
 			--_outline-offset: 2px;
 		}
@@ -12,9 +12,26 @@
 			--_padding-inline: var(--trvt-spacing-content-inline-s, 0.5rem);
 			--_row-gap: var(--trvt-spacing-content-block-xs, 0.5rem);
 			--_column-gap: var(--trvt-spacing-content-inline-s, 0.5rem);
-			--_background-color: canvas;
+			--_border-color: var(--trvt-color-line-ui);
+			--_border-style: solid;
+			--_border-width: 2px;
+			--_font-family: var(--trvt-typography-family-gui);
+			--_color: var(--trvt-color-base-button);
+			--_background-color: var(--trvt-color-background-button);
 		}
 	}
+
+	@layer modifiers {
+		button:focus-visible {
+			outline: unset;
+		}
+		button[primary] {
+			--_border-color: transparent;
+			--_color: var(--trvt-color-typography-text-inverted);
+			--_background-color: var(--trvt-color-context-primary);
+		}
+	}
+
 	@layer selectors {
 		:host {
 			display: inline-block;
@@ -27,12 +44,12 @@
 			border-radius: var(--_radius);
 			padding-block: var(--_padding-block);
 			padding-inline: var(--_padding-inline);
+			border-color: var(--_border-color);
+			border-style: var(--_border-style);
+			border-width: var(--_border-width);
+			font-family: var(--_font-family);
+			color: var(--_color);
 			background: var(--_background-color);
-		}
-	}
-	@layer modifiers {
-		button:focus-visible {
-			outline: unset;
 		}
 	}
 }

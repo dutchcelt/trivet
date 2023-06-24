@@ -1,7 +1,7 @@
 {
 	"color": {
 		"background": {
-			"canvas": { "value": "Canvas"},
+			"canvas": { "value": "Canvas" },
 			"viewport": { "value": "Canvas" },
 			"content": { "value": "Canvas" },
 			"surface": { "value": "Grey" },
@@ -9,7 +9,10 @@
 			"icon": { "value": "Canvas" },
 			"highlight": { "value": "Highlight" },
 			"accentcolor": { "value": "AccentColor" },
-			"button": { "value": "ButtonFace" },
+			"button": {
+				"value": "Canvas",
+				"comment": "ButtonFace is the standard value but it's too dark."
+			},
 			"field": { "value": "Field" },
 			"selected": { "value": "SelectedItem" },
 			"mark": { "value": "Mark" }
