@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/button",
-	"version": "0.7.1",
+	"version": "0.7.2",
 	"description": "Botton component for the Trivet Design System",
 	"type": "modules",
 	"main": "index.js",
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@trvt/core": "^0.6.10"
+		"@trvt/core": "^0.6.11"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",

@@ -1,5 +1,13 @@
 # @trvt/button
 
+## 0.7.2
+
+### Patch Changes
+
+-   New colors for context, signals and actions
+-   Updated dependencies
+    -   @trvt/core@0.6.11
+
 ## 0.7.1
 
 ### Patch Changes

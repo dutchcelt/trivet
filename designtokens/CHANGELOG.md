@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.6.6
+
+### Patch Changes
+
+-   New colors for context, signals and actions
+
 ## 0.6.5
 
 ### Patch Changes

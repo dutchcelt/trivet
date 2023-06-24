@@ -30,6 +30,31 @@
 			--_color: var(--trvt-color-typography-text-inverted);
 			--_background-color: var(--trvt-color-context-primary);
 		}
+		button[cta] {
+			--_border-color: transparent;
+			--_color: var(--trvt-color-typography-text-inverted);
+			--_background-color: var(--trvt-color-context-cta);
+		}
+		button[warning] {
+			--_border-color: transparent;
+			--_color: var(--trvt-color-typography-text-inverted);
+			--_background-color: var(--trvt-color-context-warning);
+		}
+		button:is([abort], [error]) {
+			--_border-color: transparent;
+			--_color: var(--trvt-color-typography-text-inverted);
+			--_background-color: var(--trvt-color-context-error);
+		}
+		button:is([success], [approve]) {
+			--_border-color: transparent;
+			--_color: var(--trvt-color-typography-text-inverted);
+			--_background-color: var(--trvt-color-context-success);
+		}
+		button[release] {
+			--_border-color: transparent;
+			--_color: var(--trvt-color-typography-text-inverted);
+			--_background-color: var(--trvt-color-context-pending);
+		}
 	}
 
 	@layer selectors {

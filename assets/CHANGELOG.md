@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.5.9
+
+### Patch Changes
+
+-   New colors for context, signals and actions
+-   Updated dependencies
+    -   @trvt/designtokens@0.6.6
+
 ## 0.5.8
 
 ### Patch Changes

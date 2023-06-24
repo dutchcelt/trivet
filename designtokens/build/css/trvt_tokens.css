@@ -45,7 +45,10 @@
   --trvt-color-context-info: #862e9c;
   --trvt-color-context-attention: #087f5b;
   --trvt-color-context-warning: #d9480f;
-  --trvt-color-context-error: #c92a2a;
+  --trvt-color-context-failure: #c92a2a;
+  --trvt-color-context-abort: #c92a2a;
+  --trvt-color-context-release: #5f3dc4;
+  --trvt-color-context-approve: #2b8a3e;
   --trvt-color-context-pending: #5f3dc4;
   --trvt-color-context-success: #2b8a3e;
   --trvt-color-context-primary: #1864ab;
