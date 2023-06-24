@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.7.1
+
+### Patch Changes
+
+-   Missing build file (need to automate this)
+
 ## 0.7.0
 
 ### Minor Changes
