@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.7.0
+
+### Minor Changes
+
+-   Added keyboard events to the host element to reflect button behaviour. Events are similar to the ones found on the Lion Web Component button.
+
 ## 0.6.2
 
 ### Patch Changes
