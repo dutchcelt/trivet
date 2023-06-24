@@ -165,8 +165,11 @@
 							ratione perspiciatis temporibus.
 						</p>
 						<form action="#">
-							<trvt-button id="test" data-trvt-type="submit"
-								>Test Button</trvt-button
+							<trvt-button
+								id="test2"
+								data-trvt-type="submit"
+								data-trvt-context="primary"
+								>Approve</trvt-button
 							>
 						</form>
 						<p>
@@ -196,6 +199,26 @@
 						</p>
 					</trvt-toggle-details>
 				</trvt-tab-container>
+				<form action="#">
+					<trvt-button>Cancel</trvt-button>
+					<trvt-button data-trvt-context="cta">CTA</trvt-button>
+					<trvt-button data-trvt-context="warning"
+						>Warning</trvt-button
+					>
+					<trvt-button data-trvt-context="abort">Error</trvt-button>
+					<trvt-button data-trvt-context="approve"
+						>Approve</trvt-button
+					>
+					<trvt-button data-trvt-context="release"
+						>Release</trvt-button
+					>
+					<trvt-button
+						id="test2"
+						data-trvt-type="submit"
+						data-trvt-context="primary"
+						>Approve</trvt-button
+					>
+				</form>
 				<trvt-table style="--canvas">
 					<trvt-thead>
 						<trvt-row>
