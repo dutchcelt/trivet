@@ -35,8 +35,13 @@ export class TrvtButton extends HTMLElement {
 		this.addEventListener('keydown', this.#keydownHandler);
 		this.addEventListener('keyup', this.#keyupHandler);
 	}
-
-	attributeChangedCallback(name, oldValue, newValue) {
+	/**
+	 * attributeChangedCallback
+	 * @param {Array} args
+	 */
+	attributeChangedCallback(...args) {
+		const [, oldValue, newValue] = args;
+		if (oldValue === newValue) return;
 		this.#value = newValue;
 		this.#internals.form && this.#internals.setFormValue(newValue);
 	}
