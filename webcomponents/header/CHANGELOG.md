@@ -1,5 +1,11 @@
 # @trvt/header
 
+## 0.7.6
+
+### Patch Changes
+
+-   Minor change in background image
+
 ## 0.7.5
 
 ### Patch Changes

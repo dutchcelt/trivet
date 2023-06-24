@@ -1,6 +1,13 @@
 # @trvt/docs
 
-## 0.0.1
+## 0.0.2
+
 ### Patch Changes
 
-- Fix for build
+-   Minor change in markup
+
+## 0.0.1
+
+### Patch Changes
+
+-   Fix for build

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/header",
-	"version": "0.7.5",
+	"version": "0.7.6",
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
