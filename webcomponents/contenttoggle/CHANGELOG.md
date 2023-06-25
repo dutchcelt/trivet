@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.2.12
+
+### Patch Changes
+
+-   Outline colour fix
+
 ## 0.2.11
 
 ### Patch Changes
