@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.7.6
+
+### Patch Changes
+
+-   Added stroke tokens for borders and lines
+
 ## 0.7.5
 
 ### Patch Changes

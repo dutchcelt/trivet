@@ -111,6 +111,11 @@
   --trvt-spacing-content-inline-l: 4ch;
   --trvt-spacing-content-inline-xl: 6ch;
   --trvt-spacing-content-inline-xxl: 8ch;
+  --trvt-stroke-hairline: 0.5px;
+  --trvt-stroke-thin: 1px;
+  --trvt-stroke-medium: 2px;
+  --trvt-stroke-thick: 3px;
+  --trvt-stroke-heavy: 4px;
   --trvt-typography-family-base: sans-serif;
   --trvt-typography-family-display: sans-serif;
   --trvt-typography-family-gui: sans-serif;

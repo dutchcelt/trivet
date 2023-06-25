@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.6.1",
+	"version": "0.6.2",
 	"type": "module",
 	"main": "build/index.js",
 	"files": [
@@ -15,7 +15,7 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.4.1",
 	"dependencies": {
-		"@trvt/designtokens": "^0.7.1"
+		"@trvt/designtokens": "^0.7.2"
 	},
 	"devDependencies": {
 		"wawoff2": "^2.0.1"

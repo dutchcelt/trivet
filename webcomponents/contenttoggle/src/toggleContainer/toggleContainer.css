@@ -14,7 +14,7 @@
 			canvas
 		);
 		--toggle-border-color: canvasText;
-		--toggle-border-width: 2px;
+		--toggle-border-width: var(--trvt-stroke-medium);
 	}
 	.content {
 		--tab-radius: var(--is-tabbed, 1ex);

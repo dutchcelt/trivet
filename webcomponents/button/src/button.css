@@ -5,8 +5,8 @@
 			/* This is to style the 'button' in the light DOM via the Custom Element. */
 			--_radius: 0.5ch;
 			--_outline-color: var(--trvt-color-line-outline);
-			--_outline-width: 4px;
-			--_outline-offset: 2px;
+			--_outline-width: var(--trvt-stroke-heavy);
+			--_outline-offset: var(--trvt-stroke-medium);
 		}
 		button {
 			/* Context State toggle setup */
@@ -26,9 +26,9 @@
 			--_column-gap: var(--trvt-spacing-content-inline-s, 0.5rem);
 			--_border-color: var(--trvt-color-line-ui);
 			--_border-style: solid;
-			--_border-width: 2px;
+			--_border-width: var(--trvt-stroke-medium);
 			--_font-family: var(--trvt-typography-family-gui);
-			--_color: var(--trvt-color-base-button);
+			--_color: var(--trvt-color-base-dark);
 			--_background-color: var(--trvt-color-background-button);
 		}
 	}
@@ -48,27 +48,27 @@
 				
 			--_color: var(
 					--_context-primary,
-					var(--trvt-color-typography-text-inverted)
+					var(--trvt-color-base-light)
 				)
 				var(
 					--_context-cta, 
-					var(--trvt-color-typography-text-inverted)
+					var(--trvt-color-base-light)
 				)
 				var(
 					--_context-abort,
-					var(--trvt-color-typography-text-inverted)
+					var(--trvt-color-base-light)
 				)
 				var(
 					--_context-approve,
-					var(--trvt-color-typography-text-inverted)
+					var(--trvt-color-base-light)
 				)
 				var(
 					--_context-release,
-					var(--trvt-color-typography-text-inverted)
+					var(--trvt-color-base-light)
 				)
 				var(
 					--_context-pause,
-					var(--trvt-color-typography-text-inverted)
+					var(--trvt-color-base-light)
 				);
 			--_background-color: var(
 					--_context-primary,

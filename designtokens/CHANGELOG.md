@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.7.2
+
+### Patch Changes
+
+-   Added stroke tokens for borders and lines
+
 ## 0.7.1
 
 ### Patch Changes

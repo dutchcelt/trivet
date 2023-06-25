@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.6.2
+
+### Patch Changes
+
+-   Added stroke tokens for borders and lines
+-   Updated dependencies
+    -   @trvt/designtokens@0.7.2
+
 ## 0.6.1
 
 ### Patch Changes

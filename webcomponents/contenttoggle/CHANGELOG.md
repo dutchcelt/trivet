@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.2.13
+
+### Patch Changes
+
+-   Added stroke tokens for borders and lines
+
 ## 0.2.12
 
 ### Patch Changes
