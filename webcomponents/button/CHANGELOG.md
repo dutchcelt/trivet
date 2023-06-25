@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.7.5
+
+### Patch Changes
+
+-   Tokens are missing the pause button
+
 ## 0.7.4
 
 ### Patch Changes

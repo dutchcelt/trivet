@@ -9,6 +9,7 @@
 			--_outline-offset: 2px;
 		}
 		button {
+			/* Context State toggle setup */
 			--_context: var(--_context-default);
 			--_context-default: var(--_context,);
 			--_context-primary: var(--_context,);
@@ -91,7 +92,7 @@
 				)
 				var(
 					--_context-pause,
-					var(--trvt-color-contexts-actionable-release)
+					var(--trvt-color-contexts-actionable-pause)
 				);
 		}
 	}

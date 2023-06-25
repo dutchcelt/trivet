@@ -1,7 +1,7 @@
 {
 	"name": "@trvt/button",
-	"version": "0.7.4",
-	"description": "Botton component for the Trivet Design System",
+	"version": "0.7.5",
+	"description": "Button component for the Trivet Design System",
 	"type": "modules",
 	"main": "index.js",
 	"files": [

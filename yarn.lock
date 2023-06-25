@@ -520,7 +520,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/assets@workspace:assets"
   dependencies:
-    "@trvt/designtokens": ^0.7.0
+    "@trvt/designtokens": ^0.7.1
     wawoff2: ^2.0.1
   languageName: unknown
   linkType: soft
@@ -572,7 +572,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@trvt/designtokens@^0.7.0, @trvt/designtokens@workspace:designtokens":
+"@trvt/designtokens@^0.7.0, @trvt/designtokens@^0.7.1, @trvt/designtokens@workspace:designtokens":
   version: 0.0.0-use.local
   resolution: "@trvt/designtokens@workspace:designtokens"
   dependencies:

@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.7.1
+
+### Patch Changes
+
+-   Tokens are missing the pause button
+
 ## 0.7.0
 
 ### Minor Changes

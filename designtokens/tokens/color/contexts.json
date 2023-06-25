@@ -15,6 +15,7 @@
 			"actionable": {
 				"abort": { "value": "{color.open.red.value}" },
 				"release": { "value": "{color.open.violet.value}" },
+				"pause": { "value": "{color.open.gray.value}" },
 				"approve": { "value": "{color.open.green.value}" },
 				"submit": { "value": "{color.open.blue.value}" }
 			},

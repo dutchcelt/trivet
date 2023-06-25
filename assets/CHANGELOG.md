@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.6.1
+
+### Patch Changes
+
+-   Tokens are missing the pause button
+-   Updated dependencies
+    -   @trvt/designtokens@0.7.1
+
 ## 0.6.0
 
 ### Minor Changes
