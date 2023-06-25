@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.2.11
+
+### Patch Changes
+
+-   Added stroke tokens
+
 ## 0.2.10
 
 ### Patch Changes

@@ -65,8 +65,8 @@
 			var(--number-of-rows, var(--trvt-number-of-rows)),
 			auto
 		);
-		border-top: 2px solid var(--canvasText);
-		border-right: 2px solid var(--canvasText);
+		border-top: var(--trvt-stroke-medium) solid var(--canvasText);
+		border-right: var(--trvt-stroke-medium) solid var(--canvasText);
 		background-color: var(--canvas);
 		color: var(--canvasText);
 	}

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/dragscroller",
-	"version": "0.2.9",
+	"version": "0.2.10",
 	"description": "Drag the conents of a scrollbox",
 	"main": "index.js",
 	"files": [

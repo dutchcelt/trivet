@@ -26,11 +26,11 @@
 		scroll-snap-type: x mandatory;
 	}
 	.scrollbox::-webkit-scrollbar {
-		height: 4px;
+		height: var(--trvt-stroke-heavy);
 		border: 0;
 	}
 	.scrollbox::-webkit-scrollbar-thumb {
-		background: #222;
+		background: var(--trvt-color-line-ui);
 	}
 	.scrollbox::-webkit-scrollbar-track {
 		background: transparent;

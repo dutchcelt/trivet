@@ -1,5 +1,11 @@
 # @trvt/dragscroller
 
+## 0.2.10
+
+### Patch Changes
+
+-   Added stroke tokens
+
 ## 0.2.9
 
 ### Patch Changes
