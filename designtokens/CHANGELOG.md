@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.7.0
+
+### Minor Changes
+
+-   Changed the context colours by adding layers like, Editorial, Actionable, etc.
+
 ## 0.6.6
 
 ### Patch Changes

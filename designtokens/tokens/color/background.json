@@ -4,7 +4,10 @@
 			"canvas": { "value": "Canvas" },
 			"viewport": { "value": "Canvas" },
 			"content": { "value": "Canvas" },
-			"surface": { "value": "Grey" },
+			"surface": {
+				"value": "Canvas",
+				"comment": "A surface is usually reserved for components. It's here for convinence."
+			},
 			"header": { "value": "CanvasText" },
 			"icon": { "value": "Canvas" },
 			"highlight": { "value": "Highlight" },

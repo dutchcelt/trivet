@@ -1,3 +1,4 @@
+/* prettier-ignore */
 @layer components {
 	@layer props {
 		:host {
@@ -6,6 +7,16 @@
 			--_outline-color: var(--trvt-color-line-outline);
 			--_outline-width: 4px;
 			--_outline-offset: 2px;
+		}
+		button {
+			--_context: var(--_context-default);
+			--_context-default: var(--_context,);
+			--_context-primary: var(--_context,);
+			--_context-cta: var(--_context,);
+			--_context-abort: var(--_context,);
+			--_context-approve: var(--_context,);
+			--_context-pause: var(--_context,);
+			--_context-release: var(--_context,);
 		}
 		button {
 			--_padding-block: var(--trvt-spacing-content-block-xs, 0.5rem);
@@ -25,35 +36,63 @@
 		button:focus-visible {
 			outline: unset;
 		}
-		button[primary] {
-			--_border-color: transparent;
-			--_color: var(--trvt-color-typography-text-inverted);
-			--_background-color: var(--trvt-color-context-primary);
-		}
-		button[cta] {
-			--_border-color: transparent;
-			--_color: var(--trvt-color-typography-text-inverted);
-			--_background-color: var(--trvt-color-context-cta);
-		}
-		button[warning] {
-			--_border-color: transparent;
-			--_color: var(--trvt-color-typography-text-inverted);
-			--_background-color: var(--trvt-color-context-warning);
-		}
-		button:is([abort], [error]) {
-			--_border-color: transparent;
-			--_color: var(--trvt-color-typography-text-inverted);
-			--_background-color: var(--trvt-color-context-error);
-		}
-		button:is([success], [approve]) {
-			--_border-color: transparent;
-			--_color: var(--trvt-color-typography-text-inverted);
-			--_background-color: var(--trvt-color-context-success);
-		}
-		button[release] {
-			--_border-color: transparent;
-			--_color: var(--trvt-color-typography-text-inverted);
-			--_background-color: var(--trvt-color-context-pending);
+
+		button {
+			--_border-color: var(--_context-primary, transparent)
+				var(--_context-cta, transparent)
+				var(--_context-abort, transparent)
+				var(--_context-approve, transparent)
+				var(--_context-pause, transparent)
+				var(--_context-release, transparent);
+				
+			--_color: var(
+					--_context-primary,
+					var(--trvt-color-typography-text-inverted)
+				)
+				var(
+					--_context-cta, 
+					var(--trvt-color-typography-text-inverted)
+				)
+				var(
+					--_context-abort,
+					var(--trvt-color-typography-text-inverted)
+				)
+				var(
+					--_context-approve,
+					var(--trvt-color-typography-text-inverted)
+				)
+				var(
+					--_context-release,
+					var(--trvt-color-typography-text-inverted)
+				)
+				var(
+					--_context-pause,
+					var(--trvt-color-typography-text-inverted)
+				);
+			--_background-color: var(
+					--_context-primary,
+					var(--trvt-color-contexts-hierarchical-primary)
+				)
+				var(
+					--_context-cta,
+					var(--trvt-color-contexts-presentational-cta)
+				)
+				var(
+					--_context-abort,
+					var(--trvt-color-contexts-actionable-abort)
+				)
+				var(
+					--_context-approve,
+					var(--trvt-color-contexts-actionable-approve)
+				)
+				var(
+					--_context-release,
+					var(--trvt-color-contexts-actionable-release)
+				)
+				var(
+					--_context-pause,
+					var(--trvt-color-contexts-actionable-release)
+				);
 		}
 	}
 

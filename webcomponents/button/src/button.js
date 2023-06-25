@@ -15,17 +15,21 @@ export class TrvtButton extends HTMLElement {
 	#shadowRoot;
 	#type;
 	#value;
-	#button;
 	constructor() {
 		super();
 		this.#internals = this.attachInternals();
 		this.#shadowRoot = this.attachShadow({ mode: 'closed' });
-		this.#shadowRoot.adoptedStyleSheets = [...styles, buttonCSS];
+		this.contextCSS = new CSSStyleSheet();
+		this.#shadowRoot.adoptedStyleSheets = [
+			...styles,
+			buttonCSS,
+			this.contextCSS,
+		];
 		this.tabIndex = 0;
 		this.#type = this.dataset.trvtType || 'button';
 		delete this.dataset.trvtType;
 		this.#value = this.dataset.trvtValue || '';
-		this.context = this.dataset.trvtContext || 'default';
+		this.context = this.dataset.trvtContext;
 		this.trvtDisabled = this.dataset.trvtDisabled || false;
 		this.#shadowRoot.appendChild(this.#render());
 
@@ -45,10 +49,20 @@ export class TrvtButton extends HTMLElement {
 		this.#internals.form && this.#internals.setFormValue(newValue);
 	}
 
+	#setContextStyle() {
+		this.contextCSS.replaceSync(`
+			@layer components.modifier {
+				button {
+					--_context: --_context-${this.context};
+				}
+			}
+		`);
+	}
 	/**
 	 * @private
 	 */
 	#render() {
+		this.context && this.#setContextStyle();
 		return document.createRange().createContextualFragment(`
 			<button 
 				type="${this.#type}"
@@ -57,7 +71,6 @@ export class TrvtButton extends HTMLElement {
 				${!!this.trvtDisabled && ` disabled="true"`}
 				${!!this.id && ` id="${this.id}"`}
 				${!!this.name && ` name="${this.name}"`}
-				${' ' + this.context}
 			>
 				<slot></slot>
 			</button>

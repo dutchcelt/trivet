@@ -1,0 +1,34 @@
+{
+	"color": {
+		"contexts": {
+			"editorial": {
+				"note": { "value": "{color.open.yellow.value}" },
+				"info": { "value": "{color.open.grape.value}" },
+				"quote": { "value": "{color.open.grape.value}" }
+			},
+			"presentational": {
+				"cta": { "value": "{color.open.indigo.value}" },
+				"new": { "value": "{color.open.lime.value}" },
+				"attention": { "value": "{color.open.teal.value}" },
+				"hightlight": { "value": "{color.open.teal.value}" }
+			},
+			"actionable": {
+				"abort": { "value": "{color.open.red.value}" },
+				"release": { "value": "{color.open.violet.value}" },
+				"approve": { "value": "{color.open.green.value}" },
+				"submit": { "value": "{color.open.blue.value}" }
+			},
+			"hierarchical": {
+				"primary": { "value": "{color.open.blue.value}" },
+				"secondary": { "value": "{color.open.orange.value}" },
+				"tertiary": { "value": "{color.open.teal.value}" }
+			},
+			"status": {
+				"warning": { "value": "{color.open.orange.value}" },
+				"failure": { "value": "{color.open.red.value}" },
+				"pending": { "value": "{color.open.violet.value}" },
+				"success": { "value": "{color.open.green.value}" }
+			}
+		}
+	}
+}

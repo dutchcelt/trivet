@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.7.3
+
+### Patch Changes
+
+-   New colours and toggle system for styling
+
 ## 0.7.2
 
 ### Patch Changes
