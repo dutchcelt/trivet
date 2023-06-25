@@ -53,7 +53,7 @@ export class TrvtButton extends HTMLElement {
 		this.contextCSS.replaceSync(`
 			@layer components.modifier {
 				button {
-					--_context: --_context-${this.context};
+					--_context: var(--_context-${this.context});
 				}
 			}
 		`);

@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.7.4
+
+### Patch Changes
+
+-   Missing var for styling contexts
+
 ## 0.7.3
 
 ### Patch Changes
