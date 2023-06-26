@@ -1,5 +1,16 @@
 # @trvt/lists
 
+## 0.4.0
+
+### Minor Changes
+
+-   Switched to a AGPL v3 license
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.7.0
+
 ## 0.3.5
 
 ### Patch Changes

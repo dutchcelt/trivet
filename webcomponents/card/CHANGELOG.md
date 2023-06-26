@@ -1,5 +1,16 @@
 # @trvt/card
 
+## 0.6.0
+
+### Minor Changes
+
+-   Switched to a AGPL v3 license
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.7.0
+
 ## 0.5.10
 
 ### Patch Changes

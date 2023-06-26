@@ -1,5 +1,17 @@
 # @trvt/core
 
+## 0.7.0
+
+### Minor Changes
+
+-   Switched to a AGPL v3 license
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/assets@0.7.0
+    -   @trvt/designtokens@0.8.0
+
 ## 0.6.12
 
 ### Patch Changes

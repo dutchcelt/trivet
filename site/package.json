@@ -1,13 +1,13 @@
 {
 	"name": "@trvt/site",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": true,
 	"type": "module",
 	"main": "index.js",
 	"files": [],
 	"description": "The Trivet web site.",
 	"author": "C. Egor Kloos",
-	"license": "Apache-2.0",
+	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
 		"build": "echo 'Site: no build'",

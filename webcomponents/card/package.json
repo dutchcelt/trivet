@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/card",
-	"version": "0.5.10",
+	"version": "0.6.0",
 	"description": "Card component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
@@ -13,9 +13,9 @@
 		"components"
 	],
 	"author": "C. Egor Kloos",
-	"license": "Apache-2.0",
+	"license": "AGPLv3",
 	"dependencies": {
-		"@trvt/core": "^0.6.10"
+		"@trvt/core": "^0.7.0"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",

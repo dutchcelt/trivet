@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.8.0
+
+### Minor Changes
+
+-   Switched to a AGPL v3 license
+
 ## 0.7.2
 
 ### Patch Changes

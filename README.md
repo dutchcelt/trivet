@@ -33,3 +33,7 @@ The build task runs all the 'build' script inside the workspace packages.
 ### Develop
 
 -   `yarn develop`
+
+### License
+
+[![AGPLv3 License](https://img.shields.io/badge/License-AGPL%20v3-yellow.svg)](https://opensource.org/licenses/)

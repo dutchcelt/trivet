@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/article",
-	"version": "0.5.12",
+	"version": "0.6.0",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -9,10 +9,10 @@
 	],
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
-	"license": "Apache-2.0",
+	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/core": "^0.6.10"
+		"@trvt/core": "^0.7.0"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",

@@ -1,13 +1,13 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"private": true,
 	"type": "module",
 	"main": "index.html",
 	"files": [],
 	"description": "Documents",
 	"author": "C. Egor Kloos",
-	"license": "Apache-2.0",
+	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
 		"build:copy": "copyfiles ./{fonts,images,styles,webcomponents}/**/*.{js,css,svg,woff2} dist",

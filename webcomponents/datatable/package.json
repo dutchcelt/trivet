@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/datatable",
-	"version": "0.2.11",
+	"version": "0.3.0",
 	"description": "Static datatable",
 	"main": "index.js",
 	"files": [
@@ -13,9 +13,9 @@
 		"components"
 	],
 	"author": "C. Egor Kloos",
-	"license": "Apache-2.0",
+	"license": "AGPLv3",
 	"dependencies": {
-		"@trvt/core": "^0.6.8"
+		"@trvt/core": "^0.7.0"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",

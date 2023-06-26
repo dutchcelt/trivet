@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/dropdown",
-	"version": "0.5.5",
+	"version": "0.6.0",
 	"description": "A very simple dynamic loader of web components and styles",
 	"private": true,
 	"main": "index.js",
@@ -10,10 +10,10 @@
 	],
 	"type": "module",
 	"author": "C. Egor Kloos",
-	"license": "Apache-2.0",
+	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/core": "^0.6.8"
+		"@trvt/core": "^0.7.0"
 	},
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
