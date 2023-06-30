@@ -2,7 +2,6 @@
 @import url('header.css');
 
 @layer theme {
-	trvt-layout:not(:defined),
 	trvt-layout:has(:not(:defined)) {
 		visibility: hidden;
 	}
@@ -10,6 +9,7 @@
 		--trvt-row-gap: 0;
 		max-width: 65ch;
 		margin-inline: auto;
+		visibility: visible;
 	}
 	html {
 		--trvt-typography-family-base: 'Mona Sans', sans-serif;
@@ -52,3 +52,13 @@
 		font-stretch: 85%;
 	}
 }
+
+/* .swatch {
+	--_swatch-color: var(--trvt-color-open-pink-3);
+}
+
+.swatch {
+	width: 5ch;
+	aspect-ratio: 1;
+	background-color: var(--_swatch-color, lightblue);
+} */

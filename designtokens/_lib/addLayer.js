@@ -4,6 +4,13 @@ import path from 'path';
 const buildFolder = path.resolve(`build`, `css`);
 const cssfileReg = /\.css$/;
 
+const flags = process.argv.filter((f) => /--/.test(f));
+const opts = {};
+flags.forEach((f) => {
+	const [key, value] = f.substring(2).split('=');
+	opts[key] = value;
+});
+
 try {
 	if (!fs.existsSync(buildFolder)) {
 		fs.mkdirSync(buildFolder);
@@ -14,7 +21,7 @@ try {
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	const transformedData = `@layer design.tokens {\n${data}\n}\n`;
+	const transformedData = `@layer ${opts.layer} {\n${data}\n}\n`;
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
 		transformedData,
@@ -23,11 +30,4 @@ const getFileContent = (file) => {
 
 	fs.writeFileSync(file, bufferedData);
 };
-
-await fs.readdir(buildFolder, async (err, files) => {
-	files.forEach(async (file) => {
-		if (cssfileReg.test(file)) {
-			await getFileContent(`${buildFolder}/${file}`);
-		}
-	});
-});
+await getFileContent(`${buildFolder}/${opts.file}`);

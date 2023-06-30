@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.9.0
+
+### Minor Changes
+
+-   Added theme and new addlayer script to prevent nested and repeated layers
+
 ## 0.8.0
 
 ### Minor Changes
