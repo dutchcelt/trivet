@@ -13,11 +13,12 @@
 	],
 	"scripts": {
 		"build:clean": "style-dictionary clean ",
-		"build:tokens": "style-dictionary build -c config.json && node ./_lib/addlayer.js --layer=design.tokens --file=trvt_tokens.css",
-		"build:theme": "style-dictionary build -c config-trvt-theme.json && node ./_lib/addlayer.js  --layer=theme --file=trvt_theme-tokens.css",
+		"build:test": "node scripts/build.js",
+		"build:tokens": "node scripts/build.cjs ",
+		"build:theme": "node scripts/build.cjs --themePath=../docs/theme --buildPath=../docs/styles",
 		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:tokens && yarn build:theme",
 		"watch:tokens": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
-		"watch:fonts": "chokidar \"tokens/fonts/**/*.json\" -c \"yarn build:fonts\"",
+		"watch:theme": "chokidar \"theme/**/*.json\" -c \"yarn build:theme\"",
 		"watch": "yarn watch:tokens",
 		"develop": "yarn watch"
 	},

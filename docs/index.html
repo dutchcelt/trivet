@@ -25,12 +25,8 @@
 			href="https://unpkg.com/@trvt/assets/build/importer.css"
 			rel="stylesheet"
 		/>
-
+		<link href="styles/trvt_tokens.css" rel="stylesheet" />
 		<link href="styles/theme.css" rel="stylesheet" />
-		<link
-			href="../../designtokens/build/css/trvt_theme-tokens.css"
-			rel="stylesheet"
-		/>
 
 		<script type="esms-options">
 			{
@@ -102,6 +98,7 @@
 			import '@trvt/card';
 			import '@trvt/article';
 			import './webcomponents/dutchceltlogo.js';
+			import './webcomponents/swatch.js';
 			import '@trvt/header';
 			import '@trvt/contenttoggle';
 			import '@trvt/datatable';
@@ -380,6 +377,119 @@
 					</trvt-li>
 					<trvt-li>eighth item</trvt-li>
 				</trvt-ol>
+				<h3>Contextual Colors</h3>
+
+				<h4>Editorial</h4>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-editorial-note"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-editorial-info"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-editorial-quote"
+				></trvt-swatch>
+
+				<h4>Presentational</h4>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-presentational-cta"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-presentational-new"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-presentational-attention"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-presentational-hightlight"
+				></trvt-swatch>
+
+				<h4>Actionable</h4>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-actionable-abort"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-actionable-release"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-actionable-pause"
+				></trvt-swatch>
+
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-actionable-approve"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-actionable-submit"
+				></trvt-swatch>
+
+				<h4>Hierarchical</h4>
+
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-hierarchical-primary"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-hierarchical-secondary"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-hierarchical-tertiary"
+				></trvt-swatch>
+
+				<h4>Status</h4>
+
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-status-warning"
+				></trvt-swatch
+				><trvt-swatch
+					data-trvt-color="--trvt-color-contexts-status-failure"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-status-pending"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-contexts-status-success"
+				></trvt-swatch>
+
+				<h4>Open Colors (Trivet assigned defaults)</h4>
+
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-gray-8"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-red-8"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-pink-5"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-grape-7"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-violet-8"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-indigo-9"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-blue-7"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-cyan-5"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-teal-6"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-green-9"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-lime-7"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-yellow-5"
+				></trvt-swatch>
+				<trvt-swatch
+					data-trvt-color="--trvt-color-open-orange-7"
+				></trvt-swatch>
 			</main>
 			<div slot="sidebar">
 				<trvt-toggle-details title="Sidebar 1">
