@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.1
+
+### Patch Changes
+
+-   Updating to latest cli version
+
 ## 0.2.0
 
 ### Minor Changes

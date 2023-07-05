@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.10.1
+
+### Patch Changes
+
+-   Updating to latest cli version
+
 ## 0.10.0
 
 ### Minor Changes

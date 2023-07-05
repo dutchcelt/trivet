@@ -1,5 +1,17 @@
 # @trvt/cli
 
+## 0.2.2
+
+### Patch Changes
+
+-   Incorrect dependency version
+
+## 0.2.1
+
+### Patch Changes
+
+-   No files for CLI need in package.json
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,7 +1,7 @@
 {
 	"name": "@trvt/designtokens",
 	"description": "Trivet, a system for building webpages",
-	"version": "0.10.0",
+	"version": "0.10.1",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -20,7 +20,7 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.4.1",
 	"devDependencies": {
-		"@trvt/cli": "^0.2.0",
+		"@trvt/cli": "^1.0.0",
 		"chokidar-cli": "^3.0.0"
 	}
 }
