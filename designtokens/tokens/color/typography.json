@@ -1,14 +1,15 @@
 {
 	"color": {
 		"typography": {
-			"text": { "value": "CanvasText" },
-			"text-inverted": { "value": "Canvas" },
-			"heading": { "value": "CanvasText" },
-			"icon": { "value": "CanvasText" },
-			"ui": { "value": "ButtonText" },
-			"anchor": { "value": "LinkText" },
-			"anchor-visited": { "value": "VisitedText" },
-			"anchor-active": { "value": "ActiveText" }
+			"text": { "value": "{color.base.canvastext.value}" },
+			"text-inverted": { "value": "{color.base.canvas.value}" },
+			"heading": { "value": "{color.base.canvastext.value}" },
+			"icon": { "value": "{color.base.icon.value}" },
+			"ui": { "value": "{color.base.buttontext.value})" },
+			"anchor": { "value": "{color.base.linktext.value}" },
+			"anchor-visited": { "value": "{color.base.visitedtext.value}" },
+			"anchor-hover": { "value": "{color.base.hovertext.value}" },
+			"anchor-active": { "value": "{color.base.activetext.value}" }
 		}
 	}
 }

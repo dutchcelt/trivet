@@ -7,7 +7,7 @@
 
 		--nested-grid-diplay: contents;
 		--canvas: var(--trvt-color-background-content);
-		--canvasText: var(--trvt-color-base-text);
+		--canvasText: var(--trvt-color-typography-text);
 		--table-cell-width: 75ch;
 	}
 }

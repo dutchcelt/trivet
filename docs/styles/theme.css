@@ -52,13 +52,3 @@
 		font-stretch: 85%;
 	}
 }
-
-/* .swatch {
-	--_swatch-color: var(--trvt-color-open-pink-3);
-}
-
-.swatch {
-	width: 5ch;
-	aspect-ratio: 1;
-	background-color: var(--_swatch-color, lightblue);
-} */

@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.2
+
+### Patch Changes
+
+-   Aligning tokens to allow them to be themable
+
 ## 0.2.1
 
 ### Patch Changes

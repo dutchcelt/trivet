@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.7.3
+
+### Patch Changes
+
+-   Aligning tokens to allow them to be themable
+-   Updated dependencies
+    -   @trvt/designtokens@0.10.2
+
 ## 0.7.2
 
 ### Patch Changes

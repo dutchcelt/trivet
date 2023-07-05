@@ -1,23 +1,23 @@
 {
 	"color": {
 		"background": {
-			"canvas": { "value": "Canvas" },
-			"viewport": { "value": "Canvas" },
-			"content": { "value": "Canvas" },
+			"canvas": { "value": "{color.base.canvas.value}" },
+			"viewport": { "value": "{color.base.canvas.value}" },
+			"content": { "value": "{color.base.canvas.value}" },
 			"surface": {
-				"value": "Canvas",
+				"value": "{color.base.canvas.value}",
 				"comment": "A surface is usually reserved for components. It's here for convinence."
 			},
-			"header": { "value": "CanvasText" },
-			"icon": { "value": "Canvas" },
-			"highlight": { "value": "Highlight" },
-			"accentcolor": { "value": "AccentColor" },
+			"header": { "value": "{color.base.canvastext.value}" },
+			"icon": { "value": "{color.base.canvas.value}" },
+			"highlight": { "value": "{color.base.highlight.value}" },
+			"accentcolor": { "value": "{color.base.accentcolor.value}" },
 			"button": {
-				"value": "Canvas",
-				"comment": "ButtonFace is the standard value but it's too dark."
+				"value": "{color.base.button.value}",
+				"comment": "ButtonFace is the standard value but it's very dark."
 			},
-			"field": { "value": "Field" },
-			"selected": { "value": "SelectedItem" },
+			"field": { "value": "{color.base.field.value}" },
+			"selected": { "value": "{color.base.selected.value}" },
 			"mark": { "value": "Mark" }
 		}
 	}

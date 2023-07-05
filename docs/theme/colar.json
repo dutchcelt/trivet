@@ -1,6 +1,20 @@
 {
 	"color": {
 		"lib": {
+			"gray": { "value": "{color.lib.gray-9.value}" },
+			"red": { "value": "{color.lib.red-8.value}" },
+			"pink": { "value": "{color.lib.pink-4.value}" },
+			"grape": { "value": "{color.lib.purple-7.value}" },
+			"violet": { "value": "{color.lib.violet-8.value}" },
+			"indigo": { "value": "{color.lib.indigo-11.value}" },
+			"blue": { "value": "{color.lib.blue-7.value}" },
+			"cyan": { "value": "{color.lib.cyan-4.value}" },
+			"teal": { "value": "{color.lib.teal-5.value}" },
+			"green": { "value": "{color.lib.green-9.value}" },
+			"lime": { "value": "{color.lib.lime-7.value}" },
+			"yellow": { "value": "{color.lib.yellow-5.value}" },
+			"orange": { "value": "{color.lib.orange-7.value}" },
+
 			"gray-0": { "value": "oklch(0.9839 0.0025 228.78)" },
 			"gray-1": { "value": "oklch(0.9662 0.0034 247.86)" },
 			"gray-2": { "value": "oklch(0.9451 0.0034 247.86)" },

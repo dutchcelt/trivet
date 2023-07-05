@@ -19,7 +19,7 @@
 
 	body {
 		margin: 0;
-		color: var(--trvt-color-base-canvastext);
+		color: var(--trvt-color-typography-text);
 		background-color: var(--trvt-color-background-canvas);
 	}
 
@@ -81,18 +81,18 @@
 	}
 
 	a:link {
-		color: var(--trvt-color-base-link);
+		color: var(--trvt-color-typography-anchor);
 	}
 	a:visited {
-		color: var(--trvt-color-base-visited);
+		color: var(--trvt-color-typography-anchor-visited);
 	}
 	a:hover {
-		color: var(--trvt-color-base-accentcolor);
+		color: var(--trvt-color-typography-anchor-hover);
 	}
 	a:active {
-		color: var(--trvt-color-base-active);
+		color: var(--trvt-color-typography-anchor-active);
 	}
 	a:focus {
-		color: var(--trvt-color-base-text);
+		color: var(--trvt-color-typography-anchor);
 	}
 }

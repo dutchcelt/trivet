@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.10.2
+
+### Patch Changes
+
+-   Aligning tokens to allow them to be themable
+
 ## 0.10.1
 
 ### Patch Changes

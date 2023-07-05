@@ -1,10 +1,10 @@
 {
 	"color": {
 		"brand": {
-			"brand": { "value": "{color.base.canvastext.value}" },
-			"logo": { "value": "{color.base.canvastext.value}" },
-			"primary": { "value": "{color.base.canvastext.value}" },
-			"primary-inverted": { "value": "{color.base.canvas.value}" },
+			"brand": { "value": "{color.lib.orange-9}" },
+			"logo": { "value": "{color.lib.orange-9}" },
+			"primary": { "value": "{color.lib.orange-9}" },
+			"primary-inverted": { "value": "{color.lib.indigo-3.value}" },
 			"secondary": { "value": "{color.base.canvastext.value}" },
 			"secondary-inverted": { "value": "{color.base.canvas.value}" },
 			"tertiary": { "value": "{color.base.canvastext.value}" },

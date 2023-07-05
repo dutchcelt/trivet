@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.3.1
+
+### Patch Changes
+
+-   Aligning tokens to allow them to be themable
+
 ## 0.3.0
 
 ### Minor Changes
