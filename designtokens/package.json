@@ -18,7 +18,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"packageManager": "yarn@3.4.1",
+	"packageManager": "yarn@3.6.1",
 	"devDependencies": {
 		"@trvt/cli": "^1.0.0",
 		"chokidar-cli": "^3.0.0"

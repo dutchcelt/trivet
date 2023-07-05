@@ -14,7 +14,7 @@
 	"bin": {
 		"trivet": "./bin/trivet"
 	},
-	"packageManager": "yarn@3.4.1",
+	"packageManager": "yarn@3.6.1",
 	"devDependencies": {
 		"@trvt/designtokens": "^0.10.0",
 		"commander": "^11.0.0",
