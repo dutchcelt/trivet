@@ -25,9 +25,10 @@ const defaults = {
 };
 
 program
-	.description('CLI to generate Trivet assests')
+	.description('CLI to generate Trivet assets')
 	.version(pkg.version)
 	.usage('[command] [options]');
+
 program
 	.command('clean')
 	.description('Remove generated tokens')
