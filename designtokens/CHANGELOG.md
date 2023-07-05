@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.10.0
+
+### Minor Changes
+
+-   Moved style dictionary to a new CLI package
+
 ## 0.9.0
 
 ### Minor Changes

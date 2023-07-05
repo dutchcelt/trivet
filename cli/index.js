@@ -5,4 +5,7 @@
  * Todo 3. Icons ( CSS style with classes and custom properties for SVG files or an icon font. )
  */
 
-export default {};
+const Trivet = {
+	trivet: require('./bin/trivet'),
+};
+module.exports = Trivet;

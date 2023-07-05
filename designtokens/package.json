@@ -1,25 +1,18 @@
 {
 	"name": "@trvt/designtokens",
 	"description": "Trivet, a system for building webpages",
-	"version": "0.9.0",
+	"version": "0.10.0",
 	"type": "module",
 	"main": "index.js",
 	"files": [
-		"config.js",
-		"config-fonts.js",
 		"/build",
-		"/tokens",
-		"/theme"
+		"/tokens"
 	],
 	"scripts": {
-		"build:clean": "style-dictionary clean ",
-		"build:test": "node scripts/build.js",
-		"build:tokens": "node scripts/build.cjs ",
-		"build:theme": "node scripts/build.cjs --themePath=../docs/theme --buildPath=../docs/styles",
-		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:tokens && yarn build:theme",
-		"watch:tokens": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
-		"watch:theme": "chokidar \"theme/**/*.json\" -c \"yarn build:theme\"",
-		"watch": "yarn watch:tokens",
+		"build:clean": "trivet clean",
+		"build:tokens": "trivet tokens",
+		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:tokens",
+		"watch": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
 		"develop": "yarn watch"
 	},
 	"author": "C. Egor Kloos",
@@ -27,7 +20,7 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.4.1",
 	"devDependencies": {
-		"chokidar-cli": "^3.0.0",
-		"style-dictionary": "^3.7.2"
+		"@trvt/cli": "^0.2.0",
+		"chokidar-cli": "^3.0.0"
 	}
 }

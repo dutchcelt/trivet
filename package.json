@@ -28,9 +28,6 @@
 		"yarn": "3.4.1"
 	},
 	"packageManager": "yarn@3.4.1",
-	"publishConfig": {
-		"@trvt:registr": "http://dutchcelt.com:4873"
-	},
 	"devDependencies": {
 		"@changesets/cli": "^2.19.0",
 		"@esm-bundle/chai": "^4.3.4-fix.0",

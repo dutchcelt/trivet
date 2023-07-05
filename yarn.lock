@@ -516,11 +516,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@trvt/assets@^0.7.1, @trvt/assets@workspace:assets":
+"@trvt/assets@^0.7.2, @trvt/assets@workspace:assets":
   version: 0.0.0-use.local
   resolution: "@trvt/assets@workspace:assets"
   dependencies:
-    "@trvt/designtokens": ^0.9.0
+    "@trvt/designtokens": ^0.10.0
     wawoff2: ^2.0.1
   languageName: unknown
   linkType: soft
@@ -541,9 +541,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@trvt/cli@workspace:cli":
+"@trvt/cli@^0.2.0, @trvt/cli@workspace:cli":
   version: 0.0.0-use.local
   resolution: "@trvt/cli@workspace:cli"
+  dependencies:
+    "@trvt/designtokens": "workspace:^"
+    commander: ^11.0.0
+    get-installed-path: ^4.0.8
+    style-dictionary: ^3.8.0
+  bin:
+    trivet: ./bin/trivet
   languageName: unknown
   linkType: soft
 
@@ -559,8 +566,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/core@workspace:webcomponents/core"
   dependencies:
-    "@trvt/assets": ^0.7.1
-    "@trvt/designtokens": ^0.9.0
+    "@trvt/assets": ^0.7.2
+    "@trvt/designtokens": ^0.10.0
   languageName: unknown
   linkType: soft
 
@@ -572,12 +579,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@trvt/designtokens@^0.9.0, @trvt/designtokens@workspace:designtokens":
+"@trvt/designtokens@^0.10.0, @trvt/designtokens@workspace:^, @trvt/designtokens@workspace:designtokens":
   version: 0.0.0-use.local
   resolution: "@trvt/designtokens@workspace:designtokens"
   dependencies:
+    "@trvt/cli": ^0.2.0
     chokidar-cli: ^3.0.0
-    style-dictionary: ^3.7.2
   languageName: unknown
   linkType: soft
 
@@ -585,6 +592,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/docs@workspace:docs"
   dependencies:
+    "@trvt/cli": ^0.2.0
     "@web/rollup-plugin-html": ^1.11.0
     copyfiles: ^2.4.1
   languageName: unknown
@@ -2183,6 +2191,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "commander@npm:11.0.0"
+  checksum: 6621954e1e1d078b4991c1f5bbd9439ad37aa7768d6ab4842de1dbd4d222c8a27e1b8e62108b3a92988614af45031d5bb2a2aaa92951f4d0c934d1a1ac564bb4
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
@@ -2964,6 +2979,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expand-tilde@npm:^2.0.0, expand-tilde@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "expand-tilde@npm:2.0.2"
+  dependencies:
+    homedir-polyfill: ^1.0.1
+  checksum: 2efe6ed407d229981b1b6ceb552438fbc9e5c7d6a6751ad6ced3e0aa5cf12f0b299da695e90d6c2ac79191b5c53c613e508f7149e4573abfbb540698ddb7301a
+  languageName: node
+  linkType: hard
+
 "extend@npm:~3.0.2":
   version: 3.0.2
   resolution: "extend@npm:3.0.2"
@@ -3300,6 +3324,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"get-installed-path@npm:^4.0.8":
+  version: 4.0.8
+  resolution: "get-installed-path@npm:4.0.8"
+  dependencies:
+    global-modules: 1.0.0
+  checksum: 7bfeb35bd1fc41fdb51fd7018bd98e39225cdd386d4c04bcac250dafbe52e1ce9ba0726224b6ce3bcb8b577c8e41ee9a75a7bfd6e8e0dd6ad7674ae9830924c1
+  languageName: node
+  linkType: hard
+
 "get-intrinsic@npm:^1.0.2":
   version: 1.1.1
   resolution: "get-intrinsic@npm:1.1.1"
@@ -3389,12 +3422,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"global-modules@npm:1.0.0, global-modules@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "global-modules@npm:1.0.0"
+  dependencies:
+    global-prefix: ^1.0.1
+    is-windows: ^1.0.1
+    resolve-dir: ^1.0.0
+  checksum: 10be68796c1e1abc1e2ba87ec4ea507f5629873b119ab0cd29c07284ef2b930f1402d10df01beccb7391dedd9cd479611dd6a24311c71be58937beaf18edf85e
+  languageName: node
+  linkType: hard
+
 "global-modules@npm:^2.0.0":
   version: 2.0.0
   resolution: "global-modules@npm:2.0.0"
   dependencies:
     global-prefix: ^3.0.0
   checksum: d6197f25856c878c2fb5f038899f2dca7cbb2f7b7cf8999660c0104972d5cfa5c68b5a0a77fa8206bb536c3903a4615665acb9709b4d80846e1bb47eaef65430
+  languageName: node
+  linkType: hard
+
+"global-prefix@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "global-prefix@npm:1.0.2"
+  dependencies:
+    expand-tilde: ^2.0.2
+    homedir-polyfill: ^1.0.1
+    ini: ^1.3.4
+    is-windows: ^1.0.1
+    which: ^1.2.14
+  checksum: 061b43470fe498271bcd514e7746e8a8535032b17ab9570517014ae27d700ff0dca749f76bbde13ba384d185be4310d8ba5712cb0e74f7d54d59390db63dd9a0
   languageName: node
   linkType: hard
 
@@ -3539,6 +3596,15 @@ __metadata:
     capital-case: ^1.0.4
     tslib: ^2.0.3
   checksum: 571c83eeb25e8130d172218712f807c0b96d62b020981400bccc1503a7cf14b09b8b10498a962d2739eccf231d950e3848ba7d420b58a6acd2f9283439546cd9
+  languageName: node
+  linkType: hard
+
+"homedir-polyfill@npm:^1.0.1":
+  version: 1.0.3
+  resolution: "homedir-polyfill@npm:1.0.3"
+  dependencies:
+    parse-passwd: ^1.0.0
+  checksum: 18dd4db87052c6a2179d1813adea0c4bfcfa4f9996f0e226fefb29eb3d548e564350fa28ec46b0bf1fbc0a1d2d6922ceceb80093115ea45ff8842a4990139250
   languageName: node
   linkType: hard
 
@@ -3809,7 +3875,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ini@npm:^1.3.5":
+"ini@npm:^1.3.4, ini@npm:^1.3.5":
   version: 1.3.8
   resolution: "ini@npm:1.3.8"
   checksum: dfd98b0ca3a4fc1e323e38a6c8eb8936e31a97a918d3b377649ea15bdb15d481207a0dda1021efbd86b464cae29a0d33c1d7dcaf6c5672bee17fa849bc50a1b3
@@ -3981,7 +4047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-windows@npm:^1.0.0":
+"is-windows@npm:^1.0.0, is-windows@npm:^1.0.1":
   version: 1.0.2
   resolution: "is-windows@npm:1.0.2"
   checksum: 438b7e52656fe3b9b293b180defb4e448088e7023a523ec21a91a80b9ff8cdb3377ddb5b6e60f7c7de4fa8b63ab56e121b6705fe081b3cf1b828b0a380009ad7
@@ -4173,12 +4239,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.2.0":
-  version: 2.2.1
-  resolution: "json5@npm:2.2.1"
+"json5@npm:^2.2.2":
+  version: 2.2.3
+  resolution: "json5@npm:2.2.3"
   bin:
     json5: lib/cli.js
-  checksum: 74b8a23b102a6f2bf2d224797ae553a75488b5adbaee9c9b6e5ab8b510a2fc6e38f876d4c77dea672d4014a44b2399e15f2051ac2b37b87f74c0c7602003543b
+  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
   languageName: node
   linkType: hard
 
@@ -5302,6 +5368,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parse-passwd@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "parse-passwd@npm:1.0.0"
+  checksum: 4e55e0231d58f828a41d0f1da2bf2ff7bcef8f4cb6146e69d16ce499190de58b06199e6bd9b17fbf0d4d8aef9052099cdf8c4f13a6294b1a522e8e958073066e
+  languageName: node
+  linkType: hard
+
 "parse5@npm:5.1.0":
   version: 5.1.0
   resolution: "parse5@npm:5.1.0"
@@ -5883,6 +5956,16 @@ __metadata:
   version: 2.0.0
   resolution: "require-main-filename@npm:2.0.0"
   checksum: e9e294695fea08b076457e9ddff854e81bffbe248ed34c1eec348b7abbd22a0d02e8d75506559e2265e96978f3c4720bd77a6dad84755de8162b357eb6c778c7
+  languageName: node
+  linkType: hard
+
+"resolve-dir@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "resolve-dir@npm:1.0.1"
+  dependencies:
+    expand-tilde: ^2.0.0
+    global-modules: ^1.0.0
+  checksum: ef736b8ed60d6645c3b573da17d329bfb50ec4e1d6c5ffd6df49e3497acef9226f9810ea6823b8ece1560e01dcb13f77a9f6180d4f242d00cc9a8f4de909c65c
   languageName: node
   linkType: hard
 
@@ -6500,22 +6583,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.7.2":
-  version: 3.7.2
-  resolution: "style-dictionary@npm:3.7.2"
+"style-dictionary@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "style-dictionary@npm:3.8.0"
   dependencies:
     chalk: ^4.0.0
     change-case: ^4.1.2
     commander: ^8.3.0
     fs-extra: ^10.0.0
     glob: ^7.2.0
-    json5: ^2.2.0
+    json5: ^2.2.2
     jsonc-parser: ^3.0.0
     lodash: ^4.17.15
     tinycolor2: ^1.4.1
   bin:
     style-dictionary: bin/style-dictionary
-  checksum: eaa78247304a8ddf2f8771deabe72b91ba59392bc3e5071ea7f286d4ae7e294e785d7b13e592dea7debcc3cd2f38dbda937ef191cdbb79056550c4982b496aa5
+  checksum: ed2440c2d1bd84593f9f60ffbfbb7c85c9592d125e169ea63e2044fe681191e8c9c156853d82ae606f9adf6aacbaa162e03d5ef85b80be334d76e28a57bfc189
   languageName: node
   linkType: hard
 
@@ -7256,7 +7339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"which@npm:^1.2.9, which@npm:^1.3.1":
+"which@npm:^1.2.14, which@npm:^1.2.9, which@npm:^1.3.1":
   version: 1.3.1
   resolution: "which@npm:1.3.1"
   dependencies:

@@ -1,5 +1,12 @@
 # @trvt/assets
 
+## 0.7.2
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/designtokens@0.10.0
+
 ## 0.7.1
 
 ### Patch Changes
