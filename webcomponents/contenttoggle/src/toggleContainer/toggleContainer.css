@@ -8,7 +8,10 @@
 			--trvt-color-background-surfaces,
 			canvas
 		);
-		--toggle-summary-active-text: var(--trvt-color-base-texts, canvasText);
+		--toggle-summary-active-text: var(
+			--trvt-color-typography-text,
+			canvasText
+		);
 		--toggle-detail-active-canvas: var(
 			--trvt-color-background-surfaces,
 			canvas

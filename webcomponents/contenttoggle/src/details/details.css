@@ -5,7 +5,7 @@
 			--toggle-detail-active-canvas,
 			var(--trvt-color-background-content)
 		);
-		--detail-text-color: var(--trvt-color-base-text, black);
+		--detail-text-color: var(--trvt-color-typography-text, black);
 		--detail-display: var(--toggle-display, block);
 		--detail-block-start: var(
 			--trvt-typography-whitespace-default-block-start,
@@ -26,18 +26,21 @@
 			--toggle-summary-active-canvas,
 			var(--trvt-color-background-header)
 		);
-		--summary-text-color: var(--trvt-color-base-header, white);
+		--summary-text-color: var(
+			--trvt-color-typography-text-inverted,
+			Canvas
+		);
 
 		--summary-text-color-active: var(
 			--toggle-summary-active-text,
-			var(--trvt-color-base-header, white)
+			var(--trvt-color-typography-text-text-inverted, Canvas)
 		);
 		--summary-icon-surface-color: var(--trvt-color-background-icon, white);
-		--summary-icon-text-color: var(--trvt-color-base-icon, black);
+		--summary-icon-text-color: var(--trvt-color-typography-icon, black);
 		--summary-icon-font-family: var(--trvt-typography-family-gui);
 		--summary-icon-font-weight: var(--font-weight-heavy, 900);
-		--summary-icon-open-char: var(--icon-minus-char, '-');
-		--summary-icon-closed-char: var(--icon-plus-char, '+');
+		--summary-icon-open-char: var(--icon-minus-char, '\2212');
+		--summary-icon-closed-char: var(--icon-plus-char, '\002B');
 		--summary-block-space: var(--trvt-spacing-content-block-xs, 1rem);
 		--summary-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
 		--summary-font-family: var(
@@ -111,7 +114,7 @@
 		width: 1em;
 		height: 1em;
 		justify-content: center;
-		line-height: 0.9;
+		line-height: 1.1;
 		font-family: var(--summary-icon-font-family);
 		background: var(--summary-icon-surface-color);
 		color: var(--summary-icon-text-color);

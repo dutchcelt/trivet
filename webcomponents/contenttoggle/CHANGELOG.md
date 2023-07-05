@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.3.1
+
+### Patch Changes
+
+-   Token fix
+
 ## 0.3.0
 
 ### Minor Changes

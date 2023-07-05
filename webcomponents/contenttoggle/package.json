@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/contenttoggle",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "Toggle content as an accordion or as tabs",
 	"main": "index.js",
 	"files": [
@@ -20,6 +20,6 @@
 	"scripts": {
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
 		"build": "yarn build:rollup",
-		"develop": "yarn build --watch"
+		"develop": "yarn build:rollup --watch"
 	}
 }
