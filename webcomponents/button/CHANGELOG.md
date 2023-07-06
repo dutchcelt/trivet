@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.8.1
+
+### Patch Changes
+
+-   Simplified the button by setting the display of the host element to 'contents'.
+
 ## 0.8.0
 
 ### Minor Changes
