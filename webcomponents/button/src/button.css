@@ -34,12 +34,11 @@
 	}
 
 	@layer modifiers {
+
 		
 		button:focus-visible {
-			border-radius: var(--_radius);
-			outline-offset: var(--_outline-offset);
-			outline: var(--_outline-width) solid var(--_outline-color);
-		}
+			outline: transparent;
+		} 
 
 		button {
 			--_border-color: var(--_context-primary, transparent)
@@ -102,7 +101,7 @@
 
 	@layer selectors {
 		:host {
-			display: contents;
+			display: inline-block;
 			contain: layout;
 		}
 		button {

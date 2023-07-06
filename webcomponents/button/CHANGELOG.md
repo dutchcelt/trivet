@@ -1,5 +1,11 @@
 # @trvt/button
 
+## 0.8.2
+
+### Patch Changes
+
+-   Small error in focus handling
+
 ## 0.8.1
 
 ### Patch Changes
