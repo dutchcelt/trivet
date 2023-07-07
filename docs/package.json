@@ -13,11 +13,24 @@
 		"build:tokens": "trivet tokens --themePath theme --buildPath styles",
 		"build:eleventy": "yarn dlx @11ty/eleventy --config=_configs/.eleventy.js",
 		"build": "yarn build:tokens && yarn build:eleventy",
-		"watch": "yarn build:eleventy --watch",
+		"watch": "yarn build:eleventy --watch --incremental",
 		"develop": "yarn build:clean && yarn watch & yarn build:tokens --watch"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
 		"@trvt/cli": "^1.0.0"
+	},
+	"dependencies": {
+		"@trvt/article": "^0.6.0",
+		"@trvt/assets": "^0.7.3",
+		"@trvt/button": "^0.8.2",
+		"@trvt/card": "^0.6.0",
+		"@trvt/contenttoggle": "^0.3.1",
+		"@trvt/core": "^0.7.2",
+		"@trvt/datatable": "^0.3.1",
+		"@trvt/dragscroller": "^0.3.0",
+		"@trvt/header": "^0.8.0",
+		"@trvt/layout": "^0.8.0",
+		"@trvt/lists": "^0.4.0"
 	}
 }

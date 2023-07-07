@@ -38,61 +38,7 @@
 			crossorigin="anonymous"
 			src="https://ga.jspm.io/npm:es-module-shims@1.4.6/dist/es-module-shims.js"
 		></script>
-		<script type="importmap">
-			{
-				"imports": {
-					"@trvt/assets": "https://unpkg.com/@trvt/assets/build/index.js",
-					"@trvt/assets/": "https://unpkg.com/@trvt/assets/",
-					"@trvt/designtokens": "https://unpkg.com/@trvt/designtokens",
-					"@trvt/article": "https://unpkg.com/@trvt/article/build/index.js",
-					"@trvt/article/": "https://unpkg.com/@trvt/article/src/",
-					"@trvt/card": "https://unpkg.com/@trvt/card/build/index.js",
-					"@trvt/card/": "https://unpkg.com/@trvt/card/src/",
-					"@trvt/core": "https://unpkg.com/@trvt/core/build/index.js",
-					"@trvt/core/": "https://unpkg.com/@trvt/core/src/",
-					"@trvt/header": "https://unpkg.com/@trvt/header/build/index.js",
-					"@trvt/header/": "https://unpkg.com/@trvt/header/src/",
-					"@trvt/contenttoggle": "https://unpkg.com/@trvt/contenttoggle/build/index.js",
-					"@trvt/contenttoggle/": "https://unpkg.com/@trvt/contenttoggle/src/",
-					"@trvt/datatable": "https://unpkg.com/@trvt/datatable/build/index.js",
-					"@trvt/datatable/": "https://unpkg.com/@trvt/datatable/src/",
-					"@trvt/dragscroller": "https://unpkg.com/@trvt/dragscroller/build/index.js",
-					"@trvt/dragscroller/": "https://unpkg.com/@trvt/dragscroller/src/",
-					"@trvt/layout": "https://unpkg.com/@trvt/layout/build/index.js",
-					"@trvt/layout/": "https://unpkg.com/@trvt/layout/src/",
-					"@trvt/lists": "https://unpkg.com/@trvt/lists/build/index.js",
-					"@trvt/lists/": "https://unpkg.com/@trvt/lists/src/",
-					"@trvt/button": "https://unpkg.com/@trvt/button/build/index.js"
-				},
-				"scopes": {
-					"/docs/dist/": {
-						"@trvt/assets": "../../assets/build/index.js",
-						"@trvt/assets/": "../../assets/build/",
-						"@trvt/designtokens": "../../designtokens/build/index.js",
-						"@trvt/designtokens/": "../../designtokens/build/",
-						"@trvt/article": "../../webcomponents/article/build/index.js",
-						"@trvt/article/": "../../webcomponents/article/src/",
-						"@trvt/card": "../../webcomponents/card/build/index.js",
-						"@trvt/card/": "../../webcomponents/card/src/",
-						"@trvt/core": "../../webcomponents/core/build/index.js",
-						"@trvt/core/": "../../webcomponents/core/src/",
-						"@trvt/header": "../../webcomponents/header/build/index.js",
-						"@trvt/header/": "../../webcomponents/header/src/",
-						"@trvt/contenttoggle": "../../webcomponents/contenttoggle/build/index.js",
-						"@trvt/contenttoggle/": "../../webcomponents/contenttoggle/src/",
-						"@trvt/datatable": "../../webcomponents/datatable/build/index.js",
-						"@trvt/datatable/": "../../webcomponents/datatable/src/",
-						"@trvt/dragscroller": "../../webcomponents/dragscroller/build/index.js",
-						"@trvt/dragscroller/": "../../webcomponents/dragscroller/src/",
-						"@trvt/layout": "../../webcomponents/layout/build/index.js",
-						"@trvt/layout/": "../../webcomponents/layout/src/",
-						"@trvt/lists": "../../webcomponents/lists/build/index.js",
-						"@trvt/lists/": "../../webcomponents/lists/src/",
-						"@trvt/button": "../../webcomponents/button/build/index.js"
-					}
-				}
-			}
-		</script>
+		{% importmap %}
 		<script type="module">
 			import '@trvt/layout';
 			import '@trvt/card';

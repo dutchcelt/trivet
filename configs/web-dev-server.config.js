@@ -26,7 +26,7 @@ export default {
 	rootDir: './',
 
 	// prefix to strip from request urls
-	//basePath: './dist',
+	//basePath: '/docs/dist',
 
 	/**
 	 * Whether to log debug messages.
