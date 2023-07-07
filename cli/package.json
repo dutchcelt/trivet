@@ -15,7 +15,7 @@
 		"trivet": "./bin/trivet"
 	},
 	"packageManager": "yarn@3.6.1",
-	"devDependencies": {
+	"dependencies": {
 		"@trvt/designtokens": "^0.10.0",
 		"chokidar": "^3.5.3",
 		"commander": "^11.0.0",

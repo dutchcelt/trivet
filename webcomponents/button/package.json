@@ -14,11 +14,12 @@
 	],
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
-	"dependencies": {
-		"@trvt/core": "^0.7.0"
-	},
 	"scripts": {
-		"build": "yarn dlx rollup -c ../../configs/rollup.config.js",
+		"build": "rollup -c ../../configs/rollup.config.js",
 		"develop": "yarn build --watch"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.7.2",
+		"rollup": "^3.26.2"
 	}
 }

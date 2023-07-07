@@ -15,14 +15,13 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"packageManager": "yarn@3.6.1",
 	"dependencies": {
-		"@trvt/designtokens": "^0.10.2"
-	},
-	"devDependencies": {
+		"@trvt/designtokens": "^0.10.2",
+		"rollup": "^3.26.2",
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
 		"build:icons": "node ./_lib/icons.js",
-		"build:rollup": "yarn dlx rollup -c ../configs/rollup.config.js",
+		"build:rollup": "rollup -c ../configs/rollup.config.js",
 		"build:css": "node ./_lib/bundleCSS.js",
 		"build": "yarn build:icons && yarn build:rollup && yarn build:css",
 		"develop": "yarn build --watch"
