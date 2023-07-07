@@ -4,7 +4,7 @@
 
 export default {
 	// whether to open the browser and/or the browser path to open on
-	open: 'docs/dist/index.html',
+	//open: 'docs/dist/index.html',
 
 	// index HTML to use for SPA routing / history API fallback
 	// appIndex: './docs/src/index.html',
@@ -13,7 +13,7 @@ export default {
 	watch: true,
 
 	// resolve bare module imports
-	//nodeResolve: true,
+	nodeResolve: true,
 
 	// JS language target to compile down to using esbuild. Recommended value is "auto", which compiles based on user agent.
 	// esbuildTarget: 'auto',

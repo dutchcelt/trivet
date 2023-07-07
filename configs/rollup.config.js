@@ -8,14 +8,19 @@ const packagename = pathArray.pop();
 const isWebcomponent = /webcomponents/i.test(path.resolve());
 const buildfolder = path.resolve('build');
 
-console.info(
-	`\n\n=== ${packagename} =========================================`
-);
+import { Chalk } from 'chalk';
+const chalk = new Chalk({ level: 1 });
+const log = console.log;
+
+const banner =
+	`=== ${packagename} ==================================================================================`.substring(
+		0,
+		60
+	);
+log(chalk.blueBright.bold(`\n\n${banner}`));
 
 if (isWebcomponent && fs.existsSync(buildfolder)) {
-	fs.rm(buildfolder, { recursive: true, force: true }, (err) => {
-		//console.error(err);
-	});
+	fs.rm(buildfolder, { recursive: true, force: true }, () => {});
 }
 
 const compressStylesFunc = (css) => {
@@ -42,6 +47,8 @@ export default [
 		],
 		external: [
 			'@trvt/layout',
+			'@trvt/button',
+			'@trvt/cli',
 			'@trvt/card',
 			'@trvt/article',
 			'@trvt/header',

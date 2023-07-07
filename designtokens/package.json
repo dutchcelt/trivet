@@ -11,7 +11,7 @@
 	"scripts": {
 		"build:clean": "trivet clean",
 		"build:tokens": "trivet tokens",
-		"build:banner": "npx chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
+		"build:banner": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
 		"build": "yarn build:banner && yarn build:clean && yarn build:tokens",
 		"watch": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
 		"develop": "yarn watch"
@@ -22,6 +22,7 @@
 	"packageManager": "yarn@3.6.1",
 	"devDependencies": {
 		"@trvt/cli": "^1.0.0",
+		"chalk-cli": "^5.0.1",
 		"chokidar-cli": "^3.0.0"
 	}
 }

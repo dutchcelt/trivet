@@ -22,7 +22,7 @@
 	},
 	"scripts": {
 		"build:icons": "node ./_lib/icons.js",
-		"build:rollup": "npx rollup -c ../configs/rollup.config.js",
+		"build:rollup": "yarn dlx rollup -c ../configs/rollup.config.js",
 		"build:css": "node ./_lib/bundleCSS.js",
 		"build": "yarn build:icons && yarn build:rollup && yarn build:css",
 		"develop": "yarn build --watch"
