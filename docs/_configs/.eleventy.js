@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('styles');
 	eleventyConfig.addPassthroughCopy('webcomponents');
 
-	isDevelopmentMode && copyImports(eleventyConfig, importArr);
+	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
 	eleventyConfig.addShortcode('importmap', function () {
 		const temp = `
