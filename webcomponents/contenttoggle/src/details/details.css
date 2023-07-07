@@ -104,9 +104,6 @@
 	:host(:last-child) summary {
 		margin-inline-end: 0;
 	}
-	details[open] summary {
-		color: var(--summary-text-color-active);
-	}
 
 	summary::after {
 		display: flex;
@@ -121,9 +118,6 @@
 		margin-inline-start: auto;
 		font-weight: var(--summary-icon-font-weight);
 	}
-	details[open] summary::after {
-		content: var(--is-accordion, var(--summary-icon-open-char));
-	}
 	::slotted(*) {
 		font-family: var(---detail-font-family) !important;
 	}
@@ -133,8 +127,14 @@
 		--detail-surface-color: var(--detail-surface-color-active);
 		--summary-surface-color: var(--summary-surface-color-active);
 	}
+	details[open] summary {
+		color: var(--summary-text-color-active);
+	}
+	details[open] summary::after {
+		content: var(--is-accordion, var(--summary-icon-open-char));
+	}
 
-	summary:is(:focus, :focus-visible) {
+	summary:is(:focus-visible) {
 		outline-offset: var(--trvt-stroke-medium);
 		outline: var(--trvt-stroke-heavy) solid var(--trvt-color-line-outline);
 	}
