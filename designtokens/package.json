@@ -11,7 +11,8 @@
 	"scripts": {
 		"build:clean": "trivet clean",
 		"build:tokens": "trivet tokens",
-		"build": "echo \"\n\n=== Design Tokens =========================================\" && yarn build:clean && yarn build:tokens",
+		"build:banner": "npx chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
+		"build": "yarn build:banner && yarn build:clean && yarn build:tokens",
 		"watch": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
 		"develop": "yarn watch"
 	},
