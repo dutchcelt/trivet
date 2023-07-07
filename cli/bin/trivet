@@ -5,6 +5,8 @@
 const { Command } = require('commander');
 const program = new Command();
 
+const chokidar = require('chokidar');
+
 const fs = require('fs');
 const path = require('path');
 const pkg = JSON.parse(
@@ -32,6 +34,7 @@ program
 program
 	.command('clean')
 	.description('Remove generated tokens')
+	.option('--buildPath [build]', 'todo')
 	.action(cleanTokens);
 
 program
@@ -42,6 +45,7 @@ program
 	.option('--sourcePath [source]', 'todo')
 	.option('--themePath [theme]', 'todo')
 	.option('--file [file]', 'todo')
+	.option('--watch', 'todo')
 	.action(generateTokens);
 
 program.parse();
@@ -71,6 +75,20 @@ function generateTokens(options) {
 	};
 
 	getFileContent(`${opts.buildPath}/${opts.file}`);
+
+	if (opts.watch === true) watchTokens(opts);
+}
+
+function watchTokens(opts) {
+	opts.watch = false;
+	chokidar
+		.watch(opts.themePath || opts.sourcePath)
+		.on('change', (event, path) => {
+			if (!!event) {
+				console.log('\nChanged file:', event);
+				generateTokens(opts);
+			}
+		});
 }
 
 function tokenConfig(opts) {

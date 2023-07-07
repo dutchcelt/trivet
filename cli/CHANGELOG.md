@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.0.1
+
+### Patch Changes
+
+-   Added option for clean command to the build folder
+
 ## 0.2.2
 
 ### Patch Changes
