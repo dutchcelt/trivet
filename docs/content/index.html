@@ -38,23 +38,10 @@
 			crossorigin="anonymous"
 			src="https://ga.jspm.io/npm:es-module-shims@1.4.6/dist/es-module-shims.js"
 		></script>
-		{% importmap %}
+		{% importmap %} {% importmodules %}
 		<script type="module">
-			import '@trvt/layout';
-			import '@trvt/card';
-			import '@trvt/article';
 			import './webcomponents/dutchceltlogo.js';
 			import './webcomponents/swatch.js';
-			import '@trvt/header';
-			import '@trvt/contenttoggle';
-			import '@trvt/datatable';
-			import '@trvt/dragscroller';
-			import '@trvt/lists';
-			import '@trvt/button';
-
-			// import { fontsLoader } from '@trvt/core';
-			// import facesObject from '../fonts/faces.json' assert { type: 'json' };
-			// fontsLoader(facesObject.faces, '/docs/fonts/');
 		</script>
 	</head>
 	<body>

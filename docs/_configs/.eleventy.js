@@ -24,10 +24,15 @@ const createImportmap = (deps) => {
 	deps.forEach((dep) => (obj[dep] = `/${encodeURI(dep)}/index.js`));
 	return JSON.stringify(obj);
 };
+const moduleImporter = (deps) => {
+	let str = '';
+	deps.forEach((d) => {
+		str += `import '${d}';\n`;
+	});
+	return str;
+};
 
 module.exports = function (eleventyConfig) {
-	eleventyConfig.addWatchTarget('../webcomponents/*/');
-
 	eleventyConfig.addPassthroughCopy('fonts');
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('styles');
@@ -44,6 +49,14 @@ module.exports = function (eleventyConfig) {
 				</script>
 			`.trim();
 		return isDevelopmentMode ? '' : temp;
+	});
+	eleventyConfig.addShortcode('importmodules', function () {
+		const temp = `
+				<script type="module">
+					${moduleImporter(importArr)}
+				</script>
+			`.trim();
+		return temp;
 	});
 	// Return your Object options:
 	return {
