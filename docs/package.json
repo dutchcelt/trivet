@@ -2,7 +2,6 @@
 	"name": "@trvt/docs",
 	"version": "0.2.2",
 	"private": true,
-	"type": "module",
 	"main": "index.html",
 	"files": [],
 	"description": "Documents",
@@ -10,15 +9,15 @@
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
-		"build:tokens": "trivet tokens --themePath theme --buildPath dist/styles",
-		"build:copy": "copyfiles ./{fonts,images,styles,webcomponents}/**/*.{js,css,svg,woff2} dist",
-		"build:rollup": "rollup -c ../configs/rollup.docs.config.js",
-		"build": "yarn build:copy && yarn build:tokens && yarn build:rollup",
-		"develop": "yarn build --watch"
+		"build:clean": "trivet clean --buildPath styles",
+		"build:tokens": "trivet tokens --themePath theme --buildPath styles",
+		"build:eleventy": "yarn dlx @11ty/eleventy --config=_configs/.eleventy.js",
+		"build": "yarn build:tokens && yarn build:eleventy",
+		"watch": "yarn build:eleventy --watch",
+		"develop": "yarn build:clean && yarn watch & yarn build:tokens --watch"
 	},
 	"devDependencies": {
-		"@trvt/cli": "^1.0.0",
-		"@web/rollup-plugin-html": "^1.11.0",
-		"copyfiles": "^2.4.1"
+		"@11ty/eleventy": "^2.0.1",
+		"@trvt/cli": "^1.0.0"
 	}
 }
