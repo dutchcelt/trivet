@@ -11,17 +11,18 @@
 	"scripts": {
 		"build:clean": "trivet clean --buildPath styles",
 		"build:tokens": "trivet tokens --themePath theme --buildPath styles",
-		"build:eleventy": "yarn dlx @11ty/eleventy --config=_configs/.eleventy.js",
+		"build:eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"build:banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
 		"build": "yarn build:banner && yarn build:tokens && yarn build:eleventy",
 		"watch": "yarn build:eleventy --watch --incremental",
 		"develop": "yarn build:clean && yarn watch & yarn build:tokens --watch"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
-		"@trvt/cli": "^1.0.0"
+		"@trvt/cli": "^1.0.0",
+		"chalk-cli": "^5.0.1"
 	},
 	"dependencies": {
+		"@11ty/eleventy": "^2.0.1",
 		"@trvt/article": "^0.6.0",
 		"@trvt/assets": "^0.7.3",
 		"@trvt/button": "^0.8.2",
@@ -32,7 +33,6 @@
 		"@trvt/dragscroller": "^0.3.0",
 		"@trvt/header": "^0.8.0",
 		"@trvt/layout": "^0.8.0",
-		"@trvt/lists": "^0.4.0",
-		"chalk-cli": "^5.0.1"
+		"@trvt/lists": "^0.4.0"
 	}
 }

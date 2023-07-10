@@ -18,10 +18,13 @@ const copyImports = (eleventyConfig, deps) => {
 };
 
 const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
+const packagePath = isDevelopmentMode ? '/docs/dist' : '';
 
 const createImportmap = (deps) => {
 	const obj = {};
-	deps.forEach((dep) => (obj[dep] = `/${encodeURI(dep)}/index.js`));
+	deps.forEach(
+		(dep) => (obj[dep] = `${packagePath}/${encodeURI(dep)}/index.js`)
+	);
 	return JSON.stringify(obj);
 };
 const moduleImporter = (deps) => {
@@ -37,6 +40,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('styles');
 	eleventyConfig.addPassthroughCopy('webcomponents');
+	eleventyConfig.addPassthroughCopy('scripts');
 
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
@@ -48,16 +52,21 @@ module.exports = function (eleventyConfig) {
 					}
 				</script>
 			`.trim();
-		return isDevelopmentMode ? '' : temp;
+		return temp;
 	});
 	eleventyConfig.addShortcode('importmodules', function () {
 		const temp = `
-				<script type="module">
+				<script type="module" data-trvt-components="${importArr}">
 					${moduleImporter(importArr)}
 				</script>
 			`.trim();
 		return temp;
 	});
+
+	// eleventyConfig.addFilter("makeUppercase", function(value) {
+	//
+	//  });
+
 	// Return your Object options:
 	return {
 		dir: {
