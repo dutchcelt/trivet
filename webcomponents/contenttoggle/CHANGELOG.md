@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.3.8
+
+### Patch Changes
+
+-   Toggle now works again with detail open on load
+
 ## 0.3.7
 
 ### Patch Changes
