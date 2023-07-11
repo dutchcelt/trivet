@@ -56,9 +56,7 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.addShortcode('importmodules', function () {
 		const temp = `
-				<script type="module" ${
-					isDevelopmentMode || `data-trvt-components="${importArr}"`
-				}>
+				<script type="module">
 					${moduleImporter(importArr)}
 				</script>
 			`.trim();

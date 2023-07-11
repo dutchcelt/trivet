@@ -3,7 +3,7 @@
 
 @layer theme {
 	trvt-layout:has(:not(:defined)) {
-		visibility: hidden;
+		/* visibility: hidden; */
 	}
 	trvt-layout {
 		--trvt-row-gap: 0;

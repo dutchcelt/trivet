@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.3.4
+
+### Patch Changes
+
+-   Scroll prevetion too agressive.
+
 ## 0.3.3
 
 ### Patch Changes

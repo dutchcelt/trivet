@@ -9,7 +9,6 @@ export class TrvtToggleDetails extends HTMLElement {
 		this.shadowRoot.adoptedStyleSheets = [...styles, details];
 		this.detailsElement = this.shadowRoot.querySelector('details');
 		this.contentElement = this.shadowRoot.querySelector('.content');
-		this.loaded = false;
 		this.toggleEvent = new Event('toggle', {
 			bubbles: true,
 			cancelable: true,
@@ -23,11 +22,8 @@ export class TrvtToggleDetails extends HTMLElement {
 	attributeChangedCallback(attributeName, oldValue, newValue) {
 		if (oldValue === newValue) return;
 		const isOpen = newValue !== null;
-		if (this.loaded === true) {
-			this.detailsElement.toggleAttribute('open', isOpen);
-			this.contentElement.toggleAttribute('inert', !isOpen);
-		}
-		this.loaded = true;
+		this.detailsElement.toggleAttribute('open', isOpen);
+		this.contentElement.toggleAttribute('inert', !isOpen);
 	}
 	static get observedAttributes() {
 		return ['open'];
