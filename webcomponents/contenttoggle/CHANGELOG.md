@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.3.7
+
+### Patch Changes
+
+-   Toggle bug in template
+
 ## 0.3.6
 
 ### Patch Changes
