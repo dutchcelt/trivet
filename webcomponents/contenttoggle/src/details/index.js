@@ -5,24 +5,25 @@ export class TrvtToggleDetails extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
-		this.open = this.hasAttribute('open');
-		this.ready = false;
 		this.render();
+		this.isReady = false;
 		this.shadowRoot.adoptedStyleSheets = [...styles, details];
-	}
-	connectedCallback() {
 		this.detailsElement = this.shadowRoot.querySelector('details');
 		this.contentElement = this.shadowRoot.querySelector('.content');
+	}
+	connectedCallback() {
 		this.detailsElement.addEventListener('toggle', this);
 		this.toggleEvent = new Event('toggle', {
 			bubbles: true,
 			cancelable: true,
 			composed: false, // event is added to the host so no need to compose the event
 		});
-		this.ready = true;
+		setTimeout(() => {
+			this.isReady = true;
+		}, 1500);
 	}
 	attributeChangedCallback(attributeName, oldValue, newValue) {
-		if (this.ready === false || oldValue === newValue) return;
+		if (oldValue === newValue) return;
 		const isOpen = newValue !== null;
 		this.detailsElement.toggleAttribute('open', isOpen);
 		this.contentElement.toggleAttribute('inert', !isOpen);
@@ -31,7 +32,8 @@ export class TrvtToggleDetails extends HTMLElement {
 		return ['open'];
 	}
 	handleEvent(event) {
-		if (event.type === 'toggle') this.toggleHostWith(event.target);
+		if (event.type === 'toggle')
+			this.isReady && this.toggleHostWith(event.target);
 	}
 
 	toggleHostWith(target) {
