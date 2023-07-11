@@ -49,7 +49,7 @@ export class TrvtToggleDetails extends HTMLElement {
 	}
 	render() {
 		this.shadowRoot.innerHTML = `
-    		<details ${this.open && 'open'}>
+    		<details>
 				<summary>${this.title}</summary>
 				<div class="content"><slot></slot></div>
 			</details>
