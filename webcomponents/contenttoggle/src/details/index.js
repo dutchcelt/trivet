@@ -32,19 +32,19 @@ export class TrvtToggleDetails extends HTMLElement {
 		return ['open'];
 	}
 	handleEvent(event) {
-		if (event.type === 'toggle')
-			this.isReady && this.toggleHostWith(event.target);
+		if (event.type === 'toggle') this.toggleHostWith(event.target);
 	}
 
 	toggleHostWith(target) {
 		this.toggleAttribute('open', target.open);
 		if (target.open) {
 			this.dispatchEvent(this.toggleEvent);
-			this.scrollIntoView({
-				behavior: 'smooth',
-				block: 'nearest',
-				inline: 'nearest',
-			});
+			this.isReady &&
+				this.scrollIntoView({
+					behavior: 'smooth',
+					block: 'nearest',
+					inline: 'nearest',
+				});
 		}
 	}
 	render() {
