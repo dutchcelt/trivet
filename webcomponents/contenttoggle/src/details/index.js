@@ -17,7 +17,6 @@ export class TrvtToggleDetails extends HTMLElement {
 		});
 	}
 	connectedCallback() {
-		console.log('connectedCallback');
 		this.detailsElement.addEventListener('toggle', this);
 	}
 

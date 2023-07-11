@@ -16,7 +16,7 @@ if (script) {
 
 	trivetElementNames.forEach((name) => {
 		const moduleName = `../@${name.replace('-', '/')}/index.js`;
-		//import(moduleName);
+		import(moduleName);
 	});
 }
 //console.log(trivetElementNames);
