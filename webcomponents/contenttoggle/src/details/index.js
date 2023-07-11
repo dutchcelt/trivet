@@ -9,18 +9,26 @@ export class TrvtToggleDetails extends HTMLElement {
 		this.shadowRoot.adoptedStyleSheets = [...styles, details];
 		this.detailsElement = this.shadowRoot.querySelector('details');
 		this.contentElement = this.shadowRoot.querySelector('.content');
-		this.detailsElement.addEventListener('toggle', this);
+		this.loaded = false;
 		this.toggleEvent = new Event('toggle', {
 			bubbles: true,
 			cancelable: true,
 			composed: false, // event is added to the host so no need to compose the event
 		});
 	}
+	connectedCallback() {
+		console.log('connectedCallback');
+		this.detailsElement.addEventListener('toggle', this);
+	}
+
 	attributeChangedCallback(attributeName, oldValue, newValue) {
 		if (oldValue === newValue) return;
 		const isOpen = newValue !== null;
-		this.detailsElement.toggleAttribute('open', isOpen);
-		this.contentElement.toggleAttribute('inert', !isOpen);
+		if (this.loaded === true) {
+			this.detailsElement.toggleAttribute('open', isOpen);
+			this.contentElement.toggleAttribute('inert', !isOpen);
+		}
+		this.loaded = true;
 	}
 	static get observedAttributes() {
 		return ['open'];

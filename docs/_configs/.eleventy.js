@@ -52,11 +52,13 @@ module.exports = function (eleventyConfig) {
 					}
 				</script>
 			`.trim();
-		return temp;
+		return isDevelopmentMode ? '' : temp;
 	});
 	eleventyConfig.addShortcode('importmodules', function () {
 		const temp = `
-				<script type="module" data-trvt-components="${importArr}">
+				<script type="module" ${
+					isDevelopmentMode || `data-trvt-components="${importArr}"`
+				}>
 					${moduleImporter(importArr)}
 				</script>
 			`.trim();
