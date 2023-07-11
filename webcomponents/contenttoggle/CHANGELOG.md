@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.3.5
+
+### Patch Changes
+
+-   Scroll to open toggle event after the page is loaded/ready.
+
 ## 0.3.4
 
 ### Patch Changes
