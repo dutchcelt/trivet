@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.0.2
+
+### Patch Changes
+
+-   Refactored into lib files
+
 ## 1.0.1
 
 ### Patch Changes

@@ -5,26 +5,24 @@
 const { Command } = require('commander');
 const program = new Command();
 
-const chokidar = require('chokidar');
-
 const fs = require('fs');
 const path = require('path');
 const pkg = JSON.parse(
 	fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8')
 );
-const { getInstalledPathSync } = require('get-installed-path');
-const trivetTokensPath = getInstalledPathSync('@trvt/designtokens', {
-	paths: process.mainModule.paths,
-});
-const StyleDictionary = require('style-dictionary');
 
-const defaults = {
-	buildPath: path.resolve(`build`, `css`),
-	layer: 'design.tokens',
-	sourcePath: path.resolve(trivetTokensPath, 'tokens'),
-	themePath: undefined,
-	file: `trvt_tokens.css`,
-};
+const cleanTokens = require(path.join(
+	__dirname,
+	'..',
+	'lib',
+	'cleanTokens.js'
+));
+const generateTokens = require(path.join(
+	__dirname,
+	'..',
+	'lib',
+	'generateTokens.js'
+));
 
 program
 	.description('CLI to generate Trivet assets')
@@ -49,68 +47,3 @@ program
 	.action(generateTokens);
 
 program.parse();
-
-function cleanTokens(options) {
-	const opts = Object.assign(defaults, options);
-	const styledictionary = StyleDictionary.extend(tokenConfig(opts));
-	styledictionary.cleanAllPlatforms();
-}
-
-function generateTokens(options) {
-	const opts = Object.assign(defaults, options);
-
-	const styledictionary = StyleDictionary.extend(tokenConfig(opts));
-	styledictionary.buildAllPlatforms();
-
-	const getFileContent = (file) => {
-		const data = fs.readFileSync(file, { encoding: 'utf8' });
-		const transformedData = `@layer ${opts.layer} {\n${data}\n}\n`;
-		const bufferedData = Buffer.alloc(
-			transformedData.length,
-			transformedData,
-			'utf8'
-		);
-
-		fs.writeFileSync(file, bufferedData);
-	};
-
-	getFileContent(`${opts.buildPath}/${opts.file}`);
-
-	if (opts.watch === true) watchTokens(opts);
-}
-
-function watchTokens(opts) {
-	opts.watch = false;
-	chokidar
-		.watch(opts.themePath || opts.sourcePath)
-		.on('change', (event, path) => {
-			if (!!event) {
-				console.log('\nChanged file:', event);
-				generateTokens(opts);
-			}
-		});
-}
-
-function tokenConfig(opts) {
-	return {
-		include: opts.themePath ? [`${opts.sourcePath}/**/*.json`] : [],
-		source: [`${opts.themePath || opts.sourcePath}/**/*.json`],
-		platforms: {
-			css: {
-				transforms: ['name/cti/kebab'],
-				transformGroup: 'css',
-				buildPath: `${opts.buildPath}/`,
-				prefix: 'trvt',
-				files: [
-					{
-						destination: opts.file,
-						format: 'css/variables',
-						options: {
-							showFileHeader: false,
-						},
-					},
-				],
-			},
-		},
-	};
-}

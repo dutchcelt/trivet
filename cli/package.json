@@ -1,7 +1,10 @@
 {
 	"name": "@trvt/cli",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"main": "index.js",
+	"files": [
+		"/bin"
+	],
 	"description": "Use your own custom tokens, fonts, and icons with Trivet",
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
