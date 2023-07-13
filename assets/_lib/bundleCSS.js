@@ -1,5 +1,6 @@
 import { default as fs } from 'fs';
 import path from 'path';
+import prependFile from 'prepend-file';
 
 const buildFolder = path.resolve(`build`);
 const bundleFile = path.resolve(buildFolder, `bundle.css`);
@@ -14,25 +15,34 @@ try {
 	console.error(err);
 }
 
-fs.writeFileSync(bundleFile, `/* Bundle of hashed files */\n`);
-fs.writeFileSync(importerFile, `/* Import the hashed files */\n`);
+fs.writeFileSync(bundleFile, ``);
+fs.writeFileSync(importerFile, ``);
 
 const getFileContent = (file) => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	fs.appendFileSync(bundleFile, data);
-	const transformedData = `@import url('${path.basename(file)}');\n`;
+	/* The only stylesheet with 1 statement is the layer definition file */
+	const isLayerDefintionFile = data.toString().match(/;/g).length === 1;
+	const transformedData = `${
+		isLayerDefintionFile ? '/* Import the hashed files */\n' : ''
+	}@import url('${path.basename(file)}');\n`;
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
 		transformedData,
 		'utf8'
 	);
-	fs.appendFileSync(importerFile, bufferedData);
+	if (isLayerDefintionFile) {
+		prependFile.sync(bundleFile, `/* Bundle of hashed files */\n${data}\n`);
+		prependFile.sync(importerFile, bufferedData);
+	} else {
+		fs.appendFileSync(bundleFile, `${data}\n`);
+		fs.appendFileSync(importerFile, bufferedData);
+	}
 };
 
-await fs.readdir(buildFolder, async (err, files) => {
-	files.forEach(async (file) => {
+fs.readdir(buildFolder, (err, files) => {
+	files.forEach((file) => {
 		if (cssfileReg.test(file)) {
-			await getFileContent(`${buildFolder}/${file}`);
+			getFileContent(`${buildFolder}/${file}`);
 		}
 	});
 });

@@ -1,5 +1,5 @@
 /* styles */
-import layersCSS from './styles/layers.css' assert { type: 'css' };
+import layersCSS from './styles/index.css' assert { type: 'css' };
 import resetCSS from './styles/base/reset.css' assert { type: 'css' };
 import defaultsCSS from './styles/base/defaults.css' assert { type: 'css' };
 import tokensCSS from './styles/design/tokens.css' assert { type: 'css' };

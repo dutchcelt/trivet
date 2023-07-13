@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.7.4
+
+### Patch Changes
+
+-   Making sure the layer defintions are inserted first!
+
 ## 0.7.3
 
 ### Patch Changes
