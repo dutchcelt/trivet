@@ -42,8 +42,9 @@ program
 	.option('--buildPath [build]', 'todo')
 	.option('--sourcePath [source]', 'todo')
 	.option('--themePath [theme]', 'todo')
-	.option('--file [file]', 'todo')
-	.option('--watch', 'todo')
+	.option('--scope [scope]', 'todo')
+	.option('--filename [filename]', 'todo')
+	.option('--watch [watch]', 'todo')
 	.action(generateTokens);
 
 program.parse();

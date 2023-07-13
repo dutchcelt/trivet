@@ -7,10 +7,10 @@ module.exports = (opts) => {
 				transforms: ['name/cti/kebab'],
 				transformGroup: 'css',
 				buildPath: `${opts.buildPath}/`,
-				prefix: 'trvt',
+				prefix: opts.scope,
 				files: [
 					{
-						destination: opts.file,
+						destination: `${opts.scope}_${opts.filename}`,
 						format: 'css/variables',
 						options: {
 							showFileHeader: false,

@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.0.3
+
+### Patch Changes
+
+-   Added scope as an option
+
 ## 1.0.2
 
 ### Patch Changes

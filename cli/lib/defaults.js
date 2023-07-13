@@ -9,5 +9,6 @@ module.exports = {
 	layer: 'design.tokens',
 	sourcePath: path.resolve(trivetTokensPath, 'tokens'),
 	themePath: undefined,
-	file: `trvt_tokens.css`,
+	scope: `trvt`,
+	filename: `tokens.css`,
 };

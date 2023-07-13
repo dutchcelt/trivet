@@ -24,7 +24,7 @@ module.exports = (options) => {
 		fs.writeFileSync(file, bufferedData);
 	};
 
-	getFileContent(`${opts.buildPath}/${opts.file}`);
+	getFileContent(`${opts.buildPath}/${opts.scope}_${opts.filename}`);
 
 	if (opts.watch === true) watchTokens(opts);
 };
