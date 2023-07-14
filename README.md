@@ -10,17 +10,11 @@ The system offers:
 -   Layout system (Gridless)
 -   Web Components
 -   Assets for styling pages and Web Components
-
-## Zero Install
-
-This project is set up to work in certain browsers.
-It relies on Yarn and [Node 16.10 using corepack](https://yarnpkg.com/getting-started/install).
-
-This project utilises a Zero Install setup with Yarn v3 and PnP.
+-   A CLI for generating themes
 
 ### Install
 
-With PnP this isn't always needed.
+The setup use Yarn and Workspaces.
 
 -   `yarn install`
 

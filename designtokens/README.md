@@ -1,28 +1,36 @@
-# Basic Style Dictionary (workspace of @trvt/root)
+# Default Trivet tokens
 
-## Zero Install
+**NOTE**: TOKEN NAMING UNDER REVIEW
 
-This project is set up to work in certain browsers.
-It relies on Yarn and [Node 16.10 using corepack](https://yarnpkg.com/getting-started/install).
+Trivet utilises the popular [Style Dictionary](https://amzn.github.io/style-dictionary) approach to tokens. These also reasonably to the effort to have a W3C recommendation for this.
 
-This project has a Zero Install setup with Yarn v3 and PnP.
+## The foundation of six
 
-### Install
+Tokens are set up in six foundational areas
 
-With PnP this isn't always needed.
+1. Color
+2. Layout
+3. Spacing
+4. Stroke
+5. Toggles
+6. Typography
 
--   `yarn install`
+### Color
 
-### Build
+The color tokens contain a basic color library based on the the [open source color pallet](https://yeun.github.io/open-color/).
 
-The builds will be run from run from the root
+Colours in Trivet are based on a set of contexts:
 
--   `yarn build`
+1. editorial
+2. presentational
+3. actionable
+4. hierarchical
+5. status
 
-### Develop
+#### Token structure
 
-The develop will be run from run from the root
-
--   `yarn develop`
-
-More info on [Style Dictionary](https://amzn.github.io/style-dictionary)
+1. scope
+2. foundation
+3. context
+4. type (todo: set boundary. May not be necessary.)
+5. termination (state/range)

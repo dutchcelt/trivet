@@ -1,0 +1,18 @@
+{
+	"layout": {
+		"ratio": {
+			"square": {
+				"value": "1 / 1"
+			},
+			"wide": {
+				"value": "16 / 9"
+			},
+			"standard": {
+				"value": "4 / 3"
+			},
+			"golden": {
+				"value": "1.6180 / 1"
+			}
+		}
+	}
+}

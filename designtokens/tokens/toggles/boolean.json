@@ -1,5 +1,5 @@
 {
-	"functional": {
+	"toggles": {
 		"boolean": {
 			"true": {
 				"value": "initial"

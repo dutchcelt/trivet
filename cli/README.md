@@ -9,11 +9,17 @@ However if you have your own styling you can use this CLI to add your own custom
 
 -   Tokens ( Visual system tokens only, for theming or to be replaced by third party solution. )
 
+#### Install
+
+NPM: `npm install @trvt/cli`;
+
+Yarn: `yarn add @trvt/cli`;
+
 #### Usage
 
-Install with `npm install @trvt/cli`;
-
 In your scripts `trivet tokens`;
+
+##### Options
 
 ### Pending
 

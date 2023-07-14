@@ -7,8 +7,8 @@
 	"scripts": {
 		"build": "yarn workspaces foreach -pt run build",
 		"build:docs": "yarn workspace @trvt/docs run build ",
-		"develop": "yarn server & yarn workspaces foreach -pt --exclude @trvt/docs run develop",
-		"develop:docs": "yarn develop & yarn workspace @trvt/docs run develop ",
+		"develop:workspaces": "yarn server & yarn workspaces foreach -pt --exclude @trvt/docs run develop",
+		"develop": "yarn develop:workspaces & yarn workspace @trvt/docs run develop ",
 		"server": "wds -c configs/web-dev-server.config.js",
 		"lint": "eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
 		"test": "wtr ./webcomponents/**/*.test.js --node-resolve"
@@ -24,7 +24,7 @@
 		"webcomponents/*"
 	],
 	"engines": {
-		"node": "18.16.1",
+		"node": "16.20.1",
 		"yarn": "3.6.1"
 	},
 	"packageManager": "yarn@3.6.1",
