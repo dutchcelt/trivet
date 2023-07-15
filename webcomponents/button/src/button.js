@@ -1,8 +1,5 @@
 import { styles } from '@trvt/core';
 import buttonCSS from './button.css' assert { type: 'css' };
-import buttonLightDomCSS from './button-lightdom.css' assert { type: 'css' };
-
-document.adoptedStyleSheets.push(buttonLightDomCSS);
 
 const isKeyboardClickEvent = (event) =>
 	event.key === ' ' || event.key === 'Enter';
@@ -18,14 +15,16 @@ export class TrvtButton extends HTMLElement {
 	constructor() {
 		super();
 		this.#internals = this.attachInternals();
-		this.#shadowRoot = this.attachShadow({ mode: 'closed' });
+		this.#shadowRoot = this.attachShadow({
+			mode: 'closed',
+			delegatesFocus: true,
+		});
 		this.contextCSS = new CSSStyleSheet();
 		this.#shadowRoot.adoptedStyleSheets = [
 			...styles,
 			buttonCSS,
 			this.contextCSS,
 		];
-		this.tabIndex = '0';
 		this.#type = this.dataset.trvtType || 'button';
 		delete this.dataset.trvtType;
 		this.#value = this.dataset.trvtValue || '';
@@ -38,6 +37,9 @@ export class TrvtButton extends HTMLElement {
 		this.addEventListener('keydown', this.#keydownHandler);
 		this.addEventListener('keyup', this.#keyupHandler);
 	}
+
+	// connectedCallback() {}
+
 	/**
 	 * attributeChangedCallback
 	 * @param {Array} args
@@ -66,12 +68,11 @@ export class TrvtButton extends HTMLElement {
 		return document.createRange().createContextualFragment(`
 			<button 
 				type="${this.#type}"
-				${!!this.hidden && ` hidden="true"`}
+				${!!this.hidden && ` hidden="true"`}	
 				${!!this.#value && ` value="${this.#value}"`}
 				${!!this.trvtDisabled && ` disabled="true"`}
 				${!!this.id && ` id="${this.id}"`}
 				${!!this.name && ` name="${this.name}"`} 
-				tabindex="-1"
 			>
 				<slot></slot>
 			</button>

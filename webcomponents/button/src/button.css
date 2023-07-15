@@ -37,7 +37,9 @@
 
 		
 		button:focus-visible {
-			outline: transparent;
+			border-radius: var(--_radius);
+			outline-offset: var(--_outline-offset);
+			outline: var(--_outline-width) solid var(--_outline-color);
 		} 
 
 		button {
@@ -74,27 +76,27 @@
 				);
 			--_background-color: var(
 					--_context-primary,
-					var(--trvt-color-contexts-hierarchical-primary)
+					var(--trvt-color-hierarchical-primary)
 				)
 				var(
 					--_context-cta,
-					var(--trvt-color-contexts-presentational-cta)
+					var(--trvt-color-presentational-cta)
 				)
 				var(
 					--_context-abort,
-					var(--trvt-color-contexts-actionable-abort)
+					var(--trvt-color-actionable-abort)
 				)
 				var(
 					--_context-approve,
-					var(--trvt-color-contexts-actionable-approve)
+					var(--trvt-color-actionable-approve)
 				)
 				var(
 					--_context-release,
-					var(--trvt-color-contexts-actionable-release)
+					var(--trvt-color-actionable-release)
 				)
 				var(
 					--_context-pause,
-					var(--trvt-color-contexts-actionable-pause)
+					var(--trvt-color-actionable-pause)
 				);
 		}
 	}
