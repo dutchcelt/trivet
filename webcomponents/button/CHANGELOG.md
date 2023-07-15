@@ -1,5 +1,13 @@
 # @trvt/button
 
+## 0.9.1
+
+### Patch Changes
+
+-   Moved attribute observers to the form mixin.
+-   Updated dependencies
+    -   @trvt/core@0.8.1
+
 ## 0.9.0
 
 ### Minor Changes

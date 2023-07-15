@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.8.1
+
+### Patch Changes
+
+-   Moved attribute observers to the form mixin.
+
 ## 0.8.0
 
 ### Minor Changes
