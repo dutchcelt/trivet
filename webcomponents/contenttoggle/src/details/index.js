@@ -1,5 +1,6 @@
 import { styles } from '@trvt/core';
 import details from './details.css' assert { type: 'css' };
+import summary from './summary.css' assert { type: 'css' };
 
 export class TrvtToggleDetails extends HTMLElement {
 	constructor() {
@@ -7,7 +8,7 @@ export class TrvtToggleDetails extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.render();
 		this.isReady = false;
-		this.shadowRoot.adoptedStyleSheets = [...styles, details];
+		this.shadowRoot.adoptedStyleSheets = [...styles, details, summary];
 		this.detailsElement = this.shadowRoot.querySelector('details');
 		this.contentElement = this.shadowRoot.querySelector('.content');
 	}
