@@ -1,5 +1,12 @@
 # @trvt/lists
 
+## 0.4.1
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.8.0
+
 ## 0.4.0
 
 ### Minor Changes

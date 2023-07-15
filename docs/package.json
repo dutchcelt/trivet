@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"private": true,
 	"main": "index.html",
 	"files": [],
@@ -18,21 +18,21 @@
 		"develop": "yarn build:clean && yarn watch & yarn build:tokens --watch"
 	},
 	"devDependencies": {
-		"@trvt/cli": "^1.0.0",
+		"@trvt/cli": "^1.1.0",
 		"chalk-cli": "^5.0.1"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^2.0.1",
-		"@trvt/article": "^0.6.0",
-		"@trvt/assets": "^0.7.3",
-		"@trvt/button": "^0.8.2",
-		"@trvt/card": "^0.6.0",
-		"@trvt/contenttoggle": "^0.3.1",
-		"@trvt/core": "^0.7.2",
-		"@trvt/datatable": "^0.3.1",
-		"@trvt/dragscroller": "^0.3.0",
-		"@trvt/header": "^0.8.0",
-		"@trvt/layout": "^0.8.0",
-		"@trvt/lists": "^0.4.0"
+		"@trvt/article": "^0.6.1",
+		"@trvt/assets": "^0.8.0",
+		"@trvt/button": "^0.9.0",
+		"@trvt/card": "^0.6.1",
+		"@trvt/contenttoggle": "^0.4.0",
+		"@trvt/core": "^0.8.0",
+		"@trvt/datatable": "^0.3.2",
+		"@trvt/dragscroller": "^0.3.1",
+		"@trvt/header": "^0.8.1",
+		"@trvt/layout": "^0.8.1",
+		"@trvt/lists": "^0.4.1"
 	}
 }

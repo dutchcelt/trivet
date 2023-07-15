@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/core",
-	"version": "0.7.2",
+	"version": "0.8.0",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -12,8 +12,8 @@
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/assets": "^0.7.2",
-		"@trvt/designtokens": "^0.10.0",
+		"@trvt/assets": "^0.8.0",
+		"@trvt/designtokens": "^0.11.0",
 		"rollup": "^3.26.2"
 	},
 	"scripts": {

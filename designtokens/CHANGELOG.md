@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.0
+
+### Minor Changes
+
+-   New token structure and elementInternal handling
+
 ## 0.10.2
 
 ### Patch Changes

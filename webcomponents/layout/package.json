@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/layout",
-	"version": "0.8.0",
+	"version": "0.8.1",
 	"description": "Layout component for the Trivet Design System",
 	"type": "modules",
 	"main": "index.js",
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"dependencies": {
-		"@trvt/core": "^0.7.0",
+		"@trvt/core": "^0.8.0",
 		"rollup": "^3.26.2"
 	},
 	"scripts": {

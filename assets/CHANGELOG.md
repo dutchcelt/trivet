@@ -1,5 +1,16 @@
 # @trvt/assets
 
+## 0.8.0
+
+### Minor Changes
+
+-   New token structure and elementInternal handling
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/designtokens@0.11.0
+
 ## 0.7.4
 
 ### Patch Changes

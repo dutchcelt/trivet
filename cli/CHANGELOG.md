@@ -1,5 +1,16 @@
 # @trvt/cli
 
+## 1.1.0
+
+### Minor Changes
+
+-   New token structure and elementInternal handling
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/designtokens@0.11.0
+
 ## 1.0.3
 
 ### Patch Changes
