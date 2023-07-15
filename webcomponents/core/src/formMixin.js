@@ -1,8 +1,9 @@
-const TrvtFormMixin = (superClass) =>
+const FormMixin = (superClass) =>
 	class extends superClass {
 		#internals;
 		#shadowRoot;
 		#value;
+		#defaultValue;
 
 		static formAssociated = true;
 		get shadow() {
@@ -23,7 +24,7 @@ const TrvtFormMixin = (superClass) =>
 		get name() {
 			return this.getAttribute('name');
 		}
-		get type() {
+		get elementName() {
 			return this.localName;
 		}
 		get formElement() {
@@ -51,13 +52,41 @@ const TrvtFormMixin = (superClass) =>
 		reportValidity() {
 			return this.#internals.reportValidity();
 		}
-
 		formDataToJSON(data) {
 			const object = {};
 			data.forEach(function (value, key) {
 				object[key] = value;
 			});
 			return JSON.stringify(object);
+		}
+		/**
+		 * attributeChangedCallback
+		 * @param {Array} args
+		 */
+		attributeChangedCallback(...args) {
+			const [name, oldValue, newValue] = args;
+			if (oldValue !== null && oldValue === newValue) return;
+			switch (name) {
+				case 'data-trvt-context':
+					this.trvtContext = newValue;
+					this.#setContextStyle();
+					break;
+				case 'data-trvt-disabled':
+					this.formElement.disabled = newValue === 'true';
+					break;
+				case 'data-trvt-readonly':
+					this.formElement.readonly = newValue === 'true';
+					break;
+			}
+		}
+		#setContextStyle() {
+			this.contextCSS.replaceSync(`
+				@layer components.modifier {
+					button {
+						--_context: var(--_context-${this.trvtContext});
+					}
+				}
+			`);
 		}
 
 		constructor(...args) {
@@ -68,7 +97,8 @@ const TrvtFormMixin = (superClass) =>
 			});
 			this.#internals = this.attachInternals();
 			this.#value = '';
+			this.#defaultValue = '';
 		}
 	};
 
-export { TrvtFormMixin };
+export { FormMixin };

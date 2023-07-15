@@ -5,5 +5,5 @@ export { defineElement } from './src/defineElement.js';
 export { createFragment } from './src/createFragment.js';
 export { ShadowStyles } from './src/shadowStyles.js';
 export { ContentElementClass } from './src/contentClass.js';
-export { TrvtFormMixin } from './src/formMixin.js';
+export { FormMixin } from './src/formMixin.js';
 export { mix } from './src/mixin.js';
