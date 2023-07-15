@@ -1,44 +1,33 @@
-import { styles } from '@trvt/core';
+import { styles, mix, TrvtFormMixin } from '@trvt/core';
 import buttonCSS from './button.css' assert { type: 'css' };
 
 const isKeyboardClickEvent = (event) =>
 	event.key === ' ' || event.key === 'Enter';
 const isSpaceKeyboardClickEvent = (event) => event.key === ' ';
 
-export class TrvtButton extends HTMLElement {
-	static formAssociated = true;
+export class TrvtButton extends mix(HTMLElement).with(TrvtFormMixin) {
 	static observedAttributes = ['data-trvt-value'];
-	#internals;
-	#shadowRoot;
 	#type;
-	#value;
 	constructor() {
 		super();
-		this.#internals = this.attachInternals();
-		this.#shadowRoot = this.attachShadow({
-			mode: 'closed',
-			delegatesFocus: true,
-		});
 		this.contextCSS = new CSSStyleSheet();
-		this.#shadowRoot.adoptedStyleSheets = [
+		this.shadow.adoptedStyleSheets = [
 			...styles,
 			buttonCSS,
 			this.contextCSS,
 		];
 		this.#type = this.dataset.trvtType || 'button';
 		delete this.dataset.trvtType;
-		this.#value = this.dataset.trvtValue || '';
+		this.value = this.dataset.trvtValue || '';
 		this.context = this.dataset.trvtContext;
 		this.trvtDisabled = this.dataset.trvtDisabled || false;
-		this.#shadowRoot.appendChild(this.#render());
+		this.shadow.appendChild(this.#render());
 
 		this.addEventListener('click', () => this.#clickHandler());
 		this.addEventListener('mousedown', this.#mousedownHandler);
 		this.addEventListener('keydown', this.#keydownHandler);
 		this.addEventListener('keyup', this.#keyupHandler);
 	}
-
-	// connectedCallback() {}
 
 	/**
 	 * attributeChangedCallback
@@ -47,8 +36,7 @@ export class TrvtButton extends HTMLElement {
 	attributeChangedCallback(...args) {
 		const [, oldValue, newValue] = args;
 		if (oldValue === newValue) return;
-		this.#value = newValue;
-		this.#internals.form && this.#internals.setFormValue(newValue);
+		this.value = newValue;
 	}
 
 	#setContextStyle() {
@@ -69,7 +57,7 @@ export class TrvtButton extends HTMLElement {
 			<button 
 				type="${this.#type}"
 				${!!this.hidden && ` hidden="true"`}	
-				${!!this.#value && ` value="${this.#value}"`}
+				${!!this.value && ` value="${this.value}"`}
 				${!!this.trvtDisabled && ` disabled="true"`}
 				${!!this.id && ` id="${this.id}"`}
 				${!!this.name && ` name="${this.name}"`} 
@@ -83,8 +71,7 @@ export class TrvtButton extends HTMLElement {
 	 * @private
 	 */
 	#clickHandler() {
-		this.#internals.form && this.#internals.setFormValue(this.#value);
-		if (this.#type === 'submit') this.#internals.form.submit();
+		this.isSubmit && this.form.submit();
 	}
 
 	/**
