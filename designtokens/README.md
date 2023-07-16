@@ -32,5 +32,5 @@ Colours in Trivet are based on a set of contexts:
 1. scope
 2. foundation
 3. context
-4. type (todo: set boundary. May not be necessary.)
+4. type (TODO: set boundary. May not be necessary.)
 5. termination (state/range)
