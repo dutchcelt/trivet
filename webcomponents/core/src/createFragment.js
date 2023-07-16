@@ -1,7 +1,8 @@
-const createFragment = (string) => {
-	return document
-		.createRange()
-		.createContextualFragment(cleanHTML(string, false));
+const createFragment = (string, fragment = true) => {
+	const htmlString = cleanHTML(string, false);
+	return fragment
+		? document.createRange().createContextualFragment(htmlString)
+		: htmlString;
 };
 
 export { createFragment };

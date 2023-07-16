@@ -37,7 +37,7 @@ const safeValues = (detail) => {
  * @param {Object} store
  * @param {string} event
  * @param {Object } [props={}]
- * @returns {{}}
+ * @returns {Object}
  */
 const createEventObject = (store, event, props = {}) => {
 	Object.defineProperty(store, event, {
@@ -58,8 +58,9 @@ const createEventObject = (store, event, props = {}) => {
  * Event bus with data store based on registered events
  */
 class EventDataBus {
+	#bus;
 	constructor() {
-		this._bus = document.createElement('div');
+		this.#bus = document.createElement('div');
 		this.store = {};
 	}
 	/**
@@ -75,7 +76,7 @@ class EventDataBus {
 			);
 		} else {
 			createEventObject(this, eventName);
-			this._bus.addEventListener(eventName, callback);
+			this.#bus.addEventListener(eventName, callback);
 		}
 	}
 
@@ -86,7 +87,7 @@ class EventDataBus {
 	 */
 	remove(event, callback) {
 		this[event]
-			? this._bus.removeEventListener(event, callback)
+			? this.#bus.removeEventListener(event, callback)
 			: console.warn(
 					`Can't remove event '${event}' because it hasn't been registered.`
 			  );
@@ -100,7 +101,7 @@ class EventDataBus {
 	fire(event, detail = {}) {
 		if (this[event]) {
 			detail = Object.assign(this[event].data, safeValues(detail));
-			this._bus.dispatchEvent(new CustomEvent(event, { detail }));
+			this.#bus.dispatchEvent(new CustomEvent(event, { detail }));
 		} else {
 			console.warn(
 				`Can't fire event '${event}' because it hasn't been registered.`

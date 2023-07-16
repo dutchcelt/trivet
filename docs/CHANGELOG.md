@@ -1,5 +1,21 @@
 # @trvt/docs
 
+## 0.2.4
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/article@0.7.0
+    -   @trvt/button@0.10.0
+    -   @trvt/card@0.7.0
+    -   @trvt/core@0.9.0
+    -   @trvt/contenttoggle@0.4.1
+    -   @trvt/datatable@0.3.3
+    -   @trvt/dragscroller@0.3.2
+    -   @trvt/header@0.8.2
+    -   @trvt/layout@0.8.2
+    -   @trvt/lists@0.4.2
+
 ## 0.2.3
 
 ### Patch Changes

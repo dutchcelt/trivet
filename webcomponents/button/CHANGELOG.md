@@ -1,5 +1,16 @@
 # @trvt/button
 
+## 0.10.0
+
+### Minor Changes
+
+-   Now using a Trivet Base Component with mixins
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.9.0
+
 ## 0.9.1
 
 ### Patch Changes

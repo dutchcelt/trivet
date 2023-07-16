@@ -1,8 +1,12 @@
-import { styles, mix, FormMixin } from '@trvt/core';
+import { mix, TrivetElement, FormMixin, ReactiveMixin } from '@trvt/core';
 import buttonCSS from './button.css' assert { type: 'css' };
 import { EventMixin } from './eventMixin.js';
 
-export class TrvtButton extends mix(HTMLElement).with(FormMixin, EventMixin) {
+export class TrvtButton extends mix(TrivetElement).with(
+	FormMixin,
+	EventMixin,
+	ReactiveMixin
+) {
 	static observedAttributes = [
 		'data-trvt-context',
 		'data-trvt-disabled',
@@ -10,27 +14,26 @@ export class TrvtButton extends mix(HTMLElement).with(FormMixin, EventMixin) {
 	];
 	constructor() {
 		super();
-		this.contextCSS = new CSSStyleSheet();
-		this.shadow.adoptedStyleSheets = [
-			...styles,
-			buttonCSS,
-			this.contextCSS,
-		];
+
 		this.trvtType = this.dataset.trvtType || 'button';
 		delete this.dataset.trvtType;
+
 		this.value = this.dataset.trvtValue || '';
 		delete this.dataset.trvtValue;
+
 		this.trvtContext = this.dataset.trvtContext || 'default';
 		this.trvtDisabled = this.dataset.trvtDisabled || false;
 		this.trvtReadonly = this.dataset.trvtReadonly || false;
-		this.shadow.appendChild(this.#render());
+
+		this.shadowStyleSheets = [buttonCSS];
+		this.template = this.#buttonTemplateString();
 	}
 
 	/**
 	 * @private
 	 */
-	#render() {
-		return document.createRange().createContextualFragment(`
+	#buttonTemplateString() {
+		return `
 			<button 
 				type="${this.trvtType}"
 				${!!this.hidden ? ' hidden' : ''}	
@@ -42,7 +45,7 @@ export class TrvtButton extends mix(HTMLElement).with(FormMixin, EventMixin) {
 			>
 				<slot></slot>
 			</button>
-		`);
+		`;
 	}
 }
 customElements.define('trvt-button', TrvtButton);

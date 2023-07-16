@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/contenttoggle",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"description": "Toggle content as an accordion or as tabs",
 	"main": "index.js",
 	"files": [
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"dependencies": {
-		"@trvt/core": "^0.8.0",
+		"@trvt/core": "^0.9.0",
 		"rollup": "^3.26.2"
 	},
 	"scripts": {

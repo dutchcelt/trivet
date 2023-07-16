@@ -1,9 +1,7 @@
-export { styles } from './src/core.js';
+export { styles, TrivetElement } from './src/core.js';
 export { dataBus } from './src/dataBus.js';
 export { fontsLoader } from './src/fontsLoader.js';
-export { defineElement } from './src/defineElement.js';
 export { createFragment } from './src/createFragment.js';
-export { ShadowStyles } from './src/shadowStyles.js';
-export { ContentElementClass } from './src/contentClass.js';
 export { FormMixin } from './src/formMixin.js';
+export { ReactiveMixin } from './src/reactiveMixin.js';
 export { mix } from './src/mixin.js';

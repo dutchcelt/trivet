@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/card",
-	"version": "0.6.1",
+	"version": "0.7.0",
 	"description": "Card component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"dependencies": {
-		"@trvt/core": "^0.8.0",
+		"@trvt/core": "^0.9.0",
 		"rollup": "^3.26.2"
 	},
 	"scripts": {

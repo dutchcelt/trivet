@@ -1,5 +1,12 @@
 # @trvt/navigation
 
+## 0.6.2
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @trvt/core@0.9.0
+
 ## 0.6.1
 
 ### Patch Changes

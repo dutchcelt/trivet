@@ -1,14 +1,9 @@
 const FormMixin = (superClass) =>
 	class extends superClass {
 		#internals;
-		#shadowRoot;
 		#value;
-		#defaultValue;
 
 		static formAssociated = true;
-		get shadow() {
-			return this.#shadowRoot;
-		}
 
 		get value() {
 			return this.#value;
@@ -17,18 +12,17 @@ const FormMixin = (superClass) =>
 			this.#value = v;
 			this.#internals.setFormValue(this.#value);
 		}
-
 		get form() {
 			return this.#internals.form;
 		}
 		get name() {
 			return this.getAttribute('name');
 		}
-		get elementName() {
+		get componentTagName() {
 			return this.localName;
 		}
 		get formElement() {
-			return this.#shadowRoot.querySelector('input, button, textarea');
+			return this.shadow.querySelector('input, button, textarea');
 		}
 		get isSubmit() {
 			return (
@@ -59,45 +53,10 @@ const FormMixin = (superClass) =>
 			});
 			return JSON.stringify(object);
 		}
-		/**
-		 * attributeChangedCallback
-		 * @param {Array} args
-		 */
-		attributeChangedCallback(...args) {
-			const [name, oldValue, newValue] = args;
-			if (oldValue !== null && oldValue === newValue) return;
-			switch (name) {
-				case 'data-trvt-context':
-					this.trvtContext = newValue;
-					this.#setContextStyle();
-					break;
-				case 'data-trvt-disabled':
-					this.formElement.disabled = newValue === 'true';
-					break;
-				case 'data-trvt-readonly':
-					this.formElement.readonly = newValue === 'true';
-					break;
-			}
-		}
-		#setContextStyle() {
-			this.contextCSS.replaceSync(`
-				@layer components.modifier {
-					button {
-						--_context: var(--_context-${this.trvtContext});
-					}
-				}
-			`);
-		}
-
 		constructor(...args) {
 			super(...args);
-			this.#shadowRoot = this.attachShadow({
-				mode: 'closed',
-				delegatesFocus: true,
-			});
 			this.#internals = this.attachInternals();
-			this.#value = '';
-			this.#defaultValue = '';
+			this.#value = undefined;
 		}
 	};
 

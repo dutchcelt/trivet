@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.9.0
+
+### Minor Changes
+
+-   Now using a Trivet Base Component with mixins
+
 ## 0.8.1
 
 ### Patch Changes
