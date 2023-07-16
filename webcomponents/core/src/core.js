@@ -14,8 +14,8 @@ class TrivetElement extends HTMLElement {
 	get shadow() {
 		return this.#shadowRoot;
 	}
-	get shadowElement() {
-		return this.formElement || this.#shadowRoot.querySelector('*');
+	get shadowFragment() {
+		return this.#shadowRoot.querySelector('*');
 	}
 
 	get shadowStyleSheets() {

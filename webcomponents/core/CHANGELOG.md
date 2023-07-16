@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.9.1
+
+### Patch Changes
+
+-   Renamed main shadow element to shadowFragment to simplify usage
+
 ## 0.9.0
 
 ### Minor Changes

@@ -13,15 +13,15 @@ const ReactiveMixin = (superClass) =>
 					this.#setContextStyle();
 					break;
 				case 'data-trvt-disabled':
-					this.shadowElement.disabled = newValue === 'true';
+					this.shadowFragment.disabled = newValue === 'true';
 					break;
 				case 'data-trvt-readonly':
-					this.shadowElement.readonly = newValue === 'true';
+					this.shadowFragment.readonly = newValue === 'true';
 					break;
 			}
 		}
 		#setContextStyle() {
-			const tag = this.shadowElement.tagName.toLowerCase();
+			const tag = this.shadowFragment.tagName.toLowerCase();
 			this.contextCSS.replaceSync(`
 				@layer components.modifier {
 					${tag} {

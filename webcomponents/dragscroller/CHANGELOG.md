@@ -1,5 +1,13 @@
 # @trvt/dragscroller
 
+## 0.3.3
+
+### Patch Changes
+
+-   Renamed main shadow element to shadowFragment to simplify usage
+-   Updated dependencies
+    -   @trvt/core@0.9.1
+
 ## 0.3.2
 
 ### Patch Changes
