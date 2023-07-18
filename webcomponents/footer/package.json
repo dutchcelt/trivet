@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/footer",
-	"version": "0.6.2",
+	"version": "0.6.3",
 	"description": "Footer component for the Trivet Design System",
 	"private": true,
 	"main": "index.js",

@@ -6,7 +6,7 @@
 		--_table-sticky-header: unset;
 
 		--nested-grid-diplay: contents;
-		--canvas: var(--trvt-color-background-content);
+		--canvas: var(--trvt-color-background-canvas);
 		--canvasText: var(--trvt-color-typography-text);
 		--table-cell-width: 75ch;
 	}
@@ -15,12 +15,6 @@
 	@supports (grid-template-columns: subgrid) {
 		:host {
 			--nested-grid-diplay: grid;
-		}
-	}
-	@media (prefers-color-scheme: dark) {
-		:host {
-			--canvas: canvas;
-			--canvasText: canvasText;
 		}
 	}
 	@container test (max-width: 680px) {

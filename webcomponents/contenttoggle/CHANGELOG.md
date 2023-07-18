@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.4.2
+
+### Patch Changes
+
+-   Using the new base component
+
 ## 0.4.1
 
 ### Patch Changes

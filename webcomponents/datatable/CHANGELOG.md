@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.3.4
+
+### Patch Changes
+
+-   Using the new base component
+
 ## 0.3.3
 
 ### Patch Changes

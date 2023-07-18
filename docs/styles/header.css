@@ -5,6 +5,7 @@
 	}
 
 	trvt-header {
+		--trvt-color-background-content: var(--trvt-color-background-canvas);
 		--header-size: 8em;
 		pointer-events: none;
 	}
@@ -18,6 +19,11 @@
 		line-height: 1;
 		letter-spacing: -0.05ch;
 		width: 5ch;
+		background-color: transparent;
+		-webkit-mask-image: url('../images/scratched-optimized.svg');
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 200%;
+		-webkit-mask-position: center;
 	}
 	@container header (max-width: 375px) {
 		trvt-header::part(heading) {
@@ -37,25 +43,13 @@
 
 	@media (prefers-color-scheme: light) {
 		trvt-header::part(heading) {
-			background: url('../images/scratched-optimized-dark.svg') no-repeat
-				50% 50%;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		background-size: 200%;
-				width: 5ch;
-			}
+			-webkit-text-fill-color: var(--trvt-color-lib-sand-11);
 		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		trvt-header::part(heading) {
-			background: url('../images/scratched-optimized-light.svg') no-repeat
-				50% 50%;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		background-size: 200%;
-				width: 5ch;
-			}
+			-webkit-text-fill-color: var(--trvt-color-lib-sand-1);
 		}
 	}
 }

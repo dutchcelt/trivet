@@ -1,9 +1,9 @@
 @layer components.props {
 	:host {
-		--detail-surface-color: var(--trvt-color-background-content, canvas);
+		--detail-surface-color: var(--trvt-color-background-canvas, canvas);
 		--detail-surface-color-active: var(
 			--toggle-detail-active-canvas,
-			var(--trvt-color-background-content)
+			var(--trvt-color-background-canvas)
 		);
 		--detail-text-color: var(--trvt-color-typography-text, canvasText);
 		--detail-display: var(--toggle-display, block);

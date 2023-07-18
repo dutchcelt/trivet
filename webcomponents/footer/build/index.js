@@ -1,1 +1,1 @@
-import{styles as t}from"@trvt/core";class o extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.adoptedStyleSheets=[...t],this.shadowRoot.innerHTML="<slot></slot>"}}customElements.define("trvt-footer",o);export{o as TrvtFooter};
+import{TrivetElement as t}from"@trvt/core";class e extends t{constructor(){super(),this.template="<slot></slot>"}}customElements.define("trvt-footer",e);export{e as TrvtFooter};

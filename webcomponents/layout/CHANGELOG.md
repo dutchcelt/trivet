@@ -1,5 +1,11 @@
 # @trvt/layout
 
+## 0.8.3
+
+### Patch Changes
+
+-   Using the new base component
+
 ## 0.8.2
 
 ### Patch Changes

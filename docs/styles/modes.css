@@ -1,0 +1,22 @@
+@layer theme {
+	@media (prefers-color-scheme: light) {
+		:root {
+			--trvt-color-background-canvas: var(--trvt-color-lib-sand-1);
+			--trvt-color-background-content: var(--trvt-color-lib-sand-1);
+			--trvt-color-typography-text: var(--trvt-color-lib-sand-11);
+			--trvt-color-typography-text-inverted: var(--trvt-color-lib-sand-1);
+			--trvt-color-background-header: var(--trvt-color-lib-sand-11);
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--trvt-color-background-canvas: var(--trvt-color-lib-sand-11);
+			--trvt-color-background-content: var(--trvt-color-lib-sand-11);
+			--trvt-color-typography-text: var(--trvt-color-lib-sand-1);
+			--trvt-color-typography-text-inverted: var(
+				--trvt-color-lib-sand-11
+			);
+			--trvt-color-background-header: var(--trvt-color-lib-sand-1);
+		}
+	}
+}

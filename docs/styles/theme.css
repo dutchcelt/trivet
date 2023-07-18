@@ -1,5 +1,6 @@
 @import url('font-faces.css');
 @import url('header.css');
+@import url('modes.css');
 
 @layer theme {
 	trvt-layout:has(:not(:defined)) {
@@ -24,7 +25,9 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-rendering: optimizeLegibility;
+		background: var(--trvt-color-background-canvas);
 	}
+
 	@supports not (font-size: xxx-large) {
 		:root {
 			--trvt-typography-size-xxxl: -webkit-xxx-large;

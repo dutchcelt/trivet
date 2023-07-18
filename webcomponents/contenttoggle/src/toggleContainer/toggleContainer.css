@@ -5,7 +5,7 @@
 		--toggle-display: block;
 		--container-display: block;
 		--toggle-summary-active-canvas: var(
-			--trvt-color-background-surfaces,
+			--trvt-color-background-content,
 			canvas
 		);
 		--toggle-summary-active-text: var(
@@ -13,10 +13,10 @@
 			canvasText
 		);
 		--toggle-detail-active-canvas: var(
-			--trvt-color-background-surfaces,
+			--trvt-color-background-content,
 			canvas
 		);
-		--toggle-border-color: canvasText;
+		--toggle-border-color: var(--trvt-color-typography-text);
 		--toggle-border-width: var(--trvt-stroke-medium);
 	}
 	.content {

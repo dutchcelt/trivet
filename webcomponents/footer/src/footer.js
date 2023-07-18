@@ -1,11 +1,9 @@
-import { styles } from '@trvt/core';
+import { TrivetElement } from '@trvt/core';
 
-export class TrvtFooter extends HTMLElement {
+export class TrvtFooter extends TrivetElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
-		this.shadowRoot.adoptedStyleSheets = [...styles];
-		this.shadowRoot.innerHTML = `<slot></slot>`;
+		this.template = `<slot></slot>`;
 	}
 }
 customElements.define('trvt-footer', TrvtFooter);
