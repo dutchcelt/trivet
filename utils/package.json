@@ -1,0 +1,17 @@
+{
+	"name": "@trvt/utils",
+	"version": "0.0.0",
+	"private": true,
+	"main": "index.js",
+	"description": "TODO",
+	"author": "C. Egor Kloos",
+	"license": "AGPLv3",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"scripts": {
+		"test": "echo 'utils: no scripts'",
+		"build": "echo 'utils: no scripts'",
+		"develop": "echo 'utils: no scripts'"
+	},
+	"packageManager": "yarn@3.6.1",
+	"dependencies": {}
+}
