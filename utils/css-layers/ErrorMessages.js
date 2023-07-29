@@ -1,11 +1,17 @@
 /**
+ * @typedef {import('./cssstylesheet.d').CSSStyleSheet} styleDef
+ */
+
+/**
  * ErrorMessages
  * @class
- * @param {CSSRule} r - A individual css rule
- * @param {Object} layerObject - A layer object with all the layer data
  */
 export class ErrorMessages {
-	constructor(r = {}, layerObject) {
+	/**
+	 * @param {styleDef} r - A individual css rule
+	 * @param {Object} layerObject - A layer object with all the layer data
+	 */
+	constructor(r, layerObject) {
 		this.r = r;
 		this.layerObject = layerObject;
 	}
@@ -44,17 +50,15 @@ export class ErrorMessages {
 		)} ...\n`;
 	}
 	get inValidLayerName() {
-		return `The CSS ${
-			this.layerObject
+		return `The CSS ${this.layerObject
 				? this.layerObject.index === 0
 					? 'layer'
 					: 'sublayer'
 				: 'layer or sublayer'
-		} '${this.layerName}' ${
-			this.layerObject && this.layerObject.index === 0
+			} '${this.layerName}' ${this.layerObject && this.layerObject.index === 0
 				? 'has not been declared'
 				: `does not exsist under the layer '${this.resolvedLayerName}'`
-		}\n`;
+			}\n`;
 	}
 	get inValidImportLayerName() {
 		return `The @import rule has an invalid layer name '${this.layerName}'\n`;

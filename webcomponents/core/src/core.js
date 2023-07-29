@@ -2,6 +2,10 @@
 import { trivetCSS } from '@trvt/assets';
 import { createFragment } from './createFragment.js';
 
+/**
+ * TrivetElement
+ * @extends HTMLElement
+ */
 class TrivetElement extends HTMLElement {
 	#shadowRoot;
 	#shadowStyles;

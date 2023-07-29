@@ -1,4 +1,10 @@
 {
-	"allowJs": true,
-	"checkJs": true
+	"compilerOptions": {
+		"module": "esnext",
+		"checkJs": true,
+		"allowJs": true,
+		"target": "es6"
+	},
+	"include": ["**/*"],
+	"exclude": ["./node_modules", "dist", "build"]
 }

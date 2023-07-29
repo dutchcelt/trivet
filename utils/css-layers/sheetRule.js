@@ -1,8 +1,13 @@
 /**
+ * @typedef {import('./cssstylesheet.d').CSSStyleSheet} styleDef
+ */
+
+/**
  * sheetRule
- * @param {CSSRule|CSSStyleSheet} rule
- * @returns {CSSRule}
+ * @param {styleDef} rule
+ * @returns {styleDef}
  */
 export function sheetRule(rule) {
-    return rule?.styleSheet || rule;
+	const returnobj = rule?.styleSheet || rule;
+	return returnobj;
 }

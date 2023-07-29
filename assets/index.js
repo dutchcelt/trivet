@@ -6,6 +6,9 @@ import tokensCSS from './styles/design/tokens.css' assert { type: 'css' };
 import foundationCSS from './styles/design/foundation.css' assert { type: 'css' };
 import utilitiesCSS from './styles/design/utilities.css' assert { type: 'css' };
 
+/**
+ * @type {Array<CSSStyleSheet>}
+ */
 export const trivetCSS = [
 	layersCSS,
 	resetCSS,

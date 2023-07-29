@@ -1,46 +1,56 @@
 import { LayerWrangler } from './LayerWrangler.js';
+/**
+ * Strings for initial css layer validation message
+ * @type {Object}
+ */
+const strings = {
+	runningOn: {
+		en: 'Running CSS @layer test on',
+	},
+	runningWith: {
+		en: 'Running CSS @layer test directly on a',
+	},
+	noErrors: {
+		en: 'No errors found',
+	},
+};
 
 /**
- * runLayerTestOn
- * @param {Object} root - Contains the Root and layer config you want to test
- * @param {Array} layerConfig - This is equal to the namelist found in the layer statement
+ * getErrorList
+ * @param {Object} opts - Needed to instantiate the LayerWrangler class
+ * @param {boolean} isDOMTree - Are testing a DOM tree or an Object?
+ * @param {string} lang - Language
  * @returns {Promise}
  */
-export async function runLayerTestOn(scope = document, layerConfig) {
-	const LayerState = new LayerWrangler({
-		scope,
-		layerConfig,
-	});
+async function getErrorList(opts, isDOMTree = true, lang = 'en') {
+	const LayerState = new LayerWrangler(opts);
 	const errorlist = LayerState.layerErrors;
+	const str = strings[isDOMTree ? 'runningOn' : 'runningWith'][lang];
 	if (errorlist.length) {
-		console.log(`Running CSS @layer test on ${scope.constructor.name}`);
+		console.log(`${str} ${LayerState.scope.constructor.name}`);
 		console.error(errorlist.join('\n'));
 	} else {
-		errorlist.push('No errors found');
+		errorlist.push(strings.noErrors[lang]);
 	}
 	return errorlist;
 }
 
 /**
+ * runLayerTestOn
+ * @param {Object} scope - Contains the Root and layer config you want to test
+ * @param {Array} layerConfig - This is equal to the namelist found in the layer statement
+ * @returns {Promise}
+ */
+export async function runLayerTestOn(scope = document, layerConfig) {
+	return getErrorList({ scope, layerConfig }, true);
+}
+
+/**
  * runLayerTestWith
- * @param {CSSStyleSheet} sheet - This is either a stylesheet or a rule
+ * @param {Object} scope - Contains the Root and layer config you want to test
  * @param {Array} layerConfig - This is equal to the namelist found in the layer statement
  * @returns {Promise}
  */
 export async function runLayerTestWith(scope, layerConfig) {
-	const LayerState = new LayerWrangler({
-		scope,
-		layerConfig,
-	});
-	const errorlist = LayerState.layerErrors;
-
-	if (errorlist.length) {
-		console.log(
-			`Running CSS @layer test directly on a ${scope.constructor.name}`
-		);
-		console.error(errorlist.join('\n'));
-	} else {
-		errorlist.push('No errors found');
-	}
-	return errorlist;
+	return getErrorList({ scope, layerConfig }, false);
 }

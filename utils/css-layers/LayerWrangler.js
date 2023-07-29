@@ -1,3 +1,7 @@
+/**
+ * @typedef {import('./cssstylesheet.d').CSSStyleSheet} styleDef
+ */
+
 import { ErrorMessages } from './ErrorMessages.js';
 import { getAllCssRules } from './getAllCssRules.js';
 import { getLayerName } from './getLayerName.js';
@@ -22,7 +26,7 @@ export class LayerWrangler {
 	}
 	/**
 	 * Get all the Stylesheets
-	 * @returns {Array<CSSStyleSheet>}
+	 * @returns {Array<styleDef>}
 	 */
 	get allStyleSheets() {
 		const sheets = [
@@ -42,7 +46,7 @@ export class LayerWrangler {
 	/**
 	 * mapOfAllCssLayers
 	 * Get the Map() of all CSS Layers
-	 * @returns {Map}
+	 * @returns {styleDef|Map}
 	 */
 	get mapOfAllCssLayers() {
 		return this.layerMap;
@@ -51,7 +55,7 @@ export class LayerWrangler {
 	/**
 	 * mapOfAllCssLayers
 	 * Set the Map() of all CSS Layers
-	 * @param {CSSRuleList} cssRules - A collection of rules
+	 * @param {styleDef|Map} cssRules - A collection of rules
 	 */
 	set mapOfAllCssLayers(cssRules) {
 		const layers = filterOutLayers(cssRules);
@@ -71,7 +75,7 @@ export class LayerWrangler {
 	}
 	/**
 	 * nextLayer
-	 * @param {CSSRule} layer -
+	 * @param {styleDef} layer -
 	 * @param {Array} layerNameArray -
 	 */
 	nextLayer(layer, layerNameArray) {
@@ -91,7 +95,7 @@ export class LayerWrangler {
 	}
 	/**
 	 * appLayerMapObject
-	 * @param {CSSRule} sublayer
+	 * @param {styleDef} sublayer
 	 * @param {Array} layerNameArray
 	 * @param {number} index
 	 */
@@ -109,48 +113,53 @@ export class LayerWrangler {
 	}
 	/**
 	 * validateRules
-	 * @param {cssRule[]} cssRules - This an Array of cssRules
+	 * @param {styleDef} rules - This an Array of cssRules
 	 * @returns {Array}
 	 */
 	validateRules(rules) {
 		let validLayerStatementIsDefined = false;
 		let errors = new Set();
-		rules.forEach((rule) => {
-			const type = rule.constructor.name;
-			const nameOfLayer = getLayerName(rule);
-			const isValidLayer = (layer) =>
-				layer && this.layerConfig.includes(layer.resolvedLayerName);
-			const Messages = new ErrorMessages(
-				rule,
-				this.mapOfAllCssLayers.get(rule)
-			);
-			switch (type) {
-				case 'CSSLayerStatementRule':
-					if (
-						rule.nameList.every((a, i) => a === this.layerConfig[i])
-					) {
-						validLayerStatementIsDefined
-							? errors.add(Messages.layerExists)
-							: (validLayerStatementIsDefined = true);
-					} else {
-						errors.add(Messages.inValidStatement);
-					}
-					break;
-				case 'CSSLayerBlockRule':
-					nameOfLayer === undefined || nameOfLayer === ''
-						? errors.add(Messages.missingLayerName)
-						: isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
-						  errors.add(Messages.inValidLayerName);
-					break;
-				case 'CSSImportRule':
-					isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
-						(rule.layerName &&
-							errors.add(Messages.inValidImportLayerName));
-					break;
-				default:
-				// ToDo: Add checks for rules not inside a layer
+		rules.forEach(
+			/** @param {any} rule*/
+			(rule) => {
+				const type = rule.constructor.name;
+				const nameOfLayer = getLayerName(rule);
+				const isValidLayer = (layer) =>
+					layer && this.layerConfig.includes(layer.resolvedLayerName);
+				const Messages = new ErrorMessages(
+					rule,
+					this.mapOfAllCssLayers.get(rule)
+				);
+				switch (type) {
+					case 'CSSLayerStatementRule':
+						if (
+							rule.nameList.every(
+								(a, i) => a === this.layerConfig[i]
+							)
+						) {
+							validLayerStatementIsDefined
+								? errors.add(Messages.layerExists)
+								: (validLayerStatementIsDefined = true);
+						} else {
+							errors.add(Messages.inValidStatement);
+						}
+						break;
+					case 'CSSLayerBlockRule':
+						nameOfLayer === undefined || nameOfLayer === ''
+							? errors.add(Messages.missingLayerName)
+							: isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
+							errors.add(Messages.inValidLayerName);
+						break;
+					case 'CSSImportRule':
+						isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
+							(rule.layerName &&
+								errors.add(Messages.inValidImportLayerName));
+						break;
+					default:
+					// ToDo: Add checks for rules not inside a layer
+				}
 			}
-		});
+		);
 		return [...errors];
 	}
 
