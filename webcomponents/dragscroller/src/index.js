@@ -1,4 +1,4 @@
-import { TrivetElement } from '@trvt/core';
+import { TrivetElement, cssLayerDefinitions } from '@trvt/core';
 import dragscrollerCSS from './dragscroller.css' assert { type: 'css' };
 
 export class TrvtDragScroller extends TrivetElement {
@@ -14,9 +14,17 @@ export class TrvtDragScroller extends TrivetElement {
 	connectedCallback() {
 		this.shadowFragment.addEventListener('mousedown', this);
 	}
+	/**
+	 * Generic Event Handler
+	 * @param {Event} event
+	 */
 	handleEvent(event) {
 		if (this.#validEventTypes.test(event.type)) this[event.type](event);
 	}
+	/**
+	 * mousedown
+	 * @param {MouseEvent} event
+	 */
 	mousedown(event) {
 		this.shadowFragment.style.cursor = 'grabbing';
 		this.shadowFragment.style.userSelect = 'none';
@@ -32,6 +40,10 @@ export class TrvtDragScroller extends TrivetElement {
 		document.addEventListener('mousemove', this);
 		document.addEventListener('mouseup', this);
 	}
+	/**
+	 * mousemove
+	 * @param {MouseEvent} event
+	 */
 	mousemove(event) {
 		// How far the mouse has been moved
 		const dx = event.clientX - this.pos.x;
@@ -40,6 +52,10 @@ export class TrvtDragScroller extends TrivetElement {
 		this.shadowFragment.scrollTop = this.pos.top - dy;
 		this.shadowFragment.scrollLeft = this.pos.left - dx;
 	}
+	/**
+	 * mouseup
+	 * @param {MouseEvent} event
+	 */
 	mouseup(event) {
 		document.removeEventListener('mousemove', this);
 		document.removeEventListener('mouseup', this);
