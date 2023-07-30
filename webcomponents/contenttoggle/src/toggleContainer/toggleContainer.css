@@ -1,6 +1,5 @@
 @layer components.props {
 	:host {
-		--is-accordion: initial;
 		--is-tabbed: ;
 		--toggle-display: block;
 		--container-display: block;
@@ -40,7 +39,6 @@
 @layer components.modifiers {
 	@container toggles (min-width: 640px) {
 		.content {
-			--is-accordion: ;
 			--is-tabbed: initial;
 			--container-display: grid;
 			--toggle-display: contents;

@@ -18,10 +18,7 @@
 			var(--trvt-color-typography-text-inverted, Canvas)
 		);
 		--summary-icon-surface-color: var(--trvt-color-background-icon, canvas);
-		--summary-icon-text-color: var(
-			--trvt-color-typography-icon,
-			canvasText
-		);
+		--summary-icon-text-color: var(--summary-text-color);
 		--summary-icon-font-family: var(--trvt-typography-family-gui);
 		--summary-icon-font-weight: var(--font-weight-heavy, 900);
 		--summary-icon-open-char: var(--icon-minus-char, '\2212');
@@ -40,8 +37,12 @@
 	summary::-webkit-details-marker {
 		display: none;
 	}
+	summary::marker {
+		content: '';
+	}
 
 	summary {
+		contain: layout;
 		display: flex;
 		grid-row: 1;
 		gap: var(--summary-block-space) var(--summary-inline-space);
@@ -71,27 +72,33 @@
 	}
 
 	summary::after {
-		display: flex;
-		content: var(--is-accordion, var(--summary-icon-closed-char));
+		display: var(--toggle-display, flex);
+		content: '';
 		width: 1em;
 		height: 1em;
 		justify-content: center;
 		line-height: 1.1;
-		font-family: var(--summary-icon-font-family);
-		background: var(--summary-icon-surface-color);
-		color: var(--summary-icon-text-color);
 		margin-inline-start: auto;
 		font-weight: var(--summary-icon-font-weight);
+		aspect-ratio: 1;
+		background: conic-gradient(
+				from 90deg at 26% 26%,
+				#0000 90deg,
+				var(--summary-icon-text-color) 0
+			)
+			100% 100%/58% 58%;
+		clip-path: inset(1px);
+		transition: 0.3s;
 	}
 }
+
 @layer components.modifiers {
 	details[open] summary {
 		color: var(--summary-text-color-active);
 	}
 	details[open] summary::after {
-		content: var(--is-accordion, var(--summary-icon-open-char));
+		transform: rotate(45deg);
 	}
-
 	summary:focus-visible {
 		outline-offset: var(--trvt-stroke-medium);
 		outline: var(--trvt-stroke-heavy) solid var(--trvt-color-line-outline);
