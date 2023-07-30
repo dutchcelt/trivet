@@ -1,5 +1,3 @@
-// @ts-check
-
 /**
  * Basic conversion of string entities
  * @param {string} str
@@ -58,6 +56,7 @@ const createEventObject = (store, event, props = {}) => {
  * Event bus with data store based on registered events
  */
 class EventDataBus {
+	/** @type {Element} #bus */
 	#bus;
 	constructor() {
 		this.#bus = document.createElement('div');
@@ -66,9 +65,10 @@ class EventDataBus {
 	/**
 	 * Register custom event
 	 * @param {string} event
-	 * @param callback
+	 * @param {Function|any} callback - FIX: May not need 'any'
 	 */
 	register(event, callback) {
+		/**  @type {String} eventName */
 		const eventName = event || 'anonymous';
 		if (this[eventName]) {
 			console.warn(
@@ -83,14 +83,14 @@ class EventDataBus {
 	/**
 	 * Removed custom event
 	 * @param {string} event
-	 * @param callback
+	 * @param {Function|any} callback - FIX: May not need 'any'
 	 */
 	remove(event, callback) {
 		this[event]
 			? this.#bus.removeEventListener(event, callback)
 			: console.warn(
-					`Can't remove event '${event}' because it hasn't been registered.`
-			  );
+				`Can't remove event '${event}' because it hasn't been registered.`
+			);
 	}
 
 	/**

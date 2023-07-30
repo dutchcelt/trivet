@@ -1,5 +1,18 @@
+/**
+ * createFragment.js
+ * trivet
+ *
+ * @author dutchcelt
+ */
+
+/**
+ * createFragment
+ * @param {String} string
+ * @param {boolean} fragment
+ * @return {DocumentFragment|String| any}
+ */
 const createFragment = (string, fragment = true) => {
-	const htmlString = cleanHTML(string, false);
+	const htmlString = `${cleanHTML(string, false)}`;
 	return fragment
 		? document.createRange().createContextualFragment(htmlString)
 		: htmlString;
@@ -11,8 +24,8 @@ export { createFragment };
  * Sanitize an HTML string
  * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {String}          str   The HTML string to sanitize
- * @param  {Boolean}         nodes If true, returns HTML nodes instead of a string
- * @return {String|NodeList}       The sanitized string or nodes
+ * @param  {boolean}         nodes If true, returns HTML nodes instead of a string
+ * @return {NodeList|String}       The sanitized string or nodes
  */
 function cleanHTML(str, nodes) {
 	/**
@@ -27,7 +40,7 @@ function cleanHTML(str, nodes) {
 
 	/**
 	 * Remove <script> elements
-	 * @param  {Node} html The HTML
+	 * @param  {Element} html The HTML
 	 */
 	function removeScripts(html) {
 		let scripts = html.querySelectorAll('script');
@@ -53,7 +66,7 @@ function cleanHTML(str, nodes) {
 
 	/**
 	 * Remove potentially dangerous attributes from an element
-	 * @param  {Node} elem The element
+	 * @param  {Element} elem The element
 	 */
 	function removeAttributes(elem) {
 		// Loop through each attribute
@@ -67,7 +80,7 @@ function cleanHTML(str, nodes) {
 
 	/**
 	 * Remove dangerous stuff from the HTML document's nodes
-	 * @param  {Node} html The HTML document
+	 * @param  {Element} html The HTML document
 	 */
 	function clean(html) {
 		let nodes = html.children;
@@ -77,7 +90,11 @@ function cleanHTML(str, nodes) {
 		}
 	}
 
-	// Convert the string to HTML
+	//
+	/**
+	 * Convert the string to HTML
+	 * @type {any} html - FIX: Replace 'any' type
+	 */
 	let html = stringToHTML();
 
 	// Sanitize it
