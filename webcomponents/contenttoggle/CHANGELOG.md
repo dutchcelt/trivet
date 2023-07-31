@@ -1,5 +1,13 @@
 # @trvt/contenttoggle
 
+## 0.4.3
+
+### Patch Changes
+
+-   Added some type checking with JSDocs
+-   Updated dependencies
+    -   @trvt/core@0.9.2
+
 ## 0.4.2
 
 ### Patch Changes

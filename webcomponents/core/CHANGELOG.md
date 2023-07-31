@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.9.2
+
+### Patch Changes
+
+-   Added some type checking with JSDocs
+
 ## 0.9.1
 
 ### Patch Changes

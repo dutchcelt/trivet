@@ -44,20 +44,20 @@ export class LayerWrangler {
 		});
 	}
 	/**
-	 * mapOfAllCssLayers
+	 * Get Map of all CSS Layers
 	 * Get the Map() of all CSS Layers
-	 * @returns {styleDef|Map}
+	 * @returns {Map}
 	 */
 	get mapOfAllCssLayers() {
 		return this.layerMap;
 	}
 
 	/**
-	 * mapOfAllCssLayers
+	 * Add Rule to the `layerMap`
 	 * Set the Map() of all CSS Layers
-	 * @param {styleDef|Map} cssRules - A collection of rules
+	 * @param {CSSRuleList} cssRules - A collection of rules
 	 */
-	set mapOfAllCssLayers(cssRules) {
+	set setLayersMapWith(cssRules) {
 		const layers = filterOutLayers(cssRules);
 		layers.forEach((layer) => {
 			let layerName = getLayerName(layer);
@@ -126,7 +126,7 @@ export class LayerWrangler {
 				const nameOfLayer = getLayerName(rule);
 				const isValidLayer = (layer) =>
 					layer && this.layerConfig.includes(layer.resolvedLayerName);
-				const Messages = new ErrorMessages(
+				const Messages = new this.ErrorMessages(
 					rule,
 					this.mapOfAllCssLayers.get(rule)
 				);
@@ -172,8 +172,7 @@ export class LayerWrangler {
 	get layerErrors() {
 		for (const sheet of this.allStyleSheets) {
 			const cssRules = [...getAllCssRules(sheet)];
-			this.mapOfAllCssLayers = cssRules;
-
+			this.setLayersMapWith = cssRules;
 			const error = this.validateRules(cssRules);
 			error.length &&
 				sheet.href &&
@@ -186,7 +185,7 @@ export class LayerWrangler {
 			this.errors.push(error);
 		}
 		if (!this.hasLayerStatement) {
-			this.errors.push(messages.missingStatement);
+			this.errors.push(this.ErrorMessages.missingStatement);
 		}
 
 		const result = [...new Set(this.errors.flat())];

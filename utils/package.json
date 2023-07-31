@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/utils",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"main": "index.js",
 	"description": "TODO",
@@ -12,6 +12,5 @@
 		"build": "echo 'utils: no scripts'",
 		"develop": "echo 'utils: no scripts'"
 	},
-	"packageManager": "yarn@3.6.1",
-	"dependencies": {}
+	"packageManager": "yarn@3.6.1"
 }

@@ -20,6 +20,7 @@
 		"assets",
 		"docs",
 		"cli",
+		"utils",
 		"designtokens",
 		"webcomponents/*"
 	],

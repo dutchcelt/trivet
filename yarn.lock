@@ -717,12 +717,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trvt/contenttoggle@workspace:webcomponents/contenttoggle"
   dependencies:
-    "@trvt/core": ^0.9.0
+    "@trvt/core": ^0.9.2
     rollup: ^3.26.2
   languageName: unknown
   linkType: soft
 
-"@trvt/core@^0.9.0, @trvt/core@^0.9.1, @trvt/core@workspace:webcomponents/core":
+"@trvt/core@^0.9.0, @trvt/core@^0.9.1, @trvt/core@^0.9.2, @trvt/core@workspace:webcomponents/core":
   version: 0.0.0-use.local
   resolution: "@trvt/core@workspace:webcomponents/core"
   dependencies:
@@ -861,6 +861,12 @@ __metadata:
     stylelint: ^14.5.1
     stylelint-config-prettier: ^9.0.3
     stylelint-config-standard: ^25.0.0
+  languageName: unknown
+  linkType: soft
+
+"@trvt/utils@workspace:utils":
+  version: 0.0.0-use.local
+  resolution: "@trvt/utils@workspace:utils"
   languageName: unknown
   linkType: soft
 

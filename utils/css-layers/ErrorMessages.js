@@ -13,7 +13,7 @@ export class ErrorMessages {
 	 */
 	constructor(r, layerObject) {
 		this.r = r;
-		this.layerObject = layerObject;
+		this.layerObject = layerObject || undefined;
 	}
 
 	get resolvedLayerName() {
@@ -31,10 +31,10 @@ export class ErrorMessages {
 		const nameArray = /./.test(name) ? name.split('.') : [name];
 		return nameArray.length > 1 ? nameArray.pop() : name;
 	}
-	get layerExists() {
+	static get layerExists() {
 		return `A valid CSS @layer statement has already been declared \n`;
 	}
-	get missingStatement() {
+	static get missingStatement() {
 		return `The CSS @layer declaration statement is missing\n`;
 	}
 	get inValidStatement() {

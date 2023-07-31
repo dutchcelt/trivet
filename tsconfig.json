@@ -3,8 +3,8 @@
 		"module": "esnext",
 		"checkJs": true,
 		"allowJs": true,
-		"target": "es6"
+		"target": "es6",
+		"moduleResolution": "node"
 	},
-	"include": ["**/*"],
 	"exclude": ["./node_modules", "dist", "build"]
 }

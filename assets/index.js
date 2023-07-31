@@ -1,11 +1,10 @@
-/* styles */
+/* Styles */
 import layersCSS from './styles/index.css' assert { type: 'css' };
 import resetCSS from './styles/base/reset.css' assert { type: 'css' };
 import defaultsCSS from './styles/base/defaults.css' assert { type: 'css' };
 import tokensCSS from './styles/design/tokens.css' assert { type: 'css' };
 import foundationCSS from './styles/design/foundation.css' assert { type: 'css' };
 import utilitiesCSS from './styles/design/utilities.css' assert { type: 'css' };
-
 /**
  * @type {Array<CSSStyleSheet>}
  */
