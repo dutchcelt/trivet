@@ -25,7 +25,7 @@
 		"webcomponents/*"
 	],
 	"engines": {
-		"node": "16.20.1",
+		"node": "18.17.0",
 		"yarn": "3.6.1"
 	},
 	"packageManager": "yarn@3.6.1",
@@ -48,9 +48,6 @@
 		"lightningcss": "^1.19.0",
 		"prettier": "^2.5.1",
 		"rollup": "^3.26.2",
-		"rollup-plugin-native-css-modules": "^1.1.1",
-		"stylelint": "^14.5.1",
-		"stylelint-config-prettier": "^9.0.3",
-		"stylelint-config-standard": "^25.0.0"
+		"rollup-plugin-native-css-modules": "^1.1.1"
 	}
 }

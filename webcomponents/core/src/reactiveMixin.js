@@ -1,3 +1,7 @@
+/**
+ * ReactiveMixin
+ * @param {Object} superClass
+ */
 const ReactiveMixin = (superClass) =>
 	class extends superClass {
 		/**
@@ -33,6 +37,9 @@ const ReactiveMixin = (superClass) =>
 		connectedCallback() {
 			this.shadowStyleSheets = this.contextCSS;
 		}
+		/**
+		 * @param {Array} args
+		 */
 		constructor(...args) {
 			super(...args);
 			this.contextCSS = new CSSStyleSheet();

@@ -1,4 +1,4 @@
-import { TrivetElement, cssLayerDefinitions } from '@trvt/core';
+import { TrivetElement } from '@trvt/core';
 import dragscrollerCSS from './dragscroller.css' assert { type: 'css' };
 
 export class TrvtDragScroller extends TrivetElement {
