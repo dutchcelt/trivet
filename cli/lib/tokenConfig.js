@@ -1,3 +1,11 @@
+/**
+ * tokenConfig.js
+ * trivet
+ *
+ * @author dutchcelt
+ */
+
+/**  @param {Object} opts */
 module.exports = (opts) => {
 	return {
 		include: opts.themePath ? [`${opts.sourcePath}/**/*.json`] : [],
