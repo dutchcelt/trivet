@@ -24,7 +24,7 @@ module.exports = (options) => {
 	 */
 	const getFileContent = (file) => {
 		const data = fs.readFileSync(file, { encoding: 'utf8' });
-		const transformedData = `@layer ${opts.layer} {\n${data}\n}\n`;
+		const transformedData = opts.layerless ? `${data}\n` : `@layer ${opts.layer} {\n${data}\n}\n`;
 		const bufferedData = Buffer.alloc(transformedData.length, transformedData, 'utf8');
 
 		fs.writeFileSync(file, bufferedData);
