@@ -1,0 +1,75 @@
+@layer components {
+	@layer selectors {
+		:host [data-menu-component] {
+			position: relative;
+			display: inline-block;
+		}
+
+		:host label {
+			display: inline-block;
+		}
+
+		:host ul {
+			position: absolute;
+			left: 0;
+			display: block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		:host [data-opens-menu],
+		:host a {
+			line-height: 1;
+			text-align: left;
+			background: black;
+			border: 0;
+			color: #fff;
+			padding: 0.33rem 0.5rem;
+			text-decoration: none;
+		}
+
+		:host [type='checkbox']:focus + [data-opens-menu],
+		:host a:focus {
+			outline: none;
+			background: darkBlue;
+		}
+
+		:host :checked + label .expanded-text {
+			display: inline;
+		}
+
+		:host :checked + label .collapsed-text {
+			display: none;
+		}
+
+		:host [type='checkbox']:not(:checked) + label .expanded-text {
+			display: none;
+		}
+
+		:host [type='checkbox']:not(:checked) + label .collapsed-text {
+			display: inline;
+		}
+
+		:host [role='menu'] {
+			display: none;
+		}
+
+		:host :checked ~ [role='menu'] {
+			position: relative;
+			display: block;
+		}
+
+		:host [data-menu-origin='right'] {
+			left: auto;
+			right: 0;
+		}
+
+		:host a {
+			display: block;
+			min-width: 100%;
+			margin-top: 0.125rem;
+			white-space: nowrap;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@layer components.props {
+	:host {
+		--grid-row: var(--trvt-row-number);
+	}
+}
+@layer components.selectors {
+	:host {
+		display: var(--nested-grid-diplay);
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+	}
+}

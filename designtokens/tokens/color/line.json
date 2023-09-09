@@ -1,0 +1,10 @@
+{
+	"color": {
+		"line": {
+			"ui": { "value": "{color.base.canvastext.value}" },
+			"seperator": { "value": "{color.base.canvastext.value}" },
+			"border": { "value": "{color.base.canvastext.value}" },
+			"outline": { "value": "{color.base.highlight.value}" }
+		}
+	}
+}

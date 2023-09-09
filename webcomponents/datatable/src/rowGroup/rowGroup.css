@@ -1,0 +1,23 @@
+@layer components.props {
+	:host(trvt-tfoot) {
+		--cell-justify: center;
+		--table-cell-width: none;
+	}
+}
+@layer components.modifiers {
+	@supports (grid-template-columns: subgrid) {
+		:host(trvt-thead) {
+			position: var(--_table-sticky-header);
+			left: 0;
+		}
+	}
+}
+@layer components.selectors {
+	:host {
+		display: var(--nested-grid-diplay);
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+		grid-column: 1 / -1;
+		grid-row: auto / span var(--trvt-row-length);
+	}
+}

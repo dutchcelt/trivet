@@ -1,7 +1,27 @@
+# Editors / IDE
 .idea
-.cache
+.nova
+.vscode
+
+# NPM/Node
+.npmrc
 node_modules
+
+# Builds
 temp
 dist
+
+# logs
 *.log
+yarn-error.log
+
+# testing
+coverage
+
+# OS files
 .DS_Store
+
+# Rocket
+_site
+_site-dev
+

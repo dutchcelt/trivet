@@ -1,0 +1,31 @@
+{
+	"color": {
+		"base": {
+			"light": { "value": "#efefef" },
+			"dark": { "value": "#999" },
+			"mid": { "value": "#ccc" },
+			"bright": { "value": "#ffff00" },
+			"shadow": { "value": "#ddd" },
+			"icon": { "value": "CanvasText" },
+			"canvas": { "value": "Canvas" },
+			"canvastext": { "value": "CanvasText" },
+			"linktext": { "value": "LinkText" },
+			"visitedtext": { "value": "VisitedText" },
+			"hovertext": { "value": "LinkText" },
+			"activetext": { "value": "ActiveText" },
+			"highlight": { "value": "Highlight" },
+			"highlighttext": { "value": "HighlightText" },
+			"accentcolor": { "value": "AccentColor" },
+			"accentcolortext": { "value": "AccentColorText" },
+			"button": { "value": "ButtonFace" },
+			"buttontext": { "value": "ButtonText" },
+			"field": { "value": "Field" },
+			"fieldtext": { "value": "FieldText" },
+			"selected": { "value": "SelectedItem" },
+			"selectedtext": { "value": "SelectedItemText" },
+			"mark": { "value": "Mark" },
+			"marktext": { "value": "MarkText" },
+			"disabled": { "value": "GrayText" }
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"checkJs": true,
+		"allowJs": true,
+		"target": "es6",
+		"moduleResolution": "node"
+	},
+	"exclude": ["./node_modules", "dist", "build"]
+}

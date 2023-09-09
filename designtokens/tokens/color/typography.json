@@ -1,0 +1,15 @@
+{
+	"color": {
+		"typography": {
+			"text": { "value": "{color.base.canvastext.value}" },
+			"text-inverted": { "value": "{color.base.canvas.value}" },
+			"heading": { "value": "{color.base.canvastext.value}" },
+			"icon": { "value": "{color.base.icon.value}" },
+			"ui": { "value": "{color.base.buttontext.value})" },
+			"anchor": { "value": "{color.base.linktext.value}" },
+			"anchor-visited": { "value": "{color.base.visitedtext.value}" },
+			"anchor-hover": { "value": "{color.base.hovertext.value}" },
+			"anchor-active": { "value": "{color.base.activetext.value}" }
+		}
+	}
+}

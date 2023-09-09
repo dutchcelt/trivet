@@ -1,0 +1,57 @@
+/* 	Based on a reset by Mayank 
+ *	https://www.npmjs.com/package/@acab/reset.css 
+ */
+@layer base.reset {
+	[hidden] {
+		display: none !important;
+	}
+	html {
+		-webkit-text-size-adjust: none;
+		color-scheme: dark light;
+	}
+	body {
+		-webkit-font-smoothing: antialiased;
+	}
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+		color: inherit;
+	}
+	button,
+	label,
+	select,
+	summary,
+	[role='button'],
+	[role='option'] {
+		cursor: pointer;
+	}
+	:disabled {
+		cursor: not-allowed;
+	}
+	label:has(> input:disabled),
+	label:has(+ input:disabled) {
+		cursor: not-allowed;
+	}
+	button {
+		border-style: solid;
+	}
+	img,
+	svg,
+	video,
+	canvas,
+	audio,
+	iframe,
+	embed,
+	object {
+		display: block;
+	}
+
+	img,
+	picture,
+	svg {
+		max-width: 100%;
+		height: auto;
+	}
+}

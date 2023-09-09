@@ -1,0 +1,15 @@
+{
+	"typography": {
+		"weight": {
+			"thin": { "value": "100" },
+			"ultralight": { "value": "200" },
+			"light": { "value": "300" },
+			"medium": { "value": "400" },
+			"semibold": { "value": "500" },
+			"bold": { "value": "600" },
+			"extrabold": { "value": "700" },
+			"heavy": { "value": "800" },
+			"black": { "value": "900" }
+		}
+	}
+}

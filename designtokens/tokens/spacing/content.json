@@ -1,0 +1,24 @@
+{
+	"spacing": {
+		"content": {
+			"block": {
+				"xxs": { "value": "0.25ex" },
+				"xs": { "value": "0.5ex" },
+				"s": { "value": "1ex" },
+				"m": { "value": "2ex" },
+				"l": { "value": "4ex" },
+				"xl": { "value": "6ex" },
+				"xxl": { "value": "8ex" }
+			},
+			"inline": {
+				"xxs": { "value": "0.25ch" },
+				"xs": { "value": "0.5ch" },
+				"s": { "value": "1ch" },
+				"m": { "value": "2ch" },
+				"l": { "value": "4ch" },
+				"xl": { "value": "6ch" },
+				"xxl": { "value": "8ch" }
+			}
+		}
+	}
+}

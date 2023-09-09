@@ -1,7 +1,0 @@
-{
-	"basePath": "/components",
-	"paths": {
-		"test": ["main.js#module","test.css","deps.json"]
-	}
-
-}

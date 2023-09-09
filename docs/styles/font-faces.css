@@ -1,0 +1,44 @@
+@layer theme {
+	@font-face {
+		font-family: 'Figtree';
+		src: url('../fonts/vendors/erikdkennedy/Figtree-VariableFont_wght.woff2')
+			format('woff2 supports variations'),
+			url('../fonts/vendors/erikdkennedy/Figtree-VariableFont_wght.woff2')
+			format('woff2-variations');
+	  	font-weight: 300 900;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Figtree';
+		src: url('../fonts/vendors/erikdkennedy/Figtree-Italic-VariableFont_wght.woff2')
+			format('woff2 supports variations'),
+			url('../fonts/vendors/erikdkennedy/Figtree-Italic-VariableFont_wght.woff2')
+			format('woff2-variations');
+	  	font-weight: 300 900;
+		font-style: italic;
+	}
+	@font-face {
+	  font-family: 'Mona Sans';
+	  src:
+		url('../fonts/vendors/Github/Mona-Sans.woff2') format('woff2 supports variations'),
+		url('../fonts/vendors/Github/Mona-Sans.woff2') format('woff2-variations');
+	  font-weight: 200 900;
+	  font-stretch: 75% 125%;
+	}
+	@font-face {
+	  font-family: 'Hubot Sans';
+	  src:
+		url('../fonts/vendors/Github/Hubot-Sans.woff2') format('woff2 supports variations'),
+		url('../fonts/vendors/Github/Hubot-Sans.woff2') format('woff2-variations');
+	  font-weight: 200 900;
+	  font-stretch: 75% 125%;
+	}
+	/* @font-face {
+	  font-family: 'Rubik';
+	  src:
+		url('../fonts/vendors/Google/Rubik/Rubik-VariableFont_wght.woff2') format('woff2 supports variations'),
+		url('../fonts/vendors/Google/Rubik/Rubik-VariableFont_wght.woff2') format('woff2-variations');
+	  font-weight: 200 900;
+	  font-stretch: 75% 125%;
+	} */
+}

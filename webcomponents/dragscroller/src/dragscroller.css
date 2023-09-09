@@ -1,0 +1,44 @@
+@layer components.props {
+	:host {
+		--TRUE: initial;
+		--FALSE: ;
+	}
+}
+@layer components.selectors {
+	:host {
+		display: block;
+		margin-block-start: var(
+			--trvt-typography-whitespace-default-block-start,
+			1rem
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-default-block-end,
+			1rem
+		);
+	}
+	.scrollbox {
+		cursor: grab;
+		overflow: auto;
+		display: flex;
+		width: 100%;
+		gap: 0.5ch;
+		height: 300px;
+		scroll-snap-type: x mandatory;
+	}
+	.scrollbox::-webkit-scrollbar {
+		height: var(--trvt-stroke-heavy);
+		border: 0;
+	}
+	.scrollbox::-webkit-scrollbar-thumb {
+		background: var(--trvt-color-line-ui);
+	}
+	.scrollbox::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::slotted(img) {
+		aspect-ratio: 16 / 9 !important;
+		pointer-events: none !important;
+		scroll-snap-align: var(--if-snap, center) !important;
+	}
+}

@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const { Command } = require('commander');
+const program = new Command();
+
+const fs = require('fs');
+const path = require('path');
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8'));
+
+const cleanTokens = require(path.join(__dirname, '..', 'lib', 'cleanTokens.js'));
+const generateTokens = require(path.join(__dirname, '..', 'lib', 'generateTokens.js'));
+
+program
+	.description('CLI to generate Trivet assets')
+	.version(pkg.version)
+	.usage('[command] [options]');
+
+program
+	.command('clean')
+	.description('Remove generated tokens')
+	.option('--buildPath [build]', 'TODO')
+	.action(cleanTokens);
+
+program
+	.command('tokens')
+	.description('Generates tokens')
+	.option('-l, --layer [layer]', 'TODO')
+	.option('-x, --layerless', 'TODO')
+	.option('-b, --buildPath [build]', 'TODO')
+	.option('-p, --sourcePath [source]', 'TODO')
+	.option('-t, --themePath [theme]', 'TODO')
+	.option('-s, --scope [scope]', 'TODO')
+	.option('-f, --filename [filename]', 'TODO')
+	.option('-w, --watch', 'TODO')
+	.action(generateTokens);
+
+program.parse();

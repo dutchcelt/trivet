@@ -1,5 +1,33 @@
-# trivet
-A very simple dynamic loader of JavaScript, CSS and JSON.
+# Trivet
 
-This is intended as an intermediary layer between your content and a self contained component and or application without requiring an application framework to load first or at all. This useful for content websites that may only need a handful of
-widgets and the option of adding an application. This is not an application framework nor does it facilitate in the construction of Single Page Apps (SPA).
+**A simple library to create webpages with web components.**
+
+Implementing a design can be hard but many of the common design requirements have been solved. This library helps to implement design in other systems and frameworks. It will help you deliver a stable and consistent design so you can put whatever you need on top of it.
+
+The system offers:
+
+-   Design tokens ([Style Dictionary](https://amzn.github.io/style-dictionary/#/))
+-   Layout system (Gridless)
+-   Web Components
+-   Assets for styling pages and Web Components
+-   A CLI for generating themes
+
+### Install
+
+The setup use Yarn and Workspaces.
+
+-   `yarn install`
+
+### Build
+
+The build task runs all the 'build' script inside the workspace packages.
+
+-   `yarn build`
+
+### Develop
+
+-   `yarn develop`
+
+### License
+
+[![AGPLv3 License](https://img.shields.io/badge/License-AGPL%20v3-yellow.svg)](https://opensource.org/licenses/)

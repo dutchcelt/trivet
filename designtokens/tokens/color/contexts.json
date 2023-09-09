@@ -1,0 +1,33 @@
+{
+	"color": {
+		"editorial": {
+			"note": { "value": "{color.lib.yellow.value}" },
+			"info": { "value": "{color.lib.grape.value}" },
+			"quote": { "value": "{color.lib.grape.value}" }
+		},
+		"presentational": {
+			"cta": { "value": "{color.lib.indigo.value}" },
+			"new": { "value": "{color.lib.lime.value}" },
+			"attention": { "value": "{color.lib.teal.value}" },
+			"hightlight": { "value": "{color.lib.teal.value}" }
+		},
+		"actionable": {
+			"abort": { "value": "{color.lib.red.value}" },
+			"release": { "value": "{color.lib.violet.value}" },
+			"pause": { "value": "{color.lib.orange.value}" },
+			"approve": { "value": "{color.lib.green.value}" },
+			"submit": { "value": "{color.lib.blue.value}" }
+		},
+		"hierarchical": {
+			"primary": { "value": "{color.lib.blue.value}" },
+			"secondary": { "value": "{color.lib.orange.value}" },
+			"tertiary": { "value": "{color.lib.teal.value}" }
+		},
+		"status": {
+			"warning": { "value": "{color.lib.orange.value}" },
+			"failure": { "value": "{color.lib.red.value}" },
+			"pending": { "value": "{color.lib.violet.value}" },
+			"success": { "value": "{color.lib.green.value}" }
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"name": "@trvt/docs",
+	"version": "0.2.4",
+	"private": true,
+	"main": "index.html",
+	"files": [],
+	"description": "Documents",
+	"author": "C. Egor Kloos",
+	"license": "AGPLv3",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"scripts": {
+		"build:clean": "trivet clean --buildPath styles",
+		"build:tokens": "trivet tokens --themePath theme --buildPath styles",
+		"build:eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
+		"build:banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
+		"build": "yarn build:banner && yarn build:tokens && yarn build:eleventy",
+		"watch": "yarn build:eleventy --watch --incremental",
+		"develop": "yarn build:clean && yarn watch & yarn build:tokens --watch"
+	},
+	"devDependencies": {
+		"@trvt/cli": "^1.1.0",
+		"chalk-cli": "^5.0.1"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^2.0.1",
+		"@trvt/article": "^0.7.0",
+		"@trvt/assets": "^0.8.0",
+		"@trvt/button": "^0.10.0",
+		"@trvt/card": "^0.7.0",
+		"@trvt/contenttoggle": "^0.4.1",
+		"@trvt/core": "^0.9.0",
+		"@trvt/datatable": "^0.3.3",
+		"@trvt/dragscroller": "^0.3.2",
+		"@trvt/header": "^0.8.2",
+		"@trvt/layout": "^0.8.2",
+		"@trvt/lists": "^0.4.2"
+	}
+}
