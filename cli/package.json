@@ -23,7 +23,7 @@
 		"@trvt/designtokens": "^0.11.0",
 		"chokidar": "^3.5.3",
 		"commander": "^11.0.0",
-		"get-installed-path": "^4.0.8",
+		"shelljs": "^0.8.5",
 		"style-dictionary": "^3.8.0"
 	},
 	"devDependencies": {
