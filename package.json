@@ -42,7 +42,6 @@
 		"lightningcss": "^1.19.0",
 		"prettier": "^2.5.1",
 		"rollup": "^3.26.2",
-		"rollup-plugin-native-css-modules": "^1.1.1",
-		"stylelint": "^15.11.0"
+		"rollup-plugin-native-css-modules": "^1.1.1"
 	}
 }
