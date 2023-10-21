@@ -11,6 +11,5 @@
 		"test": "echo 'utils: no scripts'",
 		"build": "echo 'utils: no scripts'",
 		"develop": "echo 'utils: no scripts'"
-	},
-	"packageManager": "yarn@3.6.1"
+	}
 }

@@ -1,1 +1,1 @@
-import { TrvtDropdown } from './src/dropdown.js';
+export { TrvtDropdown } from './src/dropdown.js';

@@ -13,8 +13,6 @@ However if you have your own styling you can use this CLI to add your own custom
 
 NPM: `npm install @trvt/cli`;
 
-Yarn: `yarn add @trvt/cli`;
-
 #### Usage
 
 In your scripts `trivet tokens`;

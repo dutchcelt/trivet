@@ -12,14 +12,13 @@
 		"build:clean": "trivet clean",
 		"build:tokens": "trivet tokens",
 		"build:banner": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
-		"build": "yarn build:banner && yarn build:clean && yarn build:tokens",
-		"watch": "chokidar \"tokens/**/*.json\" -c \"yarn build:tokens\"",
-		"develop": "yarn watch"
+		"build": "npm run build:banner && npm run  build:clean && npm run build:tokens",
+		"watch": "chokidar \"tokens/**/*.json\" -c \"npm run  build:tokens\"",
+		"develop": "npm run watch"
 	},
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"packageManager": "yarn@3.6.1",
 	"devDependencies": {
 		"@trvt/cli": "^1.1.0",
 		"chalk-cli": "^5.0.1",

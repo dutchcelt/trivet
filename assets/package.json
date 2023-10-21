@@ -13,7 +13,6 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"packageManager": "yarn@3.6.1",
 	"dependencies": {
 		"@trvt/designtokens": "^0.11.0",
 		"prepend-file": "^2.0.1",
@@ -24,7 +23,7 @@
 		"build:icons": "node ./_lib/icons.js",
 		"build:rollup": "rollup -c ../configs/rollup.config.js",
 		"build:css": "node ./_lib/bundleCSS.js",
-		"build": "yarn build:icons && yarn build:rollup && yarn build:css",
-		"develop": "yarn build --watch"
+		"build": "npm run build:icons && npm run build:rollup && npm run build:css",
+		"develop": "npm run build --watch"
 	}
 }

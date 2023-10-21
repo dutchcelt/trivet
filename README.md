@@ -14,19 +14,19 @@ The system offers:
 
 ### Install
 
-The setup use Yarn and Workspaces.
+The setup use NPM (version 20 or higher).
 
--   `yarn install`
+-   `npm install`
 
 ### Build
 
 The build task runs all the 'build' script inside the workspace packages.
 
--   `yarn build`
+-   `npm run build`
 
 ### Develop
 
--   `yarn develop`
+-   `npm run develop`
 
 ### License
 

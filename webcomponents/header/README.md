@@ -11,16 +11,16 @@ This project has a Zero Install setup with Yarn v3 and PnP.
 
 With PnP this isn't always needed.
 
--   `yarn install`
+-   `npm run install`
 
 ### Build
 
 The builds will be run from run from the root
 
--   `yarn build`
+-   `npm run build`
 
 ### Develop
 
 The develop will be run from run from the root
 
--   `yarn develop`
+-   `npm run develop`

@@ -13,7 +13,6 @@ dist
 
 # logs
 *.log
-yarn-error.log
 
 # testing
 coverage

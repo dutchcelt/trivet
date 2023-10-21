@@ -20,6 +20,7 @@ module.exports = (opts) => {
 					{
 						destination: `${opts.scope}_${opts.filename}`,
 						format: 'css/variables',
+						//filter: (/** @type {Object} */ token) => !/lib/gi.test(token.name),
 						options: {
 							showFileHeader: false,
 						},
