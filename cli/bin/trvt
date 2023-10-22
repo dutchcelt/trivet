@@ -39,7 +39,7 @@ program
 	)
 	.option('-f, --filename [filename]', 'A filename is <scope>_tokens. You can pick a different suffix.')
 	.option('-e, --exclude [exclude]', 'Exclude properties that contain the given string')
-	.option('--ext [extension]', 'Points to the name of the CSS property entension')
+	.option('-x, --extension [extension]', 'Points to the name of the CSS property entension')
 	.action(generateTokens);
 
 program.parse();

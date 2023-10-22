@@ -40,6 +40,10 @@ You can add the following flags:
 -   **`-f, --filename`**  
     A filename is constructed like this: `<scope>_<suffix>`. The default suffix is `tokens`, but you can pick a different `<suffix>`.  
     `"npx trvt tokens -s cssprops"` => `trvt_cssprops.css`
+-   **`-e, --exclude`**  
+    Exclude custom properties that contain the given string. These are generated separately.
+-   **`-x --extension`**
+    The `$extensions` name that points to the name of the CSS registered property object
 
 ### License
 
