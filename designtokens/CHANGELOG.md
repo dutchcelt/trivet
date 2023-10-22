@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.2
+
+### Patch Changes
+
+- Removed erroneous build files.
+
 ## 0.11.1
 
 ### Patch Changes
