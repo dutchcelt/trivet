@@ -1,22 +1,28 @@
 {
 	"name": "@trvt/cli",
 	"version": "1.2.0",
-	"main": "index.js",
+	"author": "C. Egor Kloos",
+	"license": "AGPLv3",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"main": "index.cjs",
 	"files": [
 		"/bin",
 		"/lib"
 	],
 	"description": "Use your own custom tokens, fonts, and icons with Trivet",
-	"author": "C. Egor Kloos",
-	"license": "AGPLv3",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"keywords": [
+		"cli",
+		"design",
+		"system",
+		"trivet"
+	],
 	"scripts": {
 		"test": "echo 'CLI: no scripts'",
 		"build": "echo 'CLI: no scripts'",
 		"develop": "echo 'CLI: no scripts'"
 	},
 	"bin": {
-		"trivet": "./bin/trivet"
+		"trvt": "./bin/trvt"
 	},
 	"dependencies": {
 		"@trvt/designtokens": "^0.11.0",
