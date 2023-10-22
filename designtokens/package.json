@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/designtokens",
-	"description": "Trivet, a system for building webpages",
+	"description": "Trivet Design Tokens, a system for tokens",
 	"version": "0.11.0",
 	"type": "module",
 	"main": "index.js",
@@ -9,8 +9,8 @@
 		"/tokens"
 	],
 	"scripts": {
-		"build:clean": "trivet clean",
-		"build:tokens": "trivet tokens",
+		"build:clean": "trvt clean",
+		"build:tokens": "trvt tokens -s trvt -e lib -l \"design.tokens\"",
 		"build:banner": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
 		"build": "npm run build:banner && npm run  build:clean && npm run build:tokens",
 		"watch": "chokidar \"tokens/**/*.json\" -c \"npm run  build:tokens\"",

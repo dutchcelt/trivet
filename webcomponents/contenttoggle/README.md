@@ -1,4 +1,4 @@
-# Trivet Content Toggles Web Component (workspace of @trvt/root)
+# Trivet Content Toggle Web Component (workspace of @trvt/root)
 
 ## Zero Install
 
