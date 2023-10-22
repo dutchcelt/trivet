@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/button",
-	"version": "0.10.0",
+	"version": "0.10.1",
 	"description": "Button component for the Trivet Design System",
 	"type": "modules",
 	"main": "index.js",
@@ -19,7 +19,7 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.0",
+		"@trvt/core": "^0.9.3",
 		"rollup": "^3.26.2"
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"name": "@trvt/designtokens",
 	"description": "Trivet Design Tokens, a system for tokens",
-	"version": "0.11.0",
+	"version": "0.11.1",
 	"type": "module",
 	"main": "index.js",
 	"files": [
@@ -20,7 +20,7 @@
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"devDependencies": {
-		"@trvt/cli": "^1.1.0",
+		"@trvt/cli": "^1.3.0",
 		"chalk-cli": "^5.0.1",
 		"chokidar-cli": "^3.0.0"
 	}
