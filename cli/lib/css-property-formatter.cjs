@@ -19,27 +19,24 @@ const { scope, cssPropExtension } = require(path.join(__dirname, 'defaults.cjs')
  * @param {string} b
  */
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
-/**
- * extensionScope
- * @type {string}
- */
-const extensionScope = `${scope}.${cssPropExtension}`;
 
 /**
  * getExtension
  * @param {Object} token
+ * @param {string} prefix
  * @returns {Object}
  */
-const getExtension = (token) => token.$extensions[extensionScope];
+const getExtension = (token, prefix = scope) => token.$extensions[`${prefix}.${cssPropExtension}`];
 
 /**
  * hasExtension
  * @param {Object} token
+ * @param {string} prefix
  * @returns {boolean}
  */
-const hasExtension = (token) => {
+const hasExtension = (token, prefix = scope) => {
 	const ext = token.$extensions;
-	const extScope = ext && ext[extensionScope];
+	const extScope = ext && ext[`${prefix}.${cssPropExtension}`];
 	return typeof extScope?.inherits === 'boolean';
 };
 
@@ -48,14 +45,15 @@ const hasExtension = (token) => {
  * @type {Object}
  */
 module.exports = {
-	'css/property': function({ dictionary }) {
+	'css/property': function ({ dictionary, platform }) {
 		const { allTokens } = dictionary;
+		const { prefix } = platform;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
 		return allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) => stringSort(tokenA.name, tokenB.name))
-			.filter((/** @type{Object} */ token) => hasExtension(token))
+			.filter((/** @type{Object} */ token) => hasExtension(token, prefix))
 			.map((/** @type{Object} */ token) => {
-				const cssProp = getExtension(token);
+				const cssProp = getExtension(token, prefix);
 				let str = `@property --${token.name} { `;
 				str += `syntax: '${cssProp.syntax}' ;`;
 				str += `inherits: ${cssProp.inherits}; `;

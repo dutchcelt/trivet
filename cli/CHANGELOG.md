@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.3.2
+
+### Patch Changes
+
+- Fix a bug in creating registered properties.
+- Updated dependencies
+  - @trvt/designtokens@0.11.3
+
 ## 1.3.1
 
 ### Patch Changes

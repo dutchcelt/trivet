@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.3
+
+### Patch Changes
+
+- Fix a bug in creating registered properties.
+
 ## 0.11.2
 
 ### Patch Changes

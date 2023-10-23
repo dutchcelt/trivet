@@ -1,0 +1,12 @@
+@property --trvt-color-background-accentcolor { syntax: '<color>' ;inherits: true; initial-value: AccentColor; }
+@property --trvt-color-background-button { syntax: '<color>' ;inherits: true; initial-value: ButtonFace; }
+@property --trvt-color-background-canvas { syntax: '<color>' ;inherits: true; initial-value: Canvas; }
+@property --trvt-color-background-content { syntax: '<color>' ;inherits: true; initial-value: Canvas; }
+@property --trvt-color-background-field { syntax: '<color>' ;inherits: true; initial-value: Field; }
+@property --trvt-color-background-header { syntax: '<color>' ;inherits: true; initial-value: CanvasText; }
+@property --trvt-color-background-highlight { syntax: '<color>' ;inherits: true; initial-value: Highlight; }
+@property --trvt-color-background-icon { syntax: '<color>' ;inherits: true; initial-value: Canvas; }
+@property --trvt-color-background-mark { syntax: '<color>' ;inherits: true; initial-value: Mark; }
+@property --trvt-color-background-selected { syntax: '<color>' ;inherits: true; initial-value: SelectedItem; }
+@property --trvt-color-background-surface { syntax: '<color>' ;inherits: true; initial-value: Canvas; }
+@property --trvt-color-background-viewport { syntax: '<color>' ;inherits: true; initial-value: Canvas; }

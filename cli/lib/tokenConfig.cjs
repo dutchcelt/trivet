@@ -1,7 +1,11 @@
 const cssPropertyFormat = require('./css-property-formatter.cjs');
 
-/**  @param {Object} opts */
-module.exports = (opts) => {
+/**
+ * module.exports
+ * @typedef {import('./defaults.cjs').Defaults} Defaults
+ * @param {Defaults} opts - All the default values
+ */
+module.exports = opts => {
 	const filterRegex = new RegExp(opts.exclude, 'i');
 	return {
 		include: opts.themePath ? [`${opts.sourcePath}/**/[!_]*.json`] : [],

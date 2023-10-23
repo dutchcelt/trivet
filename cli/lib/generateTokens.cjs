@@ -2,11 +2,19 @@ const fs = require('fs');
 const StyleDictionary = require('style-dictionary');
 const path = require('path');
 
+/**
+ * @typedef {import('./defaults.cjs').Defaults} Defaults
+ */
+
 const tokenConfig = require(path.join(__dirname, 'tokenConfig.cjs'));
+/**
+ * @type {Defaults}
+ */
 const defaults = require(path.join(__dirname, 'defaults.cjs'));
 
 /**
- * @param {Object} options
+ * module.exports
+ * @param {Defaults} options - All the default values
  */
 module.exports = options => {
 	/**

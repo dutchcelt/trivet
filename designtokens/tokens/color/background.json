@@ -1,24 +1,128 @@
 {
 	"color": {
 		"background": {
-			"canvas": { "value": "{color.base.canvas.value}" },
-			"viewport": { "value": "{color.base.canvas.value}" },
-			"content": { "value": "{color.base.canvas.value}" },
+			"canvas": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"viewport": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"content": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
 			"surface": {
 				"value": "{color.base.canvas.value}",
-				"comment": "A surface is usually reserved for components. It's here for convinence."
+				"comment": "A surface is usually reserved for components. It's here for convinence.",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
 			},
-			"header": { "value": "{color.base.canvastext.value}" },
-			"icon": { "value": "{color.base.canvas.value}" },
-			"highlight": { "value": "{color.base.highlight.value}" },
-			"accentcolor": { "value": "{color.base.accentcolor.value}" },
+			"header": {
+				"value": "{color.base.canvastext.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"icon": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"highlight": {
+				"value": "{color.base.highlight.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"accentcolor": {
+				"value": "{color.base.accentcolor.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
 			"button": {
 				"value": "{color.base.button.value}",
-				"comment": "ButtonFace is the standard value but it's very dark."
+				"comment": "ButtonFace is the standard value but it's very dark.",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
 			},
-			"field": { "value": "{color.base.field.value}" },
-			"selected": { "value": "{color.base.selected.value}" },
-			"mark": { "value": "Mark" }
+			"field": {
+				"value": "{color.base.field.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"selected": {
+				"value": "{color.base.selected.value}",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"mark": {
+				"value": "Mark",
+				"type": "color",
+				"$extensions": {
+					"trvt.css.property": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
 		}
 	}
 }
