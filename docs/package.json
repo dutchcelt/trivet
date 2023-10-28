@@ -13,7 +13,7 @@
 		"tokens": "npx trvt tokens --themePath theme --buildPath styles",
 		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
-		"build:all": "npm run banner && npm run tokens && npm run eleventy",
+		"build:all": "npm run banner && npm run clean && npm run tokens && npm run eleventy",
 		"watch": "npm run build:eleventy --watch --incremental --server",
 		"develop:all": "npm run watch "
 	},
