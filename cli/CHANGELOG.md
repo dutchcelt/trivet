@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.3.4
+
+### Patch Changes
+
+- Fix for docs build not running correctly
+- Updated dependencies
+  - @trvt/designtokens@0.11.4
+
 ## 1.3.3
 
 ### Patch Changes

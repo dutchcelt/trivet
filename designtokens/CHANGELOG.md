@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.4
+
+### Patch Changes
+
+- Fix for docs build not running correctly
+
 ## 0.11.3
 
 ### Patch Changes

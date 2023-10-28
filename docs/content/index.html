@@ -7,20 +7,9 @@
 			content="Trivet is a system for the styling and consistant formating of opiniated content."
 		/>
 		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, user-scalable=yes, initial-scale=1"
-		/>
-		<meta
-			name="theme-color"
-			content="orangered"
-			media="(prefers-color-scheme: dark)"
-		/>
-		<meta
-			name="theme-color"
-			content="orangered"
-			media="(prefers-color-scheme: light)"
-		/>
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
+		<meta name="theme-color" content="orangered" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="orangered" media="(prefers-color-scheme: light)" />
 		<link href="@trvt/assets/bundle.css" rel="stylesheet" />
 		<link href="styles/trvt_tokens.css" rel="stylesheet" />
 		<link href="styles/theme.css" rel="stylesheet" />
@@ -31,10 +20,7 @@
 			  "noLoadEventRetriggers": true
 			}
 		</script>
-		<script
-			async
-			src="scripts/es-module-shims.js"
-		></script>
+		<script async src="scripts/es-module-shims.js"></script>
 		{% importmap %} {% importmodules %}
 		<script type="module">
 			import './webcomponents/dutchceltlogo.js';
@@ -44,47 +30,33 @@
 	<body>
 		<trvt-layout data-type="stacked">
 			<nav slot="navigation">
-				<dutchcelt-logo
-					data-trvt-href="https://dutchcelt.com/"
-				></dutchcelt-logo>
+				<dutchcelt-logo data-trvt-href="https://dutchcelt.com/"></dutchcelt-logo>
 			</nav>
 			<header slot="header">
-				<trvt-header
-					data-trvt-context="home"
-					data-trvt-size="l"
-					data-trvt-title="trivet"
-				>
-				</trvt-header>
+				<trvt-header data-trvt-context="home" data-trvt-size="l" data-trvt-title="trivet"> </trvt-header>
 			</header>
 			<main slot="main">
 				<trvt-article>
 					<h1 slot="heading">A Web Component base</h1>
 					<div slot="intro">
 						<p>
-							With the ever advancing web platform we can do
-							things that where hard and brittle just a few years
-							ago. Also, browser vendors are committed to becoming
-							more interoperable allowing us to utilise upcoming
-							technologies with confidence that these will land in
-							all future browsers. No more polyfiling and hoping
-							the feature gets supported.
+							With the ever advancing web platform we can do things that where hard and brittle just a few
+							years ago. Also, browser vendors are committed to becoming more interoperable allowing us to
+							utilise upcoming technologies with confidence that these will land in all future browsers.
+							No more polyfiling and hoping the feature gets supported.
 						</p>
 					</div>
 					<div slot="content">
 						<p>
-							Project "Tivet" is a way to enable these new
-							technologies in solutions where buildtooling stills
-							needs to catch up. Trivet use the following web
-							features to enable this white label library:
+							Project "Tivet" is a way to enable these new technologies in solutions where buildtooling
+							stills needs to catch up. Trivet use the following web features to enable this white label
+							library:
 						</p>
 						<trvt-layout data-type="split" data-collapse="block">
 							<trvt-ul>
 								<trvt-li>Web Components</trvt-li>
 								<trvt-li>Importmaps</trvt-li>
-								<trvt-li
-									>Native CSS modules through
-									assertions</trvt-li
-								>
+								<trvt-li>Native CSS modules through assertions</trvt-li>
 								<trvt-li>Constructed stylesheets</trvt-li>
 								<trvt-li>CSS Layers</trvt-li>
 								<trvt-li>CSS Custom Properties</trvt-li>
@@ -100,59 +72,44 @@
 						</trvt-layout>
 						<h3>Project Goals</h3>
 						<p>
-							Lorem ipsum dolor amet mustache knausgaard +1, blue
-							bottle waistcoat tbh semiotics artisan synth
-							stumptown gastropub cornhole celiac swag. Brunch
-							raclette
+							Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan
+							synth stumptown gastropub cornhole celiac swag. Brunch raclette
 							<a href="index.html">vexillologist post-ironic</a>
-							glossier ennui XOXO mlkshk godard pour-over blog
-							tumblr humblebrag. Blue bottle put a bird on it twee
-							prism biodiesel brooklyn. Blue bottle ennui tbh
-							succulents.
+							glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird
+							on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.
 						</p>
 					</div>
 				</trvt-article>
 				<trvt-tab-container>
 					<trvt-toggle-details title="For Content" open>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Sint, magnam dignissimos. Reiciendis magnam
-							molestiae delectus rem soluta, magni aliquam quo
-							dolores quibusdam esse reprehenderit quos tempora at
-							ratione perspiciatis temporibus.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, magnam dignissimos.
+							Reiciendis magnam molestiae delectus rem soluta, magni aliquam quo dolores quibusdam esse
+							reprehenderit quos tempora at ratione perspiciatis temporibus.
 						</p>
 						<form action="#">
-							<trvt-button
-								id="test"
-								data-trvt-type="submit"
-								data-trvt-context="approve"
+							<trvt-button id="test" data-trvt-type="submit" data-trvt-context="approve"
 								>Approve</trvt-button
 							>
 						</form>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Voluptatibus modi magni, possimus fugiat
-							placeat cupiditate non perspiciatis sint est
-							voluptatum amet aliquam incidunt illum totam sit
-							ipsa alias ut maiores!
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus modi magni, possimus
+							fugiat placeat cupiditate non perspiciatis sint est voluptatum amet aliquam incidunt illum
+							totam sit ipsa alias ut maiores!
 						</p>
 					</trvt-toggle-details>
 					<trvt-toggle-details title="For Design">
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Provident ducimus distinctio impedit similique
-							velit molestiae accusantium, mollitia id delectus
-							sapiente, facilis dolorem praesentium placeat
-							deleniti cumque? Nisi atque delectus eos.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus distinctio
+							impedit similique velit molestiae accusantium, mollitia id delectus sapiente, facilis
+							dolorem praesentium placeat deleniti cumque? Nisi atque delectus eos.
 						</p>
 					</trvt-toggle-details>
 					<trvt-toggle-details title="For Systems">
 						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing
-							elit. Sit quasi tenetur nisi adipisci delectus,
-							incidunt modi dignissimos id temporibus odio vitae
-							amet dolore aut quo nostrum! Excepturi omnis beatae
-							deserunt!
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quasi tenetur nisi adipisci
+							delectus, incidunt modi dignissimos id temporibus odio vitae amet dolore aut quo nostrum!
+							Excepturi omnis beatae deserunt!
 						</p>
 					</trvt-toggle-details>
 				</trvt-tab-container>
@@ -160,13 +117,8 @@
 					<trvt-button>Default</trvt-button>
 					<trvt-button data-trvt-context="pause">Pause</trvt-button>
 					<trvt-button data-trvt-context="abort">Abort</trvt-button>
-					<trvt-button data-trvt-context="approve"
-						>Approve</trvt-button
-					>
-					<trvt-button
-						data-trvt-context="release"
-						data-trvt-type="submit"
-						data-trvt-disabled="true"
+					<trvt-button data-trvt-context="approve">Approve</trvt-button>
+					<trvt-button data-trvt-context="release" data-trvt-type="submit" data-trvt-disabled="true"
 						>Release</trvt-button
 					>
 					<trvt-button
@@ -181,25 +133,18 @@
 					<trvt-thead>
 						<trvt-row>
 							<trvt-header-cell>Cell 1.1</trvt-header-cell>
-							<trvt-header-cell colspan="2"
-								>Cell 1.2</trvt-header-cell
-							>
+							<trvt-header-cell colspan="2">Cell 1.2</trvt-header-cell>
 						</trvt-row>
 					</trvt-thead>
 					<trvt-tbody>
 						<trvt-row>
 							<trvt-cell>Cell 2.1</trvt-cell>
 							<trvt-cell
-								>Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Accusantium illo architecto
-								deleniti iure nisi, cupiditate ut? Voluptates ex
-								impedit laboriosam aut eius recusandae ab
-								tempore autem, libero, consectetur dolorum
-								nemo.</trvt-cell
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo architecto
+								deleniti iure nisi, cupiditate ut? Voluptates ex impedit laboriosam aut eius recusandae
+								ab tempore autem, libero, consectetur dolorum nemo.</trvt-cell
 							>
-							<trvt-cell rowspan="2" type="info"
-								>Cell 2.3</trvt-cell
-							>
+							<trvt-cell rowspan="2" type="info">Cell 2.3</trvt-cell>
 						</trvt-row>
 						<trvt-row>
 							<trvt-cell>Cell 3.1</trvt-cell>
@@ -207,72 +152,50 @@
 						</trvt-row>
 						<trvt-row>
 							<trvt-cell rowspan="2"
-								>Cell 4.1 <br />Voluptates ex impedit laboriosam
-								aut eius recusandae
+								>Cell 4.1 <br />Voluptates ex impedit laboriosam aut eius recusandae
 							</trvt-cell>
 							<trvt-cell>Cell 4.2</trvt-cell>
 							<trvt-cell>Cell 4.3</trvt-cell>
 						</trvt-row>
 						<trvt-row>
-							<trvt-cell colstart="2" colspan="2"
-								>Cell 5.2</trvt-cell
-							>
+							<trvt-cell colstart="2" colspan="2">Cell 5.2</trvt-cell>
 						</trvt-row>
 					</trvt-tbody>
 					<trvt-tfoot>
 						<trvt-row>
-							<trvt-cell colspan="3"
-								>Cell 6.1 - A Table Footer</trvt-cell
-							>
+							<trvt-cell colspan="3">Cell 6.1 - A Table Footer</trvt-cell>
 						</trvt-row>
 					</trvt-tfoot>
 				</trvt-table>
 
 				<trvt-drag-scroller>
-					<img
-						alt=""
-						src="https://via.placeholder.com/1600x900/999/fff.webp"
-					/>
-					<img
-						alt=""
-						src="https://via.placeholder.com/1600x900/ddd/333.webp"
-					/>
-					<img
-						alt=""
-						src="https://via.placeholder.com/1600x900/aaa/fff.webp"
-					/>
+					<img alt="" src="https://via.placeholder.com/1600x900/999/fff.webp" />
+					<img alt="" src="https://via.placeholder.com/1600x900/ddd/333.webp" />
+					<img alt="" src="https://via.placeholder.com/1600x900/aaa/fff.webp" />
 				</trvt-drag-scroller>
 
 				<trvt-ol>
 					<trvt-li>first item</trvt-li>
 					<trvt-li><p>second item</p></trvt-li>
 					<trvt-li
-						>Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Accusantium dolorem laudantium reiciendis modi
-						veritatis, consectetur repellendus? Corporis, est
-						aperiam nam dolorum repudiandae nostrum ex, officia
-						blanditiis similique cumque, eos inventore!</trvt-li
+						>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorem laudantium
+						reiciendis modi veritatis, consectetur repellendus? Corporis, est aperiam nam dolorum
+						repudiandae nostrum ex, officia blanditiis similique cumque, eos inventore!</trvt-li
 					>
 					<trvt-li>
 						<p>forth item</p>
 						<trvt-ol data-start="99">
 							<trvt-li>forth:first item</trvt-li>
-							<trvt-li data-value="1000"
-								>forth:second item</trvt-li
-							>
+							<trvt-li data-value="1000">forth:second item</trvt-li>
 							<trvt-li>
 								<p>forth:third item</p>
 								<trvt-ul>
 									<trvt-li>forth:third:first item</trvt-li>
 									<trvt-li
 										><p>
-											Lorem ipsum dolor sit amet,
-											consectetur adipisicing elit.
-											Accusantium dolorem laudantium
-											reiciendis modi veritatis,
-											consectetur repellendus? Corporis,
-											est aperiam nam dolorum repudiandae
-											nostrum ex, officia blanditiis
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+											dolorem laudantium reiciendis modi veritatis, consectetur repellendus?
+											Corporis, est aperiam nam dolorum repudiandae nostrum ex, officia blanditiis
 											similique cumque, eos inventore!
 										</p></trvt-li
 									>
@@ -287,26 +210,18 @@
 					<trvt-li>sixth item</trvt-li>
 					<trvt-li>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Necessitatibus excepturi dolorem atque
-							obcaecati consequuntur ex quas, voluptatibus aut
-							voluptas. Est natus dolores et commodi sunt,
-							temporibus vitae sapiente sint vero?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi dolorem
+							atque obcaecati consequuntur ex quas, voluptatibus aut voluptas. Est natus dolores et
+							commodi sunt, temporibus vitae sapiente sint vero?
 						</p>
 						<trvt-ul>
 							<trvt-li><p>Just another point</p></trvt-li>
-							<trvt-li
-								><p>
-									Just another point, but this time for real!
-								</p></trvt-li
-							>
+							<trvt-li><p>Just another point, but this time for real!</p></trvt-li>
 						</trvt-ul>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Necessitatibus excepturi dolorem atque
-							obcaecati consequuntur ex quas, voluptatibus aut
-							voluptas. Est natus dolores et commodi sunt,
-							temporibus vitae sapiente sint vero?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi dolorem
+							atque obcaecati consequuntur ex quas, voluptatibus aut voluptas. Est natus dolores et
+							commodi sunt, temporibus vitae sapiente sint vero?
 						</p>
 					</trvt-li>
 					<trvt-li>eighth item</trvt-li>
@@ -314,74 +229,36 @@
 				<h3>Contextual Colors</h3>
 
 				<h4>Editorial</h4>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-editorial-note"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-editorial-info"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-editorial-quote"
-				></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-editorial-note"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-editorial-info"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-editorial-quote"></trvt-swatch>
 
 				<h4>Presentational</h4>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-presentational-cta"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-presentational-new"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-presentational-attention"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-presentational-hightlight"
-				></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-presentational-cta"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-presentational-new"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-presentational-attention"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-presentational-hightlight"></trvt-swatch>
 
 				<h4>Actionable</h4>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-abort"
-				></trvt-swatch>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-release"
-				></trvt-swatch>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-pause"
-				></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-actionable-abort"></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-actionable-release"></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-actionable-pause"></trvt-swatch>
 
-				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-approve"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-actionable-submit"
-				></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-actionable-approve"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-actionable-submit"></trvt-swatch>
 
 				<h4>Hierarchical</h4>
 
-				<trvt-swatch
-					data-trvt-color="--trvt-color-hierarchical-primary"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-hierarchical-secondary"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-hierarchical-tertiary"
-				></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-hierarchical-primary"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-hierarchical-secondary"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-hierarchical-tertiary"></trvt-swatch>
 
 				<h4>Status</h4>
 
-				<trvt-swatch
-					data-trvt-color="--trvt-color-status-warning"
-				></trvt-swatch
-				><trvt-swatch
-					data-trvt-color="--trvt-color-status-failure"
-				></trvt-swatch>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-status-pending"
-				></trvt-swatch>
-				<trvt-swatch
-					data-trvt-color="--trvt-color-status-success"
-				></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-status-warning"></trvt-swatch
+				><trvt-swatch data-trvt-color="--trvt-color-status-failure"></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-status-pending"></trvt-swatch>
+				<trvt-swatch data-trvt-color="--trvt-color-status-success"></trvt-swatch>
 
 				<h4>Open Source Colors</h4>
 				<p>
@@ -390,49 +267,22 @@
 					color scheme
 				</p>
 				<p>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-gray"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-red"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-pink"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-grape"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-violet"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-indigo"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-blue"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-cyan"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-teal"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-green"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-lime"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-yellow"
-					></trvt-swatch>
-					<trvt-swatch
-						data-trvt-color="--trvt-color-lib-orange"
-					></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-gray"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-red"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-pink"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-grape"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-violet"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-indigo"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-blue"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-cyan"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-teal"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-green"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-lime"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-yellow"></trvt-swatch>
+					<trvt-swatch data-trvt-color="--trvt-color-lib-orange"></trvt-swatch>
 				</p>
 				<p>
-					<strong>Note:</strong> The tokens in Trivet uses the
-					open-source
+					<strong>Note:</strong> The tokens in Trivet uses the open-source
 					<a href="https://yeun.github.io/open-color/">Open Color</a>
 					color scheme as it's default color library.
 				</p>
@@ -440,15 +290,10 @@
 
 			<div slot="sidebar">
 				<trvt-toggle-details title="Sidebar 1">
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 				</trvt-toggle-details>
 				<trvt-toggle-details title="Sidebar 2">
-					<p>
-						Facilis dolorem praesentium placeat deleniti cumque?
-						Nisi atque delectus eos.
-					</p>
+					<p>Facilis dolorem praesentium placeat deleniti cumque? Nisi atque delectus eos.</p>
 				</trvt-toggle-details>
 
 				<trvt-card>
@@ -483,18 +328,13 @@
 			</div>
 			<footer slot="footer">
 				<p class="subtext">
-					Lorem Ipsum is the single greatest threat. We are not - we
-					are not keeping up with other websites. Lorem Ipsum best not
-					make any more threats to your website. It will be met with
-					fire and fury like the world has never seen. Does everybody
-					know that pig named Lorem Ipsum? An ‘extremely credible
-					source’ has called my office and told me that Barack Obama’s
-					placeholder text is a fraud.
+					Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites.
+					Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like
+					the world has never seen. Does everybody know that pig named Lorem Ipsum? An ‘extremely credible
+					source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.
 				</p>
 				<nav>
-					<dutchcelt-logo
-						data-trvt-href="https://dutchcelt.com/"
-					></dutchcelt-logo>
+					<dutchcelt-logo data-trvt-href="https://dutchcelt.com/"></dutchcelt-logo>
 				</nav>
 			</footer>
 		</trvt-layout>

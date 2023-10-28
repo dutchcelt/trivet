@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.6
+
+### Patch Changes
+
+- Fix for docs build not running correctly
+
 ## 0.2.5
 
 ### Patch Changes

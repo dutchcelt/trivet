@@ -5,13 +5,14 @@
 	"type": "module",
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
-		"build": "npm --workspaces run build --if-present",
-		"build:docs": "npm -w=@trvt/docs run build ",
+		"build": "npm run build:workspaces && npm run build:docs",
+		"build:workspaces": "npm --workspaces run build --if-present --silent",
+		"build:docs": "npm -w @trvt/docs run build:all --silent",
 		"develop": "npm --workspaces run develop --if-present",
-		"develop:docs": "npm -w=@trvt/docs run develop",
-		"server": "wds -c configs/web-dev-server.config.js",
-		"lint": "eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
-		"test": "wtr ./webcomponents/**/*.test.js --node-resolve"
+		"develop:docs": "npm -w @trvt/docs run develop:all",
+		"server": "npx wds -c configs/web-dev-server.config.js",
+		"lint": "npx eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
+		"test": "npx wtr ./webcomponents/**/*.test.js --node-resolve"
 	},
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",

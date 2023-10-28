@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"private": true,
 	"main": "index.html",
 	"files": [],
@@ -9,16 +9,16 @@
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
-		"build:clean": "trivet clean --buildPath styles",
-		"build:tokens": "trivet tokens --themePath theme --buildPath styles",
-		"build:eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
-		"build:banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
-		"build": "npm run build:banner && npm run build:tokens && npm run build:eleventy",
-		"watch": "npm run build:eleventy --watch --incremental",
-		"develop": "npm run build:clean && npm run watch & npm run build:tokens --watch"
+		"clean": "npx trvt clean --buildPath styles",
+		"tokens": "npx trvt tokens --themePath theme --buildPath styles",
+		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
+		"banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
+		"build:all": "npm run banner && npm run tokens && npm run eleventy",
+		"watch": "npm run build:eleventy --watch --incremental --server",
+		"develop:all": "npm run watch "
 	},
 	"devDependencies": {
-		"@trvt/cli": "^1.3.0",
+		"@trvt/cli": "^1.3.4",
 		"chalk-cli": "^5.0.1"
 	},
 	"dependencies": {

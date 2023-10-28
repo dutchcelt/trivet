@@ -34,14 +34,14 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
  * @param {Object} token
  * @returns {CSSPropertyRule}
  */
-const getExtension = token => token.$extensions[`${cssPropExtension}`];
+const getExtension = (token) => token.$extensions[`${cssPropExtension}`];
 
 /**
  * hasExtension
  * @param {Object} token
  * @returns {boolean}
  */
-const hasExtension = token => {
+const hasExtension = (token) => {
 	const ext = token.$extensions;
 	const extScope = ext && ext[`${cssPropExtension}`];
 	return typeof extScope?.inherits === 'boolean';
@@ -52,7 +52,7 @@ const hasExtension = token => {
  * @type {Object}
  */
 module.exports = {
-	'css/property': function ({ dictionary, platform }) {
+	'css/property': function({ dictionary, platform }) {
 		const { allTokens } = dictionary;
 		const { prefix } = platform;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
