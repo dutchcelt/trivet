@@ -11,7 +11,7 @@
 
 const path = require('path');
 
-const { scope, cssPropExtension } = require(path.join(__dirname, 'defaults.cjs'));
+const { cssPropExtension } = require(path.join(__dirname, 'defaults.cjs'));
 
 /**
  * stringSort
@@ -21,22 +21,29 @@ const { scope, cssPropExtension } = require(path.join(__dirname, 'defaults.cjs')
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 /**
+ * The CSSPropertyRule interface.
+ * @typedef {Object} CSSPropertyRule
+ * @property {String} name
+ * @property {String} syntax
+ * @property {Boolean} inherits
+ * @property {String} initialValue
+ */
+
+/**
  * getExtension
  * @param {Object} token
- * @param {string} prefix
- * @returns {Object}
+ * @returns {CSSPropertyRule}
  */
-const getExtension = (token, prefix = scope) => token.$extensions[`${prefix}.${cssPropExtension}`];
+const getExtension = token => token.$extensions[`${cssPropExtension}`];
 
 /**
  * hasExtension
  * @param {Object} token
- * @param {string} prefix
  * @returns {boolean}
  */
-const hasExtension = (token, prefix = scope) => {
+const hasExtension = token => {
 	const ext = token.$extensions;
-	const extScope = ext && ext[`${prefix}.${cssPropExtension}`];
+	const extScope = ext && ext[`${cssPropExtension}`];
 	return typeof extScope?.inherits === 'boolean';
 };
 
@@ -51,11 +58,12 @@ module.exports = {
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
 		return allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) => stringSort(tokenA.name, tokenB.name))
-			.filter((/** @type{Object} */ token) => hasExtension(token, prefix))
+			.filter((/** @type{Object} */ token) => hasExtension(token))
 			.map((/** @type{Object} */ token) => {
-				const cssProp = getExtension(token, prefix);
+				/** @type {CSSPropertyRule} cssProp*/
+				const cssProp = getExtension(token);
 				let str = `@property --${token.name} { `;
-				str += `syntax: '${cssProp.syntax}' ;`;
+				str += `syntax: '${cssProp.syntax}'; `;
 				str += `inherits: ${cssProp.inherits}; `;
 				if (cssProp.initialValue) {
 					str += `initial-value: ${cssProp.initialValue}; `;

@@ -30,6 +30,6 @@ module.exports = {
 	themePath: '',
 	scope: 'trvt',
 	filename: 'tokens.css',
-	cssPropExtension: 'css.property',
+	cssPropExtension: 'www.css.property.rule',
 	exclude: 'lib',
 };
