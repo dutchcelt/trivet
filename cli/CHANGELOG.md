@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.3.3
+
+### Patch Changes
+
+- No longer prefixing the token extension. Now only using a generic domain related id/name.
+  It seems that the object for CSSPropertyRule is well defined and shouldn't allow vendor prefixes.
+  Using `www.css.propery.rule` is generic and non confusing.
+
 ## 1.3.2
 
 ### Patch Changes
