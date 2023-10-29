@@ -31,17 +31,6 @@
 					}
 				}
 			},
-			"surface": {
-				"value": "{color.base.canvas.value}",
-				"comment": "A surface is usually reserved for components. It's here for convinence.",
-				"type": "color",
-				"$extensions": {
-					"www.css.property.rule": {
-						"syntax": "<color>",
-						"inherits": true
-					}
-				}
-			},
 			"header": {
 				"value": "{color.base.canvastext.value}",
 				"type": "color",
@@ -115,6 +104,19 @@
 			},
 			"mark": {
 				"value": "Mark",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		},
+		"surface": {
+			"comment": "A surface is usually reserved for components. It's here for convinence.",
+			"default": {
+				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
