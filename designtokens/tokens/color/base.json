@@ -1,31 +1,241 @@
 {
 	"color": {
 		"base": {
-			"light": { "value": "#efefef" },
-			"dark": { "value": "#999" },
-			"mid": { "value": "#ccc" },
-			"bright": { "value": "#ffff00" },
-			"shadow": { "value": "#ddd" },
-			"icon": { "value": "CanvasText" },
-			"canvas": { "value": "Canvas" },
-			"canvastext": { "value": "CanvasText" },
-			"linktext": { "value": "LinkText" },
-			"visitedtext": { "value": "VisitedText" },
-			"hovertext": { "value": "LinkText" },
-			"activetext": { "value": "ActiveText" },
-			"highlight": { "value": "Highlight" },
-			"highlighttext": { "value": "HighlightText" },
-			"accentcolor": { "value": "AccentColor" },
-			"accentcolortext": { "value": "AccentColorText" },
-			"button": { "value": "ButtonFace" },
-			"buttontext": { "value": "ButtonText" },
-			"field": { "value": "Field" },
-			"fieldtext": { "value": "FieldText" },
-			"selected": { "value": "SelectedItem" },
-			"selectedtext": { "value": "SelectedItemText" },
-			"mark": { "value": "Mark" },
-			"marktext": { "value": "MarkText" },
-			"disabled": { "value": "GrayText" }
+			"light": {
+				"value": "#efefef",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"wcag.color.contrast": {
+						"AAA": {
+							"value": "{color.base.dark.value}"
+						}
+					}
+				}
+			},
+			"dark": {
+				"value": "#999",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"wcag.color.contrast": {
+						"AAA": {
+							"value": "{color.base.light.value}"
+						}
+					}
+				}
+			},
+			"mid": {
+				"value": "#ccc",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"bright": {
+				"value": "#ffff00",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"shadow": {
+				"value": "#ddd",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"icon": {
+				"value": "CanvasText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"canvas": {
+				"value": "Canvas",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"canvastext": {
+				"value": "CanvasText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"linktext": {
+				"value": "LinkText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"visitedtext": {
+				"value": "VisitedText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"hovertext": {
+				"value": "LinkText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"activetext": {
+				"value": "ActiveText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"highlight": {
+				"value": "Highlight",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"highlighttext": {
+				"value": "HighlightText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"accentcolor": {
+				"value": "AccentColor",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"accentcolortext": {
+				"value": "AccentColorText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"buttonface": {
+				"value": "ButtonFace",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"buttontext": {
+				"value": "ButtonText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"field": {
+				"value": "Field",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"fieldtext": {
+				"value": "FieldText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"selected": {
+				"value": "SelectedItem",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"selectedtext": {
+				"value": "SelectedItemText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"mark": {
+				"value": "Mark",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"marktext": {
+				"value": "MarkText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"disabled": {
+				"value": "GrayText",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
 		}
 	}
 }

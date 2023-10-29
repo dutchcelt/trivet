@@ -14,7 +14,6 @@
 			"lime": { "value": "{color.lib.lime-7.value}" },
 			"yellow": { "value": "{color.lib.yellow-5.value}" },
 			"orange": { "value": "{color.lib.orange-7.value}" },
-
 			"gray-0": { "value": "oklch(0.9839 0.0025 228.78)" },
 			"gray-1": { "value": "oklch(0.9662 0.0034 247.86)" },
 			"gray-2": { "value": "oklch(0.9451 0.0034 247.86)" },

@@ -1,14 +1,86 @@
 {
 	"color": {
 		"brand": {
-			"brand": { "value": "{color.base.canvastext.value}" },
-			"logo": { "value": "{color.base.canvastext.value}" },
-			"primary": { "value": "{color.base.canvastext.value}" },
-			"primary-inverted": { "value": "{color.base.canvas.value}" },
-			"secondary": { "value": "{color.base.canvastext.value}" },
-			"secondary-inverted": { "value": "{color.base.canvas.value}" },
-			"tertiary": { "value": "{color.base.canvastext.value}" },
-			"tertiary-inverted": { "value": "{color.base.canvas.value}" }
+			"brand": {
+				"value": "{color.base.canvastext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"logo": {
+				"value": "{color.base.canvastext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"primary": {
+				"value": "{color.base.canvastext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"primary-inverted": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary": {
+				"value": "{color.base.canvastext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary-inverted": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary": {
+				"value": "{color.base.canvastext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary-inverted": {
+				"value": "{color.base.canvas.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
 		}
 	}
 }
