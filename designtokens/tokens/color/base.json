@@ -8,9 +8,11 @@
 						"syntax": "<color>",
 						"inherits": true
 					},
-					"wcag.color.contrast": {
-						"AAA": {
-							"value": "{color.base.dark.value}"
+					"color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.base.dark.value}"
+							}
 						}
 					}
 				}
@@ -22,9 +24,11 @@
 						"syntax": "<color>",
 						"inherits": true
 					},
-					"wcag.color.contrast": {
-						"AAA": {
-							"value": "{color.base.light.value}"
+					"color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.base.light.value}"
+							}
 						}
 					}
 				}

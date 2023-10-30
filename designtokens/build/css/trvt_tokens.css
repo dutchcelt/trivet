@@ -3,15 +3,15 @@
   --trvt-color-background-canvas: Canvas;
   --trvt-color-background-viewport: Canvas;
   --trvt-color-background-content: Canvas;
-  --trvt-color-background-surface: Canvas; /* A surface is usually reserved for components. It's here for convinence. */
   --trvt-color-background-header: CanvasText;
   --trvt-color-background-icon: Canvas;
   --trvt-color-background-highlight: Highlight;
   --trvt-color-background-accentcolor: AccentColor;
-  --trvt-color-background-button: ButtonFace; /* ButtonFace is the standard value but it's very dark. */
+  --trvt-color-background-buttonface: ButtonFace; /* ButtonFace is the standard value but it's very dark. */
   --trvt-color-background-field: Field;
   --trvt-color-background-selected: SelectedItem;
   --trvt-color-background-mark: Mark;
+  --trvt-color-surface-default: Canvas;
   --trvt-color-base-light: #efefef;
   --trvt-color-base-dark: #999;
   --trvt-color-base-mid: #ccc;
@@ -28,7 +28,7 @@
   --trvt-color-base-highlighttext: HighlightText;
   --trvt-color-base-accentcolor: AccentColor;
   --trvt-color-base-accentcolortext: AccentColorText;
-  --trvt-color-base-button: ButtonFace;
+  --trvt-color-base-buttonface: ButtonFace;
   --trvt-color-base-buttontext: ButtonText;
   --trvt-color-base-field: Field;
   --trvt-color-base-fieldtext: FieldText;

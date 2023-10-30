@@ -31,5 +31,7 @@ module.exports = {
 	scope: 'trvt',
 	filename: 'tokens.css',
 	cssPropExtension: 'www.css.property.rule',
+	colorPatternExtension: 'color.pattern',
+	wcagLevel: 'AA',
 	exclude: 'lib',
 };

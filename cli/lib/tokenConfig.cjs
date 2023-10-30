@@ -1,4 +1,5 @@
 const cssPropertyFormat = require('./css-property-formatter.cjs');
+const cssColorPatternFormat = require('./css-color-pattern-formatter.cjs');
 
 /**
  * module.exports
@@ -12,6 +13,7 @@ module.exports = opts => {
 		source: [`${opts.themePath || opts.sourcePath}/**/[!_]*.json`],
 		format: {
 			...cssPropertyFormat,
+			...cssColorPatternFormat,
 		},
 		platforms: {
 			css: {
@@ -31,6 +33,10 @@ module.exports = opts => {
 					{
 						destination: `${opts.scope}_properties.css`,
 						format: 'css/property',
+					},
+					{
+						destination: `${opts.scope}_color_patterns.css`,
+						format: 'css/colorpattern',
 					},
 					{
 						destination: `${opts.scope}_${opts.exclude}.css`,
