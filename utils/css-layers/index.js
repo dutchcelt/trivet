@@ -34,7 +34,15 @@ async function getErrorList(opts, isDOMTree = true, lang = 'en') {
 	}
 	return errorlist;
 }
-
+/**
+ * getNameList
+ * @param {CSSStyleSheet} cssSheet - todo
+ * @returns {Array}  - todo
+ */
+export const getNameList = cssSheet => {
+	const nameList = cssSheet.cssRules[0]?.nameList || [];
+	return [...nameList];
+};
 /**
  * runLayerTestOn
  * @param {Object} scope - Contains the Root and layer config you want to test

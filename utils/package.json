@@ -1,12 +1,11 @@
 {
 	"name": "@trvt/utils",
-	"version": "0.0.2",
-	"private": true,
-	"main": "index.js",
-	"description": "TODO",
+	"description": "A set of utilities to build, test, and run Trivet.",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"type": "module",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo 'utils: no scripts'",
 		"build": "echo 'utils: no scripts'",
