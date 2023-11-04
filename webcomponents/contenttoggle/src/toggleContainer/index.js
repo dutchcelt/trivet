@@ -17,7 +17,7 @@ export class TrvtTabContainer extends HTMLElement {
 		this.slotElement = this.shadowRoot.querySelector('slot');
 		this.toggleComponents = [
 			...this.slotElement.assignedElements({ flatten: true }),
-		].filter((wc) => /toggle/gi.test(wc.tagName));
+		].filter(wc => /toggle/gi.test(wc.tagName));
 		this.style = `--numOfToggles:${this.toggleComponents.length}`;
 	}
 	connectedCallback() {}

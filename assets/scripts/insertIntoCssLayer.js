@@ -7,7 +7,7 @@ import { hasCSSLayerSupport } from './hasCSSLayerSupport.js';
  */
 export const insertIntoCssLayer = (sheets, layer) => {
 	if (hasCSSLayerSupport()) {
-		return sheets.forEach((sheet) => {
+		return sheets.forEach(sheet => {
 			let cssText = [...sheet.cssRules].reduce(
 				(acc, rule) => (acc += rule.cssText),
 				''

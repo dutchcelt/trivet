@@ -4,7 +4,7 @@
  * @returns {Array}
  */
 export function filterOutLayers(ruleList) {
-	return [...ruleList].filter((rule) =>
+	return [...ruleList].filter(rule =>
 		/CSSLayerBlockRule|CSSImportRule/.test(rule.constructor.name)
 	);
 }

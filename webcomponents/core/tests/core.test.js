@@ -1,5 +1,5 @@
 import { expect, assert } from '@esm-bundle/chai';
-import { styles, dataBus } from "../index.js";
+import { styles, dataBus } from '../index.js';
 
 describe('Core Styles ', async () => {
 	it('Style is array', () => {
@@ -9,19 +9,18 @@ describe('Core Styles ', async () => {
 	it('Normalize layer', () => {
 		const ss = styles[0].cssRules[0];
 		expect(ss.constructor.name).to.equal('CSSLayerBlockRule');
-		expect(/@layer normalize/ig.test(ss.cssText)).to.be.true;
+		expect(/@layer normalize/gi.test(ss.cssText)).to.be.true;
 	});
 	it('Designsystem layer', () => {
 		const ss = styles[1].cssRules[0];
 		expect(ss.constructor.name).to.equal('CSSLayerBlockRule');
-		expect(/@layer designsystem/ig.test(ss.cssText)).to.be.true;
+		expect(/@layer designsystem/gi.test(ss.cssText)).to.be.true;
 	});
 });
 
-
-const testEvent = (event) => {
+const testEvent = event => {
 	event.detail.callbackTest = event.detail.testVal;
-}
+};
 dataBus.register('testEvent', testEvent);
 
 describe('Databus tests ', async () => {

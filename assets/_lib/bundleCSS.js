@@ -18,13 +18,14 @@ try {
 fs.writeFileSync(bundleFile, ``);
 fs.writeFileSync(importerFile, ``);
 
-const getFileContent = (file) => {
+const getFileContent = file => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
 	/* The only stylesheet with 1 statement is the layer definition file */
 	const isLayerDefintionFile = data.toString().match(/;/g).length === 1;
 	const transformedData = `${
 		isLayerDefintionFile ? '/* Import the hashed files */\n' : ''
 	}@import url('${path.basename(file)}');\n`;
+	/* eslint-disable no-undef */
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
 		transformedData,
@@ -40,7 +41,7 @@ const getFileContent = (file) => {
 };
 
 fs.readdir(buildFolder, (err, files) => {
-	files.forEach((file) => {
+	files.forEach(file => {
 		if (cssfileReg.test(file)) {
 			getFileContent(`${buildFolder}/${file}`);
 		}

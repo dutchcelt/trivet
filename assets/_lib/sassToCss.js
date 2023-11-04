@@ -3,14 +3,14 @@ import lineReader from 'readline';
 
 export const sassToCss = {
 	convert: function ({ src, dest, rule, withPropValues }) {
-		return new Promise((resolve, reject) => {
+		return new Promise(resolve => {
 			let sourceCssStream = lineReader.createInterface({
 				input: fs.createReadStream(src),
 			});
 
 			let rebuiltFile = `${rule}{\n`;
 
-			const getlinesForGlyphs = (line) => {
+			const getlinesForGlyphs = line => {
 				let currentLineWords = line.split(' ');
 				let rebuiltLine = '';
 
@@ -35,7 +35,7 @@ export const sassToCss = {
 				rebuiltFile += rebuiltLine;
 			};
 
-			const getlinesForClasses = (line) => {
+			const getlinesForClasses = line => {
 				let rebuiltLine = '';
 				if (line.includes('$') && !/icomoon/gi.test(line)) {
 					let oldVariable = line.substring(
@@ -54,11 +54,11 @@ export const sassToCss = {
 				withPropValues ? getlinesForGlyphs : getlinesForClasses
 			);
 
-			sourceCssStream.on('close', function (line) {
+			sourceCssStream.on('close', function () {
 				if (dest) {
 					let outputFile = fs.createWriteStream(dest);
 
-					outputFile.once('open', function (fd) {
+					outputFile.once('open', function () {
 						outputFile.write(rebuiltFile + '}\n');
 						outputFile.end();
 					});
@@ -68,7 +68,7 @@ export const sassToCss = {
 				} else {
 					let outputFile = fs.createWriteStream(src);
 
-					outputFile.once('open', function (fd) {
+					outputFile.once('open', function () {
 						outputFile.write(rebuiltFile);
 						outputFile.end();
 					});

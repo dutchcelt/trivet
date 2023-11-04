@@ -1,13 +1,13 @@
-const isKeyboardClickEvent = (event) =>
+const isKeyboardClickEvent = event =>
 	event.key === ' ' || event.key === 'Enter';
-const isSpaceKeyboardClickEvent = (event) => event.key === ' ';
+const isSpaceKeyboardClickEvent = event => event.key === ' ';
 
-const EventMixin = (superClass) =>
+const EventMixin = superClass =>
 	class extends superClass {
 		/**
 		 * @private
 		 */
-		#clickHandler(event) {
+		#clickHandler() {
 			/* `isSubmit` and `formElement` are mixed in via `formMixin.js` */
 			if (
 				!this.formElement.readonly &&
@@ -49,7 +49,7 @@ const EventMixin = (superClass) =>
 			/**
 			 * @param {KeyboardEvent} keyupEvent
 			 */
-			const keyupHandler = (keyupEvent) => {
+			const keyupHandler = keyupEvent => {
 				if (isKeyboardClickEvent(keyupEvent)) {
 					this.active = false;
 					document.removeEventListener('keyup', keyupHandler, true);
@@ -67,9 +67,7 @@ const EventMixin = (superClass) =>
 
 		constructor(...args) {
 			super(...args);
-			this.addEventListener('click', (event) =>
-				this.#clickHandler(event)
-			);
+			this.addEventListener('click', event => this.#clickHandler(event));
 			this.addEventListener('mousedown', this.#mousedownHandler);
 			this.addEventListener('keydown', this.#keydownHandler);
 			this.addEventListener('keyup', this.#keyupHandler);

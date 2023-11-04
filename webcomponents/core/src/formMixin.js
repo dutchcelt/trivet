@@ -1,4 +1,4 @@
-const FormMixin = (superClass) =>
+const FormMixin = superClass =>
 	class extends superClass {
 		#internals;
 		#value;

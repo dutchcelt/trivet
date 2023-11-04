@@ -6,9 +6,11 @@ let scopeReg = new RegExp(importscope, 'i');
 
 const depsFile = fs.readFileSync('./package.json');
 const depsObject = JSON.parse(depsFile);
-const importArr = Object.keys(depsObject.dependencies).filter((key) => scopeReg.test(key));
+const importArr = Object.keys(depsObject.dependencies).filter(key =>
+	scopeReg.test(key)
+);
 const copyImports = (eleventyConfig, deps) => {
-	deps.forEach((dep) => {
+	deps.forEach(dep => {
 		eleventyConfig.addPassthroughCopy({
 			[`../node_modules/${dep}/build`]: `${dep}`,
 		});
@@ -18,20 +20,20 @@ const copyImports = (eleventyConfig, deps) => {
 const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
 const packagePath = '';
 
-const createImportmap = (deps) => {
+const createImportmap = deps => {
 	const obj = {};
-	deps.forEach((dep) => (obj[dep] = `${packagePath}/${encodeURI(dep)}/index.js`));
+	deps.forEach(dep => (obj[dep] = `${packagePath}/${encodeURI(dep)}/index.js`));
 	return JSON.stringify(obj);
 };
-const moduleImporter = (deps) => {
+const moduleImporter = deps => {
 	let str = '';
-	deps.forEach((d) => {
+	deps.forEach(d => {
 		str += `import '${d}';\n`;
 	});
 	return str;
 };
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('fonts');
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('styles');
@@ -40,7 +42,7 @@ module.exports = function(eleventyConfig) {
 
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
-	eleventyConfig.addShortcode('importmap', function() {
+	eleventyConfig.addShortcode('importmap', function () {
 		const temp = `
 				<script type="importmap">
 					{
@@ -50,7 +52,7 @@ module.exports = function(eleventyConfig) {
 			`.trim();
 		return temp;
 	});
-	eleventyConfig.addShortcode('importmodules', function() {
+	eleventyConfig.addShortcode('importmodules', function () {
 		const temp = `
 				<script type="module">
 					${moduleImporter(importArr)}
