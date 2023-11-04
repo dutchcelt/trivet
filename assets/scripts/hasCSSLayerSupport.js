@@ -15,5 +15,4 @@ export const hasCSSLayerSupport = () => {
 		console.warn('Does not have layers');
 		return false;
 	}
-}
-
+};

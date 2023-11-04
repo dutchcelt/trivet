@@ -11,8 +11,13 @@
 		"develop": "npm --workspaces run develop --if-present",
 		"develop:docs": "npm -w @trvt/docs run develop:all",
 		"server": "npx wds -c configs/web-dev-server.config.js",
-		"lint": "npx eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
-		"test": "npx wtr ./webcomponents/**/*.test.js --node-resolve"
+		"lint": "npm run lint:eslint && npm run lint:prettier",
+		"test": "npx wtr ./webcomponents/**/*.test.js --node-resolve",
+		"format": "npm run format:eslint && npm run format:prettier",
+		"lint:eslint": "eslint --ext .js . --ignore-path .gitignore",
+		"format:eslint": "eslint --ext .js . --fix --ignore-path .gitignore",
+		"lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
+		"format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore"
 	},
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
@@ -26,8 +31,11 @@
 		"webcomponents/*"
 	],
 	"devDependencies": {
+		"@babel/eslint-parser": "^7.22.15",
+		"@babel/plugin-syntax-import-assertions": "^7.22.5",
 		"@changesets/cli": "^2.19.0",
 		"@esm-bundle/chai": "^4.3.4-fix.0",
+		"@open-wc/eslint-config": "^12.0.2",
 		"@rollup/plugin-terser": "^0.4.0",
 		"@web/dev-server": "^0.1.35",
 		"@web/dev-server-import-maps": "^0.0.7",
@@ -38,11 +46,28 @@
 		"chalk-cli": "^5.0.1",
 		"chokidar": "^3.5.3",
 		"chokidar-cli": "^3.0.0",
-		"eslint": "^8.9.0",
-		"eslint-config-prettier": "^8.4.0",
+		"eslint": "^8.53.0",
+		"eslint-config-prettier": "^8.10.0",
+		"husky": "^8.0.3",
 		"lightningcss": "^1.19.0",
-		"prettier": "^2.5.1",
+		"lint-staged": "^15.0.2",
+		"prettier": "^2.8.8",
 		"rollup": "^3.26.2",
 		"rollup-plugin-native-css-modules": "^1.1.1"
+	},
+	"eslintConfig": {
+		"extends": [
+			"@open-wc/eslint-config"
+		]
+	},
+	"prettier": {
+		"singleQuote": true,
+		"arrowParens": "avoid"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"prettier --write"
+		]
 	}
 }

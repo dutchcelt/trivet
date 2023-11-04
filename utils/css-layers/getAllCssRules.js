@@ -18,7 +18,7 @@ export function getAllCssRules(sheet) {
 
 			[...rules].forEach(
 				/** @param {any} k */
-				(k) => {
+				k => {
 					collection.push(k);
 					const hasRules = !!sheetRule(k)?.cssRules;
 					hasRules && _flatten(sheetRule(k));

@@ -23,7 +23,8 @@ if (isWebcomponent && fs.existsSync(buildfolder)) {
 	fs.rm(buildfolder, { recursive: true, force: true }, () => {});
 }
 
-const compressStylesFunc = (css) => {
+const compressStylesFunc = css => {
+	/* eslint-disable no-undef */
 	return transform({
 		code: Buffer.from(css),
 		minify: true,

@@ -17,13 +17,10 @@ export class trvtTable extends HTMLElement {
 
 		this.numberOfColumns =
 			+this.style.getPropertyValue('--number-of-columns') ||
-			Math.max(...[...this.rowElements].map((r) => r.children?.length));
+			Math.max(...[...this.rowElements].map(r => r.children?.length));
 
 		this.style.setProperty('--trvt-number-of-rows', this.numberOfRows);
-		this.style.setProperty(
-			'--trvt-number-of-columns',
-			this.numberOfColumns
-		);
+		this.style.setProperty('--trvt-number-of-columns', this.numberOfColumns);
 		this.style.setProperty('--trvt-table-breakpoint', this.breakpoint);
 
 		this.shadowRoot.innerHTML = `

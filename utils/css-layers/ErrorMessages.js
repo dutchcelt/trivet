@@ -50,15 +50,17 @@ export class ErrorMessages {
 		)} ...\n`;
 	}
 	get inValidLayerName() {
-		return `The CSS ${this.layerObject
+		return `The CSS ${
+			this.layerObject
 				? this.layerObject.index === 0
 					? 'layer'
 					: 'sublayer'
 				: 'layer or sublayer'
-			} '${this.layerName}' ${this.layerObject && this.layerObject.index === 0
+		} '${this.layerName}' ${
+			this.layerObject && this.layerObject.index === 0
 				? 'has not been declared'
 				: `does not exsist under the layer '${this.resolvedLayerName}'`
-			}\n`;
+		}\n`;
 	}
 	get inValidImportLayerName() {
 		return `The @import rule has an invalid layer name '${this.layerName}'\n`;
