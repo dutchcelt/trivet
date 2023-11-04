@@ -1,18 +1,14 @@
 {
-	"toggles": {
-		"boolean": {
-			"true": {
-				"value": "initial"
-			},
-			"false": {
-				"value": ""
-			},
-			"on": {
-				"value": "initial"
-			},
-			"off": {
-				"value": ""
-			}
-		}
+	"TRUE": {
+		"value": "initial"
+	},
+	"FALSE": {
+		"value": " "
+	},
+	"ON": {
+		"value": "initial"
+	},
+	"OFF": {
+		"value": " "
 	}
 }

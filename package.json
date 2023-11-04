@@ -9,7 +9,7 @@
 		"build:workspaces": "npm --workspaces run build --if-present --silent",
 		"build:docs": "npm -w @trvt/docs run build:all --silent",
 		"develop": "npm --workspaces run develop --if-present",
-		"develop:docs": "npm -w @trvt/docs run develop:all",
+		"develop:docs": "npm -w @trvt/docs run develop",
 		"server": "npx wds -c configs/web-dev-server.config.js",
 		"lint": "npx eslint ./webcomponents/**/*.js && stylelint ./webcomponents/**/*.css",
 		"test": "npx wtr ./webcomponents/**/*.test.js --node-resolve"
@@ -29,7 +29,7 @@
 		"@changesets/cli": "^2.19.0",
 		"@esm-bundle/chai": "^4.3.4-fix.0",
 		"@rollup/plugin-terser": "^0.4.0",
-		"@web/dev-server": "^0.1.35",
+		"@web/dev-server": "^0.1.38",
 		"@web/dev-server-import-maps": "^0.0.7",
 		"@web/rollup-plugin-copy": "^0.3.0",
 		"@web/rollup-plugin-html": "^1.11.0",

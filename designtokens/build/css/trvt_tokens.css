@@ -104,10 +104,10 @@
   --trvt-stroke-medium: 2px;
   --trvt-stroke-thick: 3px;
   --trvt-stroke-heavy: 4px;
-  --trvt-toggles-boolean-true: initial;
-  --trvt-toggles-boolean-false: ;
-  --trvt-toggles-boolean-on: initial;
-  --trvt-toggles-boolean-off: ;
+  --trvt-true: initial;
+  --trvt-false:  ;
+  --trvt-on: initial;
+  --trvt-off:  ;
   --trvt-typography-family-base: sans-serif;
   --trvt-typography-family-display: sans-serif;
   --trvt-typography-family-gui: sans-serif;

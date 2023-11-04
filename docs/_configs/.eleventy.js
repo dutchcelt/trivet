@@ -16,7 +16,7 @@ const copyImports = (eleventyConfig, deps) => {
 };
 
 const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
-const packagePath = isDevelopmentMode ? '/docs/dist' : '';
+const packagePath = '';
 
 const createImportmap = (deps) => {
 	const obj = {};
@@ -48,7 +48,7 @@ module.exports = function(eleventyConfig) {
 					}
 				</script>
 			`.trim();
-		return isDevelopmentMode ? '' : temp;
+		return temp;
 	});
 	eleventyConfig.addShortcode('importmodules', function() {
 		const temp = `
