@@ -2,7 +2,7 @@
  * ReactiveMixin
  * @param {Object} superClass
  */
-const ReactiveMixin = (superClass) =>
+const ReactiveMixin = superClass =>
 	class extends superClass {
 		/**
 		 * attributeChangedCallback

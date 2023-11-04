@@ -54,9 +54,8 @@ export class TrvtDragScroller extends TrivetElement {
 	}
 	/**
 	 * mouseup
-	 * @param {MouseEvent} event
 	 */
-	mouseup(event) {
+	mouseup() {
 		document.removeEventListener('mousemove', this);
 		document.removeEventListener('mouseup', this);
 		this.shadowFragment.style.cursor = 'grab';

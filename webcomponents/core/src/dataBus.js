@@ -3,7 +3,7 @@
  * @param {string} str
  * @returns {string}
  */
-const sanitizeThis = (str) => {
+const sanitizeThis = str => {
 	const el = document.createElement('div');
 	el.innerText = str;
 	return el.innerHTML;
@@ -13,14 +13,13 @@ const sanitizeThis = (str) => {
  * @param {Object} detail
  * @returns {Object}
  */
-const safeValues = (detail) => {
+const safeValues = detail => {
 	const cleanDetail = {};
 	for (const [key, value] of Object.entries(detail)) {
 		const propType = typeof detail[key];
 		const safeType = /string|boolean|number/.test(propType);
 		if (safeType) {
-			cleanDetail[key] =
-				propType === 'string' ? sanitizeThis(value) : value;
+			cleanDetail[key] = propType === 'string' ? sanitizeThis(value) : value;
 		} else {
 			console.warn(
 				`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`
@@ -89,8 +88,8 @@ class EventDataBus {
 		this[event]
 			? this.#bus.removeEventListener(event, callback)
 			: console.warn(
-				`Can't remove event '${event}' because it hasn't been registered.`
-			);
+					`Can't remove event '${event}' because it hasn't been registered.`
+			  );
 	}
 
 	/**

@@ -33,7 +33,7 @@ export class LayerWrangler {
 			...Object.values(this.scope.styleSheets || []),
 			...Object.values(this.scope.adoptedStyleSheets || []),
 		];
-		return sheets.filter((s) => {
+		return sheets.filter(s => {
 			let c = true;
 			try {
 				Object.values(s.cssRules);
@@ -59,7 +59,7 @@ export class LayerWrangler {
 	 */
 	set setLayersMapWith(cssRules) {
 		const layers = filterOutLayers(cssRules);
-		layers.forEach((layer) => {
+		layers.forEach(layer => {
 			let layerName = getLayerName(layer);
 			if (this.layerTested.has(layer) || !layerName) return;
 			this.layerTested.add(layer);
@@ -80,7 +80,7 @@ export class LayerWrangler {
 	 */
 	nextLayer(layer, layerNameArray) {
 		const rules = sheetRule(layer)?.cssRules || [];
-		[...rules].forEach((rule) => {
+		[...rules].forEach(rule => {
 			const branchedLayerNameArray = [...layerNameArray];
 			if (isLayer(rule)) {
 				let layerName = getLayerName(rule);
@@ -121,10 +121,10 @@ export class LayerWrangler {
 		let errors = new Set();
 		rules.forEach(
 			/** @param {any} rule*/
-			(rule) => {
+			rule => {
 				const type = rule.constructor.name;
 				const nameOfLayer = getLayerName(rule);
-				const isValidLayer = (layer) =>
+				const isValidLayer = layer =>
 					layer && this.layerConfig.includes(layer.resolvedLayerName);
 				const Messages = new this.ErrorMessages(
 					rule,
@@ -132,11 +132,7 @@ export class LayerWrangler {
 				);
 				switch (type) {
 					case 'CSSLayerStatementRule':
-						if (
-							rule.nameList.every(
-								(a, i) => a === this.layerConfig[i]
-							)
-						) {
+						if (rule.nameList.every((a, i) => a === this.layerConfig[i])) {
 							validLayerStatementIsDefined
 								? errors.add(Messages.layerExists)
 								: (validLayerStatementIsDefined = true);
@@ -148,12 +144,11 @@ export class LayerWrangler {
 						nameOfLayer === undefined || nameOfLayer === ''
 							? errors.add(Messages.missingLayerName)
 							: isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
-							errors.add(Messages.inValidLayerName);
+							  errors.add(Messages.inValidLayerName);
 						break;
 					case 'CSSImportRule':
 						isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
-							(rule.layerName &&
-								errors.add(Messages.inValidImportLayerName));
+							(rule.layerName && errors.add(Messages.inValidImportLayerName));
 						break;
 					default:
 					// ToDo: Add checks for rules not inside a layer
@@ -179,9 +174,7 @@ export class LayerWrangler {
 				error.unshift('Error found in: ' + sheet.href);
 			this.hasLayerStatement =
 				this.hasLayerStatement ||
-				cssRules.some((r) =>
-					/CSSLayerStatementRule/.test(r.constructor.name)
-				);
+				cssRules.some(r => /CSSLayerStatementRule/.test(r.constructor.name));
 			this.errors.push(error);
 		}
 		if (!this.hasLayerStatement) {

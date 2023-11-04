@@ -36,12 +36,12 @@ export class TrvtButton extends mix(TrivetElement).with(
 		return `
 			<button 
 				type="${this.trvtType}"
-				${!!this.hidden ? ' hidden' : ''}	
-				${!!this.value ? ` value="${this.value}"` : ''}
-				${!!this.trvtDisabled ? ' disabled' : ''}
-				${!!this.trvtReadonly ? ' readonly' : ''}
-				${!!this.id ? ` id="${this.id}"` : ''}
-				${!!this.name ? ` name="${this.name}"` : ''} 
+				${this.hidden ? ' hidden' : ''}	
+				${this.value ? ` value="${this.value}"` : ''}
+				${this.trvtDisabled ? ' disabled' : ''}
+				${this.trvtReadonly ? ' readonly' : ''}
+				${this.id ? ` id="${this.id}"` : ''}
+				${this.name ? ` name="${this.name}"` : ''} 
 			>
 				<slot></slot>
 			</button>

@@ -8,7 +8,7 @@
 export const loadFont = async (opts, localpath = '') => {
 	let { family, filename, path, style, weight, display, variationSettings } =
 		opts;
-	const valid = Object.values(opts).some((f) => typeof f === 'string');
+	const valid = Object.values(opts).some(f => typeof f === 'string');
 	if ((valid, !!filename, !!family, !!path)) {
 		if (!/^\//.test(path)) path = `/${path}`;
 		if (!/^\//.test(filename)) filename = `/${filename}`;
@@ -26,8 +26,6 @@ export const loadFont = async (opts, localpath = '') => {
 			new Error("Can't generate a URL");
 		}
 	} else {
-		new Error(
-			'Missing font face information. Please check the token values.'
-		);
+		new Error('Missing font face information. Please check the token values.');
 	}
 };

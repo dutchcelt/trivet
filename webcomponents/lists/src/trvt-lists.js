@@ -9,7 +9,7 @@ export class TrvtList extends HTMLElement {
 		this.shadowRoot.adoptedStyleSheets = [...styles, trvtListCSS];
 		this.shadowRoot.innerHTML = `<slot></slot>`;
 	}
-	addCSSPropertiesToHost = (propsArray) => {
+	addCSSPropertiesToHost = propsArray => {
 		const sheet = new CSSStyleSheet();
 		sheet.replaceSync(`:host { ${propsArray.join(';')} }`);
 		this.shadowRoot.adoptedStyleSheets = [

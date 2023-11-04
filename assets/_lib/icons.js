@@ -7,13 +7,13 @@ const iconFontName = `trvt-icons`;
 const iconFontDir = `${iconFontName}-${iconFontVersion}`;
 const iconFontPath = `${iconFontDir}/fonts`;
 const iconAssetPath = `${__parentname}/icons`;
-const stylesAssetPath = `${__parentname}/styles`;
+//const stylesAssetPath = `${__parentname}/styles`;
 const buildPath = `${__parentname}/build`;
 const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
 
 try {
 	fs.existsSync(buildPath) &&
-		fs.rmSync(buildPath, { recursive: true, force: true }, (err) => {});
+		fs.rmSync(buildPath, { recursive: true, force: true }, () => {});
 	fs.mkdirSync(buildPath);
 } catch (err) {
 	console.error(err);
@@ -28,7 +28,7 @@ const sourceFile = fs.readFileSync(
 );
 const iconFile = `${buildPath}/${iconFontName}.woff2`;
 
-wawoff.compress(sourceFile).then((convertedFile) => {
+wawoff.compress(sourceFile).then(convertedFile => {
 	fs.writeFileSync(iconFile, convertedFile);
 });
 

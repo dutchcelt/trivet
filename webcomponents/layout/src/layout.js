@@ -7,10 +7,10 @@ import layoutCSS from './layout.css' assert { type: 'css' };
  * @returns {string[]}
  * @private
  */
-const __getSlotNames = (elms) =>
+const __getSlotNames = elms =>
 	[...elms]
-		.filter((n) => n.hasAttribute('slot'))
-		.map((e) => e.getAttribute('slot'));
+		.filter(n => n.hasAttribute('slot'))
+		.map(e => e.getAttribute('slot'));
 
 /**
  * Prevent the Light DOM from setting the order of the slots
@@ -20,7 +20,7 @@ const __getSlotNames = (elms) =>
  * @private
  */
 const __sortSlotNames = (control, slots) =>
-	control.filter((c) => slots.some((s) => s === c));
+	control.filter(c => slots.some(s => s === c));
 
 export class TrvtLayout extends TrivetElement {
 	constructor() {
@@ -72,7 +72,7 @@ export class TrvtLayout extends TrivetElement {
 	 */
 	#template() {
 		return this.slotNames
-			.map((name) => this.#slotMarkupObject()[name] || ``)
+			.map(name => this.#slotMarkupObject()[name] || ``)
 			.join(``);
 	}
 
