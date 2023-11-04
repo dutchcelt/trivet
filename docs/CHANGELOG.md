@@ -1,5 +1,29 @@
 # @trvt/docs
 
+## 0.2.8
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/contenttoggle@0.4.5
+  - @trvt/dragscroller@0.3.5
+  - @trvt/datatable@0.3.6
+  - @trvt/article@0.7.2
+  - @trvt/button@0.10.2
+  - @trvt/header@0.8.4
+  - @trvt/layout@0.8.5
+  - @trvt/lists@0.4.4
+  - @trvt/card@0.7.2
+  - @trvt/core@0.9.4
+  - @trvt/assets@0.8.2
+
+## 0.2.7
+
+### Patch Changes
+
+- 208cfbdc: Running a new format for colour patterns
+
 ## 0.2.6
 
 ### Patch Changes

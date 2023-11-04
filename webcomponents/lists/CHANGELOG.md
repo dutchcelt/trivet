@@ -1,5 +1,13 @@
 # @trvt/lists
 
+## 0.4.4
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/core@0.9.4
+
 ## 0.4.3
 
 ### Patch Changes

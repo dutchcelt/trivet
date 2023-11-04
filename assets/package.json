@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.8.1",
+	"version": "0.8.2",
 	"type": "module",
 	"main": "build/index.js",
 	"files": [
@@ -14,7 +14,7 @@
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/designtokens": "^0.11.1",
+		"@trvt/designtokens": "^0.11.6",
 		"prepend-file": "^2.0.1",
 		"rollup": "^3.26.2",
 		"wawoff2": "^2.0.1"

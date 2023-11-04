@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.8.2
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/designtokens@0.11.6
+
 ## 0.8.1
 
 ### Patch Changes

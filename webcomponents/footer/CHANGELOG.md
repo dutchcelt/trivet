@@ -1,5 +1,13 @@
 # @trvt/footer
 
+## 0.6.5
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/core@0.9.4
+
 ## 0.6.4
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @trvt/core
 
+## 0.9.4
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/designtokens@0.11.6
+  - @trvt/assets@0.8.2
+
 ## 0.9.3
 
 ### Patch Changes

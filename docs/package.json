@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.2.6",
+	"version": "0.2.8",
 	"private": true,
 	"main": "index.html",
 	"files": [],
@@ -18,21 +18,21 @@
 		"develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve "
 	},
 	"devDependencies": {
-		"@trvt/cli": "^1.3.4",
+		"@trvt/cli": "^1.4.1",
 		"chalk-cli": "^5.0.1"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^2.0.1",
-		"@trvt/article": "^0.7.1",
-		"@trvt/assets": "^0.8.1",
-		"@trvt/button": "^0.10.1",
-		"@trvt/card": "^0.7.1",
-		"@trvt/contenttoggle": "^0.4.4",
-		"@trvt/core": "^0.9.3",
-		"@trvt/datatable": "^0.3.5",
-		"@trvt/dragscroller": "^0.3.4",
-		"@trvt/header": "^0.8.3",
-		"@trvt/layout": "^0.8.4",
-		"@trvt/lists": "^0.4.3"
+		"@trvt/article": "^0.7.2",
+		"@trvt/assets": "^0.8.2",
+		"@trvt/button": "^0.10.2",
+		"@trvt/card": "^0.7.2",
+		"@trvt/contenttoggle": "^0.4.5",
+		"@trvt/core": "^0.9.4",
+		"@trvt/datatable": "^0.3.6",
+		"@trvt/dragscroller": "^0.3.5",
+		"@trvt/header": "^0.8.4",
+		"@trvt/layout": "^0.8.5",
+		"@trvt/lists": "^0.4.4"
 	}
 }

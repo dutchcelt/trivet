@@ -1,5 +1,13 @@
 # @trvt/button
 
+## 0.10.2
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/core@0.9.4
+
 ## 0.10.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/header",
-	"version": "0.8.3",
+	"version": "0.8.4",
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
@@ -15,7 +15,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"dependencies": {
-		"@trvt/core": "^0.9.3",
+		"@trvt/core": "^0.9.4",
 		"rollup": "^3.26.2"
 	},
 	"scripts": {

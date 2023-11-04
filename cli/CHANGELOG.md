@@ -1,5 +1,24 @@
 # @trvt/cli
 
+## 1.4.1
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/designtokens@0.11.6
+
+## 1.4.0
+
+### Minor Changes
+
+- 208cfbdc: Running a new format for colour patterns
+
+### Patch Changes
+
+- Updated dependencies [208cfbdc]
+  - @trvt/designtokens@0.11.5
+
 ## 1.3.4
 
 ### Patch Changes

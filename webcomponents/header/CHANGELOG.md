@@ -1,5 +1,13 @@
 # @trvt/header
 
+## 0.8.4
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/core@0.9.4
+
 ## 0.8.3
 
 ### Patch Changes

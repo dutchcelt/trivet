@@ -1,5 +1,17 @@
 # @trvt/designtokens
 
+## 0.11.6
+
+### Patch Changes
+
+- Linted files
+
+## 0.11.5
+
+### Patch Changes
+
+- 208cfbdc: Running a new format for colour patterns
+
 ## 0.11.4
 
 ### Patch Changes

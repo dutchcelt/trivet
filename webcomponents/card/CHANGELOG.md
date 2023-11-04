@@ -1,5 +1,13 @@
 # @trvt/card
 
+## 0.7.2
+
+### Patch Changes
+
+- Linted files
+- Updated dependencies
+  - @trvt/core@0.9.4
+
 ## 0.7.1
 
 ### Patch Changes
