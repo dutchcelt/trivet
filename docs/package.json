@@ -9,13 +9,13 @@
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
-		"clean": "npx trvt clean --buildPath styles",
-		"tokens": "npx trvt tokens --themePath theme --buildPath styles",
-		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
 		"build:all": "npm run banner && npm run clean && npm run tokens && npm run eleventy",
-		"watch": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --watch",
-		"develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve "
+		"clean": "npx trvt clean --buildPath styles",
+		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
+		"eleventy:develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve ",
+		"eleventy:watch": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --watch",
+		"tokens": "npx trvt tokens --themePath theme --buildPath styles"
 	},
 	"devDependencies": {
 		"@trvt/cli": "^1.4.1",
