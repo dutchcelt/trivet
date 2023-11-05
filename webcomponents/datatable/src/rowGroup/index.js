@@ -1,15 +1,14 @@
 import rowgroupCSS from './rowGroup.css' assert { type: 'css' };
-import { styles } from '@trvt/core';
+import { styles, TrivetElement } from '@trvt/core';
 
-export class trvtRowGroup extends HTMLElement {
+export class trvtRowGroup extends TrivetElement {
 	constructor() {
 		super();
 
-		this.attachShadow({ mode: 'open' });
 		this.setAttribute('role', 'rowgroup');
 		this.style.setProperty('--trvt-row-length', this.children.length);
-		this.shadowRoot.adoptedStyleSheets = [...styles, rowgroupCSS];
+		this.shadowStyleSheets = [...styles, rowgroupCSS];
 
-		this.shadowRoot.innerHTML = `<slot></slot>`;
+		this.template = `<slot></slot>`;
 	}
 }

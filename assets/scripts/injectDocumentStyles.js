@@ -4,7 +4,8 @@ const injectDocumentStyles = (styleSheetArray, tag = 'unknown') => {
 		try {
 			styleSheet = new CSSStyleSheet();
 			await styleSheet.replace(styles);
-			document.adoptedStyleSheets = styleSheet;
+			document.adoptedStyleSheets.includes(styleSheet) ||
+				document.adoptedStyleSheets.push(styleSheet);
 		} catch (err) {
 			// This method is slower, but works in all browsers.
 			styleSheet = document.createElement('style');

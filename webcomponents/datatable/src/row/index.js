@@ -1,13 +1,13 @@
 import rowCSS from './row.css' assert { type: 'css' };
-import { styles } from '@trvt/core';
+import { styles, TrivetElement } from '@trvt/core';
 
-export class trvtRow extends HTMLElement {
+export class trvtRow extends TrivetElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
 		this.setAttribute('role', 'row');
-		this.shadowRoot.adoptedStyleSheets = [...styles, rowCSS];
-		this.shadowRoot.innerHTML = `<slot></slot>`;
+		this.shadowStyleSheets = [...styles, rowCSS];
+
+		this.template = `<slot></slot>`;
 	}
 	connectedCallback() {
 		try {

@@ -1,13 +1,13 @@
 import cellCSS from './cell.css' assert { type: 'css' };
-import { styles } from '@trvt/core';
+import { styles, TrivetElement } from '@trvt/core';
 
-export class trvtCell extends HTMLElement {
+export class trvtCell extends TrivetElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
 		this.setAttribute('role', 'cell');
-		this.shadowRoot.adoptedStyleSheets = [...styles, cellCSS];
-		this.shadowRoot.innerHTML = `
+		this.shadowStyleSheets = [...styles, cellCSS];
+
+		this.template = `
 			<div><slot></slot></div>
 		`;
 
@@ -19,6 +19,6 @@ export class trvtCell extends HTMLElement {
 		this.style.setProperty('--trvt-cell-col-span', this.colspan);
 		this.style.setProperty('--trvt-cell-col-start', this.colstart);
 	}
-	connectedCallback() {}
+	connectedCallback() { }
 }
 customElements.define('trvt-cell', trvtCell);
