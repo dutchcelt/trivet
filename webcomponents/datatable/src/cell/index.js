@@ -19,6 +19,6 @@ export class trvtCell extends TrivetElement {
 		this.style.setProperty('--trvt-cell-col-span', this.colspan);
 		this.style.setProperty('--trvt-cell-col-start', this.colstart);
 	}
-	connectedCallback() { }
+	connectedCallback() {}
 }
 customElements.define('trvt-cell', trvtCell);

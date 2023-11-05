@@ -4,27 +4,23 @@
  */
 
 body {
-  margin-block: 0;
-  margin-inline: auto;
-  padding-block: var(--size-fluid-2);
-  padding-inline: var(--size-fluid-4);
-  font-size: var(--font-size-fluid-1);
-  font-family: Inter, sans-serif;
-  font-weight: 300;
-  max-width: 65ch;
+	margin-block: 0;
+	margin-inline: auto;
+	padding-block: var(--size-fluid-2);
+	padding-inline: var(--size-fluid-4);
+	font-size: var(--font-size-fluid-1);
+	font-family: Inter, sans-serif;
+	font-weight: 300;
+	max-width: 65ch;
 }
 h1 {
-  margin: 0;
-  font-size: var(--font-size-fluid-3);
-  font-weight: 900;
+	margin: 0;
+	font-size: var(--font-size-fluid-3);
+	font-weight: 900;
 }
 p {
-  margin-block: 1ex;
+	margin-block: 1ex;
 }
 .intro {
-  font-weight: 500;
-}
-
-trvt-list:has(:not(:defined)) {
-  visibility: hidden;
+	font-weight: 500;
 }

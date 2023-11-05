@@ -1,20 +1,5 @@
 /* Base styles for all Trivet Components */
 import { trivetCSS } from '@trvt/assets';
-import {
-	trvtPropertiesCSS,
-	trvtTokensCSS,
-	trvtColorPatternsCSS,
-} from '@trvt/designtokens';
-
-for (const ss of [
-	trvtPropertiesCSS,
-	...trivetCSS,
-	trvtTokensCSS,
-	trvtColorPatternsCSS,
-]) {
-	document.adoptedStyleSheets.includes(ss) ||
-		document.adoptedStyleSheets.push(ss);
-}
 
 import { createFragment } from './createFragment.js';
 

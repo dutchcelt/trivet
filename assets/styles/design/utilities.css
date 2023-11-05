@@ -28,4 +28,25 @@
 			margin-block-end: 0 !important;
 		}
 	}
+
+	:is(
+			trvt-layout,
+			trvt-tabel,
+			trvt-article,
+			trvt-button,
+			trvt-card,
+			trvt-header,
+			trvt-drag-scroller,
+			trvt-tab-container,
+			trvt-toggle-details,
+			trvt-ul,
+			trvt-ol
+		) {
+		&:not(:defined) {
+			visibility: hidden;
+		}
+		&:has(:not(:defined)) {
+			visibility: hidden;
+		}
+	}
 }

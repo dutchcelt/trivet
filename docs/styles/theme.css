@@ -3,9 +3,6 @@
 @import url('modes.css');
 
 @layer theme {
-	trvt-layout:has(:not(:defined)) {
-		visibility: hidden;
-	}
 	trvt-layout {
 		--trvt-row-gap: 0;
 		max-width: 65ch;
