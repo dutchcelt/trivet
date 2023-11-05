@@ -16,21 +16,21 @@ Note that these colours are omitted from the main set of custom properties. Libr
 
 ## Token structure
 
-Note that Trivet wouldn't use all of these. This is a structure to help create tokens with a consistent and predictable names.
+Note that Trivet wouldn't use all of these. This is a structure to help create tokens with consistent and predictable names.
 
 <table>
 		<tr>
-			<th rowspan="2">Namespace</th>
-			<th rowspan="2">Foundation</th>
-			<th rowspan="2">Topic</th>
-			<th rowspan="2">Property</th>
-			<th colspan="3">Modifier</th>
+			<th valign="top" rowspan="2">Namespace</th>
+			<th valign="top" rowspan="2">Foundation</th>
+			<th valign="top" rowspan="2">Topic</th>
+			<th valign="top" rowspan="2">Property</th>
+			<th valign="top" colspan="3">Modifier</th>
 		</tr>
 		<tr>
 			<th>Variant</th><th>Range</th><th>State</th>
 		</tr>
 		<tr>
-			<td rowspan="80">trvt</td><td>color</td><td>editorial</td><td>text</td><td>primary</td><td>000-100</td><td>hover</td>
+			<td valign="top" rowspan="80">trvt</td><td>color</td><td>editorial</td><td>text</td><td>primary</td><td>000-100</td><td>hover</td>
 		</tr>
 		<tr>
 			<td>layout</td><td>promotional</td><td>background</td><td>secondary</td><td>light-bold</td><td>visited</td>
