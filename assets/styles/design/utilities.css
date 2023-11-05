@@ -29,9 +29,10 @@
 		}
 	}
 
+	/* Special container styles to prevent FOUC */
 	:is(
 			trvt-layout,
-			trvt-tabel,
+			trvt-table,
 			trvt-article,
 			trvt-button,
 			trvt-card,
@@ -42,10 +43,10 @@
 			trvt-ul,
 			trvt-ol
 		) {
-		&:not(:defined) {
+		&:has(:not(:defined)) {
 			visibility: hidden;
 		}
-		&:has(:not(:defined)) {
+		&:not(:defined) {
 			visibility: hidden;
 		}
 	}
