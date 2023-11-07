@@ -1,6 +1,7 @@
 const fs = require('fs');
 const StyleDictionary = require('style-dictionary');
 const path = require('path');
+const { transform } = require('lightningcss');
 
 /**
  * @typedef {import('./defaults.cjs').Defaults} Defaults
@@ -31,8 +32,23 @@ module.exports = options => {
 	 */
 	const getFileContent = file => {
 		const data = fs.readFileSync(file, { encoding: 'utf8' });
-		const transformedData = opts.layer === '' ? `${data}\n` : `@layer ${opts.layer} {\n${data}\n}\n`;
-		const bufferedData = Buffer.alloc(transformedData.length, transformedData, 'utf8');
+		let transformedData =
+			opts.layer === ''
+				? `${data}\n`
+				: `@layer ${opts.layer} {\n${data}\n}\n`;
+		transformedData = opts.minify
+			? transform({
+				code: Buffer.from(transformedData),
+				minify: true,
+				errorRecovery: true,
+				sourceMap: false,
+			}).code.toString()
+			: transformedData;
+		const bufferedData = Buffer.alloc(
+			transformedData.length,
+			transformedData,
+			'utf8'
+		);
 
 		fs.writeFileSync(file, bufferedData);
 	};

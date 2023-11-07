@@ -34,4 +34,5 @@ module.exports = {
 	colorPatternExtension: 'trvt.color.pattern',
 	wcagLevel: 'AA',
 	exclude: 'lib',
+	minify: false,
 };

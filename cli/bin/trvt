@@ -7,12 +7,27 @@ const program = new Command();
 
 const fs = require('fs');
 const path = require('path');
-const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8'));
+const pkg = JSON.parse(
+	fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8')
+);
 
-const cleanTokens = require(path.join(__dirname, '..', 'lib', 'cleanTokens.cjs'));
-const generateTokens = require(path.join(__dirname, '..', 'lib', 'generateTokens.cjs'));
+const cleanTokens = require(path.join(
+	__dirname,
+	'..',
+	'lib',
+	'cleanTokens.cjs'
+));
+const generateTokens = require(path.join(
+	__dirname,
+	'..',
+	'lib',
+	'generateTokens.cjs'
+));
 
-program.description('CLI to generate Trivet assets').version(pkg.version).usage('[command] [options]');
+program
+	.description('CLI to generate Trivet assets')
+	.version(pkg.version)
+	.usage('[command] [options]');
 
 program
 	.command('clean')
@@ -23,8 +38,14 @@ program
 program
 	.command('tokens')
 	.description('Generates tokens')
-	.option('-l, --layer [layer]', 'Wrap the generated custom property tokens in a CSS layer with the given layername.')
-	.option('-b, --buildPath [build]', 'Tokens are put in a folder "build". Here you can set an alternate path.')
+	.option(
+		'-l, --layer [layer]',
+		'Wrap the generated custom property tokens in a CSS layer with the given layername.'
+	)
+	.option(
+		'-b, --buildPath [build]',
+		'Tokens are put in a folder "build". Here you can set an alternate path.'
+	)
 	.option(
 		'-p, --sourcePath [source]',
 		'Tokens retrieved from the folder "tokens". Here you can set an alternate folder path.'
@@ -37,9 +58,19 @@ program
 		'-s, --scope [scope]',
 		'This is the design system prefix. This is used in the filename and in the token keys/properties.'
 	)
-	.option('-f, --filename [filename]', 'A filename is <scope>_tokens. You can pick a different suffix.')
-	.option('-e, --exclude [exclude]', 'Exclude properties that contain the given string')
-	.option('-x, --extension [extension]', 'Points to the name of the CSS property entension')
+	.option(
+		'-f, --filename [filename]',
+		'A filename is <scope>_tokens. You can pick a different suffix.'
+	)
+	.option(
+		'-e, --exclude [exclude]',
+		'Exclude properties that contain the given string'
+	)
+	.option(
+		'-x, --extension [extension]',
+		'Points to the name of the CSS property entension'
+	)
+	.option('-m, --minify [minify]', 'Minify the CSS')
 	.action(generateTokens);
 
 program.parse();
