@@ -52,11 +52,15 @@ const hasExtension = token => {
  * @type {Object}
  */
 module.exports = {
-	'css/property': function ({ dictionary }) {
+	'css/property': function({ dictionary, platform }) {
+		const { opts } = platform;
+		const linebreak = opts.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
 		return allTokens
-			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) => stringSort(tokenA.name, tokenB.name))
+			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
+				stringSort(tokenA.name, tokenB.name)
+			)
 			.filter((/** @type{Object} */ token) => hasExtension(token))
 			.map((/** @type{Object} */ token) => {
 				/** @type {CSSPropertyRule} cssProp*/
@@ -73,6 +77,6 @@ module.exports = {
 
 				return str;
 			})
-			.join('\n');
+			.join(linebreak);
 	},
 };

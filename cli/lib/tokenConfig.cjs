@@ -21,11 +21,13 @@ module.exports = opts => {
 				transformGroup: 'css',
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
+				opts,
 				files: [
 					{
 						destination: `${opts.scope}_${opts.filename}`,
 						format: 'css/variables',
-						filter: (/** @type {Object} */ token) => !filterRegex.test(token.name),
+						filter: (/** @type {Object} */ token) =>
+							!filterRegex.test(token.name),
 						options: {
 							showFileHeader: false,
 						},
@@ -33,15 +35,26 @@ module.exports = opts => {
 					{
 						destination: `${opts.scope}_properties.css`,
 						format: 'css/property',
+						options: {},
 					},
 					{
 						destination: `${opts.scope}_color_patterns.css`,
 						format: 'css/colorpattern',
 					},
+				],
+			},
+			library: {
+				transforms: ['name/cti/kebab'],
+				transformGroup: 'css',
+				buildPath: `${opts.buildPath}/`,
+				prefix: opts.scope,
+				opts,
+				files: [
 					{
 						destination: `${opts.scope}_${opts.exclude}.css`,
 						format: 'css/variables',
-						filter: (/** @type {Object} */ token) => filterRegex.test(token.name),
+						filter: (/** @type {Object} */ token) =>
+							filterRegex.test(token.name),
 						options: {
 							showFileHeader: false,
 						},

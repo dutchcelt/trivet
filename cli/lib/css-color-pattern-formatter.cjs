@@ -34,33 +34,39 @@ const hasExtension = token => {
  * @returns {string}
  */
 const colorSchemeFn = (token, modeType) =>
-	`@media (prefers-color-scheme: ${modeType}) :root { --${token.name}:  ${
-		getExtension(token).mode[modeType].value
-	}; }\n`;
+	`@media (prefers-color-scheme: ${modeType}) :root { --${token.name}:  ${getExtension(token).mode[modeType].value
+	}; }`;
 
 /**
  * Format object for Style Dictionary
  * @type {Object}
  */
 module.exports = {
-	'css/colorpattern': function ({ dictionary }) {
+	'css/colorpattern': function({ dictionary, platform }) {
+		const { opts } = platform;
+		const linebreak = opts.minify ? '' : '\n';
+
 		const { allTokens } = dictionary;
 		const str = allTokens
-			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) => stringSort(tokenA.name, tokenB.name))
+			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
+				stringSort(tokenA.name, tokenB.name)
+			)
 			.filter((/** @type{Object} */ token) => hasExtension(token))
 			.map((/** @type{Object} */ token) => {
 				/** @type {Object} cssColorContrast*/
 				const cssColorPattern = getExtension(token);
 				let cssString = '';
-				if (cssColorPattern.mode?.light) cssString += colorSchemeFn(token, 'light');
-				if (cssColorPattern.mode?.dark) cssString += colorSchemeFn(token, 'dark');
+				if (cssColorPattern.mode?.light)
+					cssString += colorSchemeFn(token, 'light');
+				if (cssColorPattern.mode?.dark)
+					cssString += colorSchemeFn(token, 'dark');
 
 				if (cssColorPattern.contrast)
-					cssString += `@property --${token.name}-contrast}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorPattern.contrast.value}; }\n`;
+					cssString += `@property --${token.name}-contrast}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorPattern.contrast.value}; }`;
 
 				return cssString;
 			})
-			.join('');
+			.join(linebreak);
 		return str;
 	},
 };
