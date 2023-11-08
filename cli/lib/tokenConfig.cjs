@@ -16,39 +16,43 @@ module.exports = opts => {
 			...cssColorPatternFormat,
 		},
 		platforms: {
-			css: {
+			'CSS Tokens': {
 				transforms: ['name/cti/kebab'],
 				transformGroup: 'css',
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
-				opts,
 				files: [
 					{
-						destination: `${opts.scope}_${opts.filename}`,
+						destination: `${opts.scope}_tokens.css`,
 						format: 'css/variables',
 						filter: (/** @type {Object} */ token) =>
 							!filterRegex.test(token.name),
 						options: {
 							showFileHeader: false,
+							...opts,
 						},
 					},
 					{
 						destination: `${opts.scope}_properties.css`,
 						format: 'css/property',
-						options: {},
+						options: {
+							...opts,
+						},
 					},
 					{
 						destination: `${opts.scope}_color_patterns.css`,
 						format: 'css/colorpattern',
+						options: {
+							...opts,
+						},
 					},
 				],
 			},
-			library: {
+			'CSS Library': {
 				transforms: ['name/cti/kebab'],
 				transformGroup: 'css',
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
-				opts,
 				files: [
 					{
 						destination: `${opts.scope}_${opts.exclude}.css`,
@@ -57,6 +61,7 @@ module.exports = opts => {
 							filterRegex.test(token.name),
 						options: {
 							showFileHeader: false,
+							...opts,
 						},
 					},
 				],

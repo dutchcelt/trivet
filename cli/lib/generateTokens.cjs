@@ -15,30 +15,29 @@ const defaults = require(path.join(__dirname, 'defaults.cjs'));
 
 /**
  * getFileContent
- * @param {String} file - This is the path to the file
- * @param {Object} opts
+ * @param {Object} tokenConfig
  */
-const getFileContent = (file, opts) => {
-	const lb = opts.minify ? '' : '\n';
-	const tab = opts.minify ? '' : '\t';
+const getFileContent = tokenConfig => {
+	const { options } = tokenConfig;
+	const { buildPath, minify, layer } = options;
+	const { destination } = tokenConfig;
+	const file = path.join(buildPath, destination);
 
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	let transformedData =
-		opts.layer === ''
-			? `${data}${lb}`
-			: `@layer ${opts.layer} {${lb}${tab}${data}${lb}}${lb}`;
+	const transformedData =
+		layer === '' ? `${data}\n` : `@layer ${layer} {\n${data}\n}\n}`;
+	let cssString = '';
 
-	if (opts.minify) {
-		transformedData = transform({
-			filename: `${opts.scope}_${opts.filename}`,
+	if (minify) {
+		cssString = transform({
+			filename: `${destination}`,
 			code: Buffer.from(transformedData),
 			minify: true,
 			errorRecovery: true,
 			sourceMap: false,
 		}).code.toString();
 	}
-
-	fs.writeFileSync(file, transformedData);
+	fs.writeFileSync(file, cssString || transformedData);
 };
 
 /**
@@ -52,6 +51,8 @@ module.exports = options => {
 	const opts = Object.assign(defaults, options);
 	const styledictionary = StyleDictionary.extend(tokenConfig(opts));
 	styledictionary.buildAllPlatforms();
-
-	getFileContent(`${opts.buildPath}/${opts.scope}_${opts.filename}`, opts);
+	const files = styledictionary?.platforms?.['CSS Tokens'].files;
+	for (const tokenConfig of files) {
+		getFileContent(tokenConfig);
+	}
 };

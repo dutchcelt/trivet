@@ -52,9 +52,8 @@ const hasExtension = token => {
  * @type {Object}
  */
 module.exports = {
-	'css/property': function({ dictionary, platform }) {
-		const { opts } = platform;
-		const linebreak = opts.minify ? '' : '\n';
+	'css/property': function({ dictionary, options }) {
+		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
 		return allTokens

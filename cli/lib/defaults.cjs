@@ -29,7 +29,6 @@ module.exports = {
 	sourcePath: tokensPath,
 	themePath: '',
 	scope: 'trvt',
-	filename: 'tokens.css',
 	cssPropExtension: 'www.css.property.rule',
 	colorPatternExtension: 'trvt.color.pattern',
 	wcagLevel: 'AA',

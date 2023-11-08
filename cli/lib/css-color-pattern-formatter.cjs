@@ -42,10 +42,8 @@ const colorSchemeFn = (token, modeType) =>
  * @type {Object}
  */
 module.exports = {
-	'css/colorpattern': function({ dictionary, platform }) {
-		const { opts } = platform;
-		const linebreak = opts.minify ? '' : '\n';
-
+	'css/colorpattern': function({ dictionary, options }) {
+		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		const str = allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
