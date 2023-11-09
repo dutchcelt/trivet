@@ -3,6 +3,20 @@ const StyleDictionary = require('style-dictionary');
 const path = require('path');
 const { transform } = require('lightningcss');
 
+StyleDictionary.registerAction({
+	name: 'trivet',
+	do: function(...args) {
+		const config = { args };
+		const files = config.args?.[1]?.files || [];
+		for (const tokenConfig of files) {
+			getFileContent(tokenConfig);
+		}
+	},
+	undo: function() {
+		// No Undo. Lets live on the edge!
+	},
+});
+
 /**
  * @typedef {import('./defaults.cjs').Defaults} Defaults
  */
@@ -18,6 +32,7 @@ const defaults = require(path.join(__dirname, 'defaults.cjs'));
  * @param {Object} tokenConfig
  */
 const getFileContent = tokenConfig => {
+	console.log(tokenConfig.destination);
 	const { options } = tokenConfig;
 	const { buildPath, minify, layer } = options;
 	const { destination } = tokenConfig;
@@ -25,7 +40,7 @@ const getFileContent = tokenConfig => {
 
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
 	const transformedData =
-		layer === '' ? `${data}\n` : `@layer ${layer} {\n${data}\n}\n}`;
+		layer === '' ? `${data}\n` : `@layer ${layer} {\n${data}\n}\n`;
 	let cssString = '';
 
 	if (minify) {
@@ -51,8 +66,4 @@ module.exports = options => {
 	const opts = Object.assign(defaults, options);
 	const styledictionary = StyleDictionary.extend(tokenConfig(opts));
 	styledictionary.buildAllPlatforms();
-	const files = styledictionary?.platforms?.['CSS Tokens'].files;
-	for (const tokenConfig of files) {
-		getFileContent(tokenConfig);
-	}
 };

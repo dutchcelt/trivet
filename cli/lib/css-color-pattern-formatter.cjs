@@ -33,9 +33,14 @@ const hasExtension = token => {
  * @param {string} modeType - light or dark
  * @returns {string}
  */
-const colorSchemeFn = (token, modeType) =>
-	`@media (prefers-color-scheme: ${modeType}) :root { --${token.name}:  ${getExtension(token).mode[modeType].value
-	}; }`;
+const colorSchemeFn = (
+	token,
+	modeType
+) => `@media (prefers-color-scheme: ${modeType}) {
+	:root { 
+			--${token.name}:  ${getExtension(token).mode[modeType].value}; 
+	}
+}`;
 
 /**
  * Format object for Style Dictionary

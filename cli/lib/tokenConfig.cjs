@@ -47,6 +47,7 @@ module.exports = opts => {
 						},
 					},
 				],
+				actions: ['trivet'],
 			},
 			'CSS Library': {
 				transforms: ['name/cti/kebab'],
@@ -65,6 +66,7 @@ module.exports = opts => {
 						},
 					},
 				],
+				actions: ['trivet'],
 			},
 		},
 	};

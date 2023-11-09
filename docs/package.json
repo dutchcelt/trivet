@@ -15,7 +15,7 @@
 		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"eleventy:develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve ",
 		"eleventy:watch": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --watch",
-		"tokens": "npx trvt tokens --themePath theme --buildPath styles"
+		"tokens": "npx trvt tokens --themePath theme --buildPath styles -m"
 	},
 	"devDependencies": {
 		"@trvt/cli": "^1.4.1",
