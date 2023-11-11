@@ -11,13 +11,13 @@
 		button {
 			/* Context State toggle setup */
 			--_context: var(--_context-default);
-			--_context-default: var(--_context,);
-			--_context-primary: var(--_context,);
-			--_context-cta: var(--_context,);
-			--_context-abort: var(--_context,);
-			--_context-approve: var(--_context,);
-			--_context-pause: var(--_context,);
-			--_context-release: var(--_context,);
+			--_context-default: var(--_context, ); /* prettier-ignore */
+			--_context-primary: var(--_context, );/* prettier-ignore */
+			--_context-cta: var(--_context, );/* prettier-ignore */
+			--_context-abort: var(--_context, );/* prettier-ignore */
+			--_context-approve: var(--_context, );/* prettier-ignore */
+			--_context-pause: var(--_context, );/* prettier-ignore */
+			--_context-release: var(--_context, );/* prettier-ignore */
 		}
 		button {
 			--_padding-block: var(--trvt-spacing-content-block-xs, 0.5rem);

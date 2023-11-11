@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.9.5
+
+### Patch Changes
+
+- Fix for building new styles using css properties
+
 ## 0.9.4
 
 ### Patch Changes

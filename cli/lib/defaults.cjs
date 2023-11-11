@@ -17,6 +17,7 @@ const tokensPath = path.join(defaultTokensPackagePath.trim(), 'tokens');
  * @property {string} filename -
  * @property {string} cssPropExtension -
  * @property {string} exclude -
+ * @property {boolean} minify -
  */
 
 /**

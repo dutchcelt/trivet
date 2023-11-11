@@ -1,5 +1,14 @@
 # @trvt/docs
 
+## 0.2.9
+
+### Patch Changes
+
+- Fix for building new styles using css properties
+- Updated dependencies
+  - @trvt/button@0.10.3
+  - @trvt/core@0.9.5
+
 ## 0.2.8
 
 ### Patch Changes

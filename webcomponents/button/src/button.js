@@ -15,23 +15,20 @@ export class TrvtButton extends mix(TrivetElement).with(
 	constructor() {
 		super();
 
-		this.trvtType = this.dataset.trvtType || 'button';
-		delete this.dataset.trvtType;
+		this.trvtType = this.dataset?.trvtType || 'button';
+		delete this.dataset?.trvtType;
 
-		this.value = this.dataset.trvtValue || '';
+		this.value = this.dataset?.trvtValue || '';
 		delete this.dataset.trvtValue;
 
-		this.trvtContext = this.dataset.trvtContext || 'default';
-		this.trvtDisabled = this.dataset.trvtDisabled || false;
-		this.trvtReadonly = this.dataset.trvtReadonly || false;
+		this.trvtContext = this.dataset?.trvtContext || 'default';
+		this.trvtDisabled = this.dataset?.trvtDisabled || false;
+		this.trvtReadonly = this.dataset?.trvtReadonly || false;
 
 		this.shadowStyleSheets = [buttonCSS];
 		this.template = this.#buttonTemplateString();
 	}
 
-	/**
-	 * @private
-	 */
 	#buttonTemplateString() {
 		return `
 			<button 

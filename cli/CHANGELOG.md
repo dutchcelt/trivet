@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.4.2
+
+### Patch Changes
+
+- Fix for building new styles using css properties
+
 ## 1.4.1
 
 ### Patch Changes

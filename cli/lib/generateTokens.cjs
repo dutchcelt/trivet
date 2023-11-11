@@ -32,7 +32,6 @@ const defaults = require(path.join(__dirname, 'defaults.cjs'));
  * @param {Object} tokenConfig
  */
 const getFileContent = tokenConfig => {
-	console.log(tokenConfig.destination);
 	const { options } = tokenConfig;
 	const { buildPath, minify, layer } = options;
 	const { destination } = tokenConfig;
@@ -61,7 +60,7 @@ const getFileContent = tokenConfig => {
  */
 module.exports = options => {
 	/**
-	 * @type {Object}
+	 * @type {Defaults}
 	 */
 	const opts = Object.assign(defaults, options);
 	const styledictionary = StyleDictionary.extend(tokenConfig(opts));
