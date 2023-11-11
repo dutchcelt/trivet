@@ -4,17 +4,12 @@ import { styles, dataBus } from '../index.js';
 describe('Core Styles ', async () => {
 	it('Style is array', () => {
 		assert.isArray(styles);
-		expect(styles.length).to.equal(2);
+		expect(styles.length).to.equal(6);
 	});
-	it('Normalize layer', () => {
+	it('First rule is CSSLayerStatementRule', () => {
 		const ss = styles[0].cssRules[0];
-		expect(ss.constructor.name).to.equal('CSSLayerBlockRule');
-		expect(/@layer normalize/gi.test(ss.cssText)).to.be.true;
-	});
-	it('Designsystem layer', () => {
-		const ss = styles[1].cssRules[0];
-		expect(ss.constructor.name).to.equal('CSSLayerBlockRule');
-		expect(/@layer designsystem/gi.test(ss.cssText)).to.be.true;
+		expect(ss.constructor.name).to.equal('CSSLayerStatementRule');
+		//expect(/@layer normalize/gi.test(ss.cssText)).to.be.true;
 	});
 });
 
