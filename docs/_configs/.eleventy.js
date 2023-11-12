@@ -23,7 +23,7 @@ const themeStyleSheetPath = path.resolve('.', 'styles', 'index.css');
 /**
  * Get the CSS from a style sheet. This also inlines all the CSS imports.
  * @param {string} cssFile - A resolved path to a stylesheet
- * @return {Buffer} - Returns a single minified css string.
+ * @return {Buffer} A single minified css string.
  */
 const getCSS = cssFile => {
 	if (!fs.existsSync(cssFile)) return '';
@@ -36,18 +36,21 @@ const getCSS = cssFile => {
 
 /**
  * Write a bundled css file to 'dist'
- * @param {string[]} distPathArgs - The 'dist' directory path as an array to resolve
+ * @param {string} distPath - The 'dist' directory path
  * @param {string} filename - The name of the file to write to disk (i.e. 'styles.css')
  * @param {string[]} styleSheetPaths - An array of style sheet paths to bundle.
+ * @returns {string} A hashed filename
  */
-const writeCSS = (distPathArgs, filename, styleSheetPaths) => {
-	const resolvedPath = path.resolve(...distPathArgs);
-	fs.mkdirSync(resolvedPath, { recursive: true }, err => {
+const writeCSS = (distPath, filename, styleSheetPaths) => {
+	fs.mkdirSync(distPath, { recursive: true }, err => {
 		if (err) throw err;
 	});
-	const resolvedFile = path.resolve(resolvedPath, filename);
 	const cssData = styleSheetPaths.reduce((a, c) => (a += getCSS(c)), '');
+	const cssDataHash = Math.abs(hashCode(cssData));
+	const hashedFileName = filename.split('.')[0] + '-' + cssDataHash + '.css';
+	const resolvedFile = path.resolve(distPath, hashedFileName);
 	fs.writeFileSync(resolvedFile, cssData);
+	return hashedFileName;
 };
 
 const copyImports = (eleventyConfig, deps) => {
@@ -74,18 +77,40 @@ const moduleImporter = deps => {
 	return str;
 };
 
+/**
+ * Returns a hash code from a string
+ * @param  {String} str The string to hash.
+ * @return {Number} A 32bit integer
+ * @see http://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
+ */
+function hashCode(str) {
+	let hash = 0;
+	for (let i = 0, len = str.length; i < len; i++) {
+		let chr = str.charCodeAt(i);
+		hash = (hash << 5) - hash + chr;
+		hash |= 0; // Convert to 32bit integer
+	}
+	return hash;
+}
+
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('fonts');
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('webcomponents');
 	eleventyConfig.addPassthroughCopy('scripts');
 
-	writeCSS(['.', 'dist'], 'theme.css', [
-		trvtStyleSheetPath,
-		themeStyleSheetPath,
-	]);
-
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
+
+	eleventyConfig.addShortcode('stylesheet', function() {
+		let filename = 'theme.css';
+		const distPath = path.resolve('.', 'dist');
+		const hashedFileName = writeCSS(distPath, filename, [
+			trvtStyleSheetPath,
+			themeStyleSheetPath,
+		]);
+		const temp = `<link href="/${hashedFileName}" rel="stylesheet" />`.trim();
+		return temp;
+	});
 
 	eleventyConfig.addShortcode('importmap', function() {
 		const temp = `
