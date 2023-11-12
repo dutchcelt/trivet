@@ -28,10 +28,6 @@ const copyImports = (eleventyConfig, deps) => {
 			[`../node_modules/${dep}/build`]: `${dep}`,
 		});
 	});
-	fs.writeFileSync(
-		path.resolve('.', 'dist', 'theme.css'),
-		getCSS(trvtCSS) + getCSS(themeCSS)
-	);
 };
 
 const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
@@ -76,7 +72,10 @@ module.exports = function(eleventyConfig) {
 			`.trim();
 		return temp;
 	});
-
+	fs.writeFileSync(
+		path.resolve('.', 'dist', 'theme.css'),
+		getCSS(trvtCSS) + getCSS(themeCSS)
+	);
 	// eleventyConfig.addFilter("makeUppercase", function(value) {
 	//
 	//  });
