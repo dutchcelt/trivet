@@ -11,6 +11,5 @@ export const CSSString2CSSStyleSheet = css => {
 	document.head.appendChild(style);
 	const { sheet } = style;
 	document.head.removeChild(style);
-	console.log(sheet);
 	return sheet;
 };

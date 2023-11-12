@@ -1,0 +1,124 @@
+{
+	"color": {
+		"typography": {
+			"text": {
+				"value": "{color.lib.sand-11.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1.value}"
+							}
+						}
+					}
+				}
+			},
+			"text-inverted": {
+				"value": "{color.lib.sand-1.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-11.value}"
+							}
+						}
+					}
+				}
+			},
+			"heading": {
+				"value": "{color.lib.sand-11.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1.value}"
+							}
+						}
+					}
+				}
+			},
+			"icon": {
+				"value": "{color.lib.sand-11.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1.value}"
+							}
+						}
+					}
+				}
+			},
+			"ui": {
+				"value": "{color.base.buttontext.value})",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor": {
+				"value": "{color.base.linktext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor-visited": {
+				"value": "{color.base.visitedtext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor-hover": {
+				"value": "{color.base.hovertext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor-active": {
+				"value": "{color.base.activetext.value}",
+				"type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}
