@@ -72,6 +72,9 @@ module.exports = function(eleventyConfig) {
 			`.trim();
 		return temp;
 	});
+	fs.mkdirSync(path.resolve('.', 'dist'), { recursive: true }, err => {
+		if (err) throw err;
+	});
 	fs.writeFileSync(
 		path.resolve('.', 'dist', 'theme.css'),
 		getCSS(trvtCSS) + getCSS(themeCSS)
