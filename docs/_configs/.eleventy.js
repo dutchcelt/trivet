@@ -11,6 +11,20 @@ const depsObject = JSON.parse(depsFile);
 const importArr = Object.keys(depsObject.devDependencies).filter(key =>
 	scopeReg.test(key)
 );
+
+const trvtStyleSheetPath = path.resolve(
+	'..',
+	'assets',
+	'build',
+	'importer.css'
+);
+const themeStyleSheetPath = path.resolve('.', 'styles', 'index.css');
+
+/**
+ * Get the CSS from a style sheet. This also inlines all the CSS imports.
+ * @param {string} cssFile - A resolved path to a stylesheet
+ * @return {Buffer} - Returns a single minified css string.
+ */
 const getCSS = cssFile => {
 	if (!fs.existsSync(cssFile)) return '';
 	const { code } = bundle({
@@ -19,8 +33,22 @@ const getCSS = cssFile => {
 	});
 	return code;
 };
-const trvtCSS = path.resolve('..', 'assets', 'build', 'importer.css');
-const themeCSS = path.resolve('.', 'styles', 'index.css');
+
+/**
+ * Write a bundled css file to 'dist'
+ * @param {string[]} distPathArgs - The 'dist' directory path as an array to resolve
+ * @param {string} filename - The name of the file to write to disk (i.e. 'styles.css')
+ * @param {string[]} styleSheetPaths - An array of style sheet paths to bundle.
+ */
+const writeCSS = (distPathArgs, filename, styleSheetPaths) => {
+	const resolvedPath = path.resolve(...distPathArgs);
+	fs.mkdirSync(resolvedPath, { recursive: true }, err => {
+		if (err) throw err;
+	});
+	const resolvedFile = path.resolve(resolvedPath, filename);
+	const cssData = styleSheetPaths.reduce((a, c) => (a += getCSS(c)), '');
+	fs.writeFileSync(resolvedFile, cssData);
+};
 
 const copyImports = (eleventyConfig, deps) => {
 	deps.forEach(dep => {
@@ -52,6 +80,11 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('webcomponents');
 	eleventyConfig.addPassthroughCopy('scripts');
 
+	writeCSS(['.', 'dist'], 'theme.css', [
+		trvtStyleSheetPath,
+		themeStyleSheetPath,
+	]);
+
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
 	eleventyConfig.addShortcode('importmap', function() {
@@ -72,17 +105,6 @@ module.exports = function(eleventyConfig) {
 			`.trim();
 		return temp;
 	});
-	fs.mkdirSync(path.resolve('.', 'dist'), { recursive: true }, err => {
-		if (err) throw err;
-	});
-	fs.writeFileSync(
-		path.resolve('.', 'dist', 'theme.css'),
-		getCSS(trvtCSS) + getCSS(themeCSS)
-	);
-	// eleventyConfig.addFilter("makeUppercase", function(value) {
-	//
-	//  });
-	// Return your Object options:
 	return {
 		dir: {
 			input: 'content',
