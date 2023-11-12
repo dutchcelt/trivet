@@ -1,3 +1,7 @@
+@import url('../../assets/build/importer.css');
+@import url('trvt_color_patterns.css');
+@import url('trvt_properties.css');
+@import url('trvt_tokens.css');
 @import url('font-faces.css');
 @import url('header.css');
 @import url('modes.css');

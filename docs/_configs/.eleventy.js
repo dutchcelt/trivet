@@ -6,7 +6,7 @@ let scopeReg = new RegExp(importscope, 'i');
 
 const depsFile = fs.readFileSync('./package.json');
 const depsObject = JSON.parse(depsFile);
-const importArr = Object.keys(depsObject.dependencies).filter(key =>
+const importArr = Object.keys(depsObject.devDependencies).filter(key =>
 	scopeReg.test(key)
 );
 const copyImports = (eleventyConfig, deps) => {
@@ -33,16 +33,15 @@ const moduleImporter = deps => {
 	return str;
 };
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('fonts');
 	eleventyConfig.addPassthroughCopy('images');
-	eleventyConfig.addPassthroughCopy('styles');
 	eleventyConfig.addPassthroughCopy('webcomponents');
 	eleventyConfig.addPassthroughCopy('scripts');
 
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
-	eleventyConfig.addShortcode('importmap', function () {
+	eleventyConfig.addShortcode('importmap', function() {
 		const temp = `
 				<script type="importmap">
 					{
@@ -52,7 +51,7 @@ module.exports = function (eleventyConfig) {
 			`.trim();
 		return temp;
 	});
-	eleventyConfig.addShortcode('importmodules', function () {
+	eleventyConfig.addShortcode('importmodules', function() {
 		const temp = `
 				<script type="module">
 					${moduleImporter(importArr)}
