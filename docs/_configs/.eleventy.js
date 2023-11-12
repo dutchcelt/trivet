@@ -28,6 +28,10 @@ const copyImports = (eleventyConfig, deps) => {
 			[`../node_modules/${dep}/build`]: `${dep}`,
 		});
 	});
+	fs.writeFileSync(
+		path.resolve('.', 'dist', 'theme.css'),
+		getCSS(trvtCSS) + getCSS(themeCSS)
+	);
 };
 
 const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
@@ -51,10 +55,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('webcomponents');
 	eleventyConfig.addPassthroughCopy('scripts');
-	fs.writeFileSync(
-		path.resolve('.', 'dist', 'theme.css'),
-		getCSS(trvtCSS) + getCSS(themeCSS)
-	);
 
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
