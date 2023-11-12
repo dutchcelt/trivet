@@ -1,5 +1,7 @@
 const env = process.env;
+const path = require('path');
 const fs = require('fs');
+const { bundle } = require('lightningcss');
 
 let importscope = '@trvt';
 let scopeReg = new RegExp(importscope, 'i');
@@ -9,6 +11,17 @@ const depsObject = JSON.parse(depsFile);
 const importArr = Object.keys(depsObject.devDependencies).filter(key =>
 	scopeReg.test(key)
 );
+const getCSS = cssFile => {
+	if (!fs.existsSync(cssFile)) return '';
+	const { code } = bundle({
+		filename: cssFile,
+		minify: true,
+	});
+	return code;
+};
+const trvtCSS = path.resolve('..', 'assets', 'build', 'importer.css');
+const themeCSS = path.resolve('.', 'styles', 'index.css');
+
 const copyImports = (eleventyConfig, deps) => {
 	deps.forEach(dep => {
 		eleventyConfig.addPassthroughCopy({
@@ -38,6 +51,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('webcomponents');
 	eleventyConfig.addPassthroughCopy('scripts');
+	fs.writeFileSync(
+		path.resolve('.', 'dist', 'theme.css'),
+		getCSS(trvtCSS) + getCSS(themeCSS)
+	);
 
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
@@ -63,7 +80,6 @@ module.exports = function(eleventyConfig) {
 	// eleventyConfig.addFilter("makeUppercase", function(value) {
 	//
 	//  });
-
 	// Return your Object options:
 	return {
 		dir: {

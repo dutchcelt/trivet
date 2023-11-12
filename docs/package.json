@@ -10,15 +10,15 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
 		"banner": "npx chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
-		"build:all": "npm run banner && npm run clean && npm run tokens && npm run bundleCSS && npm run eleventy",
+		"build:all": "npm run banner && npm run clean && npm run tokens && npm run eleventy",
 		"clean": "npx -y trvt clean --buildPath styles",
 		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"eleventy:develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve ",
 		"eleventy:watch": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --watch",
-		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath theme --buildPath styles -m",
-		"bundleCSS": "npx -y lightningcss --minify --bundle styles/index.css -o dist/theme.css"
+		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath theme --buildPath styles -m"
 	},
 	"devDependencies": {
+		"lightningcss": "^1.22.0",
 		"@11ty/eleventy": "^2.0.1",
 		"@trvt/article": "^0.7.2",
 		"@trvt/assets": "^0.8.2",
