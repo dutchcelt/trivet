@@ -1,13 +1,14 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.8.2",
+	"version": "0.8.3",
 	"type": "module",
 	"main": "build/index.js",
 	"files": [
 		"index.js",
 		"build/*",
 		"styles/*",
-		"scripts/*"
+		"scripts/*",
+		"lib/*"
 	],
 	"description": "Trivet styles and utility scripts.",
 	"author": "C. Egor Kloos",
@@ -20,10 +21,13 @@
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
-		"build:icons": "node ./_lib/icons.js",
+		"build:icons": "node ./lib/icons.js",
 		"build:rollup": "rollup -c ../configs/rollup.config.js",
-		"build:css": "node ./_lib/bundleCSS.js",
+		"build:css": "node ./lib/bundleCSS.js",
 		"build": "npm run build:icons && npm run build:rollup && npm run build:css",
 		"develop": "npm run build --watch"
+	},
+	"devDependencies": {
+		"fs": "^0.0.1-security"
 	}
 }

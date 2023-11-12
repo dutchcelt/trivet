@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.8.3
+
+### Patch Changes
+
+- Added a nodejs writeCSS scripts to the assets lib
+
 ## 0.8.2
 
 ### Patch Changes

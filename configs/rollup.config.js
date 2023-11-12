@@ -1,8 +1,8 @@
 import css from 'rollup-plugin-native-css-modules';
 import { transform } from 'lightningcss';
 import terser from '@rollup/plugin-terser';
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 const pathArray = path.resolve().split(path.sep);
 const packagename = pathArray.pop();
 const isWebcomponent = /webcomponents/i.test(path.resolve());
@@ -20,7 +20,7 @@ const banner =
 log(chalk.blueBright.bold(`\n\n${banner}`));
 
 if (isWebcomponent && fs.existsSync(buildfolder)) {
-	fs.rm(buildfolder, { recursive: true, force: true }, () => {});
+	fs.rm(buildfolder, { recursive: true, force: true }, () => { });
 }
 
 const compressStylesFunc = css => {
@@ -40,6 +40,7 @@ export default [
 			format: 'esm',
 			dir: 'build',
 		},
+		external: ['fs', 'path', 'lightningcss'],
 		plugins: [
 			css({
 				transform: compressStylesFunc,

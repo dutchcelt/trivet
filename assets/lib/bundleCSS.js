@@ -1,6 +1,6 @@
-import { default as fs } from 'fs';
-import path from 'path';
-import prependFile from 'prepend-file';
+import * as fs from 'fs';
+import * as path from 'path';
+import * as prependFile from 'prepend-file';
 
 const buildFolder = path.resolve(`build`);
 const bundleFile = path.resolve(buildFolder, `bundle.css`);
@@ -22,9 +22,8 @@ const getFileContent = file => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
 	/* The only stylesheet with 1 statement is the layer definition file */
 	const isLayerDefintionFile = data.toString().match(/;/g).length === 1;
-	const transformedData = `${
-		isLayerDefintionFile ? '/* Import the hashed files */\n' : ''
-	}@import url('${path.basename(file)}');\n`;
+	const transformedData = `${isLayerDefintionFile ? '/* Import the hashed files */\n' : ''
+		}@import url('${path.basename(file)}');\n`;
 	/* eslint-disable no-undef */
 	const bufferedData = Buffer.alloc(
 		transformedData.length,
