@@ -6,7 +6,7 @@ const { bundle } = require('lightningcss');
 let importscope = '@trvt';
 let scopeReg = new RegExp(importscope, 'i');
 
-const depsFile = fs.readFileSync('./package.json');
+const depsFile = fs.readFileSync(path.resolve('.', 'package.json'));
 const depsObject = JSON.parse(depsFile);
 const importArr = Object.keys(depsObject.devDependencies).filter(key =>
 	scopeReg.test(key)
