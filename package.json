@@ -3,6 +3,10 @@
 	"version": "2.0.2",
 	"private": true,
 	"type": "module",
+	"engines": {
+		"npm": ">=10.1.0",
+		"node": ">=20.9.0"
+	},
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
 		"build": "npm run test && npm run build:workspaces && npm run build:docs",
