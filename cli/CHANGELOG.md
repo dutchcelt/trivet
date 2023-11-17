@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.4.3
+
+### Patch Changes
+
+- Added switchable color modes
+
 ## 1.4.2
 
 ### Patch Changes

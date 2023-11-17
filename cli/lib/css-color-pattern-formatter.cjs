@@ -33,23 +33,52 @@ const hasExtension = token => {
  * @param {string} modeType - light or dark
  * @returns {string}
  */
-const colorSchemeFn = (
-	token,
-	modeType
-) => `@media (prefers-color-scheme: ${modeType}) {
+const colorSchemeFn = (token, modeType) => `[data-color-scheme='${modeType}'] {
+	--${token.name}:  ${getExtension(token).mode[modeType].value};
+}
+@media (prefers-color-scheme: ${modeType}) {
 	:root { 
-			--${token.name}:  ${getExtension(token).mode[modeType].value}; 
+		--${token.name}:  ${getExtension(token).mode[modeType].value}; 
 	}
 }`;
+
+/**
+ * getColorSchemeProperty
+ * @param {Object} token
+ * @param {string} modeType - light or dark
+ * @returns {string}
+ */
+const getColorSchemeProperty = (token, modeType) =>
+	`--${token.name}:  ${getExtension(token).mode[modeType].value};`;
 
 /**
  * Format object for Style Dictionary
  * @type {Object}
  */
 module.exports = {
-	'css/colorpattern': function({ dictionary, options }) {
+	'css/colorpattern': function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
+		let dataDarkModeWrapper = [
+			`:root[data-color-scheme='dark'] {`,
+			'',
+			'}',
+		];
+		let dataLightModeWrapper = [
+			`:root[data-color-scheme='light'] {`,
+			'',
+			'}',
+		];
+		let prefersDarkModeWrapper = [
+			`@media (prefers-color-scheme: dark) {:root {`,
+			``,
+			`}}`,
+		];
+		let prefersLightModeWrapper = [
+			`@media (prefers-color-scheme: light) {:root {`,
+			``,
+			`}}`,
+		];
 		const str = allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
 				stringSort(tokenA.name, tokenB.name)
@@ -59,17 +88,42 @@ module.exports = {
 				/** @type {Object} cssColorContrast*/
 				const cssColorPattern = getExtension(token);
 				let cssString = '';
-				if (cssColorPattern.mode?.light)
-					cssString += colorSchemeFn(token, 'light');
-				if (cssColorPattern.mode?.dark)
-					cssString += colorSchemeFn(token, 'dark');
-
+				if (cssColorPattern.mode?.light) {
+					//cssString += colorSchemeFn(token, 'light');
+					dataLightModeWrapper[1] += getColorSchemeProperty(
+						token,
+						'light'
+					);
+					prefersLightModeWrapper[1] += getColorSchemeProperty(
+						token,
+						'dark'
+					);
+				}
+				if (cssColorPattern.mode?.dark) {
+					//cssString += colorSchemeFn(token, 'dark');
+					dataDarkModeWrapper[1] += getColorSchemeProperty(
+						token,
+						'dark'
+					);
+					prefersDarkModeWrapper[1] += getColorSchemeProperty(
+						token,
+						'dark'
+					);
+				}
 				if (cssColorPattern.contrast)
 					cssString += `@property --${token.name}-contrast}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorPattern.contrast.value}; }`;
 
 				return cssString;
 			})
 			.join(linebreak);
-		return str;
+
+		const allStrings =
+			prefersDarkModeWrapper.join('') +
+			prefersLightModeWrapper.join('') +
+			dataDarkModeWrapper.join('') +
+			dataLightModeWrapper.join('') +
+			str;
+		console.log(allStrings);
+		return allStrings;
 	},
 };
