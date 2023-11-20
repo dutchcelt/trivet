@@ -1,7 +1,7 @@
 {
 	"name": "@trvt/designtokens",
 	"description": "Trivet Design Tokens, a system for tokens",
-	"version": "0.11.6",
+	"version": "0.11.7",
 	"type": "module",
 	"main": "index.js",
 	"files": [

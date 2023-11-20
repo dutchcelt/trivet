@@ -59,26 +59,9 @@ module.exports = {
 	'css/colorpattern': function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
-		let dataDarkModeWrapper = [
-			`:root[data-color-scheme='dark'] {`,
-			'',
-			'}',
-		];
-		let dataLightModeWrapper = [
-			`:root[data-color-scheme='light'] {`,
-			'',
-			'}',
-		];
-		let prefersDarkModeWrapper = [
-			`@media (prefers-color-scheme: dark) {:root {`,
-			``,
-			`}}`,
-		];
-		let prefersLightModeWrapper = [
-			`@media (prefers-color-scheme: light) {:root {`,
-			``,
-			`}}`,
-		];
+		const dataDarkModeWrapper = [`[data-color-scheme='dark'] {`, '', '}'];
+		const dataLightModeWrapper = [`[data-color-scheme='light'] {`, '', '}'];
+
 		const str = allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
 				stringSort(tokenA.name, tokenB.name)
@@ -94,18 +77,10 @@ module.exports = {
 						token,
 						'light'
 					);
-					prefersLightModeWrapper[1] += getColorSchemeProperty(
-						token,
-						'dark'
-					);
 				}
 				if (cssColorPattern.mode?.dark) {
 					//cssString += colorSchemeFn(token, 'dark');
 					dataDarkModeWrapper[1] += getColorSchemeProperty(
-						token,
-						'dark'
-					);
-					prefersDarkModeWrapper[1] += getColorSchemeProperty(
 						token,
 						'dark'
 					);
@@ -118,11 +93,7 @@ module.exports = {
 			.join(linebreak);
 
 		const allStrings =
-			prefersDarkModeWrapper.join('') +
-			prefersLightModeWrapper.join('') +
-			dataDarkModeWrapper.join('') +
-			dataLightModeWrapper.join('') +
-			str;
+			dataDarkModeWrapper.join('') + dataLightModeWrapper.join('') + str;
 		console.log(allStrings);
 		return allStrings;
 	},

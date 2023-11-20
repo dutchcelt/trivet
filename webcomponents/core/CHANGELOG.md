@@ -1,5 +1,13 @@
 # @trvt/core
 
+## 0.9.6
+
+### Patch Changes
+
+- Setting prefers color scheme with JavaScript
+- Updated dependencies
+  - @trvt/designtokens@0.11.7
+
 ## 0.9.5
 
 ### Patch Changes

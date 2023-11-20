@@ -75,6 +75,13 @@
 					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.base.canvastext.value}"
+							}
+						}
 					}
 				}
 			},
@@ -84,6 +91,13 @@
 					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.base.canvas.value}"
+							}
+						}
 					}
 				}
 			},

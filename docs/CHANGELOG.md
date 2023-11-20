@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.10
+
+### Patch Changes
+
+- Setting prefers color scheme with JavaScript
+
 ## 0.2.9
 
 ### Patch Changes

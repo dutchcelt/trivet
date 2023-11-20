@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.7
+
+### Patch Changes
+
+- Setting prefers color scheme with JavaScript
+
 ## 0.11.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.4.4
+
+### Patch Changes
+
+- Not outputting prefers color scheme css
+
 ## 1.4.3
 
 ### Patch Changes
