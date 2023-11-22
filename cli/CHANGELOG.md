@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.4.5
+
+### Patch Changes
+
+- Accidentily left a console.log in the node script.
+
 ## 1.4.4
 
 ### Patch Changes

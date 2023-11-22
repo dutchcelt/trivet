@@ -94,7 +94,6 @@ module.exports = {
 
 		const allStrings =
 			dataDarkModeWrapper.join('') + dataLightModeWrapper.join('') + str;
-		console.log(allStrings);
 		return allStrings;
 	},
 };
