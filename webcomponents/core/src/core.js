@@ -2,6 +2,7 @@
 import { trivetCSS } from '@trvt/assets';
 
 import { createFragment } from './createFragment.js';
+import { activateColorScheme, colorScheme } from './activateColorScheme.js';
 
 /**
  * cssLayerDefinitions
