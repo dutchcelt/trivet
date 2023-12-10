@@ -5,7 +5,7 @@
 				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -15,7 +15,7 @@
 				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -25,7 +25,7 @@
 				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -35,7 +35,7 @@
 				"value": "{color.base.canvastext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -45,7 +45,7 @@
 				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -55,7 +55,7 @@
 				"value": "{color.base.highlight.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -65,7 +65,7 @@
 				"value": "{color.base.accentcolor.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -76,7 +76,7 @@
 				"comment": "ButtonFace is the standard value but it's very dark.",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -86,7 +86,7 @@
 				"value": "{color.base.field.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -96,7 +96,7 @@
 				"value": "{color.base.selected.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -106,7 +106,7 @@
 				"value": "Mark",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -119,7 +119,7 @@
 				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

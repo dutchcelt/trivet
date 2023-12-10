@@ -5,7 +5,7 @@
 				"value": "{color.base.canvastext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -15,7 +15,7 @@
 				"value": "{color.base.canvas.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -25,7 +25,7 @@
 				"value": "{color.base.canvastext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -35,7 +35,7 @@
 				"value": "{color.base.icon.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -45,7 +45,7 @@
 				"value": "{color.base.buttontext.value})",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -55,7 +55,7 @@
 				"value": "{color.base.linktext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -65,7 +65,7 @@
 				"value": "{color.base.visitedtext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -75,7 +75,7 @@
 				"value": "{color.base.hovertext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -85,7 +85,7 @@
 				"value": "{color.base.activetext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

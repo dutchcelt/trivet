@@ -4,7 +4,7 @@
 			"light": {
 				"value": "{color.lib.sand-1.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -20,7 +20,7 @@
 			"dark": {
 				"value": "{color.lib.sand-11.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -36,7 +36,7 @@
 			"mid": {
 				"value": "#ccc",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -45,7 +45,7 @@
 			"bright": {
 				"value": "#ffff00",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -54,7 +54,7 @@
 			"shadow": {
 				"value": "#ddd",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -63,7 +63,7 @@
 			"icon": {
 				"value": "CanvasText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -73,7 +73,7 @@
 				"value": "{color.lib.sand-1.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -90,7 +90,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -106,7 +106,7 @@
 			"linktext": {
 				"value": "LinkText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -115,7 +115,7 @@
 			"visitedtext": {
 				"value": "VisitedText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -124,7 +124,7 @@
 			"hovertext": {
 				"value": "LinkText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -133,7 +133,7 @@
 			"activetext": {
 				"value": "ActiveText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -142,7 +142,7 @@
 			"highlight": {
 				"value": "Highlight",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -151,7 +151,7 @@
 			"highlighttext": {
 				"value": "HighlightText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -160,7 +160,7 @@
 			"accentcolor": {
 				"value": "AccentColor",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -169,7 +169,7 @@
 			"accentcolortext": {
 				"value": "AccentColorText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -178,7 +178,7 @@
 			"buttonface": {
 				"value": "ButtonFace",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -188,7 +188,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -204,7 +204,7 @@
 			"field": {
 				"value": "Field",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -213,7 +213,7 @@
 			"fieldtext": {
 				"value": "FieldText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -222,7 +222,7 @@
 			"selected": {
 				"value": "SelectedItem",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -231,7 +231,7 @@
 			"selectedtext": {
 				"value": "SelectedItemText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -240,7 +240,7 @@
 			"mark": {
 				"value": "Mark",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -249,7 +249,7 @@
 			"marktext": {
 				"value": "MarkText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -258,7 +258,7 @@
 			"disabled": {
 				"value": "GrayText",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

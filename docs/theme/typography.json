@@ -5,7 +5,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -22,7 +22,7 @@
 				"value": "{color.lib.sand-1.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -39,7 +39,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -56,7 +56,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -73,7 +73,7 @@
 				"value": "{color.base.buttontext.value})",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -83,7 +83,7 @@
 				"value": "{color.base.linktext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -93,7 +93,7 @@
 				"value": "{color.base.visitedtext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -103,7 +103,7 @@
 				"value": "{color.base.hovertext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -113,7 +113,7 @@
 				"value": "{color.base.activetext.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

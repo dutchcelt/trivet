@@ -3,35 +3,6 @@ import { trivetCSS } from '@trvt/assets';
 
 import { createFragment } from './createFragment.js';
 
-const colorScheme = {
-	dark: window.matchMedia('(prefers-color-scheme: dark)'),
-	light: window.matchMedia('(prefers-color-scheme: light)'),
-	_active: undefined,
-	get current() {
-		return colorScheme._active || colorScheme.light.matches ? 'light' : 'dark';
-	},
-	set current(mode) {
-		colorScheme._active = mode;
-	},
-};
-colorScheme.dark.addEventListener(
-	'change',
-	e => e.matches && activateColorScheme({ mode: 'dark' })
-);
-colorScheme.light.addEventListener(
-	'change',
-	e => e.matches && activateColorScheme({ mode: 'light' })
-);
-
-function activateColorScheme({ mode }) {
-	if (
-		!document.documentElement.dataset.colorScheme ||
-		colorScheme.current !== mode
-	) {
-		document.documentElement.dataset.colorScheme = mode;
-	}
-}
-
 /**
  * cssLayerDefinitions
  * @type {Array}

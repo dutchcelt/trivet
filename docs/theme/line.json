@@ -5,7 +5,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -22,7 +22,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -39,7 +39,7 @@
 				"value": "{color.lib.sand-11.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
@@ -56,7 +56,7 @@
 				"value": "{color.base.highlight.value}",
 				"type": "color",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

@@ -4,7 +4,7 @@
 			"gray": {
 				"value": "{color.lib.gray-9.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -13,7 +13,7 @@
 			"red": {
 				"value": "{color.lib.red-8.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -22,7 +22,7 @@
 			"pink": {
 				"value": "{color.lib.pink-4.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -31,7 +31,7 @@
 			"grape": {
 				"value": "{color.lib.purple-7.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -40,7 +40,7 @@
 			"violet": {
 				"value": "{color.lib.violet-8.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -49,7 +49,7 @@
 			"indigo": {
 				"value": "{color.lib.indigo-11.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -58,7 +58,7 @@
 			"blue": {
 				"value": "{color.lib.blue-7.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -67,7 +67,7 @@
 			"cyan": {
 				"value": "{color.lib.cyan-4.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -76,7 +76,7 @@
 			"teal": {
 				"value": "{color.lib.teal-5.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -85,7 +85,7 @@
 			"green": {
 				"value": "{color.lib.green-9.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -94,7 +94,7 @@
 			"lime": {
 				"value": "{color.lib.lime-7.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -103,7 +103,7 @@
 			"yellow": {
 				"value": "{color.lib.yellow-5.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -112,7 +112,7 @@
 			"orange": {
 				"value": "{color.lib.orange-7.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -121,7 +121,7 @@
 			"gray-0": {
 				"value": "oklch(0.9839 0.0025 228.78)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -130,7 +130,7 @@
 			"gray-1": {
 				"value": "oklch(0.9662 0.0034 247.86)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -139,7 +139,7 @@
 			"gray-2": {
 				"value": "oklch(0.9451 0.0034 247.86)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -148,7 +148,7 @@
 			"gray-3": {
 				"value": "oklch(0.9161 0.0045 214.33)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -157,7 +157,7 @@
 			"gray-4": {
 				"value": "oklch(0.8728 0.0061 223.46)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -166,7 +166,7 @@
 			"gray-5": {
 				"value": "oklch(0.7732 0.0071 233.67)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -175,7 +175,7 @@
 			"gray-6": {
 				"value": "oklch(0.6868 0.0055 228.86)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -184,7 +184,7 @@
 			"gray-7": {
 				"value": "oklch(0.6032 0.0048 197.03)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -193,7 +193,7 @@
 			"gray-8": {
 				"value": "oklch(0.5178 0.004 174.36)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -202,7 +202,7 @@
 			"gray-9": {
 				"value": "oklch(0.4333 0.0035 128.55)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -211,7 +211,7 @@
 			"gray-10": {
 				"value": "oklch(0.3474 0.0051 106.66)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -220,7 +220,7 @@
 			"gray-11": {
 				"value": "oklch(0.263 0.0073 106.89)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -229,7 +229,7 @@
 			"gray-12": {
 				"value": "oklch(0.1814 0.004 106.79)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -238,7 +238,7 @@
 			"red-0": {
 				"value": "oklch(0.9779 0.0107 17.34)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -247,7 +247,7 @@
 			"red-1": {
 				"value": "oklch(0.9387 0.0309 17.715)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -256,7 +256,7 @@
 			"red-2": {
 				"value": "oklch(0.8834 0.0616 18.387)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -265,7 +265,7 @@
 			"red-3": {
 				"value": "oklch(0.8169 0.1032 19.531)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -274,7 +274,7 @@
 			"red-4": {
 				"value": "oklch(0.7563 0.146 21.105)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -283,7 +283,7 @@
 			"red-5": {
 				"value": "oklch(0.7116 0.1812 22.839)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -292,7 +292,7 @@
 			"red-6": {
 				"value": "oklch(0.6706 0.2045 24.52)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -301,7 +301,7 @@
 			"red-7": {
 				"value": "oklch(0.6324 0.2144 25.841)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -310,7 +310,7 @@
 			"red-8": {
 				"value": "oklch(0.5928 0.2106 26.532)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -319,7 +319,7 @@
 			"red-9": {
 				"value": "oklch(0.5457 0.1949 26.614)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -328,7 +328,7 @@
 			"red-10": {
 				"value": "oklch(0.4957 0.1753 26.458)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -337,7 +337,7 @@
 			"red-11": {
 				"value": "oklch(0.4425 0.154 26.219)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -346,7 +346,7 @@
 			"red-12": {
 				"value": "oklch(0.3887 0.134 26.072)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -355,7 +355,7 @@
 			"pink-0": {
 				"value": "oklch(0.9686 0.0179 351.14)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -364,7 +364,7 @@
 			"pink-1": {
 				"value": "oklch(0.9315 0.04 352.16)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -373,7 +373,7 @@
 			"pink-2": {
 				"value": "oklch(0.8718 0.0712 355.09)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -382,7 +382,7 @@
 			"pink-3": {
 				"value": "oklch(0.808 0.1104 357.15)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -391,7 +391,7 @@
 			"pink-4": {
 				"value": "oklch(0.7496 0.1475 358.8)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -400,7 +400,7 @@
 			"pink-5": {
 				"value": "oklch(0.6924 0.1765 1.2501)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -409,7 +409,7 @@
 			"pink-6": {
 				"value": "oklch(0.6396 0.1968 3.1869)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -418,7 +418,7 @@
 			"pink-7": {
 				"value": "oklch(0.5881 0.201 5.2476)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -427,7 +427,7 @@
 			"pink-8": {
 				"value": "oklch(0.5389 0.1929 6.483)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -436,7 +436,7 @@
 			"pink-9": {
 				"value": "oklch(0.4797 0.1718 6.8306)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -445,7 +445,7 @@
 			"pink-10": {
 				"value": "oklch(0.4248 0.1507 6.3843)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -454,7 +454,7 @@
 			"pink-11": {
 				"value": "oklch(0.3711 0.129 5.5816)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -463,7 +463,7 @@
 			"pink-12": {
 				"value": "oklch(0.3124 0.106 4.6244)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -472,7 +472,7 @@
 			"purple-0": {
 				"value": "oklch(0.9648 0.018 314.74)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -481,7 +481,7 @@
 			"purple-1": {
 				"value": "oklch(0.9165 0.0521 319.03)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -490,7 +490,7 @@
 			"purple-2": {
 				"value": "oklch(0.863 0.0961 319.46)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -499,7 +499,7 @@
 			"purple-3": {
 				"value": "oklch(0.7904 0.1516 319.77)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -508,7 +508,7 @@
 			"purple-4": {
 				"value": "oklch(0.7252 0.1963 319.53)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -517,7 +517,7 @@
 			"purple-5": {
 				"value": "oklch(0.6695 0.2189 319.07)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -526,7 +526,7 @@
 			"purple-6": {
 				"value": "oklch(0.6239 0.2251 318.91)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -535,7 +535,7 @@
 			"purple-7": {
 				"value": "oklch(0.5783 0.2186 319.15)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -544,7 +544,7 @@
 			"purple-8": {
 				"value": "oklch(0.5333 0.2031 319)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -553,7 +553,7 @@
 			"purple-9": {
 				"value": "oklch(0.4783 0.181 318.86)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -562,7 +562,7 @@
 			"purple-10": {
 				"value": "oklch(0.421 0.1572 319.11)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -571,7 +571,7 @@
 			"purple-11": {
 				"value": "oklch(0.3625 0.1335 318.93)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -580,7 +580,7 @@
 			"purple-12": {
 				"value": "oklch(0.3021 0.106 319.2)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -589,7 +589,7 @@
 			"violet-0": {
 				"value": "oklch(0.9618 0.0202 295.19)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -598,7 +598,7 @@
 			"violet-1": {
 				"value": "oklch(0.9105 0.0497 298.11)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -607,7 +607,7 @@
 			"violet-2": {
 				"value": "oklch(0.8405 0.0899 296.6)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -616,7 +616,7 @@
 			"violet-3": {
 				"value": "oklch(0.7398 0.1444 294.45)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -625,7 +625,7 @@
 			"violet-4": {
 				"value": "oklch(0.6577 0.1905 292.12)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -634,7 +634,7 @@
 			"violet-5": {
 				"value": "oklch(0.6029 0.2175 289.69)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -643,7 +643,7 @@
 			"violet-6": {
 				"value": "oklch(0.5692 0.2289 288.56)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -652,7 +652,7 @@
 			"violet-7": {
 				"value": "oklch(0.5421 0.2268 287.8)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -661,7 +661,7 @@
 			"violet-8": {
 				"value": "oklch(0.512 0.2177 287.54)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -670,7 +670,7 @@
 			"violet-9": {
 				"value": "oklch(0.4812 0.1979 288.16)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -679,7 +679,7 @@
 			"violet-10": {
 				"value": "oklch(0.4361 0.1777 287.97)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -688,7 +688,7 @@
 			"violet-11": {
 				"value": "oklch(0.39 0.1556 288.51)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -697,7 +697,7 @@
 			"violet-12": {
 				"value": "oklch(0.3434 0.1339 288.98)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -706,7 +706,7 @@
 			"indigo-0": {
 				"value": "oklch(0.9612 0.0182 269.09)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -715,7 +715,7 @@
 			"indigo-1": {
 				"value": "oklch(0.9204 0.0381 270.98)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -724,7 +724,7 @@
 			"indigo-2": {
 				"value": "oklch(0.8411 0.0787 273.5)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -733,7 +733,7 @@
 			"indigo-3": {
 				"value": "oklch(0.7473 0.1296 272.27)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -742,7 +742,7 @@
 			"indigo-4": {
 				"value": "oklch(0.6799 0.1633 271.04)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -751,7 +751,7 @@
 			"indigo-5": {
 				"value": "oklch(0.628 0.1907 269.5)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -760,7 +760,7 @@
 			"indigo-6": {
 				"value": "oklch(0.5896 0.2054 268.62)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -769,7 +769,7 @@
 			"indigo-7": {
 				"value": "oklch(0.5566 0.2082 268.35)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -778,7 +778,7 @@
 			"indigo-8": {
 				"value": "oklch(0.5256 0.1988 268.04)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -787,7 +787,7 @@
 			"indigo-9": {
 				"value": "oklch(0.4841 0.1883 269.07)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -796,7 +796,7 @@
 			"indigo-10": {
 				"value": "oklch(0.4376 0.1689 269.4)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -805,7 +805,7 @@
 			"indigo-11": {
 				"value": "oklch(0.3927 0.149 269.56)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -814,7 +814,7 @@
 			"indigo-12": {
 				"value": "oklch(0.3455 0.1269 269.77)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -823,7 +823,7 @@
 			"blue-0": {
 				"value": "oklch(0.9627 0.02 238.66)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -832,7 +832,7 @@
 			"blue-1": {
 				"value": "oklch(0.9266 0.0395 240.01)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -841,7 +841,7 @@
 			"blue-2": {
 				"value": "oklch(0.8602 0.0759 241.66)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -850,7 +850,7 @@
 			"blue-3": {
 				"value": "oklch(0.782 0.1147 243.83)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -859,7 +859,7 @@
 			"blue-4": {
 				"value": "oklch(0.718 0.1422 246.06)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -868,7 +868,7 @@
 			"blue-5": {
 				"value": "oklch(0.6689 0.1575 248.32)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -877,7 +877,7 @@
 			"blue-6": {
 				"value": "oklch(0.6259 0.1641 250.29)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -886,7 +886,7 @@
 			"blue-7": {
 				"value": "oklch(0.5856 0.1591 251.26)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -895,7 +895,7 @@
 			"blue-8": {
 				"value": "oklch(0.5426 0.1485 251.67)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -904,7 +904,7 @@
 			"blue-9": {
 				"value": "oklch(0.4972 0.1334 251.59)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -913,7 +913,7 @@
 			"blue-10": {
 				"value": "oklch(0.4432 0.1167 251.19)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -922,7 +922,7 @@
 			"blue-11": {
 				"value": "oklch(0.3885 0.1005 251.3)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -931,7 +931,7 @@
 			"blue-12": {
 				"value": "oklch(0.3309 0.0824 250.66)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -940,7 +940,7 @@
 			"cyan-0": {
 				"value": "oklch(0.9689 0.0242 203.08)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -949,7 +949,7 @@
 			"cyan-1": {
 				"value": "oklch(0.9405 0.0502 202.5)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -958,7 +958,7 @@
 			"cyan-2": {
 				"value": "oklch(0.8856 0.0791 204.84)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -967,7 +967,7 @@
 			"cyan-3": {
 				"value": "oklch(0.8243 0.1058 206.82)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -976,7 +976,7 @@
 			"cyan-4": {
 				"value": "oklch(0.77 0.1186 207.56)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -985,7 +985,7 @@
 			"cyan-5": {
 				"value": "oklch(0.72 0.1193 211.22)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -994,7 +994,7 @@
 			"cyan-6": {
 				"value": "oklch(0.6777 0.1144 210.62)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1003,7 +1003,7 @@
 			"cyan-7": {
 				"value": "oklch(0.6249 0.1065 212.19)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1012,7 +1012,7 @@
 			"cyan-8": {
 				"value": "oklch(0.5675 0.0973 213.4)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1021,7 +1021,7 @@
 			"cyan-9": {
 				"value": "oklch(0.509 0.0875 215.07)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1030,7 +1030,7 @@
 			"cyan-10": {
 				"value": "oklch(0.4377 0.0743 214.34)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1039,7 +1039,7 @@
 			"cyan-11": {
 				"value": "oklch(0.3638 0.0611 214.76)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1048,7 +1048,7 @@
 			"cyan-12": {
 				"value": "oklch(0.2854 0.0465 213.38)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1057,7 +1057,7 @@
 			"teal-0": {
 				"value": "oklch(0.9731 0.0248 174.76)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1066,7 +1066,7 @@
 			"teal-1": {
 				"value": "oklch(0.9425 0.0608 172.92)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1075,7 +1075,7 @@
 			"teal-2": {
 				"value": "oklch(0.8959 0.0964 173.35)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1084,7 +1084,7 @@
 			"teal-3": {
 				"value": "oklch(0.8408 0.1298 170.11)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1093,7 +1093,7 @@
 			"teal-4": {
 				"value": "oklch(0.7926 0.1472 167.92)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1102,7 +1102,7 @@
 			"teal-5": {
 				"value": "oklch(0.7441 0.148 166.36)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1111,7 +1111,7 @@
 			"teal-6": {
 				"value": "oklch(0.6946 0.1435 164.88)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1120,7 +1120,7 @@
 			"teal-7": {
 				"value": "oklch(0.6432 0.1338 164.7)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1129,7 +1129,7 @@
 			"teal-8": {
 				"value": "oklch(0.5851 0.1227 164.1)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1138,7 +1138,7 @@
 			"teal-9": {
 				"value": "oklch(0.5292 0.1098 164.67)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1147,7 +1147,7 @@
 			"teal-10": {
 				"value": "oklch(0.453 0.0932 165.07)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1156,7 +1156,7 @@
 			"teal-11": {
 				"value": "oklch(0.3736 0.0755 165.63)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1165,7 +1165,7 @@
 			"teal-12": {
 				"value": "oklch(0.2863 0.0556 167.96)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1174,7 +1174,7 @@
 			"green-0": {
 				"value": "oklch(0.9727 0.024 151.19)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1183,7 +1183,7 @@
 			"green-1": {
 				"value": "oklch(0.9463 0.0591 148.83)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1192,7 +1192,7 @@
 			"green-2": {
 				"value": "oklch(0.9038 0.0987 148.43)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1201,7 +1201,7 @@
 			"green-3": {
 				"value": "oklch(0.8562 0.141 147.8)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1210,7 +1210,7 @@
 			"green-4": {
 				"value": "oklch(0.802 0.1684 147.32)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1219,7 +1219,7 @@
 			"green-5": {
 				"value": "oklch(0.7602 0.1832 146.61)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1228,7 +1228,7 @@
 			"green-6": {
 				"value": "oklch(0.7146 0.1835 146.44)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1237,7 +1237,7 @@
 			"green-7": {
 				"value": "oklch(0.6741 0.1775 146.24)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1246,7 +1246,7 @@
 			"green-8": {
 				"value": "oklch(0.6172 0.1624 146.43)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1255,7 +1255,7 @@
 			"green-9": {
 				"value": "oklch(0.5604 0.1427 146.89)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1264,7 +1264,7 @@
 			"green-10": {
 				"value": "oklch(0.483 0.1212 146.9)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1273,7 +1273,7 @@
 			"green-11": {
 				"value": "oklch(0.4055 0.099 147.2)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1282,7 +1282,7 @@
 			"green-12": {
 				"value": "oklch(0.3209 0.075 147.29)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1291,7 +1291,7 @@
 			"lime-0": {
 				"value": "oklch(0.9785 0.0338 121.48)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1300,7 +1300,7 @@
 			"lime-1": {
 				"value": "oklch(0.96 0.0675 122.93)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1309,7 +1309,7 @@
 			"lime-2": {
 				"value": "oklch(0.9299 0.1108 124.18)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1318,7 +1318,7 @@
 			"lime-3": {
 				"value": "oklch(0.8848 0.1535 125.92)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1327,7 +1327,7 @@
 			"lime-4": {
 				"value": "oklch(0.8474 0.1881 127.98)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1336,7 +1336,7 @@
 			"lime-5": {
 				"value": "oklch(0.8071 0.2021 129.8)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1345,7 +1345,7 @@
 			"lime-6": {
 				"value": "oklch(0.76 0.1996 131.08)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1354,7 +1354,7 @@
 			"lime-7": {
 				"value": "oklch(0.7099 0.1897 131.53)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1363,7 +1363,7 @@
 			"lime-8": {
 				"value": "oklch(0.6616 0.1803 132.25)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1372,7 +1372,7 @@
 			"lime-9": {
 				"value": "oklch(0.6043 0.1625 131.55)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1381,7 +1381,7 @@
 			"lime-10": {
 				"value": "oklch(0.5261 0.14 131.31)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1390,7 +1390,7 @@
 			"lime-11": {
 				"value": "oklch(0.4476 0.1177 131.23)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1399,7 +1399,7 @@
 			"lime-12": {
 				"value": "oklch(0.3626 0.0935 130.65)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1408,7 +1408,7 @@
 			"yellow-0": {
 				"value": "oklch(0.979 0.0396 97.757)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1417,7 +1417,7 @@
 			"yellow-1": {
 				"value": "oklch(0.961 0.0679 96.59)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1426,7 +1426,7 @@
 			"yellow-2": {
 				"value": "oklch(0.9402 0.1049 96.835)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1435,7 +1435,7 @@
 			"yellow-3": {
 				"value": "oklch(0.9097 0.144 95.112)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1444,7 +1444,7 @@
 			"yellow-4": {
 				"value": "oklch(0.8826 0.1648 92.222)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1453,7 +1453,7 @@
 			"yellow-5": {
 				"value": "oklch(0.8471 0.1693 87.124)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1462,7 +1462,7 @@
 			"yellow-6": {
 				"value": "oklch(0.8069 0.1674 78.121)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1471,7 +1471,7 @@
 			"yellow-7": {
 				"value": "oklch(0.7702 0.1658 71.022)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1480,7 +1480,7 @@
 			"yellow-8": {
 				"value": "oklch(0.7311 0.1673 62.62)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1489,7 +1489,7 @@
 			"yellow-9": {
 				"value": "oklch(0.6835 0.1693 54.965)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1498,7 +1498,7 @@
 			"yellow-10": {
 				"value": "oklch(0.5679 0.1399 55.455)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1507,7 +1507,7 @@
 			"yellow-11": {
 				"value": "oklch(0.4479 0.1082 57.163)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1516,7 +1516,7 @@
 			"yellow-12": {
 				"value": "oklch(0.3841 0.0911 58.927)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1525,7 +1525,7 @@
 			"orange-0": {
 				"value": "oklch(0.972 0.022 74.101)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1534,7 +1534,7 @@
 			"orange-1": {
 				"value": "oklch(0.9424 0.0446 72.675)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1543,7 +1543,7 @@
 			"orange-2": {
 				"value": "oklch(0.9039 0.0758 72.415)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1552,7 +1552,7 @@
 			"orange-3": {
 				"value": "oklch(0.8503 0.1149 68.951)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1561,7 +1561,7 @@
 			"orange-4": {
 				"value": "oklch(0.8034 0.1461 64.595)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1570,7 +1570,7 @@
 			"orange-5": {
 				"value": "oklch(0.7616 0.1686 57.801)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1579,7 +1579,7 @@
 			"orange-6": {
 				"value": "oklch(0.7265 0.1832 51.48)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1588,7 +1588,7 @@
 			"orange-7": {
 				"value": "oklch(0.6851 0.1954 44.574)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1597,7 +1597,7 @@
 			"orange-8": {
 				"value": "oklch(0.6442 0.1916 41.687)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1606,7 +1606,7 @@
 			"orange-9": {
 				"value": "oklch(0.5999 0.1905 37.88)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1615,7 +1615,7 @@
 			"orange-10": {
 				"value": "oklch(0.5472 0.1716 38.292)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1624,7 +1624,7 @@
 			"orange-11": {
 				"value": "oklch(0.4664 0.144 38.431)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1633,7 +1633,7 @@
 			"orange-12": {
 				"value": "oklch(0.412 0.1246 38.964)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1642,7 +1642,7 @@
 			"choco-0": {
 				"value": "oklch(0.9773 0.0373 95.439)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1651,7 +1651,7 @@
 			"choco-1": {
 				"value": "oklch(0.9227 0.0568 75.628)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1660,7 +1660,7 @@
 			"choco-2": {
 				"value": "oklch(0.8677 0.077 65.882)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1669,7 +1669,7 @@
 			"choco-3": {
 				"value": "oklch(0.811 0.0984 59.234)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1678,7 +1678,7 @@
 			"choco-4": {
 				"value": "oklch(0.7555 0.1187 55.965)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1687,7 +1687,7 @@
 			"choco-5": {
 				"value": "oklch(0.7012 0.1357 53.792)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1696,7 +1696,7 @@
 			"choco-6": {
 				"value": "oklch(0.6455 0.1516 51.174)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1705,7 +1705,7 @@
 			"choco-7": {
 				"value": "oklch(0.5883 0.1422 50.732)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1714,7 +1714,7 @@
 			"choco-8": {
 				"value": "oklch(0.5287 0.1281 50.11)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1723,7 +1723,7 @@
 			"choco-9": {
 				"value": "oklch(0.4693 0.1111 51.224)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1732,7 +1732,7 @@
 			"choco-10": {
 				"value": "oklch(0.4102 0.0913 52.346)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1741,7 +1741,7 @@
 			"choco-11": {
 				"value": "oklch(0.3507 0.0715 53.66)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1750,7 +1750,7 @@
 			"choco-12": {
 				"value": "oklch(0.2805 0.0533 54.072)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1759,7 +1759,7 @@
 			"brown-0": {
 				"value": "oklch(0.9693 0.0136 78.264)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1768,7 +1768,7 @@
 			"brown-1": {
 				"value": "oklch(0.913 0.0247 71.456)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1777,7 +1777,7 @@
 			"brown-2": {
 				"value": "oklch(0.8522 0.0358 63.156)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1786,7 +1786,7 @@
 			"brown-3": {
 				"value": "oklch(0.797 0.047 63.843)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1795,7 +1795,7 @@
 			"brown-4": {
 				"value": "oklch(0.7364 0.0577 61.382)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1804,7 +1804,7 @@
 			"brown-5": {
 				"value": "oklch(0.6794 0.0677 61.671)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1813,7 +1813,7 @@
 			"brown-6": {
 				"value": "oklch(0.6209 0.0761 61.54)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1822,7 +1822,7 @@
 			"brown-7": {
 				"value": "oklch(0.5625 0.0739 61.067)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1831,7 +1831,7 @@
 			"brown-8": {
 				"value": "oklch(0.5049 0.0699 60.487)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1840,7 +1840,7 @@
 			"brown-9": {
 				"value": "oklch(0.4458 0.0658 59.75)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1849,7 +1849,7 @@
 			"brown-10": {
 				"value": "oklch(0.3855 0.0636 54.415)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1858,7 +1858,7 @@
 			"brown-11": {
 				"value": "oklch(0.3292 0.062 51.226)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1867,7 +1867,7 @@
 			"brown-12": {
 				"value": "oklch(0.2956 0.0541 50.37)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1876,7 +1876,7 @@
 			"sand-0": {
 				"value": "oklch(0.9839 0.0025 228.78)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1885,7 +1885,7 @@
 			"sand-1": {
 				"value": "oklch(0.9182 0.0109 95.172)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1894,7 +1894,7 @@
 			"sand-2": {
 				"value": "oklch(0.8544 0.0253 91.64)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1903,7 +1903,7 @@
 			"sand-3": {
 				"value": "oklch(0.7865 0.0358 90.547)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1912,7 +1912,7 @@
 			"sand-4": {
 				"value": "oklch(0.7228 0.0364 90.564)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1921,7 +1921,7 @@
 			"sand-5": {
 				"value": "oklch(0.6576 0.0371 90.58)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1930,7 +1930,7 @@
 			"sand-6": {
 				"value": "oklch(0.5889 0.0357 87.292)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1939,7 +1939,7 @@
 			"sand-7": {
 				"value": "oklch(0.5262 0.0361 89.189)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1948,7 +1948,7 @@
 			"sand-8": {
 				"value": "oklch(0.4594 0.0284 85.754)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1957,7 +1957,7 @@
 			"sand-9": {
 				"value": "oklch(0.3951 0.0221 89.486)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1966,7 +1966,7 @@
 			"sand-10": {
 				"value": "oklch(0.3294 0.0143 89.881)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1975,7 +1975,7 @@
 			"sand-11": {
 				"value": "oklch(0.263 0.0073 106.89)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1984,7 +1984,7 @@
 			"sand-12": {
 				"value": "oklch(0.1814 0.004 106.79)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -1993,7 +1993,7 @@
 			"camo-0": {
 				"value": "oklch(0.9812 0.0263 111.51)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2002,7 +2002,7 @@
 			"camo-1": {
 				"value": "oklch(0.9239 0.1026 111.24)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2011,7 +2011,7 @@
 			"camo-2": {
 				"value": "oklch(0.8674 0.1653 114.24)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2020,7 +2020,7 @@
 			"camo-3": {
 				"value": "oklch(0.8159 0.1678 114.07)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2029,7 +2029,7 @@
 			"camo-4": {
 				"value": "oklch(0.7631 0.1549 112.05)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2038,7 +2038,7 @@
 			"camo-5": {
 				"value": "oklch(0.7085 0.1427 110.01)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2047,7 +2047,7 @@
 			"camo-6": {
 				"value": "oklch(0.6553 0.1309 107.99)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2056,7 +2056,7 @@
 			"camo-7": {
 				"value": "oklch(0.6044 0.1193 105.44)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2065,7 +2065,7 @@
 			"camo-8": {
 				"value": "oklch(0.5515 0.1083 102.9)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2074,7 +2074,7 @@
 			"camo-9": {
 				"value": "oklch(0.4969 0.0962 102.59)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2083,7 +2083,7 @@
 			"camo-10": {
 				"value": "oklch(0.4417 0.0841 101.29)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2092,7 +2092,7 @@
 			"camo-11": {
 				"value": "oklch(0.3898 0.0734 101.94)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2101,7 +2101,7 @@
 			"camo-12": {
 				"value": "oklch(0.307 0.0549 100.15)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2110,7 +2110,7 @@
 			"jungle-0": {
 				"value": "oklch(0.9656 0.101 118.9)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2119,7 +2119,7 @@
 			"jungle-1": {
 				"value": "oklch(0.9286 0.1149 119.51)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2128,7 +2128,7 @@
 			"jungle-2": {
 				"value": "oklch(0.8915 0.1283 120.12)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2137,7 +2137,7 @@
 			"jungle-3": {
 				"value": "oklch(0.8543 0.1409 120.76)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2146,7 +2146,7 @@
 			"jungle-4": {
 				"value": "oklch(0.816 0.1478 120.94)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2155,7 +2155,7 @@
 			"jungle-5": {
 				"value": "oklch(0.7798 0.1547 121.51)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2164,7 +2164,7 @@
 			"jungle-6": {
 				"value": "oklch(0.7435 0.1593 122.22)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2173,7 +2173,7 @@
 			"jungle-7": {
 				"value": "oklch(0.708 0.1615 122.7)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2182,7 +2182,7 @@
 			"jungle-8": {
 				"value": "oklch(0.673 0.1604 123.03)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2191,7 +2191,7 @@
 			"jungle-9": {
 				"value": "oklch(0.6363 0.154 122.96)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2200,7 +2200,7 @@
 			"jungle-10": {
 				"value": "oklch(0.5584 0.1354 123.25)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2209,7 +2209,7 @@
 			"jungle-11": {
 				"value": "oklch(0.4759 0.1142 122.73)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -2218,7 +2218,7 @@
 			"jungle-12": {
 				"value": "oklch(0.3924 0.0931 122.48)",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

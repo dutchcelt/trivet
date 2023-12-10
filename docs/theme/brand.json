@@ -4,7 +4,7 @@
 			"brand": {
 				"value": "{color.lib.orange-9}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -13,7 +13,7 @@
 			"logo": {
 				"value": "{color.lib.orange-9}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -22,7 +22,7 @@
 			"primary": {
 				"value": "{color.lib.orange-9}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -31,7 +31,7 @@
 			"primary-inverted": {
 				"value": "{color.lib.indigo-3.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -40,7 +40,7 @@
 			"secondary": {
 				"value": "{color.base.canvastext.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -49,7 +49,7 @@
 			"secondary-inverted": {
 				"value": "{color.base.canvas.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -58,7 +58,7 @@
 			"tertiary": {
 				"value": "{color.base.canvastext.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -67,7 +67,7 @@
 			"tertiary-inverted": {
 				"value": "{color.base.canvas.value}",
 				"$extensions": {
-					"www.css.property.rule": {
+					"css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
