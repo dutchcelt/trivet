@@ -38,12 +38,12 @@ export class TrvtLayout extends TrivetElement {
 		this.#render(this.shadowFragment);
 	}
 
-	connectedCallback() {}
+	connectedCallback() { }
 
 	/**
 	 * Get the main (ie default) slot or if not available the first available slot.
+	 * @param {string} name
 	 * @returns {Element}
-	 * @private
 	 */
 	#defaultSlot(name = 'main') {
 		const slotAttribute = this.slotNames.includes(name)
@@ -54,7 +54,7 @@ export class TrvtLayout extends TrivetElement {
 
 	/**
 	 * Render out the slots template to the custom element
-	 * @returns {string}
+	 * @param {HTMLElement} element
 	 */
 	#render(element) {
 		if (element) {
@@ -68,7 +68,6 @@ export class TrvtLayout extends TrivetElement {
 	/**
 	 * Assemble the slots called from the markup
 	 * @returns {string}
-	 * @private
 	 */
 	#template() {
 		return this.slotNames
@@ -79,7 +78,6 @@ export class TrvtLayout extends TrivetElement {
 	/**
 	 * Each slot has a wrapper to avoid styling the slots directly.
 	 * @returns {{navigation: string, footer: string, sidebar: string, header: string, main: string, notifications: string}}
-	 * @private
 	 */
 	#slotMarkupObject() {
 		return {
