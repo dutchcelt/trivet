@@ -4,7 +4,7 @@
 
 export default {
 	// whether to open the browser and/or the browser path to open on
-	//open: 'docs/dist/index.html',
+	open: 'webcomponents/index.html',
 
 	// index HTML to use for SPA routing / history API fallback
 	// appIndex: './docs/src/index.html',
@@ -46,7 +46,7 @@ export default {
 	protocol: 'https',
 
 	// hostname?: string,
-	port: 9009,
+	port: 9090,
 
 	// whether to run the server with HTTP2
 	http2: true,

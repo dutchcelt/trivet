@@ -83,9 +83,6 @@
 	a:link {
 		color: var(--trvt-color-typography-anchor);
 	}
-	a:visited {
-		color: var(--trvt-color-typography-anchor-visited);
-	}
 	a:hover {
 		color: var(--trvt-color-typography-anchor-hover);
 	}
@@ -94,5 +91,8 @@
 	}
 	a:focus {
 		color: var(--trvt-color-typography-anchor);
+	}
+	a:visited {
+		color: var(--trvt-color-typography-anchor-visited);
 	}
 }

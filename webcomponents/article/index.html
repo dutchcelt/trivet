@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>Article</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=yes, initial-scale=1"
+		/>
+		<link rel="stylesheet" href="../index.css" />
+		<script type="esms-options">
+			{
+			  "polyfillEnable": ["css-modules", "json-modules"],
+			  "noLoadEventRetriggers": true
+			}
+		</script>
+		<script async src="../../docs/scripts/es-module-shims.js"></script>
+
+		<script type="module">
+			import './src/article.js';
+		</script>
+	</head>
+	<body class="reference">
+		<header>
+			<p>Trivet Web Component</p>
+			<h1>&lt;trvt-article&gt;</h1>
+		</header>
+		<main>
+			<trvt-article>
+				<h2 slot="heading">Heading 2</h2>
+				<p slot="intro">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Possimus alias voluptas ratione repellat non impedit quo
+					voluptates est laborum. Sequi sapiente natus quam
+					repudiandae dicta labore a quidem, itaque molestias.
+				</p>
+				<div slot="content">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Necessitatibus dolores eligendi facere, illo deserunt
+						quo neque reprehenderit animi? Molestias temporibus
+						incidunt inventore officia, dolorum exercitationem
+						nesciunt doloribus sequi reiciendis itaque!
+					</p>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Aliquid non enim ipsum adipisci doloremque facere
+						ab. Placeat quia illo quos itaque vero odit quis
+						blanditiis quidem odio, ad distinctio quam!
+					</p>
+				</div>
+				<nav slot="footer">
+					<a href="https://dutchcelt.nl">home</a>
+					<a href="https://test.nl">nos</a>
+				</nav>
+			</trvt-article>
+		</main>
+	</body>
+</html>

@@ -35,7 +35,7 @@ class TrivetElement extends HTMLElement {
 	 * @returns {HTMLElement}
 	 */
 	get shadowFragment() {
-		return this.#shadowRoot.querySelector('*');
+		return this.shadow.querySelector('*');
 	}
 	/**
 	 * Get shadowStyleSheets
@@ -50,7 +50,12 @@ class TrivetElement extends HTMLElement {
 	 */
 	set shadowStyleSheets(styles) {
 		const sheets = [styles].flat();
-		this.#shadowRoot.adoptedStyleSheets.push(...sheets);
+		for (const ss of sheets) {
+			const shadowSheets = this.shadow.adoptedStyleSheets;
+			if (!shadowSheets.includes(ss)) {
+				this.shadow.adoptedStyleSheets = [...shadowSheets, ss];
+			}
+		}
 	}
 
 	/**
@@ -80,7 +85,6 @@ class TrivetElement extends HTMLElement {
 
 		this.#shadowRoot = this.attachShadow(this.settings);
 		this.shadowStyleSheets = [...trivetCSS];
-
 		this.#template = undefined;
 	}
 }

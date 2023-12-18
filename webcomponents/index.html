@@ -2,71 +2,26 @@
 <html lang="en" dir="ltr">
 	<head>
 		<title>Trivet. A white label component system.</title>
-		<meta
-			name="description"
-			content="Trivet is a system for the styling and consistant formating of opiniated content."
-		/>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, user-scalable=yes, initial-scale=1"
-		/>
-		<meta
-			name="theme-color"
-			content="orangered"
-			media="(prefers-color-scheme: dark)"
-		/>
-		<meta
-			name="theme-color"
-			content="orangered"
-			media="(prefers-color-scheme: light)"
-		/>
-
-		<link href="/theme-770027967.css" rel="stylesheet" />
-
-		<script type="esms-options">
-			{
-			  "polyfillEnable": ["css-modules", "json-modules"],
-			  "noLoadEventRetriggers": true
-			}
-		</script>
-		<script async src="scripts/es-module-shims.js"></script>
-		<!-- <script type="importmap">
-			{
-				"imports": {
-					"@trvt/article": "/@trvt/article/index.js",
-					"@trvt/assets": "/@trvt/assets/index.js",
-					"@trvt/button": "/@trvt/button/index.js",
-					"@trvt/card": "/@trvt/card/index.js",
-					"@trvt/contenttoggle": "/@trvt/contenttoggle/index.js",
-					"@trvt/core": "/@trvt/core/index.js",
-					"@trvt/datatable": "/@trvt/datatable/index.js",
-					"@trvt/dragscroller": "/@trvt/dragscroller/index.js",
-					"@trvt/header": "/@trvt/header/index.js",
-					"@trvt/layout": "/@trvt/layout/index.js",
-					"@trvt/lists": "/@trvt/lists/index.js"
-				}
-			}
-		</script>
-		<script type="module">
-			import '@trvt/article';
-			import '@trvt/assets';
-			import '@trvt/button';
-			import '@trvt/card';
-			import '@trvt/contenttoggle';
-			import '@trvt/core';
-			import '@trvt/datatable';
-			import '@trvt/dragscroller';
-			import '@trvt/header';
-			import '@trvt/layout';
-			import '@trvt/lists';
-		</script> -->
-		<script type="module">
-			import './webcomponents/dutchceltlogo.js';
-			// import './webcomponents/swatch.js';
-			import { activateColorScheme } from '@trvt/core';
-			activateColorScheme();
-		</script>
+		<link rel="stylesheet" href="index.css" />
 	</head>
-	<body></body>
+	<body class="reference index">
+		<header>
+			<p>A white label component system</p>
+			<h1>The Trivet Index</h1>
+		</header>
+		<aside></aside>
+		<main>
+			<h2>Released</h2>
+			<details>
+				<summary><a href="article/">Article</a></summary>
+			</details>
+			<details>
+				<summary><a href="button/">Button</a></summary>
+			</details>
+			<h3>Pending</h3>
+			<details>
+				<summary><a href="layout/">Layout</a></summary>
+			</details>
+		</main>
+	</body>
 </html>

@@ -14,6 +14,7 @@
 		"build:docs": "npm -w @trvt/docs run build:all --silent",
 		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
+		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
 		"server": "npx wds -c configs/web-dev-server.config.js",
 		"lint": "npm run lint:eslint && npm run lint:prettier",
 		"test": "npx wtr ./webcomponents/**/*.test.js --node-resolve",

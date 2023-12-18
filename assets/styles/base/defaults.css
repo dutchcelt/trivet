@@ -6,13 +6,12 @@
 	}
 	html {
 		box-sizing: border-box;
-		font-size: 100%;
-		font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-			Cantarell, Noto Sans, sans-serif;
+		font-size: 112.5%; /* 112.5% => 18px */
+		font-family: system-ui, sans-serif;
 		line-height: 1.5;
 		font-size: initial;
 		font-weight: normal;
-		-webkit-text-size-adjust: 100%;
+		color-scheme: dark light;
 	}
 	body {
 		margin: 0;
@@ -122,6 +121,20 @@
 	@media (prefers-reduced-motion: no-preference) {
 		html:focus-within {
 			scroll-behavior: smooth;
+		}
+	}
+
+	/* Web Components Avoiding FOUC 
+	 * with `content-visibility`
+	 */
+	@supports (content-visibility: hidden) {
+		body:has(:not(:defined)) {
+			content-visibility: hidden;
+		}
+	}
+	@supports not (content-visibility: hidden) {
+		body:has(:not(:defined)) {
+			visibility: hidden;
 		}
 	}
 }
