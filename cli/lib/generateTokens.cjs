@@ -32,7 +32,7 @@ const defaultsPath = path.join(__dirname, 'defaults.cjs');
 const defaults = require(defaultsPath);
 
 /**
- * @typedef {Object} Options
+ * @typedef {Object} ConfigOptions
  * @property {string} buildPath
  * @property {boolean} minify
  * @property {string} layer
@@ -42,7 +42,7 @@ const defaults = require(defaultsPath);
  * Processes each token file.
  *
  * @param {Object} tokenConfig
- * @param {Options} tokenConfig.options
+ * @param {ConfigOptions} tokenConfig.options
  * @param {string} tokenConfig.destination
  */
 function processTokenFile(tokenConfig) {
@@ -53,7 +53,7 @@ function processTokenFile(tokenConfig) {
 /**
  * Gets content from file.
  *
- * @param {Options} options
+ * @param {ConfigOptions} options
  * @param {string} destination
  */
 function getFileContent(options, destination) {

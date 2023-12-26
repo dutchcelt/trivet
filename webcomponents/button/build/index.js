@@ -39,7 +39,7 @@ const r = t => ' ' === t.key || 'Enter' === t.key,
 			}
 			constructor(...t) {
 				super(...t),
-					this.addEventListener('click', t => this.#t()),
+					this.addEventListener('click', () => this.#t()),
 					this.addEventListener('mousedown', this.#e),
 					this.addEventListener('keydown', this.#i),
 					this.addEventListener('keyup', this.#s);
