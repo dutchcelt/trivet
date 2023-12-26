@@ -59,7 +59,7 @@ const EventMixin = superClass =>
 
 		constructor(...args) {
 			super(...args);
-			this.addEventListener('click', event => this.#clickHandler());
+			this.addEventListener('click', () => this.#clickHandler());
 			this.addEventListener('mousedown', this.#mousedownHandler);
 			this.addEventListener('keydown', this.#keydownHandler);
 			this.addEventListener('keyup', this.#keyupHandler);

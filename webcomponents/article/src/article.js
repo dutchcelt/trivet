@@ -1,6 +1,10 @@
 import { TrivetElement } from '@trvt/core';
 import articleCSS from './article.css' assert { type: 'css' };
 
+/**
+ * contentTemplate
+ * @type {string}
+ */
 const contentTemplate = `
 	<article>
 		<slot name="heading"></slot>

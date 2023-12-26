@@ -1,47 +1,68 @@
 const fs = require('fs');
 const StyleDictionary = require('style-dictionary');
 const path = require('path');
-const { transform } = require('lightningcss');
+const {transform} = require('lightningcss');
 
+/**
+ * Registers an action called 'trivet' with the Style Dictionary.
+ * @see {StyleDictionary}
+ */
 StyleDictionary.registerAction({
 	name: 'trivet',
-	do: function(...args) {
-		const config = { args };
-		const files = config.args?.[1]?.files || [];
-		for (const tokenConfig of files) {
-			getFileContent(tokenConfig);
-		}
+	do: function (...args) {
+		const config = {args};
+		const tokenFiles = config.args?.[1]?.files || [];
+		tokenFiles.forEach(processTokenFile);
 	},
-	undo: function() {
+	undo: function () {
 		// No Undo. Lets live on the edge!
 	},
 });
 
+const tokenConfigPath = path.join(__dirname, 'tokenConfig.cjs');
 /**
  * @typedef {import('./defaults.cjs').Defaults} Defaults
+ * @type {Defaults}
  */
-
-const tokenConfig = require(path.join(__dirname, 'tokenConfig.cjs'));
+const tokenConfig = require(tokenConfigPath);
+const defaultsPath = path.join(__dirname, 'defaults.cjs');
 /**
  * @type {Defaults}
  */
-const defaults = require(path.join(__dirname, 'defaults.cjs'));
+const defaults = require(defaultsPath);
 
 /**
- * getFileContent
- * @param {Object} tokenConfig
+ * @typedef {Object} Options
+ * @property {string} buildPath
+ * @property {boolean} minify
+ * @property {string} layer
  */
-const getFileContent = tokenConfig => {
-	const { options } = tokenConfig;
-	const { buildPath, minify, layer } = options;
-	const { destination } = tokenConfig;
-	const file = path.join(buildPath, destination);
 
-	const data = fs.readFileSync(file, { encoding: 'utf8' });
-	const transformedData =
-		layer === '' ? `${data}\n` : `@layer ${layer} {\n${data}\n}\n`;
-	let cssString = '';
+/**
+ * Processes each token file.
+ *
+ * @param {Object} tokenConfig
+ * @param {Options} tokenConfig.options
+ * @param {string} tokenConfig.destination
+ */
+function processTokenFile(tokenConfig) {
+	const {options, destination} = tokenConfig;
+	getFileContent(options, destination);
+}
 
+/**
+ * Gets content from file.
+ *
+ * @param {Options} options
+ * @param {string} destination
+ */
+function getFileContent(options, destination) {
+	const {buildPath, minify, layer} = options;
+	const filePath = path.join(buildPath, destination);
+	const fileData = fs.readFileSync(filePath, {encoding: 'utf8'});
+	let transformedData =
+		layer === '' ? `${fileData}\n` : `@layer ${layer} {\n${fileData}\n}\n`;
+	let cssString;
 	if (minify) {
 		cssString = transform({
 			filename: `${destination}`,
@@ -51,18 +72,17 @@ const getFileContent = tokenConfig => {
 			sourceMap: false,
 		}).code.toString();
 	}
-	fs.writeFileSync(file, cssString || transformedData);
-};
+	fs.writeFileSync(filePath, cssString || transformedData);
+}
 
 /**
- * module.exports
- * @param {Defaults} options - All the default values
+ * Exports a function that extends the Style Dictionary with user options.
+ *
+ * @param {Defaults} userOptions
  */
-module.exports = options => {
-	/**
-	 * @type {Defaults}
-	 */
-	const opts = Object.assign(defaults, options);
-	const styledictionary = StyleDictionary.extend(tokenConfig(opts));
-	styledictionary.buildAllPlatforms();
+module.exports = userOptions => {
+	const opts = Object.assign(defaults, userOptions);
+	// @ts-ignore
+	const styleDictionary = StyleDictionary.extend(tokenConfig(opts));
+	styleDictionary.buildAllPlatforms();
 };

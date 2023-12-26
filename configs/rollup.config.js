@@ -20,7 +20,8 @@ const banner =
 log(chalk.blueBright.bold(`\n\n${banner}`));
 
 if (isWebcomponent && fs.existsSync(buildfolder)) {
-	fs.rm(buildfolder, { recursive: true, force: true }, () => { });
+	// @ts-ignore
+	fs.rm(buildfolder, { recursive: true, force: true }, () => {});
 }
 
 const compressStylesFunc = css => {
@@ -30,6 +31,7 @@ const compressStylesFunc = css => {
 		minify: true,
 		errorRecovery: true,
 		sourceMap: false,
+		filename: '',
 	}).code.toString();
 };
 
@@ -40,7 +42,7 @@ export default [
 			format: 'esm',
 			dir: 'build',
 		},
-		external: ['fs', 'path', 'lightningcss'],
+
 		plugins: [
 			css({
 				transform: compressStylesFunc,
@@ -48,6 +50,9 @@ export default [
 			terser(),
 		],
 		external: [
+			'fs',
+			'path',
+			'lightningcss',
 			'@trvt/layout',
 			'@trvt/button',
 			'@trvt/cli',

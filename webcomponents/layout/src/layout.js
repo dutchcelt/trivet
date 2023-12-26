@@ -38,7 +38,7 @@ export class TrvtLayout extends TrivetElement {
 		this.#render(this.shadowFragment);
 	}
 
-	connectedCallback() { }
+	connectedCallback() {}
 
 	/**
 	 * Get the main (ie default) slot or if not available the first available slot.

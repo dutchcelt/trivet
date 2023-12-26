@@ -15,8 +15,9 @@ const getFileContent = file => {
 	const data = fs.readFileSync(file, { encoding: 'utf8' });
 	/* The only stylesheet with 1 statement is the layer definition file */
 	const isLayerDefintionFile = data.toString().match(/;/g).length === 1;
-	const transformedData = `${isLayerDefintionFile ? '/* Import the hashed files */\n' : ''
-		}@import url('${path.basename(file)}');\n`;
+	const transformedData = `${
+		isLayerDefintionFile ? '/* Import the hashed files */\n' : ''
+	}@import url('${path.basename(file)}');\n`;
 	if (isLayerDefintionFile) {
 		prependFile.sync(bundleFile, `/* Bundle of hashed files */\n${data}\n`);
 		prependFile.sync(importerFile, transformedData);

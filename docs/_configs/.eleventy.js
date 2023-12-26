@@ -38,7 +38,7 @@ const moduleImporter = deps => {
 	return str;
 };
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('fonts');
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('webcomponents');
@@ -46,7 +46,7 @@ module.exports = function(eleventyConfig) {
 
 	isDevelopmentMode || copyImports(eleventyConfig, importArr);
 
-	eleventyConfig.addShortcode('stylesheet', async function() {
+	eleventyConfig.addShortcode('stylesheet', async function () {
 		const { writeCSS } = await writeCSSImport;
 
 		const trivetPath = path.resolve('..', 'assets', 'build', 'importer.css');
@@ -62,7 +62,7 @@ module.exports = function(eleventyConfig) {
 		return temp;
 	});
 
-	eleventyConfig.addShortcode('importmap', function() {
+	eleventyConfig.addShortcode('importmap', function () {
 		const temp = `
 				<script type="importmap">
 					{
@@ -72,7 +72,7 @@ module.exports = function(eleventyConfig) {
 			`.trim();
 		return temp;
 	});
-	eleventyConfig.addShortcode('importmodules', function() {
+	eleventyConfig.addShortcode('importmodules', function () {
 		const temp = `
 				<script type="module">
 					${moduleImporter(importArr)}
