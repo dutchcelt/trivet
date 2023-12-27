@@ -44,7 +44,7 @@
 		/* Layout Type Properties */
 
 		/* Overrides - tablet-desktop */
-		@container (min-width: 680px) {
+		@container (width >= 680px) {
 			.trvt-layout {
 				--_layout-row-gap: var(--trvt-layout-row-gap, 2rem);
 				--_layout-column-gap: var(--trvt-layout-column-gap, 2rem);
@@ -93,11 +93,11 @@
 			}
 		}
 
-		@container (max-width: 680px) {
+		@container (width < 680px) {
 			.trvt-layout {
 				--_template--columns: 1fr;
 				--_template--areas: 'notification' 'navigation' 'header' 'main'
-					'footer';
+					'sidebar' 'footer';
 				--_layout-column-gap: var(--trvt-layout-column-gap, 2rem);
 			}
 		}

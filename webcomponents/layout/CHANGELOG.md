@@ -1,5 +1,11 @@
 # @trvt/layout
 
+## 0.8.9
+
+### Patch Changes
+
+- Mobile view layout bug
+
 ## 0.8.8
 
 ### Patch Changes

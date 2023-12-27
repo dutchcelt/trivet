@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/layout",
-	"version": "0.8.8",
+	"version": "0.8.9",
 	"description": "Layout component for the Trivet Design System",
 	"type": "modules",
 	"main": "index.js",
