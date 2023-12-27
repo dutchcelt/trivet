@@ -1,5 +1,13 @@
 # @trvt/dropdown
 
+## 0.6.5
+
+### Patch Changes
+
+- Minor bug fixes
+- Updated dependencies
+  - @trvt/core@0.9.7
+
 ## 0.6.4
 
 ### Patch Changes

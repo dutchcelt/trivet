@@ -1,5 +1,13 @@
 # @trvt/article
 
+## 0.7.3
+
+### Patch Changes
+
+- Minor bug fixes
+- Updated dependencies
+  - @trvt/core@0.9.7
+
 ## 0.7.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.8.4
+
+### Patch Changes
+
+- Minor bug fixes
+
 ## 0.8.3
 
 ### Patch Changes

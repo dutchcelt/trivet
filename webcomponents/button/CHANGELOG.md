@@ -1,5 +1,13 @@
 # @trvt/button
 
+## 0.10.4
+
+### Patch Changes
+
+- Minor bug fixes
+- Updated dependencies
+  - @trvt/core@0.9.7
+
 ## 0.10.3
 
 ### Patch Changes

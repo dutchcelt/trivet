@@ -1,5 +1,13 @@
 # @trvt/header
 
+## 0.8.5
+
+### Patch Changes
+
+- Minor bug fixes
+- Updated dependencies
+  - @trvt/core@0.9.7
+
 ## 0.8.4
 
 ### Patch Changes
