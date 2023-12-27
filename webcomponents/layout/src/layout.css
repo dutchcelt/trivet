@@ -13,7 +13,8 @@
 			--_layout-column-gap: var(--trvt-layout-column-gap, 0.5rem);
 
 			--_template--columns: 1fr;
-			--_template--areas: 'navigation' 'header' 'main' 'sidebar' 'footer' 'notification';
+			--_template--areas: 'navigation' 'header' 'main' 'sidebar' 'footer'
+				'notification';
 		}
 
 		/* Layout Slot Properties */
@@ -43,7 +44,7 @@
 		/* Layout Type Properties */
 
 		/* Overrides - tablet-desktop */
-		@container layout (min-width: 680px) {
+		@container (min-width: 680px) {
 			.trvt-layout {
 				--_layout-row-gap: var(--trvt-layout-row-gap, 2rem);
 				--_layout-column-gap: var(--trvt-layout-column-gap, 2rem);
@@ -52,24 +53,30 @@
 			/* Asymetric (3/1) layout - Content in the starting position */
 			.asymmetric.start {
 				--_template--columns: repeat(3, minmax(0, 1fr));
-				--_template--areas: 'notification notification notification' 'navigation   navigation   navigation'
-					'header       header       header' 'main         main         sidebar'
+				--_template--areas: 'notification notification notification'
+					'navigation   navigation   navigation'
+					'header       header       header'
+					'main         main         sidebar'
 					'footer       footer       footer';
 			}
 			.asymmetric.end {
 				--_template--columns: repeat(3, minmax(0, 1fr));
-				--_template--areas: 'notification notification notification' 'navigation   navigation   navigation'
-					'header       header       header' 'sidebar      main         main'
+				--_template--areas: 'notification notification notification'
+					'navigation   navigation   navigation'
+					'header       header       header'
+					'sidebar      main         main'
 					'footer       footer       footer';
 			}
 			.split.start {
 				--_template--columns: repeat(2, minmax(0, 1fr));
-				--_template--areas: 'notification notification' 'navigation   navigation' 'header       header'
+				--_template--areas: 'notification notification'
+					'navigation   navigation' 'header       header'
 					'main         sidebar' 'footer       footer';
 			}
 			.split.end {
 				--_template--columns: repeat(2, minmax(0, 1fr));
-				--_template--areas: 'notification notification' 'navigation   navigation' 'header       header'
+				--_template--areas: 'notification notification'
+					'navigation   navigation' 'header       header'
 					'sidebar      main' 'footer       footer';
 			}
 			.row {
@@ -81,14 +88,16 @@
 			}
 			.stacked {
 				--_template--columns: 100%;
-				--_template--areas: 'notification' 'navigation' 'header' 'main' 'sidebar' 'footer';
+				--_template--areas: 'notification' 'navigation' 'header' 'main'
+					'sidebar' 'footer';
 			}
 		}
 
-		@container layout (max-width: 680px) {
+		@container (max-width: 680px) {
 			.trvt-layout {
 				--_template--columns: 1fr;
-				--_template--areas: 'notification' 'navigation' 'header' 'main' 'footer';
+				--_template--areas: 'notification' 'navigation' 'header' 'main'
+					'footer';
 				--_layout-column-gap: var(--trvt-layout-column-gap, 2rem);
 			}
 		}
@@ -107,7 +116,7 @@
 	@layer selectors {
 		:host {
 			display: block;
-			container: layout / inline-size;
+			container-type: inline-size;
 		}
 		.trvt-layout {
 			display: grid;

@@ -1,5 +1,17 @@
 # @trvt/layout
 
+## 0.8.7
+
+### Patch Changes
+
+- Missed a container name
+
+## 0.8.6
+
+### Patch Changes
+
+- Bug in safari with named containers in layers
+
 ## 0.8.5
 
 ### Patch Changes
