@@ -44,4 +44,3 @@ export class TrvtCard extends TrivetElement {
 }
 
 customElements.define(ELEMENT_NAME, TrvtCard);
-customElements.define(ELEMENT_NAME, TrvtCard);
