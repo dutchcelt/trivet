@@ -2,3 +2,6 @@
 declare module '*.css';
 /* Prevent JSON Module imports showing an error */
 declare module '*.json';
+
+
+declare module '@trvt/assets';

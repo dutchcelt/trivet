@@ -24,7 +24,7 @@ class TrivetElement extends HTMLElement {
 	#template;
 
 	#render() {
-		activateColorScheme({ mode: colorScheme.current });
+		activateColorScheme(colorScheme.current);
 		this.#shadowRoot.innerHTML = this.template;
 	}
 
@@ -60,13 +60,13 @@ class TrivetElement extends HTMLElement {
 
 	/**
 	 * Get template
-	 * @type {String}  - Type of template
+	 * @type {string}  - Type of template
 	 */
 	get template() {
 		return this.#template;
 	}
 	/**
-	 * @param {String} str - Type of Template
+	 * @param {string} str - Type of Template
 	 */
 	set template(str) {
 		this.#template = `${createFragment(str, false)}`;
@@ -77,7 +77,7 @@ class TrivetElement extends HTMLElement {
 		super();
 
 		this.settings = {
-			/**  @type {String|any} */
+			/**  @type {string|any} */
 			mode: 'closed',
 			/**  @type {boolean} */
 			delegatesFocus: true,

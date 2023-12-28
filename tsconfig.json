@@ -3,8 +3,8 @@
 		"module": "esnext",
 		"checkJs": true,
 		"allowJs": true,
-		"target": "es6",
+		"target": "esnext",
 		"moduleResolution": "node"
 	},
-	"exclude": ["./node_modules", "dist", "build"]
+	"exclude": ["./node_modules", "dist", "build", "**/*/baseCSSProperties.js"]
 }

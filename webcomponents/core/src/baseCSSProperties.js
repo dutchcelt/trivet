@@ -1,37 +1,45 @@
 /* eslint-disable no-unused-vars */
-/* TODO: remove eslint-disable */
 
-const trivetProps = [
-	{
-		name: 'display',
-		value: 'block',
-		syntax: 'block|none',
-	},
+/**
+ * @type {Array<{name: string, value: string, syntax: string}>}
+ */
+const propertyDefinitions = [
+	{ name: 'display', value: 'block', syntax: 'block|none' },
 	{
 		name: 'position',
 		value: 'static',
 		syntax: 'static|relative|absolute|fixed|sticky',
 	},
-	{
-		name: 'width',
-		value: '100%',
-		syntax: '<length>|<percent>)',
-	},
-	{
-		name: 'height',
-		value: 'auto',
-		syntax: '<length>|<percentage>|auto)',
-	},
+	{ name: 'width', value: '100%', syntax: '<length>|<percentage>' },
+	{ name: 'height', value: 'auto', syntax: '<length>|<percentage>|auto' },
 ];
 
-function registerBaseProperties({ namespace, component, props }) {
-	const properties = Object.assign({}, trivetProps, props);
+/**
+ * Registers a given property with the CSS.registerProperty method.
+ * @param {string} namespace - The namespace for the property name.
+ * @param {string} component - The component for the property name.
+ * @param {{name: string, value: string, syntax: string}} property - Property object.
+ */
+function registerProperty(namespace, component, property) {
+	CSS.registerProperty({
+		name: `--${namespace}-${component}-${property.name}`,
+		syntax: property.syntax,
+		inherits: false,
+		initialValue: property.value,
+	});
+}
+
+/**
+ * Registers all base properties using a given configuration object and the registerProperty function.
+ * @param {{namespace?: string, component?: string, props: Array<{name: string, value: string, syntax: string}>}} param0 - Parameters object.
+ */
+function registerBaseProperties({
+	namespace = 'trvt',
+	component = 'component',
+	props,
+}) {
+	const properties = Object.assign({}, propertyDefinitions, props);
 	for (const prop of properties) {
-		CSS.registerProperty({
-			name: `--${namespace ?? 'trvt'}-${component ?? 'component'}-${prop.name}`,
-			syntax: prop.syntax,
-			inherits: false,
-			initialValue: prop.value,
-		});
+		registerProperty(namespace, component, prop);
 	}
 }
