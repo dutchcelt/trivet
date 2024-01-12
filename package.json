@@ -26,7 +26,10 @@
 	},
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
-	"repository": "https://github.com/dutchcelt/trivet",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dutchcelt/trivet.git"
+	},
 	"workspaces": [
 		"assets",
 		"docs",
