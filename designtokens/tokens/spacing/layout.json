@@ -2,9 +2,9 @@
 	"spacing": {
 		"page": {
 			"block": {
-				"value": "2rem",
+				"$value": "2rem",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<length>",
 						"inherits": true,
 						"initial-value": "16px",
@@ -12,10 +12,10 @@
 					},
 					"trvt.content.mode": {
 						"promotional": {
-							"value": "4rem"
+							"$value": "4rem"
 						},
 						"legal": {
-							"value": "1rem"
+							"$value": "1rem"
 						}
 					}
 				}

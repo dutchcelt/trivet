@@ -2,111 +2,111 @@
 	"color": {
 		"background": {
 			"canvas": {
-				"value": "{color.base.canvas.value}",
-				"type": "color",
+				"$value": "{color.base.canvas.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"viewport": {
-				"value": "{color.base.canvas.value}",
-				"type": "color",
+				"$value": "{color.base.canvas.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"content": {
-				"value": "{color.base.canvas.value}",
-				"type": "color",
+				"$value": "{color.base.canvas.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"header": {
-				"value": "{color.base.canvastext.value}",
-				"type": "color",
+				"$value": "{color.base.canvastext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"icon": {
-				"value": "{color.base.canvas.value}",
-				"type": "color",
+				"$value": "{color.base.canvas.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"highlight": {
-				"value": "{color.base.highlight.value}",
-				"type": "color",
+				"$value": "{color.base.highlight.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"accentcolor": {
-				"value": "{color.base.accentcolor.value}",
-				"type": "color",
+				"$value": "{color.base.accentcolor.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"buttonface": {
-				"value": "{color.base.buttonface.value}",
+				"$value": "{color.base.buttonface.value}",
 				"comment": "ButtonFace is the standard value but it's very dark.",
-				"type": "color",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"field": {
-				"value": "{color.base.field.value}",
-				"type": "color",
+				"$value": "{color.base.field.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"selected": {
-				"value": "{color.base.selected.value}",
-				"type": "color",
+				"$value": "{color.base.selected.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"mark": {
-				"value": "Mark",
-				"type": "color",
+				"$value": "Mark",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -116,10 +116,10 @@
 		"surface": {
 			"comment": "A surface is usually reserved for components. It's here for convinence.",
 			"default": {
-				"value": "{color.base.canvas.value}",
-				"type": "color",
+				"$value": "{color.base.canvas.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

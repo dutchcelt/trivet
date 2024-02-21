@@ -34,11 +34,11 @@ const hasExtension = token => {
  * @returns {string}
  */
 const colorSchemeFn = (token, modeType) => `[data-color-scheme='${modeType}'] {
-	--${token.name}:  ${getExtension(token).mode[modeType].value};
+	--${token.name}:  ${getExtension(token).mode[modeType].$value};
 }
 @media (prefers-color-scheme: ${modeType}) {
 	:root { 
-		--${token.name}:  ${getExtension(token).mode[modeType].value}; 
+		--${token.name}:  ${getExtension(token).mode[modeType].$value}; 
 	}
 }`;
 
@@ -49,7 +49,7 @@ const colorSchemeFn = (token, modeType) => `[data-color-scheme='${modeType}'] {
  * @returns {string}
  */
 const getColorSchemeProperty = (token, modeType) =>
-	`--${token.name}:  ${getExtension(token).mode[modeType].value};`;
+	`--${token.name}:  ${getExtension(token).mode[modeType].$value};`;
 
 /**
  * Format object for Style Dictionary
@@ -86,7 +86,7 @@ module.exports = {
 					);
 				}
 				if (cssColorScheme.contrast)
-					cssString += `@property --${token.name}-contrast}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorScheme.contrast.value}; }`;
+					cssString += `@property --${token.name}-contrast}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorScheme.contrast.$value}; }`;
 
 				return cssString;
 			})

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const StyleDictionary = require('style-dictionary');
+const StyleDictionary = require('style-dictionary-utils');
 const path = require('path');
 const {transform} = require('lightningcss');
 

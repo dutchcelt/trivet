@@ -1,19 +1,19 @@
 {
 	"stroke": {
 		"hairline": {
-			"value": "0.5px"
+			"$value": "0.5px"
 		},
 		"thin": {
-			"value": "1px"
+			"$value": "1px"
 		},
 		"medium": {
-			"value": "2px"
+			"$value": "2px"
 		},
 		"thick": {
-			"value": "3px"
+			"$value": "3px"
 		},
 		"heavy": {
-			"value": "4px"
+			"$value": "4px"
 		}
 	}
 }

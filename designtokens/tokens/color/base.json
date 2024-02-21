@@ -2,253 +2,253 @@
 	"color": {
 		"base": {
 			"light": {
-				"value": "#efefef",
+				"$value": "#efefef",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.base.dark.value}"
+								"$value": "{color.base.dark.value}"
 							}
 						}
 					}
 				}
 			},
 			"dark": {
-				"value": "#999",
+				"$value": "#999",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.base.light.value}"
+								"$value": "{color.base.light.value}"
 							}
 						}
 					}
 				}
 			},
 			"mid": {
-				"value": "#ccc",
+				"$value": "#ccc",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"bright": {
-				"value": "#ffff00",
+				"$value": "#ffff00",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"shadow": {
-				"value": "#ddd",
+				"$value": "#ddd",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"icon": {
-				"value": "CanvasText",
+				"$value": "CanvasText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"canvas": {
-				"value": "Canvas",
+				"$value": "Canvas",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.base.canvastext.value}"
+								"$value": "{color.base.canvastext.value}"
 							}
 						}
 					}
 				}
 			},
 			"canvastext": {
-				"value": "CanvasText",
+				"$value": "CanvasText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					},
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.base.canvas.value}"
+								"$value": "{color.base.canvas.value}"
 							}
 						}
 					}
 				}
 			},
 			"linktext": {
-				"value": "LinkText",
+				"$value": "LinkText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"visitedtext": {
-				"value": "VisitedText",
+				"$value": "VisitedText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"hovertext": {
-				"value": "LinkText",
+				"$value": "LinkText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"activetext": {
-				"value": "ActiveText",
+				"$value": "ActiveText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"highlight": {
-				"value": "Highlight",
+				"$value": "Highlight",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"highlighttext": {
-				"value": "HighlightText",
+				"$value": "HighlightText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"accentcolor": {
-				"value": "AccentColor",
+				"$value": "AccentColor",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"accentcolortext": {
-				"value": "AccentColorText",
+				"$value": "AccentColorText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"buttonface": {
-				"value": "ButtonFace",
+				"$value": "ButtonFace",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"buttontext": {
-				"value": "ButtonText",
+				"$value": "ButtonText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"field": {
-				"value": "Field",
+				"$value": "Field",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"fieldtext": {
-				"value": "FieldText",
+				"$value": "FieldText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"selected": {
-				"value": "SelectedItem",
+				"$value": "SelectedItem",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"selectedtext": {
-				"value": "SelectedItemText",
+				"$value": "SelectedItemText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"mark": {
-				"value": "Mark",
+				"$value": "Mark",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"marktext": {
-				"value": "MarkText",
+				"$value": "MarkText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"disabled": {
-				"value": "GrayText",
+				"$value": "GrayText",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

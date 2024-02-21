@@ -2,90 +2,90 @@
 	"color": {
 		"typography": {
 			"text": {
-				"value": "{color.base.canvastext.value}",
-				"type": "color",
+				"$value": "{color.base.canvastext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"text-inverted": {
-				"value": "{color.base.canvas.value}",
-				"type": "color",
+				"$value": "{color.base.canvas.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"heading": {
-				"value": "{color.base.canvastext.value}",
-				"type": "color",
+				"$value": "{color.base.canvastext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"icon": {
-				"value": "{color.base.icon.value}",
-				"type": "color",
+				"$value": "{color.base.icon.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"ui": {
-				"value": "{color.base.buttontext.value})",
-				"type": "color",
+				"$value": "{color.base.buttontext.value})",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"anchor": {
-				"value": "{color.base.linktext.value}",
-				"type": "color",
+				"$value": "{color.base.linktext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"anchor-visited": {
-				"value": "{color.base.visitedtext.value}",
-				"type": "color",
+				"$value": "{color.base.visitedtext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"anchor-hover": {
-				"value": "{color.base.hovertext.value}",
-				"type": "color",
+				"$value": "{color.base.hovertext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"anchor-active": {
-				"value": "{color.base.activetext.value}",
-				"type": "color",
+				"$value": "{color.base.activetext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

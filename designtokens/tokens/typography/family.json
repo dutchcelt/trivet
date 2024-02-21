@@ -2,16 +2,16 @@
 	"typography": {
 		"family": {
 			"base": {
-				"value": "system-ui, sans-serif"
+				"$value": "system-ui, sans-serif"
 			},
 			"display": {
-				"value": "system-ui, sans-serif"
+				"$value": "system-ui, sans-serif"
 			},
 			"gui": {
-				"value": "ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif"
+				"$value": "ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif"
 			},
 			"code": {
-				"value": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace"
+				"$value": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 			}
 		}
 	}

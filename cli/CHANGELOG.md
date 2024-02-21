@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.5.0
+
+### Minor Changes
+
+- Using the W3C design token format
+
 ## 1.4.5
 
 ### Patch Changes

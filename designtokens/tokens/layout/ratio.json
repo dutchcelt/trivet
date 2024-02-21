@@ -2,16 +2,16 @@
 	"layout": {
 		"ratio": {
 			"square": {
-				"value": "1 / 1"
+				"$value": "1 / 1"
 			},
 			"wide": {
-				"value": "16 / 9"
+				"$value": "16 / 9"
 			},
 			"standard": {
-				"value": "4 / 3"
+				"$value": "4 / 3"
 			},
 			"golden": {
-				"value": "1.6180 / 1"
+				"$value": "1.6180 / 1"
 			}
 		}
 	}

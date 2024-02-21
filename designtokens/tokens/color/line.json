@@ -2,40 +2,40 @@
 	"color": {
 		"line": {
 			"ui": {
-				"value": "{color.base.canvastext.value}",
-				"type": "color",
+				"$value": "{color.base.canvastext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"seperator": {
-				"value": "{color.base.canvastext.value}",
-				"type": "color",
+				"$value": "{color.base.canvastext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"border": {
-				"value": "{color.base.canvastext.value}",
-				"type": "color",
+				"$value": "{color.base.canvastext.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"outline": {
-				"value": "{color.base.highlight.value}",
-				"type": "color",
+				"$value": "{color.base.highlight.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

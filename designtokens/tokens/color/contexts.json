@@ -2,30 +2,30 @@
 	"color": {
 		"editorial": {
 			"note": {
-				"value": "{color.lib.yellow.value}",
-				"type": "color",
+				"$value": "{color.lib.yellow.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"info": {
-				"value": "{color.lib.grape.value}",
-				"type": "color",
+				"$value": "{color.lib.grape.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"quote": {
-				"value": "{color.lib.grape.value}",
-				"type": "color",
+				"$value": "{color.lib.grape.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -34,40 +34,40 @@
 		},
 		"presentational": {
 			"cta": {
-				"value": "{color.lib.indigo.value}",
-				"type": "color",
+				"$value": "{color.lib.indigo.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"new": {
-				"value": "{color.lib.lime.value}",
-				"type": "color",
+				"$value": "{color.lib.lime.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"attention": {
-				"value": "{color.lib.teal.value}",
-				"type": "color",
+				"$value": "{color.lib.teal.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"hightlight": {
-				"value": "{color.lib.teal.value}",
-				"type": "color",
+				"$value": "{color.lib.teal.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -76,50 +76,50 @@
 		},
 		"actionable": {
 			"abort": {
-				"value": "{color.lib.red.value}",
-				"type": "color",
+				"$value": "{color.lib.red.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"release": {
-				"value": "{color.lib.violet.value}",
-				"type": "color",
+				"$value": "{color.lib.violet.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"pause": {
-				"value": "{color.lib.orange.value}",
-				"type": "color",
+				"$value": "{color.lib.orange.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"approve": {
-				"value": "{color.lib.green.value}",
-				"type": "color",
+				"$value": "{color.lib.green.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"submit": {
-				"value": "{color.lib.blue.value}",
-				"type": "color",
+				"$value": "{color.lib.blue.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -128,30 +128,30 @@
 		},
 		"hierarchical": {
 			"primary": {
-				"value": "{color.lib.blue.value}",
-				"type": "color",
+				"$value": "{color.lib.blue.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"secondary": {
-				"value": "{color.lib.orange.value}",
-				"type": "color",
+				"$value": "{color.lib.orange.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"tertiary": {
-				"value": "{color.lib.teal.value}",
-				"type": "color",
+				"$value": "{color.lib.teal.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
@@ -160,40 +160,40 @@
 		},
 		"status": {
 			"warning": {
-				"value": "{color.lib.orange.value}",
-				"type": "color",
+				"$value": "{color.lib.orange.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"failure": {
-				"value": "{color.lib.red.value}",
-				"type": "color",
+				"$value": "{color.lib.red.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"pending": {
-				"value": "{color.lib.violet.value}",
-				"type": "color",
+				"$value": "{color.lib.violet.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}
 				}
 			},
 			"success": {
-				"value": "{color.lib.green.value}",
-				"type": "color",
+				"$value": "{color.lib.green.value}",
+				"$type": "color",
 				"$extensions": {
-					"css.property.rule": {
+					"www.css.property.rule": {
 						"syntax": "<color>",
 						"inherits": true
 					}

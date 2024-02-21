@@ -30,7 +30,7 @@ module.exports = {
 	sourcePath: tokensPath,
 	themePath: '',
 	scope: 'trvt',
-	cssPropExtension: 'css.property.rule',
+	cssPropExtension: 'www.css.property.rule',
 	colorPatternExtension: 'css.color.scheme',
 	contentModesExtension: 'trvt.content.mode',
 	wcagLevel: 'AA',
