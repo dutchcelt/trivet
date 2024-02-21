@@ -2,7 +2,7 @@
 	"color": {
 		"typography": {
 			"text": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -12,7 +12,7 @@
 				}
 			},
 			"text-inverted": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -22,7 +22,7 @@
 				}
 			},
 			"heading": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -32,7 +32,7 @@
 				}
 			},
 			"icon": {
-				"$value": "{color.base.icon.value}",
+				"$value": "{color.base.icon}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -42,7 +42,7 @@
 				}
 			},
 			"ui": {
-				"$value": "{color.base.buttontext.value})",
+				"$value": "{color.base.buttontext})",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -52,7 +52,7 @@
 				}
 			},
 			"anchor": {
-				"$value": "{color.base.linktext.value}",
+				"$value": "{color.base.linktext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -62,7 +62,7 @@
 				}
 			},
 			"anchor-visited": {
-				"$value": "{color.base.visitedtext.value}",
+				"$value": "{color.base.visitedtext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -72,7 +72,7 @@
 				}
 			},
 			"anchor-hover": {
-				"$value": "{color.base.hovertext.value}",
+				"$value": "{color.base.hovertext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -82,7 +82,7 @@
 				}
 			},
 			"anchor-active": {
-				"$value": "{color.base.activetext.value}",
+				"$value": "{color.base.activetext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {

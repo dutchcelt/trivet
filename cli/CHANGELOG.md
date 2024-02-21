@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.5.2
+
+### Patch Changes
+
+- Updated tokens to use W3C alias values
+- Updated dependencies
+  - @trvt/designtokens@0.11.8
+
 ## 1.5.1
 
 ### Patch Changes

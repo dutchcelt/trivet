@@ -2,7 +2,7 @@
 	"color": {
 		"background": {
 			"canvas": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -12,7 +12,7 @@
 				}
 			},
 			"viewport": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -22,7 +22,7 @@
 				}
 			},
 			"content": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -32,7 +32,7 @@
 				}
 			},
 			"header": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -42,7 +42,7 @@
 				}
 			},
 			"icon": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -52,7 +52,7 @@
 				}
 			},
 			"highlight": {
-				"$value": "{color.base.highlight.value}",
+				"$value": "{color.base.highlight}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -62,7 +62,7 @@
 				}
 			},
 			"accentcolor": {
-				"$value": "{color.base.accentcolor.value}",
+				"$value": "{color.base.accentcolor}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -72,7 +72,7 @@
 				}
 			},
 			"buttonface": {
-				"$value": "{color.base.buttonface.value}",
+				"$value": "{color.base.buttonface}",
 				"comment": "ButtonFace is the standard value but it's very dark.",
 				"$type": "color",
 				"$extensions": {
@@ -83,7 +83,7 @@
 				}
 			},
 			"field": {
-				"$value": "{color.base.field.value}",
+				"$value": "{color.base.field}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -93,7 +93,7 @@
 				}
 			},
 			"selected": {
-				"$value": "{color.base.selected.value}",
+				"$value": "{color.base.selected}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -116,7 +116,7 @@
 		"surface": {
 			"comment": "A surface is usually reserved for components. It's here for convinence.",
 			"default": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {

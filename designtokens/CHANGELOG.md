@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.8
+
+### Patch Changes
+
+- Updated tokens to use W3C alias values
+
 ## 0.11.7
 
 ### Patch Changes
