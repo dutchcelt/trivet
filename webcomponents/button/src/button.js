@@ -3,9 +3,7 @@ import buttonCSS from './button.css' assert { type: 'css' };
 import { EventMixin } from './eventMixin.js';
 
 /**
- * @class TrvtButton
- * @extends {mix(TrivetElement).with(FormMixin, EventMixin, ReactiveMixin)}
- * @property {Array.<string>} observedAttributes - a list of attributes for the TrvtButton
+ * Represents a custom button element with additional functionality.
  */
 export class TrvtButton extends mix(TrivetElement).with(
 	FormMixin,
@@ -30,7 +28,6 @@ export class TrvtButton extends mix(TrivetElement).with(
 	}
 
 	/**
-	 * @private
 	 * @param {string} propertyName - The name of the property
 	 * @param {string | boolean} defaultValue - The default value of the property
 	 */
@@ -40,7 +37,6 @@ export class TrvtButton extends mix(TrivetElement).with(
 	}
 
 	/**
-	 * @private
 	 * Generates a template string for the button.
 	 * @returns {string} - An HTML string for the button
 	 */
@@ -60,4 +56,6 @@ export class TrvtButton extends mix(TrivetElement).with(
         `;
 	}
 }
+
+// @ts-ignore
 customElements.define('trvt-button', TrvtButton);
