@@ -1,5 +1,11 @@
 # @trvt/cli
 
+## 1.5.1
+
+### Patch Changes
+
+- Fix for rendering color patterns and property rules
+
 ## 1.5.0
 
 ### Minor Changes

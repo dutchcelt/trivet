@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { colorPatternExtension } = require(path.join(__dirname, 'defaults.cjs'));
+const { colorPatternsExtension } = require(path.join(__dirname, 'defaults.cjs'));
 
 /**
  * stringSort
@@ -14,7 +14,7 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
  * @param {Object} token
  * @returns {Object}
  */
-const getExtension = token => token.$extensions[`${colorPatternExtension}`];
+const getExtension = token => token.$extensions[`${colorPatternsExtension}`];
 
 /**
  * hasExtension
@@ -23,7 +23,7 @@ const getExtension = token => token.$extensions[`${colorPatternExtension}`];
  */
 const hasExtension = token => {
 	const ext = token.$extensions;
-	const extScope = ext && ext[`${colorPatternExtension}`];
+	const extScope = ext && ext[`${colorPatternsExtension}`];
 	return !!extScope;
 };
 
@@ -34,11 +34,11 @@ const hasExtension = token => {
  * @returns {string}
  */
 const colorSchemeFn = (token, modeType) => `[data-color-scheme='${modeType}'] {
-	--${token.name}:  ${getExtension(token).mode[modeType].value};
+	--${token.name}:  ${getExtension(token).mode[modeType].$value};
 }
 @media (prefers-color-scheme: ${modeType}) {
 	:root { 
-		--${token.name}:  ${getExtension(token).mode[modeType].value}; 
+		--${token.name}:  ${getExtension(token).mode[modeType].$value}; 
 	}
 }`;
 
@@ -85,8 +85,8 @@ module.exports = {
 						'dark'
 					);
 				}
-				if (cssColorPattern.contrast)
-					cssString += `@property --${token.name}-contrast}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorPattern.contrast.value}; }`;
+				// if (cssColorPattern.inverted)
+				// 	cssString += `@property --${token.name}-inverted}: { syntax: '<color>'; inherits: true; initial-value: ${cssColorPattern.inverted.$value}; }`;
 
 				return cssString;
 			})

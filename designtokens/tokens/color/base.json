@@ -8,7 +8,7 @@
 						"syntax": "<color>",
 						"inherits": true
 					},
-					"trvt.color.pattern": {
+					"trvt.color.patterns": {
 						"mode": {
 							"dark": {
 								"$value": "{color.base.dark.value}"
@@ -24,7 +24,7 @@
 						"syntax": "<color>",
 						"inherits": true
 					},
-					"trvt.color.pattern": {
+					"trvt.color.patterns": {
 						"mode": {
 							"dark": {
 								"$value": "{color.base.light.value}"

@@ -16,6 +16,8 @@ const tokensPath = path.join(defaultTokensPackagePath.trim(), 'tokens');
  * @property {string} scope -
  * @property {string} filename -
  * @property {string} cssPropExtension -
+ * @property {string} colorPatternsExtension -
+ * @property {string} wcagLevel -
  * @property {string} exclude -
  * @property {boolean} minify -
  */
@@ -31,8 +33,7 @@ module.exports = {
 	themePath: '',
 	scope: 'trvt',
 	cssPropExtension: 'www.css.property.rule',
-	colorPatternExtension: 'css.color.scheme',
-	contentModesExtension: 'trvt.content.mode',
+	colorPatternsExtension: 'trvt.color.patterns',
 	wcagLevel: 'AA',
 	exclude: 'lib',
 	minify: false,

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/cli",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
@@ -35,6 +35,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.4.5",
+		"@types/shelljs": "^0.8.15",
 		"glob": "^10.3.10"
 	}
 }

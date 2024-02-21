@@ -1,5 +1,5 @@
 const cssPropertyFormat = require('./css-property-formatter.cjs');
-const cssColorSchemeFormat = require('./css-colorScheme-formatter.cjs');
+const cssColorPatternFormat = require('./css-color-pattern-formatter.cjs');
 
 /**
  * module.exports
@@ -20,7 +20,7 @@ module.exports = opts => {
 		source: themeTokensGlobArray,
 		format: {
 			...cssPropertyFormat,
-			...cssColorSchemeFormat,
+			...cssColorPatternFormat,
 		},
 		platforms: {
 			'CSS Tokens': {
@@ -40,8 +40,8 @@ module.exports = opts => {
 						},
 					},
 					{
-						destination: `${opts.scope}_color_scheme.css`,
-						format: 'css/colorscheme',
+						destination: `${opts.scope}_color_patterns.css`,
+						format: 'css/colorpattern',
 						filter: (/** @type {Object} */ token) =>
 							!filterRegex.test(token.name),
 						options: {

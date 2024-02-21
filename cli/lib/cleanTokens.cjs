@@ -1,4 +1,4 @@
-const StyleDictionary = require('style-dictionary');
+const StyleDictionary = require('style-dictionary-utils');
 const path = require('path');
 
 const tokenConfig = require(path.join(__dirname, 'tokenConfig.cjs'));
