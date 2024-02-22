@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.5.2
+
+### Patch Changes
+
+- Added additional transforms. Fluid typography and color converison for system colors
+- Updated dependencies
+  - @trvt/designtokens@0.11.8
+
 ## 1.5.1
 
 ### Patch Changes

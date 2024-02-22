@@ -1,5 +1,18 @@
 const cssPropertyFormat = require('./css-property-formatter.cjs');
 const cssColorPatternFormat = require('./css-color-pattern-formatter.cjs');
+const StyleDictionary = require('style-dictionary-utils');
+require('./css-system-color-transformer.cjs');
+require('./css-fluid-transformer.cjs');
+
+StyleDictionary.registerTransformGroup({
+	name: 'trvt/css',
+	transforms: [
+		'system/colors',
+		'trvt/css/fluid',
+		...StyleDictionary.transformGroup['css/extended'],
+		'clamp/css',
+	]
+});
 
 /**
  * module.exports
@@ -24,8 +37,8 @@ module.exports = opts => {
 		},
 		platforms: {
 			'CSS Tokens': {
-				transforms: ['attribute/cti', 'name/cti/kebab'],
-				transformGroup: 'css',
+				transformGroup: 'trvt/css',
+				transforms: ['system/colors','trvt/css/fluid','clamp/css','font/css','attribute/cti', 'name/cti/kebab'],
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [
@@ -52,8 +65,8 @@ module.exports = opts => {
 				actions: ['trivet'],
 			},
 			'CSS Properties': {
-				transforms: ['attribute/cti', 'name/cti/kebab'],
-				transformGroup: 'css',
+				transformGroup: 'trvt/css',
+				transforms: ['system/colors','clamp/css','font/css','attribute/cti', 'name/cti/kebab'],
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [
@@ -70,8 +83,8 @@ module.exports = opts => {
 				actions: ['trivet'],
 			},
 			'CSS Library': {
-				transforms: ['name/cti/kebab'],
-				transformGroup: 'css',
+				transformGroup: 'trvt/css',
+				transforms: ['system/colors','clamp/css','font/css','attribute/cti', 'name/cti/kebab'],
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [

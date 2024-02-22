@@ -103,10 +103,12 @@
 			},
 			"linktext": {
 				"$value": "LinkText",
+				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
 						"syntax": "<color>",
-						"inherits": true
+						"inherits": true,
+						"$value": "LinkText"
 					}
 				}
 			},

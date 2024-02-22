@@ -1,5 +1,15 @@
 {
 	"typography": {
+		"body": {
+			"$value": {
+				"fontWeight": "{typography.weight.normal}",
+				"fontSize": "{typography.size.m}",
+				"lineHeight": "{typography.leading.m}",
+				"fontFamily": "{typography.family.base}",
+				"fontStyle": "normal"
+			},
+			"$type": "typography"
+		},
 		"family": {
 			"base": {
 				"$value": "system-ui, sans-serif"

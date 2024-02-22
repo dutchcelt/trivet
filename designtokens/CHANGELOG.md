@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.8
+
+### Patch Changes
+
+- Added additional transforms. Fluid typography and color converison for system colors
+
 ## 0.11.7
 
 ### Patch Changes
