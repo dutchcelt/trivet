@@ -2,7 +2,7 @@
 	"parser": "@babel/eslint-parser",
 	"env": {
 		"browser": true,
-		"es2022": true,
+		"es2024": true,
 		"node": true
 	},
 	"extends": ["eslint:recommended", "prettier"],

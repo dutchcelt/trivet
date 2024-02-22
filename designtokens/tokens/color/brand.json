@@ -2,7 +2,7 @@
 	"color": {
 		"brand": {
 			"brand": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -12,7 +12,7 @@
 				}
 			},
 			"logo": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -22,7 +22,7 @@
 				}
 			},
 			"primary": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -32,7 +32,7 @@
 				}
 			},
 			"primary-inverted": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -42,7 +42,7 @@
 				}
 			},
 			"secondary": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -52,7 +52,7 @@
 				}
 			},
 			"secondary-inverted": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -62,7 +62,7 @@
 				}
 			},
 			"tertiary": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -72,7 +72,7 @@
 				}
 			},
 			"tertiary-inverted": {
-				"$value": "{color.base.canvas.value}",
+				"$value": "{color.base.canvas}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {

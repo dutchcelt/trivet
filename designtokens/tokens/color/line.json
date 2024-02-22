@@ -2,7 +2,7 @@
 	"color": {
 		"line": {
 			"ui": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -12,7 +12,7 @@
 				}
 			},
 			"seperator": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -22,7 +22,7 @@
 				}
 			},
 			"border": {
-				"$value": "{color.base.canvastext.value}",
+				"$value": "{color.base.canvastext}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {
@@ -32,7 +32,7 @@
 				}
 			},
 			"outline": {
-				"$value": "{color.base.highlight.value}",
+				"$value": "{color.base.highlight}",
 				"$type": "color",
 				"$extensions": {
 					"www.css.property.rule": {

@@ -5,3 +5,4 @@ declare module '*.json';
 
 
 declare module '@trvt/assets';
+declare module '@trvt/core';

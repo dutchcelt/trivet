@@ -11,7 +11,7 @@
 					"trvt.color.patterns": {
 						"mode": {
 							"dark": {
-								"$value": "{color.base.dark.value}"
+								"$value": "{color.base.dark}"
 							}
 						}
 					}
@@ -27,7 +27,7 @@
 					"trvt.color.patterns": {
 						"mode": {
 							"dark": {
-								"$value": "{color.base.light.value}"
+								"$value": "{color.base.light}"
 							}
 						}
 					}
@@ -79,7 +79,7 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"$value": "{color.base.canvastext.value}"
+								"$value": "{color.base.canvastext}"
 							}
 						}
 					}
@@ -95,7 +95,7 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"$value": "{color.base.canvas.value}"
+								"$value": "{color.base.canvas}"
 							}
 						}
 					}

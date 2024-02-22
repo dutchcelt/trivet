@@ -1,10 +1,18 @@
 # @trvt/cli
 
+## 1.5.3
+
+### Patch Changes
+
+- Added some transforms for fluid typography and system colors
+- Updated dependencies
+  - @trvt/designtokens@0.11.9
+
 ## 1.5.2
 
 ### Patch Changes
 
-- Added additional transforms. Fluid typography and color converison for system colors
+- Updated tokens to use W3C alias values
 - Updated dependencies
   - @trvt/designtokens@0.11.8
 

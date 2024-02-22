@@ -13,8 +13,7 @@ StyleDictionary.registerTransform({
 	matcher: isCssFluid,
 	transformer: (token) => {
 		const config = token.$extensions['trvt.css.fluid'];
-		const clamped = calculateClamp({...config})
-		return clamped;
+		return calculateClamp({...config})
 	}
 })
 

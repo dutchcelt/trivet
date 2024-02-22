@@ -1,10 +1,16 @@
 # @trvt/designtokens
 
+## 0.11.9
+
+### Patch Changes
+
+- Added some transforms for fluid typography and system colors
+
 ## 0.11.8
 
 ### Patch Changes
 
-- Added additional transforms. Fluid typography and color converison for system colors
+- Updated tokens to use W3C alias values
 
 ## 0.11.7
 
