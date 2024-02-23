@@ -1,7 +1,6 @@
 const StyleDictionary = require('style-dictionary-utils');
 const { calculateClamp } = require('utopia-core');
 
-//calculateClamp
 const isCssFluid = token => {
 	return token?.$extensions?.['trvt.css.fluid'];
 }

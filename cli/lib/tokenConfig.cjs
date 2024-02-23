@@ -10,7 +10,6 @@ StyleDictionary.registerTransformGroup({
 		'system/colors',
 		'trvt/css/fluid',
 		...StyleDictionary.transformGroup['css/extended'],
-		'clamp/css',
 	]
 });
 
@@ -38,7 +37,7 @@ module.exports = opts => {
 		platforms: {
 			'CSS Tokens': {
 				transformGroup: 'trvt/css',
-				transforms: ['system/colors','trvt/css/fluid','clamp/css','font/css','attribute/cti', 'name/cti/kebab'],
+				//transforms: ['system/colors','trvt/css/fluid','shadow/css','border/css','font/css','attribute/cti', 'name/cti/kebab'],
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [
@@ -65,9 +64,9 @@ module.exports = opts => {
 				actions: ['trivet'],
 			},
 			'CSS Properties': {
-				transformGroup: 'trvt/css',
-				transforms: ['system/colors','clamp/css','font/css','attribute/cti', 'name/cti/kebab'],
-				buildPath: `${opts.buildPath}/`,
+				// transformGroup: 'trvt/css',
+				transforms: ['attribute/cti', 'name/cti/kebab'],
+				transformGroup: 'css',
 				prefix: opts.scope,
 				files: [
 					{
@@ -83,8 +82,9 @@ module.exports = opts => {
 				actions: ['trivet'],
 			},
 			'CSS Library': {
-				transformGroup: 'trvt/css',
-				transforms: ['system/colors','clamp/css','font/css','attribute/cti', 'name/cti/kebab'],
+				//transformGroup: 'trvt/css',
+				transforms: ['attribute/cti', 'name/cti/kebab'],
+				transformGroup: 'css',
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [

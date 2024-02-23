@@ -59,20 +59,22 @@ function processTokenFile(tokenConfig) {
 function getFileContent(options, destination) {
 	const {buildPath, minify, layer} = options;
 	const filePath = path.join(buildPath, destination);
-	const fileData = fs.readFileSync(filePath, {encoding: 'utf8'});
-	let transformedData =
-		layer === '' ? `${fileData}\n` : `@layer ${layer} {\n${fileData}\n}\n`;
-	let cssString;
-	if (minify) {
-		cssString = transform({
-			filename: `${destination}`,
-			code: Buffer.from(transformedData),
-			minify: true,
-			errorRecovery: true,
-			sourceMap: false,
-		}).code.toString();
+	if (fs.existsSync(filePath)) {
+		const fileData = fs.readFileSync(filePath, {encoding: 'utf8'});
+		let transformedData =
+			layer === '' ? `${fileData}\n` : `@layer ${layer} {\n${fileData}\n}\n`;
+		let cssString;
+		if (minify) {
+			cssString = transform({
+				filename: `${destination}`,
+				code: Buffer.from(transformedData),
+				minify: true,
+				errorRecovery: true,
+				sourceMap: false,
+			}).code.toString();
+		}
+		fs.writeFileSync(filePath, cssString || transformedData);
 	}
-	fs.writeFileSync(filePath, cssString || transformedData);
 }
 
 /**

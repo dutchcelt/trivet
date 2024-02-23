@@ -9,6 +9,7 @@
  * Copyright (c) 2023 Egor Kloos
  */
 
+
 const path = require('path');
 
 const { cssPropExtension } = require(path.join(__dirname, 'defaults.cjs'));
@@ -47,6 +48,13 @@ const hasExtension = token => {
 	return typeof extScope?.inherits === 'boolean';
 };
 
+const {transformer,matcher} = require('./css-system-color-transformer.cjs');
+const convertHelper = (token) => {
+	return matcher(token)
+		? transformer(token)
+		: token.$value || token.value;
+}
+
 /**
  * Format object for Style Dictionary
  * @type {Object}
@@ -69,8 +77,8 @@ module.exports = {
 				str += `inherits: ${cssProp.inherits}; `;
 				if (cssProp.initialValue) {
 					str += `initial-value: ${cssProp.initialValue}; `;
-				} else if (token.value) {
-					str += `initial-value: ${token.value}; `;
+				} else if (token.$value || token.value) {
+					str += `initial-value: ${convertHelper(token)}; `;
 				}
 				str += '}';
 

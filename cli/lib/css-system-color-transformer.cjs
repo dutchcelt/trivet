@@ -24,21 +24,23 @@ const systemColorTranslation = {
 	VisitedText: 'purple'
 };
 
-const isSystemColor = token => {
+const matcher = token => {
 	return token?.$type === 'color' || token?.type === 'color';
+}
+const transformer = (token) => {
+	const tokenColor = token.$value || token.value;
+	const color = new Color(systemColorTranslation[tokenColor] || tokenColor);
+	return color.toString({format: "hex"});
 }
 
 StyleDictionary.registerTransform({
 	name: "system/colors",
 	type: `value`,
 	transitive: true,
-	matcher: isSystemColor,
-	transformer: (token) => {
-		const tokenColor = token.$value || token.value;
-		const color = new Color(systemColorTranslation[tokenColor] || tokenColor);
-		return color.toString({format: "hex"});
-	}
+	matcher,
+	transformer
 })
 
 
+module.exports = {transformer, matcher};
 
