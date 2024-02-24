@@ -9,7 +9,6 @@
  * Copyright (c) 2023 Egor Kloos
  */
 
-
 const path = require('path');
 
 const { cssPropExtension } = require(path.join(__dirname, 'defaults.cjs'));

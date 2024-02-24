@@ -6,5 +6,5 @@
 		"target": "esnext",
 		"moduleResolution": "node"
 	},
-	"exclude": ["./node_modules", "dist", "**/build/*.js", "**/*/baseCSSProperties.js"]
+	"exclude": ["./node_modules", "dist", "**/build/*.js", "./utils/scripts/*.js", "**/*/baseCSSProperties.js"]
 }

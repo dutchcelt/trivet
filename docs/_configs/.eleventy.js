@@ -9,7 +9,7 @@ let importscope = '@trvt';
 let scopeReg = new RegExp(importscope, 'i');
 
 const depsFile = fs.readFileSync(path.resolve('.', 'package.json'));
-const depsObject = JSON.parse(depsFile);
+const depsObject = JSON.parse(depsFile.toString());
 const importArr = Object.keys(depsObject.devDependencies).filter(key =>
 	scopeReg.test(key)
 );

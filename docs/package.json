@@ -15,7 +15,7 @@
 		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"eleventy:develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve ",
 		"eleventy:watch": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --watch",
-		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath theme --buildPath styles -m"
+		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
 	},
 	"devDependencies": {
 		"lightningcss": "^1.22.0",

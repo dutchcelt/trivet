@@ -73,6 +73,7 @@ function getFileContent(options, destination) {
 				sourceMap: false,
 			}).code.toString();
 		}
+		console.log(filePath);
 		fs.writeFileSync(filePath, cssString || transformedData);
 	}
 }

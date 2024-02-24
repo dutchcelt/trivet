@@ -22,4 +22,5 @@ export class TrvtArticle extends TrivetElement {
 		this.template = contentTemplate;
 	}
 }
+// @ts-ignore
 customElements.define('trvt-article', TrvtArticle);
