@@ -31,12 +31,14 @@ class TrivetElement extends HTMLElement {
 	get shadow() {
 		return this.#shadowRoot;
 	}
+
 	/**
 	 * @returns {HTMLElement}
 	 */
 	get shadowFragment() {
 		return this.shadow.querySelector('*');
 	}
+
 	/**
 	 * Get shadowStyleSheets
 	 * @returns {CSSStyleSheet | CSSStyleSheet[]}
@@ -44,6 +46,7 @@ class TrivetElement extends HTMLElement {
 	get shadowStyleSheets() {
 		return this.#shadowStyles;
 	}
+
 	/**
 	 * Set shadowStyleSheets
 	 * @param {CSSStyleSheet | CSSStyleSheet[]} styles
@@ -59,12 +62,26 @@ class TrivetElement extends HTMLElement {
 	}
 
 	/**
+	 * Adds CSS properties to the host element of a shadow DOM.
+	 * @param {string[]} propsArray - An array of CSS properties to be added.
+	 */
+	set hostCssProperties(propsArray) {
+		const sheet = new CSSStyleSheet();
+		const shadowSheets = this.shadow.adoptedStyleSheets;
+		sheet.replaceSync(`:host { ${propsArray.join(';')} }`);
+		if (!shadowSheets.includes(sheet)) {
+			this.shadow.adoptedStyleSheets = [...shadowSheets, sheet];
+		}
+	}
+
+	/**
 	 * Get template
 	 * @type {string}  - Type of template
 	 */
 	get template() {
 		return this.#template;
 	}
+
 	/**
 	 * @param {string} str - Type of Template
 	 */
@@ -88,4 +105,5 @@ class TrivetElement extends HTMLElement {
 		this.#template = undefined;
 	}
 }
+
 export { trivetCSS as styles, TrivetElement, cssLayerDefinitions };

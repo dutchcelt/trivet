@@ -1,2 +1,2 @@
-export { TrvtOl, TrvtUl } from './src/trvt-lists.js';
-export { TrvtLi } from './src/trvt-li.js';
+export { TrvtOl, TrvtUl } from './src/lists.js';
+export { TrvtLi } from './src/li.js';
