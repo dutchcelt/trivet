@@ -1,12 +1,7 @@
 :host {
-	grid-column: 2;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	gap: 1ex 1ch;
-	margin-block-start: var(
-		--trvt-typography-whitespace-default-block-start,
-		1rem
-	);
-	margin-block-end: var(--trvt-typography-whitespace-default-block-end, 1rem);
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1ch;
+  margin-block: 0;
 }
-

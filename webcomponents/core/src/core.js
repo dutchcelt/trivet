@@ -20,7 +20,7 @@ class TrivetElement extends HTMLElement {
 	#shadowRoot;
 	/**  @type {CSSStyleSheet} */
 	#shadowStyles;
-	/** @type {String} */
+	/** @type {string} */
 	#template;
 
 	#render() {
@@ -99,10 +99,9 @@ class TrivetElement extends HTMLElement {
 			/**  @type {boolean} */
 			delegatesFocus: true,
 		};
-
 		this.#shadowRoot = this.attachShadow(this.settings);
+		this.#template = `<slot></slot>`;
 		this.shadowStyleSheets = [...trivetCSS];
-		this.#template = undefined;
 	}
 }
 

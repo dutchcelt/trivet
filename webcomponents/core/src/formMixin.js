@@ -55,7 +55,6 @@ const FormMixin = superClass =>
 		}
 		constructor(...args) {
 			super(...args);
-			this.#internals = this.attachInternals();
 			this.#value = undefined;
 		}
 	};
