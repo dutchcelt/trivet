@@ -100,7 +100,6 @@ class TrivetElement extends HTMLElement {
 			delegatesFocus: true,
 		};
 		this.#shadowRoot = this.attachShadow(this.settings);
-		this.#template = `<slot></slot>`;
 		this.shadowStyleSheets = [...trivetCSS];
 	}
 }

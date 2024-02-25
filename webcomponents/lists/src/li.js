@@ -7,17 +7,17 @@ export class TrvtLi extends TrivetElement {
 		super();
 		this.#internals = this.attachInternals();
 		this.#internals.role = 'listitem';
+
 		this.start = this.shadow.host.parentElement?.dataset?.start;
 		if (this.start) {
 			this.hostCssProperties = ['--ul-marker', `counter(--trivetlist)`];
-			this.value = this.dataset?.value || undefined;
 		}
-		this.value = this.dataset?.value || 0;
-		this.shadowStyleSheets = [trvtItemCSS];
-		this.hostCssProperties = ['--counter-value', `${+this.value - 1}`];
+		this.value = this.dataset?.value || this.start || 0;
 
-		//this.template = `<li class="list-item" role="listitem" value="${this.value}"><slot></slot></li>`;
-		this.template = `<slot></slot>`;
+		this.shadowStyleSheets = [trvtItemCSS];
+		this.hostCssProperties = ['--counter-value', `${this.value}`];
+		this.template = `<div><slot></slot><div>`;
+		// this.setAttribute('role', 'listitem');
 	}
 }
 
