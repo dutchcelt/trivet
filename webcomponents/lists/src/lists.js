@@ -7,7 +7,6 @@ class ListClassElement extends TrivetElement {
 		super();
 		this.#internals = this.attachInternals();
 		this.#internals.role = 'list';
-		this.template = `<slot></slot>`;
 	}
 }
 export class TrvtOl extends ListClassElement {
@@ -15,6 +14,7 @@ export class TrvtOl extends ListClassElement {
 		super();
 		if (!this.dataset?.start) this.shadow.host.dataset.start = 0;
 		this.start = this.dataset.start;
+		this.template = `<slot></slot>`;
 
 		this.hostCssProperties = [
 			`--counter-start: ${+this.start};`,
@@ -29,6 +29,7 @@ customElements.define('trvt-ol', TrvtOl);
 export class TrvtUl extends ListClassElement {
 	constructor() {
 		super();
+		this.template = `<slot></slot>`;
 		this.hostCssProperties = [`--ul-marker: "\\02022";`];
 		this.shadowStyleSheets = [trvtListCSS];
 	}

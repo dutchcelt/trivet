@@ -17,11 +17,10 @@
 }
 
 .list-item:has(> slot) {
-  margin-trim: block;
+	margin-trim: block;
 }
-
 @supports not (margin-trim: block) {
-  .list-item ::slotted(*:first-child) {
+	.list-item ::slotted(*:first-child) {
     margin-block-start: 0 !important;
   }
   .list-item ::slotted(*:last-child) {

@@ -1,20 +1,18 @@
 import { TrivetElement as t } from '@trvt/core';
-import s from './styles-3137dae0.css' assert { type: 'css' };
+import s from './styles-29d47e81.css' assert { type: 'css' };
 import e from './styles-612d5bf0.css' assert { type: 'css' };
 class r extends t {
 	#t;
 	constructor() {
-		super(),
-			(this.#t = this.attachInternals()),
-			(this.#t.role = 'list'),
-			(this.template = '<slot></slot>');
+		super(), (this.#t = this.attachInternals()), (this.#t.role = 'list');
 	}
 }
-class a extends r {
+class i extends r {
 	constructor() {
 		super(),
 			this.dataset?.start || (this.shadow.host.dataset.start = 0),
 			(this.start = this.dataset.start),
+			(this.template = '<slot></slot>'),
 			(this.hostCssProperties = [
 				`--counter-start: ${+this.start};`,
 				'--ul-marker: counter(--trivetlist);',
@@ -22,16 +20,17 @@ class a extends r {
 			(this.shadowStyleSheets = s);
 	}
 }
-customElements.define('trvt-ol', a);
-class i extends r {
+customElements.define('trvt-ol', i);
+class a extends r {
 	constructor() {
 		super(),
+			(this.template = '<slot></slot>'),
 			(this.hostCssProperties = ['--ul-marker: "\\02022";']),
 			(this.shadowStyleSheets = [s]);
 	}
 }
-customElements.define('trvt-ul', i);
-class o extends t {
+customElements.define('trvt-ul', a);
+class l extends t {
 	#t;
 	constructor() {
 		super(),
@@ -43,8 +42,8 @@ class o extends t {
 			(this.value = this.dataset?.value || this.start || 0),
 			(this.shadowStyleSheets = [e]),
 			(this.hostCssProperties = ['--counter-value', `${this.value}`]),
-			(this.template = '<div><slot></slot><div>');
+			(this.template = '<div class="list-item"><slot></slot><div>');
 	}
 }
-customElements.define('trvt-li', o);
-export { o as TrvtLi, a as TrvtOl, i as TrvtUl };
+customElements.define('trvt-li', l);
+export { l as TrvtLi, i as TrvtOl, a as TrvtUl };

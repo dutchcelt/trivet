@@ -16,7 +16,7 @@ export class TrvtLi extends TrivetElement {
 
 		this.shadowStyleSheets = [trvtItemCSS];
 		this.hostCssProperties = ['--counter-value', `${this.value}`];
-		this.template = `<div><slot></slot><div>`;
+		this.template = `<div class="list-item"><slot></slot><div>`;
 		// this.setAttribute('role', 'listitem');
 	}
 }

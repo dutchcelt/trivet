@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.10
+
+### Patch Changes
+
+- Refactored lists and fixed some cli buggs
+
 ## 0.11.9
 
 ### Patch Changes

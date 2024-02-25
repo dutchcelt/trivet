@@ -29,7 +29,7 @@
 				}
 			},
 			"primary-inverted": {
-				"value": "{color.lib.indigo-3.value}",
+				"value": "{color.lib.indigo-3}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",
@@ -38,7 +38,7 @@
 				}
 			},
 			"secondary": {
-				"value": "{color.base.canvastext.value}",
+				"value": "{color.base.canvastext}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",
@@ -47,7 +47,7 @@
 				}
 			},
 			"secondary-inverted": {
-				"value": "{color.base.canvas.value}",
+				"value": "{color.base.canvas}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",
@@ -56,7 +56,7 @@
 				}
 			},
 			"tertiary": {
-				"value": "{color.base.canvastext.value}",
+				"value": "{color.base.canvastext}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",
@@ -65,7 +65,7 @@
 				}
 			},
 			"tertiary-inverted": {
-				"value": "{color.base.canvas.value}",
+				"value": "{color.base.canvas}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",

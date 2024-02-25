@@ -1,5 +1,4 @@
 :host {
-  grid-column: 2;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 1ch;

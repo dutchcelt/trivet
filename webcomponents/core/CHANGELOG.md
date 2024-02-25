@@ -1,5 +1,13 @@
 # @trvt/core
 
+## 0.9.8
+
+### Patch Changes
+
+- Refactored lists and fixed some cli buggs
+- Updated dependencies
+  - @trvt/designtokens@0.11.10
+
 ## 0.9.7
 
 ### Patch Changes

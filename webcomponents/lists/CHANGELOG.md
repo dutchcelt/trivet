@@ -1,5 +1,13 @@
 # @trvt/lists
 
+## 0.4.6
+
+### Patch Changes
+
+- Refactored lists and fixed some cli buggs
+- Updated dependencies
+  - @trvt/core@0.9.8
+
 ## 0.4.5
 
 ### Patch Changes

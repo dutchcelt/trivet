@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.5.4
+
+### Patch Changes
+
+- Refactored lists and fixed some cli buggs
+- Updated dependencies
+  - @trvt/designtokens@0.11.10
+
 ## 1.5.3
 
 ### Patch Changes

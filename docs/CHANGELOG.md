@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.11
+
+### Patch Changes
+
+- Refactored lists and fixed some cli buggs
+
 ## 0.2.10
 
 ### Patch Changes

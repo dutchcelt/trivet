@@ -2,7 +2,7 @@
 	"color": {
 		"base": {
 			"light": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",
@@ -11,14 +11,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"dark": {
-				"value": "{color.lib.sand-11.value}",
+				"value": "{color.lib.sand-11}",
 				"$extensions": {
 					"css.property.rule": {
 						"syntax": "<color>",
@@ -27,7 +27,7 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-1.value}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}
@@ -70,7 +70,7 @@
 				}
 			},
 			"canvas": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -80,14 +80,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"canvastext": {
-				"value": "{color.lib.sand-11.value}",
+				"value": "{color.lib.sand-11}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -97,7 +97,7 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-1.value}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}
@@ -185,7 +185,7 @@
 				}
 			},
 			"buttontext": {
-				"value": "{color.lib.sand-11.value}",
+				"value": "{color.lib.sand-11}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -195,7 +195,7 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-1.value}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}

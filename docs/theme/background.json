@@ -2,7 +2,7 @@
 	"color": {
 		"background": {
 			"canvas": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -12,14 +12,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"viewport": {
-				"value": "{color.base.canvas.value}",
+				"value": "{color.base.canvas}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -29,14 +29,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.base.canvastext.value}"
+								"value": "{color.base.canvastext}"
 							}
 						}
 					}
 				}
 			},
 			"content": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -46,14 +46,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"header": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -63,14 +63,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"icon": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -80,14 +80,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"highlight": {
-				"value": "{color.base.highlight.value}",
+				"value": "{color.base.highlight}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -97,7 +97,7 @@
 				}
 			},
 			"accentcolor": {
-				"value": "{color.base.accentcolor.value}",
+				"value": "{color.base.accentcolor}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -107,7 +107,7 @@
 				}
 			},
 			"buttonface": {
-				"value": "{color.base.buttonface.value}",
+				"value": "{color.base.buttonface}",
 				"comment": "ButtonFace is the standard value but it's very dark.",
 				"type": "color",
 				"$extensions": {
@@ -118,7 +118,7 @@
 				}
 			},
 			"field": {
-				"value": "{color.base.field.value}",
+				"value": "{color.base.field}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -128,7 +128,7 @@
 				}
 			},
 			"selected": {
-				"value": "{color.base.selected.value}",
+				"value": "{color.base.selected}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -151,7 +151,7 @@
 		"surface": {
 			"comment": "A surface is usually reserved for components. It's here for convinence.",
 			"default": {
-				"value": "{color.base.canvas.value}",
+				"value": "{color.base.canvas}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {

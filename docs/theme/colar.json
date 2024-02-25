@@ -2,43 +2,43 @@
 	"color": {
 		"lib": {
 			"gray": {
-				"value": "{color.lib.gray-9.value}"
+				"value": "{color.lib.gray-9}"
 			},
 			"red": {
-				"value": "{color.lib.red-8.value}"
+				"value": "{color.lib.red-8}"
 			},
 			"pink": {
-				"value": "{color.lib.pink-4.value}"
+				"value": "{color.lib.pink-4}"
 			},
 			"grape": {
-				"value": "{color.lib.purple-7.value}"
+				"value": "{color.lib.purple-7}"
 			},
 			"violet": {
-				"value": "{color.lib.violet-8.value}"
+				"value": "{color.lib.violet-8}"
 			},
 			"indigo": {
-				"value": "{color.lib.indigo-11.value}"
+				"value": "{color.lib.indigo-11}"
 			},
 			"blue": {
-				"value": "{color.lib.blue-7.value}"
+				"value": "{color.lib.blue-7}"
 			},
 			"cyan": {
-				"value": "{color.lib.cyan-4.value}"
+				"value": "{color.lib.cyan-4}"
 			},
 			"teal": {
-				"value": "{color.lib.teal-5.value}"
+				"value": "{color.lib.teal-5}"
 			},
 			"green": {
-				"value": "{color.lib.green-9.value}"
+				"value": "{color.lib.green-9}"
 			},
 			"lime": {
-				"value": "{color.lib.lime-7.value}"
+				"value": "{color.lib.lime-7}"
 			},
 			"yellow": {
-				"value": "{color.lib.yellow-5.value}"
+				"value": "{color.lib.yellow-5}"
 			},
 			"orange": {
-				"value": "{color.lib.orange-7.value}"
+				"value": "{color.lib.orange-7}"
 			},
 			"gray-0": {
 				"value": "oklch(0.9839 0.0025 228.78)"

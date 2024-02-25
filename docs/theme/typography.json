@@ -2,7 +2,7 @@
 	"color": {
 		"typography": {
 			"text": {
-				"value": "{color.lib.sand-11.value}",
+				"value": "{color.lib.sand-11}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -12,14 +12,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-1.value}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}
 				}
 			},
 			"text-inverted": {
-				"value": "{color.lib.sand-1.value}",
+				"value": "{color.lib.sand-1}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -29,14 +29,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11.value}"
+								"value": "{color.lib.sand-11}"
 							}
 						}
 					}
 				}
 			},
 			"heading": {
-				"value": "{color.lib.sand-11.value}",
+				"value": "{color.lib.sand-11}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -46,14 +46,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-1.value}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}
 				}
 			},
 			"icon": {
-				"value": "{color.lib.sand-11.value}",
+				"value": "{color.lib.sand-11}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -63,14 +63,14 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-1.value}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}
 				}
 			},
 			"ui": {
-				"value": "{color.base.buttontext.value})",
+				"value": "{color.base.buttontext}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -80,7 +80,7 @@
 				}
 			},
 			"anchor": {
-				"value": "{color.base.linktext.value}",
+				"value": "{color.base.linktext}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -90,7 +90,7 @@
 				}
 			},
 			"anchor-visited": {
-				"value": "{color.base.visitedtext.value}",
+				"value": "{color.base.visitedtext}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -100,7 +100,7 @@
 				}
 			},
 			"anchor-hover": {
-				"value": "{color.base.hovertext.value}",
+				"value": "{color.base.hovertext}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -110,7 +110,7 @@
 				}
 			},
 			"anchor-active": {
-				"value": "{color.base.activetext.value}",
+				"value": "{color.base.activetext}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {

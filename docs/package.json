@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.2.10",
+	"version": "0.2.11",
 	"private": true,
 	"main": "index.html",
 	"files": [],
@@ -25,11 +25,11 @@
 		"@trvt/button": "^0.10.3",
 		"@trvt/card": "^0.7.2",
 		"@trvt/contenttoggle": "^0.4.5",
-		"@trvt/core": "^0.9.6",
+		"@trvt/core": "^0.9.8",
 		"@trvt/datatable": "^0.3.6",
 		"@trvt/dragscroller": "^0.3.5",
 		"@trvt/header": "^0.8.4",
 		"@trvt/layout": "^0.8.5",
-		"@trvt/lists": "^0.4.4"
+		"@trvt/lists": "^0.4.6"
 	}
 }
