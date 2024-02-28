@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.11
+
+### Patch Changes
+
+- Fix for explicit darkmode
+
 ## 0.11.10
 
 ### Patch Changes

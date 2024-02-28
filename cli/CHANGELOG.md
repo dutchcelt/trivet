@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.5.5
+
+### Patch Changes
+
+- Fix for explicit darkmode
+- Updated dependencies
+  - @trvt/designtokens@0.11.11
+
 ## 1.5.4
 
 ### Patch Changes

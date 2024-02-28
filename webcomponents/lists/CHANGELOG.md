@@ -1,5 +1,13 @@
 # @trvt/lists
 
+## 0.4.7
+
+### Patch Changes
+
+- Fix for explicit darkmode
+- Updated dependencies
+  - @trvt/core@0.9.9
+
 ## 0.4.6
 
 ### Patch Changes
