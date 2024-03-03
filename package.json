@@ -61,7 +61,8 @@
 		"lint-staged": "^15.0.2",
 		"prettier": "^2.8.8",
 		"rollup": "^3.26.2",
-		"rollup-plugin-native-css-modules": "^1.1.1"
+		"rollup-plugin-native-css-modules": "^1.1.1",
+		"typescript": "^5.3.3"
 	},
 	"eslintConfig": {
 		"extends": [

@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+// @ts-nocheck
 
 /**
  * @type {Array<{name: string, value: string, syntax: string}>}

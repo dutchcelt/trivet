@@ -1,7 +1,19 @@
+/**
+ * Checks if the given event is a keyboard click event.
+ *
+ * @param {KeyboardEvent} event - The event object to check.
+ * @returns {boolean} Returns true if the event is a keyboard click event, otherwise false.
+ */
 const isKeyboardClickEvent = event =>
 	event.key === ' ' || event.key === 'Enter';
+
+/**
+ * @param {KeyboardEvent} event
+ * @returns {boolean}
+ */
 const isSpaceKeyboardClickEvent = event => event.key === ' ';
 
+// @ts-expect-error
 const EventMixin = superClass =>
 	class extends superClass {
 		#clickHandler() {
@@ -57,6 +69,11 @@ const EventMixin = superClass =>
 			isKeyboardClickEvent(event) && this.#clickHandler();
 		}
 
+		/**
+		 * Creates a new instance of the Constructor class.
+		 *
+		 * @param {...any} args - Any number of arguments.
+		 */
 		constructor(...args) {
 			super(...args);
 			this.addEventListener('click', () => this.#clickHandler());

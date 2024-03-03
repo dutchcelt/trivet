@@ -4,9 +4,17 @@
 	"description": "Card component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
-		"src/*",
-		"build/*"
+		"src",
+		"build"
 	],
+	"exports": {
+		".": {
+			"default": "./index.js"
+		},
+		"./*": {
+			"types": "./build/types/*"
+		}
+	},
 	"type": "modules",
 	"keywords": [
 		"web",

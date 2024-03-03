@@ -4,13 +4,13 @@
 	"type": "module",
 	"main": "index.js",
 	"files": [
-		"src/*",
-		"build/*"
+		"src",
+		"build"
 	],
 	"exports": {
 		"./*": {
-			"types": "./build/types/*",
-			"default": "./build/*"
+			"default": "./build/*",
+			"types": "./build/types/*"
 		}
 	},
 	"description": "A very simple web component base class",
@@ -26,8 +26,5 @@
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
 		"build": "npm run build:rollup",
 		"develop": "npm run build --watch"
-	},
-	"devDependencies": {
-		"typescript": "^5.3.3"
 	}
 }

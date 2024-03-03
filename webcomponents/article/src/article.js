@@ -1,6 +1,4 @@
-// @ts-expect-error
 import { TrivetElement } from '@trvt/core';
-// @ts-expect-error
 import articleCSS from './article.css' assert { type: 'css' };
 
 /**
@@ -16,10 +14,6 @@ const contentTemplate = `
 	</article>
 `;
 
-/**
- * @class
- * @extends TrivetElement
- */
 export class TrvtArticle extends TrivetElement {
 	/** @constructor */
 	constructor() {
@@ -31,5 +25,4 @@ export class TrvtArticle extends TrivetElement {
 	}
 }
 
-// @ts-expect-error
 customElements.define('trvt-article', TrvtArticle);

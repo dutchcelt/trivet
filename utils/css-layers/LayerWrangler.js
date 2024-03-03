@@ -1,7 +1,4 @@
-/**
- * @typedef {import('./cssstylesheet.d').CSSStyleSheet} styleDef
- */
-
+// @ts-nocheck
 import { ErrorMessages } from './ErrorMessages.js';
 import { getAllCssRules } from './getAllCssRules.js';
 import { getLayerName } from './getLayerName.js';
@@ -9,14 +6,13 @@ import { sheetRule } from './sheetRule.js';
 import { isLayer } from './isLayer.js';
 import { filterOutLayers } from './filterOutLayers.js';
 
-/**
- * LayerWrangler tests the compliancy of a given CSS Layer Structure.
- * @type {Object}
- */
 export class LayerWrangler {
 	constructor(opts = {}) {
 		this.layerTested = new Set();
 		this.layerMap = new Map();
+		/**
+		 * @type {(string | any[])[]}
+		 */
 		this.errors = [];
 		this.ErrorMessages = ErrorMessages;
 		this.opts = opts;

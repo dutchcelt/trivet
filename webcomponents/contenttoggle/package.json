@@ -4,10 +4,16 @@
 	"description": "Toggle content as an accordion or as tabs",
 	"main": "index.js",
 	"files": [
-		"src/**/*",
-		"build/**/*"
+		"src",
+		"build"
 	],
-	"type": "modules",
+	"exports": {
+		"./*": {
+			"default": "./build/*",
+			"types": "./build/types/*"
+		}
+	},
+	"type": "module",
 	"keywords": [
 		"web",
 		"components"

@@ -1,11 +1,9 @@
 /**
- * @typedef {import('./cssstylesheet.d').CSSStyleSheet} styleDef
- */
-/**
  * getLayerName
- * @param {styleDef} rule
+ * @param {CSSStyleSheet} rule
  * @returns {string}
  */
 export function getLayerName(rule) {
+	// @ts-expect-error
 	return rule?.name || rule?.layerName || '';
 }

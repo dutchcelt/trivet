@@ -4,15 +4,13 @@
 	"type": "module",
 	"main": "index.js",
 	"files": [
-		"*.js",
-		"*.ts",
-		"src/*",
-		"build/*"
+		"src",
+		"build"
 	],
 	"exports": {
 		"./*": {
-			"types": "./build/types/*",
-			"default": "./*"
+			"default": "./build/*",
+			"types": "./build/types/*"
 		}
 	},
 	"description": "Core loader for Trivet",

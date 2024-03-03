@@ -5,9 +5,15 @@
 	"private": true,
 	"main": "index.js",
 	"files": [
-		"src/*",
-		"build/*"
+		"src",
+		"build"
 	],
+	"exports": {
+		"./*": {
+			"default": "./build/*",
+			"types": "./build/types/*"
+		}
+	},
 	"type": "module",
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",

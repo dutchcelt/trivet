@@ -1,3 +1,4 @@
+// @ts-ignore
 import css from 'rollup-plugin-native-css-modules';
 import { transform } from 'lightningcss';
 import terser from '@rollup/plugin-terser';
@@ -24,7 +25,9 @@ if (isWebcomponent && fs.existsSync(buildfolder)) {
 	fs.rm(buildfolder, { recursive: true, force: true }, () => {});
 }
 
-const compressStylesFunc = css => {
+const compressStylesFunc = (
+	/** @type {ArrayBuffer | SharedArrayBuffer} */ css
+) => {
 	/* eslint-disable no-undef */
 	return transform({
 		code: Buffer.from(css),
@@ -47,6 +50,7 @@ export default [
 			css({
 				transform: compressStylesFunc,
 			}),
+			// @ts-ignore
 			terser(),
 		],
 		external: [

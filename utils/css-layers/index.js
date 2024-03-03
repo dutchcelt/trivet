@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { LayerWrangler } from './LayerWrangler.js';
 /**
  * Strings for initial css layer validation message

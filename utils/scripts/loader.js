@@ -1,3 +1,4 @@
+// @ts-nocheck
 // const meta = document.querySelector('meta[name=trvt-components]');
 // console.log(meta.content, meta.hasAttribute('devmode'));
 // if (meta) {

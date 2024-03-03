@@ -4,9 +4,16 @@
 	"description": "Header component for the Trivet Design System",
 	"main": "index.js",
 	"files": [
-		"src/*",
-		"build/*"
+		"src",
+		"build"
 	],
+	"exports": {
+		"./*": {
+			"default": "./build/*",
+			"types": "./build/types/*"
+		}
+	},
+
 	"type": "module",
 	"keywords": [
 		"web",

@@ -1,14 +1,11 @@
-/**
- * @typedef {import('./cssstylesheet.d').CSSStyleSheet} styleDef
- */
-
+// @ts-nocheck
 /**
  * ErrorMessages
  * @class
  */
 export class ErrorMessages {
 	/**
-	 * @param {styleDef} r - A individual css rule
+	 * @param {CSSStyleSheet} r - A individual css rule
 	 * @param {Object} layerObject - A layer object with all the layer data
 	 */
 	constructor(r, layerObject) {

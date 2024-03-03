@@ -1,6 +1,6 @@
 import t from './styles-1714a140.css' assert { type: 'css' };
 import e from './styles-cbbf372a.css' assert { type: 'css' };
-import s from './styles-cd29e04f.css' assert { type: 'css' };
+import s from './styles-472ece9c.css' assert { type: 'css' };
 import r from './styles-eb16242b.css' assert { type: 'css' };
 import n from './styles-4ef041fc.css' assert { type: 'css' };
 import o from './styles-6fce9174.css' assert { type: 'css' };

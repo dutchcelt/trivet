@@ -1,23 +1,21 @@
 /* Base styles for all Trivet Components */
-// @ts-expect-error: Module has been declared
 import { trivetCSS } from '@trvt/assets';
 
 import { createFragment } from './createFragment.js';
 import { activateColorScheme, colorScheme } from './activateColorScheme.js';
 
 /**
- * Represents the CSS layer definitions obtained from the trivetCSS object.
+ * Represents the CSS layer definitions retrieved from the trivetCSS object.
+ * Contains the CSS rules with names extracted from the trivetCSS object.
  *
- * @type {Array<string>}
+ * @type {string[]}
  * @name cssLayerDefinitions
- * @memberOf trivetCSS[0].cssRules[0]
  */
 const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
 
 /**
  * TrivetElement
  * @class
- * @extends {HTMLElement}
  */
 class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */

@@ -2,12 +2,18 @@
 	"name": "@trvt/button",
 	"version": "0.10.4",
 	"description": "Button component for the Trivet Design System",
-	"type": "modules",
+	"type": "module",
 	"main": "index.js",
 	"files": [
-		"src/*",
-		"build/*"
+		"src",
+		"build"
 	],
+	"exports": {
+		"./*": {
+			"default": "./build/*",
+			"types": "./build/types/*"
+		}
+	},
 	"keywords": [
 		"web",
 		"components"
@@ -15,6 +21,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"scripts": {
+		"postbuild": "npx -y tsc -p tsconfig.json",
 		"build": "rollup -c ../../configs/rollup.config.js",
 		"develop": "npm run build --watch"
 	},
