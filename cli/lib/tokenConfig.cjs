@@ -15,8 +15,7 @@ StyleDictionary.registerTransformGroup({
 
 /**
  * module.exports
- * @typedef {import('./defaults.cjs').Defaults} Defaults
- * @param {Defaults} opts - All the default values
+ * @param {import('./defaults.cjs').Defaults} opts - All the default values
  */
 module.exports = opts => {
 	const filterRegex = new RegExp(opts.exclude, 'i');

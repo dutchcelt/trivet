@@ -7,7 +7,7 @@ const defaultTokensPackagePath = shell.exec('npm ls @trvt/designtokens -ps', {
 const tokensPath = path.join(defaultTokensPackagePath.trim(), 'tokens');
 
 /**
- * The Defaults interface.
+ * The TokenConfig interface.
  * @typedef {Object} Defaults
  * @property {string} buildPath -
  * @property {string} layer -
@@ -22,10 +22,7 @@ const tokensPath = path.join(defaultTokensPackagePath.trim(), 'tokens');
  * @property {boolean} minify -
  */
 
-/**
- * Exports
- * @type {Defaults}
- */
+/** @type {Defaults} */
 module.exports = {
 	buildPath: path.resolve('build', 'css'),
 	layer: '',

@@ -1,10 +1,10 @@
 /**
  * The colorScheme interface.
  * @typedef {object} ColorSchemeInterface
- * @property {object} dark -
- * @property {object} light -
- * @property {string} _active -
- * @property {string} current -
+ * @property {MediaQueryList} dark - The media query for dark color scheme
+ * @property {MediaQueryList} light - The media query for light color scheme
+ * @property {string} _active - The currently active color scheme
+ * @property {false|string=} current - The currently active color scheme
  */
 
 /**
@@ -14,12 +14,13 @@
 const colorScheme = {
 	dark: window.matchMedia('(prefers-color-scheme: dark)'),
 	light: window.matchMedia('(prefers-color-scheme: light)'),
-	_active: undefined,
+	_active: '',
 	get current() {
 		const dark = colorScheme.dark.matches && 'dark';
 		const light = colorScheme.light.matches && 'light';
-		return colorScheme._active || dark || light;
+		return colorScheme._active || dark || light || '';
 	},
+	/**  @param {string} mode */
 	set current(mode) {
 		colorScheme._active = mode;
 	},
@@ -41,9 +42,18 @@ const isValidColorScheme = mode => {
  * @param {string} mode
  * @param {HTMLElement} element
  */
+
+/**
+ * Activate a color scheme on the given element.
+ *
+ * @param {string=} [mode=''] - The color scheme mode to activate. If not specified, no color scheme will be activated.
+ * @param {HTMLElement} [element=document.documentElement] - The HTML element on which to activate the color scheme.
+ */
 function activateColorScheme(mode = '', element = document.documentElement) {
 	const { dataset } = element;
-	dataset.colorScheme = isValidColorScheme(mode) ? mode : colorScheme.current;
+	dataset.colorScheme = isValidColorScheme(mode)
+		? mode
+		: colorScheme.current || '';
 }
 
 export { colorScheme, activateColorScheme };

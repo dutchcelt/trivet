@@ -1,10 +1,19 @@
 {
 	"compilerOptions": {
-		"module": "esnext",
+		"module": "NodeNext",
 		"checkJs": true,
 		"allowJs": true,
-		"target": "esnext",
-		"moduleResolution": "node"
-	},
-	"exclude": ["./node_modules", "dist", "**/build/*.js", "./utils/scripts/*.js", "**/*/baseCSSProperties.js"]
+		"target": "ESNext",
+		"moduleResolution": "NodeNext",
+		"strict": true,
+		"noImplicitThis": true,
+		"composite": true,
+		"emitDeclarationOnly": true,
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"incremental": true,
+		"declaration": true,
+		"declarationMap": true
+	}
 }

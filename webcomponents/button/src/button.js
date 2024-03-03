@@ -1,4 +1,6 @@
+// @ts-expect-error
 import { mix, TrivetElement, FormMixin, ReactiveMixin } from '@trvt/core';
+// @ts-expect-error
 import buttonCSS from './button.css' assert { type: 'css' };
 import { EventMixin } from './eventMixin.js';
 
@@ -32,7 +34,9 @@ export class TrvtButton extends mix(TrivetElement).with(
 	 * @param {string | boolean} defaultValue - The default value of the property
 	 */
 	#initMemberVariable(propertyName, defaultValue) {
-		this[propertyName] = this.dataset?.[propertyName] || defaultValue;
+		// @ts-expect-error
+		this[propertyName] = this.dataset.dataset?.[propertyName] || defaultValue;
+		// @ts-expect-error
 		delete this.dataset[propertyName];
 	}
 

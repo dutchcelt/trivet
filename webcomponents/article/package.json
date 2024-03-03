@@ -7,6 +7,12 @@
 		"src/*",
 		"build/*"
 	],
+	"exports": {
+		"./*": {
+			"types": "./build/types/*",
+			"default": "./build/*"
+		}
+	},
 	"description": "A very simple web component base class",
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
@@ -16,8 +22,12 @@
 		"rollup": "^3.26.2"
 	},
 	"scripts": {
+		"postbuild": "npx -y tsc -p tsconfig.json",
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
 		"build": "npm run build:rollup",
 		"develop": "npm run build --watch"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3"
 	}
 }

@@ -33,6 +33,14 @@ function registerProperty(namespace, component, property) {
  * Registers all base properties using a given configuration object and the registerProperty function.
  * @param {{namespace?: string, component?: string, props: Array<{name: string, value: string, syntax: string}>}} param0 - Parameters object.
  */
+
+/**
+ * Registers base properties for a given namespace and component.
+ *
+ * @param {string} namespace - The namespace to register the properties under.
+ * @param {string} component - The component to register the properties for.
+ * @param {object} props - Additional properties to register (optional).
+ */
 function registerBaseProperties({
 	namespace = 'trvt',
 	component = 'component',

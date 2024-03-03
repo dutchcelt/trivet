@@ -1,0 +1,18 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./build/types",
+		"rootDir": "."
+	},
+	"include": [
+		"src",
+		"./index.js",
+		"./.d.ts"
+	],
+	"exclude": [
+		"build",
+		"dist",
+		"tests",
+		"example"
+	]
+}

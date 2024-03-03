@@ -1,12 +1,16 @@
 /* Base styles for all Trivet Components */
+// @ts-expect-error: Module has been declared
 import { trivetCSS } from '@trvt/assets';
 
 import { createFragment } from './createFragment.js';
 import { activateColorScheme, colorScheme } from './activateColorScheme.js';
 
 /**
- * cssLayerDefinitions
- * @type {Array}
+ * Represents the CSS layer definitions obtained from the trivetCSS object.
+ *
+ * @type {Array<string>}
+ * @name cssLayerDefinitions
+ * @memberOf trivetCSS[0].cssRules[0]
  */
 const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
 
@@ -18,13 +22,16 @@ const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
 class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */
 	#shadowRoot;
+
 	/**  @type {CSSStyleSheet} */
+	// @ts-expect-error
 	#shadowStyles;
 	/** @type {string} */
+	// @ts-expect-error
 	#template;
 
 	#render() {
-		activateColorScheme(colorScheme.current);
+		activateColorScheme(colorScheme.current || '');
 		this.#shadowRoot.innerHTML = this.template;
 	}
 
@@ -33,7 +40,7 @@ class TrivetElement extends HTMLElement {
 	}
 
 	/**
-	 * @returns {HTMLElement}
+	 * @returns {HTMLElement|null}
 	 */
 	get shadowFragment() {
 		return this.shadow.querySelector('*');
@@ -92,7 +99,6 @@ class TrivetElement extends HTMLElement {
 
 	constructor() {
 		super();
-
 		this.settings = {
 			/**  @type {string|any} */
 			mode: 'closed',

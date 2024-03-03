@@ -9,7 +9,7 @@
  * createFragment
  * @param {String} string
  * @param {boolean} fragment
- * @return {DocumentFragment|String| any}
+ * @return {DocumentFragment|String}
  */
 const createFragment = (string, fragment = true) => {
 	const htmlString = `${cleanHTML(string, false)}`;
@@ -60,7 +60,7 @@ function cleanHTML(str, nodes) {
 		if (['src', 'href', 'xlink:href'].includes(name)) {
 			if (val.includes('javascript:') || val.includes('data:')) return true;
 		}
-		if (name.startsWith('on')) return true;
+		return name.startsWith('on');
 	}
 
 	/**

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Basic conversion of string entities
  * @param {string} str

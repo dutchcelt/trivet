@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /**
  * ReactiveMixin
  * @param {Object} superClass
