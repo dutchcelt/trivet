@@ -1,1 +1,1 @@
-@layer design.tokens{[data-color-scheme=dark]{--trvt-color-base-dark:#efefef;--trvt-color-base-light:#999}}
+@layer design.tokens{[data-color-scheme=dark]{color-scheme:dark;--trvt-color-base-dark:#efefef;--trvt-color-base-light:#999}[data-color-scheme=light]{color-scheme:light}}

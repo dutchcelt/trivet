@@ -1,5 +1,14 @@
 # @trvt/core
 
+## 0.9.9
+
+### Patch Changes
+
+- Fix for explicit darkmode
+- Updated dependencies
+  - @trvt/designtokens@0.11.11
+  - @trvt/assets@0.8.5
+
 ## 0.9.8
 
 ### Patch Changes

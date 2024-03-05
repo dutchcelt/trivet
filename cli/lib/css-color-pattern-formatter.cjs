@@ -59,8 +59,8 @@ module.exports = {
 	'css/colorpattern': function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
-		const dataDarkModeWrapper = [`[data-color-scheme='dark'] {`, '', '}'];
-		const dataLightModeWrapper = [`[data-color-scheme='light'] {`, '', '}'];
+		const dataDarkModeWrapper = [`[data-color-scheme='dark'] { color-scheme: dark; `, '', '}'];
+		const dataLightModeWrapper = [`[data-color-scheme='light'] { color-scheme: light; `, '', '}'];
 
 		const str = allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>

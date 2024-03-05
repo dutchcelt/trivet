@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.12
+
+### Patch Changes
+
+- Fix for explicit darkmode
+
 ## 0.2.11
 
 ### Patch Changes
