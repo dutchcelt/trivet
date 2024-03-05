@@ -7,8 +7,8 @@ export class trvtHeaderCell extends TrivetElement {
 		this.setAttribute('role', 'columnheader');
 		this.shadowStyleSheets = [...styles, headerCellCSS];
 
-		this.colspan = this.getAttribute('colspan') || 1;
-		this.rowspan = this.getAttribute('rowspan') || 1;
+		this.colspan = this.getAttribute('colspan') || '1';
+		this.rowspan = this.getAttribute('rowspan') || '1';
 		this.colstart = this.getAttribute('colstart') || 'auto';
 		this.style.setProperty('--trvt-cell-row-span', this.rowspan);
 		this.style.setProperty('--trvt-cell-col-span', this.colspan);

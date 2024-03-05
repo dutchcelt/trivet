@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styles } from '@trvt/core';
 import toggleContainerCSS from './toggleContainer.css' assert { type: 'css' };
 

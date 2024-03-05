@@ -11,8 +11,8 @@ export class trvtCell extends TrivetElement {
 			<div><slot></slot></div>
 		`;
 
-		this.colspan = this.getAttribute('colspan') || 1;
-		this.rowspan = this.getAttribute('rowspan') || 1;
+		this.colspan = this.getAttribute('colspan') || '1';
+		this.rowspan = this.getAttribute('rowspan') || '1';
 		this.colstart = this.getAttribute('colstart') || 'auto';
 
 		this.style.setProperty('--trvt-cell-row-span', this.rowspan);

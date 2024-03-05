@@ -5,15 +5,16 @@ import summary from './summary.css' assert { type: 'css' };
 export class TrvtToggleDetails extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
+		this.shadow = this.attachShadow({ mode: 'open' });
 		this.render();
 		this.isReady = false;
-		this.shadowRoot.adoptedStyleSheets = [...styles, details, summary];
-		this.detailsElement = this.shadowRoot.querySelector('details');
-		this.contentElement = this.shadowRoot.querySelector('.content');
+		this.shadow.adoptedStyleSheets = [...styles, details, summary];
+		this.detailsElement = this.shadow.querySelector('details');
+		this.contentElement = this.shadow.querySelector('.content');
 	}
+
 	connectedCallback() {
-		this.detailsElement.addEventListener('toggle', this);
+		this.detailsElement?.addEventListener('toggle', this);
 		this.toggleEvent = new Event('toggle', {
 			bubbles: true,
 			cancelable: true,
@@ -23,19 +24,38 @@ export class TrvtToggleDetails extends HTMLElement {
 			this.isReady = true;
 		}, 1500);
 	}
+
+	/**
+	 * Calls when the value of an observed attribute is changed.
+	 *
+	 * @param {string} attributeName - The name of the attribute that has changed.
+	 * @param {any} oldValue - The previous value of the attribute.
+	 * @param {any} newValue - The new value of the attribute.
+	 * @return {void}
+	 */
 	attributeChangedCallback(attributeName, oldValue, newValue) {
 		if (oldValue === newValue) return;
 		const isOpen = newValue !== null;
-		this.detailsElement.toggleAttribute('open', isOpen);
-		this.contentElement.toggleAttribute('inert', !isOpen);
+		this.detailsElement?.toggleAttribute('open', isOpen);
+		this.contentElement?.toggleAttribute('inert', !isOpen);
 	}
+
 	static get observedAttributes() {
 		return ['open'];
 	}
+
+	/**
+	 * @param {Event & { target: EventTarget }} event
+	 * @this {HTMLElement & { toggleHostWith: Function}}
+	 * */
 	handleEvent(event) {
 		if (event.type === 'toggle') this.toggleHostWith(event.target);
 	}
 
+	/**
+	 * @param {HTMLDetailsElement} target
+	 * @this {TrvtToggleDetails & { toggleEvent: Event, isReady: boolean} }
+	 */
 	toggleHostWith(target) {
 		this.toggleAttribute('open', target.open);
 		if (target.open) {
@@ -48,8 +68,9 @@ export class TrvtToggleDetails extends HTMLElement {
 				});
 		}
 	}
+
 	render() {
-		this.shadowRoot.innerHTML = `
+		this.shadow.innerHTML = `
     		<details>
 				<summary>${this.title}</summary>
 				<div class="content"><slot></slot></div>
@@ -57,4 +78,5 @@ export class TrvtToggleDetails extends HTMLElement {
 		`;
 	}
 }
+
 customElements.define('trvt-toggle-details', TrvtToggleDetails);

@@ -8,14 +8,13 @@
 		"build"
 	],
 	"exports": {
-		".": {
-			"default": "./index.js"
-		},
+		".": "./index.js",
 		"./*": {
+			"default": "./build/*",
 			"types": "./build/types/*"
 		}
 	},
-	"type": "modules",
+	"type": "module",
 	"keywords": [
 		"web",
 		"components"
@@ -27,6 +26,7 @@
 		"rollup": "^3.26.2"
 	},
 	"scripts": {
+		"postbuild": "npx -y tsc -p tsconfig.json",
 		"build:rollup": "rollup -c ../../configs/rollup.config.js",
 		"build": "npm run build:rollup",
 		"develop": "npm run build --watch"

@@ -6,7 +6,10 @@ export class trvtRowGroup extends TrivetElement {
 		super();
 
 		this.setAttribute('role', 'rowgroup');
-		this.style.setProperty('--trvt-row-length', this.children.length);
+		this.style.setProperty(
+			'--trvt-row-length',
+			this.children.length.toString()
+		);
 		this.shadowStyleSheets = [...styles, rowgroupCSS];
 
 		this.template = `<slot></slot>`;

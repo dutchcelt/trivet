@@ -19,7 +19,11 @@ export class TrvtDragScroller extends TrivetElement {
 	 * @param {Event} event
 	 */
 	handleEvent(event) {
-		if (this.#validEventTypes.test(event.type)) this[event.type](event);
+		const type = event.type;
+		if (this.#validEventTypes.test(event.type)) {
+			// @ts-expect-error
+			this[type](event);
+		}
 	}
 	/**
 	 * mousedown

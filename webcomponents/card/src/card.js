@@ -11,7 +11,6 @@ const ELEMENT_NAME = 'trvt-card';
 /**
  * @class
  * @classdesc Represents a TrvtCard which extends TrivetElement.
- * @extends TrivetElement
  */
 export class TrvtCard extends TrivetElement {
 	/**
@@ -20,7 +19,7 @@ export class TrvtCard extends TrivetElement {
 	 */
 	constructor() {
 		super();
-		/** @type {CSSStyleSheet} */
+		/** @type {CSSStyleSheet[]} */
 		this.shadowStyleSheets = [cardCSS];
 		this.template = this.contentTemplate();
 	}

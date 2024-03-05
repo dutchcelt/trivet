@@ -8,6 +8,7 @@
 		"build"
 	],
 	"exports": {
+		".": "./index.js",
 		"./*": {
 			"default": "./build/*",
 			"types": "./build/types/*"
