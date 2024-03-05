@@ -18,9 +18,7 @@ const s = (t, e = !0) => {
 				!(
 					!['src', 'href', 'xlink:href'].includes(t) ||
 					(!s.includes('javascript:') && !s.includes('data:'))
-				) ||
-				!!t.startsWith('on') ||
-				void 0
+				) || t.startsWith('on')
 			);
 		}
 		function a(t) {
@@ -39,11 +37,11 @@ const s = (t, e = !0) => {
 const r = {
 	dark: window.matchMedia('(prefers-color-scheme: dark)'),
 	light: window.matchMedia('(prefers-color-scheme: light)'),
-	_active: void 0,
+	_active: '',
 	get current() {
 		const t = r.dark.matches && 'dark',
 			e = r.light.matches && 'light';
-		return r._active || t || e;
+		return r._active || t || e || '';
 	},
 	set current(t) {
 		r._active = t;
@@ -54,7 +52,7 @@ r.dark.addEventListener('change', () => a()),
 const n = t => 'string' == typeof t && /light|dark/.test(t);
 function a(t = '', e = document.documentElement) {
 	const { dataset: s } = e;
-	s.colorScheme = n(t) ? t : r.current;
+	s.colorScheme = n(t) ? t : r.current || '';
 }
 const o = t[0].cssRules[0].nameList;
 class i extends HTMLElement {
@@ -62,7 +60,7 @@ class i extends HTMLElement {
 	#e;
 	#s;
 	#r() {
-		a(r.current), (this.#t.innerHTML = this.template);
+		a(r.current || ''), (this.#t.innerHTML = this.template);
 	}
 	get shadow() {
 		return this.#t;
@@ -248,8 +246,8 @@ const h = new (class {
 				super(...t), (this.contextCSS = new CSSStyleSheet());
 			}
 		},
-	g = t => new v(t);
-class v {
+	g = t => new S(t);
+class S {
 	constructor(t) {
 		this.superclass = t || class {};
 	}
