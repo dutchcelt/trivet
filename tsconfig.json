@@ -15,5 +15,12 @@
 		"incremental": true,
 		"declaration": true,
 		"declarationMap": true
-	}
+	},
+	"exclude": [
+		"./assets",
+		"./utils",
+		"./public",
+		"./designtokens",
+		"./docs"
+	]
 }

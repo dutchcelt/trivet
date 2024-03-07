@@ -9,6 +9,7 @@
 	},
 	"description": "Trivet, a system for building webpages",
 	"scripts": {
+		"types": "npm --workspaces run types --if-present --silent",
 		"build": "npm run test && npm run build:workspaces && npm run build:docs",
 		"build:workspaces": "npm --workspaces run build --if-present --silent",
 		"build:docs": "npm -w @trvt/docs run build:all --silent",

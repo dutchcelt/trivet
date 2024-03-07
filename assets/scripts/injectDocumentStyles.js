@@ -1,3 +1,10 @@
+/**
+ * Injects an array of CSS stylesheets into the current document.
+ *
+ * @param {string[]} styleSheetArray - An array of CSS stylesheets to inject into the document.
+ * @param {string} [tag='unknown'] - An optional tag to identify the injected stylesheets.
+ * @returns {void}
+ */
 const injectDocumentStyles = (styleSheetArray, tag = 'unknown') => {
 	styleSheetArray.forEach(async styles => {
 		let styleSheet;

@@ -22,7 +22,7 @@
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"scripts": {
-		"postbuild": "npx -y tsc -p tsconfig.json",
+		"types": "npx -y tsc -p tsconfig.json",
 		"build": "rollup -c ../../configs/rollup.config.js",
 		"develop": "npm run build --watch"
 	},

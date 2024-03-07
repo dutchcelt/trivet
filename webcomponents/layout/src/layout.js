@@ -2,10 +2,20 @@ import { TrivetElement } from '@trvt/core';
 import layoutCSS from './layout.css' assert { type: 'css' };
 
 /**
+ * @typedef {{navigation: string, footer: string, sidebar: string, header: string, main: string, notifications: string}} SlotsObject
+ */
+
+/**
  * Lookup of the slots called in the Light DOM
  * @param elms
  * @returns {string[]}
  * @private
+ */
+
+/**
+ * Returns an array of slot names for the given elements.
+ * @param {HTMLElement[]} elms - The list of elements to retrieve slot names from.
+ * @returns {(string|null)[]}
  */
 const __getSlotNames = elms =>
 	[...elms]
@@ -19,15 +29,23 @@ const __getSlotNames = elms =>
  * @returns {*}
  * @private
  */
+
+/**
+ * Returns a new array of slot names from the provided control array, preserving the order
+ * in which the slot names appear in the slots array.
+ *
+ * @param {string[]} control - The array of slot names to be filtered.
+ * @param {(string|null)[]} slots - The array of slot names to be used for filtering.
+ */
 const __sortSlotNames = (control, slots) =>
 	control.filter(c => slots.some(s => s === c));
 
 export class TrvtLayout extends TrivetElement {
 	constructor() {
 		super();
-
 		this.slotNames = __sortSlotNames(
 			Object.keys(this.#slotMarkupObject()),
+			// @ts-expect-error
 			__getSlotNames(this.children)
 		);
 		this.type = this.dataset?.type || 'page';
@@ -38,18 +56,16 @@ export class TrvtLayout extends TrivetElement {
 		this.#render(this.shadowFragment);
 	}
 
-	connectedCallback() {}
-
 	/**
 	 * Get the main (ie default) slot or if not available the first available slot.
 	 * @param {string} name
-	 * @returns {Element}
+	 * @returns {Element|null}
 	 */
 	#defaultSlot(name = 'main') {
 		const slotAttribute = this.slotNames.includes(name)
 			? `[name=${name}]`
 			: '[name]';
-		return this.shadowRoot.querySelector(`slot${slotAttribute}`);
+		return this.shadow.querySelector(`slot${slotAttribute}`);
 	}
 
 	/**
@@ -59,6 +75,7 @@ export class TrvtLayout extends TrivetElement {
 	#render(element) {
 		if (element) {
 			element.classList.add(this.type, this.position);
+
 			element.innerHTML = this.slotNames.length
 				? this.#template()
 				: `<slot></slot>`;
@@ -66,18 +83,24 @@ export class TrvtLayout extends TrivetElement {
 	}
 
 	/**
-	 * Assemble the slots called from the markup
-	 * @returns {string}
+	 * Returns a concatenated string of slot markup objects.
+	 *
+	 * @returns {string} The concatenated string containing the slot markup objects.
 	 */
 	#template() {
-		return this.slotNames
-			.map(name => this.#slotMarkupObject()[name] || ``)
-			.join(``);
+		const templates = this.#slotMarkupObject();
+		/** @type {string[]} */
+		return (
+			this.slotNames
+				// @ts-expect-error
+				.map(name => templates[name] || ``)
+				.join(``)
+		);
 	}
 
 	/**
 	 * Each slot has a wrapper to avoid styling the slots directly.
-	 * @returns {{navigation: string, footer: string, sidebar: string, header: string, main: string, notifications: string}}
+	 * @returns {SlotsObject}
 	 */
 	#slotMarkupObject() {
 		return {

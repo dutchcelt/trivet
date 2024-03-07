@@ -7,7 +7,7 @@
 	"include": [
 		"src",
 		"index.js",
-		".d.ts"
+		"../webcomponents.d.ts"
 	],
 	"exclude": [
 		"build",

@@ -4,23 +4,24 @@ import headerCSS from './header.css' assert { type: 'css' };
 export class TrvtHeader extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
+		this.shadow = this.attachShadow({ mode: 'open' });
 		this.context = this.dataset.trvtContext || '';
 		this.imageSource = this.dataset.trvtSrc || '';
 		this.titleString = this.dataset.trvtTitle || '';
 		this.size = this.dataset.trvtSize || 'l';
 		this.gradient = this.dataset.trvtGradient || '';
+		/* @type {CSSStyleSheet} */
 		this.dynamicCustomStyles = new CSSStyleSheet();
 	}
 
 	connectedCallback() {
-		this.shadowRoot.adoptedStyleSheets = [
+		this.shadow.adoptedStyleSheets = [
 			...styles,
 			headerCSS,
 			this.dynamicCustomStyles,
 		];
-		this.heading = this.shadowRoot.querySelector('h1');
-		this.shadowRoot.appendChild(this.render());
+		this.heading = this.shadow.querySelector('h1');
+		this.shadow.appendChild(this.render());
 		this.#setStyle();
 	}
 
@@ -28,9 +29,12 @@ export class TrvtHeader extends HTMLElement {
 		return ['data-trvt-src', 'data-trvt-title'];
 	}
 	/**
-	 * @param name
-	 * @param oldValue
-	 * @param newValue
+	 * Method to handle attribute changes in the custom element.
+	 *
+	 * @param {string} name - The name of the attribute that has changed.
+	 * @param {any} oldValue - The previous value of the attribute.
+	 * @param {any} newValue - The new value of the attribute.
+	 * @returns {void}
 	 */
 	attributeChangedCallback(name, oldValue, newValue) {
 		const attributeValue = newValue || oldValue;
@@ -52,9 +56,8 @@ export class TrvtHeader extends HTMLElement {
 
 	/**
 	 * Add the css prop to an adopted stylesheet
-	 * @private
 	 */
-	#setStyle() {
+	async #setStyle() {
 		const url = this.imageSource
 			? ` --header-image-src: url('${encodeURI(this.imageSource)}')`
 			: '';
@@ -62,7 +65,7 @@ export class TrvtHeader extends HTMLElement {
 			? `--header-gradient: ${this.gradient};`
 			: '';
 		const rule = `:host(:where(trvt-header)) { ${url} ${gradient}; }`;
-		this.dynamicCustomStyles.replace(rule);
+		await this.dynamicCustomStyles.replace(rule);
 	}
 
 	/**

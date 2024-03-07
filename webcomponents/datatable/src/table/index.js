@@ -4,9 +4,6 @@ import { styles, TrivetElement } from '@trvt/core';
 
 /**
  * Represents a custom table element that extends TrivetElement.
- *
- * @extends TrivetElement
- * @property
  */
 export class trvtTable extends TrivetElement {
 	constructor() {
