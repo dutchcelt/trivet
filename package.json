@@ -32,6 +32,7 @@
 		"url": "git+https://github.com/dutchcelt/trivet.git"
 	},
 	"workspaces": [
+		"storybook",
 		"assets",
 		"docs",
 		"cli",
