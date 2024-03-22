@@ -31,6 +31,7 @@ const globalCssVars = Object.freeze({
 		document.adoptedStyleSheets.push(css),
 		css.cssRules[0] // Comma Operator, last value is returned
 	))(new CSSStyleSheet()),
+	/** @param {string} prop - The custom property to add. */
 	addProp(prop) {
 		const [propName, propValue] = prop.replace(/;|\s/gi, '').split(':');
 		/^--/.test(propName)
