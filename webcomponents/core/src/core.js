@@ -24,7 +24,7 @@ const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
  * @property {(type: string) => void} addProp - add global CSS properties
  * @property {CSSStyleDeclaration} style - Getter/Setter for CSSStyleDeclaration
  */
-export const globalCssVar = Object.freeze({
+const globalCssVars = Object.freeze({
 	// Using IIFE to automatically configure a CSSStyleRule.
 	cssRule: (css => (
 		css.replaceSync(':root{}'),
@@ -140,4 +140,9 @@ class TrivetElement extends HTMLElement {
 	}
 }
 
-export { trivetCSS as styles, TrivetElement, cssLayerDefinitions };
+export {
+	trivetCSS as styles,
+	TrivetElement,
+	cssLayerDefinitions,
+	globalCssVars,
+};

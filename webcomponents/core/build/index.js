@@ -54,8 +54,28 @@ function a(t = '', e = document.documentElement) {
 	const { dataset: s } = e;
 	s.colorScheme = n(t) ? t : r.current || '';
 }
-const o = t[0].cssRules[0].nameList;
-class i extends HTMLElement {
+const o = t[0].cssRules[0].nameList,
+	i = Object.freeze({
+		cssRule:
+			((c = new CSSStyleSheet()),
+			c.replaceSync(':root{}'),
+			document.adoptedStyleSheets.push(c),
+			c.cssRules[0]),
+		addProp(t) {
+			const [e, s] = t.replace(/;|\s/gi, '').split(':');
+			/^--/.test(e)
+				? this.style.setProperty(e, s)
+				: console.error(`"${e}" is not a valid Custom Property ident`);
+		},
+		get style() {
+			return this.cssRule.style;
+		},
+		set style(t) {
+			[t].flat().forEach(this.addProp.bind(this));
+		},
+	});
+var c;
+class l extends HTMLElement {
 	#t;
 	#e;
 	#s;
@@ -97,11 +117,11 @@ class i extends HTMLElement {
 			(this.shadowStyleSheets = [...t]);
 	}
 }
-const c = t => {
+const h = t => {
 		const e = document.createElement('div');
 		return (e.innerText = t), e.innerHTML;
 	},
-	l = (t, e, s = {}) => {
+	d = (t, e, s = {}) => {
 		Object.defineProperty(t, e, {
 			enumerable: !1,
 			configurable: !0,
@@ -114,7 +134,7 @@ const c = t => {
 			},
 		});
 	};
-const h = new (class {
+const u = new (class {
 		#n;
 		constructor() {
 			(this.#n = document.createElement('div')), (this.store = {});
@@ -123,7 +143,7 @@ const h = new (class {
 			const s = t || 'anonymous';
 			this[s]
 				? console.warn(`Can't register event '${s}' because it already exists.`)
-				: (l(this, s), this.#n.addEventListener(s, e));
+				: (d(this, s), this.#n.addEventListener(s, e));
 		}
 		remove(t, e) {
 			this[t]
@@ -141,7 +161,7 @@ const h = new (class {
 							for (const [s, r] of Object.entries(t)) {
 								const n = typeof t[s];
 								/string|boolean|number/.test(n)
-									? (e[s] = 'string' === n ? c(r) : r)
+									? (e[s] = 'string' === n ? h(r) : r)
 									: console.warn(
 											`Trivet: Detail property '${s}' of type '${n}' is prohibited and has been removed`
 									  );
@@ -155,12 +175,12 @@ const h = new (class {
 				  );
 		}
 	})(),
-	d = (t, s) => {
+	m = (t, s) => {
 		(Array.isArray(t) ? t : Object.keys(t).map(e => t[e])).forEach(t =>
 			e(t, s)
 		);
 	},
-	u = t =>
+	S = t =>
 		class extends t {
 			#a;
 			#o;
@@ -217,7 +237,7 @@ const h = new (class {
 				super(...t), (this.#o = void 0);
 			}
 		},
-	m = t =>
+	g = t =>
 		class extends t {
 			attributeChangedCallback(...t) {
 				const [e, s, r] = t;
@@ -246,8 +266,8 @@ const h = new (class {
 				super(...t), (this.contextCSS = new CSSStyleSheet());
 			}
 		},
-	g = t => new S(t);
-class S {
+	y = t => new p(t);
+class p {
 	constructor(t) {
 		this.superclass = t || class {};
 	}
@@ -256,14 +276,15 @@ class S {
 	}
 }
 export {
-	u as FormMixin,
-	m as ReactiveMixin,
-	i as TrivetElement,
+	S as FormMixin,
+	g as ReactiveMixin,
+	l as TrivetElement,
 	a as activateColorScheme,
 	r as colorScheme,
 	s as createFragment,
 	o as cssLayerDefinitions,
-	h as dataBus,
-	d as fontsLoader,
-	g as mix,
+	u as dataBus,
+	m as fontsLoader,
+	i as globalCssVars,
+	y as mix,
 };

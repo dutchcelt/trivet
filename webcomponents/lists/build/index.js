@@ -10,11 +10,11 @@ class r extends t {
 class i extends r {
 	constructor() {
 		super(),
-			this.dataset?.start || (this.shadow.host.dataset.start = 0),
+			this.dataset?.start || (this.dataset.start = '0'),
 			(this.start = this.dataset.start),
 			(this.template = '<slot></slot>'),
 			(this.hostCssProperties = [
-				`--counter-start: ${+this.start};`,
+				`--counter-start: ${this.start};`,
 				'--ul-marker: counter(--trivetlist);',
 			]),
 			(this.shadowStyleSheets = s);
