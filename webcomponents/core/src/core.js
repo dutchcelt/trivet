@@ -14,6 +14,38 @@ import { activateColorScheme, colorScheme } from './activateColorScheme.js';
 const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
 
 /**
+ * Global CSS Variable Object
+ * This object provides a convenient way to manage global CSS variables.
+ * @example globalCssVar.style = "--color: rebeccapurple";
+ * @example globalCssVar.style = ["--weight: 100;", "--size: 4rem;"];
+ *
+ * @type {object}
+ * @property {CSSStyleRule} cssRule - CSSStyleRule for managing global Custom Properties.
+ * @property {(type: string) => void} addProp - add global CSS properties
+ * @property {CSSStyleDeclaration} style - Getter/Setter for CSSStyleDeclaration
+ */
+export const globalCssVar = Object.freeze({
+	// Using IIFE to automatically configure a CSSStyleRule.
+	cssRule: (css => (
+		css.replaceSync(':root{}'),
+		document.adoptedStyleSheets.push(css),
+		css.cssRules[0] // Comma Operator, last value is returned
+	))(new CSSStyleSheet()),
+	addProp(prop) {
+		const [propName, propValue] = prop.replace(/;|\s/gi, '').split(':');
+		/^--/.test(propName)
+			? this.style.setProperty(propName, propValue)
+			: console.error(`"${propName}" is not a valid Custom Property ident`);
+	},
+	get style() {
+		return this.cssRule.style;
+	},
+	set style(properties) {
+		[properties].flat().forEach(this.addProp.bind(this));
+	},
+});
+
+/**
  * TrivetElement
  * @class
  */
