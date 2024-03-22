@@ -41,6 +41,7 @@ const globalCssVars = Object.freeze({
 	get style() {
 		return this.cssRule.style;
 	},
+
 	set style(properties) {
 		[properties].flat().forEach(this.addProp.bind(this));
 	},
@@ -54,9 +55,6 @@ class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */
 	#shadowRoot;
 
-	/**  @type {CSSStyleSheet} */
-	// @ts-expect-error
-	#shadowStyles;
 	/** @type {string} */
 	// @ts-expect-error
 	#template;
@@ -82,7 +80,7 @@ class TrivetElement extends HTMLElement {
 	 * @returns {CSSStyleSheet | CSSStyleSheet[]}
 	 */
 	get shadowStyleSheets() {
-		return this.#shadowStyles;
+		return this.shadow.adoptedStyleSheets;
 	}
 
 	/**
@@ -92,9 +90,8 @@ class TrivetElement extends HTMLElement {
 	set shadowStyleSheets(styles) {
 		const sheets = [styles].flat();
 		for (const ss of sheets) {
-			const shadowSheets = this.shadow.adoptedStyleSheets;
-			if (!shadowSheets.includes(ss)) {
-				this.shadow.adoptedStyleSheets = [...shadowSheets, ss];
+			if (!this.shadow.adoptedStyleSheets.includes(ss)) {
+				this.shadow.adoptedStyleSheets.push(ss);
 			}
 		}
 	}
@@ -105,10 +102,9 @@ class TrivetElement extends HTMLElement {
 	 */
 	set hostCssProperties(propsArray) {
 		const sheet = new CSSStyleSheet();
-		const shadowSheets = this.shadow.adoptedStyleSheets;
 		sheet.replaceSync(`:host { ${propsArray.join(';')} }`);
-		if (!shadowSheets.includes(sheet)) {
-			this.shadow.adoptedStyleSheets = [...shadowSheets, sheet];
+		if (!this.shadow.adoptedStyleSheets.includes(sheet)) {
+			this.shadow.adoptedStyleSheets.push(sheet);
 		}
 	}
 
