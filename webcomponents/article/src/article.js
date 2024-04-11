@@ -1,5 +1,5 @@
 import { TrivetElement } from '@trvt/core';
-import articleCSS from './article.css' assert { type: 'css' };
+import articleCSS from './article.css' with { type: 'css' };
 
 /**
  * @type {string}
