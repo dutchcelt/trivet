@@ -1,9 +1,9 @@
 import t from './styles-1714a140.css' assert { type: 'css' };
-import e from './styles-cbbf372a.css' assert { type: 'css' };
-import s from './styles-597ebf1b.css' assert { type: 'css' };
-import r from './styles-eb16242b.css' assert { type: 'css' };
-import n from './styles-4ef041fc.css' assert { type: 'css' };
-import o from './styles-45b838e5.css' assert { type: 'css' };
+import e from './styles-146e029c.css' assert { type: 'css' };
+import s from './styles-6bdc1398.css' assert { type: 'css' };
+import n from './styles-eb16242b.css' assert { type: 'css' };
+import r from './styles-0402a57a.css' assert { type: 'css' };
+import o from './styles-56020156.css' assert { type: 'css' };
 const a = () => {
 		const t = new CSSStyleSheet();
 		try {
@@ -14,33 +14,33 @@ const a = () => {
 			return console.warn('Does not have layers'), !1;
 		}
 	},
-	c = t => (/^\//.test(t) ? t : `/${t}`),
-	l = async (t, e = '') => {
+	c = async (t, e = '') => {
 		let {
 			family: s,
-			filename: r,
-			path: n,
+			filename: n,
+			path: r,
 			style: o,
 			weight: a,
-			display: l,
+			display: c,
+			variationSettings: l,
 		} = t;
-		if (!(Object.values(t).some(t => 'string' == typeof t) && s && r && n))
-			throw new Error(
-				'Missing font face information. Please check the token values.'
-			);
-		(n = c(n)), (r = c(r));
-		const i = new URL(`${e + n}${r}`, import.meta.url);
-		if (!i) throw new Error("Can't generate a URL");
-		const m = new FontFace(s, `url(${i})`, {
-			style: o,
-			weight: a,
-			display: l || 'auto',
-		});
-		await m.load(), document.fonts.add(m);
+		if ((Object.values(t).some(t => 'string' == typeof t), r)) {
+			/^\//.test(r) || (r = `/${r}`), /^\//.test(n) || (n = `/${n}`);
+			const t = new URL(`${e + r}${n}`, import.meta.url);
+			if (t) {
+				const e = new FontFace(s, `url(${t})`, {
+					style: o,
+					weight: a,
+					variationSettings: l || 'normal',
+					display: c || 'auto',
+				});
+				await e.load(), document.fonts.add(e);
+			}
+		}
 	},
-	i = (t, e, s) => {
-		const r = 1e3 / 60,
-			n = e || 4 * r;
+	l = (t, e, s) => {
+		const n = 1e3 / 60,
+			r = e || 4 * n;
 		let o = !1;
 		const a = (...e) => {
 			requestAnimationFrame(() => {
@@ -48,16 +48,16 @@ const a = () => {
 			});
 		};
 		return (...t) => {
-			o || (o = setTimeout(a, Math.max(0, n - r), ...t));
+			o || (o = setTimeout(a, Math.max(0, r - n), ...t));
 		};
 	},
-	m = t => {
+	i = t => {
 		const e = document.createElement('style');
 		(e.innerText = t), document.head.appendChild(e);
 		const { sheet: s } = e;
-		return document.head.removeChild(e), s;
+		return document.head.removeChild(e), console.log(s), s;
 	},
-	u = (t, e) => {
+	m = (t, e) => {
 		if (a())
 			return t.forEach(t => {
 				let s = [...t.cssRules].reduce((t, e) => t + e.cssText, '');
@@ -71,7 +71,7 @@ const a = () => {
 		}
 		return t() + t(!0) + t(!0) + t();
 	},
-	d = (t, e = 'unknown') => {
+	u = (t, e = 'unknown') => {
 		t.forEach(async t => {
 			let s;
 			try {
@@ -79,7 +79,7 @@ const a = () => {
 					await s.replace(t),
 					document.adoptedStyleSheets.includes(s) ||
 						document.adoptedStyleSheets.push(s);
-			} catch (r) {
+			} catch (n) {
 				(s = document.createElement('style')),
 					(s.id = `${e}`),
 					(s.textContent = t),
@@ -87,14 +87,14 @@ const a = () => {
 			}
 		});
 	},
-	p = [t, e, s, r, n, o];
+	d = [t, e, s, n, r, o];
 export {
-	m as CSSString2CSSStyleSheet,
+	i as CSSString2CSSStyleSheet,
 	y as generateUUID,
 	a as hasCSSLayerSupport,
-	d as injectDocumentStyles,
-	u as insertIntoCssLayer,
-	l as loadFont,
-	i as throttler,
-	p as trivetCSS,
+	u as injectDocumentStyles,
+	m as insertIntoCssLayer,
+	c as loadFont,
+	l as throttler,
+	d as trivetCSS,
 };
