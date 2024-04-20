@@ -1,5 +1,5 @@
 import { TrivetElement } from '@trvt/core';
-import trvtItemCSS from './li.css' assert { type: 'css' };
+import trvtItemCSS from './li.css' with { type: 'css' };
 
 export class TrvtLi extends TrivetElement {
 	#internals;

@@ -1,5 +1,5 @@
 import { TrivetElement } from '@trvt/core';
-import dragscrollerCSS from './dragscroller.css' assert { type: 'css' };
+import dragscrollerCSS from './dragscroller.css' with { type: 'css' };
 
 export class TrvtDragScroller extends TrivetElement {
 	#validEventTypes;

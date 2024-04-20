@@ -1,4 +1,4 @@
-import cellCSS from './cell.css' assert { type: 'css' };
+import cellCSS from './cell.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
 export class trvtCell extends TrivetElement {

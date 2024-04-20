@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { styles } from '@trvt/core';
-import toggleContainerCSS from './toggleContainer.css' assert { type: 'css' };
+import toggleContainerCSS from './toggleContainer.css' with { type: 'css' };
 
 export class TrvtTabContainer extends HTMLElement {
 	constructor() {

@@ -1,5 +1,5 @@
 import { styles, createFragment } from '@trvt/core';
-import headerCSS from './header.css' assert { type: 'css' };
+import headerCSS from './header.css' with { type: 'css' };
 
 export class TrvtHeader extends HTMLElement {
 	constructor() {

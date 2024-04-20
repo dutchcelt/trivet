@@ -1,5 +1,5 @@
 import { TrivetElement } from '@trvt/core';
-import layoutCSS from './layout.css' assert { type: 'css' };
+import layoutCSS from './layout.css' with { type: 'css' };
 
 /**
  * @typedef {{navigation: string, footer: string, sidebar: string, header: string, main: string, notifications: string}} SlotsObject

@@ -1,6 +1,6 @@
 import { styles } from '@trvt/core';
-import details from './details.css' assert { type: 'css' };
-import summary from './summary.css' assert { type: 'css' };
+import details from './details.css' with { type: 'css' };
+import summary from './summary.css' with { type: 'css' };
 
 export class TrvtToggleDetails extends HTMLElement {
 	constructor() {

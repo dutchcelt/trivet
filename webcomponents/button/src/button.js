@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { mix, TrivetElement, FormMixin, ReactiveMixin } from '@trvt/core';
 // @ts-expect-error
-import buttonCSS from './button.css' assert { type: 'css' };
+import buttonCSS from './button.css' with { type: 'css' };
 import { EventMixin } from './eventMixin.js';
 
 /**

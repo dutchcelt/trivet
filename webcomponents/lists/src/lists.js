@@ -1,5 +1,5 @@
 import { TrivetElement } from '@trvt/core';
-import trvtListCSS from './list.css' assert { type: 'css' };
+import trvtListCSS from './list.css' with { type: 'css' };
 
 class ListClassElement extends TrivetElement {
 	#internals;

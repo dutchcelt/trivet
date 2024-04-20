@@ -1,4 +1,4 @@
-import rowgroupCSS from './rowGroup.css' assert { type: 'css' };
+import rowgroupCSS from './rowGroup.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
 export class trvtRowGroup extends TrivetElement {

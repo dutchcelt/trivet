@@ -1,5 +1,5 @@
 import { TrivetElement } from '@trvt/core';
-import cardCSS from './card.css' assert { type: 'css' };
+import cardCSS from './card.css' with { type: 'css' };
 
 /**
  * @constant

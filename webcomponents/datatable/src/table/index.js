@@ -1,5 +1,5 @@
 import { throttler } from '@trvt/assets';
-import tableCSS from './table.css' assert { type: 'css' };
+import tableCSS from './table.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
 /**

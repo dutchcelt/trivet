@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { hashCode } from '../scripts/hashcode.js';
 import { getCSS } from './getCSS.js';
+
 /**
  * Write a bundled css file to 'dist'
  * @param {string} distPath - The 'dist' directory path

@@ -1,4 +1,4 @@
-import headerCellCSS from './headerCell.css' assert { type: 'css' };
+import headerCellCSS from './headerCell.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
 export class trvtHeaderCell extends TrivetElement {
