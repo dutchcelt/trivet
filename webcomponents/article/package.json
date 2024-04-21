@@ -20,7 +20,7 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
 		"@trvt/core": "^0.9.7",
-		"rollup": "^3.26.2"
+		"rollup": "^4.16.0"
 	},
 	"scripts": {
 		"types": "npx -y tsc -p tsconfig.json",

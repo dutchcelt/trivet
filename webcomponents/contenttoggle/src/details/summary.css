@@ -21,8 +21,8 @@
 		--summary-icon-text-color: var(--summary-text-color);
 		--summary-icon-font-family: var(--trvt-typography-family-gui);
 		--summary-icon-font-weight: var(--font-weight-heavy, 900);
-		--summary-icon-open-char: var(--icon-minus-char, '\2212');
-		--summary-icon-closed-char: var(--icon-plus-char, '\002B');
+		--summary-icon-open-char: var(--icon-minus-char, '&#8722;');
+		--summary-icon-closed-char: var(--icon-plus-char, '&#43;');
 		--summary-block-space: var(--trvt-spacing-content-block-xs, 1rem);
 		--summary-inline-space: var(--trvt-spacing-content-inline-m, 1rem);
 		--summary-font-family: var(

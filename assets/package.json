@@ -17,7 +17,7 @@
 	"dependencies": {
 		"@trvt/designtokens": "^0.11.11",
 		"prepend-file": "^2.0.1",
-		"rollup": "^3.26.2",
+		"rollup": "^4.16.0",
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {

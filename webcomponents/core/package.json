@@ -21,7 +21,7 @@
 	"dependencies": {
 		"@trvt/assets": "^0.8.5",
 		"@trvt/designtokens": "^0.11.11",
-		"rollup": "^3.26.2"
+		"rollup": "^4.16.0"
 	},
 	"scripts": {
 		"types": "npx -y tsc -p tsconfig.json",

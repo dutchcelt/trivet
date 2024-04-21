@@ -30,11 +30,12 @@
 		"cli",
 		"utils",
 		"designtokens",
-		"webcomponents/*"
+		"webcomponents/*",
+		"rollup-preserve-css-modules"
 	],
 	"devDependencies": {
 		"@changesets/cli": "^2.19.0",
-		"@rollup/plugin-terser": "^0.4.0",
+		"@rollup/plugin-terser": "^0.4.4",
 		"@web/dev-server": "^0.1.38",
 		"@web/dev-server-import-maps": "^0.0.7",
 		"@web/rollup-plugin-copy": "^0.3.0",
@@ -45,8 +46,8 @@
 		"chokidar-cli": "^3.0.0",
 		"lightningcss": "^1.24.1",
 		"prettier": "^2.8.8",
-		"rollup": "^3.29.4",
-		"rollup-plugin-native-css-modules": "^1.1.1",
+		"rollup": "^4.16.0",
+		"rollup-plugin-css-modules": "^0.1.2",
 		"typescript": "^5.3.3"
 	}
 }

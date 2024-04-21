@@ -23,7 +23,7 @@
 	"license": "AGPLv3",
 	"dependencies": {
 		"@trvt/core": "^0.9.9",
-		"rollup": "^3.26.2"
+		"rollup": "^4.16.0"
 	},
 	"scripts": {
 		"types": "npx -y tsc -p tsconfig.json",

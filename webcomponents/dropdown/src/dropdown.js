@@ -1,6 +1,6 @@
 import { styles } from '@trvt/core';
 
-import shadowStyles from './dropdown.css';
+import shadowStyles from './dropdown.css' with { type: 'css' };
 
 export class TrvtDropdown extends HTMLElement {
 	constructor() {

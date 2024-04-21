@@ -1,7 +1,7 @@
 // @ts-ignore
-import css from 'rollup-plugin-native-css-modules';
+import {cssModules} from 'rollup-plugin-css-modules';
+import css from 'rollup-preserve-css-modules';
 import { transform } from 'lightningcss';
-import terser from '@rollup/plugin-terser';
 import * as fs from 'fs';
 import * as path from 'path';
 const pathArray = path.resolve().split(path.sep);
@@ -44,14 +44,15 @@ export default [
 		output: {
 			format: 'esm',
 			dir: 'build',
+			importAttributesKey: 'with'
 		},
 
 		plugins: [
+			// @ts-ignore
+			cssModules(),
 			css({
 				transform: compressStylesFunc,
 			}),
-			// @ts-ignore
-			terser(),
 		],
 		external: [
 			'fs',

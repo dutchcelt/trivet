@@ -1,0 +1,29 @@
+{
+  "name": "rollup-preserve-css-modules",
+  "version": "1.0.0",
+  "description": "",
+	"private": true,
+	"main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "native",
+    "css",
+    "modules",
+    "import",
+    "assertions",
+    "rollup"
+  ],
+  "author": "Pascal Schilp <pascalschilp@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "estree-walker": "^3.0.3",
+    "magic-string": "^0.27.0",
+		"rollup": "^4.16.0"
+	},
+  "devDependencies": {
+    "@thepassle/css": "^1.0.0"
+  }
+}
