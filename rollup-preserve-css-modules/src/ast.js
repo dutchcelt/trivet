@@ -4,14 +4,14 @@
  * @returns {boolean}
  */
 export function isStaticCssImport(node) {
-  return (
-    node.type === 'ImportDeclaration' &&
-    node.attributes?.length &&
-    node.attributes.some(attributes => (
-	    attributes.key.name === 'type' &&
-	    attributes.value.value === 'css'
-    ))
-  )
+	return (
+		node.type === 'ImportDeclaration' &&
+		node.attributes?.length &&
+		node.attributes.some(
+			attributes =>
+				attributes.key.name === 'type' && attributes.value.value === 'css'
+		)
+	);
 }
 
 /**
@@ -20,12 +20,14 @@ export function isStaticCssImport(node) {
  * @returns {boolean}
  */
 export function isDynamicCssImport(node) {
-  return (
-    node.type === 'ImportExpression' &&
-    node.attributes?.[0]?.properties?.[0]?.key?.name === 'with' &&
-    node.attributes?.[0]?.properties?.[0]?.value?.properties?.[0]?.key.name === 'type' &&
-    node.attributes?.[0]?.properties?.[0]?.value?.properties?.[0]?.value?.value === 'css'
-  )
+	return (
+		node.type === 'ImportExpression' &&
+		node.attributes?.[0]?.properties?.[0]?.key?.name === 'with' &&
+		node.attributes?.[0]?.properties?.[0]?.value?.properties?.[0]?.key.name ===
+			'type' &&
+		node.attributes?.[0]?.properties?.[0]?.value?.properties?.[0]?.value
+			?.value === 'css'
+	);
 }
 
 /**
@@ -34,10 +36,9 @@ export function isDynamicCssImport(node) {
  * @returns {boolean}
  */
 export function isTemplateStringWithVariables(node) {
-  return (
-    node.source.type === 'TemplateLiteral' &&
-    node.source?.quasis?.length > 1
-  )
+	return (
+		node.source.type === 'TemplateLiteral' && node.source?.quasis?.length > 1
+	);
 }
 
 /**
@@ -46,5 +47,5 @@ export function isTemplateStringWithVariables(node) {
  * @returns {boolean}
  */
 export function isBinaryExpression(node) {
-  return node.source.type === 'BinaryExpression';
+	return node.source.type === 'BinaryExpression';
 }

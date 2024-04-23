@@ -3,11 +3,14 @@ import { createHash } from 'node:crypto';
 const DEFAULT_HASH_SIZE = 8;
 
 /**
- * @param {string} source 
+ * @param {string} source
  * @returns {string}
  */
 export function getSourceHash(source) {
-	return createHash('sha256').update(source).digest('hex').slice(0, DEFAULT_HASH_SIZE);
+	return createHash('sha256')
+		.update(source)
+		.digest('hex')
+		.slice(0, DEFAULT_HASH_SIZE);
 }
 
 /**
@@ -15,5 +18,5 @@ export function getSourceHash(source) {
  * @returns {boolean}
  */
 export function isBareModuleSpecifier(specifier) {
-  return !!specifier?.replace(/'/g, '')[0].match(/[@a-zA-Z]/g);
+	return !!specifier?.replace(/'/g, '')[0].match(/[@a-zA-Z]/g);
 }

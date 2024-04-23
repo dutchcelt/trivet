@@ -8,16 +8,6 @@
 		"node": ">=20.9.0"
 	},
 	"description": "Trivet, a system for building webpages",
-	"scripts": {
-		"types": "npm --workspaces run types --if-present --silent",
-		"build": "npm run build:workspaces && npm run build:docs",
-		"build:workspaces": "npm --workspaces run build --if-present --silent",
-		"build:docs": "npm -w @trvt/docs run build:all --silent",
-		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
-		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
-		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
-		"server": "npx wds -c configs/web-dev-server.config.js"
-	},
 	"author": "C. Egor Kloos",
 	"license": "AGPLv3",
 	"repository": {
@@ -33,8 +23,20 @@
 		"webcomponents/*",
 		"rollup-preserve-css-modules"
 	],
+	"scripts": {
+		"types": "npm --workspaces run types --if-present --silent",
+		"build": "npm run build:workspaces && npm run build:docs",
+		"build:workspaces": "npm --workspaces run build --if-present --silent",
+		"build:docs": "npm -w @trvt/docs run build:all --silent",
+		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
+		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
+		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
+		"server": "npx wds -c configs/web-dev-server.config.js"
+		},
 	"devDependencies": {
+		"@babel/plugin-syntax-import-attributes": "^7.24.1",
 		"@changesets/cli": "^2.19.0",
+		"@open-wc/eslint-config": "^12.0.3",
 		"@rollup/plugin-terser": "^0.4.4",
 		"@web/dev-server": "^0.1.38",
 		"@web/dev-server-import-maps": "^0.0.7",
@@ -44,7 +46,11 @@
 		"chalk-cli": "^5.0.1",
 		"chokidar": "^3.5.3",
 		"chokidar-cli": "^3.0.0",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"husky": "^9.0.11",
 		"lightningcss": "^1.24.1",
+		"lint-staged": "^15.2.2",
 		"prettier": "^2.8.8",
 		"rollup": "^4.16.0",
 		"rollup-plugin-css-modules": "^0.1.2",

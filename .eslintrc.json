@@ -20,7 +20,8 @@
 		"**/tests/*.js",
 		"**/docs/scripts/*.js",
 		"**/utils/scripts/*.js",
-		"**/assets/**/*"
+		"**/assets/**/*",
+		"**/*.html"
 	],
 	"rules": {}
 }

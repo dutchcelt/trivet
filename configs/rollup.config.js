@@ -1,5 +1,5 @@
 // @ts-ignore
-import {cssModules} from 'rollup-plugin-css-modules';
+import { cssModules } from 'rollup-plugin-css-modules';
 import css from 'rollup-preserve-css-modules';
 import { transform } from 'lightningcss';
 import * as fs from 'fs';
@@ -44,7 +44,7 @@ export default [
 		output: {
 			format: 'esm',
 			dir: 'build',
-			importAttributesKey: 'with'
+			importAttributesKey: 'with',
 		},
 
 		plugins: [

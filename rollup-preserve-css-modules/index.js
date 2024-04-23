@@ -8,7 +8,7 @@ import {
 	isStaticCssImport,
 	isDynamicCssImport,
 	isTemplateStringWithVariables,
-	isBinaryExpression
+	isBinaryExpression,
 } from './src/ast.js';
 import { getSourceHash, isBareModuleSpecifier } from './src/utils.js';
 
@@ -31,7 +31,7 @@ export default function css(options = {}) {
 			if (id.endsWith('.css')) {
 				return {
 					id,
-					external: true
+					external: true,
 				};
 			}
 		},
@@ -43,10 +43,7 @@ export default function css(options = {}) {
 
 				await asyncWalk(ast, {
 					enter: async node => {
-						if (
-							isStaticCssImport(node) ||
-							isDynamicCssImport(node)
-						) {
+						if (isStaticCssImport(node) || isDynamicCssImport(node)) {
 							if (
 								/**
 								 * @example `import(`./foo-${i}.css`, { with: { type: 'css'} })`
@@ -74,22 +71,33 @@ ${code.substring(node.start, node.end)}
 								return;
 							}
 
-							const moduleSpecifier = /** @type {string} */ (node.source.value || node.source.quasis[0].value.raw);
+							const moduleSpecifier = /** @type {string} */ (
+								node.source.value || node.source.quasis[0].value.raw
+							);
 
 							/** Ignore external css files or data URIs */
-							if (ignoredProtocols.some(protocol => moduleSpecifier.startsWith(protocol))) {
+							if (
+								ignoredProtocols.some(protocol =>
+									moduleSpecifier.startsWith(protocol)
+								)
+							) {
 								return;
 							}
 
 							const dirname = path.dirname(id);
-							const absolutePathToCssModule = isBareModuleSpecifier(moduleSpecifier)
+							const absolutePathToCssModule = isBareModuleSpecifier(
+								moduleSpecifier
+							)
 								? require.resolve(moduleSpecifier)
 								: path.join(dirname, moduleSpecifier);
 
 							/** If we havent processed this file before */
 							if (!cssFilesMap[absolutePathToCssModule]) {
-								const cssModuleContentsBuffer = await fs.readFile(absolutePathToCssModule);
-								const cssModuleContents = await cssModuleContentsBuffer.toString();
+								const cssModuleContentsBuffer = await fs.readFile(
+									absolutePathToCssModule
+								);
+								const cssModuleContents =
+									await cssModuleContentsBuffer.toString();
 
 								const assetSource = options?.transform
 									? await options?.transform(cssModuleContents)
@@ -102,7 +110,7 @@ ${code.substring(node.start, node.end)}
 								this.emitFile({
 									type: 'asset',
 									fileName: assetName,
-									source: assetSource
+									source: assetSource,
 								});
 
 								magicString.overwrite(
@@ -122,19 +130,18 @@ ${code.substring(node.start, node.end)}
 								modifiedCode = true;
 							}
 						}
-					}
+					},
 				});
 
 				if (modifiedCode) {
 					return {
 						code: magicString.toString(),
-						map: magicString.generateMap({ hires: true })
+						map: magicString.generateMap({ hires: true }),
 					};
 				}
 
 				return null;
 			}
-		}
+		},
 	};
 }
-
