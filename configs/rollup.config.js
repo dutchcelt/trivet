@@ -1,6 +1,7 @@
 // @ts-ignore
 import { cssModules } from 'rollup-plugin-css-modules';
-import css from 'rollup-preserve-css-modules';
+// @ts-ignore
+import css from '../packages/utils/plugins/rollup-preserve-css-modules/index.js';
 import { transform } from 'lightningcss';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -50,7 +51,9 @@ export default [
 		plugins: [
 			// @ts-ignore
 			cssModules(),
+
 			css({
+				// @ts-expect-error
 				transform: compressStylesFunc,
 			}),
 		],
@@ -73,6 +76,7 @@ export default [
 			'@trvt/designtokens',
 			'@trvt/docs',
 			'@trvt/site',
+			'@trvt/utils',
 			'@trvt/root',
 			'wawoff2',
 			'copyfiles',

@@ -1,0 +1,24 @@
+{
+	"name": "@trvt/utils",
+	"version": "0.0.1",
+	"description": "A set of utilities to build, test, and run Trivet.",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"author": "C. Egor Kloos",
+	"license": "AGPL-3.0",
+	"type": "module",
+	"main": "index.js",
+	"files": [
+		"**/*.js"
+	],
+	"scripts": {
+		"test": "echo 'utils: no scripts'",
+		"build": "echo 'utils: no scripts'",
+		"develop": "echo 'utils: no scripts'"
+	},
+	"dependencies": {
+		"estree-walker": "^3.0.3",
+		"fs": "^0.0.1-security",
+		"magic-string": "^0.27.0",
+		"path": "^0.12.7"
+	}
+}

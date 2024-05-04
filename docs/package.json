@@ -6,7 +6,7 @@
 	"files": [],
 	"description": "Documents",
 	"author": "C. Egor Kloos",
-	"license": "AGPLv3",
+	"license": "AGPL-3.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
 		"banner": "npx chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
@@ -18,7 +18,6 @@
 		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
 	},
 	"devDependencies": {
-		"lightningcss": "^1.22.0",
 		"@11ty/eleventy": "^2.0.1",
 		"@trvt/article": "^0.7.2",
 		"@trvt/assets": "^0.8.5",
@@ -30,6 +29,8 @@
 		"@trvt/dragscroller": "^0.3.5",
 		"@trvt/header": "^0.8.4",
 		"@trvt/layout": "^0.8.5",
-		"@trvt/lists": "^0.4.7"
+		"@trvt/lists": "^0.4.7",
+		"@trvt/utils": "^0.0.1",
+		"lightningcss": "^1.22.0"
 	}
 }

@@ -1,0 +1,27 @@
+{
+	"name": "@trvt/designtokens",
+	"description": "Trivet Design Tokens, a system for tokens",
+	"version": "0.11.11",
+	"type": "module",
+	"main": "index.js",
+	"files": [
+		"/build",
+		"/tokens"
+	],
+	"scripts": {
+		"build:clean": "npx trvt clean",
+		"build:tokens": "npx trvt tokens -s trvt -e lib -l \"design.tokens\" -m",
+		"build:banner": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
+		"build": "npm run build:banner && npm run  build:clean && npm run build:tokens",
+		"watch": "npx chokidar \"tokens/**/*.json\" -c \"npm run  build:tokens\"",
+		"develop": "npm run watch"
+	},
+	"author": "C. Egor Kloos",
+	"license": "AGPL-3.0",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"devDependencies": {
+		"@trvt/cli": "^1.5.5",
+		"chalk-cli": "^5.0.1",
+		"chokidar-cli": "^3.0.0"
+	}
+}

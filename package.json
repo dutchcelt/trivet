@@ -3,30 +3,28 @@
 	"version": "2.0.2",
 	"private": true,
 	"type": "module",
-	"engines": {
-		"npm": ">=10.1.0",
-		"node": ">=20.9.0"
-	},
 	"description": "Trivet, a system for building webpages",
 	"author": "C. Egor Kloos",
-	"license": "AGPLv3",
+	"license": "AGPL-3.0",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/dutchcelt/trivet.git"
 	},
 	"workspaces": [
-		"assets",
+		"packages/assets",
 		"docs",
-		"cli",
-		"utils",
-		"designtokens",
-		"webcomponents/*",
-		"rollup-preserve-css-modules"
+		"packages/cli",
+		"packages/designtokens",
+		"packages/core",
+		"packages/components",
+		"packages/styles",
+		"packages/utils",
+		"packages/custom-elements/*"
 	],
 	"scripts": {
 		"types": "npm --workspaces run types --if-present --silent",
 		"build": "npm run build:workspaces && npm run build:docs",
-		"build:workspaces": "npm --workspaces run build --if-present --silent",
+		"build:workspaces": "npm --workspaces run build --if-present",
 		"build:docs": "npm -w @trvt/docs run build:all --silent",
 		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",

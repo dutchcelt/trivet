@@ -18,6 +18,7 @@ const copyImports = (eleventyConfig, deps) => {
 	deps.forEach(dep => {
 		eleventyConfig.addPassthroughCopy({
 			[`../node_modules/${dep}/build`]: `${dep}`,
+			[`../node_modules/@trvt/utils`]: `${dep}`,
 		});
 	});
 };

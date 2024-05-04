@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Lists</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1"
+    />
+    <link rel="stylesheet" href="../../components/index.css" />
+    <script type="esms-options">
+      {
+        "polyfillEnable": ["css-modules", "json-modules"],
+        "noLoadEventRetriggers": true
+      }
+    </script>
+	  <script async src="../../utils/scripts/es-module-shims.js"></script>
+
+    <script type="module">
+      import './src/lists.js';
+      import './src/li.js';
+    </script>
+  </head>
+  <body class="reference">
+    <header>
+      <p>Trivet Web Component</p>
+      <h1>&lt;trvt-ul&gt; &lt;trvt-ol&gt; &lt;trvt-li&gt;</h1>
+    </header>
+    <main>
+      <trvt-ul>
+        <trvt-li>Web Components</trvt-li>
+        <trvt-li>Importmaps</trvt-li>
+        <trvt-li>Native CSS modules through assertions</trvt-li>
+        <trvt-li>Constructed stylesheets</trvt-li>
+        <trvt-li>CSS Layers</trvt-li>
+        <trvt-li>CSS Custom Properties</trvt-li>
+        <trvt-li>
+          Eperimental features
+          <trvt-ol>
+            <trvt-li>CSS Subgrid</trvt-li>
+            <trvt-li>CSS '::part()'</trvt-li>
+            <trvt-li>CSS Container queries</trvt-li>
+            <trvt-li>CSS ':has()'</trvt-li>
+            <trvt-li>CSS Color Mix</trvt-li>
+            <trvt-li>Toggles and Modals</trvt-li>
+          </trvt-ol>
+        </trvt-li>
+      </trvt-ul>
+    </main>
+  </body>
+</html>

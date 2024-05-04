@@ -1,0 +1,32 @@
+{
+	"name": "@trvt/assets",
+	"version": "0.8.5",
+	"type": "module",
+	"main": "build/index.js",
+	"files": [
+		"index.js",
+		"build/*",
+		"styles/*",
+		"lib/*"
+	],
+	"description": "Trivet styles and utility scripts.",
+	"author": "C. Egor Kloos",
+	"license": "AGPL-3.0",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"dependencies": {
+		"@trvt/designtokens": "^0.11.11",
+		"prepend-file": "^2.0.1",
+		"rollup": "^4.16.0",
+		"wawoff2": "^2.0.1"
+	},
+	"scripts": {
+		"build:icons": "node ./lib/icons.js",
+		"build:rollup": "rollup -c ../configs/rollup.config.js",
+		"build:css": "node ./lib/bundleCSS.js",
+		"build": "npm run build:icons && npm run build:rollup && npm run build:css",
+		"develop": "npm run build --watch"
+	},
+	"devDependencies": {
+		"fs": "^0.0.1-security"
+	}
+}

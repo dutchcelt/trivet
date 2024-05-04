@@ -30,4 +30,4 @@ The build task runs all the 'build' script inside the workspace packages.
 
 ### License
 
-[![AGPLv3 License](https://img.shields.io/badge/License-AGPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL-3.0" License](https://img.shields.io/badge/License-AGPL%20v3-yellow.svg)](https://opensource.org/licenses/)
