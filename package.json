@@ -24,7 +24,7 @@
 	"scripts": {
 		"types": "npm --workspaces run types --if-present --silent",
 		"build": "npm run build:workspaces && npm run build:docs",
-		"build:workspaces": "npm --workspaces run build --if-present",
+		"build:workspaces": "npm --workspaces run build --if-present --silent",
 		"build:docs": "npm -w @trvt/docs run build:all --silent",
 		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
