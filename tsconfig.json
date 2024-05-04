@@ -16,10 +16,10 @@
 		"declarationMap": true
 	},
 	"exclude": [
-		"./assets",
-		"./utils",
+		"./packages/assets",
+		"./packages/utils",
 		"./public",
-		"./designtokens",
+		"./packages/designtokens",
 		"./docs",
 		"**/build"
 	]
