@@ -19,6 +19,7 @@
 		"**/build/*.js",
 		"**/tests/*.js",
 		"**/docs/scripts/*.js",
+		"**/docs/styles/*.css",
 		"**/utils/scripts/*.js",
 		"**/assets/**/*",
 		"**/*.html"

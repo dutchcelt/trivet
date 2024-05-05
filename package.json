@@ -30,7 +30,7 @@
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
 		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
 		"server": "npx wds -c configs/web-dev-server.config.js",
-		"test": "wtr \"packages/**/*.test.js\" --node-resolve",
+		"test": "npm run lint && wtr \"packages/**/*.test.js\" --node-resolve",
 		"lint": "npm run lint:eslint && npm run lint:prettier",
 		"format": "npm run format:eslint && npm run format:prettier",
 		"lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
