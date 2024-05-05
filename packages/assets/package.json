@@ -2,12 +2,11 @@
 	"name": "@trvt/assets",
 	"version": "0.8.5",
 	"type": "module",
-	"main": "dist/index.js",
+	"main": "index.js",
 	"files": [
-		"index.js",
-		"dist/*",
-		"styles/*",
-		"lib/*"
+		"dist",
+		"lib",
+		"icons"
 	],
 	"description": "Trivet styles and utility scripts.",
 	"author": "C. Egor Kloos",
@@ -20,11 +19,14 @@
 		"wawoff2": "^2.0.1"
 	},
 	"scripts": {
-		"build:icons": "node ./lib/icons.js",
+		"build:icons": "node lib/icons.js",
 		"build": "npm run build:icons",
+		"prebuild": "chalk -t '{blueBright.bold \n\n=== Assets =================================================}'",
+		"postbuild:icons": "echo '\nCompleted build: Icons'",
 		"develop": "npm run build --watch"
 	},
 	"devDependencies": {
+		"chalk-cli": "^5.0.1",
 		"fs": "^0.0.1-security"
 	}
 }

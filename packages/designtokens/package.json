@@ -11,8 +11,8 @@
 	"scripts": {
 		"build:clean": "npx trvt clean",
 		"build:tokens": "npx trvt tokens -s trvt -e lib -l \"design.tokens\" -m",
-		"build:banner": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
-		"build": "npm run build:banner && npm run  build:clean && npm run build:tokens",
+		"prebuild": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
+		"build": "npm run build:clean && npm run build:tokens",
 		"watch": "npx chokidar \"tokens/**/*.json\" -c \"npm run  build:tokens\"",
 		"develop": "npm run watch"
 	},

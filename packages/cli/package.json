@@ -18,7 +18,8 @@
 	],
 	"scripts": {
 		"test": "echo 'CLI: no scripts'",
-		"build": "echo 'CLI: no scripts'",
+		"prebuild": "chalk -t '{blueBright.bold \n\n=== CLI ====================================================}'",
+		"build": "echo '\nCLI: no scripts'",
 		"develop": "echo 'CLI: no scripts'"
 	},
 	"bin": {
@@ -38,6 +39,7 @@
 	"devDependencies": {
 		"@types/node": "^20.4.5",
 		"@types/shelljs": "^0.8.15",
+		"chalk-cli": "^5.0.1",
 		"glob": "^10.3.10"
 	}
 }

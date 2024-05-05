@@ -2,42 +2,51 @@
 	"name": "@trvt/root",
 	"version": "2.0.2",
 	"private": true,
-	"type": "module",
 	"description": "Trivet, a system for building webpages",
-	"author": "C. Egor Kloos",
-	"license": "AGPL-3.0",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/dutchcelt/trivet.git"
 	},
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
 	"workspaces": [
-		"packages/assets",
 		"docs",
-		"packages/cli",
-		"packages/designtokens",
-		"packages/core",
-		"packages/components",
-		"packages/styles",
-		"packages/utils",
+		"packages/*",
 		"packages/custom-elements/*"
 	],
 	"scripts": {
-		"types": "npm --workspaces run types --if-present --silent",
 		"build": "npm run build:workspaces && npm run build:docs",
-		"build:workspaces": "npm --workspaces run build --if-present --silent",
 		"build:docs": "npm -w @trvt/docs run build:all --silent && npm run format",
+		"build:workspaces": "npm --workspaces run build --if-present --silent",
 		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
 		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
+		"format": "npm run format:eslint && npm run format:prettier",
+		"format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+		"format:prettier": "prettier \"**/*.{js,css}\" --write --ignore-path .gitignore",
+		"lint": "npm run lint:eslint && npm run lint:prettier",
+		"lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+		"lint:prettier": "prettier \"**/*.{js,css}\" --check --ignore-path .gitignore",
+		"prepare": "husky",
 		"server": "npx wds -c configs/web-dev-server.config.js",
 		"test": "npm run lint && wtr \"packages/**/*.test.js\" --node-resolve",
-		"lint": "npm run lint:eslint && npm run lint:prettier",
-		"format": "npm run format:eslint && npm run format:prettier",
-		"lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
-		"format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
-		"lint:prettier": "prettier \"**/*.{js,css}\" --check --ignore-path .gitignore",
-		"format:prettier": "prettier \"**/*.{js,css}\" --write --ignore-path .gitignore",
-		"prepare": "husky"
+		"types": "npm --workspaces run types --if-present --silent"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"prettier": {
+		"arrowParens": "avoid",
+		"singleQuote": true
+	},
+	"eslintConfig": {
+		"extends": [
+			"@open-wc/eslint-config"
+		]
 	},
 	"devDependencies": {
 		"@babel/plugin-syntax-import-attributes": "^7.24.1",
@@ -60,21 +69,7 @@
 		"lint-staged": "^15.2.2",
 		"prettier": "^3.2.5",
 		"rollup": "^4.16.0",
-		"rollup-plugin-css-modules": "^0.1.2"
-	},
-	"eslintConfig": {
-		"extends": [
-			"@open-wc/eslint-config"
-		]
-	},
-	"prettier": {
-		"singleQuote": true,
-		"arrowParens": "avoid"
-	},
-	"lint-staged": {
-		"*.js": [
-			"eslint --fix",
-			"prettier --write"
-		]
+		"rollup-plugin-css-modules": "^0.1.2",
+		"sort-package-json": "^2.10.0"
 	}
 }
