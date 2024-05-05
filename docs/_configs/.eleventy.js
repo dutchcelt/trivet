@@ -2,7 +2,7 @@ const env = process.env;
 const path = require('path');
 const fs = require('fs');
 const writeCSSImport = import(
-	path.resolve('..', 'assets', 'lib', 'writeCSS.js')
+	path.resolve('..', 'packages', 'assets', 'lib', 'writeCSS.js')
 );
 
 let importscope = '@trvt';
@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode('stylesheet', async function () {
 		const { writeCSS } = await writeCSSImport;
 
-		const trivetPath = path.resolve('..', 'assets', 'build', 'importer.css');
+		const trivetPath = path.resolve('..', 'packages', 'assets', 'build', 'importer.css');
 		const themePath = path.resolve('.', 'styles', 'index.css');
 
 		let filename = 'theme.css';
