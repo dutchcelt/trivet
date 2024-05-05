@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/root",
-	"version": "2.0.2",
+	"version": "2.1.0",
 	"private": true,
 	"description": "Trivet, a system for building webpages",
 	"repository": {
@@ -16,12 +16,13 @@
 		"packages/custom-elements/*"
 	],
 	"scripts": {
+		"prebuild": "npm run format && npm run lint",
 		"build": "npm run build:workspaces && npm run build:docs",
-		"build:docs": "npm -w @trvt/docs run build:all --silent && npm run format",
+		"build:docs": "npm -w @trvt/docs run eleventy --silent",
 		"build:workspaces": "npm --workspaces run build --if-present --silent",
-		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
+		"develop": "npx wds -c configs/web-dev-server.config.js",
+		"predevelop:docs": "npm run build:workspaces",
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
-		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
 		"format": "npm run format:eslint && npm run format:prettier",
 		"format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
 		"format:prettier": "prettier \"**/*.{js,css}\" --write --ignore-path .gitignore",
@@ -29,7 +30,6 @@
 		"lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
 		"lint:prettier": "prettier \"**/*.{js,css}\" --check --ignore-path .gitignore",
 		"prepare": "husky",
-		"server": "npx wds -c configs/web-dev-server.config.js",
 		"test": "npm run lint && wtr \"packages/**/*.test.js\" --node-resolve",
 		"types": "npm --workspaces run types --if-present --silent"
 	},
