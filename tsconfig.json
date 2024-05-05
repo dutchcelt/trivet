@@ -19,6 +19,7 @@
 		"./packages/styles",
 		"./packages/assets",
 		"./packages/utils",
+		"./packages/cli",
 		"./public",
 		"./packages/designtokens",
 		"./docs",

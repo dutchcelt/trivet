@@ -6,7 +6,7 @@
 	"main": "dist/index.js",
 	"files": [
 		"index.js",
-		"styles/*",
+		"styleshets/*",
 		"lib/*"
 	],
 	"description": "Trivet styles and utility scripts.",
