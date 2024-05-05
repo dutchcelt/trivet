@@ -24,7 +24,7 @@ const tokensPath = path.join(defaultTokensPackagePath.trim(), 'tokens');
 
 /** @type {Defaults} */
 module.exports = {
-	buildPath: path.resolve('build', 'css'),
+	buildPath: path.resolve('dist', 'css'),
 	layer: '',
 	sourcePath: tokensPath,
 	themePath: '',

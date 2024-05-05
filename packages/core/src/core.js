@@ -1,5 +1,5 @@
 /* Base styles for all Trivet Components */
-import { trivetCSS } from '@trvt/assets';
+import { trivetCSS } from '@trvt/styles';
 
 import { createFragment } from './createFragment.js';
 import { activateColorScheme, colorScheme } from './activateColorScheme.js';

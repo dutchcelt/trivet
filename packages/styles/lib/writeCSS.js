@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { hashCode } from '../scripts/hashcode.js';
+import { hashCode } from '@trvt/utils';
 import { getCSS } from './getCSS.js';
 
 /**

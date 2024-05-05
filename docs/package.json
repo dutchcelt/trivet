@@ -20,7 +20,6 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
 		"@trvt/article": "^0.7.2",
-		"@trvt/assets": "^0.8.5",
 		"@trvt/button": "^0.10.3",
 		"@trvt/card": "^0.7.2",
 		"@trvt/contenttoggle": "^0.4.5",
@@ -30,6 +29,7 @@
 		"@trvt/header": "^0.8.4",
 		"@trvt/layout": "^0.8.5",
 		"@trvt/lists": "^0.4.7",
+		"@trvt/styles": "^0.0.0",
 		"@trvt/utils": "^0.0.1",
 		"lightningcss": "^1.22.0"
 	}

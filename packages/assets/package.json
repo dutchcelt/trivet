@@ -2,10 +2,10 @@
 	"name": "@trvt/assets",
 	"version": "0.8.5",
 	"type": "module",
-	"main": "build/index.js",
+	"main": "dist/index.js",
 	"files": [
 		"index.js",
-		"build/*",
+		"dist/*",
 		"styles/*",
 		"lib/*"
 	],
@@ -21,9 +21,7 @@
 	},
 	"scripts": {
 		"build:icons": "node ./lib/icons.js",
-		"build:rollup": "rollup -c ../../configs/rollup.config.js",
-		"build:css": "node ./lib/bundleCSS.js",
-		"build": "npm run build:icons && npm run build:rollup && npm run build:css",
+		"build": "npm run build:icons",
 		"develop": "npm run build --watch"
 	},
 	"devDependencies": {

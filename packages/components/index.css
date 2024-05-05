@@ -1,6 +1,6 @@
-@import '../assets/build/importer.css';
-@import '../designtokens/build/css/trvt_tokens.css';
-@import '../designtokens/build/css/trvt_properties.css';
+@import '../styles/dist/importer.css';
+@import '../designtokens/dist/css/trvt_tokens.css';
+@import '../designtokens/dist/css/trvt_properties.css';
 @layer theme {
 	.reference {
 		--trvt-color-typography-heading: canvas;

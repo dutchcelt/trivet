@@ -16,6 +16,7 @@
 		"declarationMap": true
 	},
 	"exclude": [
+		"./packages/styles",
 		"./packages/assets",
 		"./packages/utils",
 		"./public",

@@ -8,7 +8,7 @@ const iconFontDir = `${iconFontName}-${iconFontVersion}`;
 const iconFontPath = `${iconFontDir}/fonts`;
 const iconAssetPath = `${__parentname}/icons`;
 //const stylesAssetPath = `${__parentname}/styles`;
-const buildPath = `${__parentname}/build`;
+const buildPath = `${__parentname}/dist`;
 const iconFontVariableSource = `${iconAssetPath}/${iconFontDir}/variables.scss`;
 
 try {

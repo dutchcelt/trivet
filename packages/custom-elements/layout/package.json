@@ -6,13 +6,13 @@
 	"main": "index.js",
 	"files": [
 		"src",
-		"build"
+		"dist"
 	],
 	"exports": {
 		".": "./index.js",
 		"./*": {
-			"default": "./build/*",
-			"types": "./build/types/*"
+			"default": "./dist/*",
+			"types": "./dist/types/*"
 		}
 	},
 	"keywords": [

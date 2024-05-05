@@ -7,8 +7,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 const pathArray = path.resolve().split(path.sep);
 const packagename = pathArray.pop();
-const isWebcomponent = /webcomponents/i.test(path.resolve());
-const buildfolder = path.resolve('build');
+const isWebcomponent = /packages\/custom-elements/i.test(path.resolve());
+const buildfolder = path.resolve('dist');
 
 import { Chalk } from 'chalk';
 const chalk = new Chalk({ level: 1 });
@@ -44,7 +44,7 @@ export default [
 		input: ['index.js'],
 		output: {
 			format: 'esm',
-			dir: 'build',
+			dir: 'dist',
 			importAttributesKey: 'with',
 		},
 

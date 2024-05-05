@@ -6,12 +6,12 @@
 	"main": "index.js",
 	"files": [
 		"src",
-		"build"
+		"dist"
 	],
 	"exports": {
 		"./*": {
-			"default": "./build/*",
-			"types": "./build/types/*"
+			"default": "./dist/*",
+			"types": "./dist/types/*"
 		}
 	},
 	"type": "module",

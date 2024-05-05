@@ -5,13 +5,13 @@
 	"main": "index.js",
 	"files": [
 		"src",
-		"build"
+		"dist"
 	],
 	"exports": {
 		".": "./index.js",
 		"./*": {
-			"default": "./build/*",
-			"types": "./build/types/*"
+			"default": "./dist/*",
+			"types": "./dist/types/*"
 		}
 	},
 	"description": "Core loader for Trivet",
@@ -19,7 +19,7 @@
 	"license": "AGPL-3.0",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"dependencies": {
-		"@trvt/assets": "^0.8.5",
+		"@trvt/styles": "^0.0.0",
 		"@trvt/designtokens": "^0.11.11",
 		"@trvt/utils": "^0.0.1",
 		"rollup": "^4.16.0"
