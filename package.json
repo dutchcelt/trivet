@@ -25,7 +25,7 @@
 		"types": "npm --workspaces run types --if-present --silent",
 		"build": "npm run build:workspaces && npm run build:docs",
 		"build:workspaces": "npm --workspaces run build --if-present --silent",
-		"build:docs": "npm -w @trvt/docs run build:all --silent",
+		"build:docs": "npm -w @trvt/docs run build:all --silent && npm run format",
 		"develop": "npm run develop:docs | npm --workspaces run develop --if-present",
 		"develop:docs": "npm -w @trvt/docs run eleventy:develop",
 		"develop:webcomponents": "npx wds -c configs/component-develop-server.config.js",
