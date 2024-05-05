@@ -36,7 +36,8 @@
 		"lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
 		"format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
 		"lint:prettier": "prettier \"**/*.{js,css}\" --check --ignore-path .gitignore",
-		"format:prettier": "prettier \"**/*.{js,css}\" --write --ignore-path .gitignore"
+		"format:prettier": "prettier \"**/*.{js,css}\" --write --ignore-path .gitignore",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@babel/plugin-syntax-import-attributes": "^7.24.1",
