@@ -1,1 +1,10 @@
-@layer design.tokens{[data-color-scheme=dark]{color-scheme:dark;--trvt-color-base-dark:oklch(.9182 .0109 95.172);--trvt-color-base-light:oklch(.263 .0073 106.89)}[data-color-scheme=light]{color-scheme:light}}
+@layer design.tokens {
+	[data-color-scheme='dark'] {
+		color-scheme: dark;
+		--trvt-color-base-dark: oklch(0.9182 0.0109 95.172);
+		--trvt-color-base-light: oklch(0.263 0.0073 106.89);
+	}
+	[data-color-scheme='light'] {
+		color-scheme: light;
+	}
+}

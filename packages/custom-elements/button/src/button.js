@@ -10,7 +10,7 @@ import { EventMixin } from './eventMixin.js';
 export class TrvtButton extends mix(TrivetElement).with(
 	FormMixin,
 	EventMixin,
-	ReactiveMixin
+	ReactiveMixin,
 ) {
 	static observedAttributes = [
 		'data-trvt-context',

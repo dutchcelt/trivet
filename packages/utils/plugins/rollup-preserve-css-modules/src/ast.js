@@ -9,7 +9,7 @@ export function isStaticCssImport(node) {
 		node.attributes?.length &&
 		node.attributes.some(
 			attributes =>
-				attributes.key.name === 'type' && attributes.value.value === 'css'
+				attributes.key.name === 'type' && attributes.value.value === 'css',
 		)
 	);
 }

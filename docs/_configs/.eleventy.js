@@ -11,7 +11,7 @@ let scopeReg = new RegExp(importscope, 'i');
 const depsFile = fs.readFileSync(path.resolve('.', 'package.json'));
 const depsObject = JSON.parse(depsFile.toString());
 const importArr = Object.keys(depsObject.devDependencies).filter(key =>
-	scopeReg.test(key)
+	scopeReg.test(key),
 );
 
 const copyImports = (eleventyConfig, deps) => {
@@ -50,7 +50,13 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode('stylesheet', async function () {
 		const { writeCSS } = await writeCSSImport;
 
-		const trivetPath = path.resolve('..', 'packages', 'assets', 'build', 'importer.css');
+		const trivetPath = path.resolve(
+			'..',
+			'packages',
+			'assets',
+			'build',
+			'importer.css',
+		);
 		const themePath = path.resolve('.', 'styles', 'index.css');
 
 		let filename = 'theme.css';

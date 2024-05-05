@@ -37,13 +37,13 @@ export class ErrorMessages {
 	get inValidStatement() {
 		return `The CSS @layer declaration statement is invalid: \n${this.cssText.slice(
 			0,
-			42
+			42,
 		)}\n`;
 	}
 	get missingLayerName() {
 		return `The CSS @layer must have a name.\n${this.cssText.slice(
 			0,
-			42
+			42,
 		)} ...\n`;
 	}
 	get inValidLayerName() {

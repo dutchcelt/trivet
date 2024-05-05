@@ -124,7 +124,7 @@ export class LayerWrangler {
 					layer && this.layerConfig.includes(layer.resolvedLayerName);
 				const Messages = new this.ErrorMessages(
 					rule,
-					this.mapOfAllCssLayers.get(rule)
+					this.mapOfAllCssLayers.get(rule),
 				);
 				switch (type) {
 					case 'CSSLayerStatementRule':
@@ -140,7 +140,7 @@ export class LayerWrangler {
 						nameOfLayer === undefined || nameOfLayer === ''
 							? errors.add(Messages.missingLayerName)
 							: isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
-							  errors.add(Messages.inValidLayerName);
+								errors.add(Messages.inValidLayerName);
 						break;
 					case 'CSSImportRule':
 						isValidLayer(this.mapOfAllCssLayers.get(rule)) ||
@@ -149,7 +149,7 @@ export class LayerWrangler {
 					default:
 					// ToDo: Add checks for rules not inside a layer
 				}
-			}
+			},
 		);
 		return [...errors];
 	}

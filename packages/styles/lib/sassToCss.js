@@ -21,7 +21,7 @@ export const sassToCss = {
 							.replace(/;|,| |\)/g, '');
 						value = value.replace(
 							oldVariable,
-							'\t--' + oldVariable.replace('$', '')
+							'\t--' + oldVariable.replace('$', ''),
 						);
 					}
 
@@ -40,7 +40,7 @@ export const sassToCss = {
 				if (line.includes('$') && !/icomoon/gi.test(line)) {
 					let oldVariable = line.substring(
 						line.indexOf('$'),
-						line.indexOf(':')
+						line.indexOf(':'),
 					);
 					const cssClass = oldVariable.replace('$', '.');
 					const cssprop = oldVariable.replace('$', '--');
@@ -51,7 +51,7 @@ export const sassToCss = {
 
 			sourceCssStream.on(
 				'line',
-				withPropValues ? getlinesForGlyphs : getlinesForClasses
+				withPropValues ? getlinesForGlyphs : getlinesForClasses,
 			);
 
 			sourceCssStream.on('close', function () {

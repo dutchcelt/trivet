@@ -23,7 +23,7 @@ const safeValues = detail => {
 			cleanDetail[key] = propType === 'string' ? sanitizeThis(value) : value;
 		} else {
 			console.warn(
-				`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`
+				`Trivet: Detail property '${key}' of type '${propType}' is prohibited and has been removed`,
 			);
 		}
 	}
@@ -72,7 +72,7 @@ class EventDataBus {
 		const eventName = event || 'anonymous';
 		if (this[eventName]) {
 			console.warn(
-				`Can't register event '${eventName}' because it already exists.`
+				`Can't register event '${eventName}' because it already exists.`,
 			);
 		} else {
 			createEventObject(this, eventName);
@@ -89,8 +89,8 @@ class EventDataBus {
 		this[event]
 			? this.#bus.removeEventListener(event, callback)
 			: console.warn(
-					`Can't remove event '${event}' because it hasn't been registered.`
-			  );
+					`Can't remove event '${event}' because it hasn't been registered.`,
+				);
 	}
 
 	/**
@@ -104,7 +104,7 @@ class EventDataBus {
 			this.#bus.dispatchEvent(new CustomEvent(event, { detail }));
 		} else {
 			console.warn(
-				`Can't fire event '${event}' because it hasn't been registered.`
+				`Can't fire event '${event}' because it hasn't been registered.`,
 			);
 		}
 	}

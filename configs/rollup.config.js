@@ -17,7 +17,7 @@ const log = console.log;
 const banner =
 	`=== ${packagename} ==================================================================================`.substring(
 		0,
-		60
+		60,
 	);
 log(chalk.blueBright.bold(`\n\n${banner}`));
 
@@ -27,7 +27,7 @@ if (isWebcomponent && fs.existsSync(buildfolder)) {
 }
 
 const compressStylesFunc = (
-	/** @type {ArrayBuffer | SharedArrayBuffer} */ css
+	/** @type {ArrayBuffer | SharedArrayBuffer} */ css,
 ) => {
 	/* eslint-disable no-undef */
 	return transform({

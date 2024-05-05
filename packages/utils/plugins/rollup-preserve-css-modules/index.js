@@ -80,7 +80,7 @@ ${code.substring(node.start, node.end)}
 							/** Ignore external css files or data URIs */
 							if (
 								ignoredProtocols.some(protocol =>
-									moduleSpecifier.startsWith(protocol)
+									moduleSpecifier.startsWith(protocol),
 								)
 							) {
 								return;
@@ -88,7 +88,7 @@ ${code.substring(node.start, node.end)}
 
 							const dirname = path.dirname(id);
 							const absolutePathToCssModule = isBareModuleSpecifier(
-								moduleSpecifier
+								moduleSpecifier,
 							)
 								? require.resolve(moduleSpecifier)
 								: path.join(dirname, moduleSpecifier);
@@ -96,7 +96,7 @@ ${code.substring(node.start, node.end)}
 							/** If we havent processed this file before */
 							if (!cssFilesMap[absolutePathToCssModule]) {
 								const cssModuleContentsBuffer = await fs.readFile(
-									absolutePathToCssModule
+									absolutePathToCssModule,
 								);
 								const cssModuleContents =
 									await cssModuleContentsBuffer.toString();
@@ -118,7 +118,7 @@ ${code.substring(node.start, node.end)}
 								magicString.overwrite(
 									node.source.start,
 									node.source.end,
-									`'./${assetName}'`
+									`'./${assetName}'`,
 								);
 
 								modifiedCode = true;
@@ -126,7 +126,7 @@ ${code.substring(node.start, node.end)}
 								magicString.overwrite(
 									node.source.start,
 									node.source.end,
-									`'./${cssFilesMap[absolutePathToCssModule]}'`
+									`'./${cssFilesMap[absolutePathToCssModule]}'`,
 								);
 
 								modifiedCode = true;

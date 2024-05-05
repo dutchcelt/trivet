@@ -18,7 +18,7 @@ export const loadFont = async (opts, localpath = '') => {
 
 	if (!valid || !family || !filename || !path) {
 		throw new Error(
-			'Missing font face information. Please check the token values.'
+			'Missing font face information. Please check the token values.',
 		);
 	}
 

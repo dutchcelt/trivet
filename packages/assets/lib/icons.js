@@ -24,7 +24,7 @@ try {
  */
 import wawoff from 'wawoff2';
 const sourceFile = fs.readFileSync(
-	`${iconAssetPath}/${iconFontPath}/${iconFontName}.ttf`
+	`${iconAssetPath}/${iconFontPath}/${iconFontName}.ttf`,
 );
 const iconFile = `${buildPath}/${iconFontName}.woff2`;
 

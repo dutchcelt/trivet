@@ -1,3 +1,8 @@
+/**
+ * Generates a Universally Unique Identifier (UUID).
+ *
+ * @returns {string} A UUID.
+ */
 const generateUUID = () => {
 	function ff(s) {
 		var pt = (Math.random().toString(16) + '000000000').substr(2, 8);

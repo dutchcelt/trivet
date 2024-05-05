@@ -11,4 +11,3 @@ export { CSSString2CSSStyleSheet } from './scripts/CSSString2CSSStyleSheet.js';
 export { insertIntoCssLayer } from './scripts/insertIntoCssLayer.js';
 export { generateUUID } from './scripts/generateUUID.js';
 export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
-

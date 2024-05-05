@@ -22,7 +22,7 @@ export function getAllCssRules(sheet) {
 					const hasRules = !!sheetRule(k)?.cssRules;
 					// @ts-expect-error
 					hasRules && _flatten(sheetRule(k));
-				}
+				},
 			);
 		})(sheet);
 	}

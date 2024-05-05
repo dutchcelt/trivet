@@ -24,7 +24,7 @@ export class trvtTable extends TrivetElement {
 		this.style.setProperty('--trvt-number-of-rows', `${this.numberOfRows}`);
 		this.style.setProperty(
 			'--trvt-number-of-columns',
-			`${this.numberOfColumns}`
+			`${this.numberOfColumns}`,
 		);
 		this.style.setProperty('--trvt-table-breakpoint', `${this.breakpoint}`);
 
@@ -39,7 +39,7 @@ export class trvtTable extends TrivetElement {
 		if (!CSS.supports('container', 'test / inline-size')) {
 			window.addEventListener(
 				'resize',
-				throttler(this.setRotationProperties, 300, this)
+				throttler(this.setRotationProperties, 300, this),
 			);
 		}
 	}

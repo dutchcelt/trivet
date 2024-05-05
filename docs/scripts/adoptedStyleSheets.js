@@ -14,7 +14,7 @@
 		var _contents = contents.replace(importPattern, '');
 		if (_contents !== contents) {
 			console.warn(
-				'@import rules are not allowed here. See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418'
+				'@import rules are not allowed here. See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418',
 			);
 		}
 		return _contents.trim();
@@ -50,12 +50,14 @@
 	var nonConstructedProto = NonConstructedStyleSheet.prototype;
 	nonConstructedProto.replace = function () {
 		return Promise.reject(
-			new _DOMException("Can't call replace on non-constructed CSSStyleSheets.")
+			new _DOMException(
+				"Can't call replace on non-constructed CSSStyleSheets.",
+			),
 		);
 	};
 	nonConstructedProto.replaceSync = function () {
 		throw new _DOMException(
-			"Failed to execute 'replaceSync' on 'CSSStyleSheet': Can't call replaceSync on non-constructed CSSStyleSheets."
+			"Failed to execute 'replaceSync' on 'CSSStyleSheet': Can't call replaceSync on non-constructed CSSStyleSheets.",
 		);
 	};
 	function isCSSStyleSheetInstance(instance) {
@@ -88,7 +90,7 @@
 			sheet,
 			$locations.get(sheet).filter(function (_location) {
 				return _location !== location;
-			})
+			}),
 		);
 	}
 	function restyleAdopter(sheet, adopter) {
@@ -203,7 +205,7 @@
 					: NodeFilter.FILTER_REJECT;
 			},
 			null,
-			false
+			false,
 		);
 		for (var next = void 0; (next = iter.nextNode()); ) {
 			callback(getShadowRoot(next));
@@ -232,7 +234,7 @@
 		observer.disconnect();
 		sheets.forEach(function (sheet) {
 			styleList.appendChild(
-				getAdopterByLocation(sheet, self) || addAdopterLocation(sheet, self)
+				getAdopterByLocation(sheet, self) || addAdopterLocation(sheet, self),
 			);
 		});
 		container.insertBefore(styleList, null);
@@ -278,7 +280,7 @@
 						}
 					});
 				});
-			})
+			}),
 		);
 	}
 	Location.prototype = {
@@ -309,21 +311,21 @@
 				throw new TypeError(
 					"Failed to set the 'adoptedStyleSheets' property on " +
 						locationType +
-						': Iterator getter is not callable.'
+						': Iterator getter is not callable.',
 				);
 			}
 			if (!sheets.every(isCSSStyleSheetInstance)) {
 				throw new TypeError(
 					"Failed to set the 'adoptedStyleSheets' property on " +
 						locationType +
-						": Failed to convert value to 'CSSStyleSheet'"
+						": Failed to convert value to 'CSSStyleSheet'",
 				);
 			}
 			if (sheets.some(isNonConstructedStyleSheetInstance)) {
 				throw new TypeError(
 					"Failed to set the 'adoptedStyleSheets' property on " +
 						locationType +
-						": Can't adopt non-constructed stylesheets"
+						": Can't adopt non-constructed stylesheets",
 				);
 			}
 			self.sheets = sheets;
@@ -360,7 +362,7 @@
 	} else {
 		document.addEventListener(
 			'DOMContentLoaded',
-			documentLocation.connect.bind(documentLocation)
+			documentLocation.connect.bind(documentLocation),
 		);
 	}
 })();

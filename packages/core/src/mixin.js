@@ -170,7 +170,7 @@ export const Cached = mixin =>
  */
 export const DeDupe = mixin =>
 	wrap(mixin, superclass =>
-		hasMixin(superclass.prototype, mixin) ? superclass : mixin(superclass)
+		hasMixin(superclass.prototype, mixin) ? superclass : mixin(superclass),
 	);
 
 /**

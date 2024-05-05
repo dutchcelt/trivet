@@ -10,7 +10,7 @@ export const insertIntoCssLayer = (sheets, layer) => {
 		return sheets.forEach(sheet => {
 			let cssText = [...sheet.cssRules].reduce(
 				(acc, rule) => (acc += rule.cssText),
-				''
+				'',
 			);
 			sheet.replace(`
 			@layer ${layer} {

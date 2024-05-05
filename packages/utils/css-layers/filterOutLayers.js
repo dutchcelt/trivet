@@ -7,6 +7,6 @@
 export function filterOutLayers(ruleList) {
 	// @ts-ignore
 	return [...ruleList].filter(rule =>
-		/CSSLayerBlockRule|CSSImportRule/.test(rule.constructor.name)
+		/CSSLayerBlockRule|CSSImportRule/.test(rule.constructor.name),
 	);
 }

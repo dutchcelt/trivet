@@ -46,7 +46,7 @@ export class TrvtLayout extends TrivetElement {
 		this.slotNames = __sortSlotNames(
 			Object.keys(this.#slotMarkupObject()),
 			// @ts-expect-error
-			__getSlotNames(this.children)
+			__getSlotNames(this.children),
 		);
 		this.type = this.dataset?.type || 'page';
 		this.collapsed = this.dataset?.collapse;
