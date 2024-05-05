@@ -2,12 +2,13 @@
 	"name": "@trvt/button",
 	"version": "0.10.4",
 	"description": "Button component for the Trivet Design System",
-	"type": "module",
-	"main": "index.js",
-	"files": [
-		"src",
-		"dist"
+	"keywords": [
+		"web",
+		"components"
 	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
 	"exports": {
 		".": "./index.js",
 		"./*": {
@@ -15,19 +16,17 @@
 			"types": "./dist/types/*"
 		}
 	},
-	"keywords": [
-		"web",
-		"components"
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
 	],
-	"author": "C. Egor Kloos",
-	"license": "AGPL-3.0",
 	"scripts": {
-		"types": "npx -y tsc -p tsconfig.json",
-		"build": "rollup -c ../../../configs/rollup.config.js",
-		"develop": "npm run build --watch"
+		"build": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch",
+		"types": "npx -y tsc -p tsconfig.json"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7",
-		"rollup": "^4.16.0"
+		"@trvt/core": "^0.9.7"
 	}
 }

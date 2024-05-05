@@ -2,11 +2,13 @@
 	"name": "@trvt/dragscroller",
 	"version": "0.3.6",
 	"description": "Drag the conents of a scrollbox",
-	"main": "index.js",
-	"files": [
-		"src",
-		"dist"
+	"keywords": [
+		"web",
+		"components"
 	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
 	"exports": {
 		".": "./index.js",
 		"./*": {
@@ -14,21 +16,18 @@
 			"types": "./dist/types/*"
 		}
 	},
-	"type": "module",
-	"keywords": [
-		"web",
-		"components"
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
 	],
-	"author": "C. Egor Kloos",
-	"license": "AGPL-3.0",
-	"dependencies": {
-		"@trvt/core": "^0.9.7",
-		"rollup": "^4.16.0"
-	},
 	"scripts": {
-		"types": "npx -y tsc -p tsconfig.json",
-		"build:rollup": "rollup -c ../../../configs/rollup.config.js",
 		"build": "npm run build:rollup",
-		"develop": "npm run build --watch"
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch",
+		"types": "npx -y tsc -p tsconfig.json"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.7"
 	}
 }
