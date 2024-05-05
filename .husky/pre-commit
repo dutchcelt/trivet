@@ -1,3 +1,2 @@
-npx sort-package-json
 npm test
 npx lint-staged
