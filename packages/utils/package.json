@@ -3,17 +3,18 @@
 	"version": "0.0.1",
 	"description": "A set of utilities to build, test, and run Trivet.",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"author": "C. Egor Kloos",
 	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
 	"type": "module",
 	"main": "index.js",
 	"files": [
 		"**/*.js"
 	],
 	"scripts": {
-		"test": "echo 'utils: no scripts'",
-		"build": "echo 'utils: no scripts'",
-		"develop": "echo 'utils: no scripts'"
+		"prebuild": "npx -y chalk -t '{blueBright.bold \n\n=== Utils ===================================================}'",
+		"build": "echo '\nutils: no scripts'",
+		"develop": "echo 'utils: no scripts'",
+		"test": "echo 'utils: no scripts'"
 	},
 	"dependencies": {
 		"estree-walker": "^3.0.3",
