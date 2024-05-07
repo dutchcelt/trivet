@@ -1,0 +1,34 @@
+{
+	"name": "@trvt/navigation",
+	"version": "0.6.5",
+	"private": true,
+	"description": "Navigation component for the Trivet Design System",
+	"keywords": [
+		"web",
+		"components"
+	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*",
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch",
+		"types": "npx -y tsc -p tsconfig.json"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.7"
+	}
+}

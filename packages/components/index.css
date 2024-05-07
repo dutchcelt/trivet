@@ -1,0 +1,76 @@
+@import '../styles/dist/importer.css';
+@import '../designtokens/dist/css/trvt_tokens.css';
+@import '../designtokens/dist/css/trvt_properties.css';
+@layer theme {
+	.reference {
+		--trvt-color-typography-heading: canvas;
+		--trvt-color-typography-text: color-mix(
+			in oklab,
+			canvasText 90%,
+			canvas
+		);
+		--trvt-color-background-canvas: color-mix(
+			in oklab,
+			canvas 95%,
+			canvasText
+		);
+		& header,
+		& main {
+			--rlh: 1rlh;
+			--gap: calc(var(--rlh, 1.2rem) - 1ex);
+			margin-inline: auto;
+			padding-block: var(--gap);
+			padding-inline: clamp(var(--gap), 5rem, 6vw);
+			max-width: 75ch;
+		}
+		& header {
+			background-color: var(--trvt-color-typography-text);
+			color: canvas;
+			box-shadow: 0 0 0 100dvw var(--trvt-color-typography-text);
+			clip-path: inset(0 -100dvw);
+			& h1 {
+				margin: 0;
+				font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro',
+					Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+			}
+			& p {
+				margin: 0;
+				color: color-mix(in oklab, canvasText 42%, canvas);
+				text-transform: capitalize;
+				letter-spacing: 0.5px;
+			}
+		}
+		&.index h1 {
+			font-family: system-ui, sans-serif;
+		}
+		& h2,
+		& h3,
+		& h4,
+		& h5,
+		& h6 {
+			--trvt-color-typography-heading: canvasText;
+		}
+		& a {
+			--link-color: color-mix(
+				in oklab,
+				dodgerblue 80%,
+				var(--trvt-color-typography-text)
+			);
+			&:hover {
+				--link-color: color-mix(
+					in oklab,
+					dodgerblue 40%,
+					var(--trvt-color-typography-text)
+				);
+			}
+			&:active {
+				--link-color: color-mix(
+					in oklab,
+					orangered 70%,
+					var(--trvt-color-typography-text)
+				);
+			}
+			color: var(--link-color, linkText);
+		}
+	}
+}

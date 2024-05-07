@@ -2,7 +2,7 @@ const env = process.env;
 const path = require('path');
 const fs = require('fs');
 const writeCSSImport = import(
-	path.resolve('..', 'assets', 'lib', 'writeCSS.js')
+	path.resolve('..', 'packages', 'styles', 'lib', 'writeCSS.js')
 );
 
 let importscope = '@trvt';
@@ -11,13 +11,14 @@ let scopeReg = new RegExp(importscope, 'i');
 const depsFile = fs.readFileSync(path.resolve('.', 'package.json'));
 const depsObject = JSON.parse(depsFile.toString());
 const importArr = Object.keys(depsObject.devDependencies).filter(key =>
-	scopeReg.test(key)
+	scopeReg.test(key),
 );
 
 const copyImports = (eleventyConfig, deps) => {
 	deps.forEach(dep => {
 		eleventyConfig.addPassthroughCopy({
-			[`../node_modules/${dep}/build`]: `${dep}`,
+			[`../node_modules/${dep}/dist`]: `${dep}`,
+			[`../node_modules/@trvt/utils`]: `${dep}`,
 		});
 	});
 };
@@ -49,7 +50,13 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode('stylesheet', async function () {
 		const { writeCSS } = await writeCSSImport;
 
-		const trivetPath = path.resolve('..', 'assets', 'build', 'importer.css');
+		const trivetPath = path.resolve(
+			'..',
+			'packages',
+			'styles',
+			'dist',
+			'importer.css',
+		);
 		const themePath = path.resolve('.', 'styles', 'index.css');
 
 		let filename = 'theme.css';

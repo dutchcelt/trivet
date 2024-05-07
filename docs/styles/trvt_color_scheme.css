@@ -1,3 +1,6 @@
 @layer design.tokens {
-[data-color-scheme='dark'] {}[data-color-scheme='light'] {}
+	[data-color-scheme='dark'] {
+	}
+	[data-color-scheme='light'] {
+	}
 }

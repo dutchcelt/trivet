@@ -1,0 +1,30 @@
+{
+	"name": "@trvt/article",
+	"version": "0.7.3",
+	"description": "A very simple web component base class",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*",
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch",
+		"types": "npx -y tsc -p tsconfig.json"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.9"
+	}
+}

@@ -8,7 +8,6 @@
 		"strict": true,
 		"noImplicitThis": true,
 		"composite": true,
-		"emitDeclarationOnly": true,
 		"alwaysStrict": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
@@ -17,10 +16,13 @@
 		"declarationMap": true
 	},
 	"exclude": [
-		"./assets",
-		"./utils",
+		"./packages/styles",
+		"./packages/assets",
+		"./packages/utils",
+		"./packages/cli",
 		"./public",
-		"./designtokens",
-		"./docs"
+		"./packages/designtokens",
+		"./docs",
+		"**/build"
 	]
 }
