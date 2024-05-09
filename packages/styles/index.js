@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /* Styles */
 import layersCSS from './src/index.css' with { type: 'css' };
 import resetCSS from './src/base/reset.css' with { type: 'css' };

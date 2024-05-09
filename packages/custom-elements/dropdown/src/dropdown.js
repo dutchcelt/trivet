@@ -1,5 +1,5 @@
 import { styles } from '@trvt/core';
-
+// @ts-expect-error
 import shadowStyles from './dropdown.css' with { type: 'css' };
 
 export class TrvtDropdown extends HTMLElement {

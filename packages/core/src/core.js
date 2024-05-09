@@ -5,17 +5,22 @@ import { createFragment } from './createFragment.js';
 import { activateColorScheme, colorScheme } from './activateColorScheme.js';
 
 /**
- * Represents the CSS layer definitions retrieved from the trivetCSS object.
- * Contains the CSS rules with names extracted from the trivetCSS object.
+ * Represents the CSS layer definitions.
  *
- * @type {string[]}
+ * @type {Array<string>}
  * @name cssLayerDefinitions
+ * @memberOf trivetCSS
+ * @property {CSSRule} cssLayerDefinitions[0] - The first CSS rule in the trivetCSS array.
+ * @property {CSSStyleRule} cssLayerDefinitions[0].cssRules[0] - The first CSS style rule in the first CSS rule.
+ * @property {DOMTokenList} cssLayerDefinitions[0].cssRules[0].nameList - The name list associated with the first CSS style rule.
  */
+// @ts-ignore
 const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
 
 /**
  * TrivetElement
  * @class
+ @property {Array} nameList
  */
 class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */

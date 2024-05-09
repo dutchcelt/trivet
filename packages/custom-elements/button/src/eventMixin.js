@@ -13,7 +13,6 @@ const isKeyboardClickEvent = event =>
  */
 const isSpaceKeyboardClickEvent = event => event.key === ' ';
 
-// @ts-expect-error
 const EventMixin = superClass =>
 	class extends superClass {
 		#clickHandler() {

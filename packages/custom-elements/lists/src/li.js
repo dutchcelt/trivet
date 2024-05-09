@@ -1,4 +1,5 @@
 import { TrivetElement } from '@trvt/core';
+// @ts-expect-error
 import trvtItemCSS from './li.css' with { type: 'css' };
 
 export class TrvtLi extends TrivetElement {

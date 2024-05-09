@@ -4,6 +4,6 @@
     "outDir": "./dist/types",
     "rootDir": "./"
   },
-  "include": ["src", "index.js"],
-  "exclude": ["build", "dist", "tests", "example"]
+  "include": ["lib", "index.js"],
+  "exclude": ["bin"]
 }

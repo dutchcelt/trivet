@@ -1,4 +1,6 @@
+// @ts-nocheck
 import { TrivetElement } from '@trvt/core';
+// @ts-expect-error
 import dragscrollerCSS from './dragscroller.css' with { type: 'css' };
 
 export class TrvtDragScroller extends TrivetElement {
@@ -19,6 +21,7 @@ export class TrvtDragScroller extends TrivetElement {
 	 * @param {Event} event
 	 */
 	handleEvent(event) {
+		console.log(event);
 		const type = event.type;
 		if (this.#validEventTypes.test(event.type)) {
 			// @ts-expect-error

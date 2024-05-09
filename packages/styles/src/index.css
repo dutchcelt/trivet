@@ -12,9 +12,9 @@ design.utilities,
  */
 theme,
 
-/* 
- *	'components' styles can also be defined inside the web component 
- *	and will reuse these layer definitions 
+/*
+ *	'components' styles can also be defined inside the web component
+ *	and will reuse these layer definitions
  */
 components.props,
 components.selectors,

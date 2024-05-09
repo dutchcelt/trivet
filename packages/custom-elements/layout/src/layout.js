@@ -1,4 +1,5 @@
 import { TrivetElement } from '@trvt/core';
+// @ts-expect-error
 import layoutCSS from './layout.css' with { type: 'css' };
 
 /**
@@ -53,6 +54,7 @@ export class TrvtLayout extends TrivetElement {
 		this.position = this.dataset?.contentPosition || 'start';
 		this.shadowStyleSheets = layoutCSS;
 		this.shadow.innerHTML = `<div class="trvt-layout"></div>`;
+		// @ts-ignore
 		this.#render(this.shadowFragment);
 	}
 
@@ -90,12 +92,7 @@ export class TrvtLayout extends TrivetElement {
 	#template() {
 		const templates = this.#slotMarkupObject();
 		/** @type {string[]} */
-		return (
-			this.slotNames
-				// @ts-expect-error
-				.map(name => templates[name] || ``)
-				.join(``)
-		);
+		return this.slotNames.map(name => templates[name] || ``).join(``);
 	}
 
 	/**

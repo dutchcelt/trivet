@@ -1,9 +1,11 @@
 import { hasCSSLayerSupport } from './hasCSSLayerSupport.js';
 
 /**
- * External stylesheet often to not a layers. This allows us wrap that sheet in at-rule layer.
- * @param sheets
- * @param layer
+ * Inserts CSS rules into a specific layer of the given style sheets.
+ *
+ * @param {CSSStyleSheet[]} sheets - The style sheets to insert the CSS rules into.
+ * @param {string} layer - The layer name to insert the CSS rules into.
+ * @returns {void}
  */
 export const insertIntoCssLayer = (sheets, layer) => {
 	if (hasCSSLayerSupport()) {

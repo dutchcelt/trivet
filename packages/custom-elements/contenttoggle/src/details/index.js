@@ -1,5 +1,7 @@
 import { styles } from '@trvt/core';
+// @ts-expect-error
 import details from './details.css' with { type: 'css' };
+// @ts-expect-error
 import summary from './summary.css' with { type: 'css' };
 
 export class TrvtToggleDetails extends HTMLElement {

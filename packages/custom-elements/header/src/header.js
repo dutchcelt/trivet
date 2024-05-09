@@ -1,4 +1,5 @@
 import { styles, createFragment } from '@trvt/core';
+// @ts-expect-error
 import headerCSS from './header.css' with { type: 'css' };
 
 export class TrvtHeader extends HTMLElement {
@@ -21,6 +22,7 @@ export class TrvtHeader extends HTMLElement {
 			this.dynamicCustomStyles,
 		];
 		this.heading = this.shadow.querySelector('h1');
+		// @ts-expect-error
 		this.shadow.appendChild(this.render());
 		this.#setStyle();
 	}
@@ -69,8 +71,8 @@ export class TrvtHeader extends HTMLElement {
 	}
 
 	/**
-	 * Create a <H1> element
-	 * @returns {DocumentFragment}
+	 * Renders a <H1> element with an optional title.
+	 * @returns {DocumentFragment|string} - The created document fragment.
 	 */
 	render() {
 		const heading = this.titleString

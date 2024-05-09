@@ -73,6 +73,7 @@
 		"prettier": "^3.2.5",
 		"rollup": "^4.16.0",
 		"rollup-plugin-css-modules": "^0.1.2",
-		"sort-package-json": "^2.10.0"
+		"sort-package-json": "^2.10.0",
+		"typescript": "^5.4.5"
 	}
 }

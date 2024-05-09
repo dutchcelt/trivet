@@ -1,4 +1,5 @@
 import { TrivetElement } from '@trvt/core';
+// @ts-expect-error
 import articleCSS from './article.css' with { type: 'css' };
 
 /**

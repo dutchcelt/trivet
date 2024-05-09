@@ -1,4 +1,5 @@
 import { throttler } from '@trvt/utils';
+// @ts-expect-error
 import tableCSS from './table.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
@@ -39,6 +40,7 @@ export class trvtTable extends TrivetElement {
 		if (!CSS.supports('container', 'test / inline-size')) {
 			window.addEventListener(
 				'resize',
+				// @ts-expect-error
 				throttler(this.setRotationProperties, 300, this),
 			);
 		}

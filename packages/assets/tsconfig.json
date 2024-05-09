@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/types",
+    "rootDir": "./"
+  },
+  "exclude": ["*"]
+}

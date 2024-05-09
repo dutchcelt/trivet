@@ -1,28 +1,19 @@
 {
-	"compilerOptions": {
-		"module": "NodeNext",
-		"checkJs": true,
-		"allowJs": true,
-		"target": "ESNext",
-		"moduleResolution": "NodeNext",
-		"strict": true,
-		"noImplicitThis": true,
-		"composite": true,
-		"alwaysStrict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"incremental": true,
-		"declaration": true,
-		"declarationMap": true
-	},
-	"exclude": [
-		"./packages/styles",
-		"./packages/assets",
-		"./packages/utils",
-		"./packages/cli",
-		"./public",
-		"./packages/designtokens",
-		"./docs",
-		"**/build"
-	]
+  "compilerOptions": {
+    "module": "NodeNext",
+    "checkJs": true,
+    "allowJs": true,
+    "target": "ESNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "declaration": true,
+    "declarationMap": true,
+		"noImplicitAny": false
+  },
+  "include": ["./packages/core/**/*.js"],
+  "exclude": ["bin", "test", "docs", "build", "packages/**/*.cjs"]
 }

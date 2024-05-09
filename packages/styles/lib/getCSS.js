@@ -2,9 +2,10 @@ import * as fs from 'fs';
 import { bundle } from 'lightningcss';
 
 /**
- * Get the CSS from a style sheet. This also inlines all the CSS imports.
- * @param {string} cssFile - A resolved path to a stylesheet
- * @return {Uint8Array} A single minified css string.
+ * Retrieves the minified CSS code from a given CSS file.
+ *
+ * @param {string} cssFile - The path to the CSS file.
+ * @returns {string|undefined} - The minified CSS code or undefined if the file does not exist.
  */
 const getCSS = cssFile => {
 	if (!fs.existsSync(cssFile)) return;
@@ -12,6 +13,7 @@ const getCSS = cssFile => {
 		filename: cssFile,
 		minify: true,
 	});
+	// @ts-ignore
 	return code;
 };
 

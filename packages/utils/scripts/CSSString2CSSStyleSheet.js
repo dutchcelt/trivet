@@ -1,8 +1,8 @@
 /**
  * Convert a CSS String (CSSText) to a stylesheet.
  * This enables the use of constructed stylesheets
- * @param css
- * @returns {CSSStyleSheet}
+ * @param {string} css
+ * @returns {CSSStyleSheet|null}
  * @constructor
  */
 export const CSSString2CSSStyleSheet = css => {

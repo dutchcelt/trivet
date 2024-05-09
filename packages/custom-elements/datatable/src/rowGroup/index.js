@@ -1,3 +1,4 @@
+// @ts-expect-error
 import rowgroupCSS from './rowGroup.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 

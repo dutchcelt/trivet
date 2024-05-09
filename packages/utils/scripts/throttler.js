@@ -24,6 +24,7 @@ const throttler = (callback, ms, scope) => {
 	};
 	return (...args) => {
 		if (!running)
+			// @ts-ignore
 			running = setTimeout(onTimeOut, Math.max(0, DELAY - FRAME), ...args);
 	};
 };

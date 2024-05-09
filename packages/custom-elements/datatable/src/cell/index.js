@@ -1,3 +1,4 @@
+// @ts-expect-error
 import cellCSS from './cell.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
