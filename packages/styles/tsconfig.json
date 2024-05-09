@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "./dist/types"
   },
-  "include": ["lib"],
+  "include": ["lib", "index.js"],
   "exclude": ["build", "dist", "tests", "example"]
 }
