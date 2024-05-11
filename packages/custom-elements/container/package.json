@@ -1,7 +1,7 @@
 {
-	"name": "@trvt/contenttoggle",
-	"version": "0.4.6",
-	"description": "Toggle content as an accordion or as tabs",
+	"name": "@trvt/container",
+	"version": "0.0.0",
+	"description": "Container component for the Trivet Design System",
 	"keywords": [
 		"web",
 		"components"
@@ -17,13 +17,12 @@
 	},
 	"main": "index.js",
 	"files": [
-		"src",
 		"dist"
 	],
 	"scripts": {
 		"build": "npm run build:rollup",
 		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
-		"develop": "npm run build:rollup --watch",
+		"develop": "npm run build --watch",
 		"types": "npx -y tsc -p tsconfig.json"
 	},
 	"dependencies": {

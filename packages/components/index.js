@@ -1,6 +1,7 @@
 export { TrvtButton } from '@trvt/button';
 export { TrvtArticle } from '@trvt/article';
-export { TrvtCard } from '@trvt/card';
+export { TrvtContainer } from '@trvt/container';
+export { TrvtCard } from '@trvt/card/build';
 export { TrvtToggleDetails, TrvtTabContainer } from '@trvt/contenttoggle';
 export {
 	trvtCell,

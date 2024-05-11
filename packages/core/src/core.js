@@ -26,7 +26,7 @@ class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */
 	#shadowRoot;
 
-	/**  @type {CSSStyleSheet} */
+	/**  @type {CSSStyleSheet[]} */
 	// @ts-expect-error
 	#shadowStyles;
 	/** @type {string} */

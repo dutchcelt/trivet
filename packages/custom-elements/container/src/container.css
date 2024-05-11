@@ -1,0 +1,49 @@
+@layer components {
+	@layer props {
+		:host {
+			--_container-text-color: var(--trvt-color-typography-text);
+			--_container-border-color: var(--trvt-color-line-border);
+			--_container-background-color: var(--trvt-color-background);
+		}
+		section {
+			--_container-display: grid;
+			--_container-columns: 1fr;
+			--_container-row-gap: var(--row-gap);
+			--_container-column-gap: var(--column-gap);
+			--_container-padding: var(--size-2, 1rem);
+			--_container-surface-color: var(--surface-1, canvas);
+			--_container-heading-color: var(--text-3);
+		}
+	}
+	@layer selectors {
+		:host {
+			display: block;
+			break-inside: avoid;
+			container: component / inline-size;
+			flex: 1;
+		}
+
+		section {
+			display: var(--_container-display);
+			grid-template-columns: var(--_container-columns);
+			row-gap: var(--_container-row-gap);
+			column-gap: var(--_container-column-gap);
+			padding: var(--_container-padding);
+			background-color: var(--_container-surface-color);
+			margin-block: var(
+				--is-multicol,
+				calc(var(--_container-row-gap) / 2)
+			);
+			height: calc(100% - (var(--_container-padding) * 2));
+			/* min-width: min(20rem, 100%); */
+			align-content: start;
+		}
+	}
+	@layer modifiers {
+		@container component (min-width: 35em) {
+			section {
+				--_container-columns: 1fr 1fr;
+			}
+		}
+	}
+}

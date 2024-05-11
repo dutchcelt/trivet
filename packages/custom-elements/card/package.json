@@ -22,7 +22,7 @@
 	"scripts": {
 		"build": "npm run build:rollup",
 		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
-		"develop": "npm run build --watch",
+		"develop": "npm run build:rollup --watch",
 		"types": "npx -y tsc -p tsconfig.json"
 	},
 	"dependencies": {

@@ -79,6 +79,7 @@ export default [
 			'@trvt/utils',
 			'@trvt/root',
 			'@trvt/styles',
+			'@trvt/container',
 			'wawoff2',
 			'copyfiles',
 		],
