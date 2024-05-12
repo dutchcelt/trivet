@@ -12,7 +12,7 @@
 	],
 	"scripts": {
 		"prebuild": "npx -y chalk -t '{blueBright.bold \n\n=== Utils ===================================================}'",
-		"build": "echo '\nutils: no scripts'",
+		"build": "mkdir -p dist && mkdir -p dist/script && cp scripts/*.js dist/script",
 		"develop": "echo 'utils: no scripts'",
 		"test": "echo 'utils: no scripts'"
 	},

@@ -36,6 +36,7 @@ class TrivetElement extends HTMLElement {
 	#render() {
 		activateColorScheme(colorScheme.current || '');
 		this.#shadowRoot.innerHTML = this.template;
+		activateColorScheme();
 	}
 
 	get shadow() {

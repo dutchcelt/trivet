@@ -10,15 +10,14 @@ let scopeReg = new RegExp(importscope, 'i');
 
 const depsFile = fs.readFileSync(path.resolve('.', 'package.json'));
 const depsObject = JSON.parse(depsFile.toString());
-const importArr = Object.keys(depsObject.devDependencies).filter(key =>
+
+const importArr = Object.keys(depsObject.dependencies).filter(key =>
 	scopeReg.test(key),
 );
-
 const copyImports = (eleventyConfig, deps) => {
 	deps.forEach(dep => {
 		eleventyConfig.addPassthroughCopy({
 			[`../node_modules/${dep}/dist`]: `${dep}`,
-			[`../node_modules/@trvt/utils`]: `${dep}`,
 		});
 	});
 };
@@ -28,7 +27,9 @@ const packagePath = '';
 
 const createImportmap = deps => {
 	const obj = {};
-	deps.forEach(dep => (obj[dep] = `${packagePath}/${encodeURI(dep)}/index.js`));
+	deps.forEach(
+		dep => (obj[dep] = `.${packagePath}/${encodeURI(dep)}/index.js`),
+	);
 	return JSON.stringify(obj);
 };
 const moduleImporter = deps => {
@@ -40,12 +41,15 @@ const moduleImporter = deps => {
 };
 
 module.exports = function (eleventyConfig) {
+	// eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
+
 	eleventyConfig.addPassthroughCopy('fonts');
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('webcomponents');
 	eleventyConfig.addPassthroughCopy('scripts');
 
-	isDevelopmentMode || copyImports(eleventyConfig, importArr);
+	//isDevelopmentMode || copyImports(eleventyConfig, importArr);
+	copyImports(eleventyConfig, importArr);
 
 	eleventyConfig.addShortcode('stylesheet', async function () {
 		const { writeCSS } = await writeCSSImport;
@@ -75,14 +79,6 @@ module.exports = function (eleventyConfig) {
 					{
 						"imports": ${createImportmap(importArr)}
 					}
-				</script>
-			`.trim();
-		return temp;
-	});
-	eleventyConfig.addShortcode('importmodules', function () {
-		const temp = `
-				<script type="module">
-					${moduleImporter(importArr)}
 				</script>
 			`.trim();
 		return temp;

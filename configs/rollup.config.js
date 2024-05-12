@@ -1,5 +1,8 @@
 // @ts-ignore
 import { cssModules } from 'rollup-plugin-css-modules';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+//import terser from '@rollup/plugin-terser';
+
 // @ts-ignore
 import css from '../packages/utils/plugins/rollup-preserve-css-modules/index.js';
 import { transform } from 'lightningcss';
@@ -50,6 +53,7 @@ export default [
 
 		plugins: [
 			// @ts-ignore
+			nodeResolve(),
 			cssModules(),
 
 			css({

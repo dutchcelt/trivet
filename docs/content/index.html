@@ -31,12 +31,11 @@
 			}
 		</script>
 		<script async src="@trvt/utils/scripts/es-module-shims.js"></script>
-		{% importmap %} {% importmodules %}
+		{% importmap %}
 		<script type="module">
+			import '@trvt/components';
 			import './webcomponents/dutchceltlogo.js';
 			import './webcomponents/swatch.js';
-			import { activateColorScheme } from '@trvt/core';
-			activateColorScheme();
 		</script>
 	</head>
 	<body>
@@ -175,7 +174,7 @@
 						>Primary</trvt-button
 					>
 				</form>
-				<trvt-table style="--canvas">
+				<trvt-table style="">
 					<trvt-thead>
 						<trvt-row>
 							<trvt-header-cell>Cell 1.1</trvt-header-cell>
