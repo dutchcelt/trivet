@@ -8,7 +8,8 @@
 	"type": "module",
 	"main": "index.js",
 	"files": [
-		"**/*.js"
+		"**/*.js",
+		"dist"
 	],
 	"scripts": {
 		"prebuild": "npx -y chalk -t '{blueBright.bold \n\n=== Utils ===================================================}'",

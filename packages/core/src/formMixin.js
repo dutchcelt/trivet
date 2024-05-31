@@ -1,7 +1,8 @@
-// @ts-nocheck
-
-const FormMixin = superClass =>
-	class extends superClass {
+/**
+ * FormMixin is a mixin class that adds form-related functionality to a superclass.
+ */
+const FormMixin = SuperClass =>
+	class extends SuperClass {
 		#internals;
 		#value;
 

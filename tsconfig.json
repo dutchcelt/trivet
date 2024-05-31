@@ -12,8 +12,10 @@
     "incremental": true,
     "declaration": true,
     "declarationMap": true,
+		"composite": true,
+		"emitDeclarationOnly": true,
 		"noImplicitAny": false
   },
   "include": ["./packages/core/**/*.js"],
-  "exclude": ["bin", "test", "docs", "build", "packages/**/*.cjs"]
+  "exclude": ["bin", "test", "docs", "build", "packages/**/*.cjs", "build", "dist", "tests", "example"]
 }

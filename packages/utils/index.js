@@ -13,3 +13,4 @@ export { generateUUID } from './scripts/generateUUID.js';
 export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 export { hashCode } from './scripts/hashcode.js';
+export { dynamicStyles } from './scripts/dynamicStyles.js';

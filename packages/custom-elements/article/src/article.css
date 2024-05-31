@@ -1,7 +1,7 @@
 @layer components {
 	@layer props {
 		/* Style API */
-		:host(trvt-article) {
+		:host {
 			--trvt-article-display: var(--trvt-layout-display-content, block);
 			--trvt-article-offset-block-start: 0;
 			--trvt-article-offset-block-end: 0;
@@ -49,17 +49,17 @@
 			/* Positioning */
 
 			/* Display */
-			color: var(--_color);
 			background-color: var(--_background-color);
-			font-size: var(--_font-size);
-			font-weight: var(--_font-weight);
 		}
 
 		article [name='intro']::slotted(*) {
 			font-weight: var(--_font-weight);
 		}
+		::slotted(*) {
+			color: var(--_color);
+			font-size: var(--_font-size);
+			font-weight: var(--_font-weight);
+		}
 	}
 }
-/* [name='intro']::slotted(*) {
-	font-weight: revert-layer !important;
-} */
+\

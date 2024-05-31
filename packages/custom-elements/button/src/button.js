@@ -54,9 +54,7 @@ export class TrvtButton extends mix(TrivetElement).with(
                 ${this.trvtReadonly ? ' readonly' : ''}
                 ${this.id ? ` id="${this.id}"` : ''}
                 ${this.name ? ` name="${this.name}"` : ''} 
-            >
-                <slot></slot>
-            </button>
+            ><slot></slot></button>
         `;
 	}
 }

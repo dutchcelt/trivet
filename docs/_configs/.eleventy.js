@@ -22,23 +22,23 @@ const copyImports = (eleventyConfig, deps) => {
 	});
 };
 
-const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
-const packagePath = '';
+// const isDevelopmentMode = env.ELEVENTY_RUN_MODE !== 'build';
+// const packagePath = '';
 
-const createImportmap = deps => {
-	const obj = {};
-	deps.forEach(
-		dep => (obj[dep] = `.${packagePath}/${encodeURI(dep)}/index.js`),
-	);
-	return JSON.stringify(obj);
-};
-const moduleImporter = deps => {
-	let str = '';
-	deps.forEach(d => {
-		str += `import '${d}';\n`;
-	});
-	return str;
-};
+// const createImportmap = deps => {
+// 	const obj = {};
+// 	deps.forEach(
+// 		dep => (obj[dep] = `.${packagePath}/${encodeURI(dep)}/index.js`),
+// 	);
+// 	return JSON.stringify(obj);
+// };
+// const moduleImporter = deps => {
+// 	let str = '';
+// 	deps.forEach(d => {
+// 		str += `import '${d}';\n`;
+// 	});
+// 	return str;
+// };
 
 module.exports = function (eleventyConfig) {
 	// eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
@@ -73,16 +73,16 @@ module.exports = function (eleventyConfig) {
 		return temp;
 	});
 
-	eleventyConfig.addShortcode('importmap', function () {
-		const temp = `
-				<script type="importmap">
-					{
-						"imports": ${createImportmap(importArr)}
-					}
-				</script>
-			`.trim();
-		return temp;
-	});
+	// eleventyConfig.addShortcode('importmap', function () {
+	// 	const temp = `
+	// 			<script type="importmap">
+	// 				{
+	// 					"imports": ${createImportmap(importArr)}
+	// 				}
+	// 			</script>
+	// 		`.trim();
+	// 	return temp;
+	// });
 	return {
 		dir: {
 			input: 'content',
