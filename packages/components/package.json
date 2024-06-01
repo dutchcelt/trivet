@@ -31,8 +31,7 @@
     "build": "npm run build:rollup",
     "build:esbuild": "esbuild --outfile=dist/index.js --bundle",
     "build:rollup": "rollup index.js -p rollup-plugin-css-modules -p @rollup/plugin-node-resolve -p @rollup/plugin-terser -o dist/index.js ",
-    "develop": "npm run build --watch",
-    "types": "npx -y tsc -p tsconfig.json"
+    "develop": "npm run build --watch"
   },
   "dependencies": {
     "@trvt/article": "^0.7.2",

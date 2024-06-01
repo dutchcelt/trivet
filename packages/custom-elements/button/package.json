@@ -21,8 +21,7 @@
 	],
 	"scripts": {
 		"build": "npx rollup -c ../../../configs/rollup.config.js",
-		"develop": "npm run build --watch",
-		"types": "npx -y tsc -p tsconfig.json"
+		"develop": "npm run build --watch"
 	},
 	"dependencies": {
 		"@trvt/core": "^0.9.7"

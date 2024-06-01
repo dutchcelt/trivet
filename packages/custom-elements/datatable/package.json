@@ -23,8 +23,7 @@
 	"scripts": {
 		"build": "npm run build:rollup",
 		"build:rollup": "npx -y rollup -c \"../../../configs/rollup.config.js\"",
-		"develop": "npm run build && npx -y wds --root-dir \"../../\" --watch --node-resolve --open \"/webcomponents/datatable/index.html\"",
-		"types": "npx -y tsc -p tsconfig.json"
+		"develop": "npm run build && npx -y wds --root-dir \"../../\" --watch --node-resolve --open \"/webcomponents/datatable/index.html\""
 	},
 	"dependencies": {
 		"@trvt/core": "^0.9.7"

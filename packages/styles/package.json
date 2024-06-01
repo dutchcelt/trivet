@@ -21,8 +21,7 @@
     "build": "npm run build:rollup && npm run build:css",
     "build:css": "node ./lib/bundleCSS.js",
     "build:rollup": "npx rollup -c ../../configs/rollup.config.js",
-    "develop": "npm run build --watch",
-    "types": "npx -y tsc -p tsconfig.json"
+    "develop": "npm run build --watch"
   },
   "dependencies": {
     "@trvt/designtokens": "^0.11.11",
