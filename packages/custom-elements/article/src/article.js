@@ -25,9 +25,6 @@ export class TrvtArticle extends TrivetElement {
 		/** @type {string} */
 		this.template = contentTemplate;
 	}
-	connectedCallback() {
-		this.shadowCSSvars = '--trvt-article-color: pink';
-	}
 }
 
 customElements.define('trvt-article', TrvtArticle);
