@@ -23,11 +23,12 @@ function toCamelCase(str) {
 }
 
 const getContentFromFile = filename => {
+	const defaultColor = 'currentColor';
 	try {
 		const content = fs.readFileSync(path.join(iconPath, filename), 'utf8');
-		content.replace(/"#([0-9a-fA-F]{6,8})"/g, '"currentColor"');
-		content.replace(/"white"/gi, '"currentColor"');
-		content.replace(/"black"/gi, '"currentColor"');
+		content.replace(/"#([0-9a-fA-F]{6,8})"/g, `"${defaultColor}"`);
+		content.replace(/"white"/gi, `"${defaultColor}"`);
+		content.replace(/"black"/gi, `"${defaultColor}"`);
 		return content;
 	} catch (err) {
 		console.error(`Error reading file from disk: ${err}`);
