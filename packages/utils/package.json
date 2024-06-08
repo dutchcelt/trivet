@@ -6,6 +6,12 @@
 	"license": "AGPL-3.0",
 	"author": "C. Egor Kloos",
 	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*"
+		}
+	},
 	"main": "index.js",
 	"files": [
 		"**/*.js",

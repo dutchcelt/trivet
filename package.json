@@ -11,8 +11,14 @@
 	"author": "C. Egor Kloos",
 	"type": "module",
 	"workspaces": [
+		"packages/assets",
+		"packages/styles",
+		"packages/cli",
+		"packages/designtokens",
+		"packages/utils",
+		"packages/core",
 		"packages/custom-elements/*",
-		"packages/*",
+		"packages/components",
 		"docs"
 	],
 	"scripts": {
