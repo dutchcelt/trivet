@@ -11,9 +11,9 @@
 	"author": "C. Egor Kloos",
 	"type": "module",
 	"workspaces": [
-		"docs",
+		"packages/custom-elements/*",
 		"packages/*",
-		"packages/custom-elements/*"
+		"docs"
 	],
 	"scripts": {
 		"prebuild": "npm run format && npm run lint",
