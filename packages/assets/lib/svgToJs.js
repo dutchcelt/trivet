@@ -24,12 +24,10 @@ function toCamelCase(str) {
 
 const getContentFromFile = filename => {
 	try {
-		let content = fs.readFileSync(path.join(iconPath, filename), 'utf8');
-
-		content = content.replace(/"#([0-9a-fA-F]{6,8})"/g, '"currentColor"');
-		content = content.replace('white', '"currentColor"');
-		content = content.replace('black', '"currentColor"');
-
+		const content = fs.readFileSync(path.join(iconPath, filename), 'utf8');
+		content.replace(/"#([0-9a-fA-F]{6,8})"/g, '"currentColor"');
+		content.replace(/"white"/gi, '"currentColor"');
+		content.replace(/"black"/gi, '"currentColor"');
 		return content;
 	} catch (err) {
 		console.error(`Error reading file from disk: ${err}`);
