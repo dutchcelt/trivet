@@ -28,7 +28,7 @@ class DutchceltLogo extends HTMLElement {
 						}
 						a {
 								padding: 1rem;
-								font-family: 'Mona Sans';
+								font-family: var(--trvt-typography-family-gui);
 								color: canvasText;
 								font-variation-settings: 'wght' 500;
 								text-decoration: none;

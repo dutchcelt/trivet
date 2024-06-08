@@ -22,9 +22,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run build:rollup",
+    "build": "npm run build:rollup-bundle",
     "build:esbuild": "esbuild --outfile=dist/index.js --bundle",
-    "build:rollup": "rollup index.js -p rollup-plugin-css-modules -p @rollup/plugin-node-resolve -p @rollup/plugin-terser -o dist/index.js ",
+    "build:rollup": "rollup -c ../../configs/rollup.config.js",
+    "build:rollup-bundle": "rollup index.js -p rollup-plugin-css-modules -p @rollup/plugin-node-resolve -p @rollup/plugin-terser -o dist/index.js ",
     "develop": "npm run build --watch"
   },
   "dependencies": {
