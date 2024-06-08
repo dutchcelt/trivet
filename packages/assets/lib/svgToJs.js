@@ -26,7 +26,7 @@ const getContentFromFile = filename => {
 	const defaultColor = 'currentColor';
 	try {
 		let content = fs.readFileSync(path.join(iconPath, filename), 'utf8');
-		content = content.replace(/"#([0-9a-fA-F]{6})"/g, `"${defaultColor}"`);
+		content = content.replace(/"#([0-9a-fA-F]{6,8})"/g, `"${defaultColor}"`);
 		content = content.replace(/"white"/gi, `"${defaultColor}"`);
 		content = content.replace(/"black"/gi, `"${defaultColor}"`);
 		return content;
