@@ -2,36 +2,39 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { JSDOM } from 'jsdom';
-console.log(JSDOM);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const iconPath = path.join(__dirname, '..', 'icons', 'svg');
 const distRootPath = path.join(__dirname, '..', 'dist');
-const distPath = path.join(distRootPath, 'svg');
+const distPath = path.join(distRootPath, 'icons');
 fs.mkdirSync(distPath, { recursive: true });
 
-const temp = (name, data) => `export const ${name} = \`${data}\` `;
-const indexTemplate = (name, filename) =>
-	`export { ${name} } from "./${filename}.js"\n`;
-const spriteTempate =
-	data => `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-\t stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs>${data}</defs></svg>`;
+const defaultColor = 'currentColor';
 
-const iconStoreTempate = data =>
-	`export const iconStore = Object.freeze({${data}});\nexport const getIconFromStore = (name) => \`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\${iconStore[name]}</svg>\`;`;
+const temp = data =>
+	`import { createFragment } from '@trvt/core';\nexport default createFragment(\`${data}\`);`;
 
-function toCamelCase(str) {
-	return str
-		.replace(/[\s_-](.)/g, function ($1) {
-			return $1.toUpperCase();
-		})
-		.replace(/[\s_-]/g, '')
-		.replace(/^(.)/, function ($1) {
-			return $1.toLowerCase();
-		});
-}
+/**
+ * An SVG defs template with the given data.
+ *
+ * @param {String} data - The data to be embedded in the SVG template.
+ * @returns {String} The SVG template with the embedded data.
+ */
+const spriteTempate = data => {
+	return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="${defaultColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs>${data}</defs></svg>`;
+};
+
+/**
+ * An icon store template.
+ *
+ * @param {string} data - The icon data to be included in the store.
+ * @return {string} - The generated icon store template.
+ */
+const iconStoreTemplate = data => {
+	return `import { createFragment } from '@trvt/core';\nexport const iconStore = Object.freeze({${data}});\nexport const getIconFromStore = (svgID) => createFragment(\`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="${defaultColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\${iconStore[svgID]}</svg>\`).firstChild;`;
+};
 function toPascalCase(str) {
 	return str
 		.split(/\W|_|-/)
@@ -40,7 +43,6 @@ function toPascalCase(str) {
 }
 
 const getContentFromFile = filename => {
-	const defaultColor = 'currentColor';
 	try {
 		let content = fs.readFileSync(path.join(iconPath, filename), 'utf8');
 		content = content.replace(/"#([0-9a-fA-F]{6,8})"/g, `"${defaultColor}"`);
@@ -52,7 +54,7 @@ const getContentFromFile = filename => {
 	}
 };
 
-fs.readdir(iconPath, (err, files) => {
+fs.readdir(iconPath, async (err, files) => {
 	if (err) {
 		return console.error(`Unable to scan directory: ${err}`);
 	}
@@ -60,24 +62,24 @@ fs.readdir(iconPath, (err, files) => {
 	let spriteContent = '';
 	let iconStoreContent = '';
 	files.forEach(file => {
-		const data = getContentFromFile(file);
-		const doc = new JSDOM(data).window.document;
 		const filename = file.split('.')[0];
-		const name = `icon${toPascalCase(filename)}`;
-		let innertSVG = doc.querySelector('svg').innerHTML;
-		iconStoreContent += `${name}:\`${innertSVG.trim()}\`,`;
-		spriteContent += `<g id="${name}">${innertSVG}</g>`;
-		indexContent += indexTemplate(name, filename);
-		const tempdata = temp(name, data);
-		fs.writeFileSync(path.join(distPath, `${filename}.js`), tempdata);
+		const svgID = `icon${toPascalCase(filename)}`;
+
+		const svgOuterHTML = getContentFromFile(file);
+
+		const doc = new JSDOM(svgOuterHTML).window.document;
+		const svgInnerHTML = doc.querySelector('svg').innerHTML;
+
+		iconStoreContent += `${svgID}:\`${svgInnerHTML.trim()}\`,`;
+		spriteContent += `<g id="${svgID}">${svgInnerHTML}</g>`;
+		fs.writeFileSync(path.join(distPath, `${filename}.js`), temp(svgOuterHTML));
 	});
-	fs.writeFileSync(path.join(distPath, 'index.js'), indexContent);
 	fs.writeFileSync(
 		path.join(distRootPath, 'sprite.svg'),
 		spriteTempate(spriteContent),
 	);
 	fs.writeFileSync(
 		path.join(distRootPath, 'iconStore.js'),
-		iconStoreTempate(iconStoreContent),
+		iconStoreTemplate(iconStoreContent),
 	);
 });

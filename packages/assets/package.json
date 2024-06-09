@@ -12,8 +12,8 @@
 			"default": "./dist/*",
 			"types": "./dist/types/*"
 		},
-		"./svg/*": {
-			"default": "./dist/svg/*"
+		"./icons/*": {
+			"default": "./dist/icons/*"
 		}
 	},
 	"main": "index.js",
