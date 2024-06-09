@@ -6,6 +6,16 @@
 	"license": "AGPL-3.0",
 	"author": "C. Egor Kloos",
 	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*",
+			"types": "./dist/types/*"
+		},
+		"./svg/*": {
+			"default": "./dist/svg/*"
+		}
+	},
 	"main": "index.js",
 	"files": [
 		"dist",
@@ -28,6 +38,7 @@
 	},
 	"devDependencies": {
 		"chalk-cli": "^5.0.1",
-		"fs": "^0.0.1-security"
+		"fs": "^0.0.1-security",
+		"jsdom": "^24.1.0"
 	}
 }

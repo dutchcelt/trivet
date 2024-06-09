@@ -1,0 +1,18 @@
+{
+	"name": "@trvt/icon",
+	"version": "0.0.0",
+	"description": "A very simple web component base class",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.9"
+	}
+}
