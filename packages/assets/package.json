@@ -39,6 +39,6 @@
 	"devDependencies": {
 		"chalk-cli": "^5.0.1",
 		"fs": "^0.0.1-security",
-		"jsdom": "^24.1.0"
+		"node-html-parser": "^6.1.13"
 	}
 }

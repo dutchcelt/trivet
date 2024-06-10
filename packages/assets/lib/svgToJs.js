@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { JSDOM } from 'jsdom';
+import { parse } from 'node-html-parser';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -67,8 +67,8 @@ fs.readdir(iconPath, async (err, files) => {
 
 		const svgOuterHTML = getContentFromFile(file);
 
-		const doc = new JSDOM(svgOuterHTML).window.document;
-		const svgInnerHTML = doc.querySelector('svg').innerHTML;
+		const root = parse(svgOuterHTML);
+		const svgInnerHTML = root.querySelector('svg').innerHTML;
 
 		iconStoreContent += `${svgID}:\`${svgInnerHTML.trim()}\`,`;
 		spriteContent += `<g id="${svgID}">${svgInnerHTML}</g>`;
