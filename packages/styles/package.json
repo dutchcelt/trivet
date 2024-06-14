@@ -1,7 +1,6 @@
 {
   "name": "@trvt/styles",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
   "description": "Trivet styles and utility scripts.",
   "homepage": "https://github.com/dutchcelt/trivet#readme",
   "license": "AGPL-3.0",

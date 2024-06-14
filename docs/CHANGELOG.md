@@ -1,5 +1,12 @@
 # @trvt/docs
 
+## 0.2.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @trvt/components@0.0.2
+
 ## 0.2.13
 
 ### Patch Changes

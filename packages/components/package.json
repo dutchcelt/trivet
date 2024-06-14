@@ -1,7 +1,6 @@
 {
   "name": "@trvt/components",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
   "description": "A base collection of Trivet UI components",
   "keywords": [
     "trivet",
@@ -38,7 +37,7 @@
     "@trvt/header": "^0.8.6",
     "@trvt/layout": "^0.8.10",
     "@trvt/lists": "^0.4.8",
-    "@trvt/styles": "^0.0.1",
+    "@trvt/styles": "^0.0.2",
     "@trvt/utils": "^0.0.2"
   },
   "engines": {

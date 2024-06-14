@@ -1,5 +1,12 @@
 # @trvt/core
 
+## 0.9.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @trvt/styles@0.0.2
+
 ## 0.9.10
 
 ### Patch Changes
