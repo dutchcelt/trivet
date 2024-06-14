@@ -1,5 +1,13 @@
 # @trvt/card
 
+## 0.7.4
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/core@0.9.10
+
 ## 0.7.3
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/container",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Container component for the Trivet Design System",
 	"keywords": [
 		"web",
@@ -25,6 +25,6 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7"
+		"@trvt/core": "^0.9.10"
 	}
 }

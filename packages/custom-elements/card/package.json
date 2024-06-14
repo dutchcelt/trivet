@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/card",
-	"version": "0.7.3",
+	"version": "0.7.4",
 	"description": "Card component for the Trivet Design System",
 	"keywords": [
 		"web",
@@ -25,6 +25,6 @@
 		"develop": "npm run build:rollup --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7"
+		"@trvt/core": "^0.9.10"
 	}
 }

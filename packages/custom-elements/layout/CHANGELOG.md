@@ -1,5 +1,13 @@
 # @trvt/layout
 
+## 0.8.10
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/core@0.9.10
+
 ## 0.8.9
 
 ### Patch Changes

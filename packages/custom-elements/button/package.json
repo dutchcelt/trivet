@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/button",
-	"version": "0.10.4",
+	"version": "0.10.5",
 	"description": "Button component for the Trivet Design System",
 	"keywords": [
 		"web",
@@ -24,6 +24,6 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7"
+		"@trvt/core": "^0.9.10"
 	}
 }

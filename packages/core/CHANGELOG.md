@@ -1,5 +1,15 @@
 # @trvt/core
 
+## 0.9.10
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/designtokens@0.11.12
+  - @trvt/styles@0.0.1
+  - @trvt/utils@0.0.2
+
 ## 0.9.9
 
 ### Patch Changes

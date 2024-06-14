@@ -89,8 +89,15 @@ class TrivetElement extends HTMLElement {
 	 */
 	set shadowCSSvars(properties) {
 		if (this.shadow.firstChild) {
-			if (!this.#dynamicStyles)
+			if (!this.#dynamicStyles) {
 				this.#dynamicStyles = dynamicStyles(this.shadow.firstChild);
+				if (CSS.supports('selector(:playing)')) {
+					this.style.setProperty(
+						'--force-safari-to-invalidate-styles',
+						crypto.randomUUID(),
+					);
+				}
+			}
 			this.#dynamicStyles.properties = properties;
 		} else {
 			console.error(`your template doesn't have an element`);

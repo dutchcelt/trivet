@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.8.5",
+	"version": "0.8.6",
 	"description": "Trivet styles and utility scripts.",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",
@@ -31,7 +31,7 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/designtokens": "^0.11.11",
+		"@trvt/designtokens": "^0.11.12",
 		"prepend-file": "^2.0.1",
 		"rollup": "^4.16.0",
 		"wawoff2": "^2.0.1"

@@ -1,5 +1,14 @@
 # @trvt/docs
 
+## 0.2.13
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/components@0.0.1
+  - @trvt/utils@0.0.2
+
 ## 0.2.12
 
 ### Patch Changes

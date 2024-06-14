@@ -1,5 +1,13 @@
 # @trvt/dragscroller
 
+## 0.3.7
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/core@0.9.10
+
 ## 0.3.6
 
 ### Patch Changes

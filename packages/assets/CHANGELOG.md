@@ -1,5 +1,13 @@
 # @trvt/assets
 
+## 0.8.6
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/designtokens@0.11.12
+
 ## 0.8.5
 
 ### Patch Changes

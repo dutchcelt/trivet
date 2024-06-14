@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/dropdown",
-	"version": "0.6.5",
+	"version": "0.6.6",
 	"private": true,
 	"description": "A very simple dynamic loader of web components and styles",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
@@ -24,6 +24,6 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7"
+		"@trvt/core": "^0.9.10"
 	}
 }

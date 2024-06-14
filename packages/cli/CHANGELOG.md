@@ -1,5 +1,13 @@
 # @trvt/cli
 
+## 1.5.6
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/designtokens@0.11.12
+
 ## 1.5.5
 
 ### Patch Changes
