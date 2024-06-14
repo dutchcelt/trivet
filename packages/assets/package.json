@@ -1,32 +1,44 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.8.5",
+	"version": "0.8.6",
+	"description": "Trivet styles and utility scripts.",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
 	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*",
+			"types": "./dist/types/*"
+		},
+		"./icons/*": {
+			"default": "./dist/icons/*"
+		}
+	},
 	"main": "index.js",
 	"files": [
 		"dist",
 		"lib",
 		"icons"
 	],
-	"description": "Trivet styles and utility scripts.",
-	"author": "C. Egor Kloos",
-	"license": "AGPL-3.0",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"scripts": {
+		"prebuild": "chalk -t '{blueBright.bold \n\n=== Assets =================================================}'",
+		"build": "npm run build:icons",
+		"build:icons": "node lib/icons.js",
+		"postbuild:icons": "echo '\nCompleted build: Icons'",
+		"build:svg": "node lib/svgToJs.js",
+		"develop": "npm run build --watch"
+	},
 	"dependencies": {
-		"@trvt/designtokens": "^0.11.11",
+		"@trvt/designtokens": "^0.11.12",
 		"prepend-file": "^2.0.1",
 		"rollup": "^4.16.0",
 		"wawoff2": "^2.0.1"
 	},
-	"scripts": {
-		"build:icons": "node lib/icons.js",
-		"build": "npm run build:icons",
-		"prebuild": "chalk -t '{blueBright.bold \n\n=== Assets =================================================}'",
-		"postbuild:icons": "echo '\nCompleted build: Icons'",
-		"develop": "npm run build --watch"
-	},
 	"devDependencies": {
 		"chalk-cli": "^5.0.1",
-		"fs": "^0.0.1-security"
+		"fs": "^0.0.1-security",
+		"node-html-parser": "^6.1.13"
 	}
 }

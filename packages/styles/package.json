@@ -1,6 +1,6 @@
 {
   "name": "@trvt/styles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Trivet styles and utility scripts.",
   "homepage": "https://github.com/dutchcelt/trivet#readme",
@@ -24,8 +24,8 @@
     "develop": "npm run build --watch"
   },
   "dependencies": {
-    "@trvt/designtokens": "^0.11.11",
-    "@trvt/utils": "^0.0.1",
+    "@trvt/designtokens": "^0.11.12",
+    "@trvt/utils": "^0.0.2",
     "prepend-file": "^2.0.1",
     "wawoff2": "^2.0.1"
   },

@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/dragscroller",
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"description": "Drag the conents of a scrollbox",
 	"keywords": [
 		"web",
@@ -27,6 +27,6 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7"
+		"@trvt/core": "^0.9.10"
 	}
 }

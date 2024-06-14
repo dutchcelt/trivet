@@ -1,5 +1,13 @@
 # @trvt/button
 
+## 0.10.5
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/core@0.9.10
+
 ## 0.10.4
 
 ### Patch Changes

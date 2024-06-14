@@ -1,5 +1,13 @@
 # @trvt/lists
 
+## 0.4.8
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/core@0.9.10
+
 ## 0.4.7
 
 ### Patch Changes

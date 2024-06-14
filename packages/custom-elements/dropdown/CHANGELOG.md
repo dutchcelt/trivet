@@ -1,5 +1,13 @@
 # @trvt/dropdown
 
+## 0.6.6
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/core@0.9.10
+
 ## 0.6.5
 
 ### Patch Changes

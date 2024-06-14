@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.12
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+
 ## 0.11.11
 
 ### Patch Changes

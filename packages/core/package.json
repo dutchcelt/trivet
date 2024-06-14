@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/core",
-	"version": "0.9.9",
+	"version": "0.9.10",
 	"description": "Core loader for Trivet",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",
@@ -24,9 +24,9 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/designtokens": "^0.11.11",
-		"@trvt/styles": "^0.0.0",
-		"@trvt/utils": "^0.0.1",
+		"@trvt/designtokens": "^0.11.12",
+		"@trvt/styles": "^0.0.1",
+		"@trvt/utils": "^0.0.2",
 		"rollup": "^4.16.0"
 	}
 }

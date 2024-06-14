@@ -1,5 +1,11 @@
 # @trvt/utils
 
+## 0.0.2
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+
 ## 0.0.1
 
 ### Patch Changes

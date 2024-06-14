@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/utils",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A set of utilities to build, test, and run Trivet.",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",

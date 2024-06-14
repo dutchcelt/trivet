@@ -1,14 +1,6 @@
 {
 	"name": "@trvt/cli",
-	"version": "1.5.5",
-	"author": "C. Egor Kloos",
-	"license": "AGPL-3.0",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
-	"main": "index.cjs",
-	"files": [
-		"/bin",
-		"/lib"
-	],
+	"version": "1.5.6",
 	"description": "Use your own custom tokens, fonts, and icons with Trivet",
 	"keywords": [
 		"cli",
@@ -16,17 +8,25 @@
 		"system",
 		"trivet"
 	],
-	"scripts": {
-		"test": "echo 'CLI: no scripts'",
-		"prebuild": "chalk -t '{blueBright.bold \n\n=== CLI ====================================================}'",
-		"build": "echo '\nCLI: no scripts'",
-		"develop": "echo 'CLI: no scripts'"
-	},
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"main": "index.cjs",
 	"bin": {
 		"trvt": "bin/trvt"
 	},
+	"files": [
+		"/bin",
+		"/lib"
+	],
+	"scripts": {
+		"prebuild": "chalk -t '{blueBright.bold \n\n=== CLI ====================================================}'",
+		"build": "echo '\nCLI: no scripts'",
+		"develop": "echo 'CLI: no scripts'",
+		"test": "echo 'CLI: no scripts'"
+	},
 	"dependencies": {
-		"@trvt/designtokens": "^0.11.11",
+		"@trvt/designtokens": "^0.11.12",
 		"chokidar": "^3.5.3",
 		"colorjs.io": "^0.4.5",
 		"commander": "^11.0.0",

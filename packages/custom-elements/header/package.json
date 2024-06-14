@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/header",
-	"version": "0.8.5",
+	"version": "0.8.6",
 	"description": "Header component for the Trivet Design System",
 	"keywords": [
 		"web",
@@ -26,6 +26,6 @@
 		"develop": "npm run build --watch"
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.7"
+		"@trvt/core": "^0.9.10"
 	}
 }
