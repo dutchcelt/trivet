@@ -74,7 +74,7 @@ class TrivetElement extends HTMLElement {
 			if (!shadowSheets.includes(ss)) {
 				this.shadow.adoptedStyleSheets.push(ss);
 			} else {
-				console.warn('Trying to pass an existing stylesheet');
+				//console.warn('Trying to pass an existing stylesheet');
 			}
 		}
 	}

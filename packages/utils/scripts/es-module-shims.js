@@ -1,5 +1,4 @@
 // @ts-nocheck
-// eslint-ignore
 (function () {
 	const e = typeof document !== 'undefined';
 	const noop = () => {};
