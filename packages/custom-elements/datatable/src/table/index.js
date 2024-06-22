@@ -37,7 +37,7 @@ export class trvtTable extends TrivetElement {
 			</div>
 		`;
 		// Container query fallback :(
-		if (!CSS.supports('container', 'test / inline-size')) {
+		if (!CSS.supports('container', '--table / inline-size')) {
 			window.addEventListener(
 				'resize',
 				// @ts-expect-error

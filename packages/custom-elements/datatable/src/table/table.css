@@ -12,12 +12,10 @@
 	}
 }
 @layer components.modifiers {
-	@supports (grid-template-columns: subgrid) {
-		:host {
-			--nested-grid-diplay: grid;
-		}
+	:host {
+		--nested-grid-diplay: grid;
 	}
-	@container test (max-width: 680px) {
+	@container --table (max-width: 680px) {
 		.scrollbox {
 			--_table-scroll: scroll;
 		}
@@ -33,7 +31,7 @@
 	:host {
 		display: block;
 		width: 100%;
-		container: test / inline-size;
+		container: --table / inline-size;
 		margin-block-start: var(
 			--trvt-typography-whitespace-default-block-start,
 			1rem

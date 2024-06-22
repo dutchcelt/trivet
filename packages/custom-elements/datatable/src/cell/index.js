@@ -14,12 +14,30 @@ export class trvtCell extends TrivetElement {
 
 		this.colspan = this.getAttribute('colspan') || '1';
 		this.rowspan = this.getAttribute('rowspan') || '1';
-		this.colstart = this.getAttribute('colstart') || 'auto';
+		this.colstart = 'auto';
+
+		if (this.colspan > 1) {
+			const trvtTableElement = this.closest('trvt-table');
+			const trvtRowElements = trvtTableElement.querySelectorAll('trvt-row');
+			const numberOfColumns = Math.max(
+				...[...trvtRowElements].map(r => r.children?.length),
+			);
+			const colOffset = numberOfColumns - +this.colspan;
+
+			if (colOffset > 0) {
+				const spanIndex = [...this.parentElement.children].indexOf(this);
+				if (spanIndex === 0) {
+					this.colstart = colOffset + 1;
+				}
+			}
+		}
 
 		this.style.setProperty('--trvt-cell-row-span', this.rowspan);
 		this.style.setProperty('--trvt-cell-col-span', this.colspan);
 		this.style.setProperty('--trvt-cell-col-start', this.colstart);
 	}
+
 	connectedCallback() {}
 }
+
 customElements.define('trvt-cell', trvtCell);
