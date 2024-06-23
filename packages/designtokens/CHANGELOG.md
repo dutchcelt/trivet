@@ -1,5 +1,11 @@
 # @trvt/designtokens
 
+## 0.11.13
+
+### Patch Changes
+
+- Publish the design token dist directory
+
 ## 0.11.12
 
 ### Patch Changes

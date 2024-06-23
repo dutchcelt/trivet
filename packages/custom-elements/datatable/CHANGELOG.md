@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.4.3
+
+### Patch Changes
+
+- Publish the design token dist directory
+
 ## 0.4.2
 
 ### Patch Changes
