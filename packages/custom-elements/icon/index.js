@@ -1,5 +1,6 @@
 import { TrivetElement } from '@trvt/core';
 import { getIconFromStore } from '@trvt/assets/iconStore.js';
+import iconCSS from './index.css' with { type: 'css' };
 
 function toPascalCase(str = '') {
 	return str
@@ -17,6 +18,8 @@ export class TrvtIcon extends TrivetElement {
 		super();
 		this.icon = this.getAttribute('icon-name');
 		this.shadow.append(this.icon);
+		/** @type {CSSStyleSheet[]} */
+		this.shadowStyleSheets = iconCSS;
 	}
 
 	get icon() {

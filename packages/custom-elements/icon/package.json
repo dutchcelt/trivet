@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/icon",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A very simple web component base class",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",
