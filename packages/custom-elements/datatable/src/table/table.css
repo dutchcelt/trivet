@@ -57,6 +57,7 @@
 			var(--number-of-rows, var(--trvt-number-of-rows)),
 			auto
 		);
+		grid-template-areas: var(--trvt-table-grid-template-areas);
 		border-top: var(--trvt-stroke-medium) solid var(--canvasText);
 		border-right: var(--trvt-stroke-medium) solid var(--canvasText);
 		background-color: var(--canvas);

@@ -3,9 +3,12 @@ import rowCSS from './row.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
 export class trvtRow extends TrivetElement {
+	#internals;
 	constructor() {
 		super();
-		this.setAttribute('role', 'row');
+		this.#internals = this.attachInternals();
+		this.#internals.role = 'row';
+
 		this.shadowStyleSheets = [...styles, rowCSS];
 		this.template = `<slot></slot>`;
 	}
@@ -14,7 +17,7 @@ export class trvtRow extends TrivetElement {
 		const parentElement = this.parentElement;
 		const children = parentElement ? parentElement.children : [];
 		this.rowNumber = [...children].indexOf(this) + 1;
-		this.style.setProperty('--trvt-row-number', `${this.rowNumber}`);
+		this.shadowCSSvars = [`--trvt-row-number:${this.rowNumber};`];
 	}
 }
 

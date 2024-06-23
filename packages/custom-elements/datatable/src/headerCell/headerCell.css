@@ -1,14 +1,12 @@
 @layer components.selectors {
 	:host {
 		writing-mode: horizontal-tb;
-		grid-column: var(--trvt-cell-col-start) / span var(--trvt-cell-col-span);
-		grid-row: var(--grid-row, auto) / span var(--trvt-cell-row-span);
+		grid-area: var(--trvt-cell-grid-area);
 		display: flex;
 		align-items: center;
 		background-color: var(--canvasText);
 		color: var(--canvas);
 		white-space: nowrap;
-		font-family: var(--trvt-typography-family-gui);
 		font-weight: var(--trvt-typography-weight-bold);
 		text-align: center;
 	}

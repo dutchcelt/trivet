@@ -3,19 +3,17 @@ import headerCellCSS from './headerCell.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
 
 export class trvtHeaderCell extends TrivetElement {
+	#internals;
 	constructor() {
 		super();
-		this.setAttribute('role', 'columnheader');
+		this.#internals = this.attachInternals();
+		this.#internals.role = 'columnheader';
+
 		this.shadowStyleSheets = [...styles, headerCellCSS];
-
-		this.colspan = this.getAttribute('colspan') || '1';
-		this.rowspan = this.getAttribute('rowspan') || '1';
-		this.colstart = this.getAttribute('colstart') || 'auto';
-		this.style.setProperty('--trvt-cell-row-span', this.rowspan);
-		this.style.setProperty('--trvt-cell-col-span', this.colspan);
-		this.style.setProperty('--trvt-cell-col-start', this.colstart);
-
 		this.template = `<div><slot></slot></div>`;
+		requestAnimationFrame(() => {
+			this.shadowCSSvars = [`--trvt-cell-grid-area: ${this.cellName}`];
+		});
 	}
 }
 customElements.define('trvt-header-cell', trvtHeaderCell);

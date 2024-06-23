@@ -7,34 +7,32 @@ import { styles, TrivetElement } from '@trvt/core';
  * Represents a custom table element that extends TrivetElement.
  */
 export class trvtTable extends TrivetElement {
+	#internals;
+
 	constructor() {
 		super();
-		this.setAttribute('role', 'table');
+		this.#internals = this.attachInternals();
+		this.#internals.role = 'table';
 		this.breakpoint = 680;
-		this.rowElements = this.querySelectorAll('trvt-row');
+		this.rowElements = [...this.querySelectorAll('trvt-row')];
 		this.shadowStyleSheets = [...styles, tableCSS];
 
-		this.numberOfRows =
-			+this.style.getPropertyValue('--number-of-rows') ||
-			[...this.rowElements].length;
-
-		this.numberOfColumns =
-			+this.style.getPropertyValue('--number-of-columns') ||
-			Math.max(...[...this.rowElements].map(r => r.children?.length));
-
-		this.style.setProperty('--trvt-number-of-rows', `${this.numberOfRows}`);
-		this.style.setProperty(
-			'--trvt-number-of-columns',
-			`${this.numberOfColumns}`,
+		this.numberOfRows = this.rowElements.length;
+		this.numberOfColumns = Math.max(
+			...this.rowElements.map(r => r.children?.length),
 		);
-		this.style.setProperty('--trvt-table-breakpoint', `${this.breakpoint}`);
 
+		this.hostCssProperties = [
+			`--trvt-number-of-rows:${this.numberOfRows};`,
+			`--trvt-number-of-columns: ${this.numberOfColumns};`,
+			`--trvt-table-breakpoint: ${this.breakpoint};`,
+		];
 		this.template = `
 			<div class="scrollbox">
 				<div class="table">
 					<slot></slot>
 				</div>
-			</div>
+			</div>	
 		`;
 		// Container query fallback :(
 		if (!CSS.supports('container', '--table / inline-size')) {
@@ -44,6 +42,40 @@ export class trvtTable extends TrivetElement {
 				throttler(this.setRotationProperties, 300, this),
 			);
 		}
+		const matrix = [...this.rowElements].map(() =>
+			new Array(this.numberOfColumns).fill(undefined),
+		);
+
+		[...this.rowElements].forEach((row, rowIndex) => {
+			const cells = [...row.children].filter(cell =>
+				/trvt-cell|trvt-header-cell/gi.test(cell.tagName),
+			);
+			let updatedCellIndex = 0;
+			[...cells].forEach(cell => {
+				const rowSpan = parseInt(cell.getAttribute('rowspan'));
+				const colSpan = parseInt(cell.getAttribute('colspan'));
+				while (matrix[rowIndex][updatedCellIndex] !== undefined) {
+					updatedCellIndex++;
+				}
+				cell.cellName = `cell-${rowIndex + 1}-${updatedCellIndex + 1}`;
+
+				matrix[rowIndex][updatedCellIndex] = cell.cellName;
+				if (typeof colSpan === 'number') {
+					for (let i = 0; i < colSpan; i++) {
+						matrix[rowIndex][updatedCellIndex + i] = cell.cellName;
+					}
+				}
+				if (typeof rowSpan === 'number') {
+					for (let n = 0; n < rowSpan; n++) {
+						matrix[rowIndex + n][updatedCellIndex] = cell.cellName;
+					}
+				}
+			});
+		});
+		const matrixString = matrix.map(row => `"${row.join(' ')}"`).join(' ');
+		this.hostCssProperties = [
+			`--trvt-table-grid-template-areas: ${matrixString}`,
+		];
 	}
 	setRotationProperties() {
 		const { width } = this.getBoundingClientRect();
@@ -51,11 +83,12 @@ export class trvtTable extends TrivetElement {
 
 		const direction = rotated ? 'vertical-lr' : 'horizontal-tb';
 		const sticky = rotated ? 'sticky' : 'unset';
-
-		this.style.setProperty('--_table-writing-mode', direction);
-		this.style.setProperty('--_table-sticky-cell', sticky);
-		this.style.setProperty('--_table-sticky-header', sticky);
-		this.style.setProperty('--_table-scroll', sticky);
+		this.shadowCSSvars = [
+			`--_table-writing-mode: ${direction}`,
+			`--_table-sticky-cell: ${sticky}`,
+			`--_table-sticky-header: ${sticky}`,
+			`--_table-scroll: ${sticky}`,
+		];
 	}
 }
 customElements.define('trvt-table', trvtTable);
