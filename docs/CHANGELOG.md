@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.15
+
+### Patch Changes
+
+- @trvt/components@0.0.3
+
 ## 0.2.14
 
 ### Patch Changes

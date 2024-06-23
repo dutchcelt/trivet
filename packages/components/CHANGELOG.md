@@ -1,5 +1,12 @@
 # @trvt/components
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [e971b4d]
+  - @trvt/datatable@0.4.0
+
 ## 0.0.2
 
 ### Patch Changes

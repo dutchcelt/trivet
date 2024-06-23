@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/core",
-	"version": "0.9.11",
+	"version": "0.9.12",
 	"description": "Core loader for Trivet",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",

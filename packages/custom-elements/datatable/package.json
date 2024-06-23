@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/datatable",
-	"version": "0.3.8",
+	"version": "0.4.0",
 	"description": "Static datatable",
 	"keywords": [
 		"web",
@@ -26,6 +26,6 @@
 		"develop": "npm run build && npx -y wds --root-dir \"../../\" --watch --node-resolve --open \"/webcomponents/datatable/index.html\""
 	},
 	"dependencies": {
-		"@trvt/core": "^0.9.10"
+		"@trvt/core": "^0.9.12"
 	}
 }

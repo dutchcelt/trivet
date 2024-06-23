@@ -1,5 +1,17 @@
 # @trvt/datatable
 
+## 0.4.0
+
+### Minor Changes
+
+- e971b4d: Removed all attributesm including `colstart`.
+  The (data) table generates all styling upfront and places these in a constructed stylesheet.
+
+### Patch Changes
+
+- Updated dependencies [01569d5]
+  - @trvt/core@0.9.12
+
 ## 0.3.8
 
 ### Patch Changes

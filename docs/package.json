@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.2.14",
+	"version": "0.2.15",
 	"private": true,
 	"description": "Documents",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
@@ -18,7 +18,7 @@
 		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
 	},
 	"dependencies": {
-		"@trvt/components": "^0.0.2",
+		"@trvt/components": "^0.0.3",
 		"@trvt/utils": "^0.0.2"
 	},
 	"devDependencies": {

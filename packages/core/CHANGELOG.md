@@ -1,5 +1,11 @@
 # @trvt/core
 
+## 0.9.12
+
+### Patch Changes
+
+- 01569d5: No need for a child element to determin the root in shadowCSSvars.
+
 ## 0.9.11
 
 ### Patch Changes
