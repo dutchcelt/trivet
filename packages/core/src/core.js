@@ -88,9 +88,9 @@ class TrivetElement extends HTMLElement {
 	 * @param {object} properties - The properties to be set for the shadow CSS.
 	 */
 	set shadowCSSvars(properties) {
-		if (this.shadow.firstChild) {
+		if (this.shadow) {
 			if (!this.#dynamicStyles) {
-				this.#dynamicStyles = dynamicStyles(this.shadow.firstChild);
+				this.#dynamicStyles = dynamicStyles(this.shadow);
 				if (CSS.supports('selector(:playing)')) {
 					this.style.setProperty(
 						'--force-safari-to-invalidate-styles',
@@ -100,7 +100,9 @@ class TrivetElement extends HTMLElement {
 			}
 			this.#dynamicStyles.properties = properties;
 		} else {
-			console.error(`your template doesn't have an element`);
+			console.error(
+				`shadowCSSvars: Can't determine the root to place the custom properties in`,
+			);
 		}
 	}
 
