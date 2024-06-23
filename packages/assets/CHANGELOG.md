@@ -1,5 +1,11 @@
 # @trvt/assets
 
+## 0.8.7
+
+### Patch Changes
+
+- Fixed the icon build
+
 ## 0.8.6
 
 ### Patch Changes

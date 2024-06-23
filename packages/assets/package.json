@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/assets",
-	"version": "0.8.6",
+	"version": "0.8.7",
 	"description": "Trivet styles and utility scripts.",
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",
@@ -24,9 +24,9 @@
 	],
 	"scripts": {
 		"prebuild": "chalk -t '{blueBright.bold \n\n=== Assets =================================================}'",
-		"build": "npm run build:icons",
-		"build:icons": "node lib/icons.js",
-		"postbuild:icons": "echo '\nCompleted build: Icons'",
+		"build": " npm run build:icons && npm run build:svg",
+		"postbuild": "echo '\nCompleted Icons builds'",
+		"build:icons": "node lib/generateIconFont.js",
 		"build:svg": "node lib/svgToJs.js",
 		"develop": "npm run build --watch"
 	},
