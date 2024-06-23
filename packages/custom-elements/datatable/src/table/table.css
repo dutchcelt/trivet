@@ -15,17 +15,6 @@
 	:host {
 		--nested-grid-diplay: grid;
 	}
-	@container --table (max-width: 680px) {
-		.scrollbox {
-			--_table-scroll: scroll;
-		}
-		.table {
-			--_table-writing-mode: vertical-lr;
-			--_table-sticky-cell: sticky;
-			--_table-sticky-header: sticky;
-			--table-cell-width: 30ch;
-		}
-	}
 }
 @layer components.selectors {
 	:host {

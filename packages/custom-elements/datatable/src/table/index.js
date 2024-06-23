@@ -13,7 +13,7 @@ export class trvtTable extends TrivetElement {
 		super();
 		this.#internals = this.attachInternals();
 		this.#internals.role = 'table';
-		this.breakpoint = 680;
+		this.breakpoint = parseInt(this.dataset.breakpoint) || 0;
 		this.rowElements = [...this.querySelectorAll('trvt-row')];
 		this.shadowStyleSheets = [...styles, tableCSS];
 
@@ -83,11 +83,12 @@ export class trvtTable extends TrivetElement {
 
 		const direction = rotated ? 'vertical-lr' : 'horizontal-tb';
 		const sticky = rotated ? 'sticky' : 'unset';
+		const scroll = rotated ? 'scroll' : 'unset';
 		this.shadowCSSvars = [
 			`--_table-writing-mode: ${direction}`,
 			`--_table-sticky-cell: ${sticky}`,
 			`--_table-sticky-header: ${sticky}`,
-			`--_table-scroll: ${sticky}`,
+			`--_table-scroll: ${scroll}`,
 		];
 	}
 }

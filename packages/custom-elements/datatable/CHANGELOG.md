@@ -1,5 +1,17 @@
 # @trvt/datatable
 
+## 0.4.2
+
+### Patch Changes
+
+- Updated the dist folder
+
+## 0.4.1
+
+### Patch Changes
+
+- Disabled rotating by default.
+
 ## 0.4.0
 
 ### Minor Changes
