@@ -42,10 +42,25 @@ export class trvtTable extends TrivetElement {
 				throttler(this.setRotationProperties, 300, this),
 			);
 		}
+	}
+	setRotationProperties() {
+		const { width } = this.getBoundingClientRect();
+		const rotated = width < this.breakpoint;
+
+		const direction = rotated ? 'vertical-lr' : 'horizontal-tb';
+		const sticky = rotated ? 'sticky' : 'unset';
+		const scroll = rotated ? 'scroll' : 'unset';
+		this.shadowCSSvars = [
+			`--_table-writing-mode: ${direction}`,
+			`--_table-sticky-cell: ${sticky}`,
+			`--_table-sticky-header: ${sticky}`,
+			`--_table-scroll: ${scroll}`,
+		];
+	}
+	connectedCallback() {
 		const matrix = [...this.rowElements].map(() =>
 			new Array(this.numberOfColumns).fill(undefined),
 		);
-
 		[...this.rowElements].forEach((row, rowIndex) => {
 			const cells = [...row.children].filter(cell =>
 				/trvt-cell|trvt-header-cell/gi.test(cell.tagName),
@@ -58,7 +73,7 @@ export class trvtTable extends TrivetElement {
 					updatedCellIndex++;
 				}
 				cell.cellName = `cell-${rowIndex + 1}-${updatedCellIndex + 1}`;
-
+				console.log(cell);
 				matrix[rowIndex][updatedCellIndex] = cell.cellName;
 				if (typeof colSpan === 'number') {
 					for (let i = 0; i < colSpan; i++) {
@@ -75,20 +90,6 @@ export class trvtTable extends TrivetElement {
 		const matrixString = matrix.map(row => `"${row.join(' ')}"`).join(' ');
 		this.hostCssProperties = [
 			`--trvt-table-grid-template-areas: ${matrixString}`,
-		];
-	}
-	setRotationProperties() {
-		const { width } = this.getBoundingClientRect();
-		const rotated = width < this.breakpoint;
-
-		const direction = rotated ? 'vertical-lr' : 'horizontal-tb';
-		const sticky = rotated ? 'sticky' : 'unset';
-		const scroll = rotated ? 'scroll' : 'unset';
-		this.shadowCSSvars = [
-			`--_table-writing-mode: ${direction}`,
-			`--_table-sticky-cell: ${sticky}`,
-			`--_table-sticky-header: ${sticky}`,
-			`--_table-scroll: ${scroll}`,
 		];
 	}
 }

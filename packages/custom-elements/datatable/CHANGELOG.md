@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.4.4
+
+### Patch Changes
+
+- Moved the table styling to the connected callback to prevent undefined objects
+
 ## 0.4.3
 
 ### Patch Changes
