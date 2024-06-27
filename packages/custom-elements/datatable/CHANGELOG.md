@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.4.5
+
+### Patch Changes
+
+- Added use case for renderinge web component tables
+
 ## 0.4.4
 
 ### Patch Changes

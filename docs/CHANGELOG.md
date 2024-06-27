@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.16
+
+### Patch Changes
+
+- Added use case for renderinge web component tables
+
 ## 0.2.15
 
 ### Patch Changes

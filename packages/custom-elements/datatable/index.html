@@ -9,6 +9,7 @@
 			body {
 				padding: 2em 4em;
 			}
+			td {outline: 1px solid red;}
 		</style>
 		<script type="esms-options">
 			{
@@ -70,6 +71,130 @@
 					</trvt-cell>
 				</trvt-row>
 			</trvt-tfoot>
+		</trvt-table>
+		<trvt-table>
+
+			<trvt-thead>
+				<trvt-row>
+					<trvt-header-cell>Header</trvt-header-cell>
+					<trvt-header-cell>Header</trvt-header-cell>
+					<trvt-header-cell>Header</trvt-header-cell>
+					<trvt-header-cell>Header</trvt-header-cell>
+				</trvt-row>
+			</trvt-thead>
+
+			<trvt-tbody>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell rowspan="2" colspan="2">cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell rowspan="2" >cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell rowspan="2" colspan="2">cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell colspan="2">cell</trvt-cell>
+				</trvt-row>
+			</trvt-tbody>
+		</trvt-table>
+
+
+		<trvt-table style="font-size: 0.75rem">
+			<trvt-thead>
+				<trvt-row>
+					<trvt-header-cell rowspan="2"
+					>Namespace</trvt-header-cell
+					>
+					<trvt-header-cell rowspan="2"
+					>Foundation</trvt-header-cell
+					>
+					<trvt-header-cell rowspan="2"
+					>Topic</trvt-header-cell
+					>
+					<trvt-header-cell rowspan="2"
+					>Property</trvt-header-cell
+					>
+					<trvt-header-cell colspan="3"
+					>Modifier</trvt-header-cell
+					>
+				</trvt-row>
+				<trvt-row>
+					<trvt-header-cell
+					>Variant</trvt-header-cell
+					>
+					<trvt-header-cell
+					>Range</trvt-header-cell
+					>
+					<trvt-header-cell
+					>State</trvt-header-cell
+					>
+				</trvt-row>
+			</trvt-thead>
+			<trvt-tbody>
+				<trvt-row>
+					<trvt-cell rowspan="80">trvt</trvt-cell>
+					<trvt-cell>color</trvt-cell>
+					<trvt-cell>editorial</trvt-cell>
+					<trvt-cell>text</trvt-cell>
+					<trvt-cell>primary</trvt-cell>
+					<trvt-cell>000-100</trvt-cell>
+					<trvt-cell>hover</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>layout</trvt-cell>
+					<trvt-cell
+					>promotional</trvt-cell
+					>
+					<trvt-cell
+					>background</trvt-cell
+					>
+					<trvt-cell
+					>secondary</trvt-cell
+					>
+					<trvt-cell
+					>light-bold</trvt-cell
+					>
+					<trvt-cell>visited</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>spacing</trvt-cell>
+					<trvt-cell>message</trvt-cell>
+					<trvt-cell>border</trvt-cell>
+					<trvt-cell>tertiary</trvt-cell>
+					<trvt-cell
+					>thin-thick</trvt-cell
+					>
+					<trvt-cell>active</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>size</trvt-cell>
+					<trvt-cell>layer</trvt-cell>
+					<trvt-cell>easing</trvt-cell>
+					<trvt-cell
+					>highlight</trvt-cell
+					>
+					<trvt-cell>low-high</trvt-cell>
+					<trvt-cell>focus</trvt-cell>
+				</trvt-row>
+
+			</trvt-tbody>
 		</trvt-table>
 	</body>
 </html>

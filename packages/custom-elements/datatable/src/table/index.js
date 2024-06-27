@@ -17,9 +17,34 @@ export class trvtTable extends TrivetElement {
 		this.rowElements = [...this.querySelectorAll('trvt-row')];
 		this.shadowStyleSheets = [...styles, tableCSS];
 
+		/**
+		 * Returns an array of cell elements within a given row element.
+		 *
+		 * @param {Element} row - The row element containing the cell elements.
+		 * @returns {Element[]} - An array of cell elements within the given row.
+		 */
+		const getCellElements = row =>
+			[...row.children].filter(child => /-cell/gi.test(child.tagName));
+
+		/* You can't have implied rows. So the number of rows is the number of rows */
+		// this.numberOfRows = this.rowElements
+		// 	.reduce((count,row) => {
+		// 		return count += Math.max(...getCellElements(row)
+		// 			.map((cell) => {
+		// 				return (parseInt(cell.getAttribute('rowspan') || '1') - 1 ) || 1
+		// 			})
+		// 		);
+		// 	}, 0);
+
 		this.numberOfRows = this.rowElements.length;
+
 		this.numberOfColumns = Math.max(
-			...this.rowElements.map(r => r.children?.length),
+			...this.rowElements.map(r =>
+				getCellElements(r).reduce(
+					(count, cell) => count + parseInt(cell.getAttribute('colspan') || 1),
+					0,
+				),
+			),
 		);
 
 		this.hostCssProperties = [
@@ -67,22 +92,18 @@ export class trvtTable extends TrivetElement {
 			);
 			let updatedCellIndex = 0;
 			[...cells].forEach(cell => {
-				const rowSpan = parseInt(cell.getAttribute('rowspan'));
-				const colSpan = parseInt(cell.getAttribute('colspan'));
+				const rowSpan = Math.min(
+					parseInt(cell.getAttribute('rowspan')) || 1,
+					this.numberOfRows - rowIndex,
+				);
+				const colSpan = parseInt(cell.getAttribute('colspan')) || 1;
 				while (matrix[rowIndex][updatedCellIndex] !== undefined) {
 					updatedCellIndex++;
 				}
 				cell.cellName = `cell-${rowIndex + 1}-${updatedCellIndex + 1}`;
-				console.log(cell);
-				matrix[rowIndex][updatedCellIndex] = cell.cellName;
-				if (typeof colSpan === 'number') {
+				for (let n = 0; n < rowSpan; n++) {
 					for (let i = 0; i < colSpan; i++) {
-						matrix[rowIndex][updatedCellIndex + i] = cell.cellName;
-					}
-				}
-				if (typeof rowSpan === 'number') {
-					for (let n = 0; n < rowSpan; n++) {
-						matrix[rowIndex + n][updatedCellIndex] = cell.cellName;
+						matrix[rowIndex + n][updatedCellIndex + i] = cell.cellName;
 					}
 				}
 			});
