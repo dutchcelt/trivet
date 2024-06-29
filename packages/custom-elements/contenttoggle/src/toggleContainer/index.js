@@ -19,7 +19,7 @@ export class TrvtTabContainer extends HTMLElement {
 		this.toggleComponents = [
 			...this.slotElement.assignedElements({ flatten: true }),
 		].filter(wc => /toggle/gi.test(wc.tagName));
-		this.style = `--numOfToggles:${this.toggleComponents.length}`;
+		this.style = `--numOfToggles:${this.toggleComponents.length + 1}`;
 	}
 	connectedCallback() {}
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>Details and Tabs</title>
+ 		<link rel="stylesheet" href="../../styles/dist/importer.css" />
+		<link rel="stylesheet" href="../../designtokens/dist/css/trvt_tokens.css" />
+		<link rel="stylesheet" href="../../designtokens/dist/css/trvt_properties.css" />
+		<link rel="stylesheet" href="../../designtokens/dist/css/trvt_color_patterns.css" />
+		<style>
+			body {
+				padding: 2em 4em;
+			}
+			td {outline: 1px solid red;}
+		</style>
+		<script type="esms-options">
+			{
+			  "polyfillEnable": ["css-modules", "json-modules"],
+			  "noLoadEventRetriggers": true
+			}
+		</script>
+		<script async src="../../utils/scripts/es-module-shims.js"></script>
+
+		<script type="module" src="./index.js"></script>
+	</head>
+	<body>
+		<trvt-tab-container>
+			<trvt-toggle-details title="For Content" open>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Sint, magnam dignissimos. Reiciendis magnam
+					molestiae delectus rem soluta, magni aliquam quo
+					dolores quibusdam esse reprehenderit quos tempora at
+					ratione perspiciatis temporibus.
+				</p>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing
+					elit. Voluptatibus modi magni, possimus fugiat
+					placeat cupiditate non perspiciatis sint est
+					voluptatum amet aliquam incidunt illum totam sit
+					ipsa alias ut maiores!
+				</p>
+			</trvt-toggle-details>
+			<trvt-toggle-details title="For Design">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Provident ducimus distinctio impedit similique
+					velit molestiae accusantium, mollitia id delectus
+					sapiente, facilis dolorem praesentium placeat
+					deleniti cumque? Nisi atque delectus eos.
+				</p>
+			</trvt-toggle-details>
+			<trvt-toggle-details title="For Systems">
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing
+					elit. Sit quasi tenetur nisi adipisci delectus,
+					incidunt modi dignissimos id temporibus odio vitae
+					amet dolore aut quo nostrum! Excepturi omnis beatae
+					deserunt!
+				</p>
+			</trvt-toggle-details>
+		</trvt-tab-container>
+
+	</body>
+</html>

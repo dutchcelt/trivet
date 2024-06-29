@@ -25,19 +25,26 @@
 @layer components.selectors {
 	:host {
 		display: block;
-		container: toggles / inline-size;
+		container: --toggles / inline-size;
 	}
 	.content {
 		display: var(--container-display);
-		grid-template-columns: repeat(auto-fill, 1fr);
+		grid-template-columns: repeat(
+				calc(var(--numOfToggles) - 1),
+				min-content
+			) 1fr;
 		grid-template-rows: auto auto;
 		gap: 0 var(--space-inline);
-		margin-trim: block;
-		margin-trim: inline;
+		justify-content: start;
+		&::after {
+			content: '';
+			grid-column: var(--numOfToggles);
+			grid-row: 1;
+		}
 	}
 }
 @layer components.modifiers {
-	@container toggles (min-width: 640px) {
+	@container --toggles (min-width: 640px) {
 		.content {
 			--is-tabbed: initial;
 			--container-display: grid;

@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.4.8
+
+### Patch Changes
+
+- Allowing tabs to shrink their content size.
+
 ## 0.4.7
 
 ### Patch Changes

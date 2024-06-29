@@ -32,16 +32,16 @@
 	details {
 		display: var(--detail-display);
 	}
-
+	summary {
+		white-space: nowrap;
+	}
 	.content {
 		display: block;
 		grid-row: 2;
 		grid-column: 1 / span var(--numOfToggles, -1);
 		padding-block: var(--detail-block-space);
 		padding-inline: var(--summary-inline-space);
-
 		line-height: var(--ds-line-height);
-
 		background: var(--detail-surface-color);
 		border: var(--toggle-border-width, 2px) solid var(--toggle-border-color);
 		color: var(--detail-text-color);
