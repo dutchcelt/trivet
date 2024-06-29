@@ -1,4 +1,3 @@
-import { throttler } from '@trvt/utils';
 // @ts-expect-error
 import tableCSS from './table.css' with { type: 'css' };
 import { styles, TrivetElement } from '@trvt/core';
@@ -8,14 +7,18 @@ import { styles, TrivetElement } from '@trvt/core';
  */
 export class trvtTable extends TrivetElement {
 	#internals;
+	#breakpointStyleSheet;
 
 	constructor() {
 		super();
 		this.#internals = this.attachInternals();
 		this.#internals.role = 'table';
-		this.breakpoint = parseInt(this.dataset.breakpoint) || 0;
+		this.#breakpointStyleSheet = new CSSStyleSheet();
+
+		this.breakpoint = this.dataset.breakpoint;
 		this.rowElements = [...this.querySelectorAll('trvt-row')];
-		this.shadowStyleSheets = [...styles, tableCSS];
+
+		this.shadowStyleSheets = [...styles, tableCSS, this.breakpointStyleSheet];
 
 		/**
 		 * Returns an array of cell elements within a given row element.
@@ -46,12 +49,6 @@ export class trvtTable extends TrivetElement {
 				),
 			),
 		);
-
-		this.hostCssProperties = [
-			`--trvt-number-of-rows:${this.numberOfRows};`,
-			`--trvt-number-of-columns: ${this.numberOfColumns};`,
-			`--trvt-table-breakpoint: ${this.breakpoint};`,
-		];
 		this.template = `
 			<div class="scrollbox">
 				<div class="table">
@@ -59,28 +56,6 @@ export class trvtTable extends TrivetElement {
 				</div>
 			</div>	
 		`;
-		// Container query fallback :(
-		if (!CSS.supports('container', '--table / inline-size')) {
-			window.addEventListener(
-				'resize',
-				// @ts-expect-error
-				throttler(this.setRotationProperties, 300, this),
-			);
-		}
-	}
-	setRotationProperties() {
-		const { width } = this.getBoundingClientRect();
-		const rotated = width < this.breakpoint;
-
-		const direction = rotated ? 'vertical-lr' : 'horizontal-tb';
-		const sticky = rotated ? 'sticky' : 'unset';
-		const scroll = rotated ? 'scroll' : 'unset';
-		this.shadowCSSvars = [
-			`--_table-writing-mode: ${direction}`,
-			`--_table-sticky-cell: ${sticky}`,
-			`--_table-sticky-header: ${sticky}`,
-			`--_table-scroll: ${scroll}`,
-		];
 	}
 	connectedCallback() {
 		const matrix = [...this.rowElements].map(() =>
@@ -88,7 +63,7 @@ export class trvtTable extends TrivetElement {
 		);
 		[...this.rowElements].forEach((row, rowIndex) => {
 			const cells = [...row.children].filter(cell =>
-				/trvt-cell|trvt-header-cell/gi.test(cell.tagName),
+				/-cell/gi.test(cell.tagName),
 			);
 			let updatedCellIndex = 0;
 			[...cells].forEach(cell => {
@@ -110,8 +85,23 @@ export class trvtTable extends TrivetElement {
 		});
 		const matrixString = matrix.map(row => `"${row.join(' ')}"`).join(' ');
 		this.hostCssProperties = [
+			`--trvt-number-of-rows:${this.numberOfRows};`,
+			`--trvt-number-of-columns: ${this.numberOfColumns};`,
 			`--trvt-table-grid-template-areas: ${matrixString}`,
 		];
+	}
+	get breakpointStyleSheet() {
+		this.#breakpointStyleSheet.replaceSync(`:host([data-breakpoint]) {
+				@container --table (width < ${this.breakpoint}) {
+					.scrollbox {
+							--_table-writing-mode: vertical-lr;
+							--_table-sticky-cell: sticky;
+							--_table-sticky-header: sticky;
+							--_table-scroll: scroll;
+						}
+					}
+				}`);
+		return this.#breakpointStyleSheet;
 	}
 }
 customElements.define('trvt-table', trvtTable);

@@ -1,5 +1,17 @@
 # @trvt/datatable
 
+## 0.4.7
+
+### Patch Changes
+
+- Clean up of consoles
+
+## 0.4.6
+
+### Patch Changes
+
+- removed javascritp based rotation. Now you can use `data-breakpoint` and the component will create a stylesheet for that.
+
 ## 0.4.5
 
 ### Patch Changes

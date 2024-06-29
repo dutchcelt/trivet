@@ -1,5 +1,11 @@
 # @trvt/dragscroller
 
+## 0.3.8
+
+### Patch Changes
+
+- Clean up of consoles
+
 ## 0.3.7
 
 ### Patch Changes

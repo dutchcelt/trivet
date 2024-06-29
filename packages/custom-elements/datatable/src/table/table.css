@@ -15,6 +15,16 @@
 	:host {
 		--nested-grid-diplay: grid;
 	}
+	:host([data-breakpoint]) {
+		@container --table (width < 42ch) {
+			.scrollbox {
+				--_table-writing-mode: vertical-lr;
+				--_table-sticky-cell: sticky;
+				--_table-sticky-header: sticky;
+				--_table-scroll: scroll;
+			}
+		}
+	}
 }
 @layer components.selectors {
 	:host {
@@ -31,7 +41,7 @@
 		);
 	}
 	.scrollbox {
-		overflow-x: var(--_table-scroll);
+		overflow-x: scroll;
 		height: 100%;
 	}
 
