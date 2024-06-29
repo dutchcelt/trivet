@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.4.10
+
+### Patch Changes
+
+- Inverted summary background color fix
+
 ## 0.4.9
 
 ### Patch Changes

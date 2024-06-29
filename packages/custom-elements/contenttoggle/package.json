@@ -1,6 +1,6 @@
 {
 	"name": "@trvt/contenttoggle",
-	"version": "0.4.9",
+	"version": "0.4.10",
 	"description": "Toggle content as an accordion or as tabs",
 	"keywords": [
 		"web",
