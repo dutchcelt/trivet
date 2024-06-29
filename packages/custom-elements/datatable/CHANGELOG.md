@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.4.8
+
+### Patch Changes
+
+- Fix for rendering breakpoint stylesheet when there is no breakpoint given
+
 ## 0.4.7
 
 ### Patch Changes

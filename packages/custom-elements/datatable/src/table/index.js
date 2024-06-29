@@ -91,16 +91,17 @@ export class trvtTable extends TrivetElement {
 		];
 	}
 	get breakpointStyleSheet() {
-		this.#breakpointStyleSheet.replaceSync(`:host([data-breakpoint]) {
-				@container --table (width < ${this.breakpoint}) {
-					.scrollbox {
-							--_table-writing-mode: vertical-lr;
-							--_table-sticky-cell: sticky;
-							--_table-sticky-header: sticky;
-							--_table-scroll: scroll;
-						}
+		this.breakpoint &&
+			this.#breakpointStyleSheet.replaceSync(`@layer components.modifiers {
+			@container --table (width < ${this.breakpoint}) {
+				.scrollbox {
+					--_table-writing-mode: vertical-lr;
+					--_table-sticky-cell: sticky;
+					--_table-sticky-header: sticky;
+					--_table-scroll: scroll;
 					}
-				}`);
+				}
+			}`);
 		return this.#breakpointStyleSheet;
 	}
 }
