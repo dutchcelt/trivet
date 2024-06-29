@@ -1,9 +1,6 @@
 @layer components.props {
 	:host {
-		--summary-surface-color: var(
-			--trvt-color-background-header,
-			canvasText
-		);
+		--summary-surface-color: var(--trvt-color-background-header);
 		--summary-surface-color-active: var(
 			--toggle-summary-active-canvas,
 			var(--trvt-color-background-header)
@@ -44,6 +41,7 @@
 	summary {
 		contain: layout;
 		display: flex;
+		white-space: nowrap;
 		grid-row: 1;
 		gap: var(--summary-block-space) var(--summary-inline-space);
 		align-items: center;

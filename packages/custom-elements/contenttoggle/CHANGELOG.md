@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.4.9
+
+### Patch Changes
+
+- Inverted summary fix
+
 ## 0.4.8
 
 ### Patch Changes

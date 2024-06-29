@@ -29,10 +29,9 @@
 	}
 	.content {
 		display: var(--container-display);
-		grid-template-columns: repeat(
-				calc(var(--numOfToggles) - 1),
-				min-content
-			) 1fr;
+		grid-template-columns:
+			repeat(calc(var(--numOfToggles) - 1), min-content)
+			1fr;
 		grid-template-rows: auto auto;
 		gap: 0 var(--space-inline);
 		justify-content: start;

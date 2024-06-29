@@ -5,6 +5,7 @@
 			--toggle-detail-active-canvas,
 			var(--trvt-color-background-canvas)
 		);
+
 		--detail-text-color: var(--trvt-color-typography-text, canvasText);
 		--detail-display: var(--toggle-display, block);
 		--detail-block-start: var(
@@ -31,9 +32,6 @@
 	:host,
 	details {
 		display: var(--detail-display);
-	}
-	summary {
-		white-space: nowrap;
 	}
 	.content {
 		display: block;
