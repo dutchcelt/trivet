@@ -1,5 +1,11 @@
 # @trvt/datatable
 
+## 0.4.9
+
+### Patch Changes
+
+- Refactored to allow for reactive behaviour on span and breakpoint changes
+
 ## 0.4.8
 
 ### Patch Changes
