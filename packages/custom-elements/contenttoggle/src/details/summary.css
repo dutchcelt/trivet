@@ -1,6 +1,6 @@
 @layer components.props {
 	:host {
-		--summary-surface-color: var(--trvt-color-typography-text);
+		--summary-surface-color: var(--trvt-color-background-header, Canvas);
 		--summary-surface-color-active: var(
 			--toggle-summary-active-canvas,
 			var(--trvt-color-background-header)

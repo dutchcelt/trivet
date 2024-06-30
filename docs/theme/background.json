@@ -53,7 +53,7 @@
 				}
 			},
 			"header": {
-				"value": "{color.lib.sand-1}",
+				"value": "{color.lib.sand-11}",
 				"type": "color",
 				"$extensions": {
 					"css.property.rule": {
@@ -63,7 +63,7 @@
 					"trvt.color.pattern": {
 						"mode": {
 							"dark": {
-								"value": "{color.lib.sand-11}"
+								"value": "{color.lib.sand-1}"
 							}
 						}
 					}

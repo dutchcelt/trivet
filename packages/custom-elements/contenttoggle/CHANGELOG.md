@@ -1,5 +1,11 @@
 # @trvt/contenttoggle
 
+## 0.4.11
+
+### Patch Changes
+
+- Fixed design tokens (theme)
+
 ## 0.4.10
 
 ### Patch Changes

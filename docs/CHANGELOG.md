@@ -1,5 +1,11 @@
 # @trvt/docs
 
+## 0.2.17
+
+### Patch Changes
+
+- Fixed design tokens (theme)
+
 ## 0.2.16
 
 ### Patch Changes
