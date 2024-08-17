@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { loadFont } from '@trvt/utils';
 
 /**

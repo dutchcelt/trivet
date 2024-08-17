@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 /**
  * ReactiveMixin
  * @param {Object} superClass
@@ -14,14 +12,14 @@ const ReactiveMixin = superClass =>
 			const [name, oldValue, newValue] = args;
 			if (oldValue !== null && oldValue === newValue) return;
 			switch (name) {
-				case 'data-trvt-context':
+				case 'data-context':
 					this.trvtContext = newValue;
 					this.#setContextStyle();
 					break;
-				case 'data-trvt-disabled':
+				case 'data-disabled':
 					this.shadowFragment.disabled = newValue === 'true';
 					break;
-				case 'data-trvt-readonly':
+				case 'data-readonly':
 					this.shadowFragment.readonly = newValue === 'true';
 					break;
 			}

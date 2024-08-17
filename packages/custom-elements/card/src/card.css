@@ -1,9 +1,13 @@
 @layer components {
+	@layer props {
+		:host {
+			--trvt-container-type: --component;
+		}
+	}
 	@layer selectors {
 		section {
 			margin-trim: block;
 			background: whitesmoke;
-			padding: 2ex 2ch;
 			border-radius: 1cap;
 		}
 		.start {
@@ -11,7 +15,7 @@
 		}
 	}
 	@layer modifiers {
-		@container component (min-width: 35em) {
+		@container --trvt-container (min-width: 35em) {
 		}
 	}
 }

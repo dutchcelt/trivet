@@ -1,12 +1,12 @@
 @layer components {
 	@layer props {
-		:host([data-trvt-size='l']) {
+		:host([data-size='l']) {
 			--header-size: 20rem;
 		}
-		:host([data-trvt-size='m']) {
+		:host([data-size='m']) {
 			--header-size: 10rem;
 		}
-		:host([data-trvt-size='s']) {
+		:host([data-size='s']) {
 			--header-size: 5rem;
 		}
 	}

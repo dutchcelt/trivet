@@ -28,7 +28,7 @@ export class TrvtHeader extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		return ['data-trvt-src', 'data-trvt-title'];
+		return ['data-src', 'data-title'];
 	}
 	/**
 	 * Method to handle attribute changes in the custom element.
@@ -41,15 +41,15 @@ export class TrvtHeader extends HTMLElement {
 	attributeChangedCallback(name, oldValue, newValue) {
 		const attributeValue = newValue || oldValue;
 		switch (name) {
-			case 'data-trvt-gradient':
+			case 'data-gradient':
 				this.imageSource = attributeValue || '';
 				if (this.gradient) this.#setStyle();
 				break;
-			case 'data-trvt-src':
+			case 'data-src':
 				this.imageSource = attributeValue || '';
 				if (this.imageSource) this.#setStyle();
 				break;
-			case 'data-trvt-title':
+			case 'data-title':
 				this.titleString = attributeValue || '';
 				if (this.heading) this.heading.textContent = this.titleString;
 				break;

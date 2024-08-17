@@ -1,21 +1,16 @@
 // @ts-nocheck
-import { mix, TrivetElement, FormMixin, ReactiveMixin } from '@trvt/core';
+import { mix, TrivetElement, ReactiveMixin } from '@trvt/core';
 // @ts-expect-error
 import buttonCSS from './button.css' with { type: 'css' };
-import { EventMixin } from './eventMixin.js';
 
 /**
  * Represents a custom button element with additional functionality.
  */
-export class TrvtButton extends mix(TrivetElement).with(
-	FormMixin,
-	EventMixin,
-	ReactiveMixin,
-) {
+export class TrvtButton extends mix(TrivetElement).with(ReactiveMixin) {
 	static observedAttributes = [
-		'data-trvt-context',
-		'data-trvt-disabled',
-		'data-trvt-readonly',
+		'data-context',
+		'data-disabled',
+		'data-readonly',
 	];
 
 	constructor() {
