@@ -1,38 +1,27 @@
 /**
- * createFragment.js
- * trivet
- *
- * @author dutchcelt
- */
-
-/**
  * createFragment
  * @param {String} string
- * @param {boolean} fragment
- * @return {DocumentFragment|String}
+ * @return {DocumentFragment}
  */
-const createFragment = (string, fragment = true) => {
-	const htmlString = `${cleanHTML(string, false)}`;
-	return fragment
-		? document.createRange().createContextualFragment(htmlString)
-		: htmlString;
+export const createFragment = string => {
+	return document
+		.createRange()
+		.createContextualFragment(cleanHTML(string, false));
 };
-
-export { createFragment };
 
 /**
  * Sanitize an HTML string
  * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {String}          str   The HTML string to sanitize
- * @param  {boolean}         nodes If true, returns HTML nodes instead of a string
- * @return {NodeList|String}       The sanitized string or nodes
+ * @param  {String} str - The HTML string to sanitize
+ * @param  {boolean} useNodes - If true, returns HTML nodes instead of a string
+ * @return {NodeListOf<ChildNode>|String} - The sanitized string or childNodes
  */
-function cleanHTML(str, nodes) {
+function cleanHTML(str, useNodes) {
 	/**
 	 * Convert the string to an HTML document
-	 * @return {Node} An HTML document
+	 * @return {HTMLBodyElement} An HTML's body element
 	 */
-	function stringToHTML() {
+	function stringToHTML(str) {
 		let parser = new DOMParser();
 		let doc = parser.parseFromString(str, 'text/html');
 		return doc.body || document.createElement('body');
@@ -40,7 +29,7 @@ function cleanHTML(str, nodes) {
 
 	/**
 	 * Remove <script> elements
-	 * @param  {Element} html The HTML
+	 * @param  {HTMLBodyElement} html The HTML
 	 */
 	function removeScripts(html) {
 		let scripts = html.querySelectorAll('script');
@@ -79,22 +68,22 @@ function cleanHTML(str, nodes) {
 
 	/**
 	 * Remove dangerous stuff from the HTML document's nodes
-	 * @param  {Element} html The HTML document
+	 * @param  {HTMLBodyElement} html The HTML document
 	 */
 	function clean(html) {
-		let nodes = html.children;
-		for (let node of nodes) {
-			removeAttributes(node);
-			clean(node);
+		let elements = html.children;
+		for (let element of elements) {
+			removeAttributes(element);
+			clean(element);
 		}
 	}
 
 	//
 	/**
 	 * Convert the string to HTML
-	 * @type {any} html - FIX: Replace 'any' type
+	 * @type {HTMLBodyElement} html
 	 */
-	let html = stringToHTML();
+	let html = stringToHTML(str);
 
 	// Sanitize it
 	removeScripts(html);
@@ -102,5 +91,5 @@ function cleanHTML(str, nodes) {
 
 	// If the user wants HTML nodes back, return them
 	// Otherwise, pass a sanitized string back
-	return nodes ? html.childNodes : html.innerHTML;
+	return useNodes ? html.childNodes : html.innerHTML;
 }
