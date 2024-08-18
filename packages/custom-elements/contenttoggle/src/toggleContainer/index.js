@@ -7,6 +7,12 @@ export class TrvtTabContainer extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 		this.activeDetail = undefined;
+	}
+	disconnectedCallback() {
+		this.removeEventListener('toggle', this);
+		this.removeEventListener('click', this);
+	}
+	connectedCallback() {
 		this.addEventListener('toggle', this);
 		this.addEventListener('click', this);
 		this.shadowRoot.innerHTML = `
@@ -21,7 +27,6 @@ export class TrvtTabContainer extends HTMLElement {
 		].filter(wc => /toggle/gi.test(wc.tagName));
 		this.style = `--numOfToggles:${this.toggleComponents.length + 1}`;
 	}
-	connectedCallback() {}
 
 	handleEvent(event) {
 		event.stopPropagation();

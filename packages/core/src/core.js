@@ -1,9 +1,7 @@
 /* Base styles for all Trivet Components */
 import { trivetCSS } from '@trvt/styles';
-
-import { createFragment } from './createFragment.js';
 import { activateColorScheme, colorScheme } from './activateColorScheme.js';
-import { dynamicStyles } from '@trvt/utils';
+import { dynamicStyles, createFragment } from '@trvt/utils';
 
 /**
  * Represents the CSS layer definitions.

@@ -14,3 +14,6 @@ export { injectDocumentStyles } from './scripts/injectDocumentStyles.js';
 
 export { hashCode } from './scripts/hashcode.js';
 export { dynamicStyles } from './scripts/dynamicStyles.js';
+
+export { mix } from './scripts/mixin.js';
+export { createFragment } from './scripts/createFragment.js';
