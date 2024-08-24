@@ -9,7 +9,6 @@
 		font-size: 112.5%; /* 112.5% => 18px */
 		font-family: system-ui, sans-serif;
 		line-height: 1.5;
-		font-size: initial;
 		font-weight: normal;
 		color-scheme: dark light;
 	}
@@ -57,14 +56,12 @@
 
 	abbr[title] {
 		border-bottom: none; /* 1 */
-		text-decoration: underline; /* 2 */
 		text-decoration: underline dotted; /* 2 */
 	}
 	/**
 	 * 1. Correct the inheritance and scaling of font size in all browsers.
 	 * 2. Correct the odd `em` font sizing in all browsers.
 	 */
-
 	code,
 	kbd,
 	samp {
@@ -74,7 +71,6 @@
 	/**
 	 * Add the correct font size in all browsers.
 	 */
-
 	small {
 		font-size: 80%;
 	}
@@ -83,7 +79,6 @@
 	 * Prevent `sub` and `sup` elements from affecting the line height in
 	 * all browsers.
 	 */
-
 	sub,
 	sup {
 		font-size: 75%;

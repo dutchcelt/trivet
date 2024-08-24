@@ -8,14 +8,4 @@
 		--trvt-display: initial;
 		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
 	}
-	@supports not (font-size: xxx-large) {
-		:root {
-			--trvt-typography-size-xxxl: -webkit-xxx-large;
-		}
-	}
-	@supports not (font-size: -webkit-xxx-large) {
-		:root {
-			--trvt-typography-size-xxxl: 3rem;
-		}
-	}
 }

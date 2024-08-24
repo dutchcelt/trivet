@@ -11,7 +11,7 @@
 	html {
 		margin: 0;
 		font-weight: var(--trvt-typography-weight-medium);
-		font-family: var(--trvt-typography-family-base);
+		font-family: var(--trvt-typography-family-base), serif;
 		font-size: var(--trvt-typography-size-root, 100%);
 		line-height: var(--trvt-typography-leading-l, 1.5);
 		color-scheme: light dark;
@@ -30,7 +30,7 @@
 	h5,
 	h6 {
 		font-weight: var(--trvt-typography-weight-bold);
-		font-family: var(--trvt-typography-family-display);
+		font-family: var(--trvt-typography-family-display), sans-serif;
 		margin-block-start: var(
 			--trvt-typography-whitespace-heading-block-start,
 			1em
