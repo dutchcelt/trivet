@@ -14,8 +14,8 @@
 		"packages"
 	],
 	"exclude": [
-		"dist",
-		"test",
-		"tests"
+		"**/dist",
+		"**/test",
+		"**/tests"
 	]
 }
