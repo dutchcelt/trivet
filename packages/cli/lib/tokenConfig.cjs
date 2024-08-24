@@ -1,3 +1,4 @@
+// @ts-nocheck
 const cssPropertyFormat = require('./css-property-formatter.cjs');
 const cssColorPatternFormat = require('./css-color-pattern-formatter.cjs');
 const StyleDictionary = require('style-dictionary-utils');
