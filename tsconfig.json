@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"allowJs":  true,
+		"checkJs": true,
+		"skipLibCheck": true,
+		"target": "esnext",
+		"module": "nodenext",
+		"strict": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+	},
+	"include": [
+		"packages"
+	],
+	"exclude": [
+		"dist",
+		"test",
+		"tests"
+	]
+}
