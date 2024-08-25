@@ -45,7 +45,6 @@
 		background: var(--detail-surface-color);
 		border: var(--toggle-border-width, 2px) solid var(--toggle-border-color);
 		color: var(--detail-text-color);
-		position: absolute;
 		inset-inline-start: 0;
 		width: var(--toggle-container-width, auto);
 		gap: 0;

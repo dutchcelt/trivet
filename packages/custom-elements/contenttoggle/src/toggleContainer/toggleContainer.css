@@ -23,7 +23,7 @@
 	}
 }
 @layer components.selectors {
-	:host {
+/*	:host {
 		display: block;
 		container: --toggles / inline-size;
 	}
@@ -41,7 +41,7 @@
 			grid-column: var(--numOfToggles);
 			grid-row: 1;
 		}
-	}
+	}*/
 }
 @layer components.modifiers {
 	@container --toggles (min-width: 640px) {
