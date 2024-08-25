@@ -1,3 +1,4 @@
+// @ts-nocheck
 const StyleDictionary = require('style-dictionary-utils');
 const Color = require('colorjs.io').default;
 

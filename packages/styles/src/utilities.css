@@ -1,0 +1,69 @@
+@layer trvt.utilities {
+	/* Web Components Avoiding FOUC
+	 * with `content-visibility`
+	 */
+	:root {
+		--trvt-loaded: ;
+	}
+	body {
+		animation-delay: 2s;
+		animation-duration: 1ms;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 1;
+		animation-name: --trvt-timeout;
+	}
+	@keyframes --trvt-timeout {
+		to {
+			--trvt-loaded: initial;
+		}
+	}
+
+	@supports (content-visibility: visible) {
+		body {
+			&:has(:not(:defined)) {
+				content-visibility: hidden;
+			}
+			content-visibility: var(--trvt-loaded, visible);
+		}
+	}
+	@supports not (content-visibility: visible) {
+		body {
+			&:has(:not(:defined)) {
+				visibility: hidden;
+			}
+			visibility: var(--trvt-loaded, visible);
+		}
+	}
+
+	hr {
+		border: none;
+		border-block-start: 1px solid;
+		color: inherit;
+		block-size: 0;
+		overflow: visible;
+	}
+
+	.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden) {
+		clip-path: inset(50%) !important;
+		height: 1px !important;
+		width: 1px !important;
+		overflow: hidden !important;
+		position: absolute !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	}
+	@supports (margin-trim: block) {
+		.content:has(> slot) {
+			margin-trim: block;
+		}
+	}
+	@supports not (margin-trim: block) {
+		.content > ::slotted(*:first-child) {
+			margin-block-start: 0 !important;
+		}
+
+		.content > ::slotted(*:last-child) {
+			margin-block-end: 0 !important;
+		}
+	}
+}

@@ -1,3 +1,4 @@
+// @ts-nocheck
 const fs = require('fs');
 const StyleDictionary = require('style-dictionary-utils');
 const path = require('path');

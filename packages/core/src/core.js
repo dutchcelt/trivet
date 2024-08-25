@@ -3,37 +3,28 @@ import { trivetCSS } from '@trvt/styles';
 import { activateColorScheme, colorScheme } from './activateColorScheme.js';
 import { dynamicStyles, createFragment } from '@trvt/utils';
 
-/**
- * Represents the CSS layer definitions.
- *
- * @type {Array<string>}
- * @name cssLayerDefinitions
- * @memberOf trivetCSS
- * @property {CSSRule} cssLayerDefinitions[0] - The first CSS rule in the trivetCSS array.
- * @property {CSSStyleRule} cssLayerDefinitions[0].cssRules[0] - The first CSS style rule in the first CSS rule.
- * @property {DOMTokenList} cssLayerDefinitions[0].cssRules[0].nameList - The name list associated with the first CSS style rule.
- */
-// @ts-expect-error
-const cssLayerDefinitions = trivetCSS[0].cssRules[0].nameList;
+/** @type {Array<string>} */
+// @ts-ignore
+const cssLayerDefinitions = [...(trivetCSS?.[0].cssRules?.[0]?.nameList || '')];
 
 /**
  * TrivetElement
  * @class
- @property {Array} nameList
+ * @classdesc The Base Class for all Trivet components
+ *
+ * @extends {HTMLElement}
  */
 class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */
 	#shadowRoot;
 
 	/**  @type {CSSStyleSheet[]} */
-	// @ts-expect-error
 	#shadowStyles;
 
 	/** @type {DocumentFragment|String} */
-	// @ts-expect-error
 	#template;
 
-	/** @type {object} */
+	/** @type {object|undefined} */
 	#dynamicStyles;
 
 	#render() {
@@ -96,6 +87,7 @@ class TrivetElement extends HTMLElement {
 					);
 				}
 			}
+			// @ts-ignore
 			this.#dynamicStyles.properties = properties;
 		} else {
 			console.error(
@@ -131,7 +123,7 @@ class TrivetElement extends HTMLElement {
 	 * @param {string} str - The type of template to set.
 	 */
 	set template(str) {
-		this.#template = createFragment(str, true);
+		this.#template = createFragment(str);
 		this.#render();
 	}
 
@@ -144,6 +136,9 @@ class TrivetElement extends HTMLElement {
 			delegatesFocus: true,
 		};
 		this.#shadowRoot = this.attachShadow(this.settings);
+		this.#shadowStyles = [];
+		this.#template = '';
+		this.#dynamicStyles = undefined;
 		this.shadowStyleSheets = [...trivetCSS];
 	}
 }

@@ -26,30 +26,5 @@
 		background: var(--trvt-color-background-canvas);
 	}
 
-	@supports not (font-size: xxx-large) {
-		:root {
-			--trvt-typography-size-xxxl: -webkit-xxx-large;
-		}
-	}
-	@supports not (font-size: -webkit-xxx-large) {
-		:root {
-			--trvt-typography-size-xxxl: 2rem;
-		}
-	}
-	h1 {
-		font-size: var(--trvt-typography-size-xxxl);
-		font-weight: var(--trvt-typography-weight-heavy);
-		letter-spacing: -0.02ch;
-		font-stretch: 85%;
-	}
 
-	h2 {
-		font-weight: var(--trvt-typography-weight-extrabold);
-		font-stretch: 85%;
-	}
-
-	h3 {
-		font-weight: var(--trvt-typography-weight-extrabold);
-		font-stretch: 85%;
-	}
 }

@@ -15,7 +15,7 @@
 		"eleventy:build": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
 		"eleventy:develop": "npm run eleventy:build -- --serve ",
 		"eleventy:watch": "npm run eleventy:build -- --watch",
-		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"design.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
+		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"trvt.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
 	},
 	"dependencies": {
 		"@trvt/components": "^0.0.3",

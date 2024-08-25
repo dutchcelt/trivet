@@ -15,7 +15,7 @@
 		"prebuild": "chalk -t '{blueBright.bold \n\n=== Design Tokens ==========================================}'",
 		"build": "npm run build:clean && npm run build:tokens",
 		"build:clean": "npx trvt clean",
-		"build:tokens": "npx trvt tokens -s trvt -e lib -l \"design.tokens\" -m",
+		"build:tokens": "npx trvt tokens -s trvt -e lib -l \"trvt.tokens\" -m",
 		"develop": "npm run watch",
 		"watch": "npx chokidar \"tokens/**/*.json\" -c \"npm run  build:tokens\""
 	},

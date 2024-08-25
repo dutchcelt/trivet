@@ -32,9 +32,10 @@
 		grid-template-columns:
 			repeat(calc(var(--numOfToggles) - 1), min-content)
 			1fr;
-		grid-template-rows: auto auto;
+		grid-template-rows: 2em max-content;
 		gap: 0 var(--space-inline);
 		justify-content: start;
+		align-content: start;
 		&::after {
 			content: '';
 			grid-column: var(--numOfToggles);
@@ -47,8 +48,9 @@
 		.content {
 			--is-tabbed: initial;
 			--container-display: grid;
-			--toggle-display: contents;
+			--toggle-display: grid;
 			--trvt-color-background-surfaces: ;
+			--toggle-container-width: 100cqw;
 		}
 	}
 }

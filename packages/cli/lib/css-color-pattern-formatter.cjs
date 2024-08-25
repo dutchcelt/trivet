@@ -1,3 +1,4 @@
+// @ts-nocheck
 const path = require('path');
 
 const { colorPatternsExtension } = require(path.join(__dirname, 'defaults.cjs'));

@@ -39,7 +39,6 @@
 	}
 
 	summary {
-		contain: layout;
 		display: flex;
 		white-space: nowrap;
 		grid-row: 1;
@@ -60,6 +59,7 @@
 		z-index: 1;
 		border-start-start-radius: var(--tab-radius);
 		border-start-end-radius: var(--tab-radius);
+		height: 2em;
 	}
 	/* This is too reset inline offset for tabbed details */
 	:host(:first-child) summary {
