@@ -11,8 +11,6 @@ const cssLayerDefinitions = [...(trivetCSS?.[0].cssRules?.[0]?.nameList || '')];
  * TrivetElement
  * @class
  * @classdesc The Base Class for all Trivet components
- *
- * @extends {HTMLElement}
  */
 class TrivetElement extends HTMLElement {
 	/**  @type {ShadowRoot} */
