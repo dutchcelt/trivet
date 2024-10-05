@@ -1,4 +1,3 @@
-const env = process.env;
 import path from 'path';
 import fs from 'fs';
 const writeCSSImport = import(
@@ -69,8 +68,7 @@ export default async function (eleventyConfig) {
 			trivetPath,
 			themePath,
 		]);
-		const temp = `<link href="/${hashedFileName}" rel="stylesheet" />`.trim();
-		return temp;
+		return `<link href="/${hashedFileName}" rel="stylesheet" />`.trim();
 	});
 
 	// eleventyConfig.addShortcode('importmap', function () {
