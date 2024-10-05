@@ -1,0 +1,21 @@
+@layer components {
+	@layer props {
+		:host {
+			--trvt-container-type: --component;
+		}
+	}
+	@layer selectors {
+		section {
+			margin-trim: block;
+			background: whitesmoke;
+			border-radius: 1cap;
+		}
+		.start {
+			font-weight: 900;
+		}
+	}
+	@layer modifiers {
+		@container --trvt-container (min-width: 35em) {
+		}
+	}
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+ 		<link rel="stylesheet" href="../../styles/dist/importer.css" />
+		<link rel="stylesheet" href="../../designtokens/dist/css/trvt_tokens.css" />
+		<link rel="stylesheet" href="../../designtokens/dist/css/trvt_properties.css" />
+		<link rel="stylesheet" href="../../designtokens/dist/css/trvt_color_patterns.css" />
+		<style>
+			body {
+				padding: 2em 4em;
+			}
+			td {outline: 1px solid red;}
+		</style>
+		<script type="esms-options">
+			{
+			  "polyfillEnable": ["css-modules", "json-modules"],
+			  "noLoadEventRetriggers": true
+			}
+		</script>
+		<script async src="../../utils/scripts/es-module-shims.js"></script>
+
+		<script type="module" src="./index.js"></script>
+	</head>
+	<body>
+		<trvt-table data-breakpoint="42ch">
+			<trvt-thead>
+				<trvt-row>
+					<trvt-header-cell>Cell 1.1</trvt-header-cell>
+					<trvt-header-cell colspan="2">Cell 1.2</trvt-header-cell>
+				</trvt-row>
+			</trvt-thead>
+			<trvt-tbody>
+				<trvt-row>
+					<trvt-cell>Cell 2.1</trvt-cell>
+					<trvt-cell
+						>Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Accusantium illo architecto deleniti iure nisi,
+						cupiditate ut? Voluptates ex impedit laboriosam aut eius
+						recusandae ab tempore autem, libero, consectetur dolorum
+						nemo.</trvt-cell
+					>
+					<trvt-cell rowspan="2" type="info">Cell 2.3</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>Cell 3.1</trvt-cell>
+					<trvt-cell>Cell 3.2</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell rowspan="2"
+						>Cell 4.1 <br />Voluptates ex impedit laboriosam aut
+						eius recusandae
+					</trvt-cell>
+					<trvt-cell>Cell 4.2</trvt-cell>
+					<trvt-cell>Cell 4.3</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell colspan="2">Cell 5.2</trvt-cell>
+				</trvt-row>
+			</trvt-tbody>
+			<trvt-tfoot>
+				<trvt-row>
+					<trvt-cell colspan="3">
+						<p>
+							Based on the work done in
+							<a
+								href="https://codepen.io/dutchcelt/pen/ExRGwgW"
+								target="_top"
+								>an earlier Codepen</a
+							>.
+						</p>
+					</trvt-cell>
+				</trvt-row>
+			</trvt-tfoot>
+		</trvt-table>
+		<trvt-table >
+			<trvt-thead>
+				<trvt-row>
+					<trvt-header-cell>Header</trvt-header-cell>
+					<trvt-header-cell>Header</trvt-header-cell>
+					<trvt-header-cell>Header</trvt-header-cell>
+					<trvt-header-cell>Header</trvt-header-cell>
+				</trvt-row>
+			</trvt-thead>
+
+			<trvt-tbody>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell rowspan="2" colspan="2">cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell rowspan="2" >cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell rowspan="2" colspan="2">cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+					<trvt-cell>cell</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell colspan="2">cell</trvt-cell>
+				</trvt-row>
+			</trvt-tbody>
+		</trvt-table>
+
+
+		<trvt-table style="font-size: 0.75rem" >
+			<trvt-thead>
+				<trvt-row>
+					<trvt-header-cell rowspan="2"
+					>Namespace</trvt-header-cell
+					>
+					<trvt-header-cell rowspan="2"
+					>Foundation</trvt-header-cell
+					>
+					<trvt-header-cell rowspan="2"
+					>Topic</trvt-header-cell
+					>
+					<trvt-header-cell rowspan="2"
+					>Property</trvt-header-cell
+					>
+					<trvt-header-cell colspan="3"
+					>Modifier</trvt-header-cell
+					>
+				</trvt-row>
+				<trvt-row>
+					<trvt-header-cell
+					>Variant</trvt-header-cell
+					>
+					<trvt-header-cell
+					>Range</trvt-header-cell
+					>
+					<trvt-header-cell
+					>State</trvt-header-cell
+					>
+				</trvt-row>
+			</trvt-thead>
+			<trvt-tbody>
+				<trvt-row>
+					<trvt-cell rowspan="80">trvt</trvt-cell>
+					<trvt-cell>color</trvt-cell>
+					<trvt-cell>editorial</trvt-cell>
+					<trvt-cell>text</trvt-cell>
+					<trvt-cell>primary</trvt-cell>
+					<trvt-cell>000-100</trvt-cell>
+					<trvt-cell>hover</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>layout</trvt-cell>
+					<trvt-cell
+					>promotional</trvt-cell
+					>
+					<trvt-cell
+					>background</trvt-cell
+					>
+					<trvt-cell
+					>secondary</trvt-cell
+					>
+					<trvt-cell
+					>light-bold</trvt-cell
+					>
+					<trvt-cell>visited</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>spacing</trvt-cell>
+					<trvt-cell>message</trvt-cell>
+					<trvt-cell>border</trvt-cell>
+					<trvt-cell>tertiary</trvt-cell>
+					<trvt-cell
+					>thin-thick</trvt-cell
+					>
+					<trvt-cell>active</trvt-cell>
+				</trvt-row>
+				<trvt-row>
+					<trvt-cell>size</trvt-cell>
+					<trvt-cell>layer</trvt-cell>
+					<trvt-cell>easing</trvt-cell>
+					<trvt-cell
+					>highlight</trvt-cell
+					>
+					<trvt-cell>low-high</trvt-cell>
+					<trvt-cell>focus</trvt-cell>
+				</trvt-row>
+
+			</trvt-tbody>
+		</trvt-table>
+	</body>
+</html>

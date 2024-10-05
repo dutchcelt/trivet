@@ -1,0 +1,14 @@
+{
+	"TRUE": {
+		"$value": "initial"
+	},
+	"FALSE": {
+		"$value": " "
+	},
+	"ON": {
+		"$value": "initial"
+	},
+	"OFF": {
+		"$value": " "
+	}
+}

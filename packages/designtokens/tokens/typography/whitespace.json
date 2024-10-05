@@ -1,0 +1,30 @@
+{
+	"typography": {
+		"whitespace": {
+			"heading": {
+				"block-start": { "$value": "1ex" },
+				"block-end": { "$value": "1ex" },
+				"inline-start": { "$value": "0" },
+				"inline-end": { "$value": "0" },
+				"row-gap": { "$value": "1ex" },
+				"column-gap": { "$value": "1ch" }
+			},
+			"compact": {
+				"block-start": { "$value": "1ex" },
+				"block-end": { "$value": "1ex" },
+				"inline-start": { "$value": "1ch" },
+				"inline-end": { "$value": "1ch" },
+				"row-gap": { "$value": "1ex" },
+				"column-gap": { "$value": "1ch" }
+			},
+			"default": {
+				"block-start": { "$value": "1ex" },
+				"block-end": { "$value": "1ex" },
+				"inline-start": { "$value": "2ch" },
+				"inline-end": { "$value": "2ch" },
+				"row-gap": { "$value": "1ex" },
+				"column-gap": { "$value": "2ch" }
+			}
+		}
+	}
+}

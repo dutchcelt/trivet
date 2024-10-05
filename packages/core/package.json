@@ -1,0 +1,32 @@
+{
+	"name": "@trvt/core",
+	"version": "0.9.12",
+	"description": "Core loader for Trivet",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*",
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "rollup -c ../../configs/rollup.config.js",
+		"develop": "npm run build --watch"
+	},
+	"dependencies": {
+		"@trvt/designtokens": "^0.11.12",
+		"@trvt/styles": "^0.0.2",
+		"@trvt/utils": "^0.0.2",
+		"rollup": "^4.22.4"
+	}
+}

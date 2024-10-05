@@ -1,2 +1,1 @@
-@media (prefers-color-scheme: dark) :root { --trvt-color-base-dark:  #efefef; }
-@media (prefers-color-scheme: dark) :root { --trvt-color-base-light:  #999; }
+@layer trvt.tokens{[data-color-scheme=dark]{color-scheme:dark;--trvt-color-base-dark:oklch(.9182 .0109 95.172);--trvt-color-base-light:oklch(.263 .0073 106.89)}[data-color-scheme=light]{color-scheme:light}}

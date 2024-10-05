@@ -1,0 +1,73 @@
+@layer components {
+	@layer props {
+		:host {
+			--trvt-container-type: ;
+		}
+		[data-component='container'] {
+			--_container-display: grid;
+			--_container-columns: 1fr;
+			--_container-rows: ;
+
+			--_container-row-gap: var(--row-gap);
+			--_container-column-gap: var(--column-gap);
+
+			--_container-padding-block-start: var(--size-2, 1rem);
+			--_container-padding-block-end: var(--size-2, 1rem);
+			--_container-padding-inline-start: var(--size-2, 1rem);
+			--_container-padding-inline-end: var(--size-2, 1rem);
+
+			--_container-radius: var(--trvt-radius, 5px);
+			--_container-border-color: var(--trvt-color-line-border);
+
+			--_container-heading-color: var(--text-3);
+			--_container-text-color: var(--trvt-color-typography-text);
+			--_container-surface-color: var(--surface-1, canvas);
+
+			--_container-shadow: ;
+		}
+	}
+	@layer modifiers {
+		@container --trvt-container (min-width: 42ch) {
+			[data-component='container'] {
+				--_container-columns: 1fr 1fr;
+			}
+		}
+		[data-component='container'] {
+			@container --trvt-container style(--trvt-container-type: --component) {
+				--_container-row-gap: 2rem;
+				--_container-column-gap: 1rem;
+				--_container-padding-block-start: var(--size-2, 1rem);
+				--_container-padding-block-end: var(--size-2, 1rem);
+				--_container-padding-inline-start: var(--size-2, 1rem);
+				--_container-padding-inline-end: var(--size-2, 1rem);
+			}
+		}
+	}
+
+	@layer selectors {
+		:host {
+			container: --trvt-container / inline-size;
+			display: block;
+		}
+		[data-component='container'] {
+			display: var(--_container-display);
+			grid-template-columns: var(--_container-columns);
+			grid-template-rows: var(--_container-rows);
+			row-gap: var(--_container-row-gap);
+			column-gap: var(--_container-column-gap);
+			padding-block-start: var(--_container-padding-block-start);
+			padding-block-end: var(--_container-padding-block-end);
+			padding-inline-start: var(--_container-padding-inline-start);
+			padding-inline-end: var(--_container-padding-inline-end);
+			border-radius: var(--_container-radius);
+			background-color: var(--_container-surface-color);
+			margin-block: var(
+				--is-multicol,
+				calc(var(--_container-row-gap) / 2)
+			);
+			height: calc(100% - (var(--_container-padding) * 2));
+			/* min-width: min(20rem, 100%); */
+			align-content: start;
+		}
+	}
+}

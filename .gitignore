@@ -4,12 +4,12 @@
 .vscode
 
 # NPM/Node
-.npmrc
 node_modules
 
 # Builds
 temp
 dist
+build
 
 # logs
 *.log
@@ -20,7 +20,4 @@ coverage
 # OS files
 .DS_Store
 
-# Rocket
-_site
-_site-dev
 

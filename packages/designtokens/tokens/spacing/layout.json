@@ -1,0 +1,35 @@
+{
+	"spacing": {
+		"page": {
+			"block": {
+				"$value": "2rem",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<length>",
+						"inherits": true,
+						"initial-value": "16px",
+						"comment": "Spacing values should come from a base value. In this case 2 x 8px."
+					},
+					"trvt.content.mode": {
+						"promotional": {
+							"$value": "4rem"
+						},
+						"legal": {
+							"$value": "1rem"
+						}
+					}
+				}
+			}
+		},
+
+		"layout": {
+			"xxs": ".25rem",
+			"xs": "0.5rem",
+			"s": "1rem",
+			"m": "2rem",
+			"l": "4rem",
+			"xl": "6rem",
+			"xxl": "8rem"
+		}
+	}
+}

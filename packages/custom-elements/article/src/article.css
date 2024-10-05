@@ -1,0 +1,64 @@
+@layer components {
+	@layer props {
+		/* Style API */
+		:host {
+			--trvt-article-display: var(--trvt-layout-display-content, block);
+			--trvt-article-offset-block-start: 0;
+			--trvt-article-offset-block-end: 0;
+			--trvt-article-inset-block-start: 0;
+			--trvt-article-inset-block-end: 0;
+			--trvt-article-font-weight: 400;
+			--trvt-article-color: var(--trvt-color-typography-text);
+			--trvt-article-background-color: var(
+				--trvt-color-background-surfaces
+			);
+			--trvt-article-font-size: 1em;
+		}
+		/* 'Private' properties */
+		:host(trvt-article) article * {
+			--_display: var(--trvt-article-display);
+			--_offset-block-start: var(--trvt-article-offset-block-start);
+			--_offset-block-end: var(--trvt-article-offset-block-end);
+			--_inset-block-start: var(--trvt-article-inset-block-start);
+			--_inset-block-end: var(--trvt-article-inset-block-end);
+			--_font-weight: var(--trvt-article-font-weight);
+			--_color: var(--trvt-article-color);
+			--_background-color: var(--trvt-article-background-color);
+			--_font-size: var(--trvt-article-font-size);
+		}
+	}
+	@layer modifiers {
+		article [name='intro'] {
+			--trvt-article-font-weight: 600;
+		}
+	}
+
+	@layer selectors {
+		article {
+			/* Parent Layout */
+			display: var(--_display);
+
+			/* Layout */
+
+			/* Box Model */
+			margin-block-start: var(--_offset-block-start);
+			margin-block-end: var(--_offset-block-end);
+			padding-block-start: var(--_inset-block-start);
+			padding-block-end: var(--_inset-block-end);
+
+			/* Positioning */
+
+			/* Display */
+			background-color: var(--_background-color);
+		}
+
+		article [name='intro']::slotted(*) {
+			font-weight: var(--_font-weight);
+		}
+		::slotted(*) {
+			color: var(--_color);
+			font-size: var(--_font-size);
+			font-weight: var(--_font-weight);
+		}
+	}
+}

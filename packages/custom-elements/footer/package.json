@@ -1,0 +1,32 @@
+{
+	"name": "@trvt/footer",
+	"version": "0.6.7",
+	"private": true,
+	"description": "Footer component for the Trivet Design System",
+	"keywords": [
+		"web",
+		"components"
+	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js",
+		"./*": {
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.10"
+	}
+}

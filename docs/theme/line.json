@@ -1,0 +1,67 @@
+{
+	"color": {
+		"line": {
+			"ui": {
+				"value": "{color.lib.sand-11}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"seperator": {
+				"value": "{color.lib.sand-11}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"border": {
+				"value": "{color.lib.sand-11}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"outline": {
+				"value": "{color.base.highlight}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

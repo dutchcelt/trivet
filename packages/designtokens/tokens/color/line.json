@@ -1,0 +1,46 @@
+{
+	"color": {
+		"line": {
+			"ui": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"seperator": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"border": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"outline": {
+				"$value": "{color.base.highlight}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

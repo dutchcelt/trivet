@@ -1,0 +1,18 @@
+/* Trivet Layer Definitions */
+@layer trvt.base,
+trvt.tokens,
+trvt.utilities,
+
+/*
+ *	The 'theme' layer has no sub layers.
+ *	Allow developers to manage their own layers
+ */
+trvt.theme,
+
+/*
+ *	'components' styles can also be defined inside the web component
+ *	and will reuse these layer definitions
+ */
+trvt.components.props,
+trvt.components.selectors,
+trvt.components.modifiers;

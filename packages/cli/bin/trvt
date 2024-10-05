@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const { Command } = require('commander');
+const program = new Command();
+
+const fs = require('fs');
+const path = require('path');
+const pkg = JSON.parse(
+	fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8')
+);
+
+const rootDir = path.join(__dirname, '..', 'lib');
+const cleanTokens = require(`${rootDir}/cleanTokens.cjs`);
+const generateTokens = require(`${rootDir}/generateTokens.cjs`);
+
+program
+	.description('CLI to generate Trivet assets')
+	.version(pkg.version)
+	.usage('[command] [options]');
+
+program
+	.command('clean')
+	.description('Remove generated tokens')
+	.option('--buildPath [build]', 'TODO')
+	.action(cleanTokens);
+
+program
+	.command('tokens')
+	.description('Generates tokens')
+	.option(
+		'-l, --layer [layer]',
+		'Wrap the generated custom property tokens in a CSS layer with the given layername.'
+	)
+	.option(
+		'-b, --buildPath [build]',
+		'Tokens are put in a folder "build". Here you can set an alternate path.'
+	)
+	.option(
+		'-p, --sourcePath [source]',
+		'Tokens retrieved from the folder "tokens". Here you can set an alternate folder path.'
+	)
+	.option(
+		'-t, --themePath [theme]',
+		'You can set an explicit path for you theme tokens. These will be composed on top of the source tokens.'
+	)
+	.option(
+		'-s, --scope [scope]',
+		'This is the design system prefix. This is used in the filename and in the token keys/properties.'
+	)
+	.option(
+		'-f, --filename [filename]',
+		'A filename is <scope>_tokens. You can pick a different suffix.'
+	)
+	.option(
+		'-e, --exclude [exclude]',
+		'Exclude properties that contain the given string'
+	)
+	.option(
+		'-x, --extension [extension]',
+		'Points to the name of the CSS property entension'
+	)
+	.option('-m, --minify [minify]', 'Minify the CSS')
+	.action(generateTokens);
+
+program.parse();

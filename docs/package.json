@@ -1,38 +1,27 @@
 {
 	"name": "@trvt/docs",
-	"version": "0.2.8",
+	"version": "0.2.17",
 	"private": true,
+	"description": "Documents",
+	"homepage": "https://github.com/dutchcelt/trivet#readme",
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
 	"main": "index.html",
 	"files": [],
-	"description": "Documents",
-	"author": "C. Egor Kloos",
-	"license": "AGPLv3",
-	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"scripts": {
-		"banner": "chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
-		"build:all": "npm run banner && npm run clean && npm run tokens && npm run eleventy",
-		"clean": "npx trvt clean --buildPath styles",
-		"eleventy": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
-		"eleventy:develop": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --serve ",
-		"eleventy:watch": "npx -y @11ty/eleventy --config=_configs/.eleventy.js --watch",
-		"tokens": "npx trvt tokens --themePath theme --buildPath styles"
-	},
-	"devDependencies": {
-		"@trvt/cli": "^1.4.1",
-		"chalk-cli": "^5.0.1"
+		"clean": "npx -y trvt clean --buildPath styles",
+		"preeleventy": "npx chalk -t '{blueBright.bold \n\n=== Docs ===================================================}'",
+		"eleventy": "npm run clean && npm run tokens && npm run eleventy:build",
+		"eleventy:build": "npx -y @11ty/eleventy --config=_configs/.eleventy.js",
+		"eleventy:develop": "npm run eleventy:build -- --serve ",
+		"eleventy:watch": "npm run eleventy:build -- --watch",
+		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"trvt.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
 	},
 	"dependencies": {
-		"@11ty/eleventy": "^2.0.1",
-		"@trvt/article": "^0.7.2",
-		"@trvt/assets": "^0.8.2",
-		"@trvt/button": "^0.10.2",
-		"@trvt/card": "^0.7.2",
-		"@trvt/contenttoggle": "^0.4.5",
-		"@trvt/core": "^0.9.4",
-		"@trvt/datatable": "^0.3.6",
-		"@trvt/dragscroller": "^0.3.5",
-		"@trvt/header": "^0.8.4",
-		"@trvt/layout": "^0.8.5",
-		"@trvt/lists": "^0.4.4"
+		"@trvt/components": "^0.0.3",
+		"@trvt/utils": "^0.0.2"
+	},
+	"devDependencies": {
+		"lightningcss": "^1.22.0"
 	}
 }

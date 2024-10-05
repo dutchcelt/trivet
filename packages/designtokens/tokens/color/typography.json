@@ -1,0 +1,96 @@
+{
+	"color": {
+		"typography": {
+			"text": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"text-inverted": {
+				"$value": "{color.base.canvas}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"heading": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"icon": {
+				"$value": "{color.base.icon}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"ui": {
+				"$value": "{color.base.buttontext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor": {
+				"$value": "{color.base.linktext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor-visited": {
+				"$value": "{color.base.visitedtext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor-hover": {
+				"$value": "{color.base.hovertext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"anchor-active": {
+				"$value": "{color.base.activetext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

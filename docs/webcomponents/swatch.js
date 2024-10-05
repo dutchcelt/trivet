@@ -3,7 +3,7 @@ class TrvtSwatch extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 		this.colorIndex = '';
-		this.color = this.dataset.trvtColor || '--OFF';
+		this.color = this.dataset.color || '--OFF';
 		this.colorName = this.lastPart();
 	}
 	connectedCallback() {

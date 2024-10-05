@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>Button</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=yes, initial-scale=1"
+		/>
+		<link rel="stylesheet" href="../../components/index.css" />
+		<script type="esms-options">
+			{
+			  "polyfillEnable": ["css-modules", "json-modules"],
+			  "noLoadEventRetriggers": true
+			}
+		</script>
+		<script async src="../../utils/scripts/es-module-shims.js"></script>
+
+		<script type="module">
+			import './src/button.js';
+		</script>
+	</head>
+	<body class="reference">
+		<header>
+			<p>Trivet Web Component</p>
+			<h1>&lt;trvt-button&gt;</h1>
+		</header>
+		<main>
+			<trvt-button data-context="primary"> test </trvt-button>
+			<trvt-button data-context="pause">Pause</trvt-button>
+		</main>
+	</body>
+</html>

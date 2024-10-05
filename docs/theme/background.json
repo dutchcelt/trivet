@@ -1,0 +1,165 @@
+{
+	"color": {
+		"background": {
+			"canvas": {
+				"value": "{color.lib.sand-1}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-11}"
+							}
+						}
+					}
+				}
+			},
+			"viewport": {
+				"value": "{color.base.canvas}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.base.canvastext}"
+							}
+						}
+					}
+				}
+			},
+			"content": {
+				"value": "{color.lib.sand-1}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-11}"
+							}
+						}
+					}
+				}
+			},
+			"header": {
+				"value": "{color.lib.sand-11}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"icon": {
+				"value": "{color.lib.sand-1}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-11}"
+							}
+						}
+					}
+				}
+			},
+			"highlight": {
+				"value": "{color.base.highlight}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"accentcolor": {
+				"value": "{color.base.accentcolor}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"buttonface": {
+				"value": "{color.base.buttonface}",
+				"comment": "ButtonFace is the standard value but it's very dark.",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"field": {
+				"value": "{color.base.field}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"selected": {
+				"value": "{color.base.selected}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"mark": {
+				"value": "Mark",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		},
+		"surface": {
+			"comment": "A surface is usually reserved for components. It's here for convinence.",
+			"default": {
+				"value": "{color.base.canvas}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

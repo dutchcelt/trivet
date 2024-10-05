@@ -1,0 +1,47 @@
+{
+  "name": "@trvt/components",
+  "version": "0.0.3",
+  "description": "A base collection of Trivet UI components",
+  "keywords": [
+    "trivet",
+    "ui",
+    "components",
+    "webcomponents",
+    "collection"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dutchcelt/trivet.git"
+  },
+  "license": "AGPL-3.0",
+  "author": "C. Egor Kloos",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:rollup-bundle",
+    "build:esbuild": "esbuild --outfile=dist/index.js --bundle",
+    "build:rollup": "rollup -c ../../configs/rollup.config.js",
+    "build:rollup-bundle": "rollup index.js -p rollup-plugin-css-modules -p @rollup/plugin-node-resolve -p @rollup/plugin-terser -o dist/index.js ",
+    "develop": "npm run build --watch"
+  },
+  "dependencies": {
+    "@trvt/article": "^0.7.4",
+    "@trvt/button": "^0.10.5",
+    "@trvt/card": "^0.7.4",
+    "@trvt/contenttoggle": "^0.4.7",
+    "@trvt/datatable": "^0.4.0",
+    "@trvt/dragscroller": "^0.3.7",
+    "@trvt/header": "^0.8.6",
+    "@trvt/layout": "^0.8.10",
+    "@trvt/lists": "^0.4.8",
+    "@trvt/styles": "^0.0.2",
+    "@trvt/utils": "^0.0.2"
+  },
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10.1.0"
+  }
+}

@@ -1,0 +1,86 @@
+{
+	"color": {
+		"brand": {
+			"brand": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"logo": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"primary": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"primary-inverted": {
+				"$value": "{color.base.canvas}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary-inverted": {
+				"$value": "{color.base.canvas}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary": {
+				"$value": "{color.base.canvastext}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary-inverted": {
+				"$value": "{color.base.canvas}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

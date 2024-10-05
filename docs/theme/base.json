@@ -1,0 +1,269 @@
+{
+	"color": {
+		"base": {
+			"light": {
+				"value": "{color.lib.sand-1}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-11}"
+							}
+						}
+					}
+				}
+			},
+			"dark": {
+				"value": "{color.lib.sand-11}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"mid": {
+				"value": "#ccc",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"bright": {
+				"value": "#ffff00",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"shadow": {
+				"value": "#ddd",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"icon": {
+				"value": "CanvasText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"canvas": {
+				"value": "{color.lib.sand-1}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-11}"
+							}
+						}
+					}
+				}
+			},
+			"canvastext": {
+				"value": "{color.lib.sand-11}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"linktext": {
+				"value": "LinkText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"visitedtext": {
+				"value": "VisitedText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"hovertext": {
+				"value": "LinkText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"activetext": {
+				"value": "ActiveText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"highlight": {
+				"value": "Highlight",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"highlighttext": {
+				"value": "HighlightText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"accentcolor": {
+				"value": "AccentColor",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"accentcolortext": {
+				"value": "AccentColorText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"buttonface": {
+				"value": "ButtonFace",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"buttontext": {
+				"value": "{color.lib.sand-11}",
+				"type": "color",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					},
+					"trvt.color.pattern": {
+						"mode": {
+							"dark": {
+								"value": "{color.lib.sand-1}"
+							}
+						}
+					}
+				}
+			},
+			"field": {
+				"value": "Field",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"fieldtext": {
+				"value": "FieldText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"selected": {
+				"value": "SelectedItem",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"selectedtext": {
+				"value": "SelectedItemText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"mark": {
+				"value": "Mark",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"marktext": {
+				"value": "MarkText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"disabled": {
+				"value": "GrayText",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

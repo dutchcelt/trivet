@@ -1,0 +1,30 @@
+{
+	"name": "@trvt/container",
+	"version": "0.0.1",
+	"description": "Container component for the Trivet Design System",
+	"keywords": [
+		"web",
+		"components"
+	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js",
+		"./*": {
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.10"
+	}
+}

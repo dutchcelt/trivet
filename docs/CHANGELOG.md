@@ -1,5 +1,66 @@
 # @trvt/docs
 
+## 0.2.17
+
+### Patch Changes
+
+- Fixed design tokens (theme)
+
+## 0.2.16
+
+### Patch Changes
+
+- Added use case for renderinge web component tables
+
+## 0.2.15
+
+### Patch Changes
+
+- @trvt/components@0.0.3
+
+## 0.2.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @trvt/components@0.0.2
+
+## 0.2.13
+
+### Patch Changes
+
+- Switched to 'with' and added component bundle
+- Updated dependencies
+  - @trvt/components@0.0.1
+  - @trvt/utils@0.0.2
+
+## 0.2.12
+
+### Patch Changes
+
+- Fix for explicit darkmode
+
+## 0.2.11
+
+### Patch Changes
+
+- Refactored lists and fixed some cli buggs
+
+## 0.2.10
+
+### Patch Changes
+
+- Setting prefers color scheme with JavaScript
+
+## 0.2.9
+
+### Patch Changes
+
+- Fix for building new styles using css properties
+- Updated dependencies
+  - @trvt/button@0.10.3
+  - @trvt/core@0.9.5
+
 ## 0.2.8
 
 ### Patch Changes

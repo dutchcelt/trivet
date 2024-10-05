@@ -1,0 +1,11 @@
+@layer trvt.tokens {
+	:root {
+		--ON: var(--trvt-functional-boolean-on);
+		--OFF: var(--trvt-functional-boolean-off);
+		--TRUE: var(--trvt-functional-boolean-true);
+		--FALSE: var(--trvt-functional-boolean-false);
+
+		--trvt-display: initial;
+		--trvt-gap: clamp(1rem, calc(0.51rem + 2.44vw), 2.25rem);
+	}
+}

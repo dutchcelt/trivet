@@ -1,0 +1,21 @@
+@layer components.selectors {
+	:host {
+		writing-mode: horizontal-tb;
+		grid-area: var(--trvt-cell-grid-area);
+
+		border-bottom: var(--trvt-stroke-medium) solid var(--canvasText);
+		border-left: var(--trvt-stroke-medium) solid var(--canvasText);
+		background-color: var(--canvas);
+		color: var(--canvasText);
+		text-align: var(--cell-justify, initial);
+	}
+
+	:host([type='info']) {
+		font-style: italic;
+		font-size: var(--trvt-typography-size-s);
+	}
+	div {
+		padding: 1ex 1ch;
+		max-width: var(--table-cell-width);
+	}
+}

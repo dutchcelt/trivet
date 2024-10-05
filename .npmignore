@@ -1,0 +1,20 @@
+# Editors / IDE
+.idea
+.nova
+.vscode
+
+# NPM/Node
+node_modules
+
+# Builds
+temp
+dist
+
+# logs
+*.log
+
+# testing
+coverage
+
+
+

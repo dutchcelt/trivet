@@ -1,0 +1,55 @@
+@layer components.props {
+	:host {
+		--_table-writing-mode: horizontal-tb;
+		--_table-scroll: unset;
+		--_table-sticky-cell: unset;
+		--_table-sticky-header: unset;
+
+		--nested-grid-diplay: contents;
+		--canvas: var(--trvt-color-background-canvas);
+		--canvasText: var(--trvt-color-typography-text);
+		--table-cell-width: 75ch;
+	}
+}
+@layer components.modifiers {
+	:host {
+		--nested-grid-diplay: grid;
+	}
+}
+@layer components.selectors {
+	:host {
+		display: block;
+		width: 100%;
+		container: --table / inline-size;
+		margin-block-start: var(
+			--trvt-typography-whitespace-default-block-start,
+			1rem
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-default-block-end,
+			1rem
+		);
+	}
+	.scrollbox {
+		overflow-x: scroll;
+		height: 100%;
+	}
+
+	.table {
+		writing-mode: var(--_table-writing-mode);
+		display: grid;
+		grid-template-columns: repeat(
+			var(--number-of-columns, var(--trvt-number-of-columns)),
+			auto
+		);
+		grid-template-rows: repeat(
+			var(--number-of-rows, var(--trvt-number-of-rows)),
+			auto
+		);
+		grid-template-areas: var(--trvt-table-grid-template-areas);
+		border-top: var(--trvt-stroke-medium) solid var(--canvasText);
+		border-right: var(--trvt-stroke-medium) solid var(--canvasText);
+		background-color: var(--canvas);
+		color: var(--canvasText);
+	}
+}

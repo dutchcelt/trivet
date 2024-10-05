@@ -1,0 +1,29 @@
+@layer components {
+	@layer props {
+		:host([data-size='l']) {
+			--header-size: 20rem;
+		}
+		:host([data-size='m']) {
+			--header-size: 10rem;
+		}
+		:host([data-size='s']) {
+			--header-size: 5rem;
+		}
+	}
+	@layer selectors {
+		:host {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			color: var(--trvt-color-base-text);
+			background-color: var(--trvt-color-background-content);
+			background-image: var(--header-image-src, var(--header-gradient));
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: var(--header-size, 20rem);
+			overflow: clip;
+			justify-content: end;
+		}
+	}
+}

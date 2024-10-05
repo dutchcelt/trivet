@@ -1,0 +1,31 @@
+{
+	"name": "@trvt/datatable",
+	"version": "0.4.9",
+	"description": "Static datatable",
+	"keywords": [
+		"web",
+		"components"
+	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js",
+		"./*": {
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx -y rollup -c \"../../../configs/rollup.config.js\"",
+		"develop": "npm run build && npx -y wds --root-dir \"../../\" --watch --node-resolve --open \"/webcomponents/datatable/index.html\""
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.12"
+	}
+}

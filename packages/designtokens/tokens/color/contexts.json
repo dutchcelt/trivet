@@ -1,0 +1,204 @@
+{
+	"color": {
+		"editorial": {
+			"note": {
+				"$value": "{color.lib.yellow}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"info": {
+				"$value": "{color.lib.grape}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"quote": {
+				"$value": "{color.lib.grape}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		},
+		"presentational": {
+			"cta": {
+				"$value": "{color.lib.indigo}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"new": {
+				"$value": "{color.lib.lime}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"attention": {
+				"$value": "{color.lib.teal}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"hightlight": {
+				"$value": "{color.lib.teal}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		},
+		"actionable": {
+			"abort": {
+				"$value": "{color.lib.red}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"release": {
+				"$value": "{color.lib.violet}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"pause": {
+				"$value": "{color.lib.orange}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"approve": {
+				"$value": "{color.lib.green}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"submit": {
+				"$value": "{color.lib.blue}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		},
+		"hierarchical": {
+			"primary": {
+				"$value": "{color.lib.blue}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary": {
+				"$value": "{color.lib.orange}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary": {
+				"$value": "{color.lib.teal}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		},
+		"status": {
+			"warning": {
+				"$value": "{color.lib.orange}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"failure": {
+				"$value": "{color.lib.red}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"pending": {
+				"$value": "{color.lib.violet}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"success": {
+				"$value": "{color.lib.green}",
+				"$type": "color",
+				"$extensions": {
+					"www.css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
+		}
+	}
+}

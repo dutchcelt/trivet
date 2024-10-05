@@ -1,0 +1,10 @@
+{
+	"layout": {
+		"display": {
+			"viewport": { "$value": "block" },
+			"content": { "$value": "block" },
+			"ui": { "$value": "flex" },
+			"grid": { "$value": "grid" }
+		}
+	}
+}

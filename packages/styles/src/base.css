@@ -1,0 +1,231 @@
+@layer trvt.base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+	[hidden] {
+		display: none !important;
+	}
+
+	html {
+		margin: 0;
+		box-sizing: border-box;
+
+		font-weight: var(--trvt-typography-weight-medium, normal);
+		font-family: var(--trvt-typography-family-base), system-ui, sans-serif;
+		font-size: var(--trvt-typography-size-root, 112.5%);
+		line-height: var(--trvt-typography-leading-l, 1.5);
+		-webkit-text-size-adjust: none;
+
+		color-scheme: light dark;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		min-height: 100dvh;
+
+		-webkit-font-smoothing: antialiased;
+
+		color: var(--trvt-color-typography-text, canvasText);
+		background-color: var(--trvt-color-background-canvas, canvas);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: var(--trvt-typography-weight-bold);
+		font-family: var(--trvt-typography-family-display), sans-serif;
+		margin-block-start: var(
+			--trvt-typography-whitespace-heading-block-start,
+			1em
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-heading-block-end,
+			1ex
+		);
+		color: var(--trvt-color-typography-heading);
+	}
+	h1 {
+		font-size: var(--trvt-typography-size-xxxl);
+		line-height: var(--trvt-typography-leading-s, 1.2);
+	}
+
+	h2 {
+		font-size: var(--trvt-typography-size-xxl);
+		line-height: var(--trvt-typography-leading-m, 1.2);
+	}
+
+	h3 {
+		font-size: var(--trvt-typography-size-xl);
+		line-height: var(--trvt-typography-leading-m, 1.2);
+		color: var(--trvt-color-typography-heading);
+	}
+
+	h4 {
+		font-size: var(--trvt-typography-size-l);
+	}
+
+	h5 {
+		font-size: var(--trvt-typography-size-m);
+	}
+
+	h6 {
+		font-size: var(--trvt-typography-size-s);
+		text-transform: uppercase;
+	}
+	p,
+	form,
+	fieldset {
+		margin-block-start: var(
+			--trvt-typography-whitespace-default-block-start,
+			1rem
+		);
+		margin-block-end: var(
+			--trvt-typography-whitespace-default-block-end,
+			1rem
+		);
+	}
+
+	a {
+		text-underline-offset: 0.2ex;
+	}
+	a:link {
+		color: var(--trvt-color-typography-anchor);
+	}
+	a:hover {
+		color: var(--trvt-color-typography-anchor-hover);
+	}
+	a:active {
+		color: var(--trvt-color-typography-anchor-active);
+	}
+	a:focus {
+		color: var(--trvt-color-typography-anchor);
+	}
+	a:visited {
+		color: var(--trvt-color-typography-anchor-visited);
+	}
+
+	/**
+		 * Add the correct font weight in Chrome, Edge, and Safari.
+		 */
+	b,
+	strong {
+		font-weight: bolder;
+	}
+
+	/**
+	 * 1. Correct the inheritance and scaling of font size in all browsers.
+	 * 2. Correct the odd `em` font sizing in all browsers.
+	 */
+	pre {
+		font-family: monospace, monospace; /* 1 */
+		font-size: 1em; /* 2 */
+	}
+
+	/**
+	 * 1. Remove the bottom border in Chrome 57-
+	 * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+	 */
+	abbr[title] {
+		border-bottom: none; /* 1 */
+		text-decoration: underline dotted; /* 2 */
+	}
+	/**
+	 * 1. Correct the inheritance and scaling of font size in all browsers.
+	 * 2. Correct the odd `em` font sizing in all browsers.
+	 */
+	code,
+	kbd,
+	samp {
+		font-family: monospace, monospace; /* 1 */
+		font-size: 1em; /* 2 */
+	}
+	/**
+	 * Add the correct font size in all browsers.
+	 */
+	small {
+		font-size: 80%;
+	}
+
+	/**
+	 * Prevent `sub` and `sup` elements from affecting the line height in
+	 * all browsers.
+	 */
+	sub,
+	sup {
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sub {
+		bottom: -0.25em;
+	}
+	sup {
+		top: -0.5em;
+	}
+	img,
+	svg,
+	video,
+	canvas,
+	audio,
+	iframe,
+	embed,
+	object {
+		display: block;
+	}
+
+	img,
+	picture,
+	svg {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* FORMS */
+	button,
+	input,
+	optgroup,
+	select,
+	textarea,
+	[role='button'],
+	[role='option'] {
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 100%;
+		line-height: var(--trvt-typography-leading-m, 1.15);
+		margin: 0;
+		color: inherit;
+	}
+	textarea {
+		resize: vertical;
+	}
+
+	:disabled {
+		cursor: not-allowed;
+	}
+	label:has(> input:disabled),
+	label:has(+ input:disabled) {
+		cursor: not-allowed;
+	}
+	button {
+		border-style: solid;
+	}
+
+	:focus-visible {
+		outline: var(--trvt-color-line-outline, Highlight) solid
+			var(--trvt-stroke-medium, 2px);
+		outline-offset: var(--trvt-stroke-medium, 2px);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html:focus-within {
+			scroll-behavior: smooth;
+		}
+	}
+}

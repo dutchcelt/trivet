@@ -22,9 +22,7 @@
 			media="(prefers-color-scheme: light)"
 		/>
 
-		<link href="@trvt/assets/bundle.css" rel="stylesheet" />
-		<link href="styles/trvt_tokens.css" rel="stylesheet" />
-		<link href="styles/theme.css" rel="stylesheet" />
+		{% stylesheet %}
 
 		<script type="esms-options">
 			{
@@ -32,25 +30,26 @@
 			  "noLoadEventRetriggers": true
 			}
 		</script>
-		<script async src="scripts/es-module-shims.js"></script>
-		{% importmap %} {% importmodules %}
+
+
 		<script type="module">
-			import './webcomponents/dutchceltlogo.js';
-			import './webcomponents/swatch.js';
+			import '/@trvt/components/index.js';
+			import '/webcomponents/dutchceltlogo.js';
+			import '/webcomponents/swatch.js';
 		</script>
 	</head>
 	<body>
 		<trvt-layout data-type="stacked">
 			<nav slot="navigation">
 				<dutchcelt-logo
-					data-trvt-href="https://dutchcelt.com/"
+					data-href="https://dutchcelt.com/"
 				></dutchcelt-logo>
 			</nav>
 			<header slot="header">
 				<trvt-header
-					data-trvt-context="home"
-					data-trvt-size="l"
-					data-trvt-title="trivet"
+					data-context="home"
+					data-size="l"
+					data-title="trivet"
 				>
 				</trvt-header>
 			</header>
@@ -122,8 +121,8 @@
 						<form action="#">
 							<trvt-button
 								id="test"
-								data-trvt-type="submit"
-								data-trvt-context="approve"
+								data-type="submit"
+								data-context="approve"
 								>Approve</trvt-button
 							>
 						</form>
@@ -156,72 +155,58 @@
 				</trvt-tab-container>
 				<form action="#">
 					<trvt-button>Default</trvt-button>
-					<trvt-button data-trvt-context="pause">Pause</trvt-button>
-					<trvt-button data-trvt-context="abort">Abort</trvt-button>
-					<trvt-button data-trvt-context="approve"
-						>Approve</trvt-button
-					>
+					<trvt-button data-context="pause">Pause</trvt-button>
+					<trvt-button data-context="abort">Abort</trvt-button>
+					<trvt-button data-context="approve">Approve</trvt-button>
 					<trvt-button
-						data-trvt-context="release"
-						data-trvt-type="submit"
-						data-trvt-disabled="true"
-						>Release</trvt-button
-					>
+						data-context="release"
+						data-type="submit"
+						data-disabled="true">Release</trvt-button>
 					<trvt-button
 						name="submit"
-						data-trvt-type="submit"
-						data-trvt-context="primary"
-						data-trvt-value="testing"
-						>Primary</trvt-button
-					>
+						data-type="submit"
+						data-context="primary"
+						data-value="testing">Primary</trvt-button>
 				</form>
-				<trvt-table style="--canvas">
+				<trvt-table>
 					<trvt-thead>
 						<trvt-row>
 							<trvt-header-cell>Cell 1.1</trvt-header-cell>
-							<trvt-header-cell colspan="2"
-								>Cell 1.2</trvt-header-cell
-							>
+							<trvt-header-cell colspan="2">Cell 1.2</trvt-header-cell>
 						</trvt-row>
 					</trvt-thead>
 					<trvt-tbody>
 						<trvt-row>
 							<trvt-cell>Cell 2.1</trvt-cell>
-							<trvt-cell
-								>Lorem ipsum dolor sit amet consectetur
+							<trvt-cell>Lorem ipsum dolor sit amet consectetur
 								adipisicing elit. Accusantium illo architecto
 								deleniti iure nisi, cupiditate ut? Voluptates ex
 								impedit laboriosam aut eius recusandae ab
 								tempore autem, libero, consectetur dolorum
-								nemo.</trvt-cell
-							>
-							<trvt-cell rowspan="2" type="info"
-								>Cell 2.3</trvt-cell
-							>
+								nemo.</trvt-cell>
+							<trvt-cell rowspan="2" type="info">Cell 2.3</trvt-cell>
 						</trvt-row>
 						<trvt-row>
 							<trvt-cell>Cell 3.1</trvt-cell>
 							<trvt-cell>Cell 3.2</trvt-cell>
 						</trvt-row>
 						<trvt-row>
-							<trvt-cell rowspan="2"
-								>Cell 4.1 <br />Voluptates ex impedit laboriosam
+							<trvt-cell rowspan="2">
+								Cell 4.1
+								<br />
+								Voluptates ex impedit laboriosam
 								aut eius recusandae
 							</trvt-cell>
 							<trvt-cell>Cell 4.2</trvt-cell>
 							<trvt-cell>Cell 4.3</trvt-cell>
 						</trvt-row>
 						<trvt-row>
-							<trvt-cell colstart="2" colspan="2"
-								>Cell 5.2</trvt-cell
-							>
+							<trvt-cell colspan="2">Cell 5.2</trvt-cell>
 						</trvt-row>
 					</trvt-tbody>
 					<trvt-tfoot>
 						<trvt-row>
-							<trvt-cell colspan="3"
-								>Cell 6.1 - A Table Footer</trvt-cell
-							>
+							<trvt-cell colspan="3">Cell 6.1 - A Table Footer</trvt-cell>
 						</trvt-row>
 					</trvt-tfoot>
 				</trvt-table>
@@ -313,72 +298,72 @@
 
 				<h4>Editorial</h4>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-editorial-note"
+					data-color="--trvt-color-editorial-note"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-editorial-info"
+					data-color="--trvt-color-editorial-info"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-editorial-quote"
+					data-color="--trvt-color-editorial-quote"
 				></trvt-swatch>
 
 				<h4>Presentational</h4>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-presentational-cta"
+					data-color="--trvt-color-presentational-cta"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-presentational-new"
+					data-color="--trvt-color-presentational-new"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-presentational-attention"
+					data-color="--trvt-color-presentational-attention"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-presentational-hightlight"
+					data-color="--trvt-color-presentational-hightlight"
 				></trvt-swatch>
 
 				<h4>Actionable</h4>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-abort"
+					data-color="--trvt-color-actionable-abort"
 				></trvt-swatch>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-release"
+					data-color="--trvt-color-actionable-release"
 				></trvt-swatch>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-pause"
+					data-color="--trvt-color-actionable-pause"
 				></trvt-swatch>
 
 				<trvt-swatch
-					data-trvt-color="--trvt-color-actionable-approve"
+					data-color="--trvt-color-actionable-approve"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-actionable-submit"
+					data-color="--trvt-color-actionable-submit"
 				></trvt-swatch>
 
 				<h4>Hierarchical</h4>
 
 				<trvt-swatch
-					data-trvt-color="--trvt-color-hierarchical-primary"
+					data-color="--trvt-color-hierarchical-primary"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-hierarchical-secondary"
+					data-color="--trvt-color-hierarchical-secondary"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-hierarchical-tertiary"
+					data-color="--trvt-color-hierarchical-tertiary"
 				></trvt-swatch>
 
 				<h4>Status</h4>
 
 				<trvt-swatch
-					data-trvt-color="--trvt-color-status-warning"
+					data-color="--trvt-color-status-warning"
 				></trvt-swatch
 				><trvt-swatch
-					data-trvt-color="--trvt-color-status-failure"
+					data-color="--trvt-color-status-failure"
 				></trvt-swatch>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-status-pending"
+					data-color="--trvt-color-status-pending"
 				></trvt-swatch>
 				<trvt-swatch
-					data-trvt-color="--trvt-color-status-success"
+					data-color="--trvt-color-status-success"
 				></trvt-swatch>
 
 				<h4>Open Source Colors</h4>
@@ -429,13 +414,13 @@
 									>
 								</trvt-row>
 								<trvt-row>
-									<trvt-header-cell colstart="5"
+									<trvt-header-cell
 										>Variant</trvt-header-cell
 									>
-									<trvt-header-cell colstart="6"
+									<trvt-header-cell
 										>Range</trvt-header-cell
 									>
-									<trvt-header-cell colstart="7"
+									<trvt-header-cell
 										>State</trvt-header-cell
 									>
 								</trvt-row>
@@ -451,133 +436,133 @@
 									<trvt-cell>hover</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2">layout</trvt-cell>
-									<trvt-cell colstart="3"
+									<trvt-cell>layout</trvt-cell>
+									<trvt-cell
 										>promotional</trvt-cell
 									>
-									<trvt-cell colstart="4"
+									<trvt-cell
 										>background</trvt-cell
 									>
-									<trvt-cell colstart="5"
+									<trvt-cell
 										>secondary</trvt-cell
 									>
-									<trvt-cell colstart="6"
+									<trvt-cell
 										>light-bold</trvt-cell
 									>
-									<trvt-cell colstart="7">visited</trvt-cell>
+									<trvt-cell>visited</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2">spacing</trvt-cell>
-									<trvt-cell colstart="3">message</trvt-cell>
-									<trvt-cell colstart="4">border</trvt-cell>
-									<trvt-cell colstart="5">tertiary</trvt-cell>
-									<trvt-cell colstart="6"
+									<trvt-cell>spacing</trvt-cell>
+									<trvt-cell>message</trvt-cell>
+									<trvt-cell>border</trvt-cell>
+									<trvt-cell>tertiary</trvt-cell>
+									<trvt-cell
 										>thin-thick</trvt-cell
 									>
-									<trvt-cell colstart="7">active</trvt-cell>
+									<trvt-cell>active</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2">size</trvt-cell>
-									<trvt-cell colstart="3">layer</trvt-cell>
-									<trvt-cell colstart="4">easing</trvt-cell>
-									<trvt-cell colstart="5"
+									<trvt-cell>size</trvt-cell>
+									<trvt-cell>layer</trvt-cell>
+									<trvt-cell>easing</trvt-cell>
+									<trvt-cell
 										>highlight</trvt-cell
 									>
-									<trvt-cell colstart="6">low-high</trvt-cell>
-									<trvt-cell colstart="7">focus</trvt-cell>
+									<trvt-cell>low-high</trvt-cell>
+									<trvt-cell>focus</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2">line</trvt-cell>
-									<trvt-cell colstart="3">signals</trvt-cell>
-									<trvt-cell colstart="4">delay</trvt-cell>
-									<trvt-cell colstart="5">brand</trvt-cell>
-									<trvt-cell colstart="6"
+									<trvt-cell>line</trvt-cell>
+									<trvt-cell>signals</trvt-cell>
+									<trvt-cell>delay</trvt-cell>
+									<trvt-cell>brand</trvt-cell>
+									<trvt-cell
 										>small-large</trvt-cell
 									>
-									<trvt-cell colstart="7">readonly</trvt-cell>
+									<trvt-cell>readonly</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2">time</trvt-cell>
-									<trvt-cell colstart="3"
+									<trvt-cell>time</trvt-cell>
+									<trvt-cell
 										>interactive</trvt-cell
 									>
-									<trvt-cell colstart="4">offset</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">invalid</trvt-cell>
+									<trvt-cell>offset</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>invalid</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2"
+									<trvt-cell
 										>typography</trvt-cell
 									>
-									<trvt-cell colstart="3">anchor</trvt-cell>
-									<trvt-cell colstart="4">weight</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7"
+									<trvt-cell>anchor</trvt-cell>
+									<trvt-cell>weight</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell
 										>&lt;boolean&gt;</trvt-cell
 									>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="2">shadow</trvt-cell>
-									<trvt-cell colstart="3">tag</trvt-cell>
-									<trvt-cell colstart="4">order</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">pending</trvt-cell>
+									<trvt-cell>shadow</trvt-cell>
+									<trvt-cell>tag</trvt-cell>
+									<trvt-cell>order</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>pending</trvt-cell>
 								</trvt-row>
 								<trvt-row>
 									<trvt-cell
 										colstart="2"
 										rowspan="80"
 									></trvt-cell>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4">position</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">onhold</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>position</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>onhold</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4">gap</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">ready</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>gap</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>ready</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4">block</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">loaded</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>block</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>loaded</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4">inline</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">complete</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>inline</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>complete</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4">grid</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">aborted</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>grid</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>aborted</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4">path</trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7">error</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>path</trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell>error</trvt-cell>
 								</trvt-row>
 								<trvt-row>
-									<trvt-cell colstart="3"></trvt-cell>
-									<trvt-cell colstart="4"></trvt-cell>
-									<trvt-cell colstart="5"></trvt-cell>
-									<trvt-cell colstart="6"></trvt-cell>
-									<trvt-cell colstart="7"></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
+									<trvt-cell></trvt-cell>
 								</trvt-row>
 							</trvt-tbody>
 						</trvt-table>
@@ -640,7 +625,7 @@
 				</p>
 				<nav>
 					<dutchcelt-logo
-						data-trvt-href="https://dutchcelt.com/"
+						data-href="https://dutchcelt.com/"
 					></dutchcelt-logo>
 				</nav>
 			</footer>

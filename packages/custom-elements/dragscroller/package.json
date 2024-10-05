@@ -1,0 +1,32 @@
+{
+	"name": "@trvt/dragscroller",
+	"version": "0.3.8",
+	"description": "Drag the conents of a scrollbox",
+	"keywords": [
+		"web",
+		"components"
+	],
+	"license": "AGPL-3.0",
+	"author": "C. Egor Kloos",
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./*": {
+			"default": "./dist/*",
+			"types": "./dist/types/*"
+		}
+	},
+	"main": "index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run build:rollup",
+		"build:rollup": "npx rollup -c ../../../configs/rollup.config.js",
+		"develop": "npm run build --watch"
+	},
+	"dependencies": {
+		"@trvt/core": "^0.9.10"
+	}
+}

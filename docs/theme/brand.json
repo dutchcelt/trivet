@@ -1,14 +1,78 @@
 {
 	"color": {
 		"brand": {
-			"brand": { "value": "{color.lib.orange-9}" },
-			"logo": { "value": "{color.lib.orange-9}" },
-			"primary": { "value": "{color.lib.orange-9}" },
-			"primary-inverted": { "value": "{color.lib.indigo-3.value}" },
-			"secondary": { "value": "{color.base.canvastext.value}" },
-			"secondary-inverted": { "value": "{color.base.canvas.value}" },
-			"tertiary": { "value": "{color.base.canvastext.value}" },
-			"tertiary-inverted": { "value": "{color.base.canvas.value}" }
+			"brand": {
+				"value": "{color.lib.orange-9}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"logo": {
+				"value": "{color.lib.orange-9}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"primary": {
+				"value": "{color.lib.orange-9}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"primary-inverted": {
+				"value": "{color.lib.indigo-3}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary": {
+				"value": "{color.base.canvastext}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"secondary-inverted": {
+				"value": "{color.base.canvas}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary": {
+				"value": "{color.base.canvastext}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			},
+			"tertiary-inverted": {
+				"value": "{color.base.canvas}",
+				"$extensions": {
+					"css.property.rule": {
+						"syntax": "<color>",
+						"inherits": true
+					}
+				}
+			}
 		}
 	}
 }
