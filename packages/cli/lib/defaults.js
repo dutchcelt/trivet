@@ -1,5 +1,5 @@
-const path = require('path');
-const shell = require('shelljs');
+import * as path from 'path';
+import shell from 'shelljs';
 
 const defaultTokensPackagePath = shell.exec('npm ls @trvt/designtokens -ps', {
 	silent: true,
@@ -23,12 +23,13 @@ const tokensPath = path.join(defaultTokensPackagePath.trim(), 'tokens');
  */
 
 /** @type {Defaults} */
-module.exports = {
+export default {
 	buildPath: path.resolve('dist', 'css'),
 	layer: '',
 	sourcePath: tokensPath,
 	themePath: '',
 	scope: 'trvt',
+	filename: '',
 	cssPropExtension: 'www.css.property.rule',
 	colorPatternsExtension: 'trvt.color.patterns',
 	wcagLevel: 'AA',

@@ -1,24 +1,19 @@
 // @ts-nocheck
-const cssPropertyFormat = require('./css-property-formatter.cjs');
-const cssColorPatternFormat = require('./css-color-pattern-formatter.cjs');
-const StyleDictionary = require('style-dictionary-utils');
-require('./css-system-color-transformer.cjs');
-require('./css-fluid-transformer.cjs');
+import cssPropertyFormat from './css-property-formatter.js';
+import cssColorPatternFormat from './css-color-pattern-formatter.js';
+import StyleDictionary from 'style-dictionary';
+import './css-system-color-transformer.js';
+import './css-fluid-transformer.js';
 
-StyleDictionary.registerTransformGroup({
+await StyleDictionary.registerTransformGroup({
 	name: 'trvt/css',
-	transforms: [
-		'system/colors',
-		'trvt/css/fluid',
-		...StyleDictionary.transformGroup['css/extended'],
-	]
+	transforms: ['system/colors', 'trvt/css/fluid'],
 });
 
 /**
- * module.exports
- * @param {import('./defaults.cjs').Defaults} opts - All the default values
+ * @param {import('./defaults.js').Defaults} opts - All the default values
  */
-module.exports = opts => {
+export default opts => {
 	const filterRegex = new RegExp(opts.exclude, 'i');
 
 	const themeTokensGlobArray = opts.themePath
@@ -37,7 +32,15 @@ module.exports = opts => {
 		platforms: {
 			'CSS Tokens': {
 				transformGroup: 'trvt/css',
-				transforms: ['system/colors','trvt/css/fluid','shadow/css','border/css','font/css','attribute/cti', 'name/cti/kebab'],
+				transforms: [
+					'system/colors',
+					'trvt/css/fluid',
+					'shadow/css/shorthand',
+					'border/css/shorthand',
+					'fontFamily/css',
+					'attribute/cti',
+					'name/kebab',
+				],
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [
@@ -64,8 +67,8 @@ module.exports = opts => {
 				actions: ['trivet'],
 			},
 			'CSS Properties': {
-				 transformGroup: 'trvt/css',
-				transforms: ['system/colors','attribute/cti', 'name/cti/kebab'],
+				transformGroup: 'trvt/css',
+				transforms: ['system/colors', 'attribute/cti', 'name/kebab'],
 				//transformGroup: 'css',
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
@@ -84,8 +87,7 @@ module.exports = opts => {
 			},
 			'CSS Library': {
 				transformGroup: 'trvt/css',
-				transforms: ['system/colors','attribute/cti', 'name/cti/kebab'],
-				//transformGroup: 'css',
+				transforms: ['system/colors', 'attribute/cti', 'name/kebab'],
 				buildPath: `${opts.buildPath}/`,
 				prefix: opts.scope,
 				files: [

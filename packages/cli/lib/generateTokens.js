@@ -1,8 +1,13 @@
 // @ts-nocheck
-const fs = require('fs');
-const StyleDictionary = require('style-dictionary-utils');
-const path = require('path');
-const {transform} = require('lightningcss');
+import * as fs from 'fs';
+import StyleDictionary from 'style-dictionary';
+import * as path from 'path';
+import { transform } from 'lightningcss';
+import { fileURLToPath } from 'url';
+// Get the file path of the current module
+const __filename = fileURLToPath(import.meta.url);
+// Resolve the directory name (equivalent to __dirname)
+const __dirname = path.dirname(__filename);
 
 /**
  * Registers an action called 'trivet' with the Style Dictionary.
@@ -11,7 +16,7 @@ const {transform} = require('lightningcss');
 StyleDictionary.registerAction({
 	name: 'trivet',
 	do: function (...args) {
-		const config = {args};
+		const config = { args };
 		const tokenFiles = config.args?.[1]?.files || [];
 		tokenFiles.forEach(processTokenFile);
 	},
@@ -20,17 +25,18 @@ StyleDictionary.registerAction({
 	},
 });
 
-const tokenConfigPath = path.join(__dirname, 'tokenConfig.cjs');
+const tokenConfigPath = path.join(__dirname, 'tokenConfig.js');
 /**
- * @typedef {import('./defaults.cjs').Defaults} Defaults
+ * @typedef {import('./defaults.js').Defaults} Defaults
  * @type {Defaults}
  */
-const tokenConfig = require(tokenConfigPath);
-const defaultsPath = path.join(__dirname, 'defaults.cjs');
+const tokenConfig = await import(tokenConfigPath).then(m => m.default);
+const defaultsPath = path.join(__dirname, 'defaults.js');
+
 /**
  * @type {Defaults}
  */
-const defaults = require(defaultsPath);
+const defaults = await import(defaultsPath).then(m => m.default);
 
 /**
  * @typedef {Object} ConfigOptions
@@ -47,7 +53,7 @@ const defaults = require(defaultsPath);
  * @param {string} tokenConfig.destination
  */
 function processTokenFile(tokenConfig) {
-	const {options, destination} = tokenConfig;
+	const { options, destination } = tokenConfig;
 	getFileContent(options, destination);
 }
 
@@ -58,10 +64,10 @@ function processTokenFile(tokenConfig) {
  * @param {string} destination
  */
 function getFileContent(options, destination) {
-	const {buildPath, minify, layer} = options;
+	const { buildPath, minify, layer } = options;
 	const filePath = path.join(buildPath, destination);
 	if (fs.existsSync(filePath)) {
-		const fileData = fs.readFileSync(filePath, {encoding: 'utf8'});
+		const fileData = fs.readFileSync(filePath, { encoding: 'utf8' });
 		let transformedData =
 			layer === '' ? `${fileData}\n` : `@layer ${layer} {\n${fileData}\n}\n`;
 		let cssString;
@@ -84,9 +90,9 @@ function getFileContent(options, destination) {
  *
  * @param {Defaults} userOptions
  */
-module.exports = userOptions => {
+export default async userOptions => {
 	const opts = Object.assign(defaults, userOptions);
 	// @ts-ignore
-	const styleDictionary = StyleDictionary.extend(tokenConfig(opts));
-	styleDictionary.buildAllPlatforms();
+	const styleDictionary = await new StyleDictionary(tokenConfig(opts));
+	await styleDictionary.buildAllPlatforms();
 };

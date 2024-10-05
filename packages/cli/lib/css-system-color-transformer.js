@@ -1,7 +1,6 @@
 // @ts-nocheck
-const StyleDictionary = require('style-dictionary-utils');
-const Color = require('colorjs.io').default;
-
+import StyleDictionary from 'style-dictionary';
+import Color from 'colorjs.io';
 
 const systemColorTranslation = {
 	AccentColor: 'lightBlue',
@@ -22,26 +21,24 @@ const systemColorTranslation = {
 	MarkText: 'black',
 	SelectedItem: 'lightBlue',
 	SelectedItemText: 'black',
-	VisitedText: 'purple'
+	VisitedText: 'purple',
 };
 
-const matcher = token => {
+const filter = token => {
 	return token?.$type === 'color' || token?.type === 'color';
-}
-const transformer = (token) => {
+};
+const transform = token => {
 	const tokenColor = token.$value || token.value;
 	const color = new Color(systemColorTranslation[tokenColor] || tokenColor);
-	return color.toString({format: "hex"});
-}
+	return color.toString({ format: 'hex' });
+};
 
 StyleDictionary.registerTransform({
-	name: "system/colors",
+	name: 'system/colors',
 	type: `value`,
 	transitive: true,
-	matcher,
-	transformer
-})
+	filter,
+	transform,
+});
 
-
-module.exports = {transformer, matcher};
-
+export { transform, filter };

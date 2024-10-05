@@ -10,9 +10,7 @@
  * Copyright (c) 2023 Egor Kloos
  */
 
-const path = require('path');
-
-const { cssPropExtension } = require(path.join(__dirname, 'defaults.cjs'));
+import cssPropExtension from './defaults.js';
 
 /**
  * stringSort
@@ -48,25 +46,24 @@ const hasExtension = token => {
 	return typeof extScope?.inherits === 'boolean';
 };
 
-const {transformer,matcher} = require('./css-system-color-transformer.cjs');
-const convertHelper = (token) => {
-	return matcher(token)
-		? transformer(token)
-		: token.$value || token.value;
-}
+const { transform, filter } = await import('./css-system-color-transformer.js');
+
+const convertHelper = token => {
+	return filter(token) ? transform(token) : token.$value || token.value;
+};
 
 /**
  * Format object for Style Dictionary
  * @type {Object}
  */
-module.exports = {
-	'css/property': function({ dictionary, options }) {
+export default {
+	'css/property': function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
 		return allTokens
 			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
-				stringSort(tokenA.name, tokenB.name)
+				stringSort(tokenA.name, tokenB.name),
 			)
 			.filter((/** @type{Object} */ token) => hasExtension(token))
 			.map((/** @type{Object} */ token) => {

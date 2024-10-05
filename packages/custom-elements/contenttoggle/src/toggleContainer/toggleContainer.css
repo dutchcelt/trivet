@@ -23,7 +23,7 @@
 	}
 }
 @layer components.selectors {
-/*	:host {
+	/*	:host {
 		display: block;
 		container: --toggles / inline-size;
 	}

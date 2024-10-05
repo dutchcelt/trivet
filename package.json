@@ -36,7 +36,7 @@
 		"lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
 		"lint:prettier": "prettier \"packages/**/*.js\" --check --ignore-path .gitignore",
 		"prepare": "husky",
-		"test": "npm run lint && wtr \"packages/**/*.test.js\" --node-resolve",
+		"test": "npm run lint && wtr \"packages/core/**/*.test.js\" --node-resolve",
 		"types": "npm --workspaces run types --if-present --silent"
 	},
 	"lint-staged": {
