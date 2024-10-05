@@ -1,6 +1,6 @@
 const env = process.env;
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 const writeCSSImport = import(
 	path.resolve('..', 'packages', 'styles', 'lib', 'writeCSS.js')
 );
@@ -40,7 +40,7 @@ const copyImports = (eleventyConfig, deps) => {
 // 	return str;
 // };
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
 	// eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
 
 	eleventyConfig.addPassthroughCopy('fonts');
@@ -89,4 +89,4 @@ module.exports = function (eleventyConfig) {
 			output: 'dist',
 		},
 	};
-};
+}

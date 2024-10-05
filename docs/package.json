@@ -6,6 +6,7 @@
 	"homepage": "https://github.com/dutchcelt/trivet#readme",
 	"license": "AGPL-3.0",
 	"author": "C. Egor Kloos",
+	"type": "module",
 	"main": "index.html",
 	"files": [],
 	"scripts": {
@@ -18,6 +19,7 @@
 		"tokens": "npx -y trvt tokens -s trvt -e lib -l \"trvt.tokens\" --themePath \"./theme\" --buildPath \"./styles\" -m"
 	},
 	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
 		"@trvt/components": "^0.0.3",
 		"@trvt/utils": "^0.0.2"
 	},
