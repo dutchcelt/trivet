@@ -27,6 +27,6 @@
 		"@trvt/designtokens": "^0.11.12",
 		"@trvt/styles": "^0.0.2",
 		"@trvt/utils": "^0.0.2",
-		"rollup": "^4.16.0"
+		"rollup": "^4.22.4"
 	}
 }
