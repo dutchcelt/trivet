@@ -10,10 +10,16 @@ import { transform } from 'lightningcss';
  */
 
 /**
- * Processes each token file.
+ * Processes a given token file by extracting its content using specified options and destination.
+ *
+ * @param {Object} tokenFiles - The token file object containing options and destination properties.
+ * @param {Object} tokenFiles.options - The configuration or settings to be used for processing the file.
+ * @param {string} tokenFiles.destination - The path or destination where the file will be processed.
+ * @return {void} This function does not return any value.
  */
 function processTokenFile(tokenFiles) {
 	const { options, destination } = tokenFiles;
+	// @ts-ignore
 	getFileContent(options, destination);
 }
 
@@ -34,6 +40,7 @@ function getFileContent(options, destination) {
 		if (minify) {
 			cssString = transform({
 				filename: `${destination}`,
+				// @ts-ignore
 				code: Buffer.from(transformedData),
 				minify: true,
 				errorRecovery: true,
@@ -47,7 +54,7 @@ function getFileContent(options, destination) {
 
 export default {
 	name: 'trivet',
-	do: function (...args) {
+	do: function (/** @type {any[]} */ ...args) {
 		const tokenFiles = args.map(o => o)[1]?.files || [];
 		tokenFiles.forEach(processTokenFile);
 	},
