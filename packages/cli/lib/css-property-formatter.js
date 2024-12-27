@@ -10,7 +10,8 @@
  * Copyright (c) 2023 Egor Kloos
  */
 
-import cssPropExtension from './defaults.js';
+import defaults from './defaults.js';
+const { cssPropExtension } = defaults;
 
 /**
  * stringSort
@@ -33,7 +34,7 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
  * @param {Object} token
  * @returns {CSSPropertyRule}
  */
-const getExtension = token => token.$extensions[`${cssPropExtension}`];
+const getExtension = token => token['$extensions'][cssPropExtension];
 
 /**
  * hasExtension
@@ -41,15 +42,14 @@ const getExtension = token => token.$extensions[`${cssPropExtension}`];
  * @returns {boolean}
  */
 const hasExtension = token => {
-	const ext = token.$extensions;
-	const extScope = ext && ext[`${cssPropExtension}`];
+	const extScope = token['$extensions']?.[cssPropExtension];
 	return typeof extScope?.inherits === 'boolean';
 };
 
-const { transform, filter } = await import('./css-system-color-transformer.js');
+import { transformColor, isColor } from './css-system-color-transformer.js';
 
 const convertHelper = token => {
-	return filter(token) ? transform(token) : token.$value;
+	return isColor(token) ? transformColor(token) : token.$value;
 };
 
 /**

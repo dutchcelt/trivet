@@ -23,10 +23,10 @@ const systemColorTranslation = {
 	VisitedText: 'purple',
 };
 
-const isColor = token => {
+export const isColor = token => {
 	return token?.$type === 'color';
 };
-const transformColor = token => {
+export const transformColor = token => {
 	const color = new Color(systemColorTranslation[token.$value] || token.$value);
 	return color.toString({ format: 'hex' });
 };
