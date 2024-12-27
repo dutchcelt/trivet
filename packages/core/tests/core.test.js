@@ -4,7 +4,7 @@ import { styles } from '../index.js';
 describe('Core Styles ', async () => {
 	it('Style is array', () => {
 		assert.isArray(styles);
-		expect(styles.length).to.equal(4);
+		expect(styles.length).to.equal(6);
 	});
 	it('First rule is CSSLayerStatementRule', () => {
 		const ss = styles[0].cssRules[0];

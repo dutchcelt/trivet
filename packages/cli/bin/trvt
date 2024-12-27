@@ -7,6 +7,7 @@ const program = new Command();
 import * as fs from 'fs';
 import * as path from 'path';
 
+
 import { fileURLToPath } from 'url';
 // Get the file path of the current module
 // @ts-expect-error
@@ -14,13 +15,14 @@ const __filename = fileURLToPath(import.meta.url);
 // Resolve the directory name (equivalent to __dirname)
 const __dirname = path.dirname(__filename);
 
+import cleanTokens from "../lib/cleanTokens.js";
+import generateTokens from "../lib/generateTokens.js";
+
 const pkg = JSON.parse(
 	fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8')
 );
 
-const rootDir = path.join(__dirname, '..', 'lib');
-const cleanTokens = await import(`${rootDir}/cleanTokens.js`).then(m => m.default);
-const generateTokens = await import(`${rootDir}/generateTokens.js`).then(m => m.default);
+
 
 program
 	.description('CLI to generate Trivet assets')

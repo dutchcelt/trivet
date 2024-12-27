@@ -1,5 +1,4 @@
 // @ts-nocheck
-import StyleDictionary from 'style-dictionary';
 import Color from 'colorjs.io';
 
 const systemColorTranslation = {
@@ -24,21 +23,19 @@ const systemColorTranslation = {
 	VisitedText: 'purple',
 };
 
-const filter = token => {
+const isColor = token => {
 	return token?.$type === 'color' || token?.type === 'color';
 };
-const transform = token => {
+const transformColor = token => {
 	const tokenColor = token.$value || token.value;
 	const color = new Color(systemColorTranslation[tokenColor] || tokenColor);
 	return color.toString({ format: 'hex' });
 };
 
-StyleDictionary.registerTransform({
+export default {
 	name: 'system/colors',
 	type: `value`,
 	transitive: true,
-	filter,
-	transform,
-});
-
-export { transform, filter };
+	filter: isColor,
+	transform: transformColor,
+};

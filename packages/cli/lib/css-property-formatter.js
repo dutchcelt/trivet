@@ -57,7 +57,8 @@ const convertHelper = token => {
  * @type {Object}
  */
 export default {
-	'css/property': function ({ dictionary, options }) {
+	name: 'css/property',
+	format: function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface

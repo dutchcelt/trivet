@@ -1,13 +1,11 @@
 // @ts-nocheck
-
-import StyleDictionary from 'style-dictionary';
 import { calculateClamp } from 'utopia-core';
 
 const isCssFluid = token => {
 	return token?.$extensions?.['trvt.css.fluid'];
 };
 
-await StyleDictionary.registerTransform({
+export default {
 	name: 'trvt/css/fluid',
 	type: `value`,
 	transitive: true,
@@ -16,4 +14,4 @@ await StyleDictionary.registerTransform({
 		const config = token.$extensions['trvt.css.fluid'];
 		return calculateClamp({ ...config });
 	},
-});
+};

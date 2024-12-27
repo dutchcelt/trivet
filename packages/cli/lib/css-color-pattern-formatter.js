@@ -55,7 +55,8 @@ const getColorSchemeProperty = (token, modeType) =>
  * @type {Object}
  */
 export default {
-	'css/colorpattern': function ({ dictionary, options }) {
+	name: 'css/colorpattern',
+	format: function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		const dataDarkModeWrapper = [

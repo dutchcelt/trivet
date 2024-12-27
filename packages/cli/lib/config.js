@@ -1,19 +1,11 @@
 // @ts-nocheck
-import cssPropertyFormat from './css-property-formatter.js';
-import cssColorPatternFormat from './css-color-pattern-formatter.js';
-import StyleDictionary from 'style-dictionary';
-import './css-system-color-transformer.js';
-import './css-fluid-transformer.js';
-
-await StyleDictionary.registerTransformGroup({
-	name: 'trvt/css',
-	transforms: ['system/colors', 'trvt/css/fluid'],
-});
+import defaults from './defaults.js';
 
 /**
- * @param {import('./defaults.js').Defaults} opts - All the default values
+ * @param {import('./defaults.js').Defaults} settings - All the default values
  */
-export default opts => {
+export default settings => {
+	const opts = Object.assign({}, defaults, settings);
 	const filterRegex = new RegExp(opts.exclude, 'i');
 
 	const themeTokensGlobArray = opts.themePath
@@ -25,10 +17,6 @@ export default opts => {
 	return {
 		include: sourceTokensGlobArray,
 		source: themeTokensGlobArray,
-		format: {
-			...cssPropertyFormat,
-			...cssColorPatternFormat,
-		},
 		platforms: {
 			'CSS Tokens': {
 				transformGroup: 'trvt/css',
