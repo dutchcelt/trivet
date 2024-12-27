@@ -1,3 +1,4 @@
+// @ts-ignore
 import trvt from './bin/trvt';
 
 const Trivet = {

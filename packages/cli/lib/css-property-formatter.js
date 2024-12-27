@@ -49,7 +49,7 @@ const hasExtension = token => {
 const { transform, filter } = await import('./css-system-color-transformer.js');
 
 const convertHelper = token => {
-	return filter(token) ? transform(token) : token.$value || token.value;
+	return filter(token) ? transform(token) : token.$value;
 };
 
 /**
@@ -75,7 +75,7 @@ export default {
 				str += `inherits: ${cssProp.inherits}; `;
 				if (cssProp.initialValue) {
 					str += `initial-value: ${cssProp.initialValue}; `;
-				} else if (token.$value || token.value) {
+				} else if (token.$value) {
 					str += `initial-value: ${convertHelper(token)}; `;
 				}
 				str += '}';

@@ -24,11 +24,10 @@ const systemColorTranslation = {
 };
 
 const isColor = token => {
-	return token?.$type === 'color' || token?.type === 'color';
+	return token?.$type === 'color';
 };
 const transformColor = token => {
-	const tokenColor = token.$value || token.value;
-	const color = new Color(systemColorTranslation[tokenColor] || tokenColor);
+	const color = new Color(systemColorTranslation[token.$value] || token.$value);
 	return color.toString({ format: 'hex' });
 };
 
