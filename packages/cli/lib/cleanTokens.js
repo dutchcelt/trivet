@@ -1,10 +1,8 @@
-// @ts-nocheck
 import { TrivetStyleDictionary } from './TrivetStyleDictionary.js';
 import config from './config.js';
 
 /**
- *
- * @param {Object} options
+ * @param {import('./defaults.js').Defaults} options
  */
 export default async options => {
 	const opts = config(options);

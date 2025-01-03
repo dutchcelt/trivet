@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
@@ -31,14 +30,14 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 /**
  * getExtension
- * @param {Object} token
+ * @param {import('style-dictionary').Token} token
  * @returns {CSSPropertyRule}
  */
 const getExtension = token => token['$extensions'][cssPropExtension];
 
 /**
  * hasExtension
- * @param {Object} token
+ * @param {import('style-dictionary').Token} token
  * @returns {boolean}
  */
 const hasExtension = token => {
@@ -48,6 +47,10 @@ const hasExtension = token => {
 
 import { transformColor, isColor } from './css-system-color-transformer.js';
 
+/**
+ * @param {import('style-dictionary').Token} token
+ * @return {*}
+ */
 const convertHelper = token => {
 	return isColor(token) ? transformColor(token) : token.$value;
 };
@@ -58,30 +61,41 @@ const convertHelper = token => {
  */
 export default {
 	name: 'css/property',
+	/** @param {{dictionary: import('style-dictionary').Dictionary, options: any}} args
+	 * @returns
+	 */
 	format: function ({ dictionary, options }) {
 		const linebreak = options.minify ? '' : '\n';
 		const { allTokens } = dictionary;
 		// https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
 		return allTokens
-			.sort((/** @type{Object} */ tokenA, /** @type{Object} */ tokenB) =>
-				stringSort(tokenA.name, tokenB.name),
+			.sort(
+				(
+					/** @type{import('style-dictionary').TransformedToken} */ tokenA,
+					/** @type{import('style-dictionary').TransformedToken} */ tokenB,
+				) => stringSort(tokenA.name, tokenB.name),
 			)
-			.filter((/** @type{Object} */ token) => hasExtension(token))
-			.map((/** @type{Object} */ token) => {
-				/** @type {CSSPropertyRule} cssProp*/
-				const cssProp = getExtension(token);
-				let str = `@property --${token.name} { `;
-				str += `syntax: '${cssProp.syntax}'; `;
-				str += `inherits: ${cssProp.inherits}; `;
-				if (cssProp.initialValue) {
-					str += `initial-value: ${cssProp.initialValue}; `;
-				} else if (token.$value) {
-					str += `initial-value: ${convertHelper(token)}; `;
-				}
-				str += '}';
+			.filter(
+				(/** @type{import('style-dictionary').TransformedToken} */ token) =>
+					hasExtension(token),
+			)
+			.map(
+				(/** @type{import('style-dictionary').TransformedToken} */ token) => {
+					/** @type {CSSPropertyRule} cssProp*/
+					const cssProp = getExtension(token);
+					let str = `@property --${token.name} { `;
+					str += `syntax: '${cssProp.syntax}'; `;
+					str += `inherits: ${cssProp.inherits}; `;
+					if (cssProp.initialValue) {
+						str += `initial-value: ${cssProp.initialValue}; `;
+					} else if (token.$value) {
+						str += `initial-value: ${convertHelper(token)}; `;
+					}
+					str += '}';
 
-				return str;
-			})
+					return str;
+				},
+			)
 			.join(linebreak);
 	},
 };

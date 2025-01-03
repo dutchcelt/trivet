@@ -1,4 +1,3 @@
-// @ts-nocheck
 import defaults from './defaults.js';
 
 /**
@@ -35,8 +34,9 @@ export default settings => {
 					{
 						destination: `${opts.scope}_tokens.css`,
 						format: 'css/variables',
-						filter: (/** @type {Object} */ token) =>
-							!filterRegex.test(token.name),
+						filter: (
+							/** @type {import('style-dictionary').TransformedToken} */ token,
+						) => !filterRegex.test(token.name),
 						options: {
 							showFileHeader: false,
 							...opts,
@@ -45,8 +45,9 @@ export default settings => {
 					{
 						destination: `${opts.scope}_color_patterns.css`,
 						format: 'css/colorpattern',
-						filter: (/** @type {Object} */ token) =>
-							!filterRegex.test(token.name),
+						filter: (
+							/** @type {import('style-dictionary').TransformedToken} */ token,
+						) => !filterRegex.test(token.name),
 						options: {
 							...opts,
 						},
@@ -64,8 +65,9 @@ export default settings => {
 					{
 						destination: `${opts.scope}_properties.css`,
 						format: 'css/property',
-						filter: (/** @type {Object} */ token) =>
-							!filterRegex.test(token.name),
+						filter: (
+							/** @type {import('style-dictionary').TransformedToken} */ token,
+						) => !filterRegex.test(token.name),
 						options: {
 							...opts,
 						},
@@ -82,8 +84,9 @@ export default settings => {
 					{
 						destination: `${opts.scope}_${opts.exclude}.css`,
 						format: 'css/variables',
-						filter: (/** @type {Object} */ token) =>
-							filterRegex.test(token.name),
+						filter: (
+							/** @type {import('style-dictionary').TransformedToken} */ token,
+						) => filterRegex.test(token.name),
 						options: {
 							showFileHeader: false,
 							...opts,

@@ -1,4 +1,6 @@
 // @ts-nocheck
+// TODO: remove ts-nocheck
+
 import StyleDictionary from 'style-dictionary';
 import './css-system-color-transformer.js';
 import systemColor from './css-system-color-transformer.js';
